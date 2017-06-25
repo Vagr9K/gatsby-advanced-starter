@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+        "react/prefer-stateless-function": "off",
+        "react/prop-types": "off",
+        "react/no-danger": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-webpack-loader-syntax": "off"
+    },
+    "settings": {
+        "import/resolver": "webpack"
+    },
+    "env": {
+        "browser": true
+    }
+}
