@@ -1,4 +1,7 @@
 import React from 'react';
+import NavigationDrawer from 'react-md/lib/NavigationDrawers';
+import { config } from 'config';
+import './react-md.scss';
 import './_template.css';
 
 export default class Template extends React.Component {
@@ -6,7 +9,9 @@ export default class Template extends React.Component {
     const { children } = this.props;
     return (
       <div className="container">
-        {children}
+        <NavigationDrawer drawerTitle={config.siteTitle}>
+          {children}
+        </NavigationDrawer>
       </div>
     );
   }
