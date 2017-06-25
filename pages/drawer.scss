@@ -1,0 +1,31 @@
+.drawer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .avatar {
+        border-radius: 50%;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            margin: 35px;
+        }
+
+        h6 {
+            margin: 15px 0;
+        }
+    }
+
+    .user-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
