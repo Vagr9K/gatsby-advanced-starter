@@ -21,8 +21,8 @@ export default class HTML extends React.Component {
         />
       );
     }
-
     return (
+
       <html lang="en">
         <head>
           <meta charSet="utf-8" />
