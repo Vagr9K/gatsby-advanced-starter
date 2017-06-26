@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
+import Drawer from 'react-md/lib/Drawers';
 import List from 'react-md/lib/Lists/List';
 import ListItem from 'react-md/lib/Lists/ListItem';
 import FontIcon from 'react-md/lib/FontIcons';
@@ -20,7 +21,7 @@ export default class Template extends React.Component {
 
   static renderDrawer() {
     return (
-      <div className="drawer">
+      <div className="drawer md-list--drawer">
         <section className="user-info">
           <img src={config.userAvatar} alt="User avatar." className="avatar" />
           <h1>{config.userName}</h1>
@@ -28,8 +29,7 @@ export default class Template extends React.Component {
             <FontIcon iconClassName="fa fa-map-marker" />
           </IconSeparator>
           <h6 className="md-font-light">{config.userDescription}</h6>
-        </section>
-        <section className="user-links">
+
           <List>
             <ListItem
               component="a"
@@ -68,7 +68,6 @@ export default class Template extends React.Component {
               leftIcon={<FontIcon forceSize iconClassName="fa fa-envelope" />}
             />
           </List>
-
         </section>
       </div>
     );
