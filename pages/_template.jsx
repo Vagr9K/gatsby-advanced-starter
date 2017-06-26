@@ -63,7 +63,7 @@ export default class Template extends React.Component {
             />
             <ListItem
               component="a"
-              href={config.userEmail}
+              href={`mailto: ${config.userEmail}`}
               primaryText="E-Mail"
               leftIcon={<FontIcon forceSize iconClassName="fa fa-envelope" />}
             />
