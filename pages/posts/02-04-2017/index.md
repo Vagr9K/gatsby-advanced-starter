@@ -1,5 +1,7 @@
 ---
-cover       = "https://unsplash.it/1152/300/?random"
+title: "Random project 5"
+cover: "https://unsplash.it/1152/300/?random"
+date: "02/04/2017"
 ---
 # Overview
 
