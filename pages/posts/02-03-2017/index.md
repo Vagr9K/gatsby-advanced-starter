@@ -2,6 +2,8 @@
 title: "Random project 4"
 cover: "https://unsplash.it/1152/300/?random"
 date: "02/03/2017"
+tags:
+    - say hi
 ---
 # Overview
 

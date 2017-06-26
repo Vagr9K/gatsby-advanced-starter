@@ -2,6 +2,10 @@
 title: "Random project"
 cover: "https://unsplash.it/1152/300/?random"
 date: "01/01/2017"
+tags:
+    - programming
+    - stuff
+    - other
 ---
 # Overview
 

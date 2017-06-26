@@ -2,6 +2,9 @@
 title: "Random project 3"
 cover: "https://unsplash.it/1152/300/?random"
 date: "01/03/2017"
+tags:
+    - cheese
+    - other
 ---
 # Overview
 
