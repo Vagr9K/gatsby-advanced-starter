@@ -9,6 +9,8 @@ import Avatar from 'react-md/lib/Avatars';
 import FontIcon from 'react-md/lib/FontIcons';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
+import Helmet from 'react-helmet';
+import { config } from 'config';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
 import './post-preview.scss';
 
@@ -70,6 +72,7 @@ class Index extends React.Component {
     const postList = this.getPostList();
     return (
       <div className="index-container md-grid">
+        <Helmet title={config.siteTitle} />
         {
           postList.map(post => Index.renderPostPreview(
             post.title,
