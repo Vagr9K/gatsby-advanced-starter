@@ -13,6 +13,7 @@ import './react-md.scss';
 import './_template.scss';
 import './toolbar.scss';
 import './drawer.scss';
+import './footer.scss';
 
 export default class Template extends React.Component {
   static renderToolbar() {
@@ -102,6 +103,9 @@ export default class Template extends React.Component {
           drawerChildren={Template.renderDrawer()}
         >
           {children}
+          <footer className="footer">
+            <h4>{config.copyright}</h4>
+          </footer>
         </NavigationDrawer>
       </div>
     );
