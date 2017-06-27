@@ -18,11 +18,8 @@ export default class Template extends React.Component {
   static renderToolbar() {
     return (
       <div className="toolbar">
-        <Link style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }} to={prefixLink('/')}>
-          <Button flat key="nav-home"><FontIcon forceSize iconClassName="fa fa-home" /></Button>
-        </Link>
-        <Link style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }} to={prefixLink('/tags/')}>
-          <Button flat key="nav-tags"><FontIcon forceSize iconClassName="fa fa-tag" /></Button>
+        <Link className="link" to={prefixLink('/')}>
+          <Button className="button" icon key="nav-home">home</Button>
         </Link>
       </div>
     );
