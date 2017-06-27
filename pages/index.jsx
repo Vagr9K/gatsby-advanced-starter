@@ -34,14 +34,14 @@ class Index extends React.Component {
     let tagChips = null;
     if (tags) {
       tagChips = tags.map(tag =>
-        <Link style={{ textDecoration: 'none' }} to={prefixLink('/tags/')}>
+        <Link key={tag} style={{ textDecoration: 'none' }} to={prefixLink('/tags/')}>
           <Chip label={tag} className="post-preview-tags" />
         </Link>,
        );
     }
     return (
 
-      <Card raise className="md-grid md-cell md-cell--4">
+      <Card key={path} raise className="md-grid md-cell md-cell--4">
         <Link style={{ textDecoration: 'none' }} to={prefixLink(path)}>
           <Media>
             <img src={cover} alt={title} />
@@ -56,12 +56,13 @@ class Index extends React.Component {
             title="Published on"
             subtitle={date}
           />
-          <div className="">
-            {
+        </Link>
+        <div>
+          {
             tagChips
           }
-          </div>
-        </Link>
+        </div>
+
       </Card>
     );
   }
