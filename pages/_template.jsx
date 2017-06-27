@@ -1,9 +1,11 @@
 import React from 'react';
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
-import Drawer from 'react-md/lib/Drawers';
+import Button from 'react-md/lib/Buttons';
 import List from 'react-md/lib/Lists/List';
 import ListItem from 'react-md/lib/Lists/ListItem';
 import FontIcon from 'react-md/lib/FontIcons';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
 import IconSeparator from 'react-md/lib/Helpers/IconSeparator';
 import { config } from 'config';
 import 'font-awesome/scss/font-awesome.scss';
@@ -15,7 +17,14 @@ import './drawer.scss';
 export default class Template extends React.Component {
   static renderToolbar() {
     return (
-      <div className="toolbar" />
+      <div className="toolbar">
+        <Link style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }} to={prefixLink('/')}>
+          <Button flat key="nav-home"><FontIcon forceSize iconClassName="fa fa-home" /></Button>
+        </Link>
+        <Link style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }} to={prefixLink('/tags/')}>
+          <Button flat key="nav-tags"><FontIcon forceSize iconClassName="fa fa-tag" /></Button>
+        </Link>
+      </div>
     );
   }
 
@@ -72,13 +81,27 @@ export default class Template extends React.Component {
       </div>
     );
   }
+
+  getTitle() {
+    const currentPath = this.props.location.pathname;
+    let title = '';
+    if (currentPath === '/') {
+      title = 'Home';
+    } else if (currentPath === '/tags/') {
+      title = 'Tags';
+    } else {
+      title = 'Article';
+    }
+    return title;
+  }
   render() {
     const { children } = this.props;
     return (
       <div className="container">
         <NavigationDrawer
           drawerTitle={config.siteTitle}
-          toolbarActions={Template.renderToolbar()}
+          toolbarTitle={this.getTitle()}
+          toolbarChildren={Template.renderToolbar()}
           drawerChildren={Template.renderDrawer()}
         >
           {children}
