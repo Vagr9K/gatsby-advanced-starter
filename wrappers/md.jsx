@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import Card from 'react-md/lib/Cards';
+import CardText from 'react-md/lib/Cards/CardText';
 import './atom-one-dark.css';
 import './md.scss';
 
@@ -15,10 +16,10 @@ export default class MarkdownWrapper extends React.Component {
           title={`${post.title} | ${config.siteTitle}`}
         />
         <Card className="md-grid md-cell md-cell--12 post">
-          <div className="markdown md-typography-text-container post-body">
+          <CardText className="post-body">
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
-          </div>
+          </CardText>
         </Card>
       </div>
     );
