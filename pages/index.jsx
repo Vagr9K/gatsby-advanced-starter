@@ -27,7 +27,7 @@ class Index extends React.Component {
       <div className="index-container md-grid">
         <Helmet title={config.siteTitle} />
         {
-          postList.map(post => (<PostPreview postInfo={post} />))
+          postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
         }
       </div>
     );
