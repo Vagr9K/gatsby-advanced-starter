@@ -11,21 +11,40 @@ import './UserInfo.scss';
 
 class UserInfo extends Component {
   render() {
-    const { SiteConfig } = this.props;
+    const {
+      userAvatar,
+      userName,
+      userLocation,
+      userDescription,
+      userLinks,
+    } = this.props.SiteConfig;
+    const userLinksElement = <UserLinks SiteConfig={this.props.SiteConfig} />;
+    if (!userAvatar && !userName && !userLocation && !userDescription) {
+      if (userLinks) {
+        return (
+          <Card className="md-grid md-cell md-cell--12 user-info">
+            { userLinksElement}
+          </Card>
+        );
+      }
+      return null;
+    }
     return (
       <Card className="md-grid md-cell md-cell--12 user-info">
         <CardTitle
           expander
-          avatar={<Avatar src={SiteConfig.userAvatar} role="presentation" />}
-          title={SiteConfig.userName}
+          avatar={userAvatar && <Avatar src={userAvatar} role="presentation" />}
+          title={userName && userName}
           subtitle="Author"
         />
         <CardText expandable>
-          <IconSeparator label={SiteConfig.userLocation} iconBefore>
-            <FontIcon iconClassName="fa fa-map-marker" />
-          </IconSeparator>
-          <p>{SiteConfig.userDescription}</p>
-          <UserLinks SiteConfig={SiteConfig} />
+          { userLocation &&
+            <IconSeparator label={userLocation} iconBefore>
+              <FontIcon iconClassName="fa fa-map-marker" />
+            </IconSeparator>
+          }
+          <p>{userDescription && userDescription}</p>
+          { userLinksElement }
         </CardText>
       </Card>
     );

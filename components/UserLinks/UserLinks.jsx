@@ -6,10 +6,13 @@ class UserLinks extends Component {
 
   render() {
     const { userLinks } = this.props.SiteConfig;
+    if (!userLinks) {
+      return null;
+    }
     return (
       <div className="user-links">
         {
-          userLinks && userLinks.map(link =>
+          userLinks.map(link =>
           (
             <Button
               icon
