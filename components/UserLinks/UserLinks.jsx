@@ -13,6 +13,7 @@ class UserLinks extends Component {
           (
             <Button
               icon
+              key={link[0]}
               iconClassName={link[2]}
               href={link[1]}
             />
