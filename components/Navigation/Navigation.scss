@@ -1,0 +1,15 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+
+    .main-container {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        flex: 1;
+
+        .main-content {
+            flex: 1;
+        }
+    }
+}

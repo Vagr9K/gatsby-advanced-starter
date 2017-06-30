@@ -3,6 +3,7 @@ import NavigationDrawer from 'react-md/lib/NavigationDrawers';
 import Toolbar from '../Toolbar/Toolbar.jsx';
 import Drawer from '../Drawer/Drawer.jsx';
 import Footer from '../Footer/Footer.jsx';
+import './Navigation.scss';
 
 class Navigation extends Component {
   render() {
@@ -11,10 +12,13 @@ class Navigation extends Component {
       <NavigationDrawer
         drawerTitle={SiteConfig.siteTitle}
         toolbarTitle={LocalTitle}
+        contentClassName="main-content"
         toolbarChildren={<Toolbar />}
         drawerChildren={<Drawer SiteConfig={SiteConfig} />}
       >
-        {children}
+        <div className="main-container">
+          {children}
+        </div>
         <Footer SiteConfig={SiteConfig} />
       </NavigationDrawer>
     );
