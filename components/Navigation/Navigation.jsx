@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
 import Toolbar from '../Toolbar/Toolbar.jsx';
-import Drawer from '../Drawer/Drawer.jsx';
 import Footer from '../Footer/Footer.jsx';
+import NavList from './NavList.jsx';
 import './Navigation.scss';
 
 class Navigation extends Component {
   render() {
     const { children, SiteConfig, LocalTitle } = this.props;
+
     return (
       <NavigationDrawer
         drawerTitle={SiteConfig.siteTitle}
         toolbarTitle={LocalTitle}
         contentClassName="main-content"
+        navItems={NavList}
+        mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
+        tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
+        desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         toolbarChildren={<Toolbar />}
-        drawerChildren={<Drawer SiteConfig={SiteConfig} />}
       >
         <div className="main-container">
           {children}
