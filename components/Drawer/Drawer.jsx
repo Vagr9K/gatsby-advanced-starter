@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FontIcon from 'react-md/lib/FontIcons';
 import IconSeparator from 'react-md/lib/Helpers/IconSeparator';
-import { List, ListItem } from 'react-md/lib/Lists';
+import UserLinks from '../UserLinks/UserLinks.jsx';
 import './Drawer.scss';
 
 class Drawer extends Component {
@@ -16,45 +16,7 @@ class Drawer extends Component {
             <FontIcon iconClassName="fa fa-map-marker" />
           </IconSeparator>
           <h6 className="md-font-light">{SiteConfig.userDescription}</h6>
-
-          <List>
-            <ListItem
-              component="a"
-              href={SiteConfig.userWebsite}
-              primaryText="My Website"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-link" />}
-            />
-            <ListItem
-              component="a"
-              href={SiteConfig.userGitHub}
-              primaryText="GitHub"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-github" />}
-            />
-            <ListItem
-              component="a"
-              href={SiteConfig.userTwitter}
-              primaryText="Twitter"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-twitter" />}
-            />
-            <ListItem
-              component="a"
-              href={SiteConfig.userFacebook}
-              primaryText="Facebook"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-facebook" />}
-            />
-            <ListItem
-              component="a"
-              href={SiteConfig.userInstagram}
-              primaryText="Instagram"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-instagram" />}
-            />
-            <ListItem
-              component="a"
-              href={`mailto: ${SiteConfig.userEmail}`}
-              primaryText="E-Mail"
-              leftIcon={<FontIcon forceSize iconClassName="fa fa-envelope" />}
-            />
-          </List>
+          <UserLinks SiteConfig={SiteConfig} />
         </section>
       </div>
     );
