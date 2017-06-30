@@ -13,6 +13,8 @@ export default class Template extends React.Component {
       title = 'Home';
     } else if (currentPath === '/tags/') {
       title = 'Tags';
+    } else if (currentPath === '/about/') {
+      title = 'About';
     } else {
       title = 'Article';
     }
