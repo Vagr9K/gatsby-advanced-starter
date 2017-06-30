@@ -3,9 +3,9 @@ import Card from 'react-md/lib/Cards/Card';
 import CardTitle from 'react-md/lib/Cards/CardTitle';
 import CardText from 'react-md/lib/Cards/CardText';
 import Avatar from 'react-md/lib/Avatars';
-import Button from 'react-md/lib/Buttons';
 import FontIcon from 'react-md/lib/FontIcons';
 import IconSeparator from 'react-md/lib/Helpers/IconSeparator';
+import UserLinks from '../UserLinks/UserLinks.jsx';
 import './UserInfo.scss';
 
 
@@ -25,44 +25,7 @@ class UserInfo extends Component {
             <FontIcon iconClassName="fa fa-map-marker" />
           </IconSeparator>
           <p>{SiteConfig.userDescription}</p>
-          <div className="user-links">
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-link"
-              href={SiteConfig.userWebsite}
-            />
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-github"
-              href={SiteConfig.userGitHub}
-            />
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-twitter"
-              href={SiteConfig.userTwitter}
-            />
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-facebook"
-              href={SiteConfig.userFacebook}
-            />
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-instagram"
-              href={SiteConfig.userInstagram}
-            />
-            <Button
-              className="button"
-              icon
-              iconClassName="fa fa-envelope"
-              href={SiteConfig.userEmail}
-            />
-          </div>
+          <UserLinks SiteConfig={SiteConfig} />
         </CardText>
       </Card>
     );
