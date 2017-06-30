@@ -26,5 +26,10 @@
   ],
   "license": "MIT",
   "main": "n/a",
-  "scripts": {}
+  "scripts": {
+    "serve": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
