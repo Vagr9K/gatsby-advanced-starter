@@ -1,18 +1,8 @@
-.toolbar {
+.toolbar-children {
+    height: 100%;
     display: flex;
     flex: 1 1 auto;
     justify-content: flex-end;
     margin-right: 20px;
-
-    .button {
-        align-items: center;
-    }
-
-    .link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: inherit;
-    }
+    overflow-y: hidden;
 }

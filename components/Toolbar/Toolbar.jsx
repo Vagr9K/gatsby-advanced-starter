@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Button from 'react-md/lib/Buttons';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import UserLinks from '../UserLinks/UserLinks.jsx';
 import './Toolbar.scss';
 
 class Toolbar extends Component {
   render() {
+    const { SiteConfig } = this.props;
     return (
-      <div className="toolbar">
-        <Link className="link" to={prefixLink('/')}>
-          <Button className="button" icon key="nav-home">home</Button>
-        </Link>
+      <div className="toolbar-children">
+        <UserLinks SiteConfig={SiteConfig} />
       </div>
     );
   }

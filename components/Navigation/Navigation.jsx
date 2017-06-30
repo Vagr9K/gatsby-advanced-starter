@@ -18,7 +18,7 @@ class Navigation extends Component {
         mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
-        toolbarChildren={<Toolbar />}
+        toolbarActions={<Toolbar SiteConfig={SiteConfig} />}
       >
         <div className="main-container">
           {children}
