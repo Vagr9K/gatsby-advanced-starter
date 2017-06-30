@@ -29,6 +29,7 @@
   "scripts": {
     "serve": "gatsby develop",
     "build": "gatsby build",
+    "clean": "rm -rf public",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
