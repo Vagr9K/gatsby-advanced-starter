@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
-import Toolbar from '../Toolbar/Toolbar.jsx';
+import ToolbarActions from '../ToolbarActions/ToolbarActions.jsx';
 import Footer from '../Footer/Footer.jsx';
 import NavList from './NavList.jsx';
 import './Navigation.scss';
@@ -18,7 +18,7 @@ class Navigation extends Component {
         mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
-        toolbarActions={<Toolbar SiteConfig={SiteConfig} />}
+        toolbarActions={<ToolbarActions SiteConfig={SiteConfig} />}
       >
         <div className="main-container">
           {children}

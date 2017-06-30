@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import UserLinks from '../UserLinks/UserLinks.jsx';
-import './Toolbar.scss';
+import './ToolbarActions.scss';
 
 class Toolbar extends Component {
   render() {
