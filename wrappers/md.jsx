@@ -11,7 +11,7 @@ export default class MarkdownWrapper extends React.Component {
   render() {
     const post = this.props.route.page.data;
     return (
-      <div className="md-grid post-container">
+      <div className="md-grid post-page-container">
 
         <Helmet
           title={`${post.title} | ${config.siteTitle}`}
@@ -22,7 +22,7 @@ export default class MarkdownWrapper extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
           </CardText>
         </Card>
-        <UserInfo SiteConfig={config} />
+        <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
       </div>
     );
   }
