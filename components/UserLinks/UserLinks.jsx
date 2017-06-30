@@ -5,45 +5,21 @@ import './UserLinks.scss';
 class UserLinks extends Component {
 
   render() {
-    const { SiteConfig } = this.props;
+    const { userLinks } = this.props.SiteConfig;
     return (
       <div className="user-links">
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-link"
-          href={SiteConfig.userWebsite}
-        />
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-github"
-          href={SiteConfig.userGitHub}
-        />
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-twitter"
-          href={SiteConfig.userTwitter}
-        />
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-facebook"
-          href={SiteConfig.userFacebook}
-        />
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-instagram"
-          href={SiteConfig.userInstagram}
-        />
-        <Button
-          className="button"
-          icon
-          iconClassName="fa fa-envelope"
-          href={SiteConfig.userEmail}
-        />
+        {
+          userLinks && userLinks.map(link =>
+          (
+            <Button
+              icon
+              iconClassName={link[2]}
+              href={link[1]}
+            />
+          ),
+
+        )
+        }
       </div>
     );
   }
