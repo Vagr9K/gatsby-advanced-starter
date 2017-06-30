@@ -1,26 +1,6 @@
-.drawer {
+.drawer-children {
     display: flex;
     flex-direction: column;
     padding: 30px;
-
-    .avatar {
-        border-radius: 50%;
-        max-width: 150px;
-        max-height: 150px;
-    }
-
-    .user-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        h1 {
-            margin: 20px 0;
-        }
-
-        h6 {
-            margin: 15px 0;
-        }
-    }
 }
 
