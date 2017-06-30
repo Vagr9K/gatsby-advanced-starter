@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import UserNavInfo from '../UserNavInfo/UserNavInfo.jsx';
-import './Drawer.scss';
+import './DrawerChildren.scss';
 
-class Drawer extends Component {
+class DrawerChildren extends Component {
   render() {
     const { SiteConfig } = this.props;
     return (
@@ -13,4 +13,4 @@ class Drawer extends Component {
   }
 }
 
-export default Drawer;
+export default DrawerChildren;
