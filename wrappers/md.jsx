@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import Card from 'react-md/lib/Cards';
 import CardText from 'react-md/lib/Cards/CardText';
+import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import './atom-one-dark.css';
 import './md.scss';
 
@@ -21,6 +22,7 @@ export default class MarkdownWrapper extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
           </CardText>
         </Card>
+        <UserInfo SiteConfig={config} />
       </div>
     );
   }
