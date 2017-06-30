@@ -1,5 +1,6 @@
 siteTitle="Gatsby Material Starter"
 linkPrefix = "/"
+googleAnalyticsID = ''
 
 userName = "Material User"
 userLocation = "Yerevan, Armenia"
