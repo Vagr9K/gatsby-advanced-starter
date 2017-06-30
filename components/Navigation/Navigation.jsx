@@ -15,7 +15,7 @@ class Navigation extends Component {
         toolbarTitle={LocalTitle}
         contentClassName="main-content"
         navItems={NavList}
-        mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
+        mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         toolbarChildren={<Toolbar />}
