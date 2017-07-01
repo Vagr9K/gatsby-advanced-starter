@@ -18,6 +18,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
+    "gh-pages": "^1.0.0",
     "stylefmt": "^6.0.0",
     "stylelint": "^7.11.0",
     "stylelint-config-standard": "^16.0.0"
@@ -32,6 +33,6 @@
     "build": "gatsby build",
     "clean": "rm -rf public",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gh-deploy": "npm run clean && npm run build && gh-pages -d public"
   }
 }
