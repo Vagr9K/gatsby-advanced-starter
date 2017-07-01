@@ -1,5 +1,4 @@
 import React from 'react';
-import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import PostPreview from '../components/PostPreview/PostPreview.jsx';
