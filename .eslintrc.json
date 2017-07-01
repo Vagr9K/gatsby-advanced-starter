@@ -13,7 +13,8 @@
         "import/no-webpack-loader-syntax": "off"
     },
     "settings": {
-        "import/resolver": "webpack"
+        "import/resolver": "webpack",
+        "import/core-modules": ["gatsby-helpers", "config"]
     },
     "env": {
         "browser": true
