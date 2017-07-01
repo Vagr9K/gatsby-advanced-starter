@@ -4,12 +4,19 @@ import { config } from 'config';
 import Card from 'react-md/lib/Cards';
 import CardText from 'react-md/lib/Cards/CardText';
 import UserInfo from '../components/UserInfo/UserInfo.jsx';
+import Disqus from '../components/Disqus/Disqus.jsx';
 import './atom-one-dark.css';
 import './md.scss';
 
 export default class MarkdownWrapper extends React.Component {
   render() {
     const post = this.props.route.page.data;
+    if (!post.id) {
+      post.id = this.props.location.pathname;
+    }
+    if (!post.id) {
+      post.category_id = config.postDefaultCategoryID;
+    }
     return (
       <div className="md-grid post-page-container">
 
@@ -23,6 +30,7 @@ export default class MarkdownWrapper extends React.Component {
           </CardText>
         </Card>
         <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
+        <Disqus post={post} disqusShortname={config.disqusShortname} />
       </div>
     );
   }
