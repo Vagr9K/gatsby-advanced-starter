@@ -31,8 +31,9 @@
   "scripts": {
     "serve": "gatsby develop",
     "build": "gatsby build",
+    "build-pl": "gatsby build --prefix-links",
     "clean": "rm -rf public",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "gh-deploy": "npm run clean && npm run build && gh-pages -d public"
+    "gh-deploy": "npm run clean && npm run build-pl && gh-pages -d public"
   }
 }
