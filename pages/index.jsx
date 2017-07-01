@@ -24,7 +24,7 @@ class Index extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div className="index-container md-grid">
+      <div className="md-grid">
         <Helmet title={config.siteTitle} />
         {
           postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
