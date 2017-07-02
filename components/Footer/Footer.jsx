@@ -3,10 +3,13 @@ import './Footer.scss';
 
 class Footer extends Component {
   render() {
-    const { SiteConfig } = this.props;
+    const { copyright } = this.props.SiteConfig;
+    if (!copyright) {
+      return null;
+    }
     return (
       <footer className="footer">
-        <h4>{SiteConfig.copyright}</h4>
+        <h4>{copyright}</h4>
       </footer>
     );
   }
