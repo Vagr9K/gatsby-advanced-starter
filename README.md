@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/gpa.svg)](https://codeclimate.com/github/Vagr9K/gatsby-material-starter)
+[![Issue Count](https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/issue_count.svg)](https://codeclimate.com/github/Vagr9K/gatsby-material-starter)
 <div align="center">
     <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
 </div>
