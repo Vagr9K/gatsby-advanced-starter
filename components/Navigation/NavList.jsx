@@ -23,7 +23,7 @@ if (config.userLinks) {
         subheader: false,
         primaryText: link[0],
         leftIcon: <FontIcon iconClassName={link[2]} />,
-        onClick: () => browserHistory.push(link[1]),
+        onClick: () => window.location.href = link[1],
       },
     );
   });
