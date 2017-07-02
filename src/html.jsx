@@ -3,9 +3,6 @@
 /* eslint global-require:"off" */
 import React from 'react';
 import Helmet from 'react-helmet';
-import { prefixLink } from 'gatsby-helpers';
-
-const BUILD_TIME = new Date().getTime();
 
 export default class HTML extends React.Component {
   render() {
@@ -32,7 +29,8 @@ export default class HTML extends React.Component {
           />
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          <link rel="shortcut icon" href={prefixLink('/favicon.png')} />
+          {this.props.headComponents}
+          <link rel="shortcut icon" href={('/favicon.png')} />
           {css}
         </head>
         <body>
@@ -40,9 +38,12 @@ export default class HTML extends React.Component {
             id="react-mount"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+          {this.props.postBodyComponents}
         </body>
       </html>
     );
   }
 }
+
+
+// TODO: prefixLink breaks favicon

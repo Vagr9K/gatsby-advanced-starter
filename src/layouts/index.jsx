@@ -1,20 +1,19 @@
 import React from 'react';
 import { config } from 'config';
 import 'font-awesome/scss/font-awesome.scss';
-import { prefixLink } from 'gatsby-helpers';
 import Navigation from '../components/Navigation/Navigation.jsx';
-import './_template.scss';
+import './index.scss';
 
 export default class Template extends React.Component {
 
   getLocalTitle() {
     const currentPath = this.props.location.pathname;
     let title = '';
-    if (currentPath === prefixLink('/')) {
+    if (currentPath === ('/')) {
       title = 'Home';
-    } else if (currentPath === prefixLink('/tags/')) {
+    } else if (currentPath === ('/tags/')) {
       title = 'Tags';
-    } else if (currentPath === prefixLink('/about/')) {
+    } else if (currentPath === ('/about/')) {
       title = 'About';
     } else {
       title = 'Article';
@@ -25,8 +24,10 @@ export default class Template extends React.Component {
     const { children } = this.props;
     return (
       <Navigation SiteConfig={config} LocalTitle={this.getLocalTitle()}>
-        {children}
+        {children()}
       </Navigation>
     );
   }
 }
+
+// TODO: Removal of prefixLink breaks link checks

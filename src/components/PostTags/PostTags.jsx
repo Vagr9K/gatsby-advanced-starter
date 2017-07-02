@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import { Link } from 'gatsby-link';
 import Chip from 'react-md/lib/Chips';
 import './PostTags.scss';
 
@@ -11,7 +10,7 @@ class PostTags extends Component {
       <div>
         {
             tags && tags.map(tag =>
-              <Link key={tag} style={{ textDecoration: 'none' }} to={prefixLink('/tags/')}>
+              <Link key={tag} style={{ textDecoration: 'none' }} to={'/tags/'}>
                 <Chip label={tag} className="post-preview-tags" />
               </Link>)
         }

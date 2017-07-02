@@ -14,7 +14,7 @@
     },
     "settings": {
         "import/resolver": "webpack",
-        "import/core-modules": ["gatsby-helpers", "config"]
+        "import/core-modules": []
     },
     "env": {
         "browser": true
