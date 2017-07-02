@@ -1,14 +1,17 @@
-siteTitle="Gatsby Material Starter"
-linkPrefix = "/"
-googleAnalyticsID = ''
-disqusShortname = ''
+siteTitle="Gatsby Material Starter" # Site title
+linkPrefix = "/"  # Gatsby link prefix
+googleAnalyticsID = '' # GA id
+disqusShortname = '' # Disqus shortname
 
-postDefaultCategoryID= '12121212'
-userName = "Material User"
-userLocation = "Yerevan, Armenia"
-userAvatar = "https://api.adorable.io/avatars/150/test.png"
-userDescription = "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people."
+postDefaultCategoryID= '12121212' # Disqus category for posts without categories.
+userName = "Material User" # Your public name
+userLocation = "Yerevan, Armenia" # Your location
+userAvatar = "https://api.adorable.io/avatars/150/test.png" # Your avatar
+userDescription = "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people." # Your short "about me"
 
+# An array of links to you projects/social profiles you want to share
+# FORMAT: ['LABEL', 'LINK', 'ICON CLASSNAME']
+# ICON CLASSNAME can be either FontAwesome or Material Design icon classnames.
 userLinks = [
      ['Website', '//mywebsite.example.local', 'fa fa-link'],
      ['GitHub', '//github.com.local/USER', 'fa fa-github'],
@@ -17,4 +20,5 @@ userLinks = [
      ['Facebook', '//facebook.com.local/USER', 'fa fa-facebook'],
      ['Email', 'mailto:gmail.com.local/USER', 'fa fa-envelope'],
 ]
-copyright = "Copyright © 2017. Material User"
+
+copyright = "Copyright © 2017. Material User" # Footer copyright
