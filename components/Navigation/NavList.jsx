@@ -12,14 +12,8 @@ const NavList = [{
 }, {
   divider: false,
   subheader: false,
-  primaryText: 'Tags',
-  leftIcon: <FontIcon>label</FontIcon>,
-  onClick: () => browserHistory.push(prefixLink('/tags/')),
-}, {
-  divider: false,
-  subheader: false,
   primaryText: 'About',
-  leftIcon: <FontIcon>face</FontIcon>,
+  leftIcon: <FontIcon>person</FontIcon>,
   onClick: () => browserHistory.push(prefixLink('/about/')),
 }, {
   divider: true,
