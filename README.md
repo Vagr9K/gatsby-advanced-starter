@@ -75,7 +75,7 @@ userLinks = [
 copyright = "Copyright © 2017. Material User" # Footer copyright
  ```
 
- NOTE: All configuration variables except for `siteTitle` and `linkPrefix` are optional and won't render of omitted.
+ NOTE: All configuration variables except for `siteTitle` are optional and won't render if omitted.
 
 ## Theming
 
