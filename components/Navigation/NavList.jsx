@@ -22,7 +22,7 @@ if (config.userLinks) {
         divider: false,
         subheader: false,
         primaryText: link[0],
-        leftIcon: <FontIcon iconClassName={link[2]} />,
+        leftIcon: <FontIcon forceSize iconClassName={link[2]} />,
         onClick() { window.location.href = link[1]; },
       },
     );
