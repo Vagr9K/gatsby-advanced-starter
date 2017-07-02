@@ -1,7 +1,7 @@
 siteTitle="Gatsby Material Starter" # Site title
-linkPrefix = "/"  # Gatsby link prefix
-googleAnalyticsID = '' # GA id
-disqusShortname = '' # Disqus shortname
+linkPrefix = "/gatsby-material-starter"  # Gatsby link prefix
+googleAnalyticsID = 'UA-47311644-4' # GA id
+disqusShortname = 'https-vagr9k-github-io-gatsby-material-starter' # Disqus shortname
 
 postDefaultCategoryID= '12121212' # Disqus category for posts without categories.
 userName = "Material User" # Your public name
