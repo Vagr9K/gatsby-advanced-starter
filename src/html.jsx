@@ -4,17 +4,23 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+let inlinedStyles = '';
+if (process.env.NODE_ENV === 'production') {
+  try {
+    inlinedStyles = require('!raw-loader!../public/styles.css');
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 export default class HTML extends React.Component {
   render() {
-    const head = Helmet.rewind();
-
     let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
-          dangerouslySetInnerHTML={{
-            __html: require('!raw!./public/styles.css'),
-          }}
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
         />
       );
     }
@@ -27,15 +33,13 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          {head.title.toComponent()}
-          {head.meta.toComponent()}
           {this.props.headComponents}
           <link rel="shortcut icon" href={('/favicon.png')} />
           {css}
         </head>
         <body>
           <div
-            id="react-mount"
+            id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}

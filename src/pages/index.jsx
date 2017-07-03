@@ -20,16 +20,34 @@ class Index extends React.Component {
     return postList;
   }
   render() {
-    const postList = this.getPostList();
+    // const postList = this.getPostList();
+    console.log(this.props);
     return (
       <div className="md-grid">
-        {/* <Helmet title={config.siteTitle} />*/}
+        {/* <Helmet title={config.siteTitle} />
         {
-          {/* postList.map(post => (<PostPreview key={post.title} postInfo={post} />))*/}
-        }
+           postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
+        }*/}
       </div>
     );
   }
 }
 
 export default Index;
+
+export const pageQuery = `
+query TestQ {
+  allMarkdownRemark(limit: 2000, sort: {fields: [frontmatter___date], order: DESC}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
-import 'font-awesome/scss/font-awesome.scss';
+// import 'font-awesome/scss/font-awesome.scss';
 // import Navigation from '../components/Navigation/Navigation.jsx';
-import './index.scss';
+// import './index.scss';
 
 export default class MainLayout extends React.Component {
 
@@ -21,13 +21,28 @@ export default class MainLayout extends React.Component {
   }
   render() {
     const { children } = this.props;
+    console.log(this);
     return (
-      // <Navigation SiteConfig={null} LocalTitle={this.getLocalTitle()}>
-      //   {children()}
+      // <Navigation LocalTitle={this.getLocalTitle()}>
+      <div>
+        {children()}
+      </div>
       // </Navigation>
-      null
+
     );
   }
 }
+
+export const pageQuery = `
+query IndexOtherQuery {
+  site {
+    siteMetadata {
+      siteTitle
+    }
+  }
+  
+}
+
+`;
 
 // TODO: Removal of prefixLink breaks link checks
