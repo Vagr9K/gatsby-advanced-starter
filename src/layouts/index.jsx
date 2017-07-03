@@ -1,10 +1,9 @@
 import React from 'react';
-import { config } from 'config';
 import 'font-awesome/scss/font-awesome.scss';
-import Navigation from '../components/Navigation/Navigation.jsx';
+// import Navigation from '../components/Navigation/Navigation.jsx';
 import './index.scss';
 
-export default class Template extends React.Component {
+export default class MainLayout extends React.Component {
 
   getLocalTitle() {
     const currentPath = this.props.location.pathname;
@@ -23,9 +22,10 @@ export default class Template extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <Navigation SiteConfig={config} LocalTitle={this.getLocalTitle()}>
-        {children()}
-      </Navigation>
+      // <Navigation SiteConfig={null} LocalTitle={this.getLocalTitle()}>
+      //   {children()}
+      // </Navigation>
+      null
     );
   }
 }
