@@ -30,23 +30,3 @@ class Navigation extends Component {
   }
 }
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        siteTitle
-        linkPrefix
-        googleAnalyticsID
-        disqusShortname
-        postDefaultCategoryID
-        userName
-        userLocation
-        userAvatar
-        userDescription
-        copyright
-      }
-    }
-  }
-`;
-
-export default Navigation;

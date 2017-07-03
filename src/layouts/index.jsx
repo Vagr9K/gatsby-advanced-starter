@@ -33,16 +33,4 @@ export default class MainLayout extends React.Component {
   }
 }
 
-export const pageQuery = `
-query IndexOtherQuery {
-  site {
-    siteMetadata {
-      siteTitle
-    }
-  }
-  
-}
-
-`;
-
 // TODO: Removal of prefixLink breaks link checks
