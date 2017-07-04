@@ -7,6 +7,7 @@
     "font-awesome": "^4.7.0",
     "gatsby": "next",
     "gatsby-link": "next",
+    "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "^1.0.0-beta.1",
     "gatsby-plugin-sharp": "next",

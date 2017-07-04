@@ -3454,6 +3454,10 @@ gatsby-link@next:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
+gatsby-plugin-google-analytics@next:
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.0-beta.6.tgz#91367128beb9a8751798e32dd08cbfd56a8e3404"
+
 gatsby-plugin-react-helmet@next:
   version "1.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.0-beta.6.tgz#878abd3804bcdbc2949b61e63077469a0d9edc20"
@@ -7333,7 +7337,7 @@ react-router-dom@^4.1.1:
     prop-types "^15.5.4"
     react-router "^4.1.1"
 
-"react-router-scroll@github:ytase/react-router-scroll#build":
+react-router-scroll@ytase/react-router-scroll#build:
   version "0.4.1"
   resolved "https://codeload.github.com/ytase/react-router-scroll/tar.gz/991ecddb08885e1fb80ec1e9dbf3a35844b7d4cd"
   dependencies:

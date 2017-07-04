@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Gatsby Material Starter',
     linkPrefix: '/gatsby-material-starter',
-    googleAnalyticsID: 'UA-47311644-4',
     disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter',
     postDefaultCategoryID: 'Tech',
     userName: 'Material User',
@@ -71,6 +70,12 @@ module.exports = {
           'gatsby-remark-smartypants',
         ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+      trackingId: 'UA-47311644-4',
+    },
     },
     'gatsby-plugin-sharp',
   ],

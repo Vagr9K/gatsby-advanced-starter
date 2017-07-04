@@ -56,7 +56,6 @@ query BlogPostBySlug($slug: String!) {
       siteMetadata {
         siteTitle
         linkPrefix
-        googleAnalyticsID
         disqusShortname
         postDefaultCategoryID
         userName
