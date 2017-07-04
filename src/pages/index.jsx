@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import MainLayout from '../components/MainLayout/MainLayout.jsx';
 import PostPreview from '../components/PostPreview/PostPreview.jsx';
 
 class Index extends React.Component {
@@ -21,12 +22,14 @@ class Index extends React.Component {
     const config = this.props.data.site.siteMetadata;
     const postList = this.getPostList();
     return (
-      <div className="md-grid">
-        <Helmet title={config.siteTitle} />
-        {
+      <MainLayout SiteConfig={config} location={this.props.location.pathname}>
+        <div className="md-grid">
+          <Helmet title={config.siteTitle} />
+          {
            postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
         }
-      </div>
+        </div>
+      </MainLayout>
     );
   }
 }

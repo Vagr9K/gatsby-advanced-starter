@@ -7,7 +7,6 @@ import './Navigation.scss';
 
 class Navigation extends Component {
   render() {
-    console.log(this.props);
     const { children, SiteConfig, LocalTitle } = this.props;
     return (
       <NavigationDrawer
@@ -21,7 +20,7 @@ class Navigation extends Component {
         toolbarActions={<ToolbarActions SiteConfig={SiteConfig} />}
       >
         <div className="main-container">
-          {/* {children}*/}
+          {children}
         </div>
         <Footer SiteConfig={SiteConfig} />
       </NavigationDrawer>

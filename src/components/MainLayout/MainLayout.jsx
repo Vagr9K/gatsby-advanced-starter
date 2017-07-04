@@ -1,12 +1,12 @@
 import React from 'react';
 import 'font-awesome/scss/font-awesome.scss';
-// import Navigation from '../components/Navigation/Navigation.jsx';
+import Navigation from '../Navigation/Navigation.jsx';
 import './index.scss';
 
 export default class MainLayout extends React.Component {
 
   getLocalTitle() {
-    const currentPath = this.props.location.pathname;
+    const currentPath = this.props.location;
     let title = '';
     if (currentPath === ('/')) {
       title = 'Home';
@@ -20,21 +20,21 @@ export default class MainLayout extends React.Component {
     return title;
   }
   render() {
-    const { children } = this.props;
-    console.log(this);
-    // const SiteConfig = this.props.data.site.siteMetadata;
-
+    const { SiteConfig, children } = this.props;
+    console.log('MainLayout');
+    console.log(this.props);
+    console.log(children);
     return (
-      // <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
-      <div>
-        {children()}
-      </div>
-      /* </Navigation>*/
+      <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
+        <div>
+          {children}
+        </div>
+      </Navigation>
 
     );
   }
 }
 
-// TODO seems like components/layouts don't support GraphQL
+// NOTE: This will be moved under src/layouts/ once Gatsby supports running queries from there.
 
 // TODO: Removal of prefixLink breaks link checks
