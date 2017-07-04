@@ -7,12 +7,13 @@ export default class MainLayout extends React.Component {
 
   getLocalTitle() {
     const currentPath = this.props.location;
+    const linkPrefix = this.props.SiteConfig.linkPrefix;
     let title = '';
-    if (currentPath === ('/')) {
+    if (currentPath === (`${linkPrefix}/`)) {
       title = 'Home';
-    } else if (currentPath === ('/tags/')) {
+    } else if (currentPath === (`${linkPrefix}/tags/`)) {
       title = 'Tags';
-    } else if (currentPath === ('/about/')) {
+    } else if (currentPath === (`${linkPrefix}/about/`)) {
       title = 'About';
     } else {
       title = 'Article';
@@ -34,4 +35,3 @@ export default class MainLayout extends React.Component {
 
 // NOTE: This will be moved under src/layouts/ once Gatsby supports running queries from there.
 
-// TODO: Removal of prefixLink breaks link checks
