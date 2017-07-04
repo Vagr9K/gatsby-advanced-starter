@@ -1,7 +1,7 @@
 import React from 'react';
-// import 'font-awesome/scss/font-awesome.scss';
+import 'font-awesome/scss/font-awesome.scss';
 // import Navigation from '../components/Navigation/Navigation.jsx';
-// import './index.scss';
+import './index.scss';
 
 export default class MainLayout extends React.Component {
 
@@ -22,15 +22,19 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     console.log(this);
+    // const SiteConfig = this.props.data.site.siteMetadata;
+
     return (
-      // <Navigation LocalTitle={this.getLocalTitle()}>
+      // <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
       <div>
         {children()}
       </div>
-      // </Navigation>
+      /* </Navigation>*/
 
     );
   }
 }
+
+// TODO seems like components/layouts don't support GraphQL
 
 // TODO: Removal of prefixLink breaks link checks

@@ -1,33 +1,31 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-// import PostPreview from '../components/PostPreview/PostPreview.jsx';
+import PostPreview from '../components/PostPreview/PostPreview.jsx';
 
 class Index extends React.Component {
   getPostList() {
     const postList = [];
-    const postPath = '/posts/';
-    this.props.route.pages.forEach((page) => {
-      if (page.path.includes(postPath)) {
-        postList.push({
-          path: page.path,
-          tags: page.data.tags,
-          cover: page.data.cover,
-          title: page.data.title,
-          date: page.data.date,
-        });
-      }
+    this.props.data.allMarkdownRemark.edges.forEach((edge) => {
+      postList.push({
+        path: edge.node.fields.slug,
+        tags: edge.node.frontmatter.tags,
+        cover: edge.node.frontmatter.cover,
+        title: edge.node.frontmatter.title,
+        date: edge.node.frontmatter.date,
+      });
     });
     return postList;
   }
   render() {
-    // const postList = this.getPostList();
     console.log(this.props);
+    const config = this.props.data.site.siteMetadata;
+    const postList = this.getPostList();
     return (
       <div className="md-grid">
-        {/* <Helmet title={config.siteTitle} />
+        <Helmet title={config.siteTitle} />
         {
            postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
-        }*/}
+        }
       </div>
     );
   }
@@ -51,5 +49,23 @@ export const pageQuery = graphql`
         copyright
     }
   }
+  allMarkdownRemark(
+      limit: 2000,
+      sort: { fields: [frontmatter___date], order: DESC },
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
 }
 `;

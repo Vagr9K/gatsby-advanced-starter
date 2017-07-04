@@ -8,8 +8,7 @@ import './Navigation.scss';
 class Navigation extends Component {
   render() {
     console.log(this.props);
-    const { children, LocalTitle } = this.props;
-    const SiteConfig = this.props.data.site.siteMetadata;
+    const { children, SiteConfig, LocalTitle } = this.props;
     return (
       <NavigationDrawer
         drawerTitle={SiteConfig.siteTitle}
@@ -30,3 +29,4 @@ class Navigation extends Component {
   }
 }
 
+export default Navigation;

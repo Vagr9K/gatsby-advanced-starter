@@ -4,13 +4,15 @@ import CardTitle from 'react-md/lib/Cards/CardTitle';
 import Button from 'react-md/lib/Buttons';
 import Avatar from 'react-md/lib/Avatars';
 import FontIcon from 'react-md/lib/FontIcons';
-import { Link } from 'gatsby-link';
+import Link from 'gatsby-link';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
 import PostTags from '../PostTags/PostTags.jsx';
 
 class PostPreview extends Component {
 
   render() {
+    console.log('PostPreview render reached.');
+    console.log(this.props);
     const { postInfo } = this.props;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--4">
