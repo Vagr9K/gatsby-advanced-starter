@@ -3454,6 +3454,10 @@ gatsby-link@next:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
+gatsby-plugin-catch-links@next:
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.0-beta.6.tgz#d2b53c98e9840309637690cd5260dd500ec50815"
+
 gatsby-plugin-google-analytics@next:
   version "1.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.0-beta.6.tgz#91367128beb9a8751798e32dd08cbfd56a8e3404"
