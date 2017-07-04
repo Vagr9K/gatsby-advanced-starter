@@ -63,6 +63,11 @@ query BlogPostBySlug($slug: String!) {
         userLocation
         userAvatar
         userDescription
+        userLinks {
+          label
+          url
+          iconClassName
+        }
         copyright
     }
   }

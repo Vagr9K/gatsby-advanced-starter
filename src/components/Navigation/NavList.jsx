@@ -20,9 +20,9 @@ function GetNavList(config) {
         {
           divider: false,
           subheader: false,
-          primaryText: link[0],
-          leftIcon: <FontIcon forceSize iconClassName={link[2]} />,
-          onClick() { window.location.href = link[1]; },
+          primaryText: link.label,
+          leftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
+          onClick() { window.location.href = link.url; },
         },
     );
     });

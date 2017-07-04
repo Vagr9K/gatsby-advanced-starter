@@ -32,6 +32,11 @@ export const pageQuery = graphql`
         userLocation
         userAvatar
         userDescription
+        userLinks {
+          label
+          url
+          iconClassName
+        }
         copyright
     }
   }
