@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: 'Gatsby Material Starter',
-    linkPrefix: '/gatsby-material-starter',
-    disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter',
-    postDefaultCategoryID: 'Tech',
-    userName: 'Material User',
-    userLocation: 'Yerevan, Armenia',
-    userAvatar: 'https://api.adorable.io/avatars/150/test.png',
-    userDescription: "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.",
+    siteTitle: 'Gatsby Material Starter', // Site title.
+    linkPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+    disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
+    postDefaultCategoryID: 'Tech', // Default category for posts.
+    userName: 'Material User', // Username to display in the author segment.
+    userLocation: 'Yerevan, Armenia', // User location to display in the author segment.
+    userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
+    userDescription: "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    // Links to social profiles/projects you want to display in the author segment/navigation bar.
     userLinks: [
       {
         label: 'Website',
@@ -40,7 +41,7 @@ module.exports = {
         iconClassName: 'fa fa-envelope',
       },
     ],
-    copyright: 'Copyright © 2017. Material User',
+    copyright: 'Copyright © 2017. Material User', // Copyright string in the footer of the website.
   },
   plugins: [
     'gatsby-plugin-react-helmet',
