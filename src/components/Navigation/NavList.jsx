@@ -1,6 +1,6 @@
 import React from 'react';
 import FontIcon from 'react-md/lib/FontIcons';
-import { browserHistory } from 'gatsby-link';
+import { navigateTo } from 'gatsby-link';
 
 function GetNavList(config) {
   const NavList = [{
@@ -8,7 +8,7 @@ function GetNavList(config) {
     subheader: false,
     primaryText: 'Home',
     leftIcon: <FontIcon>home</FontIcon>,
-    onClick: () => browserHistory.push('/'),
+    onClick: () => navigateTo('/'),
   }, {
     divider: true,
   },
@@ -36,11 +36,10 @@ function GetNavList(config) {
       subheader: false,
       primaryText: 'About',
       leftIcon: <FontIcon>person</FontIcon>,
-      onClick: () => browserHistory.push('/about/'),
+      onClick: () => navigateTo('/about/'),
     },
   );
   return NavList;
 }
 export default GetNavList;
 
-// TODO: Does browserhistory have prefixLink?
