@@ -4,7 +4,7 @@ module.exports = {
     linkPrefix: '/gatsby-material-starter',
     googleAnalyticsID: 'UA-47311644-4',
     disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter',
-    postDefaultCategoryID: '12121212',
+    postDefaultCategoryID: 'Tech',
     userName: 'Material User',
     userLocation: 'Yerevan, Armenia',
     userAvatar: 'https://api.adorable.io/avatars/150/test.png',
