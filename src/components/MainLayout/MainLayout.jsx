@@ -21,9 +21,6 @@ export default class MainLayout extends React.Component {
   }
   render() {
     const { SiteConfig, children } = this.props;
-    console.log('MainLayout');
-    console.log(this.props);
-    console.log(children);
     return (
       <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
         <div>

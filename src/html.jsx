@@ -2,7 +2,6 @@
 /* eslint import/extensions:"off" */
 /* eslint global-require:"off" */
 import React from 'react';
-import Helmet from 'react-helmet';
 
 let inlinedStyles = '';
 if (process.env.NODE_ENV === 'production') {

@@ -11,8 +11,6 @@ import PostTags from '../PostTags/PostTags.jsx';
 class PostPreview extends Component {
 
   render() {
-    console.log('PostPreview render reached.');
-    console.log(this.props);
     const { postInfo } = this.props;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--4">

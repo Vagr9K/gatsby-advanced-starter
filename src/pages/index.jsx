@@ -18,7 +18,6 @@ class Index extends React.Component {
     return postList;
   }
   render() {
-    console.log(this.props);
     const config = this.props.data.site.siteMetadata;
     const postList = this.getPostList();
     return (

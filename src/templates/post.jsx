@@ -10,7 +10,6 @@ import './post.scss';
 
 export default class PostTemplate extends React.Component {
   render() {
-    console.log(this.props);
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     const config = this.props.data.site.siteMetadata;
