@@ -19,7 +19,7 @@ class PostPreview extends Component {
             <img src={postInfo.cover} alt={postInfo.title} />
             <MediaOverlay>
               <CardTitle title={postInfo.title}>
-                <Button raised primary label="Read" className="md-cell--right" />
+                <Button raised primary className="md-cell--right">Read</Button>
               </CardTitle>
             </MediaOverlay>
           </Media>
