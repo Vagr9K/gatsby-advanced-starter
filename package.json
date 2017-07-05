@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-material",
   "description": "GatsbyJS Material Blog theme.",
-  "version": "0.0.1",
+  "version": "0.1.7",
   "author": "Ruben Harutyunyan",
   "dependencies": {
     "font-awesome": "^4.7.0",
