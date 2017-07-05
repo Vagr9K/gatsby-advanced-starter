@@ -22,7 +22,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const pages = [];
     const blogPost = path.resolve('src/templates/post.jsx');
     resolve(
       graphql(
@@ -41,6 +40,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       `,
       ).then((result) => {
         if (result.errors) {
+          /* eslint no-console: "off"*/
           console.log(result.errors);
           reject(result.errors);
         }

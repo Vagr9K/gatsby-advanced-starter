@@ -19,6 +19,7 @@ class AboutPage extends Component {
 
 export default AboutPage;
 
+/* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query AboutQuery {
     site {
