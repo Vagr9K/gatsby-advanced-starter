@@ -17,9 +17,9 @@ class UserLinks extends Component {
             <Button
               icon
               secondary
-              key={link[0]}
-              iconClassName={link[2]}
-              href={link[1]}
+              key={link.label}
+              iconClassName={link.iconClassName}
+              href={link.url}
             />
           ),
 

@@ -2,22 +2,26 @@
 /* eslint import/extensions:"off" */
 /* eslint global-require:"off" */
 import React from 'react';
-import Helmet from 'react-helmet';
-import { prefixLink } from 'gatsby-helpers';
+import favicon from './favicon.png';
 
-const BUILD_TIME = new Date().getTime();
+let inlinedStyles = '';
+if (process.env.NODE_ENV === 'production') {
+  try {
+    inlinedStyles = require('!raw-loader!../public/styles.css');
+  } catch (e) {
+    /* eslint no-console: "off"*/
+    console.log(e);
+  }
+}
 
 export default class HTML extends React.Component {
   render() {
-    const head = Helmet.rewind();
-
     let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
-          dangerouslySetInnerHTML={{
-            __html: require('!raw!./public/styles.css'),
-          }}
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
         />
       );
     }
@@ -30,19 +34,19 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          {head.title.toComponent()}
-          {head.meta.toComponent()}
-          <link rel="shortcut icon" href={prefixLink('/favicon.png')} />
+          {this.props.headComponents}
+          <link rel="shortcut icon" href={favicon} />
           {css}
         </head>
         <body>
           <div
-            id="react-mount"
+            id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+          {this.props.postBodyComponents}
         </body>
       </html>
     );
   }
 }
+

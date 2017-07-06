@@ -7,9 +7,19 @@
 # Gatsby Material Starter
 A blog starter with Material design in mind for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+[Demo website.](https://vagr9k.github.io/gatsby-material-starter/)
+
 ![Screenshot](docs/screenshot.png)
 
-[Demo website.](https://vagr9k.github.io/gatsby-material-starter/)
+## GatsbyJS V1
+
+This starter is based on GatsbyJS V1, which brings progressive web app features such as automatic code and data splitting (by route), prefetching, with service worker/offline-first support and PRPL pattern.
+
+More information in the [announcement](https://www.gatsbyjs.org/blog/gatsby-first-beta-release/).
+
+Make sure to read the [migration guide](https://www.gatsbyjs.org/docs/migrating-from-v0-to-v1/) when porting v0 projects to v1.
+
+For v0 version of this starter, check out the [`v0` branch](https://github.com/Vagr9K/gatsby-material-starter/tree/v0).
 
 ## Features
 
@@ -21,10 +31,11 @@ A blog starter with Material design in mind for [Gatsby](https://github.com/gats
 * Integrated FontAwesome support.
 * Integrated Material Icons support.
 * Responsive design.
-* Ability to set and display author information from `config.toml`.
-* NPM script for GitHUB Pages deployment.
+* Ability to set and display author information from `gatsby-config.js`.
+* NPM scripts for GitHUB Pages deployment.
+* Blazing fast loading times thanks to prerendered HTML and automatic chunk loading of JS files.
 
-![Author Screenshot](docs/screenshot-author.png)
+![Author Segment Screenshot](docs/screenshot-author.png)
 ![Article Screenshot](docs/screenshot-article.png)
 
 ## Getting Started
@@ -41,47 +52,67 @@ Alternatively:
 ```sh
 git clone https://github.com/Vagr9K/gatsby-material-starter YourProjectName # Clone the project
 cd YourProjectname
-rm -rf .git # So you can have your own changes soter in VCS.
+rm -rf .git # So you can have your own changes stored in VCS.
 npm install # or yarn
 npm run serve
 ```
 
 ## Configuration
 
- Edit `config.toml`
+ Edit `siteMetadata` object in `gatsby-config.js`:
 
- ```toml
-siteTitle="Gatsby Material Starter" # Site title
-linkPrefix = "/"  # Gatsby link prefix
-googleAnalyticsID = '' # GA id
-disqusShortname = '' # Disqus shortname
-
-postDefaultCategoryID= '12121212' # Disqus category for posts without categories.
-userName = "Material User" # Your public name
-userLocation = "Yerevan, Armenia" # Your location
-userAvatar = "https://api.adorable.io/avatars/150/test.png" # Your avatar
-userDescription = "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people." # Your short "about me"
-
-# An array of links to you projects/social profiles you want to share
-# FORMAT: ['LABEL', 'LINK', 'ICON CLASSNAME']
-# ICON CLASSNAME can be either FontAwesome or Material Design icon classnames.
-userLinks = [
-     ['Website', '//mywebsite.example.local', 'fa fa-link'],
-     ['GitHub', '//github.com.local/USER', 'fa fa-github'],
-     ['Twitter', '//twitter.local/USER', 'fa fa-twitter'],
-     ['Instagram', '//instagram.local/USER', 'fa fa-instagram'],
-     ['Facebook', '//facebook.com.local/USER', 'fa fa-facebook'],
-     ['Email', 'mailto:gmail.com.local/USER', 'fa fa-envelope'],
-]
-
-copyright = "Copyright © 2017. Material User" # Footer copyright
+ ```js
+siteMetadata: {
+    siteTitle: 'Gatsby Material Starter', // Site title.
+    linkPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+    disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
+    postDefaultCategoryID: 'Tech', // Default category for posts.
+    userName: 'Material User', // Username to display in the author segment.
+    userLocation: 'Yerevan, Armenia', // User location to display in the author segment.
+    userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
+    userDescription: "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    // Links to social profiles/projects you want to display in the author segment/navigation bar.
+    userLinks: [
+      {
+        label: 'Website',
+        url: '//mywebsite.example.local',
+        iconClassName: 'fa fa-link',
+      },
+      {
+        label: 'GitHub',
+        url: '//github.com.local/USER',
+        iconClassName: 'fa fa-github',
+      },
+      {
+        label: 'Twitter',
+        url: '//twitter.local/USER',
+        iconClassName: 'fa fa-twitter',
+      },
+      {
+        label: 'Instagram',
+        url: '//instagram.local/USER',
+        iconClassName: 'fa fa-instagram',
+      },
+      {
+        label: 'Facebook',
+        url: '//facebook.com.local/USER',
+        iconClassName: 'fa fa-facebook',
+      },
+      {
+        label: 'Enail',
+        url: 'mailto:gmail.com.local/USER',
+        iconClassName: 'fa fa-envelope',
+      },
+    ],
+    copyright: 'Copyright © 2017. Material User', // Copyright string in the footer of the website.
+  },
  ```
 
  NOTE: All configuration variables except for `siteTitle` are optional and won't render if omitted.
 
 ## Theming
 
-Edit `pages/theme.scss` to suit your needs.
+Edit `src/pages/theme.scss` to suit your needs.
 You can use [Material color palette](https://react-md.mlaursen.com/customization/colors) provided by React-MD.
 
 ```css
@@ -93,9 +124,7 @@ $md-tertiary-color: $md-grey-300;
 
 ## Roadmap
 
-* Tag pages support. (*)
-* Category pages support. (*)
+* Tag pages support.
+* Category pages support.
 * Social sharing component.
 * Search.
-
-Items denoted with `*` are possibly halted until Gatsby 1.0 release with dynamic routing support.
