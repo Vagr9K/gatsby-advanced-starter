@@ -56,7 +56,7 @@ query BlogPostBySlug($slug: String!) {
   site {
       siteMetadata {
         siteTitle
-        prefixPath
+        pathPrefix
         disqusShortname
         postDefaultCategoryID
         userName
