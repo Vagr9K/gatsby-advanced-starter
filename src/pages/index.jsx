@@ -25,8 +25,8 @@ class Index extends React.Component {
         <div className="md-grid">
           <Helmet title={config.siteTitle} />
           {
-           postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
-        }
+            postList.map(post => (<PostPreview key={post.title} postInfo={post} />))
+          }
         </div>
       </MainLayout>
     );
@@ -39,9 +39,9 @@ export default Index;
 export const pageQuery = graphql`
   query IndexQuery {
     site{
+      pathPrefix
       siteMetadata {
         siteTitle
-        pathPrefix
         disqusShortname
         postDefaultCategoryID
         userName

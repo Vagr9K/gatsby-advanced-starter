@@ -23,9 +23,9 @@ export default AboutPage;
 export const pageQuery = graphql`
   query AboutQuery {
     site {
+      pathPrefix
       siteMetadata {
         siteTitle
-        pathPrefix
         disqusShortname
         postDefaultCategoryID
         userName

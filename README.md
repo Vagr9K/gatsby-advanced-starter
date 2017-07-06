@@ -64,7 +64,6 @@ npm run serve
  ```js
 siteMetadata: {
     siteTitle: 'Gatsby Material Starter', // Site title.
-    pathPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
     disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
     postDefaultCategoryID: 'Tech', // Default category for posts.
     userName: 'Material User', // Username to display in the author segment.
@@ -106,6 +105,15 @@ siteMetadata: {
     ],
     copyright: 'Copyright © 2017. Material User', // Copyright string in the footer of the website.
   },
+ ```
+
+ You can also optionally set `pathPrefix`:
+ ```js
+ module.exports = {
+  // Note: it must *not* have a trailing slash.
+       pathPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+}
+
  ```
 
  NOTE: All configuration variables except for `siteTitle` are optional and won't render if omitted.

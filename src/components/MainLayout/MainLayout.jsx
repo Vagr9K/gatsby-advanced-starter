@@ -4,10 +4,9 @@ import Navigation from '../Navigation/Navigation.jsx';
 import './index.scss';
 
 export default class MainLayout extends React.Component {
-
   getLocalTitle() {
     const currentPath = this.props.location;
-    const pathPrefix = this.props.SiteConfig.pathPrefix;
+    const pathPrefix = this.props.pathPrefix;
     let title = '';
     if (currentPath === (`${pathPrefix}/`)) {
       title = 'Home';
