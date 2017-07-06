@@ -7,13 +7,13 @@ export default class MainLayout extends React.Component {
 
   getLocalTitle() {
     const currentPath = this.props.location;
-    const linkPrefix = this.props.SiteConfig.linkPrefix;
+    const prefixPath = this.props.SiteConfig.prefixPath;
     let title = '';
-    if (currentPath === (`${linkPrefix}/`)) {
+    if (currentPath === (`${prefixPath}/`)) {
       title = 'Home';
-    } else if (currentPath === (`${linkPrefix}/tags/`)) {
+    } else if (currentPath === (`${prefixPath}/tags/`)) {
       title = 'Tags';
-    } else if (currentPath === (`${linkPrefix}/about/`)) {
+    } else if (currentPath === (`${prefixPath}/about/`)) {
       title = 'About';
     } else {
       title = 'Article';

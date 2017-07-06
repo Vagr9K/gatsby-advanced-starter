@@ -41,7 +41,7 @@ export const pageQuery = graphql`
     site{
       siteMetadata {
         siteTitle
-        linkPrefix
+        prefixPath
         disqusShortname
         postDefaultCategoryID
         userName
