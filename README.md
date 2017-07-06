@@ -64,7 +64,7 @@ npm run serve
  ```js
 siteMetadata: {
     siteTitle: 'Gatsby Material Starter', // Site title.
-    linkPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+    prefixPath: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
     disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
     postDefaultCategoryID: 'Tech', // Default category for posts.
     userName: 'Material User', // Username to display in the author segment.
