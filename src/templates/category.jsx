@@ -9,7 +9,7 @@ export default class CategoryTemplate extends React.Component {
     const config = this.props.data.site.siteMetadata;
     const category = this.props.pathContext.category;
     const postEdges = this.props.data.allMarkdownRemark.edges;
-    const currPath = 'this.props.location.pathname';
+    const currPath = this.props.location.pathname;
     return (
       <MainLayout SiteConfig={config} location={currPath}>
         <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />

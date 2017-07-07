@@ -8,7 +8,7 @@ export default class TagTemplate extends React.Component {
     const config = this.props.data.site.siteMetadata;
     const tag = this.props.pathContext.tag;
     const postEdges = this.props.data.allMarkdownRemark.edges;
-    const currPath = 'this.props.location.pathname';
+    const currPath = this.props.location.pathname;
     return (
       <MainLayout SiteConfig={config} location={currPath}>
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
