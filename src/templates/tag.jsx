@@ -1,13 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import MainLayout from '../components/MainLayout/MainLayout.jsx';
+import PostListing from '../components/PostListing/PostListing.jsx';
 
 export default class TagTemplate extends React.Component {
   render() {
     const config = this.props.data.site.siteMetadata;
+    const tag = this.props.pathContext.tag;
+    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const currPath = 'this.props.location.pathname';
     return (
-      <MainLayout SiteConfig={config} location={this.props.location.pathname}>
-        <Helmet title={`Posts tagged as "${this.props.pathContext.tag}" | ${config.siteTitle}`} />
+      <MainLayout SiteConfig={config} location={currPath}>
+        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+        <PostListing postEdges={postEdges} />
       </MainLayout>
 
     );
