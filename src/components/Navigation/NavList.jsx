@@ -1,6 +1,6 @@
 import React from 'react';
 import FontIcon from 'react-md/lib/FontIcons';
-import { navigateTo } from 'gatsby-link';
+import Link from 'gatsby-link';
 
 function GetNavList(config) {
   const NavList = [{
@@ -8,7 +8,8 @@ function GetNavList(config) {
     subheader: false,
     primaryText: 'Home',
     leftIcon: <FontIcon>home</FontIcon>,
-    onClick: () => navigateTo('/'),
+    component: Link,
+    to: '/',
   }, {
     divider: true,
   },
@@ -24,7 +25,7 @@ function GetNavList(config) {
           leftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
           onClick() { window.location.href = link.url; },
         },
-    );
+      );
     });
   }
 
@@ -36,7 +37,8 @@ function GetNavList(config) {
       subheader: false,
       primaryText: 'About',
       leftIcon: <FontIcon>person</FontIcon>,
-      onClick: () => navigateTo('/about/'),
+      component: Link,
+      to: '/about/',
     },
   );
   return NavList;
