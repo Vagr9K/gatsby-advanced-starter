@@ -10,7 +10,11 @@
         "react/prop-types": "off",
         "react/no-danger": "off",
         "import/no-extraneous-dependencies": "off",
-        "import/no-webpack-loader-syntax": "off"
+        "import/no-webpack-loader-syntax": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": ["warn", {
+            "aspects": ["invalidHref"]
+        }]
     },
     "settings": {
         "import/resolver": "webpack",
