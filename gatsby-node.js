@@ -1,4 +1,5 @@
 const path = require('path');
+const _ = require('lodash');
 const webpackLodashPlugin = require('lodash-webpack-plugin');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
@@ -24,6 +25,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const postPage = path.resolve('src/templates/post.jsx');
+    const tagPage = path.resolve('src/templates/tag.jsx');
     resolve(
       graphql(
         `
@@ -49,12 +51,29 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors);
         }
 
+        const tagSet = new Set();
         result.data.allMarkdownRemark.edges.forEach((edge) => {
+          if (edge.node.frontmatter.tags) {
+            edge.node.frontmatter.tags.forEach((tag) => {
+              tagSet.add(tag);
+            });
+          }
           createPage({
             path: edge.node.fields.slug,
             component: postPage,
             context: {
               slug: edge.node.fields.slug,
+            },
+          });
+        });
+
+        const tagList = Array.from(tagSet);
+        tagList.forEach((tag) => {
+          createPage({
+            path: `/tags/${_.kebabCase(tag)}/`,
+            component: tagPage,
+            context: {
+              tag,
             },
           });
         });
