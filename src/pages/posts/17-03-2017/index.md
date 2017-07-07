@@ -1,6 +1,7 @@
 ---
 title: "The Butterfly of the Edge"
 cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
+category: "tech"
 date: "17/03/2017"
 tags:
     - programming
