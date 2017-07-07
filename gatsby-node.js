@@ -1,4 +1,5 @@
 const path = require('path');
+const webpackLodashPlugin = require('lodash-webpack-plugin');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
@@ -22,7 +23,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('src/templates/post.jsx');
+    const postPage = path.resolve('src/templates/post.jsx');
     resolve(
       graphql(
         `
@@ -30,6 +31,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           allMarkdownRemark {
             edges {
               node {
+                frontmatter {
+                  tags
+                }
                 fields {
                   slug
                 }
@@ -48,7 +52,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         result.data.allMarkdownRemark.edges.forEach((edge) => {
           createPage({
             path: edge.node.fields.slug,
-            component: blogPost,
+            component: postPage,
             context: {
               slug: edge.node.fields.slug,
             },
@@ -58,3 +62,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     );
   });
 };
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === 'build-javascript') {
+    config.plugin('Lodash', webpackLodashPlugin, null);
+  }
+}
+;

@@ -4,6 +4,7 @@
   "version": "0.1.7",
   "author": "Ruben Harutyunyan",
   "dependencies": {
+    "babel-plugin-lodash": "^3.2.11",
     "font-awesome": "^4.7.0",
     "gatsby": "^1.0.2",
     "gatsby-link": "^1.0.1",
@@ -19,6 +20,8 @@
     "gatsby-remark-smartypants": "^1.0.1",
     "gatsby-source-filesystem": "^1.0.1",
     "gatsby-transformer-remark": "^1.0.1",
+    "lodash": "^4.17.4",
+    "lodash-webpack-plugin": "^0.11.4",
     "react-disqus-comments": "^1.0.3",
     "react-md": "^1.1.0-alpha-5"
   },
