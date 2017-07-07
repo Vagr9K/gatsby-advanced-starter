@@ -4,13 +4,13 @@ import PostPreview from '../PostPreview/PostPreview.jsx';
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postNodes.forEach((postNode) => {
+    this.props.postEdges.forEach((postEdge) => {
       postList.push({
-        path: postNode.node.fields.slug,
-        tags: postNode.node.frontmatter.tags,
-        cover: postNode.node.frontmatter.cover,
-        title: postNode.node.frontmatter.title,
-        date: postNode.node.frontmatter.date,
+        path: postEdge.node.fields.slug,
+        tags: postEdge.node.frontmatter.tags,
+        cover: postEdge.node.frontmatter.cover,
+        title: postEdge.node.frontmatter.title,
+        date: postEdge.node.frontmatter.date,
       });
     });
     return postList;

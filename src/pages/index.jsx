@@ -6,10 +6,12 @@ import PostListing from '../components/PostListing/PostListing.jsx';
 class Index extends React.Component {
   render() {
     const config = this.props.data.site.siteMetadata;
+    const currPath = this.props.location.pathname;
+    const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <MainLayout SiteConfig={config} location={this.props.location.pathname}>
+      <MainLayout SiteConfig={config} location={currPath}>
         <Helmet title={config.siteTitle} />
-        <PostListing postNodes={this.props.data.allMarkdownRemark.edges} />
+        <PostListing postEdges={postEdges} />
       </MainLayout>
     );
   }
