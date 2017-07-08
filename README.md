@@ -26,6 +26,8 @@ For v0 version of this starter, check out the [`v0` branch](https://github.com/V
 * [React-MD](https://github.com/mlaursen/react-md) for Material design.
 * Separate components for everything.
 * Ablity to set external links to projects/social profiles you want to share from config files.
+* Tags. Ability to view posts under each tag separately.
+* Categories. Ability to view posts under each category separately.
 * Disqus support.
 * Google Analytics support.
 * Integrated FontAwesome support.
@@ -132,7 +134,8 @@ $md-tertiary-color: $md-grey-300;
 
 ## Roadmap
 
-* Tag pages support.
-* Category pages support.
 * Social sharing component.
 * Search.
+* General UI improvements.
+* Better SEO.
+* Separation of user configuration from `gatsby-config.js`.
