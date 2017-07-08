@@ -9,7 +9,11 @@ class Index extends React.Component {
     const currPath = this.props.location.pathname;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <MainLayout SiteConfig={config} location={currPath}>
+      <MainLayout
+        SiteConfig={config}
+        location={currPath}
+        pathPrefix={this.props.data.site.pathPrefix}
+      >
         <Helmet title={config.siteTitle} />
         <PostListing postEdges={postEdges} />
       </MainLayout>

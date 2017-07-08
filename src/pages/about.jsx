@@ -7,7 +7,11 @@ class AboutPage extends Component {
   render() {
     const config = this.props.data.site.siteMetadata;
     return (
-      <MainLayout SiteConfig={config} location={this.props.location.pathname}>
+      <MainLayout
+        SiteConfig={config}
+        location={this.props.location.pathname}
+        pathPrefix={this.props.data.site.pathPrefix}
+      >
         <div className="about-container">
           <Helmet title={`About | ${config.siteTitle}`} />
           <About />

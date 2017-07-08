@@ -20,7 +20,11 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <MainLayout SiteConfig={config} location={this.props.location.pathname}>
+      <MainLayout
+        SiteConfig={config}
+        location={this.props.location.pathname}
+        pathPrefix={this.props.data.site.pathPrefix}
+      >
         <div className="md-grid post-page-container">
 
           <Helmet

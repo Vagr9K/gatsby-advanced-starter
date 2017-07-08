@@ -22,10 +22,10 @@ export default class MainLayout extends React.Component {
     } else if (currentPath.includes('posts')) {
       title = 'Article';
     } else if (currentPath.includes('tags/')) {
-      const tag = currentPath.replace('tags/', '').replace('/', '');
+      const tag = currentPath.replace('tags/', '').replace('/', '').replace('-', ' ');
       title = `Tagged in ${capitalize(tag)}`;
     } else if (currentPath.includes('categories/')) {
-      const category = currentPath.replace('categories/', '').replace('/', '');
+      const category = currentPath.replace('categories/', '').replace('/', '').replace('-', ' ');
       title = `${capitalize(category)}`;
     }
     return title;
