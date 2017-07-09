@@ -53,6 +53,8 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
             tags

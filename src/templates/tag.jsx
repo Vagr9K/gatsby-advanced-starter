@@ -37,6 +37,8 @@ query TagPage($tag: String) {
           fields {
             slug
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
             tags
