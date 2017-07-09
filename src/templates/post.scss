@@ -6,6 +6,27 @@ $phone-status-bar-height: 24px - 12px;
     width: 100%;
     max-width: 752px;
 
+    .post-header {
+        margin: 0;
+        max-width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    .cover-img {
+        min-height: 200px;
+    }
+
+    .post-info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        > div {
+            margin-right: 20px;
+        }
+    }
+
     .post {
         display: flex;
         justify-content: center;
