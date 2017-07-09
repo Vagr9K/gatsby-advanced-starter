@@ -11,6 +11,7 @@ import Media, { MediaOverlay } from 'react-md/lib/Media';
 import MainLayout from '../components/MainLayout/MainLayout.jsx';
 import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import Disqus from '../components/Disqus/Disqus.jsx';
+import PostTags from '../components/PostTags/PostTags.jsx';
 import './atom-one-dark.css';
 import './post.scss';
 
@@ -58,6 +59,7 @@ export default class PostTemplate extends React.Component {
               <h1 className="md-display-3 post-header">{post.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </CardText>
+            <PostTags tags={post.tags} />
           </Card>
           <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
           <Disqus post={post} disqusShortname={config.disqusShortname} />
@@ -79,6 +81,7 @@ query BlogPostBySlug($slug: String!) {
       cover
       date
       category
+      tags
     }
   }
 
