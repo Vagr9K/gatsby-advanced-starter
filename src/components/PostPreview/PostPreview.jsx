@@ -3,13 +3,13 @@ import Card from 'react-md/lib/Cards/Card';
 import CardTitle from 'react-md/lib/Cards/CardTitle';
 import Button from 'react-md/lib/Buttons';
 import Avatar from 'react-md/lib/Avatars';
+import CardText from 'react-md/lib/Cards/CardText';
 import FontIcon from 'react-md/lib/FontIcons';
 import Link from 'gatsby-link';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
 import PostTags from '../PostTags/PostTags.jsx';
 
 class PostPreview extends Component {
-
   render() {
     const { postInfo } = this.props;
     return (
@@ -23,14 +23,18 @@ class PostPreview extends Component {
               </CardTitle>
             </MediaOverlay>
           </Media>
-          <CardTitle
-            avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-            title="Published on"
-            subtitle={postInfo.date}
-          />
         </Link>
-        <PostTags tags={postInfo.tags} />
+        <CardTitle
+          expander
+          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+          title={`Published on ${postInfo.date}`}
+          subtitle={`${postInfo.timeToRead} min read`}
+        />
 
+        <CardText expandable>
+          {postInfo.excerpt}
+          <PostTags tags={postInfo.tags} />
+        </CardText>
       </Card>
     );
   }

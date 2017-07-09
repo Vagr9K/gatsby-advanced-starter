@@ -38,6 +38,8 @@ query CategoryPage($category: String) {
           fields {
             slug
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
             tags

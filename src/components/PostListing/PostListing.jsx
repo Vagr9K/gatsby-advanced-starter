@@ -11,6 +11,8 @@ class PostListing extends React.Component {
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
+        excerpt: postEdge.node.excerpt,
+        timeToRead: postEdge.node.timeToRead,
       });
     });
     return postList;
