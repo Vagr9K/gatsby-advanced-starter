@@ -1,8 +1,7 @@
-.toolbar-children {
+.toolbar-actions {
     height: 100%;
     display: flex;
     flex: 1 1 auto;
     justify-content: flex-end;
-    margin-right: 20px;
-    overflow-y: hidden;
+    align-items: center;
 }
