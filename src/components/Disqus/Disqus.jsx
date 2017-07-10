@@ -6,7 +6,7 @@ import config from '../../../data/SiteConfig';
 class Disqus extends Component {
   render() {
     const { post, onDisqusComment } = this.props;
-    if (config.disqusShortname) {
+    if (!config.disqusShortname) {
       return null;
     }
     return (
