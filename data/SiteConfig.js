@@ -25,17 +25,7 @@ module.exports = {
       iconClassName: 'fa fa-twitter',
     },
     {
-      label: 'Instagram',
-      url: '//instagram.local/USER',
-      iconClassName: 'fa fa-instagram',
-    },
-    {
-      label: 'Facebook',
-      url: '//facebook.com.local/USER',
-      iconClassName: 'fa fa-facebook',
-    },
-    {
-      label: 'Enail',
+      label: 'Email',
       url: 'mailto:gmail.com.local/USER',
       iconClassName: 'fa fa-envelope',
     },
