@@ -10,7 +10,7 @@ export default class MainLayout extends React.Component {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const pathPrefix = config.pathPrefix ? config.pathPrefix : '/';
-    const currentPath = this.props.location.pathname.replace(pathPrefix, '');
+    const currentPath = this.props.location.pathname.replace(pathPrefix, '').replace('/', '');
     let title = '';
     if (currentPath === ('')) {
       title = 'Home';
