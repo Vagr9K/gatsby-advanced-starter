@@ -3,7 +3,6 @@ import Button from 'react-md/lib/Buttons';
 import './UserLinks.scss';
 
 class UserLinks extends Component {
-
   render() {
     const { userLinks } = this.props.SiteConfig;
     if (!userLinks) {
@@ -13,17 +12,16 @@ class UserLinks extends Component {
       <div className="user-links">
         {
           userLinks.map(link =>
-          (
-            <Button
+            (<Button
               icon
               secondary
               key={link.label}
               iconClassName={link.iconClassName}
               href={link.url}
             />
-          ),
+            ),
 
-        )
+          )
         }
       </div>
     );
