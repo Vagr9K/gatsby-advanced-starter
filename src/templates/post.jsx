@@ -55,7 +55,7 @@ export default class PostTemplate extends React.Component {
           </CardText>
           <PostTags tags={post.tags} />
         </Card>
-        <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
+        <UserInfo className="md-grid md-cell md-cell--12" config={config} />
         <Disqus post={post} disqusShortname={config.disqusShortname} />
       </div>
 

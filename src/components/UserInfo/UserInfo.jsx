@@ -17,8 +17,8 @@ class UserInfo extends Component {
       userLocation,
       userDescription,
       userLinks,
-    } = this.props.SiteConfig;
-    const userLinksElement = <UserLinks SiteConfig={this.props.SiteConfig} />;
+    } = this.props.config;
+    const userLinksElement = <UserLinks config={this.props.config} />;
     if (!userAvatar && !userName && !userLocation && !userDescription) {
       if (userLinks) {
         return (

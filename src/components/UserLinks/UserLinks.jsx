@@ -4,7 +4,7 @@ import './UserLinks.scss';
 
 class UserLinks extends Component {
   render() {
-    const { userLinks } = this.props.SiteConfig;
+    const { userLinks } = this.props.config;
     if (!userLinks) {
       return null;
     }

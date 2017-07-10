@@ -7,22 +7,22 @@ import './Navigation.scss';
 
 class Navigation extends Component {
   render() {
-    const { children, SiteConfig, LocalTitle } = this.props;
+    const { children, config, LocalTitle } = this.props;
     return (
       <NavigationDrawer
-        drawerTitle={SiteConfig.siteTitle}
+        drawerTitle={config.siteTitle}
         toolbarTitle={LocalTitle}
         contentClassName="main-content"
-        navItems={GetNavList(SiteConfig)}
+        navItems={GetNavList(config)}
         mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
         desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
-        toolbarActions={<ToolbarActions SiteConfig={SiteConfig} />}
+        toolbarActions={<ToolbarActions config={config} />}
       >
         <div className="main-container">
           {children}
         </div>
-        <Footer SiteConfig={SiteConfig} />
+        <Footer config={config} />
       </NavigationDrawer>
     );
   }
