@@ -7,7 +7,9 @@ class Toolbar extends Component {
     const { config } = this.props;
     return (
       <div className="toolbar-actions" >
-        <UserLinks config={config} />
+        <div className="userlinks-container">
+          <UserLinks config={config} />
+        </div>
       </div>
     );
   }
