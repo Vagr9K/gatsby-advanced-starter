@@ -8,7 +8,6 @@ import FontIcon from 'react-md/lib/FontIcons';
 import Link from 'gatsby-link';
 import _ from 'lodash';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
-import MainLayout from '../components/MainLayout/MainLayout.jsx';
 import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import Disqus from '../components/Disqus/Disqus.jsx';
 import PostTags from '../components/PostTags/PostTags.jsx';
@@ -19,7 +18,6 @@ export default class PostTemplate extends React.Component {
   render() {
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
-    const config = this.props.data.site.siteMetadata;
     if (!post.id) {
       post.id = this.props.location.pathname;
     }
@@ -27,44 +25,38 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <MainLayout
-        SiteConfig={config}
-        location={this.props.location.pathname}
-        pathPrefix={this.props.data.site.pathPrefix}
-      >
-        <div className="md-grid post-page-container">
+      <div className="md-grid post-page-container">
 
-          <Helmet
-            title={`${post.title} | ${config.siteTitle}`}
-          />
-          <Card className="md-grid md-cell md-cell--12 post">
-            <CardText className="post-body">
-              <Media forceAspect={false} className="cover-img">
-                <img src={post.cover} alt={post.title} />
-                <MediaOverlay className="post-info">
+        <Helmet
+          title={`${post.title} | ${config.siteTitle}`}
+        />
+        <Card className="md-grid md-cell md-cell--12 post">
+          <CardText className="post-body">
+            <Media forceAspect={false} className="cover-img">
+              <img src={post.cover} alt={post.title} />
+              <MediaOverlay className="post-info">
+                <CardTitle
+                  avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+                  title={`Published on ${post.date}`}
+                  subtitle={`${postNode.timeToRead} min read`}
+                />
+                <Link to={`/categories/${_.kebabCase(post.category)}`}>
                   <CardTitle
-                    avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-                    title={`Published on ${post.date}`}
-                    subtitle={`${postNode.timeToRead} min read`}
+                    avatar={<Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />}
+                    title={'In category'}
+                    subtitle={post.category}
                   />
-                  <Link to={`/categories/${_.kebabCase(post.category)}`}>
-                    <CardTitle
-                      avatar={<Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />}
-                      title={'In category'}
-                      subtitle={post.category}
-                    />
-                  </Link>
-                </MediaOverlay>
-              </Media>
-              <h1 className="md-display-3 post-header">{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            </CardText>
-            <PostTags tags={post.tags} />
-          </Card>
-          <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
-          <Disqus post={post} disqusShortname={config.disqusShortname} />
-        </div>
-      </MainLayout>
+                </Link>
+              </MediaOverlay>
+            </Media>
+            <h1 className="md-display-3 post-header">{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          </CardText>
+          <PostTags tags={post.tags} />
+        </Card>
+        <UserInfo className="md-grid md-cell md-cell--12" SiteConfig={config} />
+        <Disqus post={post} disqusShortname={config.disqusShortname} />
+      </div>
 
     );
   }
@@ -82,25 +74,6 @@ query BlogPostBySlug($slug: String!) {
       date
       category
       tags
-    }
-  }
-
-  site {
-      pathPrefix
-      siteMetadata {
-        siteTitle
-        disqusShortname
-        postDefaultCategoryID
-        userName
-        userLocation
-        userAvatar
-        userDescription
-        userLinks {
-          label
-          url
-          iconClassName
-        }
-        copyright
     }
   }
 }
