@@ -9,8 +9,8 @@ export default class MainLayout extends React.Component {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    const pathPrefix = this.props.pathPrefix ? this.props.pathPrefix : '/';
-    const currentPath = this.props.location.replace(pathPrefix, '');
+    const pathPrefix = config.pathPrefix ? config.pathPrefix : '/';
+    const currentPath = this.props.location.pathname.replace(pathPrefix, '');
     let title = '';
     if (currentPath === ('')) {
       title = 'Home';
@@ -36,13 +36,11 @@ export default class MainLayout extends React.Component {
     return (
       <Navigation SiteConfig={config} LocalTitle={this.getLocalTitle()}>
         <div>
-          {children}
+          {children()}
         </div>
       </Navigation>
 
     );
   }
 }
-
-// NOTE: This will be moved under src/layouts/ once Gatsby supports running queries from there.
 
