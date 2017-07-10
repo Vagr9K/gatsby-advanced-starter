@@ -3,7 +3,7 @@ import './Footer.scss';
 
 class Footer extends Component {
   render() {
-    const { copyright } = this.props.SiteConfig;
+    const { copyright } = this.props.config;
     if (!copyright) {
       return null;
     }

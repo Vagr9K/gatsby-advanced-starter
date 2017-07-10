@@ -1,24 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import MainLayout from '../components/MainLayout/MainLayout.jsx';
 import PostListing from '../components/PostListing/PostListing.jsx';
+import config from '../../data/SiteConfig';
 
 
 export default class CategoryTemplate extends React.Component {
   render() {
-    const config = this.props.data.site.siteMetadata;
     const category = this.props.pathContext.category;
     const postEdges = this.props.data.allMarkdownRemark.edges;
-    const currPath = this.props.location.pathname;
     return (
-      <MainLayout
-        SiteConfig={config}
-        location={currPath}
-        pathPrefix={this.props.data.site.pathPrefix}
-      >
+      <div className="category-container">
         <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
         <PostListing postEdges={postEdges} />
-      </MainLayout>
+      </div>
 
     );
   }
@@ -49,24 +43,5 @@ query CategoryPage($category: String) {
         }
       }
     }
-
-  site {
-      pathPrefix
-      siteMetadata {
-        siteTitle
-        disqusShortname
-        postDefaultCategoryID
-        userName
-        userLocation
-        userAvatar
-        userDescription
-        userLinks {
-          label
-          url
-          iconClassName
-        }
-        copyright
-    }
-  }
 }
 `;

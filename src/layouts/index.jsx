@@ -1,6 +1,7 @@
 import React from 'react';
 import 'font-awesome/scss/font-awesome.scss';
-import Navigation from '../Navigation/Navigation.jsx';
+import Navigation from '../components/Navigation/Navigation.jsx';
+import config from '../../data/SiteConfig';
 import './index.scss';
 
 export default class MainLayout extends React.Component {
@@ -8,8 +9,8 @@ export default class MainLayout extends React.Component {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    const pathPrefix = this.props.pathPrefix ? this.props.pathPrefix : '/';
-    const currentPath = this.props.location.replace(pathPrefix, '');
+    const pathPrefix = config.pathPrefix ? config.pathPrefix : '/';
+    const currentPath = this.props.location.pathname.replace(pathPrefix, '').replace('/', '');
     let title = '';
     if (currentPath === ('')) {
       title = 'Home';
@@ -31,17 +32,15 @@ export default class MainLayout extends React.Component {
     return title;
   }
   render() {
-    const { SiteConfig, children } = this.props;
+    const { children } = this.props;
     return (
-      <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
+      <Navigation config={config} LocalTitle={this.getLocalTitle()}>
         <div>
-          {children}
+          {children()}
         </div>
       </Navigation>
 
     );
   }
 }
-
-// NOTE: This will be moved under src/layouts/ once Gatsby supports running queries from there.
 
