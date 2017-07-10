@@ -11,6 +11,7 @@ import Media, { MediaOverlay } from 'react-md/lib/Media';
 import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import Disqus from '../components/Disqus/Disqus.jsx';
 import PostTags from '../components/PostTags/PostTags.jsx';
+import config from '../../data/SiteConfig';
 import './atom-one-dark.css';
 import './post.scss';
 

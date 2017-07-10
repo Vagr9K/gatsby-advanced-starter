@@ -1,6 +1,7 @@
 import React from 'react';
 import 'font-awesome/scss/font-awesome.scss';
-import Navigation from '../Navigation/Navigation.jsx';
+import Navigation from '../components/Navigation/Navigation.jsx';
+import config from '../../data/SiteConfig';
 import './index.scss';
 
 export default class MainLayout extends React.Component {
@@ -31,9 +32,9 @@ export default class MainLayout extends React.Component {
     return title;
   }
   render() {
-    const { SiteConfig, children } = this.props;
+    const { children } = this.props;
     return (
-      <Navigation SiteConfig={SiteConfig} LocalTitle={this.getLocalTitle()}>
+      <Navigation SiteConfig={config} LocalTitle={this.getLocalTitle()}>
         <div>
           {children}
         </div>

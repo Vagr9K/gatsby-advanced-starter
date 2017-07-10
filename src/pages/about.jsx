@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import About from '../components/About/About.jsx';
+import config from '../../data/SiteConfig';
 
 class AboutPage extends Component {
   render() {
-    const config = this.props.data.site.siteMetadata;
     return (
       <div className="about-container">
         <Helmet title={`About | ${config.siteTitle}`} />
