@@ -15,16 +15,11 @@ class Disqus extends Component {
     }
     return (
       <Card className="md-grid md-cell md-cell--12">
-        {
-          expanded ?
-            null
-            :
-            <CardTitle
-              title="Comments"
-              avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}
-              expander
-            />
-        }
+        <CardTitle
+          title="Comments"
+          avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}
+          expander={!expanded}
+        />
         <CardText expandable={!expanded}>
           <ReactDisqusComments
             shortname={config.disqusShortname}
