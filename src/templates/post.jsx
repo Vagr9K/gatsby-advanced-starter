@@ -7,6 +7,7 @@ import Disqus from '../components/Disqus/Disqus.jsx';
 import PostTags from '../components/PostTags/PostTags.jsx';
 import PostCover from '../components/PostCover/PostCover.jsx';
 import PostInfo from '../components/PostInfo/PostInfo.jsx';
+import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
 import config from '../../data/SiteConfig';
 import './atom-one-dark.css';
 import './post.scss';
@@ -64,7 +65,10 @@ export default class PostTemplate extends React.Component {
               <PostInfo postNode={postNode} />
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </CardText>
-            <PostTags tags={post.tags} />
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
+              <SocialLinks postNode={postNode} mobile={this.state.mobile} />
+            </div>
           </Card>
           <UserInfo className="md-grid md-cell md-cell--12" config={config} expanded={expanded} />
           <Disqus post={post} expanded={expanded} />

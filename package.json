@@ -23,7 +23,8 @@
     "lodash": "^4.17.4",
     "lodash-webpack-plugin": "^0.11.4",
     "react-disqus-comments": "^1.0.3",
-    "react-md": "^1.1.0-alpha-5"
+    "react-md": "^1.1.0-alpha-5",
+    "react-share": "^1.15.0"
   },
   "devDependencies": {
     "eslint": "^4.1.1",

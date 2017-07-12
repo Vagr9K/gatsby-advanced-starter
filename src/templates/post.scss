@@ -33,6 +33,12 @@ $phone-status-bar-height: 24px - 12px;
         display: flex;
         justify-content: center;
 
+        .post-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .post-body {
             max-width: 100%;
 
