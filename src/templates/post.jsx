@@ -12,7 +12,35 @@ import './atom-one-dark.css';
 import './post.scss';
 
 export default class PostTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: true,
+    };
+    this.handleResize = this.handleResize.bind(this);
+  }
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+
+  handleResize() {
+    if (window.innerWidth >= 640) {
+      this.setState({ mobile: false });
+    } else {
+      this.setState({ mobile: true });
+    }
+  }
+
   render() {
+    const { mobile } = this.state;
+    const expanded = !mobile;
+    const postOverlapClass = mobile ? 'post-overlap-mobile' : 'post-overlap';
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -27,8 +55,8 @@ export default class PostTemplate extends React.Component {
           title={`${post.title} | ${config.siteTitle}`}
         />
 
-        <PostCover postNode={postNode} />
-        <div className="md-grid md-cell--9 post-page-contents mobile-fix">
+        <PostCover postNode={postNode} mobile={mobile} />
+        <div className={`md-grid md-cell--9 post-page-contents mobile-fix ${postOverlapClass}`}>
 
           <Card className="md-grid md-cell md-cell--12 post">
             <CardText className="post-body">
@@ -38,8 +66,8 @@ export default class PostTemplate extends React.Component {
             </CardText>
             <PostTags tags={post.tags} />
           </Card>
-          <UserInfo className="md-grid md-cell md-cell--12" config={config} />
-          <Disqus post={post} />
+          <UserInfo className="md-grid md-cell md-cell--12" config={config} expanded={expanded} />
+          <Disqus post={post} expanded={expanded} />
         </div>
       </div>
 
