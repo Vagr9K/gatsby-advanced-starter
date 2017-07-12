@@ -1,6 +1,5 @@
 import React from 'react';
 import PostPreview from '../PostPreview/PostPreview.jsx';
-import './PostListing.scss';
 
 class PostListing extends React.Component {
   getPostList() {
