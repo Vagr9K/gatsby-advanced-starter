@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Card from 'react-md/lib/Cards';
 import CardText from 'react-md/lib/Cards/CardText';
-import Snackbar from 'react-md/lib/Snackbars';
 import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import Disqus from '../components/Disqus/Disqus.jsx';
 import PostTags from '../components/PostTags/PostTags.jsx';
@@ -18,11 +17,8 @@ export default class PostTemplate extends React.Component {
     super(props);
     this.state = {
       mobile: true,
-      toasts: [],
     };
     this.handleResize = this.handleResize.bind(this);
-    this.notifyAboutComment = this.notifyAboutComment.bind(this);
-    this.onSnackbarDismiss = this.onSnackbarDismiss.bind(this);
   }
   componentDidMount() {
     this.handleResize();
@@ -31,16 +27,6 @@ export default class PostTemplate extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
-  }
-
-  onSnackbarDismiss() {
-    const [, ...toasts] = this.state.toasts;
-    this.setState({ toasts });
-  }
-  notifyAboutComment() {
-    const toasts = this.state.toasts.slice();
-    toasts.push({ text: 'New comment available!' });
-    this.setState({ toasts });
   }
 
   handleResize() {
@@ -84,8 +70,7 @@ export default class PostTemplate extends React.Component {
             </div>
           </Card>
           <UserInfo className="md-grid md-cell md-cell--12" config={config} expanded={expanded} />
-          <Disqus post={post} expanded={expanded} onDisqusComment={this.notifyAboutComment} />
-          <Snackbar toasts={this.state.toasts} onDismiss={this.onSnackbarDismiss} />
+          <Disqus post={post} expanded={expanded} />
         </div>
       </div>
 
