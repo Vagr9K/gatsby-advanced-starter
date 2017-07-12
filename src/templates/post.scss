@@ -1,10 +1,18 @@
 @import '~react-md/src/scss/react-md';
 $phone-status-bar-height: 24px - 12px;
 
-.post-page-container {
+.post-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-page-contents {
     justify-content: center;
     width: 100%;
     max-width: 752px;
+    margin-top: -80px !important;
+    z-index: 2;
 
     .post-header {
         margin: 0;
@@ -16,6 +24,16 @@ $phone-status-bar-height: 24px - 12px;
     .post {
         display: flex;
         justify-content: center;
+
+        .post-info {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            > div {
+                margin-right: 20px;
+            }
+        }
 
         .post-body {
             max-width: 100%;
