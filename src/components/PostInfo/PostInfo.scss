@@ -1,0 +1,9 @@
+.post-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    > div {
+        margin-right: 20px;
+    }
+}

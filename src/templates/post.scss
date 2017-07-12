@@ -25,16 +25,6 @@ $phone-status-bar-height: 24px - 12px;
         display: flex;
         justify-content: center;
 
-        .post-info {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-
-            > div {
-                margin-right: 20px;
-            }
-        }
-
         .post-body {
             max-width: 100%;
 
