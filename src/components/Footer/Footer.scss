@@ -10,6 +10,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        @media (max-width: 640px - 1px) {
+            justify-content: space-around;
+        }
 
         h4 {
             color: $md-secondary-color;
