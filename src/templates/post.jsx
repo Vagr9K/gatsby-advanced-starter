@@ -60,7 +60,7 @@ export default class PostTemplate extends React.Component {
 
           <Card className="md-grid md-cell md-cell--12 post">
             <CardText className="post-body">
-              <h1 className="md-display-3 post-header">{post.title}</h1>
+              <h1 className="md-display-2 post-header">{post.title}</h1>
               <PostInfo postNode={postNode} />
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </CardText>
