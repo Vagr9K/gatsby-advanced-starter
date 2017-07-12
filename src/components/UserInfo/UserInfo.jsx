@@ -19,7 +19,7 @@ class UserInfo extends Component {
       userLinks,
     } = this.props.config;
     const { expanded } = this.props;
-    const userLinksElement = <UserLinks config={this.props.config} />;
+    const userLinksElement = <UserLinks config={this.props.config} labeled={expanded} />;
     if (!userAvatar && !userName && !userLocation && !userDescription) {
       if (userLinks) {
         return (
