@@ -22,13 +22,13 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <div className="post-page md-grid--no-spacing">
+      <div className="post-page md-grid md-grid--no-spacing">
         <Helmet
           title={`${post.title} | ${config.siteTitle}`}
         />
 
         <PostCover postNode={postNode} />
-        <div className="md-grid md-cell--9 post-page-contents">
+        <div className="md-grid md-cell--9 post-page-contents mobile-fix">
 
           <Card className="md-grid md-cell md-cell--12 post">
             <CardText className="post-body">
