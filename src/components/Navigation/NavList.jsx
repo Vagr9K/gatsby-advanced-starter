@@ -23,7 +23,8 @@ function GetNavList(config) {
           subheader: false,
           primaryText: link.label,
           leftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
-          onClick() { window.location.href = link.url; },
+          component: 'a',
+          href: link.url,
         },
       );
     });
