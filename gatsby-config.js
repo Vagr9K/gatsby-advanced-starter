@@ -36,6 +36,12 @@ module.exports = {
         trackingId: 'UA-47311644-4',
       },
     },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#c62828',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
