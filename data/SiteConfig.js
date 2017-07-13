@@ -1,5 +1,6 @@
 module.exports = {
   siteTitle: 'Gatsby Material Starter', // Site title.
+  siteUrl: 'https://vagr9k.github.io', // Domain of your website without pathPrefix.
   pathPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
   postDefaultCategoryID: 'Tech', // Default category for posts.
