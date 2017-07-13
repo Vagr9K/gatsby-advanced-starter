@@ -80,14 +80,6 @@ $phone-status-bar-height: 24px - 12px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.12);
             }
 
-            code {
-                display: block;
-                overflow-x: auto;
-                padding: 0.5em;
-                color: #abb2bf;
-                background: #282c34;
-            }
-
             a::before {
                 content: '';
                 display: block;
