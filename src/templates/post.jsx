@@ -9,7 +9,7 @@ import PostCover from '../components/PostCover/PostCover.jsx';
 import PostInfo from '../components/PostInfo/PostInfo.jsx';
 import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
 import config from '../../data/SiteConfig';
-import './atom-one-dark.css';
+import './b16-tomorrow-dark.css';
 import './post.scss';
 
 export default class PostTemplate extends React.Component {
