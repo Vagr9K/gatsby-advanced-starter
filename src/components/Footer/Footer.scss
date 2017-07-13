@@ -1,12 +1,27 @@
+@import '../../layouts/theme.scss';
+
 .footer {
     justify-content: center;
     align-content: center;
-    background-color: #424242;
+    background-color: $md-primary-color;
     padding: 20px;
 
-    h4 {
-        color: #fff;
-        text-align: center;
-        margin: 0;
+    .notice-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        @media (max-width: 640px - 1px) {
+            justify-content: space-around;
+        }
+
+        h4 {
+            color: $md-secondary-color;
+            text-align: center;
+            margin: 0;
+            margin-top: 10px;
+        }
     }
 }

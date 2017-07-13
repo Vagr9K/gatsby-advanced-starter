@@ -1,7 +1,23 @@
 @import '~react-md/src/scss/react-md';
 $phone-status-bar-height: 24px - 12px;
 
-.post-page-container {
+.post-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-overlap {
+    margin-top: -80px !important;
+    z-index: 2;
+}
+
+.post-overlap-mobile {
+    margin-top: -20px !important;
+    z-index: 2;
+}
+
+.post-page-contents {
     justify-content: center;
     width: 100%;
     max-width: 752px;
@@ -16,6 +32,12 @@ $phone-status-bar-height: 24px - 12px;
     .post {
         display: flex;
         justify-content: center;
+
+        .post-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .post-body {
             max-width: 100%;

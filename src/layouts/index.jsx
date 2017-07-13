@@ -3,6 +3,7 @@ import 'font-awesome/scss/font-awesome.scss';
 import Navigation from '../components/Navigation/Navigation.jsx';
 import config from '../../data/SiteConfig';
 import './index.scss';
+import './global.scss';
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {

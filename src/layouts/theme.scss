@@ -1,6 +1,7 @@
 @import '~react-md/src/scss/react-md';
-$md-primary-color: $md-deep-orange-500;
-$md-secondary-color: $md-red-400;
+$md-media-aspect-ratios: ('16:9', '4:3', '1:1', '4:1');
+$md-primary-color: $md-grey-400;
+$md-secondary-color: $md-red-800;
 $md-tertiary-color: $md-grey-300;
 
 .main-container,

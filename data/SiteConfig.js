@@ -10,33 +10,18 @@ module.exports = {
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
-      label: 'Website',
-      url: '//mywebsite.example.local',
-      iconClassName: 'fa fa-link',
-    },
-    {
       label: 'GitHub',
-      url: '//github.com.local/USER',
+      url: 'https://github.com/Vagr9K/gatsby-material-starter',
       iconClassName: 'fa fa-github',
     },
     {
       label: 'Twitter',
-      url: '//twitter.local/USER',
+      url: 'https://twitter.com/Vagr9K',
       iconClassName: 'fa fa-twitter',
     },
     {
-      label: 'Instagram',
-      url: '//instagram.local/USER',
-      iconClassName: 'fa fa-instagram',
-    },
-    {
-      label: 'Facebook',
-      url: '//facebook.com.local/USER',
-      iconClassName: 'fa fa-facebook',
-    },
-    {
-      label: 'Enail',
-      url: 'mailto:gmail.com.local/USER',
+      label: 'Email',
+      url: 'mailto:vagr9k@gmail.com',
       iconClassName: 'fa fa-envelope',
     },
   ],

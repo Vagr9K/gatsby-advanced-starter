@@ -18,7 +18,8 @@ class UserInfo extends Component {
       userDescription,
       userLinks,
     } = this.props.config;
-    const userLinksElement = <UserLinks config={this.props.config} />;
+    const { expanded } = this.props;
+    const userLinksElement = <UserLinks config={this.props.config} labeled={expanded} />;
     if (!userAvatar && !userName && !userLocation && !userDescription) {
       if (userLinks) {
         return (
@@ -32,12 +33,12 @@ class UserInfo extends Component {
     return (
       <Card className="md-grid md-cell md-cell--12 user-info">
         <CardTitle
-          expander
+          expander={!expanded}
           avatar={userAvatar && <Avatar src={userAvatar} role="presentation" />}
           title={userName && userName}
           subtitle="Author"
         />
-        <CardText expandable>
+        <CardText expandable={!expanded}>
           { userLocation &&
             <IconSeparator label={userLocation} iconBefore>
               <FontIcon iconClassName="fa fa-map-marker" />
