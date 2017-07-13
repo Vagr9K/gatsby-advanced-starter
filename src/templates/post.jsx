@@ -39,6 +39,7 @@ export default class PostTemplate extends React.Component {
 
   render() {
     const { mobile } = this.state;
+    const { slug } = this.props.pathContext;
     const expanded = !mobile;
     const postOverlapClass = mobile ? 'post-overlap-mobile' : 'post-overlap';
     const postNode = this.props.data.markdownRemark;
@@ -66,7 +67,7 @@ export default class PostTemplate extends React.Component {
             </CardText>
             <div className="post-meta">
               <PostTags tags={post.tags} />
-              <SocialLinks postNode={postNode} mobile={this.state.mobile} />
+              <SocialLinks postPath={slug} postNode={postNode} mobile={this.state.mobile} />
             </div>
           </Card>
           <UserInfo className="md-grid md-cell md-cell--12" config={config} expanded={expanded} />

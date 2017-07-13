@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
+import config from '../../../data/SiteConfig';
 import './SocialLinks.scss';
 
 class SocialLinks extends Component {
   render() {
-    const { postNode, mobile } = this.props;
+    const { postNode, postPath, mobile } = this.props;
     const post = postNode.frontmatter;
-    const url = window.location.href;
+    const url = config.siteUrl + config.pathPrefix + postPath;
     const {
       FacebookShareButton,
       GooglePlusShareButton,
