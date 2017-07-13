@@ -4,6 +4,14 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + config.pathPrefix,
+    rssMetadata: {
+      site_url: config.siteUrl + config.pathPrefix,
+      feed_url: config.siteUrl + config.pathPrefix + config.siteRss,
+      title: config.siteTitle,
+      description: config.siteDescription,
+      image_url: `${config.siteUrl + config.pathPrefix}/favicon.png`,
+      copyright: config.copyright,
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -50,5 +58,61 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        setup(ref) {
+          const ret = ref.site.siteMetadata.rssMetadata;
+          ret.allMarkdownRemark = ref.allMarkdownRemark;
+          ret.generator = 'GatsbyJS Material Starter';
+          return ret;
+        },
+        query: `
+        {
+          site {
+            siteMetadata {
+              rssMetadata {
+                site_url
+                feed_url
+                title
+                description
+                image_url
+                copyright
+              }
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    timeToRead
+                    fields { slug }
+                    frontmatter {
+                      title
+                      cover
+                      date
+                      category
+                      tags
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: config.siteRss,
+          },
+        ],
+      },
+    },
   ],
 };
