@@ -28,7 +28,8 @@
     "lodash-webpack-plugin": "^0.11.4",
     "react-disqus-comments": "^1.0.3",
     "react-md": "^1.1.0-alpha-5",
-    "react-share": "^1.15.0"
+    "react-share": "^1.15.0",
+    "react-twitter-widgets": "^1.4.0"
   },
   "devDependencies": {
     "eslint": "^4.2.0",
