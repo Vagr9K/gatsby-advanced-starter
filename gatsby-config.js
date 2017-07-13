@@ -10,6 +10,7 @@ module.exports = {
       title: config.siteTitle,
       description: config.siteDescription,
       image_url: `${config.siteUrl + config.pathPrefix}/favicon.png`,
+      author: config.userName,
       copyright: config.copyright,
     },
   },
@@ -77,6 +78,7 @@ module.exports = {
                 title
                 description
                 image_url
+                author
                 copyright
               }
             }
@@ -85,6 +87,19 @@ module.exports = {
       `,
         feeds: [
           {
+            serialize(ctx) {
+              const rssMetadata = ctx.site.siteMetadata.rssMetadata;
+              return ctx.allMarkdownRemark.edges.map(edge => ({
+                categories: edge.node.frontmatter.tags,
+                date: edge.node.frontmatter.date,
+                title: edge.node.frontmatter.title,
+                description: edge.node.excerpt,
+                author: rssMetadata.author,
+                url: rssMetadata.site_url + edge.node.fields.slug,
+                guid: rssMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{ 'content:encoded': edge.node.html }],
+              }));
+            },
             query: `
             {
               allMarkdownRemark(
