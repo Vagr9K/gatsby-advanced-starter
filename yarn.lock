@@ -3484,14 +3484,6 @@ gatsby-remark-responsive-iframe@^1.0.1:
     lodash "^4.17.4"
     unist-util-visit "^1.1.1"
 
-gatsby-remark-smartypants@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-1.0.1.tgz#3676593a8f25265d877a4b3248ac624b24d8c78e"
-  dependencies:
-    retext "^4.0.0"
-    retext-smartypants "^2.0.0"
-    unist-util-visit "^1.1.1"
-
 gatsby-source-filesystem@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.0.1.tgz#d7229fbbbdc895ef669a3101d6199df90c31e5e7"
@@ -5743,10 +5735,6 @@ nigel@1.x.x:
     hoek "2.x.x"
     vise "1.x.x"
 
-nlcst-to-string@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-2.0.1.tgz#f90f3cf905c137dc8edd8727fbcde73e73c2a1d9"
-
 node-cjsx@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/node-cjsx/-/node-cjsx-2.0.0.tgz#19c951b3e3d66e667e9993b457acea0a365098a4"
@@ -6244,14 +6232,6 @@ parse-json@^2.1.0, parse-json@^2.2.0:
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   dependencies:
     error-ex "^1.2.0"
-
-parse-latin@^3.1.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/parse-latin/-/parse-latin-3.2.0.tgz#cfe4b420982b1d20fc16c71dfb33f148de4f1d0b"
-  dependencies:
-    nlcst-to-string "^2.0.0"
-    unist-util-modify-children "^1.0.0"
-    unist-util-visit-children "^1.0.0"
 
 parse-numeric-range@^0.0.2:
   version "0.0.2"
@@ -7795,34 +7775,6 @@ restore-cursor@^2.0.0:
     onetime "^2.0.0"
     signal-exit "^3.0.2"
 
-retext-latin@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/retext-latin/-/retext-latin-1.0.0.tgz#57f41257b4d857b6c6df631ca5788d10080d7051"
-  dependencies:
-    parse-latin "^3.1.0"
-    unherit "^1.0.4"
-
-retext-smartypants@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/retext-smartypants/-/retext-smartypants-2.0.0.tgz#390897c500cbcb959b83a0772609e174b1dcf44c"
-  dependencies:
-    nlcst-to-string "^2.0.0"
-    unist-util-visit "^1.0.0"
-
-retext-stringify@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/retext-stringify/-/retext-stringify-1.0.0.tgz#0032e4be3254ea56b19242ef406515479a3346a9"
-  dependencies:
-    nlcst-to-string "^2.0.0"
-
-retext@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/retext/-/retext-4.0.0.tgz#db12d45fe758530175f779176a112f5f73d22638"
-  dependencies:
-    retext-latin "^1.0.0"
-    retext-stringify "^1.0.0"
-    unified "^5.0.0"
-
 retry@^0.10.0:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.10.1.tgz#e76388d217992c252750241d3d3956fed98d8ff4"
@@ -9051,19 +9003,6 @@ unherit@^1.0.4:
     inherits "^2.0.1"
     xtend "^4.0.1"
 
-unified@^5.0.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/unified/-/unified-5.1.0.tgz#61268da9b91ce925be1f3d198c0278b0e9716094"
-  dependencies:
-    bail "^1.0.0"
-    extend "^3.0.0"
-    has "^1.0.1"
-    is-buffer "^1.1.4"
-    once "^1.3.3"
-    trough "^1.0.0"
-    vfile "^2.0.0"
-    x-is-string "^0.1.0"
-
 unified@^6.0.0:
   version "6.1.5"
   resolved "https://registry.yarnpkg.com/unified/-/unified-6.1.5.tgz#716937872621a63135e62ced2f3ac6a063c6fb87"
@@ -9138,10 +9077,6 @@ unist-util-select@^1.5.0:
 unist-util-stringify-position@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.1.tgz#3ccbdc53679eed6ecf3777dd7f5e3229c1b6aa3c"
-
-unist-util-visit-children@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.1.tgz#eba63b371116231181068837118b6e6e10ec8844"
 
 unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1:
   version "1.1.3"
