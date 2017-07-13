@@ -2,6 +2,9 @@ const config = require('./data/SiteConfig');
 
 module.exports = {
   pathPrefix: config.pathPrefix,
+  siteMetadata: {
+    siteUrl: config.siteUrl + config.pathPrefix,
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
@@ -46,5 +49,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-sitemap',
   ],
 };
