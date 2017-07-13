@@ -3447,6 +3447,10 @@ gatsby-plugin-sharp@^1.0.1:
     progress "^1.1.8"
     sharp "^0.17.3"
 
+gatsby-plugin-twitter@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-1.0.5.tgz#5b69a8822e84e4847c1a457c7cf20f46dbe31559"
+
 gatsby-remark-copy-linked-files@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-1.0.1.tgz#f833e10d6a5018be37f6c6c06f3466c5d4ea5f46"
