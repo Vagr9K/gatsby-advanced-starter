@@ -4,7 +4,7 @@
     justify-content: center;
     align-content: center;
     background-color: $md-primary-color;
-    padding: 20px;
+    padding: 10px 5px 5px;
 
     .notice-container {
         display: flex;
@@ -12,6 +12,7 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
+        margin-top: 25px;
 
         @media (max-width: 640px - 1px) {
             justify-content: space-around;
@@ -21,7 +22,6 @@
             color: $md-secondary-color;
             text-align: center;
             margin: 0;
-            margin-top: 10px;
         }
     }
 }
