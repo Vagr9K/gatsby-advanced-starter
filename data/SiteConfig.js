@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: 'Gatsby Material Starter', // Site title.
   siteUrl: 'https://vagr9k.github.io', // Domain of your website without pathPrefix.
   pathPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
-  siteDescription: 'A GatsbyJS stater with Material design in mind.', // Website description used for RSS feeds.
+  siteDescription: 'A GatsbyJS stater with Material design in mind.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   disqusShortname: 'https-vagr9k-github-io-gatsby-material-starter', // Disqus shortname.
   postDefaultCategoryID: 'Tech', // Default category for posts.

@@ -50,11 +50,13 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
     }
+    console.log(postNode);
     return (
       <div className="post-page md-grid md-grid--no-spacing">
-        <Helmet
-          title={`${post.title} | ${config.siteTitle}`}
-        />
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <meta name="description" content={postNode.excerpt} />
+        </Helmet>
 
         <PostCover postNode={postNode} mobile={mobile} />
         <div className={`md-grid md-cell--9 post-page-contents mobile-fix ${postOverlapClass}`}>
@@ -85,6 +87,7 @@ query BlogPostBySlug($slug: String!) {
   markdownRemark(fields: { slug: { eq: $slug }}) {
     html
     timeToRead
+    excerpt
     frontmatter {
       title
       cover
