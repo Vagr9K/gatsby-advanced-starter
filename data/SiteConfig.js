@@ -1,5 +1,6 @@
 module.exports = {
   siteTitle: 'Gatsby Material Starter', // Site title.
+  siteTitleAlt: 'GatsbyJS Material Starter', // Alternative site title for SEO.
   siteUrl: 'https://vagr9k.github.io', // Domain of your website without pathPrefix.
   pathPrefix: '/gatsby-material-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   siteDescription: 'A GatsbyJS stater with Material design in mind.', // Website description used for RSS feeds/meta description tag.

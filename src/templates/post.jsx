@@ -8,6 +8,7 @@ import PostTags from '../components/PostTags/PostTags.jsx';
 import PostCover from '../components/PostCover/PostCover.jsx';
 import PostInfo from '../components/PostInfo/PostInfo.jsx';
 import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
+import PostSEO from '../components/PostSEO/PostSEO.jsx';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
 import './post.scss';
@@ -50,14 +51,12 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
     }
-    console.log(postNode);
     return (
       <div className="post-page md-grid md-grid--no-spacing">
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
-          <meta name="description" content={postNode.excerpt} />
         </Helmet>
-
+        <PostSEO postPath={slug} postNode={postNode} />
         <PostCover postNode={postNode} mobile={mobile} />
         <div className={`md-grid md-cell--9 post-page-contents mobile-fix ${postOverlapClass}`}>
 
