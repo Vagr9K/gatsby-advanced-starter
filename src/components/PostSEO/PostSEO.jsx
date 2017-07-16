@@ -18,16 +18,6 @@ class PostSEO extends Component {
         url: blogURL,
         name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-        itemListElement: [{
-          '@type': 'ListItem',
-          position: 1,
-          item: {
-            '@id': postURL,
-            name: title,
-            image,
-          },
-        },
-        ],
       },
       {
         '@context': 'http://schema.org',
