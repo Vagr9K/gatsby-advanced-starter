@@ -11,29 +11,52 @@ class PostSEO extends Component {
     const image = postMeta.cover;
     const blogURL = config.siteUrl + config.pathPrefix;
     const postURL = config.siteUrl + config.pathPrefix + postPath;
-    const schemaOrgJSONLD = {
-      '@context': 'http://schema.org',
-      url: blogURL,
-      name: title,
-      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-      itemListElement: [{
-        '@type': 'ListItem',
-        position: 1,
-        item: {
-          '@id': postURL,
-          name: title,
-          image,
+    const schemaOrgJSONLD = [
+      {
+        '@context': 'http://schema.org',
+        '@type': 'WebSite',
+        url: blogURL,
+        name: title,
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        itemListElement: [{
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@id': postURL,
+            name: title,
+            image,
+          },
         },
+        ],
       },
-      ],
-      '@type': 'BlogPosting',
-      headline: title,
-      image: {
-        '@type': 'ImageObject',
-        url: image,
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [{
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@id': postURL,
+            name: title,
+            image,
+          },
+        },
+        ],
       },
-      description,
-    };
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BlogPosting',
+        url: blogURL,
+        name: title,
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        headline: title,
+        image: {
+          '@type': 'ImageObject',
+          url: image,
+        },
+        description,
+      },
+    ];
     return (
       <Helmet>
         {/* General tags */}
