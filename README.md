@@ -149,7 +149,7 @@ module.exports = {
 
  NOTE: `user*`, `disqusShortname` and `copyright` are optional and won't render if omitted.
 
- WARNING: Make sure to edit `src/pages/robots.txt` to include your domain for the sitemap!
+ WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
 
 ## Theming
 
