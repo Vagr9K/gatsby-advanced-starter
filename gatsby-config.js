@@ -59,6 +59,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
       options: {
