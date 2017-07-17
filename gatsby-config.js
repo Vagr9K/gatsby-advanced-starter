@@ -58,7 +58,30 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sitemap', {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: '#e0e0e0',
+        theme_color: '#c62828',
+        display: 'minimal-ui',
+        icons: [
+          {
+            src: '/favicons/logo-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/favicons/logo-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',

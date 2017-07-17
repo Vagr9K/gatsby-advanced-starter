@@ -3507,6 +3507,12 @@ gatsby-plugin-google-analytics@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.1.tgz#849b452b6fad7da5c63230b0944e9eb2f3d3959d"
 
+gatsby-plugin-manifest@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.1.tgz#caeca2c1fac4160032680cfbe7d9e4b1266f9813"
+  dependencies:
+    bluebird "^3.5.0"
+
 gatsby-plugin-nprogress@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-1.0.1.tgz#1031a75907093dda98f3812d5723f83740decced"
