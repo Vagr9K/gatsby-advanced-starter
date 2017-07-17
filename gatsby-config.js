@@ -9,7 +9,7 @@ module.exports = {
       feed_url: config.siteUrl + config.pathPrefix + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + config.pathPrefix}/favicon.png`,
+      image_url: `${config.siteUrl + config.pathPrefix}/logos/logo-512.png`,
       author: config.userName,
       copyright: config.copyright,
     },
@@ -70,12 +70,12 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            src: '/favicons/logo-192x192.png',
+            src: '/logos/logo-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/favicons/logo-512x512.png',
+            src: '/logos/logo-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
