@@ -69,8 +69,8 @@ More information in the [announcement](https://www.gatsbyjs.org/blog/gatsby-firs
 * Offline support
 * Web App Manifest support
 
-![Author Segment Screenshot](docs/screenshot-author.png)
 ![Article Screenshot](docs/screenshot-article.png)
+![Mobile Screenshot](docs/screenshot-mobile.png)
 
 ## Getting Started
 
