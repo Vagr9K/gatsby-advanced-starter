@@ -4,8 +4,6 @@ import Link from 'gatsby-link';
 
 function GetNavList(config) {
   const NavList = [{
-    divider: false,
-    subheader: false,
     primaryText: 'Home',
     leftIcon: <FontIcon>home</FontIcon>,
     component: Link,
@@ -19,11 +17,10 @@ function GetNavList(config) {
     config.userLinks.forEach((link) => {
       NavList.push(
         {
-          divider: false,
-          subheader: false,
           primaryText: link.label,
           leftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
-          onClick() { window.location.href = link.url; },
+          component: 'a',
+          href: link.url,
         },
       );
     });
@@ -33,8 +30,6 @@ function GetNavList(config) {
 
   NavList.push(
     {
-      divider: false,
-      subheader: false,
       primaryText: 'About',
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,

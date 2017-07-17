@@ -1,0 +1,15 @@
+.post-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    > div {
+        margin-right: 20px;
+    }
+
+    .category-link {
+        margin-right: 20px;
+    }
+}

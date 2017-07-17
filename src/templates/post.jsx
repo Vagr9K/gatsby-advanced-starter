@@ -6,12 +6,43 @@ import UserInfo from '../components/UserInfo/UserInfo.jsx';
 import Disqus from '../components/Disqus/Disqus.jsx';
 import PostTags from '../components/PostTags/PostTags.jsx';
 import PostCover from '../components/PostCover/PostCover.jsx';
+import PostInfo from '../components/PostInfo/PostInfo.jsx';
+import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
+import PostSEO from '../components/PostSEO/PostSEO.jsx';
 import config from '../../data/SiteConfig';
-import './atom-one-dark.css';
+import './b16-tomorrow-dark.css';
 import './post.scss';
 
 export default class PostTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mobile: true,
+    };
+    this.handleResize = this.handleResize.bind(this);
+  }
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize() {
+    if (window.innerWidth >= 640) {
+      this.setState({ mobile: false });
+    } else {
+      this.setState({ mobile: true });
+    }
+  }
+
   render() {
+    const { mobile } = this.state;
+    const { slug } = this.props.pathContext;
+    const expanded = !mobile;
+    const postOverlapClass = mobile ? 'post-overlap-mobile' : 'post-overlap';
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -21,21 +52,28 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <div className="md-grid post-page-container">
+      <div className="post-page md-grid md-grid--no-spacing">
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <PostSEO postPath={slug} postNode={postNode} />
+        <PostCover postNode={postNode} mobile={mobile} />
+        <div className={`md-grid md-cell--9 post-page-contents mobile-fix ${postOverlapClass}`}>
 
-        <Helmet
-          title={`${post.title} | ${config.siteTitle}`}
-        />
-        <Card className="md-grid md-cell md-cell--12 post">
-          <CardText className="post-body">
-            <PostCover postNode={postNode} />
-            <h1 className="md-display-3 post-header">{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          </CardText>
-          <PostTags tags={post.tags} />
-        </Card>
-        <UserInfo className="md-grid md-cell md-cell--12" config={config} />
-        <Disqus post={post} />
+          <Card className="md-grid md-cell md-cell--12 post">
+            <CardText className="post-body">
+              <h1 className="md-display-2 post-header">{post.title}</h1>
+              <PostInfo postNode={postNode} />
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            </CardText>
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} mobile={this.state.mobile} />
+            </div>
+          </Card>
+          <UserInfo className="md-grid md-cell md-cell--12" config={config} expanded={expanded} />
+          <Disqus post={post} expanded={expanded} />
+        </div>
       </div>
 
     );
@@ -48,6 +86,7 @@ query BlogPostBySlug($slug: String!) {
   markdownRemark(fields: { slug: { eq: $slug }}) {
     html
     timeToRead
+    excerpt
     frontmatter {
       title
       cover
