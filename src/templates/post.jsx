@@ -27,11 +27,11 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} mobile={this.state.mobile} />
+            <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           <UserInfo config={config} />
           <Disqus post={post} />

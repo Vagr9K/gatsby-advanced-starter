@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -22,7 +23,7 @@ class PostListing extends React.Component {
       <div>
         {
           /* Your post list here. */
-            postList.map(post => (<div>{post.title}</div>))
+            postList.map(post => (<Link to={post.path}><h1>{post.title}</h1></Link>))
         }
       </div>
     );
