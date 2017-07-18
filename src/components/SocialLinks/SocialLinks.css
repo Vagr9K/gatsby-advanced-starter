@@ -6,12 +6,12 @@
     align-content: center;
     align-items: center;
     margin: 15px 0;
+}
 
-    > div {
-        margin: 5px 15px;
-    }
+.social-links > div {
+    margin: 5px 15px;
+}
 
-    .share-count {
-        text-align: center;
-    }
+.share-count {
+    text-align: center;
 }

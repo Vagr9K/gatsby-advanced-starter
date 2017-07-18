@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Button from 'react-md/lib/Buttons';
 import Link from 'gatsby-link';
 import UserLinks from '../UserLinks/UserLinks';
 import config from '../../../data/SiteConfig';
-import './Footer.scss';
+import './Footer.css';
 
 class Footer extends Component {
   render() {
@@ -19,10 +18,10 @@ class Footer extends Component {
           <h4>{copyright}</h4>
 
           <Link to={url}>
-            <Button flat secondary iconClassName="fa fa-rss">Subscribe</Button>
+            <button>Subscribe</button>
           </Link>
           <h4>
-            Based on <a href="https://github.com/Vagr9K/gatsby-material-starter">Gatsby Material Starter</a>.
+            Based on <a href="https://github.com/Vagr9K/gatsby-advanced-starter">Gatsby Advanced Starter</a>.
           </h4>
         </div>
       </footer>

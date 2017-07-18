@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
 import config from '../../../data/SiteConfig';
-import './SocialLinks.scss';
+import './SocialLinks.css';
 
 class SocialLinks extends Component {
   render() {
