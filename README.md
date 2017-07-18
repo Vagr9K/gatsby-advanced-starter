@@ -14,7 +14,7 @@ It doesn't define any UI limitations in any way, and only gives you the basic co
 
 You are free to use any UI framework/styling options available to you.
 
-NOTE: This project is a stripped down version of [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter), but will eveolve separately.
+NOTE: This project is a stripped down version of [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter), but will evolve separately.
 
 ## How can I use this?
 
