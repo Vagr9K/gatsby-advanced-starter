@@ -8,7 +8,7 @@ import FontIcon from 'react-md/lib/FontIcons';
 import Link from 'gatsby-link';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
 import PostTags from '../PostTags/PostTags.jsx';
-import './PostPreview.scss'
+import './PostPreview.scss';
 
 class PostPreview extends Component {
   constructor(props) {
@@ -39,8 +39,8 @@ class PostPreview extends Component {
     const { postInfo } = this.props;
     const { mobile } = this.state;
     const expand = mobile;
-    const mediaAspect = mobile ? '16-9' : '4-1';
-    const cover = postInfo.cover.startsWith('/')? __PATH_PREFIX__ + postInfo.cover : postInfo.cover;
+    /* eslint no-undef: "off"*/
+    const cover = postInfo.cover.startsWith('/') ? __PATH_PREFIX__ + postInfo.cover : postInfo.cover;
     const coverHeight = mobile ? 162 : 225;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
