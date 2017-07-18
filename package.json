@@ -15,7 +15,6 @@
     "gatsby-plugin-nprogress": "^1.0.1",
     "gatsby-plugin-offline": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
-    "gatsby-plugin-sass": "^1.0.0-beta.1",
     "gatsby-plugin-sharp": "^1.0.1",
     "gatsby-plugin-sitemap": "^1.0.1",
     "gatsby-plugin-twitter": "^1.0.5",
@@ -32,7 +31,6 @@
     "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.1.3",
-    "react-md": "^1.1.0-alpha-5",
     "react-share": "^1.15.0",
     "react-twitter-widgets": "^1.4.0"
   },
