@@ -1,0 +1,8 @@
+JavaScript: true
+Ruby: false
+Python: false
+PHP: false
+
+exclude_paths:
+- static/**/*
+- src/templates/b16-tomorrow-dark.css
