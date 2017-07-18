@@ -40,11 +40,12 @@ class PostPreview extends Component {
     const { mobile } = this.state;
     const expand = mobile;
     const mediaAspect = mobile ? '16-9' : '4-1';
+    const cover = postInfo.cover.startsWith('/')? __PATH_PREFIX__ + postInfo.cover : postInfo.cover;
     const coverHeight = mobile ? 162 : 225;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
         <Link style={{ textDecoration: 'none' }} to={postInfo.path}>
-          <Media style={{ backgroundImage: `url(${postInfo.cover})`, height: `${coverHeight}px` }} className="post-preview-cover">
+          <Media style={{ backgroundImage: `url(${cover})`, height: `${coverHeight}px` }} className="post-preview-cover">
             <MediaOverlay>
               <CardTitle title={postInfo.title}>
                 <Button raised secondary className="md-cell--right">Read</Button>
