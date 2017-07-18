@@ -11,14 +11,15 @@
     align-content: center;
     align-items: center;
     margin-top: 25px;
+}
 
-    @media (max-width: 640px - 1px) {
+@media (max-width: 640px - 1px) {
+    .notice-container {
         justify-content: space-around;
     }
 }
 
 .notice-container h4 {
-    color: $md-secondary-color;
     text-align: center;
     margin: 0;
 }

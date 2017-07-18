@@ -16,7 +16,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -89,7 +88,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.allMarkdownRemark;
-          ret.generator = 'GatsbyJS Material Starter';
+          ret.generator = 'GatsbyJS Advanced Starter';
           return ret;
         },
         query: `

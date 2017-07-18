@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-material",
-  "description": "GatsbyJS Material Blog theme.",
+  "name": "gatsby-starter-advanced",
+  "description": "GatsbyJS starter that includes examples for advanced use cases.",
   "version": "1.0.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
