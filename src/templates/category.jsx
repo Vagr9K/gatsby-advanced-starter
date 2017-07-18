@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import PostListing from '../components/PostListing/PostListing.jsx';
+import PostListing from '../components/PostListing/PostListing';
 import config from '../../data/SiteConfig';
 
 

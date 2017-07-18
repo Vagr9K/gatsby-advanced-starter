@@ -7,7 +7,7 @@ import CardText from 'react-md/lib/Cards/CardText';
 import FontIcon from 'react-md/lib/FontIcons';
 import Link from 'gatsby-link';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
-import PostTags from '../PostTags/PostTags.jsx';
+import PostTags from '../PostTags/PostTags';
 import './PostPreview.scss';
 
 class PostPreview extends Component {

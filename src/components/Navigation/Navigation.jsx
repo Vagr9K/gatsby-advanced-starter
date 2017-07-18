@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import NavigationDrawer from 'react-md/lib/NavigationDrawers';
-import ToolbarActions from '../ToolbarActions/ToolbarActions.jsx';
-import Footer from '../Footer/Footer.jsx';
-import GetNavList from './NavList.jsx';
+import ToolbarActions from '../ToolbarActions/ToolbarActions';
+import Footer from '../Footer/Footer';
+import GetNavList from './NavList';
 import './Navigation.scss';
 
 class Navigation extends Component {

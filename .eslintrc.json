@@ -8,16 +8,9 @@
     "rules": {
         "react/prefer-stateless-function": "off",
         "react/prop-types": "off",
-        "react/no-danger": "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/no-webpack-loader-syntax": "off",
-        "jsx-a11y/href-no-hash": "off",
-        "jsx-a11y/anchor-is-valid": ["warn", {
-            "aspects": ["invalidHref"]
-        }]
+        "react/no-danger": "off"
     },
     "settings": {
-        "import/resolver": "webpack",
         "import/core-modules": []
     },
     "env": {
