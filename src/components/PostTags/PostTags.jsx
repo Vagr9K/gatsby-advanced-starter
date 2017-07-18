@@ -10,7 +10,7 @@ class PostTags extends Component {
         {
           tags && tags.map(tag =>
             (<Link key={tag} style={{ textDecoration: 'none' }} to={`/tags/${_.kebabCase(tag)}`}>
-              <button label={tag} />
+              <button>{tag}</button>
             </Link>))
         }
       </div>
