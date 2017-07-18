@@ -8,6 +8,7 @@ import FontIcon from 'react-md/lib/FontIcons';
 import Link from 'gatsby-link';
 import Media, { MediaOverlay } from 'react-md/lib/Media';
 import PostTags from '../PostTags/PostTags.jsx';
+import './PostPreview.scss'
 
 class PostPreview extends Component {
   constructor(props) {
@@ -39,11 +40,11 @@ class PostPreview extends Component {
     const { mobile } = this.state;
     const expand = mobile;
     const mediaAspect = mobile ? '16-9' : '4-1';
+    const coverHeight = mobile ? 162 : 225;
     return (
       <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
         <Link style={{ textDecoration: 'none' }} to={postInfo.path}>
-          <Media aspectRatio={mediaAspect}>
-            <img src={postInfo.cover} alt={postInfo.title} />
+          <Media style={{ backgroundImage: `url(${postInfo.cover})`, height: `${coverHeight}px` }} className="post-preview-cover">
             <MediaOverlay>
               <CardTitle title={postInfo.title}>
                 <Button raised secondary className="md-cell--right">Read</Button>
