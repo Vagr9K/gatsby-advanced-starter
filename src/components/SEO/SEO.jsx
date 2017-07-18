@@ -2,15 +2,25 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import config from '../../../data/SiteConfig';
 
-class PostSEO extends Component {
+class SEO extends Component {
   render() {
-    const { postNode, postPath } = this.props;
-    const postMeta = postNode.frontmatter;
-    const title = postMeta.title;
-    const description = postMeta.description ? postMeta.description : postNode.excerpt;
-    const image = postMeta.cover;
+    const { postNode, postPath, postSEO } = this.props;
+    let title;
+    let description;
+    let image;
+    let postURL;
+    if (postSEO) {
+      const postMeta = postNode.frontmatter;
+      title = postMeta.title;
+      description = postMeta.description ? postMeta.description : postNode.excerpt;
+      image = postMeta.cover;
+      postURL = config.siteUrl + config.pathPrefix + postPath;
+    } else {
+      title = config.siteTitle;
+      description = config.siteDescription;
+      image = config.siteLogo;
+    }
     const blogURL = config.siteUrl + config.pathPrefix;
-    const postURL = config.siteUrl + config.pathPrefix + postPath;
     const schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
@@ -19,7 +29,10 @@ class PostSEO extends Component {
         name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
       },
-      {
+
+    ];
+    if (postSEO) {
+      schemaOrgJSONLD.push([{
         '@context': 'http://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [{
@@ -45,8 +58,8 @@ class PostSEO extends Component {
           url: image,
         },
         description,
-      },
-    ];
+      }]);
+    }
     return (
       <Helmet>
         {/* General tags */}
@@ -59,8 +72,8 @@ class PostSEO extends Component {
         </script>
 
         {/* OpenGraph tags */}
-        <meta property="og:url" content={postURL} />
-        <meta property="og:type" content="article" />
+        <meta property="og:url" content={postSEO ? postURL : blogURL} />
+        {postSEO ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
@@ -77,4 +90,4 @@ class PostSEO extends Component {
   }
 }
 
-export default PostSEO;
+export default SEO;

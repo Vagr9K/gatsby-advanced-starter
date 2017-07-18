@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PostListing from '../components/PostListing/PostListing.jsx';
-import IndexSEO from '../components/IndexSEO/IndexSEO.jsx';
+import SEO from '../components/SEO/SEO.jsx';
 import config from '../../data/SiteConfig';
 
 class Index extends React.Component {
@@ -10,7 +10,7 @@ class Index extends React.Component {
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
-        <IndexSEO postEdges={postEdges} />
+        <SEO postEdges={postEdges} />
         <PostListing postEdges={postEdges} />
       </div>
     );

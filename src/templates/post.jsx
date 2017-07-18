@@ -8,7 +8,7 @@ import PostTags from '../components/PostTags/PostTags.jsx';
 import PostCover from '../components/PostCover/PostCover.jsx';
 import PostInfo from '../components/PostInfo/PostInfo.jsx';
 import SocialLinks from '../components/SocialLinks/SocialLinks.jsx';
-import PostSEO from '../components/PostSEO/PostSEO.jsx';
+import SEO from '../components/SEO/SEO.jsx';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
 import './post.scss';
@@ -56,7 +56,7 @@ export default class PostTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <PostSEO postPath={slug} postNode={postNode} />
+        <SEO postPath={slug} postNode={postNode} postSEO />
         <PostCover postNode={postNode} mobile={mobile} />
         <div className={`md-grid md-cell--9 post-page-contents mobile-fix ${postOverlapClass}`}>
 
