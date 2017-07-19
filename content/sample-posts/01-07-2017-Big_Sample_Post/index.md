@@ -115,9 +115,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
-  * Unordered sub-list.
+
+   * Unordered sub-list.
+
 1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
+
+   1. Ordered sub-list
+
 4. And another item.
 
    Some text that should be aligned with the above item.
@@ -394,8 +398,8 @@ This line is only separated by a single newline, so it's a separate line in the 
 They can't be added directly but you can add an image with a link to the video like this:
 
 ```no-highlight
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=8AkLfYOgIrE
+" target="_blank"><img src="http://img.youtube.com/vi/8AkLfYOgIrE/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 ```
 
