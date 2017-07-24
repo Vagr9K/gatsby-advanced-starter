@@ -47,7 +47,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
-      `,
+      `
       ).then((result) => {
         if (result.errors) {
           /* eslint no-console: "off"*/
@@ -98,7 +98,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         });
-      }),
+      })
     );
   });
 };
