@@ -11,6 +11,9 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')
       && Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')) {
       slug = `/${node.frontmatter.slug}`;
+    } if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')
+      && Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')) {
+      slug = `/${node.frontmatter.title}`;
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === '') {
@@ -18,6 +21,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
+    slug = _.kebabCase(slug);
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
