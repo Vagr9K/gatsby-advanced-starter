@@ -1,8 +1,8 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import PostListing from '../components/PostListing/PostListing';
-import SEO from '../components/SEO/SEO';
-import config from '../../data/SiteConfig';
+import React from "react";
+import Helmet from "react-helmet";
+import PostListing from "../components/PostListing/PostListing";
+import SEO from "../components/SEO/SEO";
+import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
   render() {
@@ -22,9 +22,9 @@ export default Index;
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query IndexQuery {
-  allMarkdownRemark(
-      limit: 2000,
-      sort: { fields: [frontmatter___date], order: DESC },
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
@@ -42,5 +42,5 @@ export const pageQuery = graphql`
         }
       }
     }
-}
+  }
 `;
