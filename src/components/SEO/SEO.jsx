@@ -22,6 +22,8 @@ class SEO extends Component {
       description = config.siteDescription;
       image = config.siteLogo;
     }
+    const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+    image = config.siteUrl + realPrefix + image;
     const blogURL = config.siteUrl + config.pathPrefix;
     const schemaOrgJSONLD = [
       {
