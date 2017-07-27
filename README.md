@@ -73,6 +73,15 @@ If you are interested in a foundation for bulding ultra-fast websites, you can u
 * Loading progress for slow networks
 * Offline support
 * Web App Manifest support
+* Development tools
+  * ESLint for linting
+  * Prettier for code style
+  * Remark-Lint for linting Markdown
+  * write-good for linting English prose
+  * gh-pages for deploying to GitHub pages
+  * CodeClimate configuration file and badge
+
+NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter) if you are insterested in a more opionated starter with Material Design in mind.
 
 ## Getting Started
 
