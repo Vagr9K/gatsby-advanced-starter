@@ -58,13 +58,13 @@
   "scripts": {
     "serve": "gatsby develop",
     "build": "gatsby build",
-    "build-pl": "gatsby build --prefix-paths",
+    "build:pp": "gatsby build --prefix-paths",
+    "build:gh": "npm run clean && npm run build-pl && gh-pages -d public",
     "clean": "rm -rf public",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public,static .",
-    "remark-lint": "remark content/posts/",
+    "lint:js": "eslint --ext .js,.jsx --ignore-pattern public,static .",
+    "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "prettier": "prettier '**/*.{js,jsx}' --write",
-    "gh-deploy": "npm run clean && npm run build-pl && gh-pages -d public"
+    "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
     "plugins": [
