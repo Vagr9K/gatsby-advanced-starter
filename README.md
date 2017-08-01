@@ -24,13 +24,13 @@ NOTE: This project is a stripped down version of [Gatsby Material Starter](https
 
 If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
 
-If you are interested in a foundation for bulding ultra-fast websites, you can use this project as a "minimal" starter.
+If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
 
 [Demo website.](https://vagr9k.github.io/gatsby-advanced-starter/)
 
 ## Features
 
-* Blazing fast loading times thanks to prerendered HTML and automatic chunk loading of JS files
+* Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 * Separate components for everything
 * High configurability:
   * User information
@@ -45,14 +45,14 @@ If you are interested in a foundation for bulding ultra-fast websites, you can u
   * Follow Me button
 * Posts in Markdown
   * Code syntax highlighting
-  * Embded YouTube videos
-  * Embded Tweets
+  * Embed YouTube videos
+  * Embed Tweets
 * Tags
-  * Seprate page for posts under each tag
+  * Separate page for posts under each tag
 * Categories
   * Separate page for posts under each category
 * Disqus support
-  * Notifictions about new disqus comments
+  * Notifications about new disqus comments
 * Google Analytics support
 * NPM scripts for GitHub Pages deployment
 * Social features
@@ -81,7 +81,7 @@ If you are interested in a foundation for bulding ultra-fast websites, you can u
   * gh-pages for deploying to GitHub pages
   * CodeClimate configuration file and badge
 
-NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter) if you are insterested in a more opionated starter with Material Design in mind.
+NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter) if you are interested in a more opinionated starter with Material Design in mind.
 
 ## Getting Started
 
