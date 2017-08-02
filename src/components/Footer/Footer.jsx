@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
 import UserLinks from "../UserLinks/UserLinks";
-import config from "../../../data/SiteConfig";
 import "./Footer.css";
 
 class Footer extends Component {
   render() {
+    const { config } = this.props;
     const url = config.siteRss;
-    const { copyright } = this.props.config;
+    const copyright = config.copyright;
     if (!copyright) {
       return null;
     }
