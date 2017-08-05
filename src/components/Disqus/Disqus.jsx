@@ -22,16 +22,18 @@ class Disqus extends Component {
     this.setState({ toasts });
   }
   render() {
-    const { post } = this.props;
+    const { postNode } = this.props;
     if (!config.disqusShortname) {
       return null;
     }
+    const post = postNode.frontmatter;
+    const url = config.siteUrl + config.pathPrefix + postNode.fields.slug;
     return (
       <ReactDisqusComments
         shortname={config.disqusShortname}
-        identifier={post.id}
+        identifier={post.title}
         title={post.title}
-        url={post.url}
+        url={url}
         category_id={post.category_id}
         onNewComment={this.notifyAboutComment}
       />

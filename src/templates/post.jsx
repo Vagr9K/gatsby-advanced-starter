@@ -36,7 +36,7 @@ export default class PostTemplate extends React.Component {
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           <UserInfo config={config} />
-          <Disqus post={post} />
+          <Disqus postNode={postNode} />
         </div>
       </div>
     );
@@ -56,6 +56,9 @@ export const pageQuery = graphql`
         date
         category
         tags
+      }
+      fields {
+        slug
       }
     }
   }
