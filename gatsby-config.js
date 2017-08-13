@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
-        color: "#c62828"
+        color: config.themeColor
       }
     },
     "gatsby-plugin-sharp",
@@ -68,7 +68,7 @@ module.exports = {
         description: config.siteDescription,
         start_url: config.pathPrefix,
         background_color: "#e0e0e0",
-        theme_color: "#c62828",
+        theme_color: config.themeColor,
         display: "minimal-ui",
         icons: [
           {
