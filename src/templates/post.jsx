@@ -15,7 +15,7 @@ export default class PostTemplate extends React.Component {
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
-      post.id = this.props.location.pathname;
+      post.id = slug;
     }
     if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
