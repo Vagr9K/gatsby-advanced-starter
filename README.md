@@ -87,7 +87,7 @@ NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K
 
 Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed) by running from your CLI:
 
-```zsh
+```sh
 gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
 npm install # or yarn install
 npm run develop # or gatsby develop
@@ -97,7 +97,7 @@ Or you can fork the project, make your changes there and merge new features when
 
 Alternatively:
 
-```zsh
+```sh
 git clone https://github.com/Vagr9K/gatsby-advanced-starter YourProjectName # Clone the project
 cd YourProjectname
 rm -rf .git # So you can have your own changes stored in VCS.
