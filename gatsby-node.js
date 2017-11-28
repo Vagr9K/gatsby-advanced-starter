@@ -2,7 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
-const config = require('./data/SiteConfig');
+const siteConfig = require('./data/SiteConfig');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
@@ -40,9 +40,9 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
     ) {
-      date = moment(node.frontmatter.date, config.dateFormatInput);
+      date = moment(node.frontmatter.date, siteConfig.dateFormatInput);
     } else {
-      date = moment(parsedFilePath.name.substring(0, config.dateFormatInput.length), config.dateFormatInput);
+      date = moment(parsedFilePath.name.substring(0, siteConfig.dateFormatInput.length), siteConfig.dateFormatInput);
     }
     if (date && date.isValid()) {
       createNodeField({ node, name: "date", value: date.toDate() });
@@ -58,7 +58,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     ) {
       title = node.frontmatter.title;
     } else {
-      title = parsedFilePath.name.substring(config.dateFormatInput.length + 1, parsedFilePath.name.length).replace(/[-_]/, ' ');
+      title = parsedFilePath.name.substring(siteConfig.dateFormatInput.length + 1, parsedFilePath.name.length).replace(/[-_]/, ' ');
     }
     createNodeField({ node, name: "title", value: title });
   }
@@ -145,8 +145,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.modifyWebpackConfig = ({ webpackConfig, stage }) => {
+exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === "build-javascript") {
-    webpackConfig.plugin("Lodash", webpackLodashPlugin, null);
+    config.plugin("Lodash", webpackLodashPlugin, null);
   }
 };
