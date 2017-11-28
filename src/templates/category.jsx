@@ -12,7 +12,7 @@ export default class CategoryTemplate extends React.Component {
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
-        <PostListing postEdges={postEdges} />
+        <PostListing postEdges={postEdges} dateFormat={config.dateFormatOutput} />
       </div>
     );
   }
@@ -31,6 +31,8 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            date
+            title
           }
           excerpt
           timeToRead
