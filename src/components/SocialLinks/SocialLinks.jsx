@@ -31,13 +31,14 @@ class SocialLinks extends Component {
     const RedditIcon = generateShareIcon("reddit");
     const iconSize = mobile ? 36 : 48;
     const filter = count => (count > 0 ? count : "");
+    const counter = count => <div className="share-count">{filter(count)}</div>;
 
     return (
       <div className="social-links">
         <RedditShareButton url={url} title={post.title}>
           <RedditIcon round size={iconSize} />
           <RedditShareCount url={url}>
-            {count => <div className="share-count">{filter(count)}</div>}
+            {counter}
           </RedditShareCount>
         </RedditShareButton>
         <TwitterShareButton url={url} title={post.title}>
@@ -46,7 +47,7 @@ class SocialLinks extends Component {
         <GooglePlusShareButton url={url}>
           <GooglePlusIcon round size={iconSize} />
           <GooglePlusShareCount url={url}>
-            {count => <div className="share-count">{filter(count)}</div>}
+            {counter}
           </GooglePlusShareCount>
         </GooglePlusShareButton>
         <FacebookShareButton
@@ -57,7 +58,7 @@ class SocialLinks extends Component {
         >
           <FacebookIcon round size={iconSize} />
           <FacebookShareCount url={url}>
-            {count => <div className="share-count">{filter(count)}</div>}
+            {counter}
           </FacebookShareCount>
         </FacebookShareButton>
         <LinkedinShareButton
@@ -67,7 +68,7 @@ class SocialLinks extends Component {
         >
           <LinkedinIcon round size={iconSize} />
           <LinkedinShareCount url={url}>
-            {count => <div className="share-count">{filter(count)}</div>}
+            {counter}
           </LinkedinShareCount>
         </LinkedinShareButton>
         <TelegramShareButton url={url}>
