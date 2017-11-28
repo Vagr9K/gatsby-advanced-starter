@@ -2,7 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
-const siteConfig = require('./data/SiteConfig');
+const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
@@ -42,7 +42,10 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     ) {
       date = moment(node.frontmatter.date, siteConfig.dateFormatInput);
     } else {
-      date = moment(parsedFilePath.name.substring(0, siteConfig.dateFormatInput.length), siteConfig.dateFormatInput);
+      date = moment(
+        parsedFilePath.name.substring(0, siteConfig.dateFormatInput.length),
+        siteConfig.dateFormatInput
+      );
     }
     if (date && date.isValid()) {
       createNodeField({ node, name: "date", value: date.toDate() });
@@ -58,7 +61,12 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     ) {
       title = node.frontmatter.title;
     } else {
-      title = parsedFilePath.name.substring(siteConfig.dateFormatInput.length + 1, parsedFilePath.name.length).replace(/[-_]/, ' ');
+      title = parsedFilePath.name
+        .substring(
+          siteConfig.dateFormatInput.length + 1,
+          parsedFilePath.name.length
+        )
+        .replace(/[-_]/, " ");
     }
     createNodeField({ node, name: "title", value: title });
   }
@@ -74,22 +82,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(
         `
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  tags
-                  category
-                }
-                fields {
-                  slug
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    tags
+                    category
+                  }
+                  fields {
+                    slug
+                  }
                 }
               }
             }
           }
-        }
-      `
+        `
       ).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */

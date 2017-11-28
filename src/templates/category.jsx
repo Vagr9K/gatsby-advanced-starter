@@ -12,7 +12,10 @@ export default class CategoryTemplate extends React.Component {
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
-        <PostListing postEdges={postEdges} dateFormat={config.dateFormatOutput} />
+        <PostListing
+          postEdges={postEdges}
+          dateFormat={config.dateFormatOutput}
+        />
       </div>
     );
   }

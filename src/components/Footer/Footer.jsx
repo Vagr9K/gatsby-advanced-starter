@@ -15,9 +15,7 @@ class Footer extends Component {
       <footer className="footer">
         <UserLinks config={config} labeled />
         <div className="notice-container">
-          <h4>
-            {copyright}
-          </h4>
+          <h4>{copyright}</h4>
 
           <Link to={url}>
             <button>Subscribe</button>
