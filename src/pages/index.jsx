@@ -31,6 +31,7 @@ export const pageQuery = graphql`
           fields {
             slug
             date
+            title
           }
           excerpt
           timeToRead

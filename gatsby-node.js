@@ -8,20 +8,12 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
   let date;
+  let title;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
-    ) {
-      date = moment(node.frontmatter.date, config.dateFormatInput);
-      if (date.isValid()) {
-        createNodeField({ node, name: "date", value: date });
-      } else {
-        console.warning(`Node ${node.parent} doesn't have a valid date`);
-      }
-    }
+
+    // parse and set slug field on node
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
@@ -30,7 +22,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     }
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "title") &&
+      node.frontmatter.title
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
@@ -41,6 +34,33 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
+
+    // parse and set date field on node
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
+    ) {
+      date = moment(node.frontmatter.date, config.dateFormatInput);
+    } else {
+      date = moment(parsedFilePath.name.substring(0, config.dateFormatInput.length), config.dateFormatInput);
+    }
+    if (date && date.isValid()) {
+      createNodeField({ node, name: "date", value: date.toDate() });
+    } else {
+      console.error(`Node ${node.parent} doesn't have a valid date`);
+    }
+
+    // parse and set title field on node
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "title") &&
+      node.frontmatter.title
+    ) {
+      title = node.frontmatter.title;
+    } else {
+      title = parsedFilePath.name.substring(config.dateFormatInput.length + 1, parsedFilePath.name.length).replace(/[-_]/, ' ');
+    }
+    createNodeField({ node, name: "title", value: title });
   }
 };
 

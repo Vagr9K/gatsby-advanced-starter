@@ -10,7 +10,7 @@ class PostListing extends React.Component {
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
         cover: postEdge.node.frontmatter.cover,
-        title: postEdge.node.frontmatter.title,
+        title: postEdge.node.fields.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
@@ -25,7 +25,7 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
           postList.map(post => (
-            <Link to={post.path} key={post.title}>
+            <Link to={post.path} key={post.path}>
               <h1>
                 {moment(post.date).format(this.props.dateFormat)} - {post.title}
               </h1>
