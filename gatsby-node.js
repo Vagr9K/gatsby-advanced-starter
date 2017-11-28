@@ -27,6 +27,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: "date", value: new Date(node.frontmatter.date) });
   }
 };
 
@@ -58,7 +59,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       `
       ).then(result => {
         if (result.errors) {
-          /* eslint no-console: "off"*/
+          /* eslint no-console: "off" */
           console.log(result.errors);
           reject(result.errors);
         }
