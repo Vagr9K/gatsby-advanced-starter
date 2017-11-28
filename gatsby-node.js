@@ -1,13 +1,26 @@
 const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
+const moment = require("moment");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
+  let date;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
+    ) {
+      date = moment(node.frontmatter.date);
+      if (date.isValid()) {
+        createNodeField({ node, name: "date", value: date });
+      } else {
+        console.warning(`Node ${node.parent} doesn't have a valid date`);
+      }
+    }
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
@@ -27,7 +40,6 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
-    createNodeField({ node, name: "date", value: new Date(node.frontmatter.date).toLocaleString() });
   }
 };
 
