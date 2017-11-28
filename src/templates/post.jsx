@@ -16,9 +16,10 @@ export default class PostTemplate extends React.Component {
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
-    }
-    if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
+    }
+    if (!post.title) {
+      post.title = this.props.data.markdownRemark.fields.title;
     }
     return (
       <div>
@@ -43,7 +44,7 @@ export default class PostTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -59,6 +60,8 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        date
+        title
       }
     }
   }
