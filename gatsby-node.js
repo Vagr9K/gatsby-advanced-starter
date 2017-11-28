@@ -2,6 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
+const config = require('./data/SiteConfig');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
@@ -14,7 +15,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
     ) {
-      date = moment(node.frontmatter.date);
+      date = moment(node.frontmatter.date, config.dateFormatInput);
       if (date.isValid()) {
         createNodeField({ node, name: "date", value: date });
       } else {

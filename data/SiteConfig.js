@@ -1,5 +1,8 @@
 module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
+  blogPostSort: "date", // which field on the post to sort by
+  dateFormatInput: "DD-MM-YYYY", // date format to use for parsing from source
+  dateFormatOutput: "LL", // date format to use for output/rendering, see http://momentjs.com/docs/#/displaying/format/
   siteTitle: "Gatsby Advanced Starter", // Site title.
   siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
