@@ -27,7 +27,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
-    createNodeField({ node, name: "date", value: new Date(node.frontmatter.date) });
+    createNodeField({ node, name: "date", value: new Date(node.frontmatter.date).toLocaleString() });
   }
 };
 
