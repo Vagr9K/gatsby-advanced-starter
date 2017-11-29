@@ -2,7 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
-const createPaginatedPages = require('gatsby-paginate');
+const createPaginatedPages = require("gatsby-paginate");
 const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
@@ -84,9 +84,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark(
-              sort: { fields: [fields___date], order: DESC }
-            ) {
+            allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
               edges {
                 node {
                   excerpt
