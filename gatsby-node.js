@@ -2,6 +2,7 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
+const createPaginatedPages = require('gatsby-paginate');
 const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
@@ -83,15 +84,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
           {
-            allMarkdownRemark {
+            allMarkdownRemark(
+              sort: { fields: [fields___date], order: DESC }
+            ) {
               edges {
                 node {
                   frontmatter {
                     tags
                     category
+                    title
+                    cover
+                    date
                   }
                   fields {
                     slug
+                    date
+                    title
                   }
                 }
               }
@@ -101,9 +109,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       ).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */
-          console.log(result.errors);
+          console.error(result.errors);
           reject(result.errors);
         }
+
+        createPaginatedPages({
+          edges: result.data.allMarkdownRemark.edges,
+          createPage,
+          pageTemplate: "src/templates/index.jsx",
+          pageLength: siteConfig.blogPageSize
+        });
 
         const tagSet = new Set();
         const categorySet = new Set();
