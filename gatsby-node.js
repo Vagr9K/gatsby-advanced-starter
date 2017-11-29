@@ -89,6 +89,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             ) {
               edges {
                 node {
+                  excerpt
                   frontmatter {
                     tags
                     category
