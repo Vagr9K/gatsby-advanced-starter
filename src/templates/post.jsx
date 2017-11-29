@@ -1,5 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
+import _ from "lodash";
+import Link from "gatsby-link";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
@@ -31,6 +33,9 @@ export default class PostTemplate extends React.Component {
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
+            <Link to={`/categories/${_.kebabCase(post.category)}`}>
+              {post.category}
+            </Link>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
