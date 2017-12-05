@@ -27,6 +27,15 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node.frontmatter.title
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      title = node.frontmatter.title;
+    } else if (siteConfig.dateFormatInput.length) {
+      title = parsedFilePath.name
+        .substring(
+          siteConfig.dateFormatInput.length + 1,
+          parsedFilePath.name.length
+        )
+        .replace(/[-_]/, " ");
+      slug = `/${title}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {
@@ -35,6 +44,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: "title", value: _.startCase(title) || slug });
 
     // parse and set date field on node
     if (
@@ -53,23 +63,6 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       console.error(`Node ${node.parent} doesn't have a valid date`);
     }
-
-    // parse and set title field on node
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title") &&
-      node.frontmatter.title
-    ) {
-      title = node.frontmatter.title;
-    } else {
-      title = parsedFilePath.name
-        .substring(
-          siteConfig.dateFormatInput.length + 1,
-          parsedFilePath.name.length
-        )
-        .replace(/[-_]/, " ");
-    }
-    createNodeField({ node, name: "title", value: title });
   }
 };
 
