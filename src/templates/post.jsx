@@ -33,9 +33,11 @@ export default class PostTemplate extends React.Component {
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
-            <Link to={`/categories/${_.kebabCase(post.category)}`}>
-              {post.category}
-            </Link>
+            {post.category ? (
+              <Link to={`/categories/${_.kebabCase(post.category)}`}>
+                {post.category}
+              </Link>
+              ) : null}
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>

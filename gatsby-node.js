@@ -35,7 +35,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
           parsedFilePath.name.length
         )
         .replace(/[-_]/, " ");
-      slug = `/${title}`;
+      slug = `/${_.kebabCase(title)}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {
