@@ -37,7 +37,7 @@ export default class PostTemplate extends React.Component {
               <Link to={`/categories/${_.kebabCase(post.category)}`}>
                 {post.category}
               </Link>
-              ) : null}
+            ) : null}
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
