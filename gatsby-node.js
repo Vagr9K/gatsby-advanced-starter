@@ -13,16 +13,20 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+    const hasFrontMatter = Object.prototype.hasOwnProperty.call(
+      node,
+      "frontmatter"
+    );
 
-    // parse and set slug field on node
+    // parse and set slug and title field on node
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      hasFrontMatter &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
     ) {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`;
     }
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      hasFrontMatter &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title") &&
       node.frontmatter.title
     ) {
@@ -48,7 +52,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
     // parse and set date field on node
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      hasFrontMatter &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
     ) {
       date = moment(node.frontmatter.date, siteConfig.dateFormatInput);
@@ -58,6 +62,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
         siteConfig.dateFormatInput
       );
     }
+
     if (date && date.isValid()) {
       createNodeField({ node, name: "date", value: date.toDate() });
     } else {
