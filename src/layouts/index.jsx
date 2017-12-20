@@ -21,15 +21,15 @@ export default class MainLayout extends React.Component {
       title = "Categories";
     } else if (currentPath === "about/") {
       title = "About";
-    } else if (currentPath.includes("posts")) {
+    } else if (currentPath.indexOf("posts")) {
       title = "Article";
-    } else if (currentPath.includes("tags/")) {
+    } else if (currentPath.indexOf("tags/")) {
       const tag = currentPath
         .replace("tags/", "")
         .replace("/", "")
         .replace("-", " ");
       title = `Tagged in ${capitalize(tag)}`;
-    } else if (currentPath.includes("categories/")) {
+    } else if (currentPath.indexOf("categories/")) {
       const category = currentPath
         .replace("categories/", "")
         .replace("/", "")
