@@ -1,7 +1,6 @@
 .social-links {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-content: center;
     align-items: center;

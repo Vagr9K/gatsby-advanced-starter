@@ -1,5 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
+import _ from "lodash";
+import Link from "gatsby-link";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
@@ -16,9 +18,10 @@ export default class PostTemplate extends React.Component {
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
-    }
-    if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
+    }
+    if (!post.title) {
+      post.title = this.props.data.markdownRemark.fields.title;
     }
     return (
       <div>
@@ -27,11 +30,14 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>
-            {post.title}
-          </h1>
+          <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
+            {post.category ? (
+              <Link to={`/categories/${_.kebabCase(post.category)}`}>
+                {post.category}
+              </Link>
+            ) : null}
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
@@ -43,7 +49,6 @@ export default class PostTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -59,6 +64,8 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        date
+        title
       }
     }
   }

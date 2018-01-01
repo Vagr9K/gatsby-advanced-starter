@@ -1,10 +1,14 @@
 module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
+  blogPostSort: "date", // which field on the post to sort by
+  blogPageSize: 5, // size of pages of blog posts
+  dateFormatInput: "DD-MM-YYYY", // date format to use for parsing from source
+  dateFormatOutput: "LL", // date format to use for output/rendering, see http://momentjs.com/docs/#/displaying/format/
   siteTitle: "Gatsby Advanced Starter", // Site title.
   siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://vagr9k.github.io", // Domain of your website without pathPrefix.
-  pathPrefix: "/gatsby-advanced-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "/", // (Folder-)Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/. Only set when actually deploying to a subfolder or so, because otherwise config breaks.
   siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights

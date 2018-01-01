@@ -10,18 +10,20 @@ export default class TagTemplate extends React.Component {
     return (
       <div className="tag-container">
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        <PostListing postEdges={postEdges} />
+        <PostListing
+          postEdges={postEdges}
+          dateFormat={config.dateFormatOutput}
+        />
       </div>
     );
   }
 }
 
-/* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
@@ -29,6 +31,8 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            date
+            title
           }
           excerpt
           timeToRead

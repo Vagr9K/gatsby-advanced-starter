@@ -1,24 +1,45 @@
 const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
+const moment = require("moment");
+const createPaginatedPages = require("gatsby-paginate");
+const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
+  let date;
+  let title;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+    const hasFrontMatter = Object.prototype.hasOwnProperty.call(
+      node,
+      "frontmatter"
+    );
+
+    // parse and set slug and title field on node
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      hasFrontMatter &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
     ) {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`;
     }
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
+      hasFrontMatter &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "title") &&
+      node.frontmatter.title
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      title = node.frontmatter.title;
+    } else if (siteConfig.dateFormatInput.length) {
+      title = parsedFilePath.name
+        .substring(
+          siteConfig.dateFormatInput.length + 1,
+          parsedFilePath.name.length
+        )
+        .replace(/[-_]/, " ");
+      slug = `/${_.kebabCase(title)}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {
@@ -27,6 +48,26 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
     createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: "title", value: _.startCase(title) || slug });
+
+    // parse and set date field on node
+    if (
+      hasFrontMatter &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "date")
+    ) {
+      date = moment(node.frontmatter.date, siteConfig.dateFormatInput);
+    } else {
+      date = moment(
+        parsedFilePath.name.substring(0, siteConfig.dateFormatInput.length),
+        siteConfig.dateFormatInput
+      );
+    }
+
+    if (date && date.isValid()) {
+      createNodeField({ node, name: "date", value: date.toDate() });
+    } else {
+      console.error(`Node ${node.parent} doesn't have a valid date`);
+    }
   }
 };
 
@@ -40,28 +81,41 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(
         `
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  tags
-                  category
-                }
-                fields {
-                  slug
+          {
+            allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+              edges {
+                node {
+                  excerpt
+                  frontmatter {
+                    tags
+                    category
+                    title
+                    cover
+                    date
+                  }
+                  fields {
+                    slug
+                    date
+                    title
+                  }
                 }
               }
             }
           }
-        }
-      `
+        `
       ).then(result => {
         if (result.errors) {
-          /* eslint no-console: "off"*/
-          console.log(result.errors);
+          /* eslint no-console: "off" */
+          console.error(result.errors);
           reject(result.errors);
         }
+
+        createPaginatedPages({
+          edges: result.data.allMarkdownRemark.edges,
+          createPage,
+          pageTemplate: "src/templates/index.jsx",
+          pageLength: siteConfig.blogPageSize
+        });
 
         const tagSet = new Set();
         const categorySet = new Set();
