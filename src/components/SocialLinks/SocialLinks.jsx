@@ -1,5 +1,25 @@
 import React, { Component } from "react";
-import { ShareButtons, ShareCounts, generateShareIcon } from "react-share";
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon,
+  FacebookShareButton,
+  GooglePlusShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  RedditShareButton,
+  FacebookShareCount,
+  GooglePlusShareCount,
+  LinkedinShareCount,
+  RedditShareCount,
+  FacebookIcon,
+  TwitterIcon,
+  TelegramIcon,
+  GooglePlusIcon,
+  LinkedinIcon,
+  RedditIcon
+} from "react-share";
 import config from "../../../data/SiteConfig";
 import "./SocialLinks.css";
 
@@ -8,27 +28,7 @@ class SocialLinks extends Component {
     const { postNode, postPath, mobile } = this.props;
     const post = postNode.frontmatter;
     const url = config.siteUrl + config.pathPrefix + postPath;
-    const {
-      FacebookShareButton,
-      GooglePlusShareButton,
-      LinkedinShareButton,
-      TwitterShareButton,
-      TelegramShareButton,
-      RedditShareButton
-    } = ShareButtons;
-    const {
-      FacebookShareCount,
-      GooglePlusShareCount,
-      LinkedinShareCount,
-      RedditShareCount
-    } = ShareCounts;
 
-    const FacebookIcon = generateShareIcon("facebook");
-    const TwitterIcon = generateShareIcon("twitter");
-    const TelegramIcon = generateShareIcon("telegram");
-    const GooglePlusIcon = generateShareIcon("google");
-    const LinkedinIcon = generateShareIcon("linkedin");
-    const RedditIcon = generateShareIcon("reddit");
     const iconSize = mobile ? 36 : 48;
     const filter = count => (count > 0 ? count : "");
 
