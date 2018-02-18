@@ -27,7 +27,8 @@ class SocialLinks extends Component {
   render() {
     const { postNode, postPath, mobile } = this.props;
     const post = postNode.frontmatter;
-    const url = config.siteUrl + config.pathPrefix + postPath;
+    const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+    const url = config.siteUrl + realPrefix + postPath;
 
     const iconSize = mobile ? 36 : 48;
     const filter = count => (count > 0 ? count : "");
