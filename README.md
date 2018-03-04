@@ -89,7 +89,6 @@ Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is 
 
 ```sh
 gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
-npm install # or yarn install
 npm run develop # or gatsby develop
 ```
 
