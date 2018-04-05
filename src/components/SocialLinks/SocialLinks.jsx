@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import {
-  ShareButtons,
-  ShareCounts,
-  generateShareIcon,
   FacebookShareButton,
   GooglePlusShareButton,
   LinkedinShareButton,
