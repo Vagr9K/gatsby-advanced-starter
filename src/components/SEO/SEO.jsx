@@ -35,7 +35,7 @@ class SEO extends Component {
       }
     ];
     if (postSEO) {
-      schemaOrgJSONLD.push([
+      schemaOrgJSONLD.push(
         {
           "@context": "http://schema.org",
           "@type": "BreadcrumbList",
@@ -64,7 +64,7 @@ class SEO extends Component {
           },
           description
         }
-      ]);
+      );
     }
     return (
       <Helmet>
