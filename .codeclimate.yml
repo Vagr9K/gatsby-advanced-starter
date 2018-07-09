@@ -1,20 +1,32 @@
-engines:
+version: "2"
+
+plugins:
   eslint:
     enabled: true
-  stylelint:
-    enabled: true
-  duplication:
-    enabled: true
+    channel: "eslint-4"
     config:
-      languages:
-        javascript:
-          mass_threshold: 70
+      config: .eslintrc.json
+
+checks:
+  method-complexity:
+    enabled: false
+  method-lines:
+    config:
+      threshold: 150
+  similar-code:
+    enabled: false
+  identical-code:
+    enabled: false
 
 ratings:
    paths:
     - "**.js"
     - "**.jsx"
     - "**.css"
+    - "**.less"
+    - "**.scss"
+    - "**.sss"
 
 exclude_paths:
 - static/**/*
+- src/templates/b16-tomorrow-dark.css

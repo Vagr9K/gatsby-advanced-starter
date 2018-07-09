@@ -5,7 +5,7 @@ import config from "../../data/SiteConfig";
 
 export default class TagTemplate extends React.Component {
   render() {
-    const tag = this.props.pathContext.tag;
+    const { tag } = this.props.pathContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <div className="tag-container">
@@ -16,12 +16,12 @@ export default class TagTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
@@ -29,6 +29,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            date
           }
           excerpt
           timeToRead

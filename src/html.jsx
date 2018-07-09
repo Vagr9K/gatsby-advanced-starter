@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
     /* eslint import/no-webpack-loader-syntax: off */
     inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    /* eslint no-console: "off"*/
+    /* eslint no-console: "off" */
     console.log(e);
   }
 }

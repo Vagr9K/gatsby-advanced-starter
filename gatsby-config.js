@@ -1,17 +1,19 @@
 const config = require("./data/SiteConfig");
-
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+const urljoin = require("url-join");
 
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {
-      site_url: config.siteUrl + pathPrefix,
-      feed_url: config.siteUrl + pathPrefix + config.siteRss,
+      site_url: urljoin(config.siteUrl, config.pathPrefix),
+      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      image_url: `${urljoin(
+        config.siteUrl,
+        config.pathPrefix
+      )}/logos/logo-512.png`,
       author: config.userName,
       copyright: config.copyright
     }
@@ -21,8 +23,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "assets",
+        path: `${__dirname}/static/`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "posts",
-        path: `${__dirname}/content/${config.blogPostDir}`
+        path: `${__dirname}/content/`
       }
     },
     {
@@ -64,7 +73,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: config.siteTitle,
-        short_name: config.siteTitle,
+        short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
@@ -114,10 +123,10 @@ module.exports = {
         feeds: [
           {
             serialize(ctx) {
-              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
+              const { rssMetadata } = ctx.query.site.siteMetadata;
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
-                date: edge.node.frontmatter.date,
+                date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
                 author: rssMetadata.author,
@@ -130,14 +139,17 @@ module.exports = {
             {
               allMarkdownRemark(
                 limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { order: DESC, fields: [fields___date] },
               ) {
                 edges {
                   node {
                     excerpt
                     html
                     timeToRead
-                    fields { slug }
+                    fields {
+                      slug
+                      date
+                    }
                     frontmatter {
                       title
                       cover
