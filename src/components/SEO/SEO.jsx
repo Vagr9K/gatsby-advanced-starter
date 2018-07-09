@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
+import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
 
 class SEO extends Component {
@@ -16,15 +17,15 @@ class SEO extends Component {
         ? postMeta.description
         : postNode.excerpt;
       image = postMeta.cover;
-      postURL = config.siteUrl + config.pathPrefix + postPath;
+      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
       image = config.siteLogo;
     }
-    const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
-    image = config.siteUrl + realPrefix + image;
-    const blogURL = config.siteUrl + config.pathPrefix;
+
+    image = urljoin(config.siteUrl, config.pathPrefix, image);
+    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
     const schemaOrgJSONLD = [
       {
         "@context": "http://schema.org",

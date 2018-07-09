@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDisqusComments from "react-disqus-comments";
+import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
 
 class Disqus extends Component {
@@ -27,7 +28,11 @@ class Disqus extends Component {
       return null;
     }
     const post = postNode.frontmatter;
-    const url = config.siteUrl + config.pathPrefix + postNode.fields.slug;
+    const url = urljoin(
+      config.siteUrl,
+      config.pathPrefix,
+      postNode.fields.slug
+    );
     return (
       <ReactDisqusComments
         shortname={config.disqusShortname}
