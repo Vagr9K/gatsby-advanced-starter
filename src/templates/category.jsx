@@ -7,7 +7,7 @@ import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends React.Component {
   render() {
-    const { category } = this.props.pathContext;
+    const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout location={this.props.location}>
