@@ -41,7 +41,7 @@ export default class PostTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -56,7 +56,12 @@ export const pageQuery = graphql`
         tags
       }
       fields {
+        nextTitle
+        nextSlug
+        prevTitle
+        prevSlug
         slug
+        date
       }
     }
   }
