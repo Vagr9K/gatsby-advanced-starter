@@ -1,6 +1,5 @@
 const path = require("path");
 const _ = require("lodash");
-const webpackLodashPlugin = require("lodash-webpack-plugin");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
@@ -174,10 +173,4 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       })
     );
   });
-};
-
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === "build-javascript") {
-    config.plugin("Lodash", webpackLodashPlugin, null);
-  }
 };
