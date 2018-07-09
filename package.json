@@ -1,7 +1,6 @@
 {
   "name": "gatsby-starter-advanced",
-  "description":
-    "GatsbyJS starter that includes examples for advanced use cases.",
+  "description": "GatsbyJS starter that includes examples for advanced use cases.",
   "version": "1.1.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
@@ -11,6 +10,7 @@
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-lodash": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-nprogress": "next",
     "gatsby-plugin-offline": "next",
@@ -18,7 +18,6 @@
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-sitemap": "next",
     "gatsby-plugin-twitter": "next",
-    "gatsby-plugin-lodash": "next",
     "gatsby-remark-autolink-headers": "next",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
@@ -29,6 +28,7 @@
     "gatsby-transformer-sharp": "next",
     "lodash": "^4.17.4",
     "moment": "^2.22.2",
+    "prismjs": "^1.15.0",
     "react": "^16.2.0",
     "react-disqus-comments": "^1.1.1",
     "react-dom": "^16.2.0",
@@ -54,7 +54,9 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -71,6 +73,8 @@
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
