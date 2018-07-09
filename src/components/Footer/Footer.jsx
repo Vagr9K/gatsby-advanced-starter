@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     const { config } = this.props;
     const url = config.siteRss;
-    const copyright = config.copyright;
+    const { copyright } = config;
     if (!copyright) {
       return null;
     }
