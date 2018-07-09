@@ -47,8 +47,8 @@ function addSiblingNodes(createNodeField) {
   }
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
@@ -86,16 +86,16 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   }
 };
 
-exports.setFieldsOnGraphQLNodeType = ({ type, boundActionCreators }) => {
+exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
   const { name } = type;
-  const { createNodeField } = boundActionCreators;
+  const { createNodeField } = actions;
   if (name === "MarkdownRemark") {
     addSiblingNodes(createNodeField);
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const postPage = path.resolve("src/templates/post.jsx");
