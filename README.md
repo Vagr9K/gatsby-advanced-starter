@@ -10,6 +10,8 @@
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+**NOTE**: This is the _maintenance only_ `v1` branch that contains the Gatsby v1 compatible starter. New features will be implemented only on the [`master`](https://github.com/Vagr9K/gatsby-advanced-starter) branch that contains the Gatsby v2 compatible starter.
+
 ## Why?
 
 This project aims to provide a minimal for building GatsbyJS powered blogs.
