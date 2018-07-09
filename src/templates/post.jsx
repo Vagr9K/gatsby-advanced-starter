@@ -1,5 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
@@ -11,7 +13,7 @@ import "./post.css";
 
 export default class PostTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext;
+    const { slug } = this.props.pageContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -21,22 +23,24 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+      <Layout location={this.props.location}>
         <div>
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
+          <Helmet>
+            <title>{`${post.title} | ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <div>
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} />
+            </div>
+            <UserInfo config={config} />
+            <Disqus postNode={postNode} />
           </div>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
         </div>
-      </div>
+      </Layout>
     );
   }
 }

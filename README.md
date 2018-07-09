@@ -10,6 +10,8 @@
 
 A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+**NOTE**: This branch contains Gatsby v2 compatible version of the starter. To get the Gatsby v1 compatible version, use the [`v1`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v1) branch.
+
 ## Why?
 
 This project aims to provide a minimal for building GatsbyJS powered blogs.
@@ -30,6 +32,7 @@ If you are interested in a foundation for building ultra-fast websites, you can 
 
 ## Features
 
+* Gatsby v2 support
 * Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 * Separate components for everything
 * High configurability:
