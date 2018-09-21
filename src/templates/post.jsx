@@ -23,7 +23,7 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <div>
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>

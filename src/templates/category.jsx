@@ -10,7 +10,7 @@ export default class CategoryTemplate extends React.Component {
     const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <div className="category-container">
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
