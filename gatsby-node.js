@@ -20,7 +20,7 @@ function addSiblingNodes(createNodeField) {
   );
   for (let i = 0; i < postNodes.length; i += 1) {
     const nextID = i + 1 < postNodes.length ? i + 1 : 0;
-    const prevID = i - 1 > 0 ? i - 1 : postNodes.length - 1;
+    const prevID = i - 1 >= 0 ? i - 1 : postNodes.length - 1;
     const currNode = postNodes[i];
     const nextNode = postNodes[nextID];
     const prevNode = postNodes[prevID];
