@@ -7,13 +7,11 @@ import {
   TelegramShareButton,
   RedditShareButton,
   FacebookShareCount,
-  GooglePlusShareCount,
   LinkedinShareCount,
   RedditShareCount,
   FacebookIcon,
   TwitterIcon,
   TelegramIcon,
-  GooglePlusIcon,
   LinkedinIcon,
   RedditIcon
 } from "react-share";
@@ -43,12 +41,6 @@ class SocialLinks extends Component {
         <TwitterShareButton url={url} title={post.title}>
           <TwitterIcon round size={iconSize} />
         </TwitterShareButton>
-        <GooglePlusShareButton url={url}>
-          <GooglePlusIcon round size={iconSize} />
-          <GooglePlusShareCount url={url}>
-            {count => renderShareCount(count)}
-          </GooglePlusShareCount>
-        </GooglePlusShareButton>
         <FacebookShareButton url={url} quote={postNode.excerpt}>
           <FacebookIcon round size={iconSize} />
           <FacebookShareCount url={url}>
