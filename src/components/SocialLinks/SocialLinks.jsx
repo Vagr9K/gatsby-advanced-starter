@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   TelegramShareButton,
