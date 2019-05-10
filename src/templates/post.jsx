@@ -13,8 +13,9 @@ import "./post.css";
 
 export default class PostTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pageContext;
-    const postNode = this.props.data.markdownRemark;
+    const { data, pageContext } = this.props;
+    const { slug } = pageContext;
+    const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -60,10 +61,6 @@ export const pageQuery = graphql`
         tags
       }
       fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
         slug
         date
       }
