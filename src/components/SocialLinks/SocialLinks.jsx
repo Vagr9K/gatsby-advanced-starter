@@ -6,7 +6,6 @@ import {
   TelegramShareButton,
   RedditShareButton,
   FacebookShareCount,
-  LinkedinShareCount,
   RedditShareCount,
   FacebookIcon,
   TwitterIcon,
@@ -52,9 +51,6 @@ class SocialLinks extends Component {
           description={postNode.excerpt}
         >
           <LinkedinIcon round size={iconSize} />
-          <LinkedinShareCount url={url}>
-            {count => renderShareCount(count)}
-          </LinkedinShareCount>
         </LinkedinShareButton>
         <TelegramShareButton url={url}>
           <TelegramIcon round size={iconSize} />
