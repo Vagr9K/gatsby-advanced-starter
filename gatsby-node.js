@@ -32,11 +32,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
-        createNodeField({
-          node,
-          name: "date",
-          value: date.toISOString()
-        });
+        createNodeField({ node, name: "date", value: date.toISOString() });
       }
     }
     createNodeField({ node, name: "slug", value: slug });
@@ -48,28 +44,28 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
+  const listingPage = path.resolve("./src/templates/listing.jsx");
 
-  const markdownQueryResult = await graphql(
-    `
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                tags
-                category
-                date
-              }
+  // Get a full list of markdown posts
+  const markdownQueryResult = await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              tags
+              category
+              date
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   if (markdownQueryResult.errors) {
     console.error(markdownQueryResult.errors);
@@ -81,6 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
 
+  // Sort posts
   postsEdges.sort((postA, postB) => {
     const dateA = moment(
       postA.node.frontmatter.date,
@@ -98,17 +95,38 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
+  // Paging
+  const { postsPerPage } = siteConfig;
+  const pageCount = Math.ceil(postsEdges.length / postsPerPage);
+
+  [...Array(pageCount)].forEach((_val, pageNum) => {
+    createPage({
+      path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
+      component: listingPage,
+      context: {
+        limit: postsPerPage,
+        skip: pageNum * postsPerPage,
+        pageCount,
+        currentPageNum: pageNum + 1
+      }
+    });
+  });
+
+  // Post page creating
   postsEdges.forEach((edge, index) => {
+    // Generate a list of tags
     if (edge.node.frontmatter.tags) {
       edge.node.frontmatter.tags.forEach(tag => {
         tagSet.add(tag);
       });
     }
 
+    // Generate a list of categories
     if (edge.node.frontmatter.category) {
       categorySet.add(edge.node.frontmatter.category);
     }
 
+    // Create post pages
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
     const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
     const nextEdge = postsEdges[nextID];
@@ -127,22 +145,21 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  //  Create tag pages
   tagSet.forEach(tag => {
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
-      context: {
-        tag
-      }
+      context: { tag }
     });
   });
+
+  // Create category pages
   categorySet.forEach(category => {
     createPage({
       path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
-      context: {
-        category
-      }
+      context: { category }
     });
   });
 };

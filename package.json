@@ -11,6 +11,7 @@
     "gatsby-plugin-google-analytics": "^2.1.19",
     "gatsby-plugin-lodash": "^3.1.10",
     "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-netlify-cms": "^4.1.22",
     "gatsby-plugin-nprogress": "^2.1.9",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
@@ -25,8 +26,9 @@
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-remark": "^2.6.26",
     "gatsby-transformer-sharp": "^2.2.19",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "netlify-cms-app": "^2.9.7",
     "prismjs": "^1.16.0",
     "react": "^16.10.1",
     "react-disqus-comments": "^1.4.0",
@@ -48,8 +50,8 @@
     "prettier": "^1.17.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
-    "stylefmt": "^6.0.3",
     "stylelint": "^11.0.0",
+    "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^19.0.0",
     "write-good": "^1.0.1"
   },
@@ -69,7 +71,8 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "format:styles": "prettier '**/*.{css,scss}' --write"
   },
   "remarkConfig": {
     "plugins": [

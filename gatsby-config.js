@@ -1,4 +1,5 @@
 const urljoin = require("url-join");
+const path = require("path");
 const config = require("./data/SiteConfig");
 
 module.exports = {
@@ -82,12 +83,12 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192x192.png",
+            src: "/logos/logo-192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512x512.png",
+            src: "/logos/logo-512.png",
             sizes: "512x512",
             type: "image/png"
           }
@@ -95,6 +96,16 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: path.resolve("src/netlifycms/index.js"), // default: undefined
+        enableIdentityWidget: true,
+        publicPath: "admin",
+        htmlTitle: "Content Manager",
+        includeRobots: false
+      }
+    },
     {
       resolve: "gatsby-plugin-feed",
       options: {
