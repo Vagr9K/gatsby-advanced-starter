@@ -1,16 +1,39 @@
-[![GitHub license][mit-badge]][mit]
-[![GitHub tag][tag-badge]][tag]
-[![GitHub stars][stars-badge]][stars]
-[![Tweet][twitter-badge]][twitter]
+<div align="center" style="margin-bottom:30px">
+    <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
+    <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+    </a>
+    <a href='https://github.com/vagr9k/gatsby-advanced-starter'>
+    <img src="https://img.shields.io/github/tag/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+    </a>
+        <a href='https://github.com/vagr9k/gatsby-advanced-starter/stargazers'>
+    <img src="https://img.shields.io/github/stars/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+    </a>
+        <a href="https://twitter.com/intent/tweet?text=A%20cool%20%40gatsbyjs%20starter%3A&url=https%3A%2F%2Fgithub.com%2FVagr9K%2Fgatsby-advanced-starter">
+    <img src="https://img.shields.io/twitter/url/https/github.com/vagr9k/gatsby-advanced-starter.svg?style=social" alt="Logo" />
+    </a>
+</div>
 
-<div align="center">
+
+
+<div align="center"  style="margin-bottom:30px">
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
 </div>
 
-[![Code Climate](https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/gpa.svg)](https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter)
-[![Issue Count](https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/issue_count.svg)](https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820)](https://www.codacy.com/app/Vagr9K/gatsby-advanced-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-advanced-starter&utm_campaign=Badge_Grade)
-[![code style prettier][prettier-badge]][prettier]
+
+<div align="center">
+    <a href="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter">
+      <img src="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/gpa.svg" alt="Logo" />
+    </a>
+    <a href='https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter'>
+      <img src="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/issue_count.svg" alt="Logo" />
+    </a>
+    <a href='https://www.codacy.com/app/Vagr9K/gatsby-advanced-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-advanced-starter&utm_campaign=Badge_Grade'>
+      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
+    </a>
+    <a href='https://github.com/prettier/prettier'>
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
+    </a>
+</div>
 
 # Gatsby Advanced Starter
 
@@ -184,17 +207,6 @@ module.exports = {
 ```
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
-
-[twitter]: https://twitter.com/intent/tweet?text=A%20cool%20%40gatsbyjs%20starter%3A&url=https%3A%2F%2Fgithub.com%2FVagr9K%2Fgatsby-advanced-starter
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/vagr9k/gatsby-advanced-starter.svg?style=social
-[tag-badge]: https://img.shields.io/github/tag/vagr9k/gatsby-advanced-starter.svg
-[tag]: https://github.com/vagr9k/gatsby-advanced-starter
-[stars-badge]: https://img.shields.io/github/stars/vagr9k/gatsby-advanced-starter.svg
-[stars]: https://github.com/vagr9k/gatsby-advanced-starter/stargazers
-[prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
-[prettier]: https://github.com/prettier/prettier
-[mit-badge]: https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg
-[mit]: https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE
 
 # Author
 
