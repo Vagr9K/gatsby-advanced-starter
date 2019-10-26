@@ -41,15 +41,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  // add a directory post template
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts
+  //  add a second query for diectory posts
   const markdownQueryResult = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___title}) {
         edges {
           node {
             fields {
@@ -76,6 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const categorySet = new Set();
 
   const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  // const directoryPost = markdownQueryResult.data.allDirectoryPosts.edges;
 
   // Sort posts
   postsEdges.sort((postA, postB) => {
@@ -126,6 +129,7 @@ exports.createPages = async ({ graphql, actions }) => {
       categorySet.add(edge.node.frontmatter.category);
     }
 
+    // Duplicate for directoryPost page
     // Create post pages
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
     const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
@@ -145,6 +149,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  // Tweak display settings for tag and category pages
   //  Create tag pages
   tagSet.forEach(tag => {
     createPage({

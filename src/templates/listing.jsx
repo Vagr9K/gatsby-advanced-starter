@@ -54,6 +54,16 @@ class Listing extends React.Component {
 
 export default Listing;
 
+<<<<<<< HEAD
+=======
+
+// Directory --
+// For use on directory listings, copy this page and cange the query to this
+// Pull detail bits from the deeper post page, into the directory listing
+// rm link to the slug page with it's website frontmatter piece
+// sort: { fields: frontmatter___title, order: ASC }
+
+>>>>>>> init with MD all the way
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
