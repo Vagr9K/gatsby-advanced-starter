@@ -4,15 +4,16 @@ import { Link } from "gatsby";
 class DirectoryPostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
+    this.props.postEdgesDirectory.forEach(postEdge => {
       postList.push({
-        path: postEdge.node.fields.slug,
+        // path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
+        // cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
-        date: postEdge.node.fields.date,
-        excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        // date: postEdge.node.fields.date,
+        // excerpt: postEdge.node.excerpt,
+        // timeToRead: postEdge.node.timeToRead,
+        website: postEdge.node.frontmatter.website
       });
     });
     return postList;
@@ -24,9 +25,9 @@ class DirectoryPostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+          <a href={post.website} target="_blank">
+            <h2>{post.title}</h2>
+          </a>
         ))}
       </div>
     );
@@ -34,3 +35,4 @@ class DirectoryPostListing extends React.Component {
 }
 
 export default DirectoryPostListing;
+

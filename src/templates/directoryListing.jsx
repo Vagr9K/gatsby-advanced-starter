@@ -2,10 +2,10 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/DirectoryPostListing/DirectoryPostListing";
+import PostListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
+import "./directoryListing.css";
 
 class Listing extends React.Component {
   renderPaging() {
@@ -52,7 +52,7 @@ class Listing extends React.Component {
   }
 }
 
-export default Listing;
+export default DirectoryListing;
 
 
 // Directory --
@@ -62,10 +62,11 @@ export default Listing;
 
 
 /* eslint no-undef: "off" */
-export const listingQuery = graphql`
-  query directoryListingQuery($skip: Int!, $limit: Int!) {
+export const DirectorylistingQuery = graphql`
+  query directoryListingQuery {
     allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
+      filter: {frontmatter: {category: {eq: "directory"}}}
     ) {
       edges {
         node {

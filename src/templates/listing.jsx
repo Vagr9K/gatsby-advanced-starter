@@ -3,11 +3,15 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
+import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./listing.css";
 
+
 class Listing extends React.Component {
+
+    // Pagination
   renderPaging() {
     const { currentPageNum, pageCount } = this.props.pageContext;
     const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
@@ -33,9 +37,11 @@ class Listing extends React.Component {
       </div>
     );
   }
+// 
 
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.ListingQuery.edges;
+    const postEdgesDirectory = this.props.data.directoryListingQuery.edges;
 
     return (
       <Layout>
@@ -43,6 +49,7 @@ class Listing extends React.Component {
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
+            <DirectoryListing postEdgesDirectory={postEdgesDirectory} />
             <PostListing postEdges={postEdges} />
           </div>
           {this.renderPaging()}
@@ -68,12 +75,10 @@ export default Listing;
 =======
 >>>>>>> tryin
 /* eslint no-undef: "off" */
-export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
+export const listingQuery = graphql` {
+  ListingQuery: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      limit: $limit
-      skip: $skip
     ) {
       edges {
         node {
@@ -92,5 +97,23 @@ export const listingQuery = graphql`
         }
       }
     }
-  }
+    directoryListingQuery: 
+        allMarkdownRemark(
+          sort: { fields: frontmatter___title, order: ASC }
+          filter: {frontmatter: {category: {eq: "directory"}}}
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                website
+                category
+                tags
+                cover
+                date
+              }
+            }
+          }
+        }
+    }
 `;
