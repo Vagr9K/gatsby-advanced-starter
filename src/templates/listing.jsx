@@ -8,7 +8,6 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./listing.css";
 
-
 class Listing extends React.Component {
 
     // Pagination
@@ -19,23 +18,23 @@ class Listing extends React.Component {
     const isFirstPage = currentPageNum === 1;
     const isLastPage = currentPageNum === pageCount;
 
-    return (
-      <div className="paging-container">
-        {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
-          const pageNum = index + 1;
-          return (
-            <Link
-              key={`listing-page-${pageNum}`}
-              to={pageNum === 1 ? "/" : `/${pageNum}/`}
-            >
-              {pageNum}
-            </Link>
-          );
-        })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
-      </div>
-    );
+    // return (
+    //   <div className="paging-container">
+    //     {!isFirstPage && <Link to={prevPage}>Previous</Link>}
+    //     {[...Array(pageCount)].map((_val, index) => {
+    //       const pageNum = index + 1;
+    //       return (
+    //         <Link
+    //           key={`listing-page-${pageNum}`}
+    //           to={pageNum === 1 ? "/" : `/${pageNum}/`}
+    //         >
+    //           {pageNum}
+    //         </Link>
+    //       );
+    //     })}
+    //     {!isLastPage && <Link to={nextPage}>Next</Link>}
+    //   </div>
+    // );
   }
 // 
 
@@ -79,6 +78,7 @@ export const listingQuery = graphql` {
   ListingQuery: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
+      filter: {frontmatter: {category: {ne: "directory"}}}
     ) {
       edges {
         node {
