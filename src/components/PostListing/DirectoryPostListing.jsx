@@ -23,8 +23,11 @@ class DirectoryPostListing extends React.Component {
         postList.map(post => (
           
           <React.Fragment>
+            
             <a href={post.website} target="_blank"> <h2> {post.title} </h2></a>
             <PostTags tags={post.tags} />
+            {/* include social handle, make a new component */}
+
           </React.Fragment>
         ))}
       </div>

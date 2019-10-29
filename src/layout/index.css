@@ -21,6 +21,13 @@ body {
 .layout-container {
   min-height: 100vh;
   min-width: 100vw;
-  display: flex;
+  display: grid;
   padding: 20px;
 }
+
+/* beginning of grid
+.layout-container {
+  display: grid;
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+} */
