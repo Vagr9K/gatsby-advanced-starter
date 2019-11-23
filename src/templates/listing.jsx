@@ -41,7 +41,7 @@ class Listing extends React.Component {
   render() {
     const postEdges = this.props.data.ListingQuery.edges;
     const postEdgesDirectory = this.props.data.directoryListingQuery.edges;
-    const postEdgesDirectoryA = this.props.data.directoryListingQuery.edges;
+    const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
 
     return (
       <Layout>
@@ -93,7 +93,6 @@ export const listingQuery = graphql` {
           frontmatter {
             title
             tags
-            cover
             date
           }
         }

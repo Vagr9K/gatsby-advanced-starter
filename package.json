@@ -44,7 +44,6 @@
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "cli-glob": "^0.1.0",
-<<<<<<< HEAD
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
@@ -52,28 +51,14 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.18.2",
     "gh-pages": "^2.2.0",
-=======
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
-    "gh-pages": "^2.0.1",
-    "immutable": "^4.0.0-rc.12",
->>>>>>> eslint mostly installed and no unused turned off
+    "immutable": "^3.8.1",
     "prettier": "^1.17.0",
-    "redux": "^4.0.4",
+    "redux": "^3.0.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
-<<<<<<< HEAD
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
-=======
     "slate": "^0.47.8",
-    "stylelint": "^11.0.0",
-    "stylelint-config-prettier": "^6.0.0",
->>>>>>> eslint mostly installed and no unused turned off
     "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.6.4",
     "write-good": "^1.0.1"
