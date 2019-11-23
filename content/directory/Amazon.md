@@ -3,9 +3,8 @@ title: "Amazon"
 website: "https://amazon.design/"
 twit: ""
 inst: ""
-category: "directory"
+category: "A"
 tags:
-    - A
     - South Lake Union
     - large
     - product

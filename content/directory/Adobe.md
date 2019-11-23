@@ -3,9 +3,8 @@ title: "Adobe"
 website: "https://www.adobe.com"
 twit: "@adobe"
 inst: ""
-category: "directory"
+category: "A"
 tags:
-    - A
     - Fremont
     - large
     - product

@@ -123,10 +123,17 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
 
-    // Generate a list of categories
+    // Generate a list of categories (singlar)
     if (edge.node.frontmatter.category) {
       categorySet.add(edge.node.frontmatter.category);
     }
+
+    // // Generate a list of categories (plural)
+    // if (edge.node.frontmatter.category) {
+    //   edge.node.frontmatter.categoryforEach(category => {
+    //     categorySet.add(category);
+    //   });
+    // }
 
     // Create post pages
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;

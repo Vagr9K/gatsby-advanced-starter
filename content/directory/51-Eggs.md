@@ -3,9 +3,8 @@ title: "51 Eggs"
 website: "http://www.51eggs.com"
 twit: ""
 inst: ""
-category: "directory"
+category: "numbers"
 tags:
-    - /#
     - Georgetown
     - small
     - branding

@@ -3,9 +3,8 @@ title: "Anvil"
 website: "https://anvil-studios.com"
 twit: "@adobe"
 inst: ""
-category: "directory"
+category: "A"
 tags:
-    - A
     - Pioneer Square
     - small
     - industrial

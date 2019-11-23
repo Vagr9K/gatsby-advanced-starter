@@ -1,11 +1,10 @@
 ---
-title: "#"
+title: "letters"
 website: "#"
 twit: "@"
 inst: ""
-category: "directory"
+category: "A"
 tags:
-    - A
     - Neighborhood
     - size
     - work

@@ -1,7 +1,7 @@
 ---
 title: "Big Test"
-cover: "5.jpg"
-category: "moar"
+cover: ""
+category: "interview"
 date: "2018-03-01"
 slug: "Big-Sample_Test"
 tags:

@@ -3,9 +3,8 @@ title: "Artefact"
 website: "https://www.artefactgroup.com"
 twit: "@artefactgroup"
 inst: ""
-category: "directory"
+category: "B"
 tags:
-    - B
     - Pioneer Square
     - medium
     - industrial

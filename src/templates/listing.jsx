@@ -41,7 +41,7 @@ class Listing extends React.Component {
   render() {
     const postEdges = this.props.data.ListingQuery.edges;
     const postEdgesDirectory = this.props.data.directoryListingQuery.edges;
-    const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
+    // const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
 
     return (
       <Layout>
@@ -50,7 +50,7 @@ class Listing extends React.Component {
             <Helmet title={config.siteTitle} />
             <SEO />
             <DirectoryListing postEdgesDirectory={postEdgesDirectory} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
+            {/* <DirectoryListing postEdgesDirectoryA={postEdgesDirectoryA} /> */}
             <PostListing postEdges={postEdges} />
           </div>
           {this.renderPaging()}
@@ -80,7 +80,7 @@ export const listingQuery = graphql` {
   ListingQuery: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      filter: {frontmatter: {category: {ne: "directory"}}}
+      filter: {frontmatter: {category: {eq: "interview"}}}
     ) {
       edges {
         node {
@@ -101,24 +101,6 @@ export const listingQuery = graphql` {
     directoryListingQuery: 
         allMarkdownRemark(
           sort: { fields: frontmatter___title, order: ASC }
-          filter: {frontmatter: {category: {eq: "directory"}}}
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                website
-                twit
-                inst
-                category
-                tags
-              }
-            }
-          }
-        }
-        directoryListingQueryA: 
-        allMarkdownRemark(
-          sort: { fields: frontmatter___title, order: ASC }
           filter: {frontmatter: {category: {eq: "A"}}}
         ) {
           edges {
@@ -133,6 +115,6 @@ export const listingQuery = graphql` {
               }
             }
           }
-        }
+        }   
     }
 `;
