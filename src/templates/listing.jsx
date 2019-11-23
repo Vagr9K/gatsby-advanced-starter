@@ -40,8 +40,8 @@ class Listing extends React.Component {
 
   render() {
     const postEdges = this.props.data.ListingQuery.edges;
-    const postEdgesDirectory = this.props.data.directoryListingQuery.edges;
-    // const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
+    const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
+    const postEdgesDirectoryB = this.props.data.directoryListingQueryB.edges;
 
     return (
       <Layout>
@@ -49,9 +49,12 @@ class Listing extends React.Component {
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectory} />
-            {/* <DirectoryListing postEdgesDirectoryA={postEdgesDirectoryA} /> */}
             <PostListing postEdges={postEdges} />
+
+            {/* Add 26 queries, for each letter plus numbers */}
+            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
+            <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
+            
           </div>
           {this.renderPaging()}
         </div>
@@ -98,23 +101,41 @@ export const listingQuery = graphql` {
         }
       }
     }
-    directoryListingQuery: 
-        allMarkdownRemark(
-          sort: { fields: frontmatter___title, order: ASC }
-          filter: {frontmatter: {category: {eq: "A"}}}
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                website
-                twit
-                inst
-                category
-                tags
-              }
+  directoryListingQueryA: 
+      allMarkdownRemark(
+        sort: { fields: frontmatter___title, order: ASC }
+        filter: {frontmatter: {category: {eq: "A"}}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              website
+              twit
+              inst
+              category
+              tags
             }
           }
-        }   
+        }
+      }   
+  directoryListingQueryB: 
+  allMarkdownRemark(
+    sort: { fields: frontmatter___title, order: ASC }
+    filter: {frontmatter: {category: {eq: "B"}}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          website
+          twit
+          inst
+          category
+          tags
+        }
+      }
     }
+  } 
+}
 `;
