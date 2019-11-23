@@ -1,6 +1,6 @@
 ---
 title: "Artefact"
-cover: ""
+cover: "imgs/hamburgers.png"
 website: "https://www.artefactgroup.com"
 twit: "@artefactgroup"
 inst: ""

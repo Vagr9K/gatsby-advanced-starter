@@ -1,6 +1,6 @@
 ---
 title: "Amazon"
-cover: ""
+cover: "imgs/hamburgers.png"
 website: "https://amazon.design/"
 twit: ""
 inst: ""

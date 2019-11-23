@@ -1,6 +1,6 @@
 ---
 title: "51 Eggs"
-cover: ""
+cover: "imgs/hamburgers.png"
 website: "http://www.51eggs.com"
 twit: ""
 inst: ""
