@@ -1,5 +1,6 @@
 ---
 title: "Artefact"
+cover: ""
 website: "https://www.artefactgroup.com"
 twit: "@artefactgroup"
 inst: ""

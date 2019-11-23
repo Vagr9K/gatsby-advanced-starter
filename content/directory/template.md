@@ -1,5 +1,6 @@
 ---
 title: "name"
+cover: ""
 website: "#"
 twit: "@"
 inst: ""

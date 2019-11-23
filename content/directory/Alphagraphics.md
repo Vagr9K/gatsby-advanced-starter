@@ -1,5 +1,6 @@
 ---
 title: "Alphagraphics"
+cover: ""
 website: "https://www.alphagraphicsseattle.com/"
 twit: "@alphagseattle"
 inst: "@alphagraphicsseattle"

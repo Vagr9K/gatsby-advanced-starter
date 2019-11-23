@@ -1,6 +1,6 @@
 ---
 title: "Big Test"
-cover: ""
+cover: "imgs/hamburgers.png"
 category: "interview"
 date: "2018-03-01"
 slug: "Big-Sample_Test"

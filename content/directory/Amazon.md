@@ -1,5 +1,6 @@
 ---
 title: "Amazon"
+cover: ""
 website: "https://amazon.design/"
 twit: ""
 inst: ""

@@ -1,5 +1,6 @@
 ---
 title: "Anvil"
+cover: ""
 website: "https://anvil-studios.com"
 twit: "@adobe"
 inst: ""
