@@ -5,10 +5,10 @@ twit: "@adobe"
 inst: ""
 category: "directory"
 tags:
-    - neighborhood
-    - size
-    - work
-    - work
+    - A
+    - Fremont
+    - large
+    - product
 ---
 
 Description

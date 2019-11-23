@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: "Seattle Creative Directoyr", // Site title.
+  siteTitle: "Seattle Creative Directory", // Site title.
   siteTitleShort: "SCD", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Seattle Creative Directoyr", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.

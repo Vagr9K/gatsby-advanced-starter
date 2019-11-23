@@ -1,14 +1,14 @@
 ---
 title: "Alphagraphics"
 website: "https://www.alphagraphicsseattle.com/"
-twit: "@adobe"
-inst: ""
+twit: "@alphagseattle"
+inst: "@alphagraphicsseattle"
 category: "directory"
 tags:
-    - neighborhood
-    - size
-    - work
-    - work
+    - A
+    - Belltown
+    - medium
+    - printer
 ---
 
 Description

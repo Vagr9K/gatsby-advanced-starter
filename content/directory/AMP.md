@@ -2,13 +2,14 @@
 title: "AMP"
 website: "https://www.ampagency.com"
 twit: "@AMP_Agency"
-inst: ""
+inst: "@amp_agency/"
 category: "directory"
 tags:
-    - neighborhood
-    - size
-    - work
-    - work
+    - A
+    - Pike Place Market
+    - large
+    - agency
+    - marketing
 ---
 
 Description

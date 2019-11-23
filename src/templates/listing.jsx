@@ -41,6 +41,7 @@ class Listing extends React.Component {
   render() {
     const postEdges = this.props.data.ListingQuery.edges;
     const postEdgesDirectory = this.props.data.directoryListingQuery.edges;
+    const postEdgesDirectoryA = this.props.data.directoryListingQuery.edges;
 
     return (
       <Layout>
@@ -49,6 +50,7 @@ class Listing extends React.Component {
             <Helmet title={config.siteTitle} />
             <SEO />
             <DirectoryListing postEdgesDirectory={postEdgesDirectory} />
+            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
             <PostListing postEdges={postEdges} />
           </div>
           {this.renderPaging()}
@@ -101,6 +103,24 @@ export const listingQuery = graphql` {
         allMarkdownRemark(
           sort: { fields: frontmatter___title, order: ASC }
           filter: {frontmatter: {category: {eq: "directory"}}}
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                website
+                twit
+                inst
+                category
+                tags
+              }
+            }
+          }
+        }
+        directoryListingQueryA: 
+        allMarkdownRemark(
+          sort: { fields: frontmatter___title, order: ASC }
+          filter: {frontmatter: {category: {eq: "A"}}}
         ) {
           edges {
             node {

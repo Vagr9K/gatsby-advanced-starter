@@ -5,10 +5,12 @@ twit: "@artefactgroup"
 inst: ""
 category: "directory"
 tags:
-    - neighborhood
-    - size
-    - work
-    - work
+    - B
+    - Pioneer Square
+    - medium
+    - industrial
+    - ux
+    - product
 ---
 
 Description
