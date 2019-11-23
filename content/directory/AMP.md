@@ -1,5 +1,6 @@
 ---
 title: "AMP"
+cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.ampagency.com"
 twit: "@AMP_Agency"
 inst: "@amp_agency/"
