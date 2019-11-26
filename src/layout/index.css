@@ -1,3 +1,90 @@
+/* .layout-container {
+  min-height: 100vh;
+  min-width: 100vw;
+} */
+
+a {         color: salmon; }
+a:hover {   background-color: rgb(0, 0, 0); }
+a:active {  background-color: black; }
+a:visited {  }
+a:hover {   cursor: pointer; }
+
+h1 {
+    font: 700 2em Rubik, sans-serif;
+}
+
+h2 {
+    font: 500 1em Rubik, sans-serif;
+    margin-top: 0em;
+}
+
+
+/* beginning of grid */
+.container {
+    display: grid;
+    grid-template-columns: 1em 1vw auto 1vw 1em;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: #d1d1d1;
+} 
+
+
+
+
+.title {
+    background-color: #2e2e2e ;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 6em;
+}
+
+.podcast {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+
+
+
+
+.directory {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.directoryListItem {
+    /* background-color: #ff00ff; */
+    margin-top: .2em;
+  
+}
+
+.post-tag-container {
+}
+
+.post-tag-container a {
+    /* background-color: rgb(82, 82, 82); Green */
+    /* color: white; */
+    margin: .2em;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font: 400 .2em Rubik, sans-serif;
+    color: midnightblue;
+}
+
+
+
+
+
+
+.paging-container {
+
+}
+
+
+/* Self hosted fonts */
+/* When you get Benji's, convert his ttf to a woff and add here */
+/* -------------------------------------------- */
+
 /* rubik-regular - latin */
 @font-face {
   font-family: 'Rubik';
@@ -33,58 +120,4 @@
   src: local('Rubik Bold'), local('Rubik-Bold'),
        url('../fonts/rubik-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('../fonts/rubik-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-
-/* .layout-container {
-  min-height: 100vh;
-  min-width: 100vw;
-} */
-
-
-/* beginning of grid */
-.container {
-    display: grid;
-    grid-template-columns: 1em 1vw auto 1vw 1em;
-    grid-template-rows: auto auto auto auto auto;
-    background-color: #d1d1d1;
-} 
-
-
-
-
-.title {
-    background-color: #2e2e2e ;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    height: 6em;
-}
-
-.podcast {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    font: 500 1em Rubik, sans-serif;
-}
-
-
-
-
-
-.directory {
-    grid-column-start: 3;
-    grid-column-end: 3;
-}
-
-.directoryListItem {
-  background-color: #ff00ff;
-  
-}
-
-
-
-
-
-
-.paging-container {
-
 }
