@@ -6,7 +6,6 @@ import PostListing from "../components/PostListing/PostListing";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
 
 class Listing extends React.Component {
 
@@ -45,17 +44,26 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <div className="listing-container">
-          <div className="posts-container">
-            <Helmet title={config.siteTitle} />
-            <SEO />
-            <PostListing postEdges={postEdges} />
+        <div className="container">
+          <Helmet title={config.siteTitle} />
+          <SEO />
 
-            {/* Add 26 queries, for each letter plus numbers */}
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
+          <div className="title">
             
           </div>
+
+          <div className="podcast">
+            <PostListing postEdges={postEdges} />   
+          </div>
+            
+            
+           
+          <div className="directory">
+            {/* Add 26 queries, for each letter plus numbers */}
+            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
+            <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />  
+          </div>
+
           {this.renderPaging()}
         </div>
       </Layout>
