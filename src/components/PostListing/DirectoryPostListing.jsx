@@ -1,6 +1,5 @@
 import React from "react";
 import PostTags from "../PostTags/PostTags"
-import "./DirectoryPostListing.css";
 
 class DirectoryPostListing extends React.Component {
   getPostList() {
