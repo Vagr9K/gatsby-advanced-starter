@@ -1,15 +1,15 @@
 ---
-title: "Amazon"
+title: "Blink UX"
 cover: "./content/blog/imgs/hamburgers.png"
-website: "https://amazon.design/"
-twit: ""
+website: "https://blinkux.com/"
+twit: "@BlinkUX"
 inst: ""
-category: "A"
+category: "B"
 tags:
-    - South Lake Union
+    - Downtown
     - large
-    - product
     - ux/ui
+    - strategy
     - research
 ---
 

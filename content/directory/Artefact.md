@@ -9,7 +9,7 @@ tags:
     - Pioneer Square
     - medium
     - industrial
-    - ux
+    - ux/ui
     - product
 ---
 

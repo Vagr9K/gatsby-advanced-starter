@@ -60,6 +60,7 @@ class Listing extends React.Component {
            
           <div className="directory">
             {/* Add 26 queries, for each letter plus numbers */}
+            {/* Or split into multiple 'directory' divs here */}
             <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
             <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />  
           </div>
