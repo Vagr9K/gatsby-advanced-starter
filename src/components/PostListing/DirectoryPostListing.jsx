@@ -25,6 +25,7 @@ class DirectoryPostListing extends React.Component {
             
             <div class="directoryListItem">
             <a href={post.website} target="_blank"> <h2> {post.title} </h2></a>
+            {/* force alphabatize listing of tags mayhaps? */}
             <PostTags tags={post.tags} />
             {/* include social handle, make a new component */}
             </div>
