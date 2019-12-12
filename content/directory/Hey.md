@@ -12,7 +12,7 @@ tags:
     - advertising
     - video
     - ux/ui
-    - marketimg
+    - marketing
     - print
     - research
 ---

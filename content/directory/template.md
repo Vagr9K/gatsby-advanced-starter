@@ -4,7 +4,7 @@ cover: "./content/blog/imgs/hamburgers.png"
 website: "#"
 twit: "@"
 inst: ""
-category: "A"
+category: "alpha"
 tags:
     - Neighborhood
     - size
