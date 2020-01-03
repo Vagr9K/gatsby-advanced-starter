@@ -1,5 +1,5 @@
 ---
-title: "Wonderman Thompson"
+title: "Wunderman Thompson"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://seattle.wunderman.com/"
 twit: "@WunThompson"
