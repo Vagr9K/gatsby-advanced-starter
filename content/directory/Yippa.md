@@ -6,10 +6,11 @@ twit: "@yippadesign"
 inst: ""
 category: "Y"
 tags:
-    - Neighborhood
-    - size
-    - work
-    - work
+    - small
+    - branding
+    - strategy
+    - print
+    - engineering
 ---
 
 Description
