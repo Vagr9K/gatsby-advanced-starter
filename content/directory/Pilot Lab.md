@@ -6,7 +6,7 @@ twit: "@thepilotlab"
 inst: ""
 category: "P"
 tags:
-    - Capital Hill
+    - Capitol Hill
     - medium
     - ux/ui
     - engineering

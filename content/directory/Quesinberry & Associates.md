@@ -6,7 +6,7 @@ twit: ""
 inst: ""
 category: "Q"
 tags:
-    - Capital Hill
+    - Capitol Hill
     - small
     - branding
     - marketing

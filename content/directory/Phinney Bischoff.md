@@ -6,7 +6,7 @@ twit: "@phinneybischoff"
 inst: "@phinneybischoff"
 category: "P"
 tags:
-    - Capital Hill
+    - Capitol Hill
     - small
     - research
     - branding
