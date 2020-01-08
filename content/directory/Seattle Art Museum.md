@@ -8,7 +8,6 @@ category: "S"
 tags:
     - Market
     - medium
-    - museum
     - branding
     - marketing
 ---

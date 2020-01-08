@@ -6,7 +6,7 @@ twit: "@intentfutures"
 inst: "@intentionalfutures"
 category: "I"
 tags:
-    - Capital Hill
+    - Capitol Hill
     - medium
     - strategy
     - research

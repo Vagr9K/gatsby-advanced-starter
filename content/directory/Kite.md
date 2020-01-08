@@ -6,7 +6,6 @@ twit: "@KiteBrand"
 inst: ""
 category: "K"
 tags:
-    - Neighborhood
     - small
     - branding
     - strategy

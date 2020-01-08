@@ -1,20 +1,18 @@
 ---
-title: "Hey,"
+title: "Mammoth"
 cover: "./content/blog/imgs/hamburgers.png"
-website: "https://heyadvertising.com/"
-twit: "@HeyAdvertising"
+website: "https://mammothagency.com/"
+twit: ""
 inst: ""
-category: "H"
+category: "M"
 tags:
     - Capitol Hill
-    - medium
-    - branding
+    - small
     - advertising
+    - branding
     - video
     - ux/ui
     - marketing
-    - print
-    - research
 ---
 
 Description

@@ -4,7 +4,7 @@ cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.awesomeamber.com/"
 twit: "@AmberDesign_"
 inst: "@awesomeamberdesign"
-category: "A"
+category: "independent"
 tags:
     - small
     - branding

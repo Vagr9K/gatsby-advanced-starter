@@ -6,8 +6,8 @@ twit: "@tdaddy61"
 inst: ""
 category: "T"
 tags:
-    - Neighborhood
-    - size
+    - International Distric
+    - small
     - branding
     - strategy
     - ux/ui

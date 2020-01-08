@@ -1,17 +1,16 @@
 ---
-title: "Somelab"
+title: "3 Crown Creative"
 cover: "./content/blog/imgs/hamburgers.png"
-website: "http://somelabdesign.com/"
+website: "https://3crowncreative.com/"
 twit: ""
 inst: ""
-category: "S"
+category: "numbers"
 tags:
-    - Orcas Island
+    - Fremont
     - small
     - branding
-    - print
     - ux/ui
-    - environmental
+    - engineering
 ---
 
 Description

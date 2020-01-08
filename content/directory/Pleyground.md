@@ -4,10 +4,10 @@ cover: "./content/blog/imgs/hamburgers.png"
 website: "http://pleyground.design/"
 twit: "@pley_ground"
 inst: "@pley.ground"
-category: "P"
+category: "independent"
 tags:
     - Pioneer Square
-    - size
+    - small
     - typography
     - print
     - illustration

@@ -6,7 +6,7 @@ twit: "@UpTopCorp"
 inst: "@uptopcorp"
 category: "U"
 tags:
-    - Pioner Square
+    - Pioneer Square
     - small
     - ux/ui
     - research

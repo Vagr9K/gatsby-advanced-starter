@@ -2,7 +2,7 @@
 title: "Copacino + Fujikado"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.copacino.com/"
-twit: "@"
+twit: ""
 inst: ""
 category: "C"
 tags:
