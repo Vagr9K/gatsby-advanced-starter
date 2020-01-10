@@ -21,13 +21,9 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
-<<<<<<< HEAD
-
-=======
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
->>>>>>> init with MD all the way
     return (
       <Layout>
         <div>
@@ -61,8 +57,8 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        date
         cover
+        date
         category
         tags
       }

@@ -38,6 +38,7 @@
     "react-helmet": "^5.2.1",
     "react-share": "^4.0.1",
     "react-twitter-widgets": "^1.7.1",
+    "styled-components": "^4.4.1",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
