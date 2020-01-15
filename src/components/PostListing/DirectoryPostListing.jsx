@@ -24,13 +24,12 @@ class DirectoryPostListing extends React.Component {
           <React.Fragment>
             
             {/* 
-            Have a ckass added for each tag that's present. 
+            Have a class added for each tag that's present. 
             Add an additional a:hover class for each that changes its own display.
             Needs to be added to the side rail listing as well. 
             */}
             <div class="directoryListItem">
             <a href={post.website} target="_blank"> <h2> {post.title} </h2></a>
-            {/* force alphabatize listing of tags mayhaps? */}
             <PostTags tags={post.tags} />
             {/* include social handle, make a new component */}
             </div>
