@@ -83,7 +83,13 @@ class Listing extends React.Component {
            
           <div className="directory">
             
-            {/* Split into multiple 'directory' divs here */}
+            {/* 
+            
+            Directory needs its own grid display grid
+            grid-auto-flow: row;
+            to place each alpha chunk into a grid item
+            
+            */}
 
             <h3>A</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
             <h3>B</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
