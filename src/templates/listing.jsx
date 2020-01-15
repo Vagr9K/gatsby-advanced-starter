@@ -82,34 +82,35 @@ class Listing extends React.Component {
             
            
           <div className="directory">
-            {/* Add 26 queries, for each letter plus numbers */}
-            {/* Or split into multiple 'directory' divs here */}
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryC} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryD} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryE} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryF} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryG} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryH} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryI} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryK} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryL} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryM} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryN} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryO} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryP} />  
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryR} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryS} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryT} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryU} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryV} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryW} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryX} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryY} />
-            <DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} />
+            
+            {/* Split into multiple 'directory' divs here */}
+
+            <h3>A</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
+            <h3>B</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
+            <h3>C</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryC} />
+            <h3>D</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryD} />
+            <h3>E</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryE} />
+            <h3>F</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryF} />
+            <h3>G</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryG} />
+            <h3>H</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryH} />
+            <h3>I</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryI} />
+            <h3>J</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} />
+            <h3>K</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryK} />
+            <h3>L</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryL} />
+            <h3>M</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryM} />
+            <h3>N</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryN} />
+            <h3>O</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryO} />
+            <h3>P</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryP} />  
+            <h3>Q</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} />
+            <h3>R</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryR} />
+            <h3>S</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryS} />
+            <h3>T</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryT} />
+            <h3>U</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryU} />
+            <h3>V</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryV} />
+            <h3>W</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryW} />
+            <h3>X</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryX} />
+            <h3>Y</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryY} />
+            <h3>Z</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} />
           </div>
           {this.renderPaging()}
         </div>
