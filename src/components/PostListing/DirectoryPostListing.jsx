@@ -18,7 +18,7 @@ class DirectoryPostListing extends React.Component {
     const postList = this.getPostList();
     return (
       <div class="directoryList">
-        {/* Your post list here. */
+        {
         postList.map(post => (
           
           <React.Fragment>

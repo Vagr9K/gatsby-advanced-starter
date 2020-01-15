@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
+import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import config from "../../data/SiteConfig";
 
 export default class TagTemplate extends React.Component {
@@ -14,7 +14,9 @@ export default class TagTemplate extends React.Component {
         <div className="tag-container">
           <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
           <h1>Posts by {tag}</h1>
-          <PostListing postEdges={postEdges} />
+          
+          <DirectoryListing postEdgesDirectory={postEdges} />
+        
         </div>
       </Layout>
     );
@@ -32,16 +34,13 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
           frontmatter {
             title
+            website
+            twit
+            inst
+            category
             tags
-            date
           }
         }
       }
