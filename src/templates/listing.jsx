@@ -3,6 +3,8 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
+import DirectoryListing from "../components/PostListing/DirectoryPostListing";
+import PostTags from "../components/PostTags/PostTags"
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./listing.css";
@@ -23,7 +25,7 @@ class Listing extends React.Component {
     
     
     // const postEdges = this.props.data.ListingQueryPodcast.edges;
-
+    
     const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
     const postEdgesDirectoryB = this.props.data.directoryListingQueryB.edges;
     const postEdgesDirectoryC = this.props.data.directoryListingQueryC.edges;
@@ -58,8 +60,7 @@ class Listing extends React.Component {
           <Helmet title={config.siteTitle} />
           <SEO />
 
-          <div className="title">
-          </div>
+          <div className="title"></div>
           
           
           {/* 
@@ -67,7 +68,6 @@ class Listing extends React.Component {
             <PostListing postEdges={postEdges} />   
           </div> 
           */}
-            
             
            
           <div className="directory">
@@ -124,13 +124,8 @@ export default Listing;
 // sort: { fields: frontmatter___title, order: ASC }
 
 /* eslint no-undef: "off" */
-<<<<<<< HEAD
-export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
-=======
 export const listingQuery = graphql` {
   ListingQueryPodcast: 
->>>>>>> addded tag page, tag query using directory listing query
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
       limit: $limit
