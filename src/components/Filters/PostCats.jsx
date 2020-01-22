@@ -8,13 +8,13 @@ class PostCats extends Component {
     return (
       <div className="post-cat-container">
         {cats &&
-          cats.map(tag => (
+          cats.map(category => (
             <Link
               key={category}
               style={{ textDecoration: "none" }}
               to={`/categories/${_.kebabCase(category)}`}
             >
-              <a type="anchor">{tag}</a>
+              <a type="anchor">{category}</a>
             </Link>
           ))}
       </div>

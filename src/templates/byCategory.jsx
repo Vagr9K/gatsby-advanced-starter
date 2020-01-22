@@ -16,7 +16,7 @@ export default class CategoryTemplate extends React.Component {
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
           <h1>{category}</h1>
-          <DirectoryListing postEdges={postEdges} />
+          <DirectoryListing postEdgesDirectory={postEdges} />
         </div>
       </Layout>
     );
@@ -29,7 +29,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$category] } } }
+      filter: { frontmatter: { category: { eq: $category } } }
     ) {
       totalCount
       edges {

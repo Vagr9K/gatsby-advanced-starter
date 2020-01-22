@@ -74,7 +74,7 @@ h3 {
     margin: 0em;
 }
 
-.post-tag-container a {
+.post-tag-container a, .post-cat-container a {
     /* background-color: rgb(82, 82, 82); Green */
     /* color: white; */
     margin: 0em .25em 0em .25em;
