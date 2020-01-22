@@ -42,8 +42,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
-  const tagPage = path.resolve("src/templates/postsByTag.jsx");
-  const categoryPage = path.resolve("src/templates/category.jsx");
+  const tagPage = path.resolve("src/templates/byTag.jsx");
+  const categoryPage = path.resolve("src/templates/byCategory.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts

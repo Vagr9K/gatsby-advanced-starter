@@ -5,18 +5,18 @@ import Layout from "../layout";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import config from "../../data/SiteConfig";
 
-export default class TagTemplate extends React.Component {
+export default class CategoryTemplate extends React.Component {
   render() {
-    const { tag } = this.props.pageContext;
+    const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="tag-container">
-          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-          <h1>Posts by {tag}</h1>
-          
-          <DirectoryListing postEdgesDirectory={postEdges} />
-        
+        <div className="category-container">
+          <Helmet
+            title={`Posts in category "${category}" | ${config.siteTitle}`}
+          />
+          <h1>{category}</h1>
+          <DirectoryListing postEdges={postEdges} />
         </div>
       </Layout>
     );
@@ -25,11 +25,11 @@ export default class TagTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
+  query CategoryPage($category: String) {
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { category: { in: [$category] } } }
     ) {
       totalCount
       edges {

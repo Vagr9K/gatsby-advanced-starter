@@ -3,7 +3,8 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
-import PostTags from "../components/PostTags/PostTags"
+import PostTags from "../components/Filters/PostTags"
+import PostCats from "../components/Filters/PostCats"
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -128,6 +129,10 @@ export default Listing;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql` {
+  AllCatsQuery: 
+    allMarkdownRemark {
+      distinct(field: frontmatter___category)
+    }
   AllTagsQuery: 
     allMarkdownRemark {
       distinct(field: frontmatter___tags)

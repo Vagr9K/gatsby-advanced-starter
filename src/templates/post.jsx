@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
+import PostTags from "../components/Filters/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
