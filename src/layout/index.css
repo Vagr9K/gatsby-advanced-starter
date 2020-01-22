@@ -59,6 +59,11 @@ h3 {
     grid-column-end: 3;
 }
 
+.tagBox {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
 .directoryListItem {
     /* background-color: #ff00ff; */
     margin-top: 1em;

@@ -41,14 +41,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  // add a directory post template
   const postPage = path.resolve("src/templates/post.jsx");
-  const tagPage = path.resolve("src/templates/tag.jsx");
+  const tagPage = path.resolve("src/templates/postsByTag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts
-  //  add a second query for diectory posts
   const markdownQueryResult = await graphql(`
     {
       allMarkdownRemark(sort: {order: ASC, fields: frontmatter___title}) {
@@ -154,7 +152,6 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  // Tweak display settings for tag and category pages
   //  Create tag pages
   tagSet.forEach(tag => {
     createPage({

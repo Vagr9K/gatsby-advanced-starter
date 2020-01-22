@@ -3,8 +3,8 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
-import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import PostTags from "../components/PostTags/PostTags"
+import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./listing.css";
@@ -23,7 +23,8 @@ class Listing extends React.Component {
     // this can be refactored as a variable based approach, and only one graphql query
     // Look at the tags page for an example of this
     
-    
+    const allTags = this.props.data.AllTagsQuery.distinct;
+
     // const postEdges = this.props.data.ListingQueryPodcast.edges;
     
     const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
@@ -53,7 +54,7 @@ class Listing extends React.Component {
     const postEdgesDirectoryY = this.props.data.directoryListingQueryY.edges;
     const postEdgesDirectoryZ = this.props.data.directoryListingQueryZ.edges;
     
-
+   
     return (
       <Layout>
         <div className="container">
@@ -61,7 +62,9 @@ class Listing extends React.Component {
           <SEO />
 
           <div className="title"></div>
-          
+          <div className="tagBox">
+            <PostTags tags={allTags} />
+          </div>
           
           {/* 
           <div className="podcast">
@@ -125,6 +128,10 @@ export default Listing;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql` {
+  AllTagsQuery: 
+    allMarkdownRemark {
+      distinct(field: frontmatter___tags)
+    }
   ListingQueryPodcast: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
