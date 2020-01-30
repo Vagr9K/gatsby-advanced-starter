@@ -2,7 +2,11 @@
 
 body {
     font-size: 14px;
-    line-height: 2em;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -29,6 +33,7 @@ h2:hover {
     border: 1px solid #714060;
     box-sizing: border-box;
     box-shadow: -4px 4px 0px rgba(113, 64, 96, 0.3);
+    text-decoration: none;
 }
 
 h3 {
@@ -79,6 +84,7 @@ h3 {
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    line-height: 1;
 }
 
 .directoryListItem {
