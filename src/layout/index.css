@@ -1,14 +1,15 @@
-* {
-    
+* { }
+
+body {
+    font-size: 14px;
+    line-height: 2em;
 }
-
-
 
 
 a {         color:#2e2e2e; }
-h1:hover, h2:hover, a:hover {   
+/* h1:hover, h2:hover, a:hover {   
     background-color: rgb(255, 255, 255); 
-}
+} */
 a:active {  background-color: black; }
 a:visited {  }
 a:hover {   cursor: pointer; }
@@ -18,12 +19,20 @@ h1 {
 }
 
 h2 {
-    font: 500 1.5em Rubik, sans-serif;
+    font: 500 1em Rubik, sans-serif;
     margin: 0;
 }
 
+h2:hover {
+    padding: .2em 0em .2em .4em;
+    background: #FFFFFF;
+    border: 1px solid #714060;
+    box-sizing: border-box;
+    box-shadow: -4px 4px 0px rgba(113, 64, 96, 0.3);
+}
+
 h3 {
-    font: 700 1em Rubik, sans-serif;
+    font: 700 0.857em Rubik, sans-serif;
     color:#FFF;
     margin: 1em 0 0 0;
 }
@@ -73,8 +82,8 @@ h3 {
 }
 
 .directoryListItem {
-    background-color: #ff00ff;
-    margin-top: 1em;
+    /* background-color: #999; */
+    /* margin-top: 1em; */
   }
 
 

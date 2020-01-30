@@ -81,14 +81,15 @@ class Listing extends React.Component {
             
            
           <div className="directory">
-            
-            {/* 
-            
-            Directory needs its own grid display grid
-            grid-auto-flow: row;
-            to place each alpha chunk into a grid item
-            
-            */}
+                  {/*             
+                  
+                  Build a loop that counts characters and feeds them to the graphQL query variable
+
+                  var charCode = "A".charCodeAt(0);    // 65
+                  charCode += 1;
+                  var next = String.fromCharCode(charCode);      // "B" 
+                  
+                  */}
 
             <div className="directoryBlock"><h3>A</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} /></div>
             <div className="directoryBlock"><h3>B</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} /></div>
