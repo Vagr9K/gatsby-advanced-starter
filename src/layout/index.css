@@ -1,6 +1,8 @@
 * {
-    background-color: #d1d1d1;
+    
 }
+
+
 
 
 a {         color:#2e2e2e; }
@@ -22,26 +24,30 @@ h2 {
 
 h3 {
     font: 700 1em Rubik, sans-serif;
-    color: salmon;
+    color:#FFF;
     margin: 1em 0 0 0;
 }
 
 
-/* beginning of grid */
+
+#wrapper {
+    background: url(../../static/pattern04c.png);
+    background-color: #FFADA1;
+}
+
+/* container grid */
 .container {
     display: grid;
-    grid-template-columns: 1em 1vw auto 1vw 1em;
-    grid-template-rows: auto auto auto auto auto;
-    background-color: #d1d1d1;
+    grid-template-columns: 1em repeat(12, 1fr) 1em;
+    grid-gap: .5em;
+    grid-auto-flow: dense;    
+    max-width: 1200px;
 } 
-
-
-
 
 .title {
     background-color: #2e2e2e ;
-    grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 15;
     height: 6em;
 }
 
@@ -51,24 +57,28 @@ h3 {
 }
 
 
-
+.tagBox {
+    grid-column-start: 9;
+    grid-column-end: 12;
+}
 
 
 .directory {
     grid-column-start: 3;
-    grid-column-end: 3;
-}
-
-.tagBox {
-    grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-end: 8;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
 }
 
 .directoryListItem {
-    /* background-color: #ff00ff; */
+    background-color: #ff00ff;
     margin-top: 1em;
-  
-}
+  }
+
+
+
 
 .post-tag-container {
     margin: 0em;
