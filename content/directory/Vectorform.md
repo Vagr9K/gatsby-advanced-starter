@@ -2,7 +2,7 @@
 title: "Vectorform"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.vectorform.com/"
-twit: "@vectorform"
+twit: "https://twitter.com/vectorform"
 inst: ""
 category: "V"
 tags:

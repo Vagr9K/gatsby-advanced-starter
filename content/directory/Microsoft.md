@@ -2,7 +2,7 @@
 title: "Microsoft"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.microsoft.com/design"
-twit: "@MicrosoftDesign"
+twit: "https://twitter.com/MicrosoftDesign"
 inst: ""
 category: "M"
 tags:

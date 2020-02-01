@@ -2,7 +2,7 @@
 title: "Creative Media Alliance"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://creativemediaalliance.com/"
-twit: "@cmaseattle"
+twit: "https://twitter.com/cmaseattle"
 inst: ""
 category: "C"
 tags:

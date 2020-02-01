@@ -2,8 +2,8 @@
 title: "REI"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.rei.com/"
-twit: "@rei"
-inst: "@rei"
+twit: "https://twitter.com/rei"
+inst: "https://www.instagram.com/rei"
 category: "R"
 tags:
     - Kent

@@ -2,7 +2,7 @@
 title: "FUSE IQ"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.fuseiq.com/"
-twit: "@fuseiq"
+twit: "https://twitter.com/fuseiq"
 inst: ""
 category: "F"
 tags:

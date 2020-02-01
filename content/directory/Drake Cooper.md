@@ -2,7 +2,7 @@
 title: "Drake Cooper"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://drakecooper.com/"
-twit: "@DrakeCooper"
+twit: "https://twitter.com/DrakeCooper"
 inst: ""
 category: "D"
 tags:

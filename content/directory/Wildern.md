@@ -3,7 +3,7 @@ title: "Wildern"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.hellowildern.com/"
 twit: ""
-inst: "@hellowildern"
+inst: "https://www.instagram.com/hellowildern"
 category: "W"
 tags:
     - Capitol Hill

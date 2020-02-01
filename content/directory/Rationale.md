@@ -2,8 +2,8 @@
 title: "Rationale"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://rationale-design.com/"
-twit: "@RationaleDesign"
-inst: "@seanwolcott"
+twit: "https://twitter.com/RationaleDesign"
+inst: "https://www.instagram.com/seanwolcott"
 category: "R"
 tags:
     - Pioneer Square

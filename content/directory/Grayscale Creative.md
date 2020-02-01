@@ -3,7 +3,7 @@ title: "Grayscale Creative"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://grayscaledesignstudio.com/"
 twit: ""
-inst: "@grayscaledesignstudio"
+inst: "https://www.instagram.com/grayscaledesignstudio"
 category: "G"
 tags:
     - Fremont

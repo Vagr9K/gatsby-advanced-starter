@@ -2,7 +2,7 @@
 title: "RMB Vivid"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://rmbvivid.com/"
-twit: "@RMBVivid"
+twit: "https://twitter.com/RMBVivid"
 inst: ""
 category: "R"
 tags:

@@ -2,7 +2,7 @@
 title: "Foundry Interactive"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.foundryinteractive.com/"
-twit: "@foundryinc"
+twit: "https://twitter.com/foundryinc"
 inst: ""
 category: "F"
 tags:

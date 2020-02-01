@@ -2,7 +2,7 @@
 title: "Facebook"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://facebook.design/"
-twit: "@facebookdesign"
+twit: "https://twitter.com/facebookdesign"
 inst: ""
 category: "F"
 tags:

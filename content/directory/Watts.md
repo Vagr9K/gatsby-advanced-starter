@@ -3,7 +3,7 @@ title: "Watts"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.wearewatts.com/"
 twit: ""
-inst: "@we.are.watts"
+inst: "https://www.instagram.com/we.are.watts"
 category: "W"
 tags:
     - Pioneer Square

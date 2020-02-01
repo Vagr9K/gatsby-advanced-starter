@@ -2,8 +2,8 @@
 title: "Wongdoody"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://wongdoody.com/"
-twit: "@wongdoody"
-inst: "@WONGDOODY"
+twit: "https://twitter.com/wongdoody"
+inst: "https://www.instagram.com/WONGDOODY"
 category: "W"
 tags:
     - Downtown

@@ -3,7 +3,7 @@ title: "Clyde Golden"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://clydegolden.com/"
 twit: ""
-inst: "@clydegolden"
+inst: "https://www.instagram.com/clydegolden"
 category: "C"
 tags:
     - Ballard

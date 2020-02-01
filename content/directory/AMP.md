@@ -2,8 +2,8 @@
 title: "AMP"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.ampagency.com"
-twit: "@AMP_Agency"
-inst: "@amp_agency/"
+twit: "https://twitter.com/AMP_Agency"
+inst: "https://www.instagram.com/amp_agency/"
 category: "A"
 tags:
     - Pike Place Market

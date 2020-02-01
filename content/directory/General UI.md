@@ -2,7 +2,7 @@
 title: "General UI"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.genui.co/"
-twit: "@generalui"
+twit: "https://twitter.com/generalui"
 inst: ""
 category: "G"
 tags:

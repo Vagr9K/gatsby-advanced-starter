@@ -2,8 +2,8 @@
 title: "Moby"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://mobyinc.com/"
-twit: "@builtbymoby"
-inst: "@builtbymoby"
+twit: "https://twitter.com/builtbymoby"
+inst: "https://www.instagram.com/builtbymoby"
 category: "M"
 tags:
     - Fremont

@@ -2,7 +2,7 @@
 title: "Blink UX"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://blinkux.com/"
-twit: "@BlinkUX"
+twit: "https://twitter.com/BlinkUX"
 inst: ""
 category: "B"
 tags:

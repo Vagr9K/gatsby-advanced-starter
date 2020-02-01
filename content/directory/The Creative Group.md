@@ -2,8 +2,8 @@
 title: "The Creative Group"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.roberthalf.com/"
-twit: "@roberthalf"
-inst: "@roberthalf"
+twit: "https://twitter.com/roberthalf"
+inst: "https://www.instagram.com/roberthalf"
 category: "T"
 tags:
     - Downtown

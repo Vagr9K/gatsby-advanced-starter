@@ -2,8 +2,8 @@
 title: "Substantial"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://substantial.com/"
-twit: "@substantial"
-inst: "@substantial"
+twit: "https://twitter.com/substantial"
+inst: "https://www.instagram.com/substantial"
 category: "S"
 tags:
     - Capitol Hill

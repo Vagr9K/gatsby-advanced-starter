@@ -2,7 +2,7 @@
 title: "Gravity Creative"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://www.gravitycreative.com/"
-twit: "@gravitycreative"
+twit: "https://twitter.com/gravitycreative"
 inst: ""
 category: "G"
 tags:

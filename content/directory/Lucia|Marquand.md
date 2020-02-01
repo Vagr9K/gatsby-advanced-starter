@@ -2,7 +2,7 @@
 title: "Lucia|Marquand"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://luciamarquand.com/"
-twit: "@luciamarquand"
+twit: "https://twitter.com/luciamarquand"
 inst: ""
 category: "L"
 tags:

@@ -2,7 +2,7 @@
 title: "Girvin"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.girvin.com/"
-twit: "@girvindesign"
+twit: "https://twitter.com/girvindesign"
 inst: ""
 category: "G"
 tags:

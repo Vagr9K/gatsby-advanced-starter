@@ -2,7 +2,7 @@
 title: "HTC"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.htc.com/us/"
-twit: "@HTCUSA"
+twit: "https://twitter.com/HTCUSA"
 inst: ""
 category: "H"
 tags:

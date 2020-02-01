@@ -2,8 +2,8 @@
 title: "Tactile"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://tactileinc.com/"
-twit: "@tactile_design"
-inst: "@tactiledesign"
+twit: "https://twitter.com/tactile_design"
+inst: "https://www.instagram.com/tactiledesign"
 category: "T"
 tags:
     - Belltown

@@ -2,8 +2,8 @@
 title: "Ted Leonhardt"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://tedleonhardt.com/"
-twit: "@tedleonhardt"
-inst: "@TedCLeonhardt"
+twit: "https://twitter.com/tedleonhardt"
+inst: "https://www.instagram.com/TedCLeonhardt"
 category: "T"
 tags:
     - Ballard

@@ -2,7 +2,7 @@
 title: "Getty Images"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.gettyimages.com/"
-twit: "@GettyImages"
+twit: "https://twitter.com/GettyImages"
 inst: ""
 category: "G"
 tags:

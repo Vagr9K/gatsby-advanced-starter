@@ -3,7 +3,7 @@ title: "Framework"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://weareframework.com/"
 twit: ""
-inst: "@we.are.framework"
+inst: "https://www.instagram.com/we.are.framework"
 category: "F"
 tags:
     - Capitol Hill

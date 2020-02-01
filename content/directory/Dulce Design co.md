@@ -3,7 +3,7 @@ title: "Dulce Design co"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://www.dulcedesign.com/"
 twit: ""
-inst: "@dulcedesigncompany"
+inst: "https://www.instagram.com/dulcedesigncompany"
 category: "independent"
 tags:
     - small

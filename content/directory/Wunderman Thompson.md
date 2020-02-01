@@ -2,8 +2,8 @@
 title: "Wunderman Thompson"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://seattle.wunderman.com/"
-twit: "@WunThompson"
-inst: "@wunthompson"
+twit: "https://twitter.com/WunThompson"
+inst: "https://www.instagram.com/wunthompson"
 category: "W"
 tags:
     - SLU

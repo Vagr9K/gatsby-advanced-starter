@@ -2,8 +2,8 @@
 title: "Product Creation Studio"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.productcreationstudio.com/"
-twit: "@PCS_News"
-inst: "@productcreationstudio"
+twit: "https://twitter.com/PCS_News"
+inst: "https://www.instagram.com/productcreationstudio"
 category: "P"
 tags:
     - SLU

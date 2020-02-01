@@ -2,7 +2,7 @@
 title: "Extreme Arts & Sciences"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.easci.com/"
-twit: "@easci"
+twit: "https://twitter.com/easci"
 inst: ""
 category: "E"
 tags:

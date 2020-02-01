@@ -2,8 +2,8 @@
 title: "Phinney Bischoff"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://phinneybischoff.com/"
-twit: "@phinneybischoff"
-inst: "@phinneybischoff"
+twit: "https://twitter.com/phinneybischoff"
+inst: "https://www.instagram.com/phinneybischoff"
 category: "P"
 tags:
     - Capitol Hill

@@ -3,7 +3,7 @@ title: "Ten Gun"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.tengundesign.com/"
 twit: ""
-inst: "@tengundesign"
+inst: "https://www.instagram.com/tengundesign"
 category: "T"
 tags:
     - Edmonds

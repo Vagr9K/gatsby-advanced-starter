@@ -2,8 +2,8 @@
 title: "Pyramid Communications"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.pyramidcommunications.com/"
-twit: "@PyramidComms"
-inst: "@pyramidcomms"
+twit: "https://twitter.com/PyramidComms"
+inst: "https://www.instagram.com/pyramidcomms"
 category: "P"
 tags:
     - Market

@@ -2,8 +2,8 @@
 title: "Schema"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.schemadesign.com/"
-twit: "@schemadesign"
-inst: "@schemadesign"
+twit: "https://twitter.com/schemadesign"
+inst: "https://www.instagram.com/schemadesign"
 category: "S"
 tags:
     - Capitol Hill

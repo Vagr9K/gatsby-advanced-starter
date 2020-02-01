@@ -2,7 +2,7 @@
 title: "Pilot Lab"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://www.pilotlab.com/"
-twit: "@thepilotlab"
+twit: "https://twitter.com/thepilotlab"
 inst: ""
 category: "P"
 tags:

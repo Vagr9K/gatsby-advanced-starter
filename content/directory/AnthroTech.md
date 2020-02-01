@@ -2,8 +2,8 @@
 title: "AnthroTech"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://anthro-tech.com/"
-twit: "@anthrotechUX"
-inst: "@anthrotechux"
+twit: "https://twitter.com/anthrotechUX"
+inst: "https://www.instagram.com/anthrotechux"
 category: "A"
 tags:
     - Olympia

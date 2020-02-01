@@ -2,8 +2,8 @@
 title: "Print NW"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://printnw.rocks/"
-twit: "@printnw"
-inst: "@print_nw"
+twit: "https://twitter.com/printnw"
+inst: "https://www.instagram.com/print_nw"
 category: "P"
 tags:
     - Tacoma

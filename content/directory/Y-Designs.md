@@ -2,7 +2,7 @@
 title: "Y-Designs"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://y-designs.com/"
-twit: "@ydseattle"
+twit: "https://twitter.com/ydseattle"
 inst: ""
 category: "Y"
 tags:

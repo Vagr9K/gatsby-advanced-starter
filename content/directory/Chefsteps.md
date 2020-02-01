@@ -2,8 +2,8 @@
 title: "Chefsteps"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.chefsteps.com/"
-twit: "@"
-inst: "@chefsteps"
+twit: "https://twitter.com/"
+inst: "https://www.instagram.com/chefsteps"
 category: "C"
 tags:
     - Market

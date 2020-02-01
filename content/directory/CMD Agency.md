@@ -2,8 +2,8 @@
 title: "CMD Agency"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.cmdagency.com/"
-twit: "@CMDCreates"
-inst: "@cmdcreates"
+twit: "https://twitter.com/CMDCreates"
+inst: "https://www.instagram.com/cmdcreates"
 category: "C"
 tags:
     - Pioneer Square

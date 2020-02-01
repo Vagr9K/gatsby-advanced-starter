@@ -2,8 +2,8 @@
 title: "Oculus"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.oculus.com/"
-twit: "@oculus"
-inst: "@oculus"
+twit: "https://twitter.com/oculus"
+inst: "https://www.instagram.com/oculus"
 category: "O"
 tags:
     - Sodo

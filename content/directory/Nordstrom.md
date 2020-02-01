@@ -2,8 +2,8 @@
 title: "Nordstrom"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://shop.nordstrom.com/"
-twit: "@nordstrom"
-inst: "@nordstrom"
+twit: "https://twitter.com/nordstrom"
+inst: "https://www.instagram.com/nordstrom"
 category: "N"
 tags:
     - Downtown

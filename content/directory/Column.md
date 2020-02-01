@@ -2,7 +2,7 @@
 title: "Column"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://columnseattle.com/"
-twit: "@columnseattle"
+twit: "https://twitter.com/columnseattle"
 inst: ""
 category: "C"
 tags:

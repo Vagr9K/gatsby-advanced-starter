@@ -2,7 +2,7 @@
 title: "Valve"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.valvesoftware.com/"
-twit: "@valvesoftware"
+twit: "https://twitter.com/valvesoftware"
 inst: ""
 category: "V"
 tags:

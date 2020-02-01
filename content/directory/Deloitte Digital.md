@@ -2,7 +2,7 @@
 title: "Deloitte Digital"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.deloittedigital.com/"
-twit: "@DeloitteDigi_US"
+twit: "https://twitter.com/DeloitteDigi_US"
 inst: ""
 category: "D"
 tags:

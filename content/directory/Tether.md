@@ -2,8 +2,8 @@
 title: "Tether"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "#"
-twit: "@tether"
-inst: "@tether"
+twit: "https://twitter.com/tether"
+inst: "https://www.instagram.com/tether"
 category: "T"
 tags:
     - Pioneer Square

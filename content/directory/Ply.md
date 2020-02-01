@@ -2,7 +2,7 @@
 title: "Ply"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://www.plyinteractive.com/"
-twit: "@plyinc"
+twit: "https://twitter.com/plyinc"
 inst: ""
 category: "P"
 tags:

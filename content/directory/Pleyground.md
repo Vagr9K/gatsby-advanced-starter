@@ -2,8 +2,8 @@
 title: "Pleyground"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://pleyground.design/"
-twit: "@pley_ground"
-inst: "@pley.ground"
+twit: "https://twitter.com/pley_ground"
+inst: "https://www.instagram.com/pley.ground"
 category: "independent"
 tags:
     - Pioneer Square

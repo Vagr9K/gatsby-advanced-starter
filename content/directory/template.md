@@ -2,7 +2,7 @@
 title: "name"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "#"
-twit: "@"
+twit: "https://twitter.com/"
 inst: ""
 category: "alpha"
 tags:

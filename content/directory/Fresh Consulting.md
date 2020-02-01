@@ -2,7 +2,7 @@
 title: "Fresh Consulting"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.freshconsulting.com/"
-twit: "@FreshConsulting"
+twit: "https://twitter.com/FreshConsulting"
 inst: ""
 category: "F"
 tags:

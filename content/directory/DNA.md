@@ -2,7 +2,7 @@
 title: "DNA"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://dnaseattle.com/"
-twit: "@dnaseattle"
+twit: "https://twitter.com/dnaseattle"
 inst: ""
 category: "D"
 tags:

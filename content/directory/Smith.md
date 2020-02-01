@@ -2,8 +2,8 @@
 title: "Smith"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.smith.co/"
-twit: "@HumansofSMITH"
-inst: "@humansofsmith"
+twit: "https://twitter.com/HumansofSMITH"
+inst: "https://www.instagram.com/humansofsmith"
 category: "S"
 tags:
     - Pioneer Square

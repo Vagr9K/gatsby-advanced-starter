@@ -2,8 +2,8 @@
 title: "Mekanism"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://mekanism.com/"
-twit: "@mekanism"
-inst: "@mekanism"
+twit: "https://twitter.com/mekanism"
+inst: "https://www.instagram.com/mekanism"
 category: "M"
 tags:
     - Capital Hill

@@ -2,7 +2,7 @@
 title: "Double Knot Creative"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://doubleknotcreative.com/"
-twit: "@doubleknottweet"
+twit: "https://twitter.com/doubleknottweet"
 inst: ""
 category: "D"
 tags:

@@ -2,7 +2,7 @@
 title: "Digital Kitchen"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.thisisdk.com/"
-twit: "@digitalkitchen"
+twit: "https://twitter.com/digitalkitchen"
 inst: ""
 category: "D"
 tags:

@@ -2,8 +2,8 @@
 title: "Parsons & Co"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.parsonsandco.com/"
-twit: "@ParsonsandCo1"
-inst: "@parsonsandco"
+twit: "https://twitter.com/ParsonsandCo1"
+inst: "https://www.instagram.com/parsonsandco"
 category: "P"
 tags:
     - Ballard

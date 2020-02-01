@@ -2,8 +2,8 @@
 title: "Efelle Creative"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.seattlewebdesign.com/"
-twit: "@seattlewebsites"
-inst: "@efellecreative"
+twit: "https://twitter.com/seattlewebsites"
+inst: "https://www.instagram.com/efellecreative"
 category: "E"
 tags:
     - Downtown

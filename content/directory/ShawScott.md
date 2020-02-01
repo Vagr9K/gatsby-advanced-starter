@@ -2,7 +2,7 @@
 title: "Shaw/Scott"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://shawscott.com/"
-twit: "@ShawScott"
+twit: "https://twitter.com/ShawScott"
 inst: ""
 category: "S"
 tags:

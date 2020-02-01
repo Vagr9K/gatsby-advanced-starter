@@ -2,7 +2,7 @@
 title: "Civilization"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://builtbycivilization.com/"
-twit: "@bycivilization"
+twit: "https://twitter.com/bycivilization"
 inst: ""
 category: "C"
 tags:

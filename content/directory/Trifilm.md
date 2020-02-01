@@ -2,8 +2,8 @@
 title: "Trifilm"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.trifilm.com/"
-twit: "@trifilm"
-inst: "@trifilm"
+twit: "https://twitter.com/trifilm"
+inst: "https://www.instagram.com/trifilm"
 category: "T"
 tags:
     - Kirkland

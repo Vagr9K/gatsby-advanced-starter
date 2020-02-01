@@ -2,8 +2,8 @@
 title: "Urban Influence"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.urbaninfluence.com/"
-twit: "@pigeonwisdom"
-inst: "@pigeonwisdom"
+twit: "https://twitter.com/pigeonwisdom"
+inst: "https://www.instagram.com/pigeonwisdom"
 category: "U"
 tags:
     - Capitol Hill

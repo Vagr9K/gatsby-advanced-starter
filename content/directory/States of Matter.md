@@ -2,7 +2,7 @@
 title: "States of Matter"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.statesofmatter.com/"
-twit: "@statesmatter"
+twit: "https://twitter.com/statesmatter"
 inst: ""
 category: "S"
 tags:

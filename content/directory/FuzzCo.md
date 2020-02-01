@@ -3,7 +3,7 @@ title: "FuzzCo"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://fuzzco.com/"
 twit: ""
-inst: "@fuzzco"
+inst: "https://www.instagram.com/fuzzco"
 category: "F"
 tags:
     - Pioneer Square

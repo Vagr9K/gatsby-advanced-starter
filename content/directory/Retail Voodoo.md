@@ -2,7 +2,7 @@
 title: "Retail Voodoo"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.retail-voodoo.com/"
-twit: "@RetailVoodoo"
+twit: "https://twitter.com/RetailVoodoo"
 inst: ""
 category: "R"
 tags:

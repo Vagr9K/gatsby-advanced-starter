@@ -2,8 +2,8 @@
 title: "McGraw Hill Education"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.mheducation.com/"
-twit: "@MHEducation"
-inst: "@mheducation"
+twit: "https://twitter.com/MHEducation"
+inst: "https://www.instagram.com/mheducation"
 category: "M"
 tags:
     - Pioneer Square

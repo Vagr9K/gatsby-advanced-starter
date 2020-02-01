@@ -2,7 +2,7 @@
 title: "Hey,"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://heyadvertising.com/"
-twit: "@HeyAdvertising"
+twit: "https://twitter.com/HeyAdvertising"
 inst: ""
 category: "H"
 tags:

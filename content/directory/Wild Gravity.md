@@ -2,8 +2,8 @@
 title: "Wild Gravity"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.wildgravity.net/"
-twit: "@WildGravityLLC"
-inst: "@wild.gravity/"
+twit: "https://twitter.com/WildGravityLLC"
+inst: "https://www.instagram.com/wild.gravity/"
 category: "W"
 tags:
     - First Hill

@@ -2,7 +2,7 @@
 title: "Anvil"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://anvil-studios.com"
-twit: "@adobe"
+twit: "https://twitter.com/adobe"
 inst: ""
 category: "A"
 tags:

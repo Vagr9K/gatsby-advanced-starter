@@ -2,8 +2,8 @@
 title: "Wick & Mortar"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.wickandmortar.com/"
-twit: "@wickandmortar"
-inst: "@wickandmortar"
+twit: "https://twitter.com/wickandmortar"
+inst: "https://www.instagram.com/wickandmortar"
 category: "W"
 tags:
     - Pioneer Square

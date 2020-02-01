@@ -2,7 +2,7 @@
 title: "Graphiti"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://graphiti.com/"
-twit: "@Graphiti"
+twit: "https://twitter.com/Graphiti"
 inst: ""
 category: "G"
 tags:

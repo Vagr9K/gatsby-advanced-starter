@@ -2,7 +2,7 @@
 title: "Publicis"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://publicisseattle.com/"
-twit: "@PublicisSeattle"
+twit: "https://twitter.com/PublicisSeattle"
 inst: ""
 category: "P"
 tags:

@@ -2,8 +2,8 @@
 title: "Gray Magazine"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://graymag.com/"
-twit: "@Gray_Magazine"
-inst: "@Gray_Magazine"
+twit: "https://twitter.com/Gray_Magazine"
+inst: "https://www.instagram.com/Gray_Magazine"
 category: "G"
 tags:
     - Georgetown

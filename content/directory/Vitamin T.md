@@ -2,8 +2,8 @@
 title: "Vitamin T"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://vitamintalent.com/"
-twit: "@vitamintalent"
-inst: "@vitamintalent"
+twit: "https://twitter.com/vitamintalent"
+inst: "https://www.instagram.com/vitamintalent"
 category: "V"
 tags:
     - Fremont

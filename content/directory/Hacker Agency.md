@@ -3,7 +3,7 @@ title: "Hacker Agency"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://hal2l.com/"
 twit: ""
-inst: "@hackeragency"
+inst: "https://www.instagram.com/hackeragency"
 category: "H"
 tags:
     - Downtown
