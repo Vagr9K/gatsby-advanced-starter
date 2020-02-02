@@ -216,6 +216,12 @@ module.exports = {
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
 
+## NetlifyCMS
+
+For advanced configuration please consult the official [NetlifyCMS documentation](https://www.netlifycms.org/docs/gatsby/).
+
+Note that the required packages, plugins and the base configuration file (`static/admin/config.yml`) are already added to the starter.
+
 # Author
 
 Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
