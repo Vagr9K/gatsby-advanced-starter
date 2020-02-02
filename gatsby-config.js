@@ -175,7 +175,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss
+            output: config.siteRss,
+            title: config.siteRssTitle
           }
         ]
       }
