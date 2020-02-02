@@ -35,7 +35,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.10.1",
     "react-helmet": "^5.2.1",
-    "react-share": "^3.0.1",
+    "react-share": "^4.0.1",
     "react-twitter-widgets": "^1.7.1",
     "url-join": "^4.0.0"
   },
@@ -51,8 +51,8 @@
     "prettier": "^1.17.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
-    "stylelint": "^11.0.0",
-    "stylelint-config-prettier": "^6.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^19.0.0",
     "write-good": "^1.0.1"
   },
