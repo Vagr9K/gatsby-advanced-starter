@@ -217,9 +217,18 @@ WARNING: Make sure to edit `static/robots.txt` to include your domain for the si
 
 ## NetlifyCMS
 
-For advanced configuration please consult the official [NetlifyCMS documentation](https://www.netlifycms.org/docs/gatsby/).
+First of all, make sure to edit `static/admin/config.yml` and add your [GitHub/GitLab/NetlifyId credentials](https://www.netlifycms.org/docs/authentication-backends/):
 
-Note that the required packages, plugins and the base configuration file (`static/admin/config.yml`) are already added to the starter.
+```yml
+backend:
+  name: github # Refer to https://www.netlifycms.org/docs/authentication-backends/ for auth backend list and instructions
+  branch: master # Branch to update
+  repo: vagr9k/gatsby-material-starter # Repo for pushing new commits. Make sure to replace with your repo!
+```
+
+You can visit `/admin/` after and will be greeted by a login dialog (depending on the auth provider you ave chosen above).
+
+For NetlifyCMS specific issues visit the [official documentation](https://www.netlifycms.org/docs/intro/).
 
 # Author
 
