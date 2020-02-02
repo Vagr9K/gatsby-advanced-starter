@@ -13,12 +13,9 @@
     </a>
 </div>
 
-
-
 <div align="center"  style="margin-bottom:30px">
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
 </div>
-
 
 <div align="center">
     <a href="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter">
@@ -155,10 +152,10 @@ module.exports = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
+  siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
-  postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
@@ -217,6 +214,12 @@ module.exports = {
 ```
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
+
+## NetlifyCMS
+
+For advanced configuration please consult the official [NetlifyCMS documentation](https://www.netlifycms.org/docs/gatsby/).
+
+Note that the required packages, plugins and the base configuration file (`static/admin/config.yml`) are already added to the starter.
 
 # Author
 

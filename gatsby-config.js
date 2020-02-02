@@ -40,6 +40,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-relative-images`
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 690
@@ -175,7 +178,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss
+            output: config.siteRss,
+            title: config.siteRssTitle
           }
         ]
       }
