@@ -2,7 +2,7 @@
 
 body {
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.3em;
 }
 
 a {
@@ -91,19 +91,20 @@ h3 {
 
 .directoryListItem {
     font: 500 1em JetBrains-Mono, sans-serif;
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin: 0;
     font-weight: 400;
     list-style: none;
 }
 
 .directoryListItem:hover {
-    padding: .2em 0em .2em .4em;
     background: #FFFFFF;
-    border: 1px solid #714060;
-    box-sizing: border-box;
-    box-shadow: -4px 4px 0px rgba(113, 64, 96, 0.3);
+    border: .1em solid #714060;
+    padding: .2em .4em .2em .4em;
+    margin: -.3em -.4em -.3em -.5em;
+    box-shadow: -.3em .3em 0px rgba(113, 64, 96, 0.3);
     text-decoration: none;
+    z-index: 10;
 }
 
 
