@@ -19,12 +19,13 @@ a:visited {  }
 a:hover {   cursor: pointer; }
 
 h1 {
-    font: 700 2em Rubik, sans-serif;
+    font: 700 2em JetBrains-Mono, sans-serif;
 }
 
 h2 {
-    font: 500 1em Rubik, sans-serif;
+    font: 500 1em JetBrains-Mono, sans-serif;
     margin: 0;
+    font-weight: 400;
 }
 
 h2:hover {
@@ -37,7 +38,7 @@ h2:hover {
 }
 
 h3 {
-    font: 700 0.857em Rubik, sans-serif;
+    font: 700 0.857em JetBrains Mono, sans-serif;
     color:#FFF;
     margin: 1em 0 0 0;
 }

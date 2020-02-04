@@ -3,39 +3,82 @@
 /* When you get Benji's, convert his ttf to a woff and add here */
 /* -------------------------------------------- */
 
-/* rubik-regular - latin */
+/* JetBrains - Regular */
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'JetBrains-Mono';
   font-style: normal;
   font-weight: 400;
-  src: local('Rubik'), local('Rubik-Regular'),
-       url('../fonts/rubik-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/rubik-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('JetBrains Mono'), local('JetBrains Mono'),
+       url('../fonts/woff2/JetBrainsMono-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* rubik-italic - latin */
+
+/* JetBrains - Italic */
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'JetBrains-Mono';
   font-style: italic;
   font-weight: 400;
-  src: local('Rubik Italic'), local('Rubik-Italic'),
-       url('../fonts/rubik-v9-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/rubik-v9-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('JetBrains Mono Italic'), local('JetBrains-Mono-Italic'),
+       url('../fonts/woff2/JetBrainsMono-Italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* rubik-500 - latin */
+
+/* JetBrains - Medium */
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'JetBrains-Mono';
   font-style: normal;
   font-weight: 500;
-  src: local('Rubik Medium'), local('Rubik-Medium'),
-       url('../fonts/rubik-v9-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/rubik-v9-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('JetBrains Mono Medium'), local('JetBrains-Mono-Medium'),
+       url('../fonts/woff2/JetBrainsMono-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* rubik-700 - latin */
+
+/* JetBrains - Medium Italic */
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'JetBrains-Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: local('JetBrains Mono Medium Italic'), local('JetBrains-Mono-Medium-Italic'),
+       url('../fonts/woff2/JetBrainsMono-Medium-Italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Medium-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* JetBrains - Bold */
+@font-face {
+  font-family: 'JetBrains-Mono';
   font-style: normal;
   font-weight: 700;
-  src: local('Rubik Bold'), local('Rubik-Bold'),
-       url('../fonts/rubik-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/rubik-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('JetBrains Mono Bold'), local('JetBrains-Mono-Bold'),
+       url('../fonts/woff2/JetBrainsMono-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* JetBrains - Bold Italic */
+@font-face {
+  font-family: 'JetBrains-Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: local('JetBrains Mono Bold Italic'), local('JetBrains-Mono-Bold-Italic'),
+       url('../fonts/woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-Bold-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* JetBrains - Extra Bold */
+@font-face {
+  font-family: 'JetBrains-Mono';
+  font-style: normal;
+  font-weight: 900;
+  src: local('JetBrains Mono Extra Bold'), local('JetBrains-Mono-Extra-Bold'),
+       url('../fonts/woff2/JetBrainsMono-ExtraBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-ExtraBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* JetBrains - ExtraBold Italic */
+@font-face {
+  font-family: 'JetBrains-Mono';
+  font-style: italic;
+  font-weight: 900;
+  src: local('JetBrains Mono ExtraBold Italic'), local('JetBrains-Mono-ExtraBold-Italic'),
+       url('../fonts/woff2/JetBrainsMono-ExtraBold-Italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/woff/JetBrainsMono-ExtraBold-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
