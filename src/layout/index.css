@@ -29,12 +29,7 @@ h2 {
 }
 
 h2:hover {
-    padding: .2em 0em .2em .4em;
-    background: #FFFFFF;
-    border: 1px solid #714060;
-    box-sizing: border-box;
-    box-shadow: -4px 4px 0px rgba(113, 64, 96, 0.3);
-    text-decoration: none;
+    
 }
 
 h3 {
@@ -78,20 +73,38 @@ h3 {
 }
 
 
+
+
 .directory {
     grid-column-start: 3;
-    grid-column-end: 8;
-    display: grid;
+    grid-column-end: 9;
     grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0,1fr));
+    grid-gap: .5em;
     grid-template-rows: auto;
-    line-height: 1;
+}
+
+.directoryBlock {
+    grid-column: span 2;
 }
 
 .directoryListItem {
-    /* background-color: #999; */
-    /* margin-top: 1em; */
-  }
+    font: 500 1em JetBrains-Mono, sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 400;
+    list-style: none;
+}
+
+.directoryListItem:hover {
+    padding: .2em 0em .2em .4em;
+    background: #FFFFFF;
+    border: 1px solid #714060;
+    box-sizing: border-box;
+    box-shadow: -4px 4px 0px rgba(113, 64, 96, 0.3);
+    text-decoration: none;
+}
 
 
 
