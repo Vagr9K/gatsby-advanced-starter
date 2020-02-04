@@ -72,6 +72,7 @@ class Listing extends React.Component {
           </div>  */}
 
           <div className="tagBox">
+          <article className="blockTitle">Tags</article>
             <PostCats cats={allCats} />
             <PostTags tags={allTags} />
           </div>
@@ -92,33 +93,33 @@ class Listing extends React.Component {
                   
                   */}
 
-            <div className="directoryBlock"><h3>A</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} /></div>
-            <div className="directoryBlock"><h3>B</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} /></div>
-            <div className="directoryBlock"><h3>C</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryC} /></div>
-            <div className="directoryBlock"><h3>D</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryD} /></div>
-            <div className="directoryBlock"><h3>E</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryE} /></div>
-            <div className="directoryBlock"><h3>F</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryF} /></div>
-            <div className="directoryBlock"><h3>G</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryG} /></div>
-            <div className="directoryBlock"><h3>H</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryH} /></div>
-            <div className="directoryBlock"><h3>I</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryI} /></div>
-            <div className="directoryBlock"><h3>J</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} /></div>
-            <div className="directoryBlock"><h3>K</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryK} /></div>
-            <div className="directoryBlock"><h3>L</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryL} /></div>
-            <div className="directoryBlock"><h3>M</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryM} /></div>
-            <div className="directoryBlock"><h3>N</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryN} /></div>
-            <div className="directoryBlock"><h3>O</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryO} /></div>
-            <div className="directoryBlock"><h3>P</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryP} /></div>
-            <div className="directoryBlock"><h3>Q</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} /></div>
-            <div className="directoryBlock"><h3>R</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryR} /></div>
-            <div className="directoryBlock"><h3>S</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryS} /></div>
-            <div className="directoryBlock"><h3>T</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryT} /></div>
-            <div className="directoryBlock"><h3>U</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryU} /></div>
-            <div className="directoryBlock"><h3>V</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryV} /></div>
-            <div className="directoryBlock"><h3>W</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryW} /></div>
-            <div className="directoryBlock"><h3>X</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryX} /></div>
-            <div className="directoryBlock"><h3>Y</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryY} /></div>
-            <div className="directoryBlock"><h3>Z</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} /></div>
-            <div className="directoryBlock"><h3>#</h3><DirectoryListing postEdgesDirectory={postEdgesDirectoryNumbers} /></div>
+            <div className="directoryBlock"><article className="blockTitle">A</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} /></div>
+            <div className="directoryBlock"><article className="blockTitle">B</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} /></div>
+            <div className="directoryBlock"><article className="blockTitle">C</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryC} /></div>
+            <div className="directoryBlock"><article className="blockTitle">D</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryD} /></div>
+            <div className="directoryBlock"><article className="blockTitle">E</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryE} /></div>
+            <div className="directoryBlock"><article className="blockTitle">F</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryF} /></div>
+            <div className="directoryBlock"><article className="blockTitle">G</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryG} /></div>
+            <div className="directoryBlock"><article className="blockTitle">H</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryH} /></div>
+            <div className="directoryBlock"><article className="blockTitle">I</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryI} /></div>
+            <div className="directoryBlock"><article className="blockTitle">J</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} /></div>
+            <div className="directoryBlock"><article className="blockTitle">K</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryK} /></div>
+            <div className="directoryBlock"><article className="blockTitle">L</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryL} /></div>
+            <div className="directoryBlock"><article className="blockTitle">M</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryM} /></div>
+            <div className="directoryBlock"><article className="blockTitle">N</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryN} /></div>
+            <div className="directoryBlock"><article className="blockTitle">O</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryO} /></div>
+            <div className="directoryBlock"><article className="blockTitle">P</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryP} /></div>
+            <div className="directoryBlock"><article className="blockTitle">Q</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} /></div>
+            <div className="directoryBlock"><article className="blockTitle">R</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryR} /></div>
+            <div className="directoryBlock"><article className="blockTitle">S</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryS} /></div>
+            <div className="directoryBlock"><article className="blockTitle">T</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryT} /></div>
+            <div className="directoryBlock"><article className="blockTitle">U</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryU} /></div>
+            <div className="directoryBlock"><article className="blockTitle">V</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryV} /></div>
+            <div className="directoryBlock"><article className="blockTitle">W</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryW} /></div>
+            <div className="directoryBlock"><article className="blockTitle">X</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryX} /></div>
+            <div className="directoryBlock"><article className="blockTitle">Y</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryY} /></div>
+            <div className="directoryBlock"><article className="blockTitle">Z</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} /></div>
+            <div className="directoryBlock"><article className="blockTitle">#</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryNumbers} /></div>
           </div>
           {this.renderPaging()}
         </div>

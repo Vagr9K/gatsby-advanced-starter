@@ -1,5 +1,5 @@
 ---
-title: "Hornall Anderson Design Works"
+title: "Hornall Anderson"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.hornallanderson.com/"
 twit: "https://twitter.com/HornallAnderson"

@@ -11,7 +11,6 @@ class PostCats extends Component {
           cats.map(category => (
             <Link
               key={category}
-              style={{ textDecoration: "none" }}
               to={`/categories/${_.kebabCase(category)}`}
             >
               <a type="anchor">{category}</a>
