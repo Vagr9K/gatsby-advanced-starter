@@ -14,26 +14,10 @@ a {         color:#2e2e2e; }
 /* h1:hover, h2:hover, a:hover {   
     background-color: rgb(255, 255, 255); 
 } */
-a:active {  background-color: black; }
+a:active {  background-color: rgba(255, 255, 255, 0.25); }
 a:visited {  }
 a:hover {   cursor: pointer; }
 
-h1 {
-    font: 700 2em JetBrains-Mono, sans-serif;
-}
-
-h2 {
-    font: 500 1em JetBrains-Mono, sans-serif;
-    margin: 0;
-    font-weight: 400;
-}
-
-
-h3 {
-    font: 700 0.857em JetBrains Mono, sans-serif;
-    color:#FFF;
-    margin: 1em 0 0 0;
-}
 
 
 
@@ -83,6 +67,7 @@ h3 {
 .directoryListItem {
     font: 400 .8em JetBrains-Mono, sans-serif;
     line-height: 1.6em;
+    list-style: none;
 }
 
 .directoryListItem:hover {
@@ -108,15 +93,19 @@ h3 {
 .tagBox {
     grid-column-start: 10;
     grid-column-end: 13;
+    font: 400 .8em JetBrains-Mono, sans-serif
 }
 
 .post-tag-container a, .post-cat-container a {
-    font: 400 .9em JetBrains-Mono, sans-serif;
     font-style: italic;
     line-height: 1.6em;
     color: #714060;
     display: block;
-    
+}
+
+.post-tag-container a:hover, .post-cat-container a:hover {
+    text-decoration: underline;
+    color:#2e2e2e;
 }
 
 .post-cat-container a {

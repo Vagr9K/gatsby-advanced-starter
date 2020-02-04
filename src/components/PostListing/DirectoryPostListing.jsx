@@ -29,7 +29,7 @@ class DirectoryPostListing extends React.Component {
             Needs to be added to the side rail listing as well. 
             */}
             <div class="directoryListItem">
-            <a href={post.website} target="_blank"> {post.title} </a>
+            <a href={post.website} target="_blank"> <li> {post.title} </li></a>
             {/* <PostTags tags={post.tags} /> */}
             {/* include social handle, make a new component */}
             </div>
