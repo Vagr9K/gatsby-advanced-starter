@@ -17,6 +17,7 @@ export default class TagTemplate extends React.Component {
     return (
       <Layout>
         <div className="wrapper">
+        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         
           <div className="container"> 
             <div className="title"></div>
@@ -28,7 +29,6 @@ export default class TagTemplate extends React.Component {
               
             <div className="directory">
                 <div className="directoryBlockFilter">  
-                  <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
                   <article className="blockTitle">{tag}</article>
                   <DirectoryListing postEdgesDirectory={postEdges} />
                 </div>
