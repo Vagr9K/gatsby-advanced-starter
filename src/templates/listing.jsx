@@ -60,7 +60,7 @@ class Listing extends React.Component {
    
     return (
       <Layout>
-      <div id="wrapper">
+      <div className="wrapper">
         <div className="container">
           <Helmet title={config.siteTitle} />
           <SEO />
@@ -71,8 +71,8 @@ class Listing extends React.Component {
             <PostListing postEdges={postEdges} />   
           </div>  */}
 
-          <div className="tagBox">
-          <article className="blockTitle">Tags</article>
+          <div className="tagBox directoryBlock">
+            <article className="blockTitle">Tags</article>
             <PostCats cats={allCats} />
             <PostTags tags={allTags} />
           </div>

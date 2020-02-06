@@ -1,3 +1,6 @@
+@import url(~sanitize.css);
+/* Use if cross browser testing gets wonky */
+
 * { }
 
 body {
@@ -6,24 +9,20 @@ body {
 }
 
 a {
+    color:#2e2e2e;
     text-decoration: none;
 }
 
-
-a {         color:#2e2e2e; }
-/* h1:hover, h2:hover, a:hover {   
-    background-color: rgb(255, 255, 255); 
-} */
 a:active {  background-color: rgba(255, 255, 255, 0.25); }
 a:visited {  }
 a:hover {   cursor: pointer; }
 
 
 
-
-#wrapper {
+/* Page wrapper, background pattern */
+.wrapper {
     background: url(../../static/pattern04c.png);
-    background-color: #FFADA1;
+    background-color: rgba(255, 173, 161, 0.8);
 }
 
 /* container grid */
@@ -33,6 +32,7 @@ a:hover {   cursor: pointer; }
     grid-gap: .5em;
     grid-auto-flow: dense;    
     max-width: 1200px;
+    grid-auto-rows: auto;
 } 
 
 .title {
@@ -49,7 +49,7 @@ a:hover {   cursor: pointer; }
 
 
 
-
+/* Main grid and diretory listings */
 .directory {
     grid-column-start: 3;
     grid-column-end: 9;
@@ -62,10 +62,15 @@ a:hover {   cursor: pointer; }
 
 .directoryBlock {
     grid-column: span 2;
+    font: 400 .8em JetBrains-Mono, sans-serif;
+}
+
+.directoryBlockFilter {
+    grid-column: span 4;
+    font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
 .directoryListItem {
-    font: 400 .8em JetBrains-Mono, sans-serif;
     line-height: 1.6em;
     list-style: none;
 }
@@ -80,11 +85,11 @@ a:hover {   cursor: pointer; }
 }
 
 .blockTitle {
-    font: 500 .8em JetBrains-Mono, sans-serif;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 1em 0 .2em 0;
+    background-color: rgba(113, 64, 96, 0.05);
+    color: #714060;
+    border-bottom: 1px solid rgba(113, 64, 96, 0.1);
+    margin: 1em 0 .5em 0;
 }
 
 
@@ -93,7 +98,6 @@ a:hover {   cursor: pointer; }
 .tagBox {
     grid-column-start: 10;
     grid-column-end: 13;
-    font: 400 .8em JetBrains-Mono, sans-serif
 }
 
 .post-tag-container a, .post-cat-container a {
@@ -103,15 +107,17 @@ a:hover {   cursor: pointer; }
     display: block;
 }
 
+.post-cat-container a {
+    display: inline-block;
+    margin-right: .2em;
+}
+
 .post-tag-container a:hover, .post-cat-container a:hover {
     text-decoration: underline;
     color:#2e2e2e;
 }
 
-.post-cat-container a {
-    display: inline-block;
-    margin-right: .2em;
-}
+
 
 
 
