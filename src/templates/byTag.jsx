@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostTags from "../components/Filters/PostTags"
 import PostCats from "../components/Filters/PostCats"
@@ -20,7 +20,7 @@ export default class TagTemplate extends React.Component {
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         
           <div className="container"> 
-            <div className="title"></div>
+          <div className="title"><Link to="/">HOME</Link></div>
             <div className="tagBox directoryBlock">
                 <article className="blockTitle">Tags</article>
                 <PostCats cats={allCats} />
