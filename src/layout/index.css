@@ -53,6 +53,8 @@ a:hover {   cursor: pointer; }
     grid-row: span 1;
 }
 
+
+/* Introductory bits */
 .intro {
     display: grid;
     grid-column-start: 3;
@@ -63,16 +65,16 @@ a:hover {   cursor: pointer; }
     font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
+.introHello {
+    padding: 1em 1em 0 0;
+    grid-column: span 4;
+}
+
 .introSubmit {
     padding: 1em 0 0 0;
     grid-column: span 2;
 }
 
-
-.introHello {
-    padding: 1em 1em 0 0;
-    grid-column: span 4;
-}
 
 
 .podcast {
