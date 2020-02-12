@@ -64,8 +64,9 @@ class Listing extends React.Component {
         <div className="container">
           <Helmet title={config.siteTitle} />
           <SEO />
-
-          <div className="title"><Link to="/">HOME</Link></div>
+      
+          <div className="home"><Link to="/"></Link></div>
+          <div className="topSpacer"></div>
 
           {/* <div className="podcast">
             <PostListing postEdges={postEdges} />   

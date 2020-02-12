@@ -19,7 +19,9 @@ export default class CategoryTemplate extends React.Component {
           <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
 
           <div className="container"> 
-          <div className="title"><Link to="/">HOME</Link></div>
+          <div className="home"><Link to="/"></Link></div>
+          <div className="topSpacer"></div>
+          
             <div className="tagBox directoryBlock">
                 <article className="blockTitle">Tags</article>
                 <PostCats cats={allCats} />

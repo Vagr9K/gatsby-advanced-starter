@@ -35,9 +35,28 @@ a:hover {   cursor: pointer; }
     max-width: 1200px;
 } 
 
-.title {
+.home {
     display: grid;
-    background-color: #ffffff ;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background: url("../../static/mark.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 1em 0 0 0;
+}
+
+.markC {
+
+}
+
+.markD {
+    stroke: #FFFFFF;
+    
+}
+
+.topSpacer {
+    display: grid;
+    /* background-color: #ffffff; */
     grid-column-start: 3;
     grid-column-end: 13;
     grid-row: span 1;

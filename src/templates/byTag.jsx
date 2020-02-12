@@ -20,7 +20,9 @@ export default class TagTemplate extends React.Component {
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         
           <div className="container"> 
-          <div className="title"><Link to="/">HOME</Link></div>
+          <div className="home"><Link to="/"></Link></div>
+          <div className="topSpacer"></div>
+          
             <div className="tagBox directoryBlock">
                 <article className="blockTitle">Tags</article>
                 <PostCats cats={allCats} />
