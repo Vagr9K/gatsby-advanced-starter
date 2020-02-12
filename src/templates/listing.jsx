@@ -66,7 +66,19 @@ class Listing extends React.Component {
           <SEO />
       
           <div className="home"><Link to="/"></Link></div>
-          <div className="topSpacer"></div>
+          {/* <div className="topSpacer"></div> */}
+          <div className="intro">
+            <div className="introHello">
+              Catalogging the creative studios & internal design teams in the pacific northwest. Stuff and bits and things and write some copy man! 
+            </div>
+
+            <div className="introSubmit">
+              <a href="#">Add an entry</a>
+              <a href="#">Sign up for news</a>
+            </div>
+          
+            
+          </div>
 
           {/* <div className="podcast">
             <PostListing postEdges={postEdges} />   
@@ -122,6 +134,9 @@ class Listing extends React.Component {
             <div className="directoryBlock"><article className="blockTitle">Z</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} /></div>
             <div className="directoryBlock"><article className="blockTitle">#</article><DirectoryListing postEdgesDirectory={postEdgesDirectoryNumbers} /></div>
           </div>
+
+          <div className="bottomSpacer"></div>
+
           {this.renderPaging()}
         </div>
       </div>
