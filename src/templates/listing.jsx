@@ -60,11 +60,12 @@ class Listing extends React.Component {
    
     return (
       <Layout>
-      <div className="wrapper">
-        <div className="container">
-          <Helmet title={config.siteTitle} />
+        <Helmet title={config.siteTitle} />
           <SEO />
-      
+
+      <div className="pattern">
+        <div className="container">
+          
           <div className="home"><Link to="/"></Link></div>
           {/* <div className="topSpacer"></div> */}
           <div className="intro">
