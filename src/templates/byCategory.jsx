@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
+import Intro from "../components/Layout/Intro";
 import PostTags from "../components/Filters/PostTags";
 import PostCats from "../components/Filters/PostCats";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
@@ -15,12 +16,11 @@ export default class CategoryTemplate extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="wrapper">
+        <div className="pattern">
           <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
 
           <div className="container"> 
-          <div className="home"><Link to="/"></Link></div>
-          <div className="topSpacer"></div>
+          <Intro />
           
             <div className="tagBox directoryBlock">
                 <article className="blockTitle">Tags</article>

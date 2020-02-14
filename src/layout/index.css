@@ -40,35 +40,9 @@ a:hover {   cursor: pointer; }
     grid-auto-flow: dense;    
     max-width: 1200px;
     background-color: #FFFFFF;
-    box-shadow:  20px 20px 60px rgb(247, 130, 112);
+    box-shadow:  0px 0px 30px rgb(247, 130, 112);
     border-radius: 10px;
-} 
-
-/* @media screen and (max-width: 800px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1em repeat(6, 1fr) 1em;
-        grid-template-rows: 8em auto 8em;
-        grid-gap: .5em;
-    }
-
-    .home {
-        display: none;
-    }
-
-    .intro {
-        display: grid;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(6, minmax(0,1fr));
-        grid-gap: .5em;
-        font: 400 .8em JetBrains-Mono, sans-serif;
-    }
-
-  } */
-
-  
+}   
 
 .home {
     display: grid;
@@ -107,13 +81,15 @@ a:hover {   cursor: pointer; }
 .introHello {
     padding: .5em 0 0 0;
     grid-column-start: 1;
-    grid-column-end: 8;
+    grid-column-end: 7;
     font: 400 1.5em JetBrains-Mono, sans-serif;
 }
 
 .introSubmit {
     padding: 1em 0 0 0;
-    grid-column: span 2;
+    grid-column-start: 8;
+    grid-column-end: 11;
+    align-self: end;
     font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
@@ -169,7 +145,6 @@ a:hover {   cursor: pointer; }
     font-style: italic;
     background-color: rgba(113, 64, 96, 0.05);
     color: #714060;
-    border-bottom: 1px solid rgba(113, 64, 96, 0.1);
     margin: 1em 0 .5em 0;
 }
 
@@ -205,4 +180,73 @@ a:hover {   cursor: pointer; }
 
 
 
+
+
+/* MOBILE SCREEN */
+@media screen and (max-width: 480px) { 
+    .pattern {
+        grid-template-columns: .5em 1fr .5em;
+        grid-template-rows: .5em 1fr .5em;
+    }
+    
+    .container {
+        grid-template-rows: 1fr auto 8em;
+        grid-gap: .5em;
+    }
+
+    .home {
+        display: none;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .intro {
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: .5em;
+        font: 400 1em JetBrains-Mono, sans-serif;
+    }
+
+    .introHello {
+        padding: .5em 0 0 0;
+        grid-column-start: 1;
+        grid-column-end: 12;
+        font: 400 1em JetBrains-Mono, sans-serif;
+    }
+    
+    .introSubmit {
+        padding: 1em 0 0 0;
+        grid-column-start: 1;
+        grid-column-end: 10;
+        align-self: end;
+        font: 400 1em JetBrains-Mono, sans-serif;
+    }
+
+    .tagBox {
+        display: none;
+    }
+
+    .directory {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row-start: 2;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .5em;
+    }
+
+    .directoryBlock {
+        grid-column: span 4;
+        font: 400 1.5em JetBrains-Mono, sans-serif;
+    }
+    
+    .directoryBlockFilter {
+        grid-column: span 4;
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+} 
 
