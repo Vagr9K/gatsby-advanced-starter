@@ -2,8 +2,8 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostTags from "../components/Filters/PostTags"
-import PostCats from "../components/Filters/PostCats"
+import PostTags from "../components/Filters/PostTags";
+import PostCats from "../components/Filters/PostCats";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import config from "../../data/SiteConfig";
 

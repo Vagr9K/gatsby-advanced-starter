@@ -1,33 +1,39 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../layout";
+import Intro from "../components/Layout/Intro";
+import Tagbox from "../components/Layout/Tagbox";
 import PostListing from "../components/PostListing/PostListing";
-import PostTags from "../components/Filters/PostTags"
-import PostCats from "../components/Filters/PostCats"
+import PostCats from "../components/Filters/PostCats";
+import PostTags from "../components/Filters/PostTags";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./listing.css";
 
+
 class Listing extends React.Component {
-  renderPaging() {
-    const { currentPageNum, pageCount } = this.props.pageContext;
-    const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
-    const nextPage = `/${currentPageNum + 1}/`;
-    const isFirstPage = currentPageNum === 1;
-    const isLastPage = currentPageNum === pageCount;
-  }
+
+    // Pagination
+  // renderPaging() {
+  //   const { currentPageNum, pageCount } = this.props.pageContext;
+  //   const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
+  //   const nextPage = `/${currentPageNum + 1}/`;
+  //   const isFirstPage = currentPageNum === 1;
+  //   const isLastPage = currentPageNum === pageCount;
+  // }
 
   render() {
 
     // this can be refactored as a variable based approach, and only one graphql query
     // Look at the tags page for an example of this
     
-    const allTags = this.props.data.AllTagsQuery.distinct;
-    const allCats = this.props.data.AllCatsQuery.distinct;
 
     const postEdges = this.props.data.ListingQueryPodcast.edges;
+
+    const allCats = this.props.data.AllCatsQuery.distinct;
+    const allTags = this.props.data.AllTagsQuery.distinct;
     
     const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
     const postEdgesDirectoryB = this.props.data.directoryListingQueryB.edges;
@@ -66,30 +72,19 @@ class Listing extends React.Component {
       <div className="pattern">
         <div className="container">
           
-          <div className="home"><Link to="/"></Link></div>
-          {/* <div className="topSpacer"></div> */}
-          <div className="intro">
-            <div className="introHello">
-              Catalogging the creative studios & internal design teams in the pacific northwest. Stuff and bits and things and write some copy man! 
-            </div>
+        <Intro />
 
-            <div className="introSubmit">
-              <a href="#">Add an entry</a>
-              <a href="#">Sign up for news</a>
-            </div>
-          
-            
-          </div>
+        <div className="tagBox directoryBlock">
+          <article className="blockTitle">Tags</article>
+          <PostCats cats={allCats} />
+          <PostTags tags={allTags} />
+      </div>
 
           {/* <div className="podcast">
             <PostListing postEdges={postEdges} />   
           </div>  */}
 
-          <div className="tagBox directoryBlock">
-            <article className="blockTitle">Tags</article>
-            <PostCats cats={allCats} />
-            <PostTags tags={allTags} />
-          </div>
+          
           
           
           
@@ -138,7 +133,7 @@ class Listing extends React.Component {
 
           <div className="bottomSpacer"></div>
 
-          {this.renderPaging()}
+          {/* {this.renderPaging()} */}
         </div>
       </div>
       </Layout>
@@ -157,14 +152,6 @@ export default Listing;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql` {
-  AllCatsQuery: 
-    allMarkdownRemark {
-      distinct(field: frontmatter___category)
-    }
-  AllTagsQuery: 
-    allMarkdownRemark {
-      distinct(field: frontmatter___tags)
-    }
   ListingQueryPodcast: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
@@ -187,6 +174,14 @@ export const listingQuery = graphql` {
           }
         }
       }
+    }
+  AllCatsQuery: 
+    allMarkdownRemark {
+      distinct(field: frontmatter___category)
+    }
+  AllTagsQuery: 
+    allMarkdownRemark {
+      distinct(field: frontmatter___tags)
     }
   directoryListingQueryA: 
     allMarkdownRemark(
