@@ -9,7 +9,7 @@ class Intro extends Component {
           
           <div className="intro">
             <div className="introHello">
-              Catalogging the creative studios & internal design teams in the pacific northwest. Stuff and bits and things and write some copy man! 
+              Catalogging the creative studios & internal design teams in the pacific northwest. 
             </div>
 
             <div className="introSubmit">
