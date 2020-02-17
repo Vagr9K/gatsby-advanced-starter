@@ -46,8 +46,8 @@ a:hover {   cursor: pointer; }
 
 .home {
     display: grid;
-    position: sticky;
-    top: 2em;
+    /* position: sticky;
+    top: 2em; */
     grid-column-start: 1;
     grid-column-end: 2;
     background-image: url(../../static/mark_strokes.svg);
