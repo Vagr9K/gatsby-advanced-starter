@@ -1,5 +1,5 @@
 ---
-title: "FuzzCo"
+title: "Fuzzco"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://fuzzco.com/"
 twit: ""
