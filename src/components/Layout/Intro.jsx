@@ -13,8 +13,9 @@ class Intro extends Component {
             </div>
 
             <div className="introSubmit">
-              <a href="#">Add an entry</a>
-              <a href="#">Sign up for news</a>
+              <a target="_blank" href="mailto:jonmccon@gmail.com">Contact us</a> 
+              {/* <a href="#">Add an entry</a>
+              <a href="#">Sign up for news</a> */}
             </div>
           
         </div>
