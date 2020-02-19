@@ -32,6 +32,8 @@
     </a>
 </div>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2018ae1b-a3c2-40aa-b066-2ff9e5551cfa/deploy-status)](https://app.netlify.com/sites/agitated-lovelace-fac797/deploys)
+
 # Gatsby Advanced Starter
 
 A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
