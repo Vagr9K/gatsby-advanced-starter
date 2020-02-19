@@ -25,23 +25,27 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",
-        path: `${__dirname}/static/`
+        path: `static/`
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/`
+        path: `content/`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "fonts",
+        path: `src/fonts/`
       }
     },
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`
-          },
           {
             resolve: "gatsby-remark-images",
             options: {
@@ -56,6 +60,12 @@ module.exports = {
           "gatsby-remark-prismjs"
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
     },
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -99,16 +109,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: path.resolve("src/netlifycms/index.js"), // default: undefined
-        enableIdentityWidget: true,
-        publicPath: "admin",
-        htmlTitle: "Content Manager",
-        includeRobots: false
-      }
-    },
     {
       resolve: "gatsby-plugin-feed",
       options: {

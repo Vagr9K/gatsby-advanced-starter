@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "seattle-creative-directory",
+  "description": "Phonebook for Seattle design community",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Jonny McConnell <jonmccon@gmail.com>",
+  "repository": "https://github.com/jonmccon/seattle-creative-directory",
   "dependencies": {
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.40",
@@ -37,9 +38,13 @@
     "react-helmet": "^5.2.1",
     "react-share": "^4.0.1",
     "react-twitter-widgets": "^1.7.1",
+    "sanitize.css": "^11.0.0",
+    "styled-components": "^4.4.1",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "cli-glob": "^0.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -48,16 +53,24 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.18.2",
     "gh-pages": "^2.2.0",
+    "immutable": "^3.8.1",
     "prettier": "^1.17.0",
+    "redux": "^3.0.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
+    "slate": "^0.47.8",
     "stylelint-config-standard": "^19.0.0",
+    "typescript": "^3.6.4",
     "write-good": "^1.0.1"
   },
   "keywords": [
-    "gatsby"
+    "seattle",
+    "design",
+    "contact",
+    "community",
+    "phonebook"
   ],
   "license": "MIT",
   "main": "n/a",

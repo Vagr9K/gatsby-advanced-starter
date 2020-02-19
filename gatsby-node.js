@@ -42,14 +42,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
-  const tagPage = path.resolve("src/templates/tag.jsx");
-  const categoryPage = path.resolve("src/templates/category.jsx");
+  const tagPage = path.resolve("src/templates/byTag.jsx");
+  const categoryPage = path.resolve("src/templates/byCategory.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___title}) {
         edges {
           node {
             fields {
@@ -112,7 +112,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  // Post page creating
+  // Page creating
   postsEdges.forEach((edge, index) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
@@ -121,10 +121,17 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
 
-    // Generate a list of categories
+    // Generate a list of categories (singlar)
     if (edge.node.frontmatter.category) {
       categorySet.add(edge.node.frontmatter.category);
     }
+
+    // // Generate a list of categories (plural)
+    // if (edge.node.frontmatter.category) {
+    //   edge.node.frontmatter.categoryforEach(category => {
+    //     categorySet.add(category);
+    //   });
+    // }
 
     // Create post pages
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
