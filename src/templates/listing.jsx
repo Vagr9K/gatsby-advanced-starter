@@ -10,7 +10,7 @@ import PostTags from "../components/Filters/PostTags";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
+// import "./listing.css";
 
 
 class Listing extends React.Component {
@@ -155,8 +155,7 @@ export const listingQuery = graphql` {
   ListingQueryPodcast: 
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      limit: $limit
-      skip: $skip
+      filter: {frontmatter: {category: {eq: "interview"}}}
     ) {
       edges {
         node {
