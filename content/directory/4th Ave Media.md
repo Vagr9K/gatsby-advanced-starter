@@ -6,7 +6,7 @@ twit: ""
 inst: ""
 category: "numbers"
 tags:
-    - Downtown
+    - Mercer Island
     - small
     - branding
     - strategy
