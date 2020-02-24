@@ -6,7 +6,7 @@ twit: "https://twitter.com/CMDCreates"
 inst: "https://www.instagram.com/cmdcreates"
 category: "C"
 tags:
-    - Pioneer Square
+    - SODO
     - large
     - strategy
     - marketing
