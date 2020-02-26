@@ -3,7 +3,7 @@ title: "DNA"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://dnaseattle.com/"
 twit: "https://twitter.com/dnaseattle"
-inst: ""
+inst: "https://www.instagram.com/dnaseattle/"
 category: "D"
 tags:
     - Downtown
