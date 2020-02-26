@@ -3,7 +3,7 @@ title: "Emblem"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://studioemblem.com/"
 twit: ""
-inst: ""
+inst: "https://www.instagram.com/studioemblem/"
 category: "E"
 tags:
     - small
