@@ -12,6 +12,7 @@ tags:
     - environmental
     - experience
     - product
+    - architecture
 ---
 
 Description

@@ -3,7 +3,7 @@ title: "Fresh Consulting"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.freshconsulting.com/"
 twit: "https://twitter.com/FreshConsulting"
-inst: ""
+inst: "https://www.instagram.com/freshconsulting/"
 category: "F"
 tags:
     - Bellevue
