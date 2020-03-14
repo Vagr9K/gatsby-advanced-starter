@@ -1,6 +1,6 @@
 ---
 title: "Cognition Studio"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://cognitionstudio.com/"
 twit: "https://twitter.com/cognitionstudio"
 inst: ""

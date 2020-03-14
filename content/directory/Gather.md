@@ -1,6 +1,6 @@
 ---
 title: "Gather"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.gatherseattle.com/"
 twit: ""
 inst: "https://www.instagram.com/gatherseattle"

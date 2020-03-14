@@ -1,6 +1,6 @@
 ---
 title: "Phinney Bischoff"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://phinneybischoff.com/"
 twit: "https://twitter.com/phinneybischoff"
 inst: "https://www.instagram.com/phinneybischoff"

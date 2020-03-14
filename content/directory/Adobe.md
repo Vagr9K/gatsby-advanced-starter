@@ -1,6 +1,6 @@
 ---
 title: "Adobe"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.adobe.com"
 twit: "https://twitter.com/adobe"
 inst: ""

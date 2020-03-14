@@ -1,6 +1,6 @@
 ---
 title: "POP"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.wearepop.com/"
 twit: ""
 inst: "https://www.instagram.com/pop_agency"

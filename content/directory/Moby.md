@@ -1,6 +1,6 @@
 ---
 title: "Moby"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "http://mobyinc.com/"
 twit: "https://twitter.com/builtbymoby"
 inst: "https://www.instagram.com/builtbymoby"

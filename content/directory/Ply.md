@@ -1,6 +1,6 @@
 ---
 title: "Ply"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.plyinteractive.com/"
 twit: "https://twitter.com/plyinc"
 inst: ""

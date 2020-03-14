@@ -1,6 +1,6 @@
 ---
 title: "4th Ave Media"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.4thavenuemedia.com/"
 twit: ""
 inst: ""

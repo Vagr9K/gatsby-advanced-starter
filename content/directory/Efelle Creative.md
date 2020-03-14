@@ -1,6 +1,6 @@
 ---
 title: "Efelle Creative"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.seattlewebdesign.com/"
 twit: "https://twitter.com/seattlewebsites"
 inst: "https://www.instagram.com/efellecreative"

@@ -1,6 +1,6 @@
 ---
 title: "Oculus"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.oculus.com/"
 twit: "https://twitter.com/oculus"
 inst: "https://www.instagram.com/oculus"

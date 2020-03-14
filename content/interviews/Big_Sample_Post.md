@@ -1,6 +1,6 @@
 ---
 title: "Longform interview title"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 urls: 
 studio: ['Civilization', 'https://builtbycivilization.com']
 linkA: ['Design Lecture Series', 'https://designlectur.es']
@@ -11,7 +11,7 @@ twit: "https://www.twitter.com/username"
 inst: "https://www.instagram.com/username"
 category: "interview"
 date: "2018-03-01"
-slug: "Big-Sample_Test"
+slug: "longform-slug-seo-version"
 tags:
     - Neighborhood
     - size

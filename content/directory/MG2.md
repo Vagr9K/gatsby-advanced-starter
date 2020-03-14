@@ -1,6 +1,6 @@
 ---
 title: "MG2"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://mg2.com/"
 twit: "https://twitter.com/mg2_design"
 inst: "https://www.instagram.com/mg2_design"

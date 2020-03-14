@@ -1,6 +1,6 @@
 ---
 title: "Pike Street Press"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://pikestreetpress.com/"
 twit: "https://twitter.com/"
 inst: "https://www.instagram.com/pikestreetpress"

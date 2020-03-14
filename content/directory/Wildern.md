@@ -1,6 +1,6 @@
 ---
 title: "Wildern"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.hellowildern.com/"
 twit: ""
 inst: "https://www.instagram.com/hellowildern"

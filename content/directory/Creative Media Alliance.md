@@ -1,6 +1,6 @@
 ---
 title: "Creative Media Alliance"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "http://creativemediaalliance.com/"
 twit: "https://twitter.com/cmaseattle"
 inst: ""

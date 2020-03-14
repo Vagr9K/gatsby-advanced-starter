@@ -1,6 +1,6 @@
 ---
 title: "Somelab"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "http://somelabdesign.com/"
 twit: ""
 inst: ""

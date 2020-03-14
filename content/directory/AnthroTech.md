@@ -1,6 +1,6 @@
 ---
 title: "AnthroTech"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://anthro-tech.com/"
 twit: "https://twitter.com/anthrotechUX"
 inst: "https://www.instagram.com/anthrotechux"

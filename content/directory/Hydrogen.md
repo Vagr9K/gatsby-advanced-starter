@@ -1,6 +1,6 @@
 ---
 title: "Hydrogen"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://hydrogenadvertising.com/"
 twit: "https://twitter.com/hydrogen_tweets"
 inst: "https://www.instagram.com/hydrogen_advertising"

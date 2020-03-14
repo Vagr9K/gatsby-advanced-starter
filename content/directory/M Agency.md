@@ -1,6 +1,6 @@
 ---
 title: "M Agency"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://whatisyourm.com/"
 twit: "https://twitter.com/_M_Agency"
 inst: "https://www.instagram.com/_M_Agency"

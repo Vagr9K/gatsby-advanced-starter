@@ -1,6 +1,6 @@
 ---
 title: "Mammoth"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://mammothagency.com/"
 twit: ""
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Tactile"
-cover: "./content/blog/imgs/hamburgers.png"
+cover: "./content/interviews/imgs/hamburgers.png"
 website: "https://tactileinc.com/"
 twit: "https://twitter.com/tactile_design"
 inst: "https://www.instagram.com/tactiledesign"
