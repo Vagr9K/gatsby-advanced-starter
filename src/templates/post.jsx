@@ -31,6 +31,10 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
+
+            <h1><a href={post.studio[1]}>{post.studio[0]}</a></h1>
+            <h1><a href={post.linkA[1]}></a> {post.linkA[0]}</h1>
+
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
@@ -59,6 +63,11 @@ export const pageQuery = graphql`
         date
         category
         tags
+        studio
+        linkA
+        linkB
+        linkC
+        linkD
       }
       fields {
         slug
