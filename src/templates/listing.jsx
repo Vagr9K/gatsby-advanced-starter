@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import Intro from "../components/Layout/Intro";
-import Tagbox from "../components/Layout/Tagbox";
 import PostListing from "../components/PostListing/PostListing";
 import PostCats from "../components/Filters/PostCats";
 import PostTags from "../components/Filters/PostTags";
