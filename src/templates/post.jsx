@@ -30,12 +30,15 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
+          <div className="pattern">
+            <div className="container">
           {/* begin post content */}
           <div>
             
 
             {/* Will need to differentiate from homepage styles or update them */}
             <div className="titleBin">
+              <img className="postCover" src={post.cover} />
               <h1>{post.title}</h1>
 
               <h2><a target="_blank" href={post.studio[1]}>{post.studio[0]}</a></h2>
@@ -65,6 +68,8 @@ export default class PostTemplate extends React.Component {
           </div>
         {/* end post content */}
 
+            </div>
+          </div>
         </div>
       </Layout>
     );
