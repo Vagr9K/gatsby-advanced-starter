@@ -156,7 +156,7 @@ a:hover {   cursor: pointer; }
 
 .blockTitle {
     font-style: italic;
-    background-color: rgba(113, 64, 96, 0.05);
+    background-color: var(--color-listing-blockBG);
     color: var(--color-listing-purple);
     margin: 1em 0 .5em 0;
 }
