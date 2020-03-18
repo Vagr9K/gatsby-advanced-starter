@@ -4,6 +4,19 @@
 @import url(./mediaQueries.css);    /* Tablet and Mobile styles */
 @import url(./interview.css);       /* Interview page has basic bg and fonts & its own layout */
 
+/* COLOR VARIABLES */
+:root {
+    --color-bg: rgba(255, 173, 161, 1);
+    --color-bg-dark: rgb(247, 130, 112);
+    --color-card: #FFFFFF;
+    --color-listingLink: #2e2e2e;
+    --color-listing-purple: #714060;
+    --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
+    --color-listing-blockBG: rgba(113, 64, 96, 0.05);
+    --color-positionTest: #2fdf29;
+}
+/* ----------------------------------------------- */
+
 
 /* WHOLE SITE STYLES */
 * { }
@@ -14,7 +27,7 @@ body {
 }
 
 a {
-    color:#2e2e2e;
+    color:var(--color-listingLink);
     text-decoration: none;
 }
 
@@ -26,7 +39,7 @@ a:hover {   cursor: pointer; }
 /* BACKGROUND PATTERN */
 .pattern {
     background: url(../../static/pattern04c.png);
-    background-color: rgba(255, 173, 161, 1);
+    background-color: var(--color-bg);
     display: grid;
     grid-template-columns: 2em 1fr 2em;
     grid-template-rows: 2em 1fr 2em;
@@ -44,8 +57,8 @@ a:hover {   cursor: pointer; }
     grid-gap: .5em;
     grid-auto-flow: dense;    
     max-width: 1200px;
-    background-color: #FFFFFF;
-    box-shadow:  0px 0px 30px rgb(247, 130, 112);
+    background-color: var(--color-card);
+    box-shadow:  0px 0px 30px var(--color-bg-dark);
     border-radius: 10px;
 }   
 
@@ -61,7 +74,7 @@ a:hover {   cursor: pointer; }
 
 .topSpacer, .bottomSpacer {
     display: grid;
-    /* background-color: #2fdf29; */
+    /* background-color: var(--color-positionTest); */
     grid-column-start: 3;
     grid-column-end: 13;
     grid-row: span 1;
@@ -77,7 +90,6 @@ a:hover {   cursor: pointer; }
     grid-auto-flow: row;
     grid-template-columns: repeat(10, minmax(0,1fr));
     grid-gap: .5em;
-    /* background-color: #888888; */
     margin: 6em 0 3em 0;
 
 }
@@ -102,7 +114,7 @@ a:hover {   cursor: pointer; }
 .podcast {
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: brown;
+    background-color: var(--color-positionTest);
 }
 /* ----------------------------------------------- */
 
@@ -134,18 +146,18 @@ a:hover {   cursor: pointer; }
 }
 
 .directoryListItem:hover {
-    background: #FFFFFF;
-    border: .1em solid #714060;
+    background: var(--color-card);
+    border: .1em solid var(--color-listing-purple);
     padding: .2em .4em .1em .4em;
     margin: -.3em -.4em -.2em -.5em;
-    box-shadow: -.3em .3em 0px rgba(113, 64, 96, 0.3);
+    box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
     text-decoration: none;
 }
 
 .blockTitle {
     font-style: italic;
     background-color: rgba(113, 64, 96, 0.05);
-    color: #714060;
+    color: var(--color-listing-purple);
     margin: 1em 0 .5em 0;
 }
 /* ----------------------------------------------- */
@@ -161,7 +173,7 @@ a:hover {   cursor: pointer; }
 .post-tag-container a, .post-cat-container a, .introSubmit a {
     font-style: italic;
     line-height: 1.6em;
-    color: #714060;
+    color: var(--color-listing-purple);
     display: block;
 }
 
@@ -172,9 +184,6 @@ a:hover {   cursor: pointer; }
 
 .post-tag-container a:hover, .post-cat-container a:hover, .introSubmit a:hover {
     text-decoration: underline;
-    color:#2e2e2e;
+    color: var(--color-listingLink);
 }
-
-.post-tag-container a:active, .post-cat-container a:active, introSubmit a:active {  
-    background-color: rgba(255, 255, 255, 0.25); }
 /* ----------------------------------------------- */
