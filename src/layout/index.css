@@ -1,6 +1,11 @@
-@import url(~sanitize.css);
-/* Use if cross browser testing gets wonky */
+/* IMPORTS FOR OTHER SECTIONS */
+@import url(~sanitize.css);         /* For cross browser wonkiness */
+@import url(./fonts.css);           /* All hosted and external fonts */
+@import url(./mediaQueries.css);    /* Tablet and Mobile styles */
+@import url(./interview.css);       /* Interview page has basic bg and fonts & its own layout */
 
+
+/* WHOLE SITE STYLES */
 * { }
 
 body {
@@ -13,13 +18,12 @@ a {
     text-decoration: none;
 }
 
-
 a:visited {  }
 a:hover {   cursor: pointer; }
+/* ----------------------------------------------- */
 
 
-
-/* background pattern */
+/* BACKGROUND PATTERN */
 .pattern {
     background: url(../../static/pattern04c.png);
     background-color: rgba(255, 173, 161, 1);
@@ -27,9 +31,10 @@ a:hover {   cursor: pointer; }
     grid-template-columns: 2em 1fr 2em;
     grid-template-rows: 2em 1fr 2em;
 }
+/* ----------------------------------------------- */
 
 
-/* container grid */
+/* CONTAINER GRID */
 .container {
     display: grid;
     grid-row: 2;
@@ -44,10 +49,8 @@ a:hover {   cursor: pointer; }
     border-radius: 10px;
 }   
 
-.home {
+.logo {
     display: grid;
-    /* position: sticky;
-    top: 2em; */
     grid-column-start: 1;
     grid-column-end: 2;
     background-image: url(../../static/mark_strokes.svg);
@@ -58,14 +61,15 @@ a:hover {   cursor: pointer; }
 
 .topSpacer, .bottomSpacer {
     display: grid;
-    /* background-color: #ffffff; */
+    /* background-color: #2fdf29; */
     grid-column-start: 3;
     grid-column-end: 13;
     grid-row: span 1;
 }
+/* ----------------------------------------------- */
 
 
-/* Introductory bits */
+/* INTRODUCTION */
 .intro {
     display: grid;
     grid-column-start: 2;
@@ -83,6 +87,7 @@ a:hover {   cursor: pointer; }
     grid-column-start: 1;
     grid-column-end: 7;
     font: 400 1.5em JetBrains-Mono, sans-serif;
+    font: 400 1.5em Spectral, serif;
 }
 
 .introSubmit {
@@ -93,20 +98,16 @@ a:hover {   cursor: pointer; }
     font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
-
-
-
+/* INTERVIEW PROMOS */
 .podcast {
     grid-column-start: 2;
     grid-column-end: 3;
     background-color: brown;
 }
+/* ----------------------------------------------- */
 
 
-
-
-
-/* Main grid and diretory listings */
+/* DIRECTORY LISTING */
 .directory {
     display: grid;
     grid-column-start: 2;
@@ -147,10 +148,10 @@ a:hover {   cursor: pointer; }
     color: #714060;
     margin: 1em 0 .5em 0;
 }
+/* ----------------------------------------------- */
 
 
-
-/* Cats and Tags */
+/* CATEGORY & TAG CONTAINER*/
 .tagBox {
     grid-column-start: 9;
     grid-column-end: 12;
@@ -176,78 +177,4 @@ a:hover {   cursor: pointer; }
 
 .post-tag-container a:active, .post-cat-container a:active, introSubmit a:active {  
     background-color: rgba(255, 255, 255, 0.25); }
-
-
-
-/* INTERVIEW PAGE */
-
-
-
-/* MOBILE SCREEN */
-@media screen and (max-width: 480px) { 
-    .pattern {
-        grid-template-columns: .5em 1fr .5em;
-        grid-template-rows: .5em 1fr .5em;
-    }
-    
-    .container {
-        grid-template-rows: 1fr auto 8em;
-        grid-gap: .5em;
-    }
-
-    .home {
-        display: none;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .intro {
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(10, 1fr);
-        grid-gap: .5em;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-
-    .introHello {
-        padding: .5em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 12;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-    
-    .introSubmit {
-        padding: 1em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 10;
-        align-self: end;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-
-    .tagBox {
-        display: none;
-    }
-
-    .directory {
-        display: grid;
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-row-start: 2;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: .5em;
-    }
-
-    .directoryBlock {
-        grid-column: span 4;
-        font: 400 1.5em JetBrains-Mono, sans-serif;
-    }
-    
-    .directoryBlockFilter {
-        grid-column: span 4;
-        font: 400 .8em JetBrains-Mono, sans-serif;
-    }
-
-} 
-
+/* ----------------------------------------------- */

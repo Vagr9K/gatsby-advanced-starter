@@ -9,7 +9,6 @@ import PostTags from "../components/Filters/PostTags";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-// import "./listing.css";
 
 
 class Listing extends React.Component {

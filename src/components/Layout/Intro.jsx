@@ -5,7 +5,7 @@ class Intro extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="home"><Link to="/"></Link></div>
+        <div className="logo"><Link to="/"></Link></div>
           
           <div className="intro">
             <div className="introHello">
