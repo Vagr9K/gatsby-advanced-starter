@@ -2,3 +2,45 @@
 
 /* INTERVIEW PAGE */
 
+
+
+/* CONTAINER GRID */
+
+
+
+
+
+/* ARTICLE */
+
+p {
+    font: 400 1.5em Spectral, serif;
+}
+
+
+/* PEOPLE */
+
+.person {
+    font: 400 .8em JetBrains-Mono, sans-serif;
+}
+
+.interviewer {
+    
+}
+
+.one {
+    background-color:rgba(63, 191, 127, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}
+
+.two {
+    background-color:rgba(223, 142, 37, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}
+
+.three {
+    background-color:rgba(63, 129, 191, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}

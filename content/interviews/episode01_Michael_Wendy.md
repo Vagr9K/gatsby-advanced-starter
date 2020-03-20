@@ -1,5 +1,5 @@
 ---
-title: "Longform interview title"
+title: "Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase"
 cover: "./content/interviews/imgs/hamburgers.png"
 urls: 
 studio: ['Civilization', 'https://builtbycivilization.com']
@@ -11,7 +11,7 @@ twit: "https://www.twitter.com/username"
 inst: "https://www.instagram.com/username"
 category: "interview"
 date: "2018-03-01"
-slug: "longform-slug-seo-version"
+slug: "episode-3-michael-ellsworth-wendy-quisenberry-bacon-corgies-lowercase"
 tags:
     - Neighborhood
     - size
@@ -20,6 +20,32 @@ tags:
 ---
 
 
+Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase
+===================================================================================
+
+<span class='person interviewer'>JONNY MCCONNELL</span>
+Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot aliquip
+
+<span class='person one'>KACEY MORROW</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Volutpat est velit egestas dui id. Nibh nisl condimentum id venenatis a condimentum. 
+
+<span class='person two'>BRITTANY SCHADE</span>
+Nunc sed augue lacus viverra vitae congue eu consequat ac. Mi ipsum faucibus vitae aliquet nec. Et ut diam quam nulla porttitor massa.
+
+<span class='person'>KM</span> 
+Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Eu volutpat odio facilisis mauris sit amet. Praesent tristique magna sit amet purus gravida quis. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Quam nulla porttitor massa id. Tempus egestas sed sed risus pretium quam vulputate. A cras semper auctor neque vitae tempus quam. Et netus et malesuada fames ac turpis egestas. Mollis aliquam ut porttitor leo. Aenean vel elit scelerisque mauris. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur.
+
+<span class='person'>BS</span> 
+Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Eu volutpat odio facilisis mauris sit amet. Praesent tristique magna sit amet purus gravida quis. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Quam nulla porttitor massa id. Tempus egestas sed sed risus pretium quam vulputate. A cras semper auctor neque vitae tempus quam. Et netus et malesuada fames ac turpis egestas. Mollis aliquam ut porttitor leo. Aenean vel elit scelerisque mauris. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Eu volutpat odio facilisis mauris sit amet. Praesent tristique magna sit amet purus gravida quis. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Quam nulla porttitor massa id. Tempus egestas sed sed risus pretium quam vulputate. A cras semper auctor neque vitae tempus quam. Et netus et malesuada fames ac turpis egestas. Mollis aliquam ut porttitor leo. Aenean vel elit scelerisque mauris. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur.
+
+Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Eu volutpat odio facilisis mauris sit amet. Praesent tristique magna sit amet purus gravida quis. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Quam nulla porttitor massa id. Tempus egestas sed sed risus pretium quam vulputate. A cras semper auctor neque vitae tempus quam. Et netus et malesuada fames ac turpis egestas. Mollis aliquam ut porttitor leo. Aenean vel elit scelerisque mauris. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur.
+
+<span class='person interviewer'>JONNY MCCONNELL</span>
+Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot aliquip
+
+>Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed.
+
+Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed.Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed.
 
 
 
@@ -108,6 +134,11 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 
 
+
+
+
+
+
 <a name="lists"/>
 
 ## Lists
@@ -143,6 +174,11 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
+
+
+
+
+
 
 <a name="links"/>
 
@@ -214,92 +250,7 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
-<a name="code"/>
 
-## Code and Syntax Highlighting
-
-Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and *Markdown Here* -- support syntax highlighting. *Markdown Here* supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
-
-```no-highlight
-Inline `code` has `back-ticks around` it.
-```
-
-Inline `code` has `back-ticks around` it.
-
-Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
-
-<pre lang="no-highlight"><code>```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
-```
-</code></pre>
-
-
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
-But let's throw in a <b>tag</b>.
-```
-
-Again, to see what languages are available for highlighting, and how to write those language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
-
-<a name="tables"/>
-
-## Tables
-
-Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
-
-```no-highlight
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      | $12   |
-| zebra stripes | are neat      | $1    |
-
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-
-| | Markdown | Less           | Pretty     |     |
-| | ------------- | --------------- | ---------- |------- |
-| | *Still*   | `renders` | **nicely** | |
-| | 1               | 2                 | 3          |          |
-```
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      | $12   |
-| zebra stripes | are neat      | $1    |
-
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| *Still*  | `renders` | **nicely** |
-| 1        | 2         | 3          |
 
 <a name="blockquotes"/>
 
@@ -320,6 +271,9 @@ Quote break.
 Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+
+
 
 <a name="html"/>
 
@@ -346,6 +300,8 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 </dl>
 
 <a name="hr"/>
+
+
 
 ## Horizontal Rule
 
@@ -379,6 +335,9 @@ ___
 
 Underscores
 
+
+
+
 <a name="lines"/>
 
 ## Line Breaks
@@ -404,6 +363,8 @@ This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
+
+
 
 <a name="videos"/>
 
