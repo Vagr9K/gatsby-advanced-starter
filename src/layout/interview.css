@@ -8,7 +8,38 @@
 
 
 
+.episode {
+    display: grid;
+    grid-template-rows: repeat(4, 10em);
+    background-color: brown;
+}
 
+
+
+.titleBin {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 10em 1fr);
+    grid-gap: .5em;
+    grid-auto-flow: dense;     
+    max-width: 1200px;
+    
+}
+
+.article {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 3;
+}
+
+.post-share {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+}
 
 /* ARTICLE */
 

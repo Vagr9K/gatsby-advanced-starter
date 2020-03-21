@@ -34,7 +34,7 @@ export default class PostTemplate extends React.Component {
           <div className="pattern">
             <div className="container">
           {/* begin post content */}
-          <div>
+          <div className="episode">
             
 
             {/* Will need to differentiate from homepage styles or update them */}
@@ -61,11 +61,12 @@ export default class PostTemplate extends React.Component {
             
             <div className="post-share">
               <SocialLinks postPath={slug} postNode={postNode} />
-            </div>
+            
 
             <UserInfo config={config} />
             <Disqus postNode={postNode} />
             <Footer config={config} />
+            </div>
           </div>
         {/* end post content */}
 
