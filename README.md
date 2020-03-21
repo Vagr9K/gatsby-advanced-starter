@@ -1,4 +1,4 @@
-# In-Demand
+# Job Demand
 
 A job directory for high-demand jobs in the wake of the COVID-19 pandemic.
 
