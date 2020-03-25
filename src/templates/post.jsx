@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import Img from "gatsby-image"
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
@@ -23,6 +24,10 @@ export default class PostTemplate extends React.Component {
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+
+    let coverImgFluid = `${post.frontmatter.cover.childImageSharp.fluid}`
+    console.log(coverImgFluid);
+
     return (
       <Layout>
         <div>
@@ -39,7 +44,10 @@ export default class PostTemplate extends React.Component {
 
             {/* Will need to differentiate from homepage styles or update them */}
             <div className="titleBin">
-              <img className="postCover" src={post.cover} />
+              
+              <Img fluid={coverImgFluid} />
+              {/* <img className="postCover" src={post.cover} /> */}
+              
               <h1>{post.title}</h1>
 
               <h2><a target="_blank" href={post.studio[1]}>{post.studio[0]}</a></h2>
@@ -87,7 +95,6 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        cover
         date
         category
         tags
@@ -96,11 +103,18 @@ export const pageQuery = graphql`
         linkB
         linkC
         linkD
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1024) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug
         date
       }
-    }
   }
+}
 `;

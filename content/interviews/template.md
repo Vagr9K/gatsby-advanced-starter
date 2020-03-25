@@ -1,12 +1,11 @@
 ---
 title: "Longform interview title"
-cover: "./content/interviews/imgs/hamburgers.png"
-urls: 
+cover: "./imgs/hamburgers.png"
 studio: ['Civilization', 'https://builtbycivilization.com']
 linkA: ['Design Lecture Series', 'https://designlectur.es']
 linkB: ['Beyond This Point Podcast', 'http://beyondthispoint.design']
 linkC: ['Non-Breaking Space Gallery', 'https://non-breaking.space']
-linkD: ['','']
+linkD: [' ',' ']
 twit: "https://www.twitter.com/username"
 inst: "https://www.instagram.com/username"
 category: "interview"
@@ -30,7 +29,7 @@ This cheatsheet is specifically *Markdown Here's* version of Github-flavored Mar
 
 You can play around with Markdown on our [live demo page](http://www.markdown-here.com/livedemo.html).
 
-(If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
+(If you're not a Markdown Here user, check out the Markdown Cheatsheet that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
 
 ##### Table of Contents
 
@@ -39,13 +38,13 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 [Lists](#lists)
 [Links](#links)
 [Images](#images)
-[Code and Syntax Highlighting](#code)
+[Code and Syntax Highlighting]
 [Tables](#tables)
 [Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
+[Inline HTML]
+[Horizontal Rule]
+[Line Breaks]
+[YouTube Videos]
 
 <a name="headers"/>
 

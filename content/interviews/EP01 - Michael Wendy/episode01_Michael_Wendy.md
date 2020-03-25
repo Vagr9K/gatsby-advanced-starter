@@ -1,12 +1,11 @@
 ---
 title: "Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase"
-cover: "./content/interviews/imgs/hamburgers.png"
-urls: 
+cover: "episode01_Michael_Wendy.png"
 studio: ['Civilization', 'https://builtbycivilization.com']
 linkA: ['Design Lecture Series', 'https://designlectur.es']
 linkB: ['Beyond This Point Podcast', 'http://beyondthispoint.design']
 linkC: ['Non-Breaking Space Gallery', 'https://non-breaking.space']
-linkD: ['','']
+linkD: ['d','d']
 twit: "https://www.twitter.com/username"
 inst: "https://www.instagram.com/username"
 category: "interview"
@@ -19,6 +18,7 @@ tags:
     - work
 ---
 
+![alt text](episode01_Michael_Wendy.png "Logo Title Text 1")
 
 Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase
 ===================================================================================

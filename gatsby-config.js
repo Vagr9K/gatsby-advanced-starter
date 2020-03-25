@@ -19,8 +19,35 @@ module.exports = {
     }
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-lodash",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1024,
+              backgroundColor: "transparent",
+              quality: 100,
+              // disableBgImageOnAlpha: true,
+              // use abvove option if the edges are wonky
+            }
+          },
+          {
+            resolve: "gatsby-remark-responsive-iframe"
+          },
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-prismjs",
+          "gatsby-remark-check-links",
+        ]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -42,25 +69,8 @@ module.exports = {
         path: `src/fonts/`
       }
     },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 690
-            }
-          },
-          {
-            resolve: "gatsby-remark-responsive-iframe"
-          },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs"
-        ]
-      }
-    },
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-lodash",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -79,8 +89,6 @@ module.exports = {
         color: config.themeColor
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",

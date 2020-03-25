@@ -166,8 +166,14 @@ export const listingQuery = graphql` {
           frontmatter {
             title
             tags
-            cover
             date
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
