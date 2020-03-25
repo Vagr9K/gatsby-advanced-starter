@@ -75,7 +75,6 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "prestart": "gatsby clean",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "serve": "gatsby serve",
