@@ -18,7 +18,7 @@ tags:
     - work
 ---
 
-![alt text](episode01_Michael_Wendy.png "Logo Title Text 1")
+![alt text](episode01_Michael_WendyB.png "Logo Title Text 1")
 
 Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase
 ===================================================================================
