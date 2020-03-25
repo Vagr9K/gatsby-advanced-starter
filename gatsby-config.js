@@ -19,35 +19,6 @@ module.exports = {
     }
   },
   plugins: [
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`,
-          },
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 1024,
-              backgroundColor: "transparent",
-              quality: 100,
-              // disableBgImageOnAlpha: true,
-              // use abvove option if the edges are wonky
-            }
-          },
-          {
-            resolve: "gatsby-remark-responsive-iframe"
-          },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs",
-          "gatsby-remark-check-links",
-        ]
-      }
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -69,6 +40,35 @@ module.exports = {
         path: `src/fonts/`
       }
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1024,
+              backgroundColor: "transparent",
+              quality: 100,
+              disableBgImageOnAlpha: true,
+              // use abvove option if the edges are wonky
+            }
+          },
+          {
+            resolve: "gatsby-remark-responsive-iframe"
+          },
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-prismjs",
+          "gatsby-remark-check-links",
+        ]
+      }
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {

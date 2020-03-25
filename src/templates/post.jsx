@@ -25,8 +25,7 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    let coverImgFluid = `${post.frontmatter.cover.childImageSharp.fluid}`
-    console.log(coverImgFluid);
+    let featuredImgFluid = `${post.featuredImage.childImageSharp.fluid}`
 
     return (
       <Layout>
@@ -45,7 +44,7 @@ export default class PostTemplate extends React.Component {
             {/* Will need to differentiate from homepage styles or update them */}
             <div className="titleBin">
               
-              <Img fluid={coverImgFluid} />
+              <Img className="featuredImage" fluid={featuredImgFluid} src={featuredImgFluid} />
               {/* <img className="postCover" src={post.cover} /> */}
               
               <h1>{post.title}</h1>
@@ -103,7 +102,7 @@ export const pageQuery = graphql`
         linkB
         linkC
         linkD
-        cover {
+        featuredImage {
           childImageSharp {
             fluid(maxWidth: 1024) {
               ...GatsbyImageSharpFluid

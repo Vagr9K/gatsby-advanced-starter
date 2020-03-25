@@ -167,7 +167,7 @@ export const listingQuery = graphql` {
             title
             tags
             date
-            cover {
+            featuredImage {
               childImageSharp {
                 fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid
