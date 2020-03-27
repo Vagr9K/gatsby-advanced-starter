@@ -1,6 +1,6 @@
 ---
 title: "Pilot Lab"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.pilotlab.com/"
 twit: "https://twitter.com/thepilotlab"
 inst: ""

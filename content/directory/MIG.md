@@ -1,6 +1,6 @@
 ---
 title: "MIG"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.migcom.com/"
 twit: "https://twitter.com/MIGCommunity"
 inst: "https://www.instagram.com/migcommunity"

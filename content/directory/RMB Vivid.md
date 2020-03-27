@@ -1,6 +1,6 @@
 ---
 title: "RMB Vivid"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://rmbvivid.com/"
 twit: "https://twitter.com/RMBVivid"
 inst: ""

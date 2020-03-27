@@ -1,6 +1,6 @@
 ---
 title: "Okaybro"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://okaybro.com/"
 twit: ""
 inst: "https://www.instagram.com/okaybro"

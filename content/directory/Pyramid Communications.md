@@ -1,6 +1,6 @@
 ---
 title: "Pyramid Communications"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.pyramidcommunications.com/"
 twit: "https://twitter.com/PyramidComms"
 inst: "https://www.instagram.com/pyramidcomms"

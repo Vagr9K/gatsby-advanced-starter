@@ -1,6 +1,6 @@
 ---
 title: "Ontra Marketing Group"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "#"
 twit: "https://twitter.com/ontramarketing"
 inst: "https://www.instagram.com/ontramarketing"

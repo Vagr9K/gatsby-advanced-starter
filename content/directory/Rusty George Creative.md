@@ -1,6 +1,6 @@
 ---
 title: "Rusty George Creative"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://rustygeorge.com/"
 twit: "https://twitter.com/RustyGCreative"
 inst: "https://www.instagram.com/rustygeorgecreative"

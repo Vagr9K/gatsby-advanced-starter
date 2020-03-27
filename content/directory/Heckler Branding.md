@@ -1,6 +1,6 @@
 ---
 title: "Heckler Branding"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.hecklerbranding.com/"
 twit: "https://twitter.com/hecklerbranding"
 inst: ""

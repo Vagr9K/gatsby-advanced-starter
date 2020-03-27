@@ -1,6 +1,6 @@
 ---
 title: "Touch Worldwide"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.touchworldwide.com/"
 twit: ""
 inst: "touch_worldwide"

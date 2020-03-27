@@ -1,6 +1,6 @@
 ---
 title: "Mentor CG"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.mentorcg.com/"
 twit: "https://twitter.com/mentorcg"
 inst: "https://www.instagram.com/mentorcreator"

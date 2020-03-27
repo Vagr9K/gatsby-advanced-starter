@@ -1,6 +1,6 @@
 ---
 title: "Amazon"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://amazon.design/"
 twit: ""
 inst: ""

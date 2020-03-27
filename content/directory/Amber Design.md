@@ -1,6 +1,6 @@
 ---
 title: "Amber Design"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.awesomeamber.com/"
 twit: "https://twitter.com/AmberDesign_"
 inst: "https://www.instagram.com/awesomeamberdesign"

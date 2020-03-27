@@ -1,6 +1,6 @@
 ---
 title: "Grayscale Creative"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://grayscaledesignstudio.com/"
 twit: ""
 inst: "https://www.instagram.com/grayscaledesignstudio"

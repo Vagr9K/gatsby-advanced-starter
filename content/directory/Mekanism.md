@@ -1,6 +1,6 @@
 ---
 title: "Mekanism"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://mekanism.com/"
 twit: "https://twitter.com/mekanism"
 inst: "https://www.instagram.com/mekanism"

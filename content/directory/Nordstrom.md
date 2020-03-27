@@ -1,6 +1,6 @@
 ---
 title: "Nordstrom"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://shop.nordstrom.com/"
 twit: "https://twitter.com/nordstrom"
 inst: "https://www.instagram.com/nordstrom"

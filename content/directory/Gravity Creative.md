@@ -1,6 +1,6 @@
 ---
 title: "Gravity Creative"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.gravitycreative.com/"
 twit: "https://twitter.com/gravitycreative"
 inst: ""

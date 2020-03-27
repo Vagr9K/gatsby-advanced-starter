@@ -1,6 +1,6 @@
 ---
 title: "Gray Magazine"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://graymag.com/"
 twit: "https://twitter.com/Gray_Magazine"
 inst: "https://www.instagram.com/Gray_Magazine"

@@ -1,6 +1,6 @@
 ---
 title: "Artitudes Design"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.artitudesdesign.com/"
 twit: "https://twitter.com/ArtitudesDesign"
 inst: "https://www.instagram.com/artitudes"

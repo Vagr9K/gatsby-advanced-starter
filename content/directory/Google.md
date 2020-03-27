@@ -1,6 +1,6 @@
 ---
 title: "Google"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://design.google/"
 twit: "https://twitter.com/googledesign"
 inst: "https://www.instagram.com/googledesign"

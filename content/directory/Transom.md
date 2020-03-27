@@ -1,6 +1,6 @@
 ---
 title: "Transom"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.transom.design/"
 twit: ""
 inst: ""

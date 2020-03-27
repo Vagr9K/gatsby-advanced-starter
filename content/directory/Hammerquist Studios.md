@@ -1,6 +1,6 @@
 ---
 title: "Hammerquist Studios"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://hammerquiststudios.com/"
 twit: ""
 inst: ""

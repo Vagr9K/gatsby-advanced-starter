@@ -1,6 +1,6 @@
 ---
 title: "Wongdoody"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://wongdoody.com/"
 twit: "https://twitter.com/wongdoody"
 inst: "https://www.instagram.com/WONGDOODY"

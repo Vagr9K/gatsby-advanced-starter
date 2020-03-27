@@ -1,6 +1,6 @@
 ---
 title: "Civilization"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://builtbycivilization.com/"
 twit: "https://twitter.com/bycivilization"
 inst: ""

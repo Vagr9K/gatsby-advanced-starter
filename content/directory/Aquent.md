@@ -1,6 +1,6 @@
 ---
 title: "Aquent"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://aquent.com/"
 twit: "https://twitter.com/Aquent"
 inst: ""

@@ -40,18 +40,7 @@ export default class PostTemplate extends React.Component {
               className="featuredImage"
               alt={post.alt}
             />
-
-            <div className="interviewContainer">
-          {/* begin post content */}
-          <div className="episode">
-            
-
-            {/* Will need to differentiate from homepage styles or update them */}
             <div className="titleBin">
-              
-              
-              {/* <img className="postCover" src={post.cover} /> */}
-              
               <h1>{post.title}</h1>
 
               <h2><a target="_blank" href={post.studio[1]}>{post.studio[0]}</a></h2>
@@ -64,6 +53,24 @@ export default class PostTemplate extends React.Component {
               </ul>
               <PostTags tags={post.tags} />
             </div>
+
+
+
+            <div className="interviewContainer">
+            
+          
+          
+          
+          <div className="episode">
+            
+
+            
+            
+              
+              
+              
+              
+              
 
 
             {/* Interview content, all formatting of this content should happen in MD file */}

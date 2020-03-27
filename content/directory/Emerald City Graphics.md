@@ -1,6 +1,6 @@
 ---
 title: "Emerald City Graphics"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.emeraldcg.com/"
 twit: ""
 inst: "https://www.instagram.com/emeraldcity_graphics"

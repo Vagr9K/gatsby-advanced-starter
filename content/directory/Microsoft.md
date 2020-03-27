@@ -1,6 +1,6 @@
 ---
 title: "Microsoft"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.microsoft.com/design"
 twit: "https://twitter.com/MicrosoftDesign"
 inst: ""

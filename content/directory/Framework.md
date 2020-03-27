@@ -1,6 +1,6 @@
 ---
 title: "Framework"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://weareframework.com/"
 twit: ""
 inst: "https://www.instagram.com/we.are.framework"

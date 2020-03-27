@@ -1,6 +1,6 @@
 ---
 title: "Hornall Anderson"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.hornallanderson.com/"
 twit: "https://twitter.com/HornallAnderson"
 inst: "https://www.instagram.com/HornallAnderson"

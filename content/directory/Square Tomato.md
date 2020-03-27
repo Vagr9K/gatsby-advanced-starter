@@ -1,6 +1,6 @@
 ---
 title: "Square Tomato"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.sqtomato.com/"
 twit: ""
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "projekt202"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://projekt202.com/"
 twit: "https://twitter.com/projekt202"
 inst: "https://www.instagram.com/projekt202"

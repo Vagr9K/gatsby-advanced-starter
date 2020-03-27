@@ -1,6 +1,6 @@
 ---
 title: "Emblem"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://studioemblem.com/"
 twit: ""
 inst: ""

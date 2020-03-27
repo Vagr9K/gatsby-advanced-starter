@@ -1,6 +1,6 @@
 ---
 title: "CMD Agency"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.cmdagency.com/"
 twit: "https://twitter.com/CMDCreates"
 inst: "https://www.instagram.com/cmdcreates"

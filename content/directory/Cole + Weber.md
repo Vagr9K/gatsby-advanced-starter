@@ -1,6 +1,6 @@
 ---
 title: "Cole + Weber"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.coleweber.com/"
 twit: ""
 inst: ""

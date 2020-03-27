@@ -1,6 +1,6 @@
 ---
 title: "Sea Monster Studios"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.seamonsterstudios.com/"
 twit: "https://twitter.com/the_seamonsters"
 inst: ""

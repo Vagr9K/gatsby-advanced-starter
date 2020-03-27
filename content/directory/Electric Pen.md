@@ -1,6 +1,6 @@
 ---
 title: "Electric Pen"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://electricpen.com/"
 twit: ""
 inst: "https://www.instagram.com/electric.pen"

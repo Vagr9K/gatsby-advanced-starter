@@ -1,6 +1,6 @@
 ---
 title: "Gensler"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.gensler.com/offices/seattle"
 twit: ""
 inst: "https://www.instagram.com/genslerseattle"

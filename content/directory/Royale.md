@@ -1,6 +1,6 @@
 ---
 title: "Royale"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://weareroyale.com/"
 twit: "https://twitter.com/weareroyale"
 inst: "https://www.instagram.com/weareroyale"

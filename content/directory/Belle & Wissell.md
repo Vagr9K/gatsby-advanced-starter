@@ -1,6 +1,6 @@
 ---
 title: "Belle & Wissell"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "http://www.bwco.info/"
 twit: "https://twitter.com/BelleandWissell"
 inst: ""

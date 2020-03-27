@@ -1,6 +1,6 @@
 ---
 title: "Schawk"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.schawk.com/"
 twit: "https://twitter.com/schawk"
 inst: "https://www.instagram.com/schawkstudios"

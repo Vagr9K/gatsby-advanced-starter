@@ -1,6 +1,6 @@
 ---
 title: "Graphiti"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://graphiti.com/"
 twit: "https://twitter.com/Graphiti"
 inst: ""

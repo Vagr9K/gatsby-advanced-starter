@@ -1,6 +1,6 @@
 ---
 title: "Double Knot Creative"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://doubleknotcreative.com/"
 twit: "https://twitter.com/doubleknottweet"
 inst: ""

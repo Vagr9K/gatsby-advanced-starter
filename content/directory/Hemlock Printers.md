@@ -1,6 +1,6 @@
 ---
 title: "Hemlock Printers"
-cover: "./content/interviews/imgs/hamburgers.png"
+featuredImage: "./content/interviews/imgs/hamburgers.png"
 website: "https://www.hemlock.com/"
 twit: "https://twitter.com/HemlockPrinters"
 inst: "https://www.instagram.com/HemlockPrinters"
