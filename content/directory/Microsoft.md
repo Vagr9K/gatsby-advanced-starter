@@ -3,7 +3,7 @@ title: "Microsoft"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.microsoft.com/design"
 twit: "https://twitter.com/MicrosoftDesign"
-inst: ""
+inst: "https://www.instagram.com/microsoft.design"
 category: "M"
 tags:
     - Redmond
