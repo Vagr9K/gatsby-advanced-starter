@@ -1,12 +1,41 @@
 
 
 /* INTERVIEW PAGE */
+.interviewPattern {
+    background: url(../../static/pattern04c.png);
+    background-color: var(--color-bg-gray);
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: 50% 1fr 2em;
+}
 
+.featuredImage {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    max-width: 900px;
+    /* background-color: var(--color-bg); */
+}
+
+/* ----------------------------------------------- */
 
 
 /* CONTAINER GRID */
-
-
+.interviewContainer {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto 8em;
+    grid-gap: .5em;
+    grid-auto-flow: dense;    
+    max-width: 900px;
+    background-color: var(--color-card);
+    /* border: 3px solid #DBDBDB; */
+    box-shadow:  0px 0px 30px var(--color-bg-gray-dark);
+    border-radius: 10px;
+}
+/* ----------------------------------------------- */
 
 .episode {
     display: grid;
@@ -14,12 +43,7 @@
     background-color: brown;
 }
 
-.featuredImage {
-    opacity: 1;
-    width: 512px;
-    height: 512px;
-    background-color: chartreuse;
-}
+
 
 
 .titleBin {

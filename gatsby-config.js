@@ -45,16 +45,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
-          },
-          {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1024,
-              backgroundColor: "transparent",
+              backgroundColor: "#2fdf29",
               quality: 100,
               disableBgImageOnAlpha: true,
-              // use abvove option if the edges are wonky
+              // use above option if the edges are wonky
             }
           },
           {

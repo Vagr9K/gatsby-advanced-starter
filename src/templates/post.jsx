@@ -25,8 +25,6 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    let featuredImgFluid = `${post.featuredImage.childImageSharp.fluid}`
-
     return (
       <Layout>
         <div>
@@ -35,8 +33,15 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
-          <div className="pattern">
-            <div className="container">
+          <div className="interviewPattern">
+
+            <Img 
+              fluid={post.featuredImage.childImageSharp.fluid} 
+              className="featuredImage"
+              alt={post.alt}
+            />
+
+            <div className="interviewContainer">
           {/* begin post content */}
           <div className="episode">
             
@@ -44,7 +49,7 @@ export default class PostTemplate extends React.Component {
             {/* Will need to differentiate from homepage styles or update them */}
             <div className="titleBin">
               
-              <Img className="featuredImage" fluid={featuredImgFluid} src={featuredImgFluid} />
+              
               {/* <img className="postCover" src={post.cover} /> */}
               
               <h1>{post.title}</h1>
@@ -102,6 +107,7 @@ export const pageQuery = graphql`
         linkB
         linkC
         linkD
+        alt
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1024) {

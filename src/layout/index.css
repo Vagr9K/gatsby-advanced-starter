@@ -6,8 +6,10 @@
 
 /* COLOR VARIABLES */
 :root {
-    --color-bg: rgba(255, 173, 161, 1);
-    --color-bg-dark: rgb(247, 130, 112);
+    --color-bg-coral: rgba(255, 173, 161, 1);
+    --color-bg-coral-dark: rgb(247, 130, 112);
+    --color-bg-gray: rgb(229, 229, 229);
+    --color-bg-gray-dark: rgb(214, 214, 214);
     --color-card: #FFFFFF;
     --color-listingLink: #2e2e2e;
     --color-listing-purple: #714060;
@@ -39,7 +41,7 @@ a:hover {   cursor: pointer; }
 /* BACKGROUND PATTERN */
 .pattern {
     background: url(../../static/pattern04c.png);
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-coral);
     display: grid;
     grid-template-columns: 2em 1fr 2em;
     grid-template-rows: 2em 1fr 2em;
@@ -58,7 +60,7 @@ a:hover {   cursor: pointer; }
     grid-auto-flow: dense;    
     max-width: 1200px;
     background-color: var(--color-card);
-    box-shadow:  0px 0px 30px var(--color-bg-dark);
+    box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
     border-radius: 10px;
 }   
 
