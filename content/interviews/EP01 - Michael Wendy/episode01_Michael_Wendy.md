@@ -19,10 +19,10 @@ tags:
     - work
 ---
 
-![alt text](episode01_Michael_WendyB.png "Logo Title Text 1")
+<!-- ![alt text](episode01_Michael_WendyB.png "Logo Title Text 1") -->
 
-Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase
-===================================================================================
+<!-- Michael Ellsworth & Wendy Quisenberry- on bacon, corgies, & the beauty of lowercase
+=================================================================================== -->
 
 <span class='person interviewer'>JONNY MCCONNELL</span>
 Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot aliquip

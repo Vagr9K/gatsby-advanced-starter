@@ -40,6 +40,7 @@ export default class PostTemplate extends React.Component {
               className="featuredImage"
               alt={post.alt}
             />
+
             <div className="titleBin">
               <h1>{post.title}</h1>
 
@@ -57,37 +58,22 @@ export default class PostTemplate extends React.Component {
 
 
             <div className="interviewContainer">
-            
-          
-          
-          
-          <div className="episode">
-            
 
-            
-            
-              
-              
-              
-              
-              
+              <div className="episode">
 
-
-            {/* Interview content, all formatting of this content should happen in MD file */}
-            <article>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            </article>
-            
-            <div className="post-share">
-              <SocialLinks postPath={slug} postNode={postNode} />
-            
-
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
-            <Footer config={config} />
-            </div>
-          </div>
-        {/* end post content */}
+                {/* Interview content, all formatting of this content should happen in MD file */}
+                <article>
+                  <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                </article>
+                
+                <div className="post-share">
+                  <SocialLinks postPath={slug} postNode={postNode} />
+                  <UserInfo config={config} />
+                  <Disqus postNode={postNode} />
+                  <Footer config={config} />
+                </div>
+              </div>
+              {/* end post content */}
 
             </div>
           </div>
@@ -117,7 +103,7 @@ export const pageQuery = graphql`
         alt
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1024) {
+            fluid(maxWidth: 960) {
               ...GatsbyImageSharpFluid
             }
           }
