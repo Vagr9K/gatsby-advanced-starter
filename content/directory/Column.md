@@ -1,6 +1,6 @@
 ---
 title: "Column"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://columnseattle.com/"
 twit: "https://twitter.com/columnseattle"
 inst: ""

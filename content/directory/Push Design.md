@@ -1,6 +1,6 @@
 ---
 title: "Push Design"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://pushdesign.net/"
 twit: ""
 inst: ""

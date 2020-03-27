@@ -1,6 +1,6 @@
 ---
 title: "McGraw Hill Education"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.mheducation.com/"
 twit: "https://twitter.com/MHEducation"
 inst: "https://www.instagram.com/mheducation"

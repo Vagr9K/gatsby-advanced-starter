@@ -1,6 +1,6 @@
 ---
 title: "Swecker"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://swecker.co/"
 twit: ""
 inst: ""

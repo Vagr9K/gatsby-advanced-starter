@@ -1,6 +1,6 @@
 ---
 title: "Clyde Golden"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://clydegolden.com/"
 twit: ""
 inst: "https://www.instagram.com/clydegolden"

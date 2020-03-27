@@ -1,6 +1,6 @@
 ---
 title: "Ted Leonhardt"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://tedleonhardt.com/"
 twit: "https://twitter.com/tedleonhardt"
 inst: "https://www.instagram.com/TedCLeonhardt"

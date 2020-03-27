@@ -1,6 +1,6 @@
 ---
 title: "Catch Design Studio"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.catchstudio.com/"
 twit: ""
 inst: "https://www.instagram.com/catch_design_studio"

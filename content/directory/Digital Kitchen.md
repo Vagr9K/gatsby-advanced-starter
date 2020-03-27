@@ -1,6 +1,6 @@
 ---
 title: "Digital Kitchen"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.thisisdk.com/"
 twit: "https://twitter.com/digitalkitchen"
 inst: ""

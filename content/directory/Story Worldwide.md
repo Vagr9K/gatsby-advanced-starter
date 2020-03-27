@@ -1,6 +1,6 @@
 ---
 title: "Story Worldwide"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.storyworldwide.com/"
 twit: "https://twitter.com/storyworldwide"
 inst: ""

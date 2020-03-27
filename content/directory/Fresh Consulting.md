@@ -1,6 +1,6 @@
 ---
 title: "Fresh Consulting"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.freshconsulting.com/"
 twit: "https://twitter.com/FreshConsulting"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Jozi Frecracker Factory"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://jozifirecrackerfactory.com/"
 twit: "https://twitter.com/jozifirecracker"
 inst: ""

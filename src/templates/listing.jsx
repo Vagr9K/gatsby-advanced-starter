@@ -142,11 +142,7 @@ class Listing extends React.Component {
 export default Listing;
 
 
-// Directory --
-// For use on directory listings, copy this page and cange the query to this
-// Pull detail bits from the deeper post page, into the directory listing
-// rm link to the slug page with it's website frontmatter piece
-// sort: { fields: frontmatter___title, order: ASC }
+
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql` {
@@ -169,7 +165,7 @@ export const listingQuery = graphql` {
             date
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 200) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }

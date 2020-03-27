@@ -1,6 +1,6 @@
 ---
 title: "Ten Gun"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.tengundesign.com/"
 twit: ""
 inst: "https://www.instagram.com/tengundesign"

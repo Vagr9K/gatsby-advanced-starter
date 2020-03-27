@@ -42,10 +42,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  const listingPage = path.resolve("./src/templates/listing.jsx");
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/byTag.jsx");
   const categoryPage = path.resolve("src/templates/byCategory.jsx");
-  const listingPage = path.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -96,62 +96,80 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
-  // Paging
-  const { postsPerPage } = siteConfig;
-  const pageCount = Math.ceil(postsEdges.length / postsPerPage);
 
-  [...Array(pageCount)].forEach((_val, pageNum) => {
-    createPage({
-      path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-      component: listingPage,
-      context: {
-        limit: postsPerPage,
-        skip: pageNum * postsPerPage,
-        pageCount,
-        currentPageNum: pageNum + 1
-      }
-    });
-  });
 
-  // Page creating
-  postsEdges.forEach((edge, index) => {
-    // Generate a list of tags
-    if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach(tag => {
-        tagSet.add(tag);
+// if directory else interview page creation
+markdownQueryResult.data.allMarkdownRemark.edges.forEach(edge => {
+    if (edge.node.frontmatter.category === 'directory') {
+      
+      // Paging for directory
+      const { postsPerPage } = siteConfig;
+      const pageCount = Math.ceil(postsEdges.length / postsPerPage);
+
+      [...Array(pageCount)].forEach((_val, pageNum) => {
+        createPage({
+          path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
+          component: listingPage,
+          context: {
+            limit: postsPerPage,
+            skip: pageNum * postsPerPage,
+            pageCount,
+            currentPageNum: pageNum + 1
+          }
+        });
       });
+
+    }
+    else {
+      // else interview
+
+      postsEdges.forEach((edge, index) => {
+        // Generate a list of tags
+        if (edge.node.frontmatter.tags) {
+          edge.node.frontmatter.tags.forEach(tag => {
+            tagSet.add(tag);
+          });
+        }
+
+        // Generate a list of categories (singlar)
+        if (edge.node.frontmatter.category) {
+          categorySet.add(edge.node.frontmatter.category);
+        }
+
+        // // Generate a list of categories (plural)
+        // if (edge.node.frontmatter.category) {
+        //   edge.node.frontmatter.categoryforEach(category => {
+        //     categorySet.add(category);
+        //   });
+        // }
+
+        // Create post pages
+        const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+        const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+        const nextEdge = postsEdges[nextID];
+        const prevEdge = postsEdges[prevID];
+
+        createPage({
+          path: edge.node.fields.slug,
+          component: postPage,
+          context: {
+            slug: edge.node.fields.slug,
+            nexttitle: nextEdge.node.frontmatter.title,
+            nextslug: nextEdge.node.fields.slug,
+            prevtitle: prevEdge.node.frontmatter.title,
+            prevslug: prevEdge.node.fields.slug
+          }
+        });
+      });
+
     }
 
-    // Generate a list of categories (singlar)
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
-    }
+  })
 
-    // // Generate a list of categories (plural)
-    // if (edge.node.frontmatter.category) {
-    //   edge.node.frontmatter.categoryforEach(category => {
-    //     categorySet.add(category);
-    //   });
-    // }
+  
 
-    // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
 
-    createPage({
-      path: edge.node.fields.slug,
-      component: postPage,
-      context: {
-        slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
-    });
-  });
+
 
   //  Create tag pages
   tagSet.forEach(tag => {

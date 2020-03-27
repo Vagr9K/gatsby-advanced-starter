@@ -1,6 +1,6 @@
 ---
 title: "Seattle Central Creative Academy"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://seattlecentralcreativeacademy.com/"
 twit: ""
 inst: ""

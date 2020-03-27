@@ -1,6 +1,6 @@
 ---
 title: "Rational Interaction"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.rationalcx.com/"
 twit: ""
 inst: ""

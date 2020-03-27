@@ -1,6 +1,6 @@
 ---
 title: "Zillow"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.zillow.com/design/"
 twit: "https://twitter.com/zillow"
 inst: ""

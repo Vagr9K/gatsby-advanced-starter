@@ -1,6 +1,6 @@
 ---
 title: "WWU Design"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.wwu.edu/design/"
 twit: ""
 inst: ""

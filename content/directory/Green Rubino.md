@@ -1,6 +1,6 @@
 ---
 title: "Green Rubino"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.greenrubino.com/"
 twit: "https://twitter.com/GreenRubino"
 inst: "https://www.instagram.com/GreenRubino"

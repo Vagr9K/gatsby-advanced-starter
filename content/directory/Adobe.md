@@ -1,6 +1,6 @@
 ---
 title: "Adobe"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.adobe.com"
 twit: "https://twitter.com/adobe"
 inst: ""

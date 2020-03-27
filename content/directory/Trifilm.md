@@ -1,6 +1,6 @@
 ---
 title: "Trifilm"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.trifilm.com/"
 twit: "https://twitter.com/trifilm"
 inst: "https://www.instagram.com/trifilm"

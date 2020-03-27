@@ -1,6 +1,6 @@
 ---
 title: "Hey,"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://heyadvertising.com/"
 twit: "https://twitter.com/HeyAdvertising"
 inst: ""

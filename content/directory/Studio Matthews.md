@@ -1,6 +1,6 @@
 ---
 title: "Studio Matthews"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://www.studiomatthews.com/"
 twit: ""
 inst: ""

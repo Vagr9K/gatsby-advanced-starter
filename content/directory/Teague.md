@@ -1,6 +1,6 @@
 ---
 title: "Teague"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://teague.com/"
 twit: "https://twitter.com/teague1926"
 inst: "https://www.instagram.com/teague1926"

@@ -1,6 +1,6 @@
 ---
 title: "NBBJ"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://www.nbbj.com/"
 twit: "https://twitter.com/nbbjdesign"
 inst: ""

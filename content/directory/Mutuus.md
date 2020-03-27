@@ -1,6 +1,6 @@
 ---
 title: "Mutuus"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.mutuus-studio.com/"
 twit: ""
 inst: "https://www.instagram.com/mutuus_studio"

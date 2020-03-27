@@ -1,6 +1,6 @@
 ---
 title: "Blue Label Labs"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.bluelabellabs.com/"
 twit: "https://twitter.com/bluelabellabs"
 inst: ""

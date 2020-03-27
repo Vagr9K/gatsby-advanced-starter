@@ -1,6 +1,6 @@
 ---
 title: "Getty Images"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.gettyimages.com/"
 twit: "https://twitter.com/GettyImages"
 inst: ""

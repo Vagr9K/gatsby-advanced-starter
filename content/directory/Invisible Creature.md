@@ -1,6 +1,6 @@
 ---
 title: "Invisible Creature"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.invisiblecreature.com/"
 twit: "https://twitter.com/icreature"
 inst: "https://www.instagram.com/icreature"

@@ -1,6 +1,6 @@
 ---
 title: "Rationale"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://rationale-design.com/"
 twit: "https://twitter.com/RationaleDesign"
 inst: "https://www.instagram.com/seanwolcott"

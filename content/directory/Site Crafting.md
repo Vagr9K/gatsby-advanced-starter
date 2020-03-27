@@ -1,6 +1,6 @@
 ---
 title: "Site Crafting"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.sitecrafting.com/"
 twit: "https://twitter.com/sitecrafting"
 inst: "https://www.instagram.com/sitecrafting"

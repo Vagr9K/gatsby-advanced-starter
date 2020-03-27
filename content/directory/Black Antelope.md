@@ -1,6 +1,6 @@
 ---
 title: "Black Antelope"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.blackantelope.com/"
 twit: ""
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Shore"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://madebyshore.com/"
 twit: ""
 inst: ""

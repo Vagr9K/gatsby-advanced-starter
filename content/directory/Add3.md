@@ -1,6 +1,6 @@
 ---
 title: "Add3"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.add3.com/"
 twit: "https://twitter.com/add3com"
 inst: "https://www.instagram.com/add3com"

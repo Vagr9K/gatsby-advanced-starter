@@ -1,6 +1,6 @@
 ---
 title: "Girvin"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.girvin.com/"
 twit: "https://twitter.com/girvindesign"
 inst: ""

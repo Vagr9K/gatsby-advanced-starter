@@ -1,6 +1,6 @@
 ---
 title: "Vectorform"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.vectorform.com/"
 twit: "https://twitter.com/vectorform"
 inst: ""

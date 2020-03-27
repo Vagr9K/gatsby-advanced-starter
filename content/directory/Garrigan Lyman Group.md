@@ -1,6 +1,6 @@
 ---
 title: "Garrigan Lyman Group"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.glg.com/"
 twit: "https://twitter.com/garriganlyman"
 inst: "https://www.instagram.com/garriganlyman"

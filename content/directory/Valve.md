@@ -1,6 +1,6 @@
 ---
 title: "Valve"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "https://www.valvesoftware.com/"
 twit: "https://twitter.com/valvesoftware"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Dapper"
-featuredImage: ./content/interviews/imgs/hamburgers.png
+featuredImage: ./-hamburgers.png
 website: "http://dapperad.com/"
 twit: ""
 inst: ""
