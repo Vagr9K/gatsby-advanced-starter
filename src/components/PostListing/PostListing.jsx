@@ -8,7 +8,7 @@ class PostListing extends React.Component {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        featuredImage: postEdge.node.frontmatter.cover,
+        featuredImage: postEdge.node.frontmatter.featuredImage,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
