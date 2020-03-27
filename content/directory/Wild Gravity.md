@@ -1,6 +1,6 @@
 ---
 title: "Wild Gravity"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.wildgravity.net/"
 twit: "https://twitter.com/WildGravityLLC"
 inst: "https://www.instagram.com/wild.gravity/"

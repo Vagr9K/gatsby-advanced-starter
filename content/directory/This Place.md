@@ -1,6 +1,6 @@
 ---
 title: "This Place"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://thisplace.com/"
 twit: "https://twitter.com/thisplacestudio"
 inst: "thisplacestudios"

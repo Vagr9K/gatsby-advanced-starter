@@ -1,6 +1,6 @@
 ---
 title: "Chefsteps"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.chefsteps.com/"
 twit: "https://twitter.com/"
 inst: "https://www.instagram.com/chefsteps"

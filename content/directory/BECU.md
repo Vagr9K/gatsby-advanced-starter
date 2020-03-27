@@ -1,6 +1,6 @@
 ---
 title: "BECU"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.becu.org/"
 twit: ""
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "PLU Design"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.plu.edu/artd/"
 twit: ""
 inst: ""

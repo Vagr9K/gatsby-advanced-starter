@@ -1,6 +1,6 @@
 ---
 title: "States of Matter"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.statesofmatter.com/"
 twit: "https://twitter.com/statesmatter"
 inst: ""

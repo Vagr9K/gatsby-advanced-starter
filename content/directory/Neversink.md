@@ -1,6 +1,6 @@
 ---
 title: "Neversink"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://madebyneversink.com/"
 twit: "https://twitter.com/MadeByNeversink"
 inst: "https://www.instagram.com/madebyneversink"

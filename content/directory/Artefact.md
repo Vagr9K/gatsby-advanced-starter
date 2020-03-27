@@ -1,6 +1,6 @@
 ---
 title: "Artefact"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.artefactgroup.com"
 twit: "https://twitter.com/artefactgroup"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Drake Cooper"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://drakecooper.com/"
 twit: "https://twitter.com/DrakeCooper"
 inst: ""

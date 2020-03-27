@@ -1,6 +1,6 @@
 ---
 title: "FUSE IQ"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.fuseiq.com/"
 twit: "https://twitter.com/fuseiq"
 inst: ""

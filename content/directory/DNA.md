@@ -1,6 +1,6 @@
 ---
 title: "DNA"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "http://dnaseattle.com/"
 twit: "https://twitter.com/dnaseattle"
 inst: ""

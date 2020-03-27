@@ -1,6 +1,6 @@
 ---
 title: "Anvil"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://anvil-studios.com"
 twit: "https://twitter.com/adobe"
 inst: ""

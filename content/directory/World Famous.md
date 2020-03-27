@@ -1,6 +1,6 @@
 ---
 title: "World Famous"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "http://www.worldfamousinc.com/"
 twit: "https://twitter.com/WorldFamousInc"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Deloitte Digital"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.deloittedigital.com/"
 twit: "https://twitter.com/DeloitteDigi_US"
 inst: ""

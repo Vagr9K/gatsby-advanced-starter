@@ -1,6 +1,6 @@
 ---
 title: "Watts"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.wearewatts.com/"
 twit: ""
 inst: "https://www.instagram.com/we.are.watts"

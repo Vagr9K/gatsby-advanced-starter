@@ -1,6 +1,6 @@
 ---
 title: "Y-Designs"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://y-designs.com/"
 twit: "https://twitter.com/ydseattle"
 inst: ""

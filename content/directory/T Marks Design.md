@@ -1,6 +1,6 @@
 ---
 title: "T Marks Design"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://tmarks.design/"
 twit: "https://twitter.com/tdaddy61"
 inst: ""

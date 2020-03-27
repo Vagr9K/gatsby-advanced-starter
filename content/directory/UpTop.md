@@ -1,6 +1,6 @@
 ---
 title: "UpTop"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.uptopcorp.com/"
 twit: "https://twitter.com/UpTopCorp"
 inst: "https://www.instagram.com/uptopcorp"

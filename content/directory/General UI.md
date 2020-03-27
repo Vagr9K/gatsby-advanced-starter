@@ -1,6 +1,6 @@
 ---
 title: "General UI"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.genui.co/"
 twit: "https://twitter.com/generalui"
 inst: ""

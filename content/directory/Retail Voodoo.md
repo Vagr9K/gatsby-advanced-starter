@@ -1,6 +1,6 @@
 ---
 title: "Retail Voodoo"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.retail-voodoo.com/"
 twit: "https://twitter.com/RetailVoodoo"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Kite"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://kitebrandstudio.com/"
 twit: "https://twitter.com/KiteBrand"
 inst: ""

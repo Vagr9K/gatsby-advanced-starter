@@ -1,6 +1,6 @@
 ---
 title: "Mindhatch"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.mindhatchllc.com/"
 twit: "https://twitter.com/mindhatchllc"
 inst: "https://www.instagram.com/mindhatch_llc"

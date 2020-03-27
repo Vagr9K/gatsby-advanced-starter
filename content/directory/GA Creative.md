@@ -1,6 +1,6 @@
 ---
 title: "GA Creative"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.gacreative.com/"
 twit: "https://twitter.com/GA_Creative"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Urban Influence"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.urbaninfluence.com/"
 twit: "https://twitter.com/pigeonwisdom"
 inst: "https://www.instagram.com/pigeonwisdom"

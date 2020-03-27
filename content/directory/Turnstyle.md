@@ -1,6 +1,6 @@
 ---
 title: "Turnstyle"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "http://turnstyle.studio/"
 twit: "https://twitter.com/turnstylestudio"
 inst: "https://www.instagram.com/turnstylestudio"

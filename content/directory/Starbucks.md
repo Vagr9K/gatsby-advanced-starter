@@ -1,6 +1,6 @@
 ---
 title: "Starbucks"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.starbucks.com/"
 twit: "https://twitter.com/starbucks"
 inst: "https://www.instagram.com/starbucks"

@@ -1,6 +1,6 @@
 ---
 title: "Seattle Art Museum"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "http://www.seattleartmuseum.org/"
 twit: "https://twitter.com/iheartsam"
 inst: "https://www.instagram.com/seattleartmuseum"

@@ -1,6 +1,6 @@
 ---
 title: "Extreme Arts & Sciences"
-featuredImage: "./content/interviews/imgs/hamburgers.png"
+featuredImage: ./content/interviews/imgs/hamburgers.png
 website: "https://www.easci.com/"
 twit: "https://twitter.com/easci"
 inst: ""
