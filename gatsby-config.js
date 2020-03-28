@@ -30,14 +30,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "directory",
-        path: `content/directory`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "episode",
-        path: `content/episode`
+        path: `content/`
       }
     },
     {
@@ -180,7 +173,6 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      cover
                       date
                       category
                       tags
