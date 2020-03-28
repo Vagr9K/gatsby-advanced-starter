@@ -6,7 +6,7 @@ twit: "https://twitter.com/ptsunny"
 inst: ""
 category: "P"
 tags:
-    - Fremont
+    - Ballard
     - small
     - strategy
     - branding
