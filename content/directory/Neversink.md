@@ -13,6 +13,7 @@ tags:
     - environmental
     - ux/ui
     - photography
+    - print
 ---
 
 Description

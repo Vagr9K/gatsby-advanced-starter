@@ -1,7 +1,7 @@
 ---
 title: "Ontra Marketing Group"
 cover: "./content/blog/imgs/hamburgers.png"
-website: "#"
+website: "https://ontramarketing.com/"
 twit: "https://twitter.com/ontramarketing"
 inst: "https://www.instagram.com/ontramarketing"
 category: "O"
