@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400;1,800&display=swap');
+
+p {
+    font: 400 1.1em Spectral, serif;
+    line-height: 140%;
+}
+
+h1 {
+    font: 500 1.4em Spectral, serif;
+}
+
+h2 {
+    font: 400 0.7em Spectral, serif;
+}
+
+a {
+    font-style: italic;
+}
+
+a:hover {
+    background: #FFFFFF;
+    border: .1em solid #e9e9e9;
+    border-radius: .1em;
+    padding: .2em .4em .1em .4em;
+    box-shadow: -.3em .3em 0px #d6d6d6;
+    text-decoration: none;
+    z-index: 100;
+}
