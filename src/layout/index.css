@@ -100,8 +100,8 @@ a:hover {   cursor: pointer; }
     padding: .5em 0 0 0;
     grid-column-start: 1;
     grid-column-end: 7;
-    font: 400 1.5em JetBrains-Mono, sans-serif;
-    font: 400 1.5em Spectral, serif;
+    font: 400 2.3em Spectral, serif;
+    line-height: 140%;
 }
 
 .introSubmit {
@@ -110,6 +110,10 @@ a:hover {   cursor: pointer; }
     grid-column-end: 11;
     align-self: end;
     font: 400 .8em JetBrains-Mono, sans-serif;
+}
+
+.introSubmit form {
+    
 }
 
 /* INTERVIEW PROMOS */
