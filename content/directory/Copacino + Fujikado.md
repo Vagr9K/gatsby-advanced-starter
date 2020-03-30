@@ -1,6 +1,6 @@
 ---
 title: "Copacino + Fujikado"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.copacino.com/"
 twit: ""
 inst: ""

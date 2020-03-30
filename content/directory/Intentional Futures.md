@@ -1,6 +1,6 @@
 ---
 title: "Intentional Futures"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://intentionalfutures.com/"
 twit: "https://twitter.com/intentfutures"
 inst: "https://www.instagram.com/intentionalfutures"

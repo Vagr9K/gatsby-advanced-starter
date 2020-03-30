@@ -1,6 +1,6 @@
 ---
 title: "Hacker Agency"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://hal2l.com/"
 twit: ""
 inst: "https://www.instagram.com/hackeragency"

@@ -1,6 +1,6 @@
 ---
 title: "name"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "#"
 twit: "https://twitter.com/"
 inst: ""

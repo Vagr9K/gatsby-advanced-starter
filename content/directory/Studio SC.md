@@ -1,6 +1,6 @@
 ---
 title: "Studio SC"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://studio-sc.com/"
 twit: "https://twitter.com/studiosc"
 inst: ""

@@ -19,8 +19,6 @@ module.exports = {
     }
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-lodash",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -31,7 +29,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
+        name: "directory",
         path: `content/`
       }
     },
@@ -47,9 +45,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 690
+              maxWidth: 1024,
+              backgroundColor: "#2fdf29",
+              quality: 100,
+              disableBgImageOnAlpha: true,
+              // use above option if the edges are wonky
             }
           },
           {
@@ -57,10 +59,15 @@ module.exports = {
           },
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs"
+          "gatsby-remark-prismjs",
+          "gatsby-remark-check-links",
         ]
       }
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-lodash",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -79,8 +86,6 @@ module.exports = {
         color: config.themeColor
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
@@ -168,7 +173,6 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      cover
                       date
                       category
                       tags

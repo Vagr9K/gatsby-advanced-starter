@@ -1,6 +1,6 @@
 ---
 title: "Williams Helde"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://williams-helde.com/"
 twit: ""
 inst: "https://www.instagram.com/williamshelde"

@@ -1,6 +1,6 @@
 ---
 title: "Quesinberry & Associates"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://quesinberry.com/"
 twit: ""
 inst: ""

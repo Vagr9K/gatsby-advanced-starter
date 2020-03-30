@@ -1,6 +1,6 @@
 ---
 title: "Olympus Press"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://olypress.com/"
 twit: ""
 inst: ""

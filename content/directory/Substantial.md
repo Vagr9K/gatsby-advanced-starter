@@ -1,6 +1,6 @@
 ---
 title: "Substantial"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://substantial.com/"
 twit: "https://twitter.com/substantial"
 inst: "https://www.instagram.com/substantial"

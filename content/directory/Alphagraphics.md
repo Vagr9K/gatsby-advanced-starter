@@ -1,6 +1,6 @@
 ---
 title: "Alphagraphics"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.alphagraphicsseattle.com/"
 twit: "https://twitter.com/alphagseattle"
 inst: "https://www.instagram.com/alphagraphicsseattle"

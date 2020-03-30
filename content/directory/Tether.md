@@ -1,6 +1,6 @@
 ---
 title: "Tether"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "#"
 twit: "https://twitter.com/tether"
 inst: "https://www.instagram.com/tether"

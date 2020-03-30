@@ -1,6 +1,6 @@
 ---
 title: "Fell Swoop"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.fellswoop.com/"
 twit: "https://twitter.com/Fell_Swoop"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Foundry Interactive"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.foundryinteractive.com/"
 twit: "https://twitter.com/foundryinc"
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "Flying Eye"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.flyingeyedesign.com/"
 twit: ""
 inst: ""

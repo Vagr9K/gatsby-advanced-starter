@@ -1,6 +1,6 @@
 ---
 title: "CodeTactic"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.codetactic.com/"
 twit: ""
 inst: ""

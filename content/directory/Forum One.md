@@ -1,6 +1,6 @@
 ---
 title: "Forum One"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.forumone.com/"
 twit: "https://twitter.com/forumone"
 inst: "https://www.instagram.com/forum_one"

@@ -1,6 +1,6 @@
 ---
 title: "HTC"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.htc.com/us/"
 twit: "https://twitter.com/HTCUSA"
 inst: ""

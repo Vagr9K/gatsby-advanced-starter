@@ -1,6 +1,6 @@
 ---
 title: "VMLY&R"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.vml.com/"
 twit: "https://twitter.com/VMLYR"
 inst: "https://www.instagram.com/vmlyr"

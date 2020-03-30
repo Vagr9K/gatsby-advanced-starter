@@ -1,6 +1,6 @@
 ---
 title: "Notebleu"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://notebleu.com/"
 twit: ""
 inst: ""

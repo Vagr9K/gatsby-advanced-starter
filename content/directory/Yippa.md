@@ -1,6 +1,6 @@
 ---
 title: "Yippa"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://yippa.com/"
 twit: "https://twitter.com/yippadesign"
 inst: ""

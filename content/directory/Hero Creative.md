@@ -1,6 +1,6 @@
 ---
 title: "Hero Creative"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.herocreative.com/"
 twit: "https://twitter.com/herocreativellc"
 inst: "https://www.instagram.com/herocreativemedia"

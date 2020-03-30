@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import Intro from "../components/Layout/Intro";
+import Headline from "../components/Intro/Headline";
 import PostTags from "../components/Filters/PostTags";
 import PostCats from "../components/Filters/PostCats";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
@@ -21,7 +21,7 @@ export default class TagTemplate extends React.Component {
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         
           <div className="container"> 
-          <Intro />
+          <Headline />
           <div className="topSpacer"></div>
           
             <div className="tagBox directoryBlock">

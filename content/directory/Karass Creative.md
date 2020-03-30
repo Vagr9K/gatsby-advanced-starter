@@ -1,6 +1,6 @@
 ---
 title: "Karass Creative"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://karasscreative.com/"
 twit: "https://twitter.com/karasscreative"
 inst: ""

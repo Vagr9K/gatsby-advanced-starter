@@ -1,6 +1,6 @@
 ---
 title: "Dupla Studios"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://duplastudios.com/"
 twit: "https://twitter.com/duplastudios"
 inst: ""
