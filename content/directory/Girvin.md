@@ -3,7 +3,7 @@ title: "Girvin"
 featuredImage: ./-hamburgers.png
 website: "https://www.girvin.com/"
 twit: "https://twitter.com/girvindesign"
-inst: ""
+inst: "https://www.instagram.com/girvinbranding/"
 category: "G"
 tags:
     - Belltown

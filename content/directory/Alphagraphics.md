@@ -9,6 +9,8 @@ tags:
     - Belltown
     - medium
     - printer
+    - marketing
+    - product
 ---
 
 Description

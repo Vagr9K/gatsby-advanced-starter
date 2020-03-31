@@ -11,6 +11,8 @@ tags:
     - industrial
     - ux/ui
     - product
+    - strategy
+    - research
 ---
 
 Description

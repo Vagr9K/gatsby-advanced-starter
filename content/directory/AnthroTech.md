@@ -7,6 +7,7 @@ inst: "https://www.instagram.com/anthrotechux"
 category: "A"
 tags:
     - Olympia
+    - Downtown
     - medium
     - strategy
     - research

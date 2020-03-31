@@ -3,7 +3,7 @@ title: "Creative Media Alliance"
 featuredImage: ./-hamburgers.png
 website: "http://creativemediaalliance.com/"
 twit: "https://twitter.com/cmaseattle"
-inst: ""
+inst: "https://www.instagram.com/cmaseattle/"
 category: "C"
 tags:
     - Pioneer Square
@@ -15,6 +15,7 @@ tags:
     - ux/ui
     - engineering
     - print
+    - strategy
 ---
 
 Description

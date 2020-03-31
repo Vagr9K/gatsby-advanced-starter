@@ -6,7 +6,7 @@ twit: "https://twitter.com/cognitionstudio"
 inst: ""
 category: "C"
 tags:
-    - Fremont
+    - Ballard
     - small
     - strategy
     - branding

@@ -3,7 +3,7 @@ title: "Hey,"
 featuredImage: ./-hamburgers.png
 website: "https://heyadvertising.com/"
 twit: "https://twitter.com/HeyAdvertising"
-inst: ""
+inst: "https://www.instagram.com/heyadvertising/"
 category: "H"
 tags:
     - Capitol Hill

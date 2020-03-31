@@ -11,6 +11,8 @@ tags:
     - branding
     - ux/ui
     - strategy
+    - video
+    - marketing
 ---
 
 Description

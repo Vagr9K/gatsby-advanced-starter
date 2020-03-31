@@ -14,6 +14,8 @@ tags:
     - strategy
     - motion
     - video
+    - illustration
+    - photography
 ---
 
 Description

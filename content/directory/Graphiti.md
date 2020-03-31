@@ -1,9 +1,9 @@
 ---
-title: "Graphiti"
+title: "Graphiti Associates"
 featuredImage: ./-hamburgers.png
 website: "https://graphiti.com/"
 twit: "https://twitter.com/Graphiti"
-inst: ""
+inst: "https://www.instagram.com/graphiti_associates/"
 category: "G"
 tags:
     - Fremont
@@ -15,7 +15,7 @@ tags:
     - video
     - print
     - environmental
-    - packagaing
+    - packaging
 ---
 
 Description

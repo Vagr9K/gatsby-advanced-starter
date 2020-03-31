@@ -3,7 +3,7 @@ title: "Dupla Studios"
 featuredImage: ./-hamburgers.png
 website: "http://duplastudios.com/"
 twit: "https://twitter.com/duplastudios"
-inst: ""
+inst: "https://www.instagram.com/duplastudios/"
 category: "D"
 tags:
     - Queen Anne

@@ -3,7 +3,7 @@ title: "Copacino + Fujikado"
 featuredImage: ./-hamburgers.png
 website: "https://www.copacino.com/"
 twit: ""
-inst: ""
+inst: "https://www.instagram.com/copacinofujikado/"
 category: "C"
 tags:
     - Downtown
