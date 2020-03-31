@@ -1,6 +1,6 @@
 ---
 title: "Lehrman Cameron"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://lehrmancameron.com/"
 twit: ""
 inst: ""

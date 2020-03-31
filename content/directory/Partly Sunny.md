@@ -1,6 +1,6 @@
 ---
 title: "Partly Sunny"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.partly-sunny.com/"
 twit: "https://twitter.com/ptsunny"
 inst: ""

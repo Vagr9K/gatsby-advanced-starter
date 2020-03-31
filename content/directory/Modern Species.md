@@ -1,6 +1,6 @@
 ---
 title: "Modern Species"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://modernspecies.com/"
 twit: "https://twitter.com/ModSpec"
 inst: "https://www.instagram.com/modspec"

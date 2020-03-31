@@ -1,6 +1,6 @@
 ---
 title: "Crown Social"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://crownsocial.com/"
 twit: "https://twitter.com/crownsocial"
 inst: "https://www.instagram.com/crownsocial"

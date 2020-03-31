@@ -1,6 +1,6 @@
 ---
 title: "Formidable"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://formidable.com/"
 twit: "https://twitter.com/FormidableLabs"
 inst: ""

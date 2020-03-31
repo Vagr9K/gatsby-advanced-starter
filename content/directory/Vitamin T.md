@@ -1,6 +1,6 @@
 ---
 title: "Vitamin T"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://vitamintalent.com/"
 twit: "https://twitter.com/vitamintalent"
 inst: "https://www.instagram.com/vitamintalent"

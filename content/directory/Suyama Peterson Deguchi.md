@@ -1,6 +1,6 @@
 ---
 title: "Suyama Peterson Deguchi"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://suyamapetersondeguchi.com/"
 twit: ""
 inst: ""

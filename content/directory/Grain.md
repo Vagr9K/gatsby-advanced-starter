@@ -1,6 +1,6 @@
 ---
 title: "Grain"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.graindesign.com/"
 twit: "https://twitter.com/grain_design"
 inst: "https://www.instagram.com/grain_design"

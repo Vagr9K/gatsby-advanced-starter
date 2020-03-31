@@ -1,6 +1,6 @@
 ---
 title: "Rupert"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://rupert.studio/"
 twit: "https://twitter.com/thisisrupert"
 inst: "https://www.instagram.com/rupert.studio"

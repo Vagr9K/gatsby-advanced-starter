@@ -1,6 +1,6 @@
 ---
 title: "Blamo"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.blamo.agency/"
 twit: ""
 inst: "https://www.instagram.com/blamo_corps"

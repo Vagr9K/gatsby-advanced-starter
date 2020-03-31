@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+h1 {
+    font: 600 1.4em Spectral, serif;
+}
+
+h2 {
+    font: 400 0.7em Spectral, serif;
+}
+
+p {
+    font: 400 1.1em Spectral, serif;
+    line-height: 140%;
+}
+
+a {
+    font-style: italic;
+}
+
+a:hover {
+    background: #ffffff;
+    border: .1em solid #F78270;
+    border-radius: .1em;
+    padding: .2em .4em .1em .4em;
+    box-shadow: -.3em .3em 0px #714060;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.newsletter-footer p, .newsletter-colophon p {
+    color: #7a7a7a;
+    font: 400 .8em Cutive, monospace;
+    line-height: 120%;
+}

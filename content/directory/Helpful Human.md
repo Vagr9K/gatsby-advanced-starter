@@ -1,6 +1,6 @@
 ---
 title: "Helpful Human"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.helpfulhuman.com/"
 twit: "https://twitter.com/helpfulhuman"
 inst: "https://www.instagram.com/helpfulhuman"

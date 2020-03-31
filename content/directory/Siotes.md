@@ -1,6 +1,6 @@
 ---
 title: "Siotes"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://siotes.com/"
 twit: ""
 inst: "https://www.instagram.com/siotes"

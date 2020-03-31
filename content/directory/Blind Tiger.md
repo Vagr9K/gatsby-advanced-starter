@@ -1,6 +1,6 @@
 ---
 title: "Blind Tiger"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://blindtigerdesign.com/"
 twit: "https://twitter.com/blindtigerdsgn"
 inst: ""

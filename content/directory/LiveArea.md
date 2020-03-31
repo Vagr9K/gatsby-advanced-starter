@@ -1,6 +1,6 @@
 ---
 title: "LiveArea"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.liveareacx.com/"
 twit: "https://twitter.com/LiveArea"
 inst: ""

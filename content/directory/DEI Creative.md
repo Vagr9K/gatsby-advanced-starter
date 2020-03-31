@@ -1,6 +1,6 @@
 ---
 title: "DEI Creative"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://deicreative.com/"
 twit: ""
 inst: "https://www.instagram.com/deicreative"

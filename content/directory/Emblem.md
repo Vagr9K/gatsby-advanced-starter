@@ -1,6 +1,6 @@
 ---
 title: "Emblem"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://studioemblem.com/"
 twit: ""
 inst: "https://www.instagram.com/studioemblem/"

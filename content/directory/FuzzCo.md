@@ -1,6 +1,6 @@
 ---
 title: "Fuzzco"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://fuzzco.com/"
 twit: ""
 inst: "https://www.instagram.com/fuzzco"

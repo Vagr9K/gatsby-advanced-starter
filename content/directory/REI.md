@@ -1,6 +1,6 @@
 ---
 title: "REI"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.rei.com/"
 twit: "https://twitter.com/rei"
 inst: "https://www.instagram.com/rei"

@@ -1,0 +1,107 @@
+
+
+/* INTERVIEW PAGE */
+.interviewPattern {
+    background: url(../../static/pattern04c.png);
+    background-color: var(--color-bg-gray);
+    display: grid;
+    grid-template-columns: 2em fit-content(1fr) 270px;
+    grid-template-rows: 50% 1fr 2em;
+}
+
+.featuredImage {
+    display: grid;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    max-width: 800px;
+    /* background-color: var(--color-bg); */
+}
+
+.titleBin {
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 10em 1fr); */
+    grid-gap: .5em;
+    grid-auto-flow: dense;     
+    margin-top: 80%;
+    max-width: 270px;
+   
+    
+}
+
+/* ----------------------------------------------- */
+
+
+/* CONTAINER GRID */
+.interviewContainer {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 8em;
+    grid-gap: .5em;
+    grid-auto-flow: dense;    
+    max-width: 900px;
+    background-color: var(--color-card);
+    /* border: 3px solid #DBDBDB; */
+    box-shadow:  0px 0px 30px var(--color-bg-gray-dark);
+    border-radius: 10px;
+}
+/* ----------------------------------------------- */
+
+.episode {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-template-rows: repeat(4, 10em);
+    background-color: brown;
+}
+
+
+.article {
+    display: grid;
+    grid-row: 1;
+}
+
+.post-share {
+    display: grid;
+    grid-row: 2;
+}
+
+/* ARTICLE */
+
+p {
+    font: 400 1.5em Spectral, serif;
+}
+
+
+/* PEOPLE */
+
+.person {
+    font: 400 .8em JetBrains-Mono, sans-serif;
+}
+
+.interviewer {
+    
+}
+
+.one {
+    background-color:rgba(63, 191, 127, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}
+
+.two {
+    background-color:rgba(223, 142, 37, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}
+
+.three {
+    background-color:rgba(63, 129, 191, 0.5);
+    padding: 0px 10px 0 10px;
+    border-radius: 10% 20% 40% 20%;
+}

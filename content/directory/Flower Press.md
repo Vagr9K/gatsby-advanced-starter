@@ -1,6 +1,6 @@
 ---
 title: "Flower Press"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.theflowerpress.net/"
 twit: ""
 inst: ""

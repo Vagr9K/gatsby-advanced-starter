@@ -30,7 +30,8 @@ class DirectoryPostListing extends React.Component {
             */}
             <div class="directoryListItem">
             <a href={post.website} target="_blank"> <li> {post.title} </li></a>
-            {/* <PostTags tags={post.tags} /> */}
+            
+            <PostTags tags={post.tags} />
             {/* include social handle, make a new component */}
             </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import Intro from "../components/Layout/Intro";
+import Headline from "../components/Intro/Headline";
 import PostTags from "../components/Filters/PostTags";
 import PostCats from "../components/Filters/PostCats";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
@@ -20,7 +20,7 @@ export default class CategoryTemplate extends React.Component {
           <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
 
           <div className="container"> 
-          <Intro />
+          <Headline />
           
             <div className="tagBox directoryBlock">
                 <article className="blockTitle">Tags</article>

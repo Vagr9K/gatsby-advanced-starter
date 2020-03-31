@@ -1,6 +1,6 @@
 ---
 title: "Allovus"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.allovus.com/"
 twit: "https://twitter.com/AllovusDesign"
 inst: "https://www.instagram.com/allovusdesign"

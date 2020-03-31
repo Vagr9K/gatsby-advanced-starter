@@ -1,6 +1,6 @@
 ---
 title: "Seattle Central College"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://creativearts.seattlecentral.edu/programs/graphic-design"
 twit: ""
 inst: ""

@@ -1,6 +1,6 @@
 ---
 title: "3 Crown Creative"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://3crowncreative.com/"
 twit: ""
 inst: ""

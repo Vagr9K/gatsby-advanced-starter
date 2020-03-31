@@ -1,6 +1,6 @@
 ---
 title: "Dulce Design co"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://www.dulcedesign.com/"
 twit: ""
 inst: "https://www.instagram.com/dulcedesigncompany"

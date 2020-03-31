@@ -1,6 +1,6 @@
 ---
 title: "Smith"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.smith.co/"
 twit: "https://twitter.com/HumansofSMITH"
 inst: "https://www.instagram.com/humansofsmith"

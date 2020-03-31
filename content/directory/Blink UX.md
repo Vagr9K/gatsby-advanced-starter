@@ -1,6 +1,6 @@
 ---
 title: "Blink UX"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://blinkux.com/"
 twit: "https://twitter.com/BlinkUX"
 inst: ""

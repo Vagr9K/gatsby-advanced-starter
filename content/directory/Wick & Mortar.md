@@ -1,6 +1,6 @@
 ---
 title: "Wick & Mortar"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.wickandmortar.com/"
 twit: "https://twitter.com/wickandmortar"
 inst: "https://www.instagram.com/wickandmortar"

@@ -1,6 +1,6 @@
 ---
 title: "The Creative Group"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.roberthalf.com/"
 twit: "https://twitter.com/roberthalf"
 inst: "https://www.instagram.com/roberthalf"

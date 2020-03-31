@@ -1,6 +1,6 @@
 ---
 title: "Pleyground"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://pleyground.design/"
 twit: "https://twitter.com/pley_ground"
 inst: "https://www.instagram.com/pley.ground"

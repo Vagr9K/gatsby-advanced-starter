@@ -1,6 +1,26 @@
-@import url(~sanitize.css);
-/* Use if cross browser testing gets wonky */
+/* IMPORTS FOR OTHER SECTIONS */
+@import url(~sanitize.css);         /* For cross browser wonkiness */
+@import url(./fonts.css);           /* All hosted and external fonts */
+@import url(./mediaQueries.css);    /* Tablet and Mobile styles */
+@import url(./interview.css);       /* Interview page has basic bg and fonts & its own layout */
 
+/* COLOR VARIABLES */
+:root {
+    --color-bg-coral: rgba(255, 173, 161, 1);
+    --color-bg-coral-dark: rgb(247, 130, 112);
+    --color-bg-gray: rgb(229, 229, 229);
+    --color-bg-gray-dark: rgb(214, 214, 214);
+    --color-card: #FFFFFF;
+    --color-listingLink: #2e2e2e;
+    --color-listing-purple: #714060;
+    --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
+    --color-listing-blockBG: rgba(113, 64, 96, 0.05);
+    --color-positionTest: #2fdf29;
+}
+/* ----------------------------------------------- */
+
+
+/* WHOLE SITE STYLES */
 * { }
 
 body {
@@ -9,27 +29,27 @@ body {
 }
 
 a {
-    color:#2e2e2e;
+    color:var(--color-listingLink);
     text-decoration: none;
 }
 
-
 a:visited {  }
 a:hover {   cursor: pointer; }
+/* ----------------------------------------------- */
 
 
-
-/* background pattern */
+/* BACKGROUND PATTERN */
 .pattern {
     background: url(../../static/pattern04c.png);
-    background-color: rgba(255, 173, 161, 1);
+    background-color: var(--color-bg-coral);
     display: grid;
     grid-template-columns: 2em 1fr 2em;
     grid-template-rows: 2em 1fr 2em;
 }
+/* ----------------------------------------------- */
 
 
-/* container grid */
+/* CONTAINER GRID */
 .container {
     display: grid;
     grid-row: 2;
@@ -39,15 +59,13 @@ a:hover {   cursor: pointer; }
     grid-gap: .5em;
     grid-auto-flow: dense;    
     max-width: 1200px;
-    background-color: #FFFFFF;
-    box-shadow:  0px 0px 30px rgb(247, 130, 112);
+    background-color: var(--color-card);
+    box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
     border-radius: 10px;
 }   
 
-.home {
+.logo {
     display: grid;
-    /* position: sticky;
-    top: 2em; */
     grid-column-start: 1;
     grid-column-end: 2;
     background-image: url(../../static/mark_strokes.svg);
@@ -58,14 +76,15 @@ a:hover {   cursor: pointer; }
 
 .topSpacer, .bottomSpacer {
     display: grid;
-    /* background-color: #ffffff; */
+    /* background-color: var(--color-positionTest); */
     grid-column-start: 3;
     grid-column-end: 13;
     grid-row: span 1;
 }
+/* ----------------------------------------------- */
 
 
-/* Introductory bits */
+/* INTRODUCTION */
 .intro {
     display: grid;
     grid-column-start: 2;
@@ -73,7 +92,6 @@ a:hover {   cursor: pointer; }
     grid-auto-flow: row;
     grid-template-columns: repeat(10, minmax(0,1fr));
     grid-gap: .5em;
-    /* background-color: #888888; */
     margin: 6em 0 3em 0;
 
 }
@@ -82,7 +100,8 @@ a:hover {   cursor: pointer; }
     padding: .5em 0 0 0;
     grid-column-start: 1;
     grid-column-end: 7;
-    font: 400 1.5em JetBrains-Mono, sans-serif;
+    font: 400 2.3em Spectral, serif;
+    line-height: 140%;
 }
 
 .introSubmit {
@@ -93,20 +112,20 @@ a:hover {   cursor: pointer; }
     font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
+.introSubmit form {
+    
+}
 
-
-
+/* INTERVIEW PROMOS */
 .podcast {
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: brown;
+    background-color: var(--color-positionTest);
 }
+/* ----------------------------------------------- */
 
 
-
-
-
-/* Main grid and diretory listings */
+/* DIRECTORY LISTING */
 .directory {
     display: grid;
     grid-column-start: 2;
@@ -133,24 +152,24 @@ a:hover {   cursor: pointer; }
 }
 
 .directoryListItem:hover {
-    background: #FFFFFF;
-    border: .1em solid #714060;
+    background: var(--color-card);
+    border: .1em solid var(--color-listing-purple);
     padding: .2em .4em .1em .4em;
     margin: -.3em -.4em -.2em -.5em;
-    box-shadow: -.3em .3em 0px rgba(113, 64, 96, 0.3);
+    box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
     text-decoration: none;
 }
 
 .blockTitle {
     font-style: italic;
-    background-color: rgba(113, 64, 96, 0.05);
-    color: #714060;
+    background-color: var(--color-listing-blockBG);
+    color: var(--color-listing-purple);
     margin: 1em 0 .5em 0;
 }
+/* ----------------------------------------------- */
 
 
-
-/* Cats and Tags */
+/* CATEGORY & TAG CONTAINER*/
 .tagBox {
     grid-column-start: 9;
     grid-column-end: 12;
@@ -160,7 +179,7 @@ a:hover {   cursor: pointer; }
 .post-tag-container a, .post-cat-container a, .introSubmit a {
     font-style: italic;
     line-height: 1.6em;
-    color: #714060;
+    color: var(--color-listing-purple);
     display: block;
 }
 
@@ -171,82 +190,6 @@ a:hover {   cursor: pointer; }
 
 .post-tag-container a:hover, .post-cat-container a:hover, .introSubmit a:hover {
     text-decoration: underline;
-    color:#2e2e2e;
+    color: var(--color-listingLink);
 }
-
-.post-tag-container a:active, .post-cat-container a:active, introSubmit a:active {  
-    background-color: rgba(255, 255, 255, 0.25); }
-
-
-
-
-
-
-/* MOBILE SCREEN */
-@media screen and (max-width: 480px) { 
-    .pattern {
-        grid-template-columns: .5em 1fr .5em;
-        grid-template-rows: .5em 1fr .5em;
-    }
-    
-    .container {
-        grid-template-rows: 1fr auto 8em;
-        grid-gap: .5em;
-    }
-
-    .home {
-        display: none;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .intro {
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(10, 1fr);
-        grid-gap: .5em;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-
-    .introHello {
-        padding: .5em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 12;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-    
-    .introSubmit {
-        padding: 1em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 10;
-        align-self: end;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
-
-    .tagBox {
-        display: none;
-    }
-
-    .directory {
-        display: grid;
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-row-start: 2;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: .5em;
-    }
-
-    .directoryBlock {
-        grid-column: span 4;
-        font: 400 1.5em JetBrains-Mono, sans-serif;
-    }
-    
-    .directoryBlockFilter {
-        grid-column: span 4;
-        font: 400 .8em JetBrains-Mono, sans-serif;
-    }
-
-} 
-
+/* ----------------------------------------------- */

@@ -1,6 +1,6 @@
 ---
 title: "Pratt Fine Arts Center"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://www.pratt.org/"
 twit: "https://twitter.com/prattfinearts"
 inst: "https://www.instagram.com/prattfinearts"

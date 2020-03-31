@@ -1,6 +1,6 @@
 ---
 title: "Publicis"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "http://publicisseattle.com/"
 twit: "https://twitter.com/PublicisSeattle"
 inst: ""

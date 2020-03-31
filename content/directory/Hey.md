@@ -1,6 +1,6 @@
 ---
 title: "Hey,"
-cover: "./content/blog/imgs/hamburgers.png"
+featuredImage: ./-hamburgers.png
 website: "https://heyadvertising.com/"
 twit: "https://twitter.com/HeyAdvertising"
 inst: "https://www.instagram.com/heyadvertising/"
