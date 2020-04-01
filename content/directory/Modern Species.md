@@ -6,7 +6,7 @@ twit: "https://twitter.com/ModSpec"
 inst: "https://www.instagram.com/modspec"
 category: "M"
 tags:
-    - Market
+    - Pike Place Market
     - small
     - branding
     - packaging

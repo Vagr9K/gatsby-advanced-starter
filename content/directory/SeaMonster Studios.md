@@ -1,5 +1,5 @@
 ---
-title: "Sea Monster Studios"
+title: "SeaMonster Studios"
 featuredImage: ./-hamburgers.png
 website: "https://www.seamonsterstudios.com/"
 twit: "https://twitter.com/the_seamonsters"
