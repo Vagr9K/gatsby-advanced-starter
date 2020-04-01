@@ -1,8 +1,8 @@
 /* MOBILE SCREEN */
 @media screen and (max-width: 480px) { 
     .pattern {
-        grid-template-columns: .5em 1fr .5em;
-        grid-template-rows: .5em 1fr .5em;
+        grid-template-columns: .2em 1fr .2em;
+        grid-template-rows: .2em 1fr .2em;
     }
     
     .container {
@@ -29,7 +29,7 @@
         padding: .5em 0 0 0;
         grid-column-start: 1;
         grid-column-end: 12;
-        font: 400 1em JetBrains-Mono, sans-serif;
+        font: 400 1em Spectral, serif;
     }
     
     .introSubmit {
