@@ -10,6 +10,7 @@ export default class MainLayout extends React.Component {
       <div className="layout-container">
         <Helmet>
           <meta name="description" content={config.siteDescription} />
+          <meta name="viewport" content="width=device-width" />
           <html lang="en" />
         </Helmet>
         {children}

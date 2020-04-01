@@ -1,41 +1,39 @@
 /* MOBILE SCREEN */
-@media screen and (max-width: 480px) { 
+
+@media only screen and (min-width: 400px) { 
+
     .pattern {
         grid-template-columns: .2em 1fr .2em;
         grid-template-rows: .2em 1fr .2em;
     }
-    
+
     .container {
         grid-template-rows: 1fr auto 8em;
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: .5em;
+        grid-template-areas:
+            "Logo Hello Hello Hello Hello Hello";
+        background-color: blue;
     }
 
-    .logo {
+    /* .logo {
         display: none;
         grid-column-start: 2;
         grid-column-end: 4;
-    }
+    } */
 
-    .intro {
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(10, 1fr);
-        grid-gap: .5em;
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
 
     .introHello {
         padding: .5em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 12;
+        /* grid-column-start: 1;
+        grid-column-end: 12; */
         font: 400 1em Spectral, serif;
     }
-    
-    .introSubmit {
+
+    .introContact {
         padding: 1em 0 0 0;
-        grid-column-start: 1;
-        grid-column-end: 10;
+        /* grid-column-start: 1;
+        grid-column-end: 10; */
         align-self: end;
         font: 400 1em JetBrains-Mono, sans-serif;
     }
@@ -58,11 +56,9 @@
         grid-column: span 4;
         font: 400 1.5em JetBrains-Mono, sans-serif;
     }
-    
+
     .directoryBlockFilter {
         grid-column: span 4;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
-
-} 
-
+}

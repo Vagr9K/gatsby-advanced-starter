@@ -7,14 +7,13 @@ class Headline extends Component {
     return (
       <React.Fragment>
         <div className="logo"><Link to="/"></Link></div>
-          
-          <div className="intro">
+                  
             <div className="introHello">
               Cataloging the creative studios & internal design teams of the pacific northwest. 
             </div>
 
             {/* rename this away from 'submit' */}
-            <div className="introSubmit">
+            <div className="introContact">
               <a target="_blank" href="mailto:jonny@seattlecreative.directory">Contact</a> 
               <a target="_blank" href="https://buttondown.email/creativedirectory">Subscribe</a> 
               {/* <a href="#">Add an entry</a>*/}
@@ -22,8 +21,7 @@ class Headline extends Component {
               {/* Subscribe form */}
               {/* <ButtonDown /> */}
             </div>
-          
-        </div>
+        
       </React.Fragment>  
     );
   }
