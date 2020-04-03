@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
 import urljoin from "url-join";
+import moment from "moment";
 import config from "../../../data/SiteConfig";
 
 class SEO extends Component {
@@ -10,6 +11,7 @@ class SEO extends Component {
     let description;
     let image;
     let postURL;
+
     if (postSEO) {
       const postMeta = postNode.frontmatter;
       ({ title } = postMeta);
@@ -24,12 +26,42 @@ class SEO extends Component {
       image = config.siteLogo;
     }
 
-    if (
-      !image.match(
-        `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
+    const getImagePath = imageURI => {
+      if (
+        !imageURI.match(
+          `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
+        )
       )
-    )
-      image = urljoin(config.siteUrl, config.pathPrefix, image);
+        return urljoin(config.siteUrl, config.pathPrefix, imageURI);
+
+      return imageURI;
+    };
+
+    const getPublicationDate = () => {
+      if (!postNode) return null;
+
+      if (!postNode.frontmatter) return null;
+
+      if (!postNode.frontmatter.date) return null;
+
+      return moment(postNode.frontmatter.date, config.dateFromFormat).toDate();
+    };
+
+    image = getImagePath(image);
+
+    const datePublished = getPublicationDate();
+
+    const authorJSONLD = {
+      "@type": "Person",
+      name: config.userName,
+      email: config.userEmail,
+      address: config.userLocation
+    };
+
+    const logoJSONLD = {
+      "@type": "ImageObject",
+      url: getImagePath(config.siteLogo)
+    };
 
     const blogURL = urljoin(config.siteUrl, config.pathPrefix);
     const schemaOrgJSONLD = [
@@ -65,10 +97,14 @@ class SEO extends Component {
           name: title,
           alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
           headline: title,
-          image: {
-            "@type": "ImageObject",
-            url: image
+          image: { "@type": "ImageObject", url: image },
+          author: authorJSONLD,
+          publisher: {
+            ...authorJSONLD,
+            "@type": "Organization",
+            logo: logoJSONLD
           },
+          datePublished,
           description
         }
       );
