@@ -158,7 +158,7 @@ module.exports = {
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 4, // Amount of posts displayed per listing page. Set to zero to disable paging. See the "Pagination" section.
   userName: "Advanced User", // Username to display in the author segment.
   userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
@@ -214,6 +214,14 @@ module.exports = {
 ```
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
+
+## Pagination
+
+By default the starter will show 4 posts per page. The landing page is the first page located on `/` (controlled by the `Listing` component).
+
+You can control the amount of posts via `SiteConfig` by setting the `postsPerPage: ${NUMBER}`.
+
+NOTE: You can also disable the pagination by setting the `postsPerPage: 0`. In this case the landing page will be controlled by the `Landing` component.
 
 ## NetlifyCMS
 
