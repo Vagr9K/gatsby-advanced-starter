@@ -1,9 +1,9 @@
 /* IMPORTS FOR OTHER SECTIONS */
 @import url(~sanitize.css);         /* For cross browser wonkiness */
-@import url(fonts.css);           /* All hosted and external fonts */
-@import url(800.css);
-@import url(1200.css);    /* Tablet and Mobile styles */
-@import url(interview.css);       /* Interview page has basic bg and fonts & its own layout */
+@import url(fonts.css);             /* All hosted and external fonts */
+@import url(800.css);               /* Mobile styles */
+@import url(1200.css);              /* Desktop styles */
+@import url(interview.css);         /* Interview page has basic bg and fonts & its own layout */
 
 /* COLOR VARIABLES */
 :root {
