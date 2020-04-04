@@ -3,7 +3,7 @@ title: "Retail Voodoo"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.retail-voodoo.com/"
 twit: "https://twitter.com/RetailVoodoo"
-inst: ""
+inst: "https://instagram.com/retailvoodoo/"
 category: "R"
 tags:
     - Laurelhurst
