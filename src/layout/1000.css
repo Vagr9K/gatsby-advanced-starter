@@ -1,6 +1,6 @@
 /* DESKTOP SCREEN */
 
-@media only screen and (min-width: 1000px) { 
+@media only screen and (min-width: 100px) { 
 
     /* BACKGROUND PATTERN */
     .pattern {
@@ -23,11 +23,13 @@
         grid-gap: .5em;
         grid-auto-flow: dense;    
         max-width: 1200px;
-        background-color: yellow;
+        background-color: var(--color-card);
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
         grid-template-areas:
-            "Logo Hello Hello Hello Hello Hello Hello . Contact Contact";
+            "Logo Hello Hello Hello Hello Hello . . . Contact . ."
+            ". Directory Directory Directory Directory Directory Directory Directory . Tagbox Tagbox ."
+            ;
     }   
 
     .logo {
@@ -41,13 +43,13 @@
         margin: 1em .5em 0 1em;
     }
 
-    .topSpacer, .bottomSpacer {
+    /* .topSpacer, .bottomSpacer {
         display: grid;
-        /* background-color: var(--color-test); */
+        background-color: blue;
         grid-column-start: 3;
         grid-column-end: 13;
         grid-row: span 1;
-    }
+    } */
     /* ----------------------------------------------- */
 
 
@@ -97,9 +99,10 @@
     /* DIRECTORY LISTING */
     .directory {
         display: grid;
-        grid-column-start: 2;
+        grid-area: Directory;
+        /* grid-column-start: 2;
         grid-column-end: 8;
-        grid-row-start: 2;
+        grid-row-start: 2; */
         grid-auto-flow: row;
         grid-template-columns: repeat(6, minmax(0,1fr));
         grid-gap: .5em;
@@ -140,9 +143,11 @@
 
     /* CATEGORY & TAG CONTAINER*/
     .tagBox {
-        grid-column-start: 9;
+        /* background-color: var(--color-test); */
+        grid-area: Tagbox;
+        /* grid-column-start: 9;
         grid-column-end: 12;
-        grid-row-start: 2;
+        grid-row-start: 2; */
     }
 
     .post-tag-container a, .post-cat-container a, .introContact a {

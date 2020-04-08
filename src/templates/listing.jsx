@@ -130,7 +130,7 @@ class Listing extends React.Component {
             <div className="directoryBlock"><div className="blockTitle">#</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryNumbers} /></div>
           </div>
 
-          <div className="bottomSpacer"></div>
+          {/* <div className="bottomSpacer"></div> */}
 
           {/* {this.renderPaging()} */}
         </div>
