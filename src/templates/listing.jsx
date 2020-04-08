@@ -77,11 +77,11 @@ class Listing extends React.Component {
           <div className="blockTitle">Tags</div>
           <PostCats cats={allCats} />
           <PostTags tags={allTags} />
-      </div>
+        </div>
 
-          {/* <div className="podcast">
+          
             <PostListing postEdges={postEdges} />   
-          </div>  */}
+          
 
           
           

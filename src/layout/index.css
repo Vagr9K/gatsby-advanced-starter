@@ -38,4 +38,13 @@ a {
 
 a:visited {  }
 a:hover {   cursor: pointer; }
+
+h1 {
+    font: 400 2.5em Spectral, serif;
+}
+
+h2 {
+    font: 600 1.2em Spectral, serif;
+}
+
 /* ----------------------------------------------- */

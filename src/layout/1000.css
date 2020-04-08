@@ -19,7 +19,7 @@
         grid-row: 2;
         grid-column: 2;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 1fr auto 8em;
+        grid-template-rows: 1fr auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
         max-width: 1200px;
@@ -27,7 +27,8 @@
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
         grid-template-areas:
-            "Logo Hello Hello Hello Hello Hello . . . Contact . ."
+            "Logo Hello Hello Hello Hello Hello Hello . . . . ."
+            ". Interviews Interviews Interviews Interviews Interviews Interviews . . Contact . ."
             ". Directory Directory Directory Directory Directory Directory Directory . Tagbox Tagbox ."
             ;
     }   
@@ -67,10 +68,11 @@
 
     .introHello {
         padding: .5em 0 0 0;
+        margin: 2em 0 0 0;
         grid-area: Hello;
         /* grid-column-start: 1;
         grid-column-end: 7; */
-        font: 400 2.3em Spectral, serif;
+        /* font: 400 2.5em Spectral, serif; */
         line-height: 140%;
     }
 
@@ -89,9 +91,14 @@
 
     /* INTERVIEW PROMOS */
     .podcast {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        background-color: var(--color-test);
+        display: grid;
+        grid-area: Interviews;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(6, minmax(0,1fr));
+    }
+
+    .podcast a {
+        grid-column: span 2;
     }
     /* ----------------------------------------------- */
 
@@ -100,6 +107,7 @@
     .directory {
         display: grid;
         grid-area: Directory;
+        /* margin: 6em 0 0 0; */
         /* grid-column-start: 2;
         grid-column-end: 8;
         grid-row-start: 2; */
@@ -136,15 +144,16 @@
         font-style: italic;
         background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
-        margin: 1em 0 .5em 0;
+        /* margin: 1em 0 .5em 0; */
     }
     /* ----------------------------------------------- */
 
 
     /* CATEGORY & TAG CONTAINER*/
     .tagBox {
-        /* background-color: var(--color-test); */
         grid-area: Tagbox;
+        /* margin: 6em 0 0 0; */
+        /* background-color: var(--color-test); */
         /* grid-column-start: 9;
         grid-column-end: 12;
         grid-row-start: 2; */

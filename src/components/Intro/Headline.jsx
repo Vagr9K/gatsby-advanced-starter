@@ -9,7 +9,7 @@ class Headline extends Component {
         <div className="logo"><Link to="/"></Link></div>
                   
             <div className="introHello">
-              Cataloging the creative studios & internal design teams of the pacific northwest. 
+              <h1>Cataloging the creative studios & internal design teams of the pacific northwest. </h1>
             </div>
 
             {/* rename this away from 'submit' */}
@@ -20,6 +20,7 @@ class Headline extends Component {
             
               {/* Subscribe form */}
               {/* <ButtonDown /> */}
+
             </div>
         
       </React.Fragment>  

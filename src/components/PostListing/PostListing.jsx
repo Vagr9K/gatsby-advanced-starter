@@ -21,12 +21,13 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <div className="podcast">
         {/* This is the post list that create a link */}
         {/* add in the cover image here too */}
+        
         {postList.map(post => (
           <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
+            <h2>{post.title}</h2>
           </Link>
         ))}
       </div>
