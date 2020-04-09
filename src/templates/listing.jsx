@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
@@ -11,6 +12,9 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Headline from "../components/Intro/Headline";
 
+if (typeof window !== 'undefined') {
+  ReactDOM.render(<Layout />, document.getElementById("root"));
+}
 
 class Listing extends React.Component {
 
