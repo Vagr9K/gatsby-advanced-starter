@@ -119,6 +119,7 @@ a:hover {   cursor: pointer; }
 
 .email-form input {
     font: 400 1em JetBrains-Mono, sans-serif;
+    padding: .2em 0 .1em .2em;
 }
 
 .email-form input:focus {
@@ -135,7 +136,7 @@ a:hover {   cursor: pointer; }
     background: var(--color-listing-purple);
     border: .1em solid var(--color-card);
     padding: .3em .4em .2em .4em;
-    margin: 0 0 0 .5em;
+    margin: 0 0 .1em .5em;
 }
 
 .email-form button:hover {
