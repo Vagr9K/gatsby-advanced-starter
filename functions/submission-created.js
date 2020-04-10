@@ -3,7 +3,6 @@ const fetch = require('node-fetch')
 const { EMAIL_TOKEN } = process.env
 exports.handler = async event => {
   const email = JSON.parse(event.body).payload.email
-  const tags = JSON.parse("embeddedFormNetlify").payload.tags
   console.log(`Recieved a submission: ${email}`)
   return fetch('https://api.buttondown.email/v1/subscribers', {
     method: 'POST',
@@ -11,7 +10,7 @@ exports.handler = async event => {
       Authorization: `Token ${EMAIL_TOKEN}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email }), tags
+    body: JSON.stringify({ email,"tags":["embeddedFormNetlify"] }), 
   })
     .then(response => response.json())
     .then(data => {
