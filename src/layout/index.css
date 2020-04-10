@@ -105,16 +105,45 @@ a:hover {   cursor: pointer; }
 }
 
 .introSubmit {
-    padding: 1em 0 0 0;
     grid-column-start: 8;
     grid-column-end: 11;
     align-self: end;
     font: 400 .8em JetBrains-Mono, sans-serif;
 }
 
-.introSubmit form {
-    
+
+/* SUBSCRIBE */
+.email-form {
+    margin: .5em 0 .5em 0;
 }
+
+.email-form input {
+    font: 400 1em JetBrains-Mono, sans-serif;
+}
+
+.email-form input:focus {
+    box-shadow: 0 0 5px var(--color-bg-coral);
+    background-color: var(--color-card);
+    outline: none;
+    outline-offset: none;
+}
+
+.email-form button {
+    color: var(--color-card);
+    font: 400 1em JetBrains-Mono, sans-serif;
+    text-transform: uppercase;
+    background: var(--color-listing-purple);
+    border: .1em solid var(--color-card);
+    padding: .3em .4em .2em .4em;
+    margin: 0 0 0 .5em;
+}
+
+.email-form button:hover {
+    box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
+    cursor: pointer;
+}
+
+
 
 /* INTERVIEW PROMOS */
 .podcast {
