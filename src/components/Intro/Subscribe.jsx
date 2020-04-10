@@ -1,9 +1,9 @@
 import React from "react"
 
 export default class Subscribe extends React.Component {
-  state = {
-    email: "",
-  }
+//   state = {
+//     email: "",
+//   }
 
 //   handleInputChange = event => {
 //     const target = event.target
