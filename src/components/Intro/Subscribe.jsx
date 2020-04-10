@@ -16,10 +16,19 @@ export default class Subscribe extends React.Component {
     })
   }
 
-  handleSubmit = event => {
-    event.preventDefault()
-    // alert(`Welcome ${this.state.email} `)
-  }
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+//   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     return (
