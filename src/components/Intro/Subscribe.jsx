@@ -3,55 +3,65 @@ import React from "react"
 export default class Subscribe extends React.Component {
   state = {
     email: "",
-    lastName: "",
   }
 
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
+//   handleInputChange = event => {
+//     const target = event.target
+//     const value = target.value
+//     const name = target.name
 
-    this.setState({
-      [name]: value,
-    })
-  }
+//     this.setState({
+//       [name]: value,
+//     })
+//   }
 
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
 
-    e.preventDefault();
-  };
+// handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-//   handleChange = e => this.setState({ [e.target.name]: e.target.value });
+// handleSubmit = e => {
+// fetch("/", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//     body: encode({ "form-name": "contact", ...this.state })
+// })
+//     .then(() => alert("Success!"))
+//     .catch(error => alert(error));
+
+// e.preventDefault();
+// };
+
+
+
+
+  
+  
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-          <form class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field"></form>
+
+        <form class="email-form" name="Subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          
           <div hidden aria-hidden="true">
             <label>
                 Don’t fill this out if you're human: 
                 <input name="bot-field" />
             </label>
           </div>
-        <input type="hidden" value="python" name="embeddedFormNetlify" />
+        
         <label>
           <input
             type="email"
-            name="data-netlify"
             placeholder="Email"
             value={this.state.email}
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
             required
           />
+
+          <input type="hidden" value="python" name="embeddedFormNetlify" />
+          <input type="hidden" name="form-name" value="Subscribe" />
         </label>
-        <button type="submit">Subscrie</button>
+
+        <button type="submit">Subscribe</button>
       </form>
     )
   }
