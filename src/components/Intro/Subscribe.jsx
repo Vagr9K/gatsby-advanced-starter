@@ -52,8 +52,6 @@ export default class Subscribe extends React.Component {
           <input
             type="email"
             placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
             required
           />
 
