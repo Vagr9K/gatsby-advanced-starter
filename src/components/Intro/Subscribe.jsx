@@ -50,7 +50,6 @@ export default class Subscribe extends React.Component {
         
         <label>
           <input name="Subscribe" type="email" placeholder="Email" required />
-          <input type="hidden" value="python" name="embeddedFormNetlify" />
           <input type="hidden" name="form-name" value="Subscribe" />
         </label>
 
