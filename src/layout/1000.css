@@ -1,12 +1,9 @@
 /* DESKTOP SCREEN */
 
-@media only screen and (min-width: 100px) { 
+@media only screen and (min-width: 1250px) { 
 
     /* BACKGROUND PATTERN */
     .pattern {
-        background: url(../../static/pattern04c.png);
-        background-color: var(--color-bg-coral);
-        display: grid;
         grid-template-columns: 2em 1fr 2em;
         grid-template-rows: 2em 1fr 2em;
     }
@@ -18,8 +15,8 @@
         display: grid;
         grid-row: 2;
         grid-column: 2;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 1fr auto auto 8em;
+        grid-template-columns: 2em repeat(10, 1fr) 2em;
+        grid-template-rows: 1fr auto auto auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
         max-width: 1200px;
@@ -27,9 +24,12 @@
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
         grid-template-areas:
-            "Logo Hello Hello Hello Hello Hello Hello . . . . ."
-            ". Interviews Interviews Interviews Interviews Interviews Interviews . . Contact . ."
-            ". Directory Directory Directory Directory Directory Directory Directory . Tagbox Tagbox ."
+            ".          .           .           .           .           Logo        Logo        .           .           .           .           ."
+            ".          Hello       Hello       Hello       Hello       Hello       Hello       .           .           .           .           ."
+            ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           Contact     Contact     ."
+            ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
+            ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
+            /* ". . Footer . . " */
             ;
     }   
 
@@ -37,11 +37,16 @@
         display: grid;
         grid-area: Logo;
         /* grid-column-start: 1;
-        grid-column-end: 2; */
+        grid-column-end: 2; */ 
         background-image: url(../../static/mark_strokes.svg);
         background-repeat: no-repeat;
-        background-size: 100%;
-        margin: 1em .5em 0 1em;
+        width: 3em;       
+        height: 3em;
+        margin: 2em 0 0 0;
+        justify-self: stretch;
+        align-self: center;
+        /* background-attachment: fixed; */
+        background-position: center;
     }
 
     /* .topSpacer, .bottomSpacer {
@@ -68,7 +73,7 @@
 
     .introHello {
         padding: .5em 0 0 0;
-        margin: 2em 0 0 0;
+        margin: 0 0 0 0;
         grid-area: Hello;
         /* grid-column-start: 1;
         grid-column-end: 7; */
@@ -82,6 +87,7 @@
         /* grid-column-start: 8;
         grid-column-end: 11; */
         align-self: end;
+        text-align: right;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
@@ -89,12 +95,16 @@
         
     }
 
+    .introContact a {
+
+    }
+
     /* INTERVIEW PROMOS */
     .podcast {
         display: grid;
         grid-area: Interviews;
         grid-auto-flow: row;
-        grid-template-columns: repeat(6, minmax(0,1fr));
+        /* grid-template-columns: repeat(6, minmax(0,1fr)); */
     }
 
     .podcast a {
@@ -111,8 +121,8 @@
         /* grid-column-start: 2;
         grid-column-end: 8;
         grid-row-start: 2; */
-        grid-auto-flow: row;
-        grid-template-columns: repeat(6, minmax(0,1fr));
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(10, minmax(0,1fr));
         grid-gap: .5em;
     }
 
@@ -122,7 +132,7 @@
     }
 
     .directoryBlockFilter {
-        grid-column: span 4;
+        /* grid-column: span 4; */
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
@@ -151,19 +161,22 @@
 
     /* CATEGORY & TAG CONTAINER*/
     .tagBox {
+        display: grid;
         grid-area: Tagbox;
-        /* margin: 6em 0 0 0; */
+        margin: 6em 0 2em 0;
+        text-align: center;
         /* background-color: var(--color-test); */
         /* grid-column-start: 9;
         grid-column-end: 12;
         grid-row-start: 2; */
     }
 
-    .post-tag-container a, .post-cat-container a, .introContact a {
-        font-style: italic;
+    .post-tag-container a, .post-cat-container a {
+        /* font-style: italic; */
         line-height: 1.6em;
         color: var(--color-listing-purple);
-        display: block;
+        display: inline-block;
+        margin: 0 .8em 0 0;
     }
 
     .post-cat-container a {

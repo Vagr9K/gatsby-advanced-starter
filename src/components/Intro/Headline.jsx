@@ -6,7 +6,8 @@ class Headline extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="logo"><Link to="/"></Link></div>
+            
+            <div className="logo"><Link to="/"></Link></div>
                   
             <div className="introHello">
               <h1>Cataloging the creative studios & internal design teams of the pacific northwest. </h1>

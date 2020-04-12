@@ -1,7 +1,7 @@
 /* IMPORTS FOR OTHER SECTIONS */
 @import url(~sanitize.css);         /* For cross browser wonkiness */
 @import url(fonts.css);             /* All hosted and external fonts */
-/* @import url(400.css);               Mobile styles */
+@import url(400.css);               /* Mobile styles */
 @import url(1000.css);              /* Desktop styles */
 @import url(interview.css);         /* Interview page has basic bg and fonts & its own layout */
 
@@ -12,9 +12,9 @@
     --color-bg-gray: rgb(229, 229, 229);
     --color-bg-gray-dark: rgb(214, 214, 214);
     --color-text: rgb(41, 41, 41);
-    --color-card: rgb(255, 255, 242);
+    --color-card: rgb(255, 255, 255);
     --color-listingLink: #2e2e2e;
-    --color-listing-purple: #714060;
+    --color-listing-purple: #724061b6;
     --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
     --color-listing-blockBG: rgba(113, 64, 96, 0.05);
     --color-test: #2fdf29;
