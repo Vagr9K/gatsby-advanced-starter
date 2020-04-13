@@ -36,11 +36,13 @@
     .logo {
         display: grid;
         grid-area: Logo;
-        /* display: none; */
         background-image: url(../../static/mark_strokes.svg);
         background-repeat: no-repeat;
-        background-size: 100%;
-    }
+        height: 3em; 
+        margin: 2em 0 0 0;
+        align-self: center;
+        background-position: center;
+    } 
 
 
     .introHello {

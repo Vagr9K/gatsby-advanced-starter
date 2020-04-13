@@ -36,8 +36,6 @@
     .logo {
         display: grid;
         grid-area: Logo;
-        /* grid-column-start: 1;
-        grid-column-end: 2; */ 
         background-image: url(../../static/mark_strokes.svg);
         background-repeat: no-repeat;
         height: 3em; 
