@@ -40,36 +40,14 @@
         grid-column-end: 2; */ 
         background-image: url(../../static/mark_strokes.svg);
         background-repeat: no-repeat;
-        width: 3em;       
-        height: 3em;
+        height: 3em; 
         margin: 2em 0 0 0;
-        justify-self: stretch;
         align-self: center;
-        /* background-attachment: fixed; */
         background-position: center;
     }
 
-    /* .topSpacer, .bottomSpacer {
-        display: grid;
-        background-color: blue;
-        grid-column-start: 3;
-        grid-column-end: 13;
-        grid-row: span 1;
-    } */
-    /* ----------------------------------------------- */
-
-
+    
     /* INTRODUCTION */
-    /* .intro {
-        display: grid;
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(10, minmax(0,1fr));
-        grid-gap: .5em;
-        margin: 6em 0 3em 0;
-
-    } */
 
     .introHello {
         padding: .5em 0 0 0;
