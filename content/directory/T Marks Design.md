@@ -6,7 +6,7 @@ twit: "https://twitter.com/tdaddy61"
 inst: ""
 category: "T"
 tags:
-    - International Distric
+    - International District
     - small
     - branding
     - strategy

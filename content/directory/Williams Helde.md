@@ -7,7 +7,7 @@ inst: "https://www.instagram.com/williamshelde"
 category: "W"
 tags:
     - Belltown 
-    - Medium
+    - medium
     - video
     - advertising
     - branding

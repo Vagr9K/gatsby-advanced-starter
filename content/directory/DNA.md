@@ -9,7 +9,7 @@ tags:
     - Downtown
     - medium
     - strategy
-    - advertsiing
+    - advertising
     - marketing
     - video
 ---

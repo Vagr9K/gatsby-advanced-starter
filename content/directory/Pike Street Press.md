@@ -6,7 +6,7 @@ twit: "https://twitter.com/"
 inst: "https://www.instagram.com/pikestreetpress"
 category: "P"
 tags:
-    - Market
+    - Pike Place Market
     - small
     - printer
     - branding

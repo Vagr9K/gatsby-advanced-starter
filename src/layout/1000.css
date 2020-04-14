@@ -140,27 +140,21 @@
         display: grid;
         grid-area: Tagbox;
         margin: 6em 0 2em 0;
-        text-align: center;
         /* background-color: var(--color-test); */
-        /* grid-column-start: 9;
-        grid-column-end: 12;
-        grid-row-start: 2; */
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: none;
     }
 
-    .post-tag-container a, .post-cat-container a {
+    .tag-container a {
         /* font-style: italic; */
         line-height: 1.6em;
         color: var(--color-listing-purple);
-        display: inline-block;
+        /* display: inline-block; */
         margin: 0 .8em 0 0;
     }
 
-    .post-cat-container a {
-        display: inline-block;
-        margin-right: .2em;
-    }
-
-    .post-tag-container a:hover, .post-cat-container a:hover, .introContact a:hover {
+    .tag-container a:hover, .introContact a:hover {
         text-decoration: underline;
         color: var(--color-listingLink);
     }

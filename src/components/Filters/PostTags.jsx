@@ -6,7 +6,10 @@ class PostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <div className="post-tag-container">
+
+      
+      <div className="tag-container">
+        {/* General list of all tags */}
         {tags &&
           tags.map(tag => (
             <Link
@@ -16,7 +19,14 @@ class PostTags extends Component {
             >
               <a type="anchor">{tag}</a>
             </Link>
+            
           ))}
+
+          {/* Manual listing of sizes */}
+<Link to="/tags/small">small</Link>
+<Link to="/tags/medium">medium</Link>
+<Link to="/tags/large">large</Link>
+<Link to="/tags/huge">huge</Link>
       </div>
     );
   }

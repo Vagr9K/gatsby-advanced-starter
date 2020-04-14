@@ -75,7 +75,7 @@ class Listing extends React.Component {
 
         <div className="tagBox directoryBlock">
           {/* <div className="blockTitle">Tags</div> */}
-          <PostCats cats={allCats} />
+          {/* <PostCats cats={allCats} /> */}
           <PostTags tags={allTags} />
         </div>
 

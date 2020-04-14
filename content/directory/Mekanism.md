@@ -6,7 +6,7 @@ twit: "https://twitter.com/mekanism"
 inst: "https://www.instagram.com/mekanism"
 category: "M"
 tags:
-    - Capital Hill
+    - Capitol Hill
     - large
     - advertising
     - motion
