@@ -141,16 +141,13 @@
         grid-area: Tagbox;
         margin: 6em 0 2em 0;
         /* background-color: var(--color-test); */
-        text-align: justify;
-        text-justify: inter-word;
-        hyphens: none;
     }
 
     .tag-container a {
         /* font-style: italic; */
         line-height: 1.6em;
         color: var(--color-listing-purple);
-        /* display: inline-block; */
+        display: inline-block;
         margin: 0 .8em 0 0;
     }
 

@@ -8,7 +8,17 @@ class PostTags extends Component {
     return (
 
       
+      
+      
       <div className="tag-container">
+        <div className="tag-container">
+          <Link to="/tags/small">small</Link>
+          <Link to="/tags/medium">medium</Link>
+          <Link to="/tags/large">large</Link>
+          <Link to="/tags/huge">huge</Link>
+        </div>
+
+        
         {/* General list of all tags */}
         {tags &&
           tags.map(tag => (
@@ -22,11 +32,7 @@ class PostTags extends Component {
             
           ))}
 
-          {/* Manual listing of sizes */}
-<Link to="/tags/small">small</Link>
-<Link to="/tags/medium">medium</Link>
-<Link to="/tags/large">large</Link>
-<Link to="/tags/huge">huge</Link>
+
       </div>
     );
   }
