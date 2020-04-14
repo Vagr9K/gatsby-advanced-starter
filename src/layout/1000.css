@@ -24,7 +24,7 @@
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
         grid-template-areas:
-            ".          .           .           .           .           Logo        Logo        .           .           .           .           ."
+            ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           .           .           ."
             ".          Hello       Hello       Hello       Hello       Hello       Hello       .           .           .           .           ."
             ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           Contact     Contact     ."
             ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
@@ -33,7 +33,10 @@
             ;
     }   
 
-    .logo {
+
+     /* LOGOMARK */
+
+     .logo {
         display: grid;
         grid-area: Logo;
         background-image: url(../../static/mark_strokes.svg);
@@ -44,6 +47,28 @@
         background-position: center;
     }
 
+    .titleLeft, .titleRight {
+        color: var(--color-bg-coral-dark);
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+    .titleLeft {
+        display: grid;
+        grid-area: TitleLeft;
+        align-self: center;
+        justify-self: end;
+        margin: 1.8em -6.9em 0 0;
+    }
+
+    .titleRight {
+        display: grid;
+        grid-area: TitleRight;
+        align-self: center;
+        justify-self: start;
+        margin: 1.8em 0 0 -7em;
+    }
+
+    /* ----------------------------------------------- */
     
     /* INTRODUCTION */
 
@@ -74,6 +99,7 @@
     .introContact a {
 
     }
+    /* ----------------------------------------------- */
 
     /* INTERVIEW PROMOS */
     .podcast {
