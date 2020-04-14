@@ -25,7 +25,7 @@
         border-radius: 10px;
         grid-template-areas:
             ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           .           .           ."
-            ".          Hello       Hello       Hello       Hello       Hello       Hello       .           .           .           .           ."
+            ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
             ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           Contact     Contact     ."
             ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
             ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
@@ -76,9 +76,7 @@
         padding: .5em 0 0 0;
         margin: 0 0 0 0;
         grid-area: Hello;
-        /* grid-column-start: 1;
-        grid-column-end: 7; */
-        /* font: 400 2.5em Spectral, serif; */
+        text-align: center;
         line-height: 140%;
     }
 
@@ -168,6 +166,11 @@
         margin: 6em 0 2em 0;
         /* background-color: var(--color-test); */
     }
+    
+    /* 
+    cat-container
+    display none on desktop
+    display on on mobile sheet */
 
     .tag-container a {
         /* font-style: italic; */

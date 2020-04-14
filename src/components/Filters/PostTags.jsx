@@ -7,9 +7,6 @@ class PostTags extends Component {
     const { tags } = this.props;
     return (
 
-      
-      
-      
       <div className="tag-container">
         <div className="tag-container">
           <Link to="/tags/small">small</Link>
