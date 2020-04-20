@@ -3,7 +3,7 @@ title: "Seattle Central Creative Academy"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "http://seattlecentralcreativeacademy.com/"
 twit: ""
-inst: ""
+inst: "https://instagram.com/creative_academy/"
 category: "S"
 tags:
     - Capitol Hill

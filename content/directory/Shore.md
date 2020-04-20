@@ -3,7 +3,7 @@ title: "Shore"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://madebyshore.com/"
 twit: ""
-inst: ""
+inst: "https://instagram.com/madebyshore/"
 category: "S"
 tags:
     - Pioneer Square
@@ -17,6 +17,7 @@ tags:
     - ux/ui
     - engineering
     - product
+    - typography
 ---
 
 Description

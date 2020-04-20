@@ -3,7 +3,7 @@ title: "Seattle Central College"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://creativearts.seattlecentral.edu/programs/graphic-design"
 twit: ""
-inst: ""
+inst: "https://instagram.com/seattlecentral/"
 category: "S"
 tags:
     - Capitol Hill
