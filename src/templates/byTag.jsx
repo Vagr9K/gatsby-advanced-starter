@@ -2,12 +2,12 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import Headline from "../components/Intro/Headline";
 import PostTags from "../components/Filters/PostTags";
 import PostCats from "../components/Filters/PostCats";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import config from "../../data/SiteConfig";
-
+import Logo from "../components/Intro/Logo";
+import Headline from "../components/Intro/Headline";
 
 export default class TagTemplate extends React.Component {
   render() {
@@ -19,23 +19,24 @@ export default class TagTemplate extends React.Component {
       <Layout>
         <div className="pattern">
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        
+
           <div className="container"> 
-          <Headline />
-          <div className="topSpacer"></div>
+          <Logo />
+          <Headline headline={ tag } />
+          
           
             <div className="tagBox directoryBlock">
-                <article className="blockTitle">Tags</article>
-                <PostCats cats={allCats} />
+                {/* <article className="blockTitle">Tags</article> */}
+                {/* <PostCats cats={allCats} /> */}
                 <PostTags tags={allTags} />
             </div>
               
             <div className="directory">
                 <div className="directoryBlockFilter">  
-                  <article className="blockTitle">{tag}</article>
                   <DirectoryListing postEdgesDirectory={postEdges} />
                 </div>
             </div>
+
           </div>
         </div>
       </Layout>

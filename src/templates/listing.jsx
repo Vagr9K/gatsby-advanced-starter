@@ -2,7 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import Intro from "../components/Intro/Headline";
 import PostListing from "../components/PostListing/PostListing";
 import PostCats from "../components/Filters/PostCats";
 import PostTags from "../components/Filters/PostTags";
@@ -10,6 +9,7 @@ import DirectoryListing from "../components/PostListing/DirectoryPostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Headline from "../components/Intro/Headline";
+import Logo from "../components/Intro/Logo";
 
 
 class Listing extends React.Component {
@@ -70,8 +70,8 @@ class Listing extends React.Component {
 
       <div className="pattern">
         <div className="container">
-          
-        <Headline />
+        <Logo />  
+        <Headline headline={"Cataloging the creative studios & internal design teams of the pacific northwest. "} />
 
         <div className="tagBox directoryBlock">
           {/* <div className="blockTitle">Tags</div> */}

@@ -23,6 +23,7 @@
         background-color: var(--color-card);
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
+        /* min-height: 100vh; */
         grid-template-areas:
             ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           .           .           ."
             ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
@@ -132,8 +133,9 @@
     }
 
     .directoryBlockFilter {
-        /* grid-column: span 4; */
-        font: 400 .8em JetBrains-Mono, sans-serif;
+        grid-column: span 4;
+        font: 400 1em JetBrains-Mono, sans-serif;
+        grid-auto-flow: row;
     }
 
     .directoryListItem {
@@ -156,6 +158,8 @@
         color: var(--color-listing-purple);
         /* margin: 1em 0 .5em 0; */
     }
+
+    
     /* ----------------------------------------------- */
 
 
