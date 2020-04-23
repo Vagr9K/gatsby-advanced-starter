@@ -18,6 +18,7 @@
     --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
     --color-listing-blockBG: rgba(113, 64, 96, 0.05);
     --color-test: #2fdf29;
+    --text-mono-std: 400 .8em JetBrains-Mono, sans-serif;
 }
 /* ----------------------------------------------- */
 
@@ -38,13 +39,5 @@ a {
 
 a:visited {  }
 a:hover {   cursor: pointer; }
-
-h1 {
-    font: 400 2.5em Spectral, serif;
-}
-
-h2 {
-    font: 600 1.2em Spectral, serif;
-}
 
 /* ----------------------------------------------- */

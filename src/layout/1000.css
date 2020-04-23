@@ -2,6 +2,15 @@
 
 @media only screen and (min-width: 1250px) { 
 
+    h1 {
+        font: 400 2.5em Spectral, serif;
+        line-height: 140%;
+    }
+    
+    h2 {
+        font: 600 1.2em Spectral, serif;
+    }
+
     /* BACKGROUND PATTERN */
     .pattern {
         grid-template-columns: 2em 1fr 2em;
@@ -16,7 +25,7 @@
         grid-row: 2;
         grid-column: 2;
         grid-template-columns: 2em repeat(10, 1fr) 2em;
-        grid-template-rows: 1fr auto auto auto auto 8em;
+        grid-template-rows: 1fr auto auto auto auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
         max-width: 1200px;
@@ -25,9 +34,9 @@
         border-radius: 10px;
         /* min-height: 100vh; */
         grid-template-areas:
-            ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           .           .           ."
+            ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           Contact     Contact     ."
             ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
-            ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           Contact     Contact     ."
+            ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           .           .           ."
             ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
             ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
             /* ". . Footer . . " */
@@ -38,53 +47,52 @@
      /* LOGOMARK */
 
      .logo {
-        display: grid;
+        /* display: grid;
         grid-area: Logo;
         background-image: url(../../static/mark_strokes.svg);
         background-repeat: no-repeat;
         height: 3em; 
         margin: 2em 0 0 0;
         align-self: center;
-        background-position: center;
+        background-position: center; */
     }
 
     .titleLeft, .titleRight {
-        color: var(--color-bg-coral-dark);
-        font: 400 .8em JetBrains-Mono, sans-serif;
+        /* color: var(--color-bg-coral-dark);
+        font: 400 .8em JetBrains-Mono, sans-serif; */
     }
 
     .titleLeft {
-        display: grid;
+        /* display: grid;
         grid-area: TitleLeft;
         align-self: center;
         justify-self: end;
-        margin: 1.8em -6.9em 0 0;
+        margin: 1.8em -6.9em 0 0; */
     }
 
     .titleRight {
-        display: grid;
+        /* display: grid;
         grid-area: TitleRight;
         align-self: center;
         justify-self: start;
-        margin: 1.8em 0 0 -7em;
+        margin: 1.8em 0 0 -7em; */
     }
 
     /* ----------------------------------------------- */
     
     /* INTRODUCTION */
-
     .introHello {
-        padding: .5em 0 0 0;
+        /* padding: .5em 0 0 0;
         margin: 0 0 0 0;
-        grid-area: Hello;
+        grid-area: Hello; */
         text-align: center;
         line-height: 140%;
     }
 
     .introContact {
-        padding: 1em 0 0 0;
+        margin: 2.2em 0 0 0;
         grid-area: Contact;
-        align-self: end;
+        align-self: center;
         text-align: right;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
