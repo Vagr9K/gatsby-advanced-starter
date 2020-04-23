@@ -82,11 +82,7 @@
     
     /* INTRODUCTION */
     .introHello {
-        /* padding: .5em 0 0 0;
-        margin: 0 0 0 0;
-        grid-area: Hello; */
         text-align: center;
-        line-height: 140%;
     }
 
     .introContact {
@@ -126,8 +122,8 @@
     }
 
     .directoryBlock {
+        display: grid;
         grid-column: span 2;
-        font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
     .directoryBlockFilter {

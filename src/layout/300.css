@@ -25,7 +25,7 @@
         display: grid;
         grid-row: 2;
         grid-column: 2;
-        grid-template-columns: 2em repeat(6, 1fr) 2em;
+        grid-template-columns: 1.5em repeat(6, 1fr) 1.5em;
         grid-template-rows: 1fr auto auto auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
@@ -39,7 +39,7 @@
             ". Interviews   Interviews  Interviews  Interviews  Interviews  Interviews      ."
             ". Contact      Contact     Contact     Contact     Contact     Contact         ."
             ". Tagbox       Tagbox      Tagbox      Tagbox      Tagbox      Tagbox          ."
-            ". .            Directory   Directory   Directory   Directory   .               ."
+            ". Directory    Directory   Directory   Directory   Directory   Directory       ."
             /* ". . Footer . . " */
             ;
     }  
@@ -82,6 +82,7 @@
     
     /* INTRODUCTION */
     .introHello {
+        display: grid;
         grid-area: Hello;
         padding: .5em 0 0 0;
         margin: 0 0 0 0;
@@ -90,10 +91,8 @@
     }
 
     .introContact {
-        /* padding: 1em 0 0 0; */
+        display: grid;
         grid-area: Contact;
-        /* align-self: end; */
-        /* text-align: right; */
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
@@ -126,7 +125,9 @@
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
+        /* by filter style */
     .directoryBlockFilter {
+        display: grid;
         grid-column: span 4;
         font: 400 1em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;
