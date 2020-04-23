@@ -1,43 +1,40 @@
-/* DESKTOP SCREEN */
+/* MOBILE SCREEN */
 
-@media only screen and (min-width: 1250px) { 
+@media only screen and (min-width: 300px) { 
 
     /* BACKGROUND PATTERN */
     .pattern {
-        grid-template-columns: 2em 1fr 2em;
+        background: url(../../static/pattern04c.png);
+        background-color: var(--color-bg-coral);
+        display: grid;
+        grid-template-columns: .5em 1fr .5em;
         grid-template-rows: 2em 1fr 2em;
     }
     /* ----------------------------------------------- */
 
-
-    /* CONTAINER GRID */
     .container {
         display: grid;
         grid-row: 2;
         grid-column: 2;
-        grid-template-columns: 2em repeat(10, 1fr) 2em;
+        grid-template-columns: 2em repeat(6, 1fr) 2em;
         grid-template-rows: 1fr auto auto auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
-        max-width: 1200px;
+        max-width: 800px;
         background-color: var(--color-card);
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
-        /* min-height: 100vh; */
         grid-template-areas:
-            ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           .           .           ."
-            ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
-            ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           Contact     Contact     ."
-            ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
-            ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
+            ".      Logo        .           .           .           ."
+            ".      Hello       Hello       Hello       Hello       ."
+            ".      Interviews  Interviews  Interviews  Interviews  ."
+            ".      Tagbox      Tagbox      Tagbox      Tagbox      ."
+            ".      Directory   Directory   Directory   Directory   ."
             /* ". . Footer . . " */
             ;
-    }   
+    }  
 
-
-     /* LOGOMARK */
-
-     .logo {
+    .logo {
         display: grid;
         grid-area: Logo;
         background-image: url(../../static/mark_strokes.svg);
@@ -72,7 +69,6 @@
     /* ----------------------------------------------- */
     
     /* INTRODUCTION */
-
     .introHello {
         padding: .5em 0 0 0;
         margin: 0 0 0 0;
@@ -84,18 +80,13 @@
     .introContact {
         padding: 1em 0 0 0;
         grid-area: Contact;
+        /* grid-column-start: 8;
+        grid-column-end: 11; */
         align-self: end;
         text-align: right;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
-    .introContact form {
-        
-    }
-
-    .introContact a {
-
-    }
     /* ----------------------------------------------- */
 
     /* INTERVIEW PROMOS */
@@ -111,14 +102,17 @@
     }
     /* ----------------------------------------------- */
 
-
     /* DIRECTORY LISTING */
     .directory {
-        grid-template-columns: repeat(10, minmax(0,1fr));
+        display: grid;
+        grid-area: Directory;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(8, minmax(0,1fr));
+        grid-gap: .5em;
     }
 
     .directoryBlock {
-        grid-column: span 2;
+        grid-column: span 4;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
@@ -149,7 +143,7 @@
         /* margin: 1em 0 .5em 0; */
     }
 
-    
+
     /* ----------------------------------------------- */
 
 
@@ -160,7 +154,7 @@
         margin: 6em 0 2em 0;
         /* background-color: var(--color-test); */
     }
-    
+
     /* 
     cat-container
     display none on desktop
@@ -179,4 +173,4 @@
         color: var(--color-listingLink);
     }
     /* ----------------------------------------------- */
-}
+    }

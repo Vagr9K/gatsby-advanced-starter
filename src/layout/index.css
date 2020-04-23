@@ -1,7 +1,7 @@
 /* IMPORTS FOR OTHER SECTIONS */
 @import url(~sanitize.css);         /* For cross browser wonkiness */
 @import url(fonts.css);             /* All hosted and external fonts */
-@import url(400.css);               /* Mobile styles */
+@import url(300.css);               /* Mobile styles */
 @import url(1000.css);              /* Desktop styles */
 @import url(interview.css);         /* Interview page has basic bg and fonts & its own layout */
 
