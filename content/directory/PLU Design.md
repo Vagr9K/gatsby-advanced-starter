@@ -3,7 +3,7 @@ title: "PLU Design"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.plu.edu/artd/"
 twit: ""
-inst: "https://www.instagram.com/plu_soac/"
+inst: "https://instagram.com/plu_artdesign/"
 category: "P"
 tags:
     - Tacoma

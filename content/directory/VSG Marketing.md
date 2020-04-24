@@ -11,6 +11,8 @@ tags:
     - branding
     - marketing
     - ux/ui
+    - strategy
+    - print
 ---
 
 Description

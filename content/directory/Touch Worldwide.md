@@ -3,7 +3,7 @@ title: "Touch Worldwide"
 cover: "./content/blog/imgs/hamburgers.png"
 website: "https://www.touchworldwide.com/"
 twit: ""
-inst: "touch_worldwide"
+inst: "https://instagram.com/touch_worldwide/"
 category: "T"
 tags:
     - Pioneer Square
