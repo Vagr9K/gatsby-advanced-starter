@@ -6,7 +6,7 @@ twit: "https://twitter.com/teague1926"
 inst: "https://www.instagram.com/teague1926"
 category: "T"
 tags:
-    - Market
+    - Pike Place Market
     - large
     - industrial
     - strategy

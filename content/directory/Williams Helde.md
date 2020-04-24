@@ -6,10 +6,11 @@ twit: ""
 inst: "https://www.instagram.com/williamshelde"
 category: "W"
 tags:
-    - Belltown 
+    - Ballard
     - Medium
     - video
     - advertising
+    - marketing
     - branding
     - strategy
 ---
