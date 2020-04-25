@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
+import PodcastListing from "../components/PostListing/PodcastListing";
 import PostCats from "../components/Filters/PostCats";
 import PostTags from "../components/Filters/PostTags";
 import DirectoryListing from "../components/PostListing/DirectoryPostListing";
@@ -80,15 +80,9 @@ class Listing extends React.Component {
         </div>
 
           
-            <PostListing postEdges={postEdges} />   
+          {/* <PodcastListing postEdges={postEdges} />    */}
           
 
-          
-          
-          
-          
-         
-            
            
           <div className="directory">
                   {/*             

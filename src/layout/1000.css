@@ -57,12 +57,12 @@
         background-position: center; */
     }
 
-    .titleLeft, .titleRight {
+    .title-left, .title-right {
         /* color: var(--color-bg-coral-dark);
         font: 400 .8em JetBrains-Mono, sans-serif; */
     }
 
-    .titleLeft {
+    .title-left {
         /* display: grid;
         grid-area: TitleLeft;
         align-self: center;
@@ -70,7 +70,7 @@
         margin: 1.8em -6.9em 0 0; */
     }
 
-    .titleRight {
+    .title-right {
         /* display: grid;
         grid-area: TitleRight;
         align-self: center;
@@ -80,12 +80,12 @@
 
     /* ----------------------------------------------- */
     
-    /* INTRODUCTION */
-    .introHello {
+    /* HEADLINE */
+    .headline {
         text-align: center;
     }
 
-    .introContact {
+    .headline-contact {
         margin: 2.2em 0 0 0;
         grid-area: Contact;
         align-self: center;
@@ -93,11 +93,11 @@
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
-    .introContact form {
+    .headline-contact form {
         
     }
 
-    .introContact a {
+    .headline-contact a {
 
     }
     /* ----------------------------------------------- */
@@ -170,15 +170,13 @@
     display none on desktop
     display on on mobile sheet */
 
-    .tag-container a {
+    .tag--link {
         /* font-style: italic; */
-        line-height: 1.6em;
-        color: var(--color-listing-purple);
-        display: inline-block;
+        line-height: 1.7em;
         margin: 0 .8em 0 0;
     }
 
-    .tag-container a:hover, .introContact a:hover {
+    .tag--link:hover, .headline-contact--link:hover {
         text-decoration: underline;
         color: var(--color-listingLink);
     }

@@ -26,7 +26,7 @@ class PostListing extends React.Component {
         {/* add in the cover image here too */}
         
         {postList.map(post => (
-          <Link to={post.path} key={post.title}>
+          <Link className="podcast--link" to={post.path} key={post.title}>
             <h2>{post.title}</h2>
           </Link>
         ))}

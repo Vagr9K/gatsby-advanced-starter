@@ -6,9 +6,9 @@ class Logo extends Component {
     return (
       <React.Fragment>
             
-            <div className="titleLeft">CREATIVE</div>
+            <div className="title-left">CREATIVE</div>
             <div className="logo"><Link to="/"></Link></div>
-            <div className="titleRight">DIRECTORY</div>
+            <div className="title-right">DIRECTORY</div>
         
       </React.Fragment>  
     );

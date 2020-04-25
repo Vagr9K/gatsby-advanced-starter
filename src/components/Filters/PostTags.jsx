@@ -25,7 +25,7 @@ class PostTags extends Component {
               style={{ textDecoration: "none" }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              <a type="anchor">{tag}</a>
+              <a className="tag--link" type="anchor">{tag}</a>
             </Link>
             
           ))}

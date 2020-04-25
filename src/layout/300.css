@@ -55,13 +55,13 @@
         background-position: center;
     }
 
-    .titleLeft, .titleRight {
+    .title-left, .title-right {
         height: 1em;
         color: var(--color-bg-coral-dark);
         font: var(--text-mono-std);
     }
 
-    .titleLeft {
+    .title-left {
         display: grid;
         grid-area: TitleLeft;
         align-self: center;
@@ -70,18 +70,17 @@
         margin: 1.8em -6.9em 0 0;
     }
 
-    .titleRight {
+    .title-right {
         display: grid;
         grid-area: TitleRight;
         align-self: center;
         justify-self: start;
         margin: 1.8em 0 0 -7em;
     }
-
     /* ----------------------------------------------- */
     
-    /* INTRODUCTION */
-    .introHello {
+    /* HEADLINE */
+    .headline {
         display: grid;
         grid-area: Hello;
         padding: .5em 0 0 0;
@@ -90,12 +89,11 @@
         text-align: left;
     }
 
-    .introContact {
+    .headline-contact {
         display: grid;
         grid-area: Contact;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
-
     /* ----------------------------------------------- */
 
     /* INTERVIEW PROMOS */
@@ -106,7 +104,7 @@
         /* grid-template-columns: repeat(6, minmax(0,1fr)); */
     }
 
-    .podcast a {
+    .podcast--link {
         grid-column: span 2;
     }
     /* ----------------------------------------------- */
@@ -152,8 +150,6 @@
         background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
     }
-
-
     /* ----------------------------------------------- */
 
 
@@ -162,6 +158,9 @@
         display: grid;
         grid-area: Tagbox;
         margin: 6em 0 2em 0;
+    }
+
+    .tag-container {
         /* background-color: var(--color-test); */
     }
 
@@ -170,7 +169,7 @@
     display none on desktop
     display on on mobile sheet */
 
-    .tag-container a {
+    .tag--link {
         /* font-style: italic; */
         line-height: 1.6em;
         color: var(--color-listing-purple);
@@ -178,9 +177,10 @@
         margin: 0 .8em 0 0;
     }
 
-    .tag-container a:hover, .introContact a:hover {
+    .tag--link:hover, .headlineContact--link:hover {
         text-decoration: underline;
         color: var(--color-listingLink);
     }
     /* ----------------------------------------------- */
-    }
+    
+}
