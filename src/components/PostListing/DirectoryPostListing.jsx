@@ -17,7 +17,7 @@ class DirectoryPostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div class="directoryList">
+      <div class="directory-list">
         {
         postList.map(post => (
           
@@ -26,9 +26,9 @@ class DirectoryPostListing extends React.Component {
             {/* 
             Have a class added for each tag that's present. 
             Add an additional a:hover class for each that changes its own display.
-            Needs to be added to the side rail listing as well. 
+            Needs to be added to the tag listing as well. 
             */}
-            <div class="directoryListItem">
+            <div class="directory-block--item">
             <a href={post.website} target="_blank"> <li> {post.title} </li></a>
             
             {/* <PostTags tags={post.tags} /> */}

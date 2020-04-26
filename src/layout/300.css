@@ -94,6 +94,14 @@
         grid-area: Contact;
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
+
+    .headline-contact form {
+        
+    }
+
+    .headline-contact a {
+
+    }
     /* ----------------------------------------------- */
 
     /* INTERVIEW PROMOS */
@@ -118,12 +126,17 @@
         grid-gap: .5em;
     }
 
-    .directoryBlock {
-        grid-column: span 4;
+    .directory-block {
+        display: grid;
+        grid-column: span 8;
+    }
+
+    .directory-list {
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
-        /* by filter style */
+
+    /* by filter style */
     .directoryBlockFilter {
         display: grid;
         grid-column: span 4;
@@ -131,12 +144,12 @@
         grid-auto-flow: row;
     }
 
-    .directoryListItem {
+    .directory-block--item {
         line-height: 1.6em;
         list-style: none;
     }
 
-    .directoryListItem:hover {
+    .directory-block--item:hover {
         background: var(--color-card);
         border: .1em solid var(--color-listing-purple);
         padding: .2em .4em .1em .4em;
@@ -145,10 +158,11 @@
         text-decoration: none;
     }
 
-    .blockTitle {
+    .directory-block--title {
         font-style: italic;
         background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
+        font: 400 1em JetBrains-Mono, sans-serif;
     }
     /* ----------------------------------------------- */
 
@@ -158,10 +172,12 @@
         display: grid;
         grid-area: Tagbox;
         margin: 6em 0 2em 0;
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        font-style: italic;
     }
 
     .tag-container {
-        /* background-color: var(--color-test); */
+        
     }
 
     /* 

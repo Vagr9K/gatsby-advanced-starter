@@ -47,35 +47,19 @@
      /* LOGOMARK */
 
      .logo {
-        /* display: grid;
-        grid-area: Logo;
-        background-image: url(../../static/mark_strokes.svg);
-        background-repeat: no-repeat;
-        height: 3em; 
-        margin: 2em 0 0 0;
-        align-self: center;
-        background-position: center; */
+        
     }
 
     .title-left, .title-right {
-        /* color: var(--color-bg-coral-dark);
-        font: 400 .8em JetBrains-Mono, sans-serif; */
+        
     }
 
     .title-left {
-        /* display: grid;
-        grid-area: TitleLeft;
-        align-self: center;
-        justify-self: end;
-        margin: 1.8em -6.9em 0 0; */
+        
     }
 
     .title-right {
-        /* display: grid;
-        grid-area: TitleRight;
-        align-self: center;
-        justify-self: start;
-        margin: 1.8em 0 0 -7em; */
+    
     }
 
     /* ----------------------------------------------- */
@@ -110,7 +94,7 @@
         /* grid-template-columns: repeat(6, minmax(0,1fr)); */
     }
 
-    .podcast a {
+    .podcast--link {
         grid-column: span 2;
     }
     /* ----------------------------------------------- */
@@ -121,7 +105,7 @@
         grid-template-columns: repeat(10, minmax(0,1fr));
     }
 
-    .directoryBlock {
+    .directory-block {
         display: grid;
         grid-column: span 2;
     }
@@ -132,12 +116,12 @@
         grid-auto-flow: row;
     }
 
-    .directoryListItem {
+    .directory-block--item  {
         line-height: 1.6em;
         list-style: none;
     }
 
-    .directoryListItem:hover {
+    .directory-block--item:hover {
         background: var(--color-card);
         border: .1em solid var(--color-listing-purple);
         padding: .2em .4em .1em .4em;
@@ -146,7 +130,7 @@
         text-decoration: none;
     }
 
-    .blockTitle {
+    .directory-block--title {
         font-style: italic;
         background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
