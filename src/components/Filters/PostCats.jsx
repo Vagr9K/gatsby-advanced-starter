@@ -6,14 +6,14 @@ class PostCats extends Component {
   render() {
     const { cats } = this.props;
     return (
-      <div className="post-cat-container">
+      <div className="filter-cat-container">
         {cats &&
           cats.map(category => (
             <Link
               key={category}
               to={`/#${(category)}`}
             >
-              <a type="anchor">{category}</a>
+              <a className="filter-cat--jump" type="anchor">{category}</a>
             </Link>
           ))}
       </div>

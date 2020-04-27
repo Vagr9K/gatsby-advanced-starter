@@ -73,9 +73,9 @@ class Listing extends React.Component {
         <Logo />  
         <Headline headline={"Cataloging the creative studios & internal design teams of the pacific northwest. "} />
 
-        <div className="tagbox">
+        <div className="filters">
           {/* <div className="directory-block--title">Tags</div> */}
-          {/* <PostCats cats={allCats} /> */}
+          <PostCats cats={allCats} />
           <PostTags tags={allTags} />
         </div>
 

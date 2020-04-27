@@ -22,7 +22,7 @@ export default class CategoryTemplate extends React.Component {
           <div className="container"> 
           <Headline />
           
-            <div className="tagbox">
+            <div className="filters">
                 <article className="blockTitle">Tags</article>
                 <PostCats cats={allCats} />
                 <PostTags tags={allTags} />

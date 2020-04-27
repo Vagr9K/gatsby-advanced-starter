@@ -32,12 +32,11 @@
         background-color: var(--color-card);
         box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
         border-radius: 10px;
-        /* min-height: 100vh; */
         grid-template-areas:
             ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           Contact     Contact     ."
             ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
             ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           .           .           ."
-            ".          Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      Tagbox      ."
+            ".          Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      ."
             ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
             /* ". . Footer . . " */
             ;
@@ -110,11 +109,9 @@
         grid-column: span 2;
     }
 
-    /* .directoryBlockFilter {
-        grid-column: span 4;
-        font: 400 1em JetBrains-Mono, sans-serif;
-        grid-auto-flow: row;
-    } */
+    .directory-list {
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
 
     .directory-block--item  {
         line-height: 1.6em;
@@ -132,7 +129,6 @@
 
     .directory-block--title {
         font-style: italic;
-        background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
         /* margin: 1em 0 .5em 0; */
     }
@@ -142,27 +138,17 @@
 
 
     /* CATEGORY & TAG CONTAINER*/
-    .tagbox {
+    .filters {
         display: grid;
-        grid-area: Tagbox;
+        grid-area: Filters;
+        font: 400 .8em JetBrains-Mono, sans-serif;
         margin: 6em 0 2em 0;
         /* background-color: var(--color-test); */
     }
     
-    /* 
-    cat-container
-    display none on desktop
-    display on on mobile sheet */
-
-    .tag--link {
-        /* font-style: italic; */
-        line-height: 1.7em;
-        margin: 0 .8em 0 0;
+    .filter-cat-container {
+        display: none;   
     }
 
-    .tag--link:hover, .headline-contact--link:hover {
-        text-decoration: underline;
-        color: var(--color-listingLink);
-    }
     /* ----------------------------------------------- */
 }

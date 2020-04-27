@@ -10,10 +10,11 @@ class Headline extends Component {
             <h1>{ headline }</h1>
             </div>
 
-            {/* rename this away from 'submit' */}
+            {/* When you merge this into test, give a name to the form element instead of the derivative styling */}
             <div className="headline-contact">
               <a className="headline-contact--link" target="_blank" href="mailto:jonny@seattlecreative.directory">Contact</a> 
               <a className="headline-contact--link" target="_blank" href="https://buttondown.email/creativedirectory">Subscribe</a> 
+              
               {/* <a href="#">Add an entry</a>*/}
             
              

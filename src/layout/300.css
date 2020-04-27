@@ -3,7 +3,7 @@
 @media only screen and (min-width: 300px) { 
 
     h1 {
-        font: 400 1.5em Spectral, serif;
+        font: 400 1.8em Spectral, serif;
         line-height: 140%;
     }
     
@@ -16,7 +16,7 @@
         background: url(../../static/pattern04c.png);
         background-color: var(--color-bg-coral);
         display: grid;
-        grid-template-columns: .5em 1fr .5em;
+        grid-template-columns: .1fr 2fr .1fr;
         grid-template-rows: 2em 1fr 2em;
     }
     /* ----------------------------------------------- */
@@ -26,7 +26,7 @@
         grid-row: 2;
         grid-column: 2;
         grid-template-columns: 1.5em repeat(6, 1fr) 1.5em;
-        grid-template-rows: 1fr auto auto auto auto 8em;
+        grid-template-rows: 1fr auto auto auto auto auto auto 8em;
         grid-gap: .5em;
         grid-auto-flow: dense;    
         max-width: 400px;
@@ -38,7 +38,7 @@
             ". Hello        Hello       Hello       Hello       Hello       Hello           ."
             ". Interviews   Interviews  Interviews  Interviews  Interviews  Interviews      ."
             ". Contact      Contact     Contact     Contact     Contact     Contact         ."
-            ". Tagbox       Tagbox      Tagbox      Tagbox      Tagbox      Tagbox          ."
+            ". Filters      Filters     Filters     Filters     Filters     Filters          ."
             ". Directory    Directory   Directory   Directory   Directory   Directory       ."
             /* ". . Footer . . " */
             ;
@@ -132,11 +132,11 @@
     }
 
     .directory-list {
-        font: 400 .8em JetBrains-Mono, sans-serif;
+        font: 400 1.2em JetBrains-Mono, sans-serif;
     }
 
     .directory-block--item {
-        line-height: 1.6em;
+        line-height: 2em;
         list-style: none;
     }
     
@@ -151,7 +151,7 @@
      .directory-block--filter {
         display: grid;
         grid-column: span 4;
-        font: 400 1em JetBrains-Mono, sans-serif;
+        font: 400 1.2em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;
     }
 
@@ -169,41 +169,44 @@
 
 
     /* CATEGORY & TAG CONTAINER*/
-    .tagbox {
+    .filters {
         display: grid;
-        grid-area: Tagbox;
+        grid-area: Filters;
         margin: 6em 0 2em 0;
-        font: 400 .8em JetBrains-Mono, sans-serif;
+        font: 400 1em JetBrains-Mono, sans-serif;
         font-style: italic;
         /* background-color: green; */
     }
 
-    .tag-container {        
+    .filter-cat-container {        
     }
 
-    .tag-container--size {
+    .filter-tag-container {        
+    }
+
+    .filter-cat--jump {
         line-height: 1.6em;
         color: var(--color-listing-purple);
         display: inline-block;
         margin: 0 .8em 0 0;
     }
 
-    /* 
-    cat-container
-    display none on desktop
-    display on on mobile sheet */
-
-    .tag--link {
-        /* font-style: italic; */
+    .filter-tag--size {
         line-height: 1.6em;
         color: var(--color-listing-purple);
         display: inline-block;
         margin: 0 .8em 0 0;
     }
 
-    .tag--link:hover, .headlineContact--link:hover {
+    .filter-tag--page {
+        line-height: 1.6em;
+        color: var(--color-listing-purple);
+        display: inline-block;
+        margin: 0 .8em 0 0;
+    }
+
+    .filter-tag--size:hover, .filter-tag--page:hover, .headline-contact--link:hover {
         text-decoration: underline;
-        color: var(--color-listingLink);
     }
     /* ----------------------------------------------- */
     

@@ -25,7 +25,7 @@ export default class TagTemplate extends React.Component {
           <Headline headline={ tag } />
           
           
-            <div className="tagbox">
+            <div className="filters">
                 {/* <article className="blockTitle">Tags</article> */}
                 {/* <PostCats cats={allCats} /> */}
                 <PostTags tags={allTags} />
