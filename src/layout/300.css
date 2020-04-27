@@ -135,20 +135,27 @@
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
+    .directory-block--item {
+        line-height: 1.6em;
+        list-style: none;
+    }
+    
+    .directory-block--title {
+        font-style: italic;
+        background-color: var(--color-listing-blockBG);
+        color: var(--color-listing-purple);
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
 
-    /* by filter style */
-    .directoryBlockFilter {
+     /* by filter style */
+     .directory-block--filter {
         display: grid;
         grid-column: span 4;
         font: 400 1em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;
     }
 
-    .directory-block--item {
-        line-height: 1.6em;
-        list-style: none;
-    }
-
+    /* hover effects */
     .directory-block--item:hover {
         background: var(--color-card);
         border: .1em solid var(--color-listing-purple);
@@ -158,22 +165,17 @@
         text-decoration: none;
     }
 
-    .directory-block--title {
-        font-style: italic;
-        background-color: var(--color-listing-blockBG);
-        color: var(--color-listing-purple);
-        font: 400 1em JetBrains-Mono, sans-serif;
-    }
     /* ----------------------------------------------- */
 
 
     /* CATEGORY & TAG CONTAINER*/
-    .tagBox {
+    .tagbox {
         display: grid;
         grid-area: Tagbox;
         margin: 6em 0 2em 0;
         font: 400 .8em JetBrains-Mono, sans-serif;
         font-style: italic;
+        background-color: green;
     }
 
     .tag-container {

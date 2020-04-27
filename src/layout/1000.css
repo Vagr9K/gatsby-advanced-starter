@@ -110,11 +110,11 @@
         grid-column: span 2;
     }
 
-    .directoryBlockFilter {
+    /* .directoryBlockFilter {
         grid-column: span 4;
         font: 400 1em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;
-    }
+    } */
 
     .directory-block--item  {
         line-height: 1.6em;

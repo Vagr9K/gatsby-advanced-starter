@@ -25,14 +25,14 @@ export default class TagTemplate extends React.Component {
           <Headline headline={ tag } />
           
           
-            <div className="tagBox directoryBlock">
+            <div className="tagbox">
                 {/* <article className="blockTitle">Tags</article> */}
                 {/* <PostCats cats={allCats} /> */}
                 <PostTags tags={allTags} />
             </div>
               
             <div className="directory">
-                <div className="directoryBlockFilter">  
+                <div className="directory-block--filter">  
                   <DirectoryListing postEdgesDirectory={postEdges} />
                 </div>
             </div>
