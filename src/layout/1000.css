@@ -142,7 +142,7 @@
 
 
     /* CATEGORY & TAG CONTAINER*/
-    .tagBox {
+    .tagbox {
         display: grid;
         grid-area: Tagbox;
         margin: 6em 0 2em 0;

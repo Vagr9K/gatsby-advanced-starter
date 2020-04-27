@@ -10,10 +10,10 @@ class PostTags extends Component {
       <div className="tag-container">
         <div className="tag-container">
           {/* Studio Size: &nbsp; */}
-          <Link to="/tags/small">small</Link>
-          <Link to="/tags/medium">medium</Link>
-          <Link to="/tags/large">large</Link>
-          <Link to="/tags/huge">huge</Link>
+          <Link className="tag-container--size" to="/tags/small">small</Link>
+          <Link className="tag-container--size" to="/tags/medium">medium</Link>
+          <Link className="tag-container--size" to="/tags/large">large</Link>
+          <Link className="tag-container--size" to="/tags/huge">huge</Link>
         </div>
 
         
