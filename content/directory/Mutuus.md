@@ -6,7 +6,7 @@ twit: ""
 inst: "https://www.instagram.com/mutuus_studio"
 category: "M"
 tags:
-    - Sodo
+    - SODO
     - small
     - environmental
     - architecture

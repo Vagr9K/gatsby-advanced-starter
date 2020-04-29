@@ -4,6 +4,26 @@
   "version": "1.1.0",
   "author": "Jonny McConnell <jonmccon@gmail.com>",
   "repository": "https://github.com/jonmccon/seattle-creative-directory",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop --H 0.0.0.0",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "build:pp": "gatsby build --prefix-paths",
+    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
+    "clean": "gatsby clean",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark content/",
+    "write-good": "write-good $(glob 'content/posts/**/*.md')",
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "format:styles": "prettier '**/*.{css,scss}' --write"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
   "dependencies": {
     "gatsby": "^2.20.4",
     "gatsby-image": "^2.3.1",
@@ -70,26 +90,5 @@
     "contact",
     "community",
     "phonebook"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "serve": "gatsby serve",
-    "build": "gatsby build",
-    "build:pp": "gatsby build --prefix-paths",
-    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
-    "clean": "gatsby clean",
-    "lint:js": "eslint --ext .js,.jsx .",
-    "lint:md": "remark content/",
-    "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write",
-    "format:styles": "prettier '**/*.{css,scss}' --write"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
-  }
+  ]
 }

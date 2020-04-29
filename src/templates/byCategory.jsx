@@ -17,24 +17,25 @@ export default class CategoryTemplate extends React.Component {
     return (
       <Layout>
         <div className="pattern">
-          <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
+          <Helmet
+            title={`Posts in category "${category}" | ${config.siteTitle}`}
+          />
 
-          <div className="container"> 
-          <Headline />
-          
-            <div className="tagBox directoryBlock">
-                <article className="blockTitle">Tags</article>
-                <PostCats cats={allCats} />
-                <PostTags tags={allTags} />
+          <div className="container">
+            <Headline />
+
+            <div className="filters">
+              <article className="blockTitle">Tags</article>
+              <PostCats cats={allCats} />
+              <PostTags tags={allTags} />
             </div>
-              
+
             <div className="directory">
-                <div className="directoryBlockFilter">  
-                  <article className="blockTitle">{category}</article>
-                  <DirectoryListing postEdgesDirectory={postEdges} />
-                </div>
+              <div className="directoryBlockFilter">
+                <article className="blockTitle">{category}</article>
+                <DirectoryListing postEdgesDirectory={postEdges} />
+              </div>
             </div>
-            
           </div>
         </div>
       </Layout>
@@ -45,12 +46,10 @@ export default class CategoryTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
-    AllCatsQuery: 
-    allMarkdownRemark {
+    AllCatsQuery: allMarkdownRemark {
       distinct(field: frontmatter___category)
     }
-    AllTagsQuery: 
-    allMarkdownRemark {
+    AllTagsQuery: allMarkdownRemark {
       distinct(field: frontmatter___tags)
     }
 

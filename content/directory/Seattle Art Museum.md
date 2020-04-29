@@ -6,7 +6,7 @@ twit: "https://twitter.com/iheartsam"
 inst: "https://www.instagram.com/seattleartmuseum"
 category: "S"
 tags:
-    - Market
+    - Pike Place Market
     - medium
     - branding
     - marketing

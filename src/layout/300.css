@@ -1,0 +1,220 @@
+/* MOBILE SCREEN */
+
+@media only screen and (min-width: 300px) { 
+
+    h1 {
+        font: 400 1.8em Spectral, serif;
+        line-height: 140%;
+    }
+    
+    h2 {
+        font: 600 1em Spectral, serif;
+    }
+
+    /* BACKGROUND PATTERN */
+    .pattern {
+        background: url(../../static/pattern04c.png);
+        background-color: var(--color-bg-coral);
+        display: grid;
+        grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 2.5em 1fr 2em;
+    }
+    /* ----------------------------------------------- */
+
+    .container {
+        display: grid;
+        grid-row: 2;
+        grid-column: 2;
+        grid-template-columns: 1.5em repeat(6, 1fr) 1.5em;
+        grid-template-rows: 1fr auto auto auto auto auto auto 8em;
+        grid-gap: .5em;
+        grid-auto-flow: dense;    
+        max-width: 400px;
+        background-color: var(--color-card);
+        box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
+        border-radius: 10px;
+        grid-template-areas:
+            ". TitleLeft    .           Logo        Logo        .           TitleRight      ."
+            ". Hello        Hello       Hello       Hello       Hello       Hello           ."
+            ". Interviews   Interviews  Interviews  Interviews  Interviews  Interviews      ."
+            ". Contact      Contact     Contact     Contact     Contact     Contact         ."
+            ". Filters      Filters     Filters     Filters     Filters     Filters          ."
+            ". Directory    Directory   Directory   Directory   Directory   Directory       ."
+            /* ". . Footer . . " */
+            ;
+    }  
+
+    .logo {
+        display: grid;
+        grid-area: Logo;
+        background-image: url(../../static/mark_strokes.svg);
+        background-repeat: no-repeat;
+        height: 3em; 
+        margin: 2em 0 0 0;
+        align-self: center;
+        background-position: center;
+    }
+
+    .title-left, .title-right {
+        height: 1em;
+        color: var(--color-bg-coral-dark);
+        font: var(--text-mono-std);
+    }
+
+    .title-left {
+        display: grid;
+        grid-area: TitleLeft;
+        align-self: center;
+        justify-self: end;
+        text-align: right;
+        margin: 1.8em -6.9em 0 0;
+    }
+
+    .title-right {
+        display: grid;
+        grid-area: TitleRight;
+        align-self: center;
+        justify-self: start;
+        margin: 1.8em 0 0 -7em;
+    }
+    /* ----------------------------------------------- */
+    
+    /* HEADLINE */
+    .headline {
+        display: grid;
+        grid-area: Hello;
+        padding: .5em 0 0 0;
+        margin: 0 0 0 0;
+        grid-area: Hello;
+        text-align: left;
+    }
+
+    .headline-contact {
+        display: grid;
+        grid-area: Contact;
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+    .headline-contact form {
+        
+    }
+
+    .headline-contact a {
+
+    }
+    /* ----------------------------------------------- */
+
+    /* INTERVIEW PROMOS */
+    .podcast {
+        display: grid;
+        grid-area: Interviews;
+        grid-auto-flow: row;
+        /* grid-template-columns: repeat(6, minmax(0,1fr)); */
+    }
+
+    .podcast--link {
+        grid-column: span 2;
+    }
+    /* ----------------------------------------------- */
+
+    /* DIRECTORY LISTING */
+    .directory {
+        display: grid;
+        grid-area: Directory;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        grid-gap: .5em;
+    }
+
+    .directory-list {
+        font: var(--text-serif--item);
+    }
+
+    .directory-block {
+        display: grid;
+        grid-column: span 8;
+        margin: 0 0 2em 0;
+    }
+
+    .directory-block--item {
+        line-height: 3em;
+        list-style: none;
+        border-bottom: 1px dashed var(--color-separator);
+        /* font: var(--text-serif-std); */
+    }
+    
+    .directory-block--title {
+        font-style: italic;
+        background-color: var(--color-listing-blockBG);
+        color: var(--color-listing-purple);
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+     /* by filter style */
+     .directory-block--filter {
+        display: grid;
+        grid-column: span 4;
+        font: 400 1.2em JetBrains-Mono, sans-serif;
+        grid-auto-flow: row;
+    }
+
+    /* hover effects */
+    .directory-block--item:hover {
+        background: var(--color-card);
+        border: .1em solid var(--color-listing-purple);
+        padding: .2em .4em .1em .4em;
+        margin: -.3em -.4em -.2em -.5em;
+        box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
+        text-decoration: none;
+    }
+    /* ----------------------------------------------- */
+
+
+    /* CATEGORY & TAG CONTAINER*/
+    .filters {
+        display: grid;
+        grid-area: Filters;
+        margin: 6em 0 2em 0;
+        font: 400 1em JetBrains-Mono, sans-serif;
+        font-style: italic;
+        /* background-color: green; */
+    }
+
+    .filter-cat-container {        
+    }
+
+    .filter-tag-container {  
+    }
+
+    .filter-cat--jump {
+        line-height: 1.6em;
+        color: var(--color-listing-purple);
+        display: inline-block;
+        margin: 0 .8em 0 0;
+    }
+
+    .filter-tag--size {
+        line-height: 1.6em;
+        color: var(--color-listing-purple);
+        display: inline-block;
+        margin: 0 .8em 0 0;
+    }
+
+    .filter-tag--attr {
+        line-height: 1.6em;
+        color: var(--color-listing-purple);
+        display: inline-block;
+        margin: 0 .8em 0 0;
+    }
+
+    .filter-tag--size:hover, .filter-tag--attr:hover, .headline-contact--link:hover {
+        text-decoration: underline;
+        color: var(--color-text);
+    }
+
+    /* Mobile show tags */
+    #filter-tag--toggle {           display: none;    }
+    #filter-tag--toggle:target {    display: block;   }
+    /* ----------------------------------------------- */
+    
+}

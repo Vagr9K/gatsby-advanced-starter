@@ -11,7 +11,7 @@ tags:
     - branding
     - ux/ui
     - marketing
-    - advertsiing
+    - advertising
     - print
     - video
 ---

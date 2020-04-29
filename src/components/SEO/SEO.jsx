@@ -24,8 +24,7 @@ class SEO extends Component {
       image = config.siteLogo;
     }
 
-
-    // rm'd this image string matching for now 
+    // rm'd this image string matching for now
     // see #58 for details https://github.com/Vagr9K/gatsby-advanced-starter/issues/58
 
     // if (
@@ -42,8 +41,8 @@ class SEO extends Component {
         "@type": "WebSite",
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ""
-      }
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+      },
     ];
     if (postSEO) {
       schemaOrgJSONLD.push(
@@ -57,10 +56,10 @@ class SEO extends Component {
               item: {
                 "@id": postURL,
                 name: title,
-                image
-              }
-            }
-          ]
+                image,
+              },
+            },
+          ],
         },
         {
           "@context": "http://schema.org",
@@ -71,9 +70,9 @@ class SEO extends Component {
           headline: title,
           image: {
             "@type": "ImageObject",
-            url: image
+            url: image,
           },
-          description
+          description,
         }
       );
     }

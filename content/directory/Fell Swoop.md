@@ -6,7 +6,7 @@ twit: "https://twitter.com/Fell_Swoop"
 inst: ""
 category: "F"
 tags:
-    - Market
+    - Pike Place Market
     - small
     - research
     - ux/ui

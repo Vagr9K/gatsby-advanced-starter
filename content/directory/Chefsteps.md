@@ -6,7 +6,7 @@ twit: "https://twitter.com/"
 inst: "https://www.instagram.com/chefsteps"
 category: "C"
 tags:
-    - Market
+    - Pike Place Market
     - medium
     - interactive
     - product
