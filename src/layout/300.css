@@ -95,12 +95,53 @@
         font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
-    .headline-contact form {
-        
+    .headline-contact--link {
+        color: var(--color-card);
+        font: 400 1em JetBrains-Mono, sans-serif;
+        text-transform: uppercase;
+        background: var(--color-listing-purple);
+        border: .1em solid var(--color-card);
+        padding: .3em .4em .2em .4em;
+        margin: 0 0 .2em 0;
     }
 
-    .headline-contact a {
+    .headline-contact--link:hover {
+        box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
+        cursor: pointer;
+    }
+    /* ----------------------------------------------- */
 
+    /* SUBSCRIBE */
+    .email-form {
+    }
+
+    .email-form input {
+        font: 400 1em JetBrains-Mono, sans-serif;
+        padding: .2em 0 .1em .2em;
+        margin: 0 0 .2em .1em;
+        background-color: var(--color-listingHover-shadow);
+    }
+
+    .email-form input:focus {
+        box-shadow: 0 0 5px var(--color-bg-coral);
+        background-color: var(--color-card);
+        outline: none;
+        outline-offset: none;
+    }
+
+    .email-form button {
+        color: var(--color-card);
+        font: 400 1em JetBrains-Mono, sans-serif;
+        text-transform: uppercase;
+        background: var(--color-listing-purple);
+        border: .1em solid var(--color-card);
+        padding: .3em .4em .2em .4em;
+        margin: 0 0 .1em .5em;
+    }
+
+    .email-form button:hover {
+        box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
+        cursor: pointer;
     }
     /* ----------------------------------------------- */
 
@@ -207,7 +248,7 @@
         margin: 0 .8em 0 0;
     }
 
-    .filter-tag--size:hover, .filter-tag--attr:hover, .headline-contact--link:hover {
+    .filter-tag--size:hover, .filter-tag--attr:hover, {
         text-decoration: underline;
         color: var(--color-text);
     }
