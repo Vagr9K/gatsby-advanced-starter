@@ -15,30 +15,30 @@ module.exports = {
         config.siteUrl,
         config.pathPrefix
       )}/logos/logo-512.png`,
-      copyright: config.copyright
-    }
+      copyright: config.copyright,
+    },
   },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",
-        path: `static/`
-      }
+        path: `static/`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "directory",
-        path: `content/`
-      }
+        path: `content/`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "fonts",
-        path: `src/fonts/`
-      }
+        path: `src/fonts/`,
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -52,17 +52,17 @@ module.exports = {
               quality: 100,
               disableBgImageOnAlpha: true,
               // use above option if the edges are wonky
-            }
+            },
           },
           {
-            resolve: "gatsby-remark-responsive-iframe"
+            resolve: "gatsby-remark-responsive-iframe",
           },
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-autolink-headers",
           "gatsby-remark-prismjs",
           "gatsby-remark-check-links",
-        ]
-      }
+        ],
+      },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -77,14 +77,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: config.googleAnalyticsID
-      }
+        trackingId: config.googleAnalyticsID,
+      },
     },
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
-        color: config.themeColor
-      }
+        color: config.themeColor,
+      },
     },
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
@@ -118,7 +118,7 @@ module.exports = {
           {
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
+              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
@@ -127,8 +127,8 @@ module.exports = {
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
                   { "content:encoded": edge.node.html },
-                  { author: config.userEmail }
-                ]
+                  { author: config.userEmail },
+                ],
               }));
             },
             query: `
@@ -158,10 +158,10 @@ module.exports = {
             }
           `,
             output: config.siteRss,
-            title: config.siteRssTitle
-          }
-        ]
-      }
-    }
-  ]
+            title: config.siteRssTitle,
+          },
+        ],
+      },
+    },
+  ],
 };

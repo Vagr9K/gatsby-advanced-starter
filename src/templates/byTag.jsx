@@ -18,25 +18,23 @@ export default class TagTemplate extends React.Component {
     return (
       <Layout>
         <div className="pattern">
-        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
 
-          <div className="container"> 
-          <Logo />
-          <Headline headline={ tag } />
-          
-          
+          <div className="container">
+            <Logo />
+            <Headline headline={tag} />
+
             <div className="filters">
-                {/* <article className="blockTitle">Tags</article> */}
-                {/* <PostCats cats={allCats} /> */}
-                <PostTags tags={allTags} />
-            </div>
-              
-            <div className="directory">
-                <div className="directory-block--filter">  
-                  <DirectoryListing postEdgesDirectory={postEdges} />
-                </div>
+              {/* <article className="blockTitle">Tags</article> */}
+              {/* <PostCats cats={allCats} /> */}
+              <PostTags tags={allTags} />
             </div>
 
+            <div className="directory">
+              <div className="directory-block--filter">
+                <DirectoryListing postEdgesDirectory={postEdges} />
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
@@ -47,12 +45,10 @@ export default class TagTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-  AllCatsQuery: 
-    allMarkdownRemark {
+    AllCatsQuery: allMarkdownRemark {
       distinct(field: frontmatter___category)
     }
-  AllTagsQuery: 
-    allMarkdownRemark {
+    AllTagsQuery: allMarkdownRemark {
       distinct(field: frontmatter___tags)
     }
 

@@ -11,10 +11,8 @@ import config from "../../data/SiteConfig";
 import Headline from "../components/Intro/Headline";
 import Logo from "../components/Intro/Logo";
 
-
 class Listing extends React.Component {
-
-    // Pagination
+  // Pagination
   // renderPaging() {
   //   const { currentPageNum, pageCount } = this.props.pageContext;
   //   const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
@@ -24,16 +22,14 @@ class Listing extends React.Component {
   // }
 
   render() {
-
     // this can be refactored as a variable based approach, and only one graphql query
     // Look at the tags page for an example of this
-    
 
     const postEdges = this.props.data.ListingQueryPodcast.edges;
 
     const allCats = this.props.data.AllCatsQuery.distinct;
     const allTags = this.props.data.AllTagsQuery.distinct;
-    
+
     const postEdgesDirectoryA = this.props.data.directoryListingQueryA.edges;
     const postEdgesDirectoryB = this.props.data.directoryListingQueryB.edges;
     const postEdgesDirectoryC = this.props.data.directoryListingQueryC.edges;
@@ -60,32 +56,33 @@ class Listing extends React.Component {
     const postEdgesDirectoryX = this.props.data.directoryListingQueryX.edges;
     const postEdgesDirectoryY = this.props.data.directoryListingQueryY.edges;
     const postEdgesDirectoryZ = this.props.data.directoryListingQueryZ.edges;
-    const postEdgesDirectoryNumbers = this.props.data.directoryListingQueryNumbers.edges;
-    
-   
+    const postEdgesDirectoryNumbers = this.props.data
+      .directoryListingQueryNumbers.edges;
+
     return (
       <Layout>
         <Helmet title={config.siteTitle} />
-          <SEO />
+        <SEO />
 
-      <div className="pattern">
-        <div className="container">
-        <Logo />  
-        <Headline headline={"Cataloging the creative studios & internal design teams of the pacific northwest. "} />
+        <div className="pattern">
+          <div className="container">
+            <Logo />
+            <Headline
+              headline={
+                "Cataloging the creative studios & internal design teams of the pacific northwest. "
+              }
+            />
 
-        <div className="filters">
-          {/* <div className="directory-block--title">&nbsp;</div> */}
-          <PostCats cats={allCats} />
-          <PostTags tags={allTags} />
-        </div>
+            <div className="filters">
+              {/* <div className="directory-block--title">&nbsp;</div> */}
+              <PostCats cats={allCats} />
+              <PostTags tags={allTags} />
+            </div>
 
-          
-          {/* <PodcastListing postEdges={postEdges} />    */}
-          
+            {/* <PodcastListing postEdges={postEdges} />    */}
 
-           
-          <div className="directory">
-                  {/*             
+            <div className="directory">
+              {/*             
                   
                   Build a loop that counts characters and feeds them to the graphQL query variable
 
@@ -95,40 +92,123 @@ class Listing extends React.Component {
                   
                   */}
 
-            <div className="directory-block"><div className="directory-block--title"><a id="A"></a>A</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryA} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="B"></a>B</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryB} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="C"></a>C</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryC} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="D"></a>D</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryD} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="E"></a>E</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryE} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="F"></a>F</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryF} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="G"></a>G</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryG} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="H"></a>H</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryH} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="I"></a>I</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryI} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="J"></a>J</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="K"></a>K</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryK} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="L"></a>L</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryL} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="M"></a>M</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryM} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="N"></a>N</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryN} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="O"></a>O</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryO} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="P"></a>P</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryP} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="Q"></a>Q</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="R"></a>R</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryR} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="S"></a>S</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryS} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="T"></a>T</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryT} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="U"></a>U</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryU} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="V"></a>V</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryV} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="W"></a>W</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryW} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="X"></a>X</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryX} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="Y"></a>Y</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryY} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="Z"></a>Z</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} /></div>
-            <div className="directory-block"><div className="directory-block--title"><a id="numbers"></a>#</div><DirectoryListing postEdgesDirectory={postEdgesDirectoryNumbers} /></div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="A"></a>A</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryA} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="B"></a>B</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryB} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="C"></a>C</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryC} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="D"></a>D</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryD} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="E"></a>E</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryE} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="F"></a>F</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryF} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="G"></a>G</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryG} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="H"></a>H</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryH} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="I"></a>I</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryI} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="J"></a>J</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryJ} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="K"></a>K</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryK} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="L"></a>L</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryL} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="M"></a>M</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryM} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="N"></a>N</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryN} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="O"></a>O</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryO} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="P"></a>P</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryP} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="Q"></a>Q</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryQ} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="R"></a>R</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryR} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="S"></a>S</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryS} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="T"></a>T</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryT} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="U"></a>U</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryU} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="V"></a>V</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryV} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="W"></a>W</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryW} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="X"></a>X</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryX} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="Y"></a>Y</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryY} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="Z"></a>Z</div>
+                <DirectoryListing postEdgesDirectory={postEdgesDirectoryZ} />
+              </div>
+              <div className="directory-block">
+                <div className="directory-block--title"><a id="numbers"></a>#</div>
+                <DirectoryListing
+                  postEdgesDirectory={postEdgesDirectoryNumbers}
+                />
+              </div>
+            </div>
+
+            {/* <div className="bottomSpacer"></div> */}
+
+            {/* {this.renderPaging()} */}
           </div>
-
-          {/* <div className="bottomSpacer"></div> */}
-
-          {/* {this.renderPaging()} */}
         </div>
-      </div>
       </Layout>
     );
   }
@@ -136,15 +216,12 @@ class Listing extends React.Component {
 
 export default Listing;
 
-
-
-
 /* eslint no-undef: "off" */
-export const listingQuery = graphql` {
-  ListingQueryPodcast: 
-    allMarkdownRemark(
+export const listingQuery = graphql`
+  {
+    ListingQueryPodcast: allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
-      filter: {frontmatter: {category: {eq: "interview"}}}
+      filter: { frontmatter: { category: { eq: "interview" } } }
     ) {
       edges {
         node {
@@ -169,54 +246,15 @@ export const listingQuery = graphql` {
         }
       }
     }
-  AllCatsQuery: 
-    allMarkdownRemark {
+    AllCatsQuery: allMarkdownRemark {
       distinct(field: frontmatter___category)
     }
-  AllTagsQuery: 
-    allMarkdownRemark {
+    AllTagsQuery: allMarkdownRemark {
       distinct(field: frontmatter___tags)
     }
-  directoryListingQueryA: 
-    allMarkdownRemark(
+    directoryListingQueryA: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "A"}}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            website
-            twit
-            inst
-            category
-            tags
-          }
-        }
-      }
-    }   
-  directoryListingQueryB: 
-    allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "B"}}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            website
-            twit
-            inst
-            category
-            tags
-          }
-        }
-      }
-    } 
-  directoryListingQueryC: 
-    allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "C"}}}
+      filter: { frontmatter: { category: { eq: "A" } } }
     ) {
       edges {
         node {
@@ -231,10 +269,9 @@ export const listingQuery = graphql` {
         }
       }
     }
-  directoryListingQueryD: 
-    allMarkdownRemark(
+    directoryListingQueryB: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "D"}}}
+      filter: { frontmatter: { category: { eq: "B" } } }
     ) {
       edges {
         node {
@@ -248,11 +285,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    } 
-  directoryListingQueryE: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryC: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "E"}}}
+      filter: { frontmatter: { category: { eq: "C" } } }
     ) {
       edges {
         node {
@@ -266,11 +302,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryF: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryD: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "F"}}}
+      filter: { frontmatter: { category: { eq: "D" } } }
     ) {
       edges {
         node {
@@ -284,11 +319,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }    
-  directoryListingQueryG: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryE: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "G"}}}
+      filter: { frontmatter: { category: { eq: "E" } } }
     ) {
       edges {
         node {
@@ -302,11 +336,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryH: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryF: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "H"}}}
+      filter: { frontmatter: { category: { eq: "F" } } }
     ) {
       edges {
         node {
@@ -320,11 +353,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryI: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryG: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "I"}}}
+      filter: { frontmatter: { category: { eq: "G" } } }
     ) {
       edges {
         node {
@@ -338,11 +370,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryJ: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryH: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "J"}}}
+      filter: { frontmatter: { category: { eq: "H" } } }
     ) {
       edges {
         node {
@@ -356,11 +387,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryK: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryI: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "K"}}}
+      filter: { frontmatter: { category: { eq: "I" } } }
     ) {
       edges {
         node {
@@ -374,11 +404,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryL: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryJ: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "L"}}}
+      filter: { frontmatter: { category: { eq: "J" } } }
     ) {
       edges {
         node {
@@ -392,11 +421,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryM: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryK: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "M"}}}
+      filter: { frontmatter: { category: { eq: "K" } } }
     ) {
       edges {
         node {
@@ -410,11 +438,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryN: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryL: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "N"}}}
+      filter: { frontmatter: { category: { eq: "L" } } }
     ) {
       edges {
         node {
@@ -428,11 +455,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryO: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryM: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "O"}}}
+      filter: { frontmatter: { category: { eq: "M" } } }
     ) {
       edges {
         node {
@@ -446,11 +472,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryP: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryN: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "P"}}}
+      filter: { frontmatter: { category: { eq: "N" } } }
     ) {
       edges {
         node {
@@ -464,11 +489,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryQ: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryO: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "Q"}}}
+      filter: { frontmatter: { category: { eq: "O" } } }
     ) {
       edges {
         node {
@@ -482,11 +506,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryR: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryP: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "R"}}}
+      filter: { frontmatter: { category: { eq: "P" } } }
     ) {
       edges {
         node {
@@ -500,11 +523,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryS: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryQ: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "S"}}}
+      filter: { frontmatter: { category: { eq: "Q" } } }
     ) {
       edges {
         node {
@@ -518,11 +540,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryT: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryR: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "T"}}}
+      filter: { frontmatter: { category: { eq: "R" } } }
     ) {
       edges {
         node {
@@ -536,11 +557,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryU: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryS: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "U"}}}
+      filter: { frontmatter: { category: { eq: "S" } } }
     ) {
       edges {
         node {
@@ -554,11 +574,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryV: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryT: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "V"}}}
+      filter: { frontmatter: { category: { eq: "T" } } }
     ) {
       edges {
         node {
@@ -572,11 +591,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryW: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryU: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "W"}}}
+      filter: { frontmatter: { category: { eq: "U" } } }
     ) {
       edges {
         node {
@@ -590,11 +608,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }   
-  directoryListingQueryX: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryV: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "X"}}}
+      filter: { frontmatter: { category: { eq: "V" } } }
     ) {
       edges {
         node {
@@ -608,11 +625,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryY: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryW: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "Y"}}}
+      filter: { frontmatter: { category: { eq: "W" } } }
     ) {
       edges {
         node {
@@ -626,11 +642,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }     
-  directoryListingQueryZ: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryX: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "Z"}}}
+      filter: { frontmatter: { category: { eq: "X" } } }
     ) {
       edges {
         node {
@@ -644,11 +659,10 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }            
-  directoryListingQueryNumbers: 
-    allMarkdownRemark(
+    }
+    directoryListingQueryY: allMarkdownRemark(
       sort: { fields: frontmatter___title, order: ASC }
-      filter: {frontmatter: {category: {eq: "numbers"}}}
+      filter: { frontmatter: { category: { eq: "Y" } } }
     ) {
       edges {
         node {
@@ -662,6 +676,40 @@ export const listingQuery = graphql` {
           }
         }
       }
-    }            
-}
+    }
+    directoryListingQueryZ: allMarkdownRemark(
+      sort: { fields: frontmatter___title, order: ASC }
+      filter: { frontmatter: { category: { eq: "Z" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            website
+            twit
+            inst
+            category
+            tags
+          }
+        }
+      }
+    }
+    directoryListingQueryNumbers: allMarkdownRemark(
+      sort: { fields: frontmatter___title, order: ASC }
+      filter: { frontmatter: { category: { eq: "numbers" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            website
+            twit
+            inst
+            category
+            tags
+          }
+        }
+      }
+    }
+  }
 `;

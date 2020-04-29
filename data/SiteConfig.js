@@ -27,22 +27,22 @@ const config = {
     {
       label: "GitHub",
       url: "https://github.com/jonmccon/seattle-creative-directory",
-      iconClassName: "fa fa-github"
+      iconClassName: "fa fa-github",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/jonmccon",
-      iconClassName: "fa fa-twitter"
+      iconClassName: "fa fa-twitter",
     },
     {
       label: "Email",
       url: "mailto:jonmccon@gmail.com",
-      iconClassName: "fa fa-envelope"
-    }
+      iconClassName: "fa fa-envelope",
+    },
   ],
   copyright: "made with love in the pnw", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#1e1e1e" // Used for setting manifest background color.
+  backgroundColor: "#1e1e1e", // Used for setting manifest background color.
 };
 
 // Validate
