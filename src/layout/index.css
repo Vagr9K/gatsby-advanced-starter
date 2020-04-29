@@ -17,8 +17,12 @@
     --color-listing-purple: #724061b6;
     --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
     --color-listing-blockBG: rgba(113, 64, 96, 0.05);
+    --color-separator: rgba(255, 173, 161, .3);
     --color-test: #2fdf29;
     --text-mono-std: 400 .8em JetBrains-Mono, sans-serif;
+    --text-serif-std: 400 2.8em Spectral, serif;
+    --text-serif--item: 400 1.2em JetBrains-Mono, sans-serif;
+    /* --text-tag-toggle: put in the styles from the test br subscribe button here */
 }
 /* ----------------------------------------------- */
 

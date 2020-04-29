@@ -107,15 +107,16 @@
     .directory-block {
         display: grid;
         grid-column: span 2;
+        margin: 0 0 0 0;
     }
 
     .directory-list {
-        font: 400 .8em JetBrains-Mono, sans-serif;
+        font: 400 .8em JetBrains-Mono, sans-serif;        
     }
 
     .directory-block--item  {
         line-height: 1.6em;
-        list-style: none;
+        border-bottom: none;
     }
 
     .directory-block--item:hover {
@@ -149,6 +150,10 @@
     .filter-cat-container {
         display: none;   
     }
+
+    #ShowTags {             display: none;  }
+    #filter-tag--toggle {   display:block;  }
+
 
     /* ----------------------------------------------- */
 }

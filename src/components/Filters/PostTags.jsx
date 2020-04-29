@@ -18,17 +18,20 @@ class PostTags extends Component {
 
         
         {/* General list of all tags */}
+        <div id="filter-tag--toggle">
         {tags &&
           tags.map(tag => (
             <Link
               key={tag}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              <a className="filter-tag--page" type="anchor">{tag}</a>
+              <a className="filter-tag--attr" type="anchor">{tag}</a>
             </Link>
             
           ))}
-
+        </div>
+        
+        <a id="ShowTags" href="#filter-tag--toggle">SHOW TAGS</a>
 
       </div>
     );

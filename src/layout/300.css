@@ -16,8 +16,8 @@
         background: url(../../static/pattern04c.png);
         background-color: var(--color-bg-coral);
         display: grid;
-        grid-template-columns: .1fr 2fr .1fr;
-        grid-template-rows: 2em 1fr 2em;
+        grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 2.5em 1fr 2em;
     }
     /* ----------------------------------------------- */
 
@@ -122,22 +122,25 @@
         display: grid;
         grid-area: Directory;
         grid-auto-flow: dense;
-        grid-template-columns: repeat(8, minmax(0,1fr));
+        grid-template-columns: repeat(4, minmax(0,1fr));
         grid-gap: .5em;
+    }
+
+    .directory-list {
+        font: var(--text-serif--item);
     }
 
     .directory-block {
         display: grid;
         grid-column: span 8;
-    }
-
-    .directory-list {
-        font: 400 1.2em JetBrains-Mono, sans-serif;
+        margin: 0 0 2em 0;
     }
 
     .directory-block--item {
-        line-height: 2em;
+        line-height: 3em;
         list-style: none;
+        border-bottom: 1px dashed var(--color-separator);
+        /* font: var(--text-serif-std); */
     }
     
     .directory-block--title {
@@ -164,7 +167,6 @@
         box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
         text-decoration: none;
     }
-
     /* ----------------------------------------------- */
 
 
@@ -181,7 +183,7 @@
     .filter-cat-container {        
     }
 
-    .filter-tag-container {        
+    .filter-tag-container {  
     }
 
     .filter-cat--jump {
@@ -198,16 +200,21 @@
         margin: 0 .8em 0 0;
     }
 
-    .filter-tag--page {
+    .filter-tag--attr {
         line-height: 1.6em;
         color: var(--color-listing-purple);
         display: inline-block;
         margin: 0 .8em 0 0;
     }
 
-    .filter-tag--size:hover, .filter-tag--page:hover, .headline-contact--link:hover {
+    .filter-tag--size:hover, .filter-tag--attr:hover, .headline-contact--link:hover {
         text-decoration: underline;
+        color: var(--color-text);
     }
+
+    /* Mobile show tags */
+    #filter-tag--toggle {           display: none;    }
+    #filter-tag--toggle:target {    display: block;   }
     /* ----------------------------------------------- */
     
 }
