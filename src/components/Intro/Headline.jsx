@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "gatsby";
+import Subscribe from "./Subscribe";
+
+
 
 class Headline extends Component {
   render() {
@@ -18,15 +22,10 @@ class Headline extends Component {
           >
             Contact
           </a>
-          <a
-            className="headline-contact--link"
-            target="_blank"
-            href="https://buttondown.email/creativedirectory"
-          >
-            Subscribe
-          </a>
-
-          {/* <a href="#">Add an entry</a>*/}
+          
+          <Subscribe />
+          
+          
         </div>
       </React.Fragment>
     );

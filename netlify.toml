@@ -1,4 +1,6 @@
 [build]
+  base = "."
+  functions = "./functions"
   publish = "public"
   command = "gatsby build"
 [build.environment]
