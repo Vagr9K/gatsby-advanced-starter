@@ -202,7 +202,7 @@
      /* by filter style */
      .directory-block--filter {
         display: grid;
-        min-height: 25vmin;
+        min-height: 27vmin;
         grid-column: span 4;
         font: 400 1.2em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;
