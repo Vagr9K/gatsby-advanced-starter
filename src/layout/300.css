@@ -193,16 +193,16 @@
     }
     
     .directory-block--title {
-        font-style: italic;
         background-color: var(--color-listing-blockBG);
         color: var(--color-listing-purple);
         font: 400 .8em JetBrains-Mono, sans-serif;
+        font-style: italic;
     }
 
      /* by filter style */
      .directory-block--filter {
         display: grid;
-        min-height: 27vmin;
+        min-height: 50vmin;
         grid-column: span 4;
         font: 400 1.2em JetBrains-Mono, sans-serif;
         grid-auto-flow: row;

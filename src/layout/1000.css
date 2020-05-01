@@ -110,14 +110,14 @@
         grid-template-columns: repeat(10, minmax(0,1fr));
     }
 
+    .directory-list {
+        font: 400 .8em JetBrains-Mono, sans-serif;        
+    }
+
     .directory-block {
         display: grid;
         grid-column: span 2;
         margin: 0 0 0 0;
-    }
-
-    .directory-list {
-        font: 400 .8em JetBrains-Mono, sans-serif;        
     }
 
     .directory-block--item  {
@@ -125,22 +125,13 @@
         border-bottom: none;
     }
 
-    .directory-block--item:hover {
-        background: var(--color-card);
-        border: .1em solid var(--color-listing-purple);
-        padding: .2em .4em .1em .4em;
-        margin: -.3em -.4em -.2em -.5em;
-        box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
-        text-decoration: none;
-    }
+    .directory-block--title { }
 
-    .directory-block--title {
-        font-style: italic;
-        color: var(--color-listing-purple);
-        /* margin: 1em 0 .5em 0; */
-    }
+    /* by filter style */
+    .directory-block--filter { }
 
-    
+    /* hover effects */
+    .directory-block--item:hover { }    
     /* ----------------------------------------------- */
 
 
