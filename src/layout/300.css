@@ -96,16 +96,18 @@
     }
 
     .headline-contact--link {
-        color: var(--color-card);
+        color: var(--color-text);
         font: 400 1em JetBrains-Mono, sans-serif;
         text-transform: uppercase;
-        background: var(--color-listing-purple);
         border: .1em solid var(--color-card);
         padding: .3em .4em .2em .4em;
-        margin: 0 0 .2em 0;
+        margin: .3em 0 0 0;
+        width: max-content;
+        justify-self: end;
     }
 
     .headline-contact--link:hover {
+        background: var(--color-bg-coral);
         box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
         cursor: pointer;
     }
@@ -117,29 +119,35 @@
 
     .email-form input {
         font: 400 1em JetBrains-Mono, sans-serif;
-        padding: .2em 0 .1em .2em;
+        padding: .2em .4em .1em .2em;
         margin: 0 0 .2em .1em;
-        background-color: var(--color-listingHover-shadow);
+        text-align: right;
+        background-color: var(--color-card);
+    }
+
+    .email-form input:hover {
+        background-color: var(--color-bg-coral);
     }
 
     .email-form input:focus {
         box-shadow: 0 0 5px var(--color-bg-coral);
-        background-color: var(--color-card);
+        background-color: var(--color-bg-coral);
         outline: none;
         outline-offset: none;
     }
 
     .email-form button {
-        color: var(--color-card);
+        color: var(--color-text);
         font: 400 1em JetBrains-Mono, sans-serif;
         text-transform: uppercase;
-        background: var(--color-listing-purple);
+        background: var(--color-card);
         border: .1em solid var(--color-card);
         padding: .3em .4em .2em .4em;
-        margin: 0 0 .1em .5em;
+        margin: .6em 0 .1em .5em;
     }
 
     .email-form button:hover {
+        background-color: var(--color-bg-coral);
         box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
         cursor: pointer;
     }

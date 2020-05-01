@@ -15,6 +15,8 @@ class Headline extends Component {
 
         {/* When you merge this into test, give a name to the form element instead of the derivative styling */}
         <div className="headline-contact">
+          
+        <Subscribe />
           <a
             className="headline-contact--link"
             target="_blank"
@@ -23,7 +25,7 @@ class Headline extends Component {
             Contact
           </a>
           
-          <Subscribe />
+          
           
           
         </div>
