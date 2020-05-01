@@ -45,44 +45,50 @@
 
      /* LOGOMARK */
 
-     .logo {
-        
-    }
+     .logo { }
 
-    .title-left, .title-right {
-        
-    }
+    .title-left, .title-right { }
 
-    .title-left {
-        
-    }
+    .title-left { }
 
-    .title-right {
-    
-    }
+    .title-right { }
 
     /* ----------------------------------------------- */
     
     /* HEADLINE */
-    .headline {
-        text-align: center;
-    }
+    .headline { }
 
     .headline-contact {
         margin: 2.2em 0 0 0;
         grid-area: Contact;
         align-self: center;
         text-align: right;
-        font: 400 .8em JetBrains-Mono, sans-serif;
     }
+
+    .headline-contact--link { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        margin: .3em 0 0 0;
+    }
+
     /* ----------------------------------------------- */
 
     /* SUBSCRIBE */
-    .email-form {
+    .email-form { }
+
+    .email-form input { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        width: 20ch;
     }
 
-    
+    .email-form input:hover { }
 
+    .email-form input:focus { }
+
+    .email-form button { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+    .email-form button:hover { }
     /* ----------------------------------------------- */
 
     /* INTERVIEW PROMOS */

@@ -3,7 +3,7 @@
 @media only screen and (min-width: 300px) { 
 
     h1 {
-        font: 400 1.8em Spectral, serif;
+        font: 400 2em Spectral, serif;
         line-height: 140%;
     }
     
@@ -86,22 +86,21 @@
         padding: .5em 0 0 0;
         margin: 0 0 0 0;
         grid-area: Hello;
-        text-align: left;
+        text-align: center;
     }
 
     .headline-contact {
         display: grid;
         grid-area: Contact;
-        font: 400 .8em JetBrains-Mono, sans-serif;
     }
 
     .headline-contact--link {
         color: var(--color-text);
-        font: 400 1em JetBrains-Mono, sans-serif;
+        font: 400 1.1em JetBrains-Mono, sans-serif;
         text-transform: uppercase;
         border: .1em solid var(--color-card);
         padding: .3em .4em .2em .4em;
-        margin: .3em 0 0 0;
+        margin: -2.3em 0 0 0;
         width: max-content;
         justify-self: end;
     }
@@ -118,11 +117,12 @@
     }
 
     .email-form input {
-        font: 400 1em JetBrains-Mono, sans-serif;
+        font: 400 1.2em JetBrains-Mono, sans-serif;
         padding: .2em .4em .1em .2em;
         margin: 0 0 .2em .1em;
         text-align: right;
         background-color: var(--color-card);
+        width: 100%;
     }
 
     .email-form input:hover {
@@ -138,7 +138,7 @@
 
     .email-form button {
         color: var(--color-text);
-        font: 400 1em JetBrains-Mono, sans-serif;
+        font: 400 1.2em JetBrains-Mono, sans-serif;
         text-transform: uppercase;
         background: var(--color-card);
         border: .1em solid var(--color-card);
@@ -224,7 +224,7 @@
     .filters {
         display: grid;
         grid-area: Filters;
-        margin: 6em 0 2em 0;
+        margin: 2em 0 2em 0;
         font: 400 1em JetBrains-Mono, sans-serif;
         font-style: italic;
         /* background-color: green; */
@@ -257,7 +257,7 @@
         margin: 0 .8em 0 0;
     }
 
-    .filter-tag--size:hover, .filter-tag--attr:hover, {
+    .filter-tag--size:hover, .filter-tag--attr:hover {
         text-decoration: underline;
         color: var(--color-text);
     }

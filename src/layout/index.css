@@ -23,6 +23,7 @@
     --text-serif-std: 400 2.8em Spectral, serif;
     --text-serif--item: 400 1.2em JetBrains-Mono, sans-serif;
     /* --text-tag-toggle: put in the styles from the test br subscribe button here */
+    /* include text styles for desktop and variable baselines */
 }
 /* ----------------------------------------------- */
 
