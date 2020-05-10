@@ -6,8 +6,13 @@ twit: ""
 inst: "https://www.instagram.com/williamshelde"
 category: "W"
 tags:
+<<<<<<< HEAD
     - Ballard
     - Medium
+=======
+    - Belltown 
+    - medium
+>>>>>>> test
     - video
     - advertising
     - marketing

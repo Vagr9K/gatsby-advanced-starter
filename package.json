@@ -4,6 +4,26 @@
   "version": "1.1.0",
   "author": "Jonny McConnell <jonmccon@gmail.com>",
   "repository": "https://github.com/jonmccon/seattle-creative-directory",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop --H 0.0.0.0",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "build:pp": "gatsby build --prefix-paths",
+    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
+    "clean": "gatsby clean",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark content/",
+    "write-good": "write-good $(glob 'content/posts/**/*.md')",
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "format:styles": "prettier '**/*.{css,scss}' --write"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
   "dependencies": {
     "gatsby": "^2.20.4",
     "gatsby-image": "^2.3.1",
@@ -11,10 +31,9 @@
     "gatsby-plugin-feed": "^2.4.1",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-lodash": "^3.2.1",
-    "gatsby-plugin-manifest": "^2.3.2",
     "gatsby-plugin-nprogress": "^2.2.1",
-    "gatsby-plugin-offline": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-sitemap": "^2.3.1",
     "gatsby-plugin-styled-components": "^3.2.1",
@@ -30,6 +49,7 @@
     "gatsby-transformer-sharp": "^2.4.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
     "prismjs": "^1.19.0",
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
@@ -70,26 +90,5 @@
     "contact",
     "community",
     "phonebook"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "serve": "gatsby serve",
-    "build": "gatsby build",
-    "build:pp": "gatsby build --prefix-paths",
-    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
-    "clean": "gatsby clean",
-    "lint:js": "eslint --ext .js,.jsx .",
-    "lint:md": "remark content/",
-    "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write",
-    "format:styles": "prettier '**/*.{css,scss}' --write"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
-  }
+  ]
 }

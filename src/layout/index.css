@@ -1,8 +1,9 @@
 /* IMPORTS FOR OTHER SECTIONS */
 @import url(~sanitize.css);         /* For cross browser wonkiness */
-@import url(./fonts.css);           /* All hosted and external fonts */
-@import url(./mediaQueries.css);    /* Tablet and Mobile styles */
-@import url(./interview.css);       /* Interview page has basic bg and fonts & its own layout */
+@import url(fonts.css);             /* All hosted and external fonts */
+@import url(300.css);               /* Mobile styles */
+@import url(1000.css);              /* Desktop styles */
+@import url(interview.css);         /* Interview page has basic bg and fonts & its own layout */
 
 /* COLOR VARIABLES */
 :root {
@@ -10,12 +11,19 @@
     --color-bg-coral-dark: rgb(247, 130, 112);
     --color-bg-gray: rgb(229, 229, 229);
     --color-bg-gray-dark: rgb(214, 214, 214);
-    --color-card: #FFFFFF;
+    --color-text: rgb(41, 41, 41);
+    --color-card: rgb(255, 255, 255);
     --color-listingLink: #2e2e2e;
-    --color-listing-purple: #714060;
+    --color-listing-purple: #724061b6;
     --color-listingHover-shadow: rgba(113, 64, 96, 0.3);
     --color-listing-blockBG: rgba(113, 64, 96, 0.05);
-    --color-positionTest: #2fdf29;
+    --color-separator: rgba(255, 173, 161, .3);
+    --color-test: #2fdf29;
+    --text-mono-std: 400 .8em JetBrains-Mono, sans-serif;
+    --text-serif-std: 400 2.8em Spectral, serif;
+    --text-serif--item: 400 1.2em JetBrains-Mono, sans-serif;
+    /* --text-tag-toggle: put in the styles from the test br subscribe button here */
+    /* include text styles for desktop and variable baselines */
 }
 /* ----------------------------------------------- */
 
@@ -26,6 +34,7 @@
 body {
     font-size: 14px;
     line-height: 1.3em;
+    color: var(--color-text);
 }
 
 a {
@@ -35,161 +44,5 @@ a {
 
 a:visited {  }
 a:hover {   cursor: pointer; }
-/* ----------------------------------------------- */
 
-
-/* BACKGROUND PATTERN */
-.pattern {
-    background: url(../../static/pattern04c.png);
-    background-color: var(--color-bg-coral);
-    display: grid;
-    grid-template-columns: 2em 1fr 2em;
-    grid-template-rows: 2em 1fr 2em;
-}
-/* ----------------------------------------------- */
-
-
-/* CONTAINER GRID */
-.container {
-    display: grid;
-    grid-row: 2;
-    grid-column: 2;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr auto 8em;
-    grid-gap: .5em;
-    grid-auto-flow: dense;    
-    max-width: 1200px;
-    background-color: var(--color-card);
-    box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
-    border-radius: 10px;
-}   
-
-.logo {
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    background-image: url(../../static/mark_strokes.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin: 1em .5em 0 1em;
-}
-
-.topSpacer, .bottomSpacer {
-    display: grid;
-    /* background-color: var(--color-positionTest); */
-    grid-column-start: 3;
-    grid-column-end: 13;
-    grid-row: span 1;
-}
-/* ----------------------------------------------- */
-
-
-/* INTRODUCTION */
-.intro {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(10, minmax(0,1fr));
-    grid-gap: .5em;
-    margin: 6em 0 3em 0;
-
-}
-
-.introHello {
-    padding: .5em 0 0 0;
-    grid-column-start: 1;
-    grid-column-end: 7;
-    font: 400 2.3em Spectral, serif;
-    line-height: 140%;
-}
-
-.introSubmit {
-    padding: 1em 0 0 0;
-    grid-column-start: 8;
-    grid-column-end: 11;
-    align-self: end;
-    font: 400 .8em JetBrains-Mono, sans-serif;
-}
-
-.introSubmit form {
-    
-}
-
-/* INTERVIEW PROMOS */
-.podcast {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-color: var(--color-positionTest);
-}
-/* ----------------------------------------------- */
-
-
-/* DIRECTORY LISTING */
-.directory {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(6, minmax(0,1fr));
-    grid-gap: .5em;
-}
-
-.directoryBlock {
-    grid-column: span 2;
-    font: 400 .8em JetBrains-Mono, sans-serif;
-}
-
-.directoryBlockFilter {
-    grid-column: span 4;
-    font: 400 .8em JetBrains-Mono, sans-serif;
-}
-
-.directoryListItem {
-    line-height: 1.6em;
-    list-style: none;
-}
-
-.directoryListItem:hover {
-    background: var(--color-card);
-    border: .1em solid var(--color-listing-purple);
-    padding: .2em .4em .1em .4em;
-    margin: -.3em -.4em -.2em -.5em;
-    box-shadow: -.3em .3em 0px var(--color-listingHover-shadow);
-    text-decoration: none;
-}
-
-.blockTitle {
-    font-style: italic;
-    background-color: var(--color-listing-blockBG);
-    color: var(--color-listing-purple);
-    margin: 1em 0 .5em 0;
-}
-/* ----------------------------------------------- */
-
-
-/* CATEGORY & TAG CONTAINER*/
-.tagBox {
-    grid-column-start: 9;
-    grid-column-end: 12;
-    grid-row-start: 2;
-}
-
-.post-tag-container a, .post-cat-container a, .introSubmit a {
-    font-style: italic;
-    line-height: 1.6em;
-    color: var(--color-listing-purple);
-    display: block;
-}
-
-.post-cat-container a {
-    display: inline-block;
-    margin-right: .2em;
-}
-
-.post-tag-container a:hover, .post-cat-container a:hover, .introSubmit a:hover {
-    text-decoration: underline;
-    color: var(--color-listingLink);
-}
 /* ----------------------------------------------- */

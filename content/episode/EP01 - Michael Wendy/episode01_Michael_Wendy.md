@@ -13,10 +13,10 @@ category: "interview"
 date: "2018-03-01"
 slug: "episode-3-michael-ellsworth-wendy-quisenberry-bacon-corgies-lowercase"
 tags:
-    - Neighborhood
-    - size
-    - work
-    - work
+    - Pioneer Square
+    - small
+    - ux/ui
+    - branding
 ---
 
 <!-- ![alt text](episode01_Michael_WendyB.png "Logo Title Text 1") -->

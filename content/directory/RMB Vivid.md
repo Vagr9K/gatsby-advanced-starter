@@ -6,10 +6,10 @@ twit: "https://twitter.com/RMBVivid"
 inst: ""
 category: "R"
 tags:
-    - Market
+    - Pike Place Market
     - small
     - exhibition
-    - environment
+    - environmental
     - ux/ui
     - print
 ---

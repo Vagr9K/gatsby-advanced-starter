@@ -9,7 +9,7 @@ tags:
     - Fremont
     - small
     - environmental
-    - architectural
+    - architecture
 ---
 
 Description

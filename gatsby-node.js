@@ -6,7 +6,7 @@ const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   let slug;
   if (node.internal.type === "MarkdownRemark") {
@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
     {
-      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___title}) {
+      allMarkdownRemark(sort: { order: ASC, fields: frontmatter___title }) {
         edges {
           node {
             fields {
@@ -96,39 +96,37 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
-
-
-// if directory else interview page creation
-markdownQueryResult.data.allMarkdownRemark.edges.forEach((edge) => {
-    if ( 
-      (edge.node.frontmatter.category === 'A') || 
-      (edge.node.frontmatter.category === 'B') || 
-      (edge.node.frontmatter.category === 'C') ||
-      (edge.node.frontmatter.category === 'D') ||
-      (edge.node.frontmatter.category === 'E') ||
-      (edge.node.frontmatter.category === 'F') ||
-      (edge.node.frontmatter.category === 'G') ||
-      (edge.node.frontmatter.category === 'H') ||
-      (edge.node.frontmatter.category === 'I') ||
-      (edge.node.frontmatter.category === 'J') ||
-      (edge.node.frontmatter.category === 'K') ||
-      (edge.node.frontmatter.category === 'L') ||
-      (edge.node.frontmatter.category === 'M') ||
-      (edge.node.frontmatter.category === 'N') ||
-      (edge.node.frontmatter.category === 'O') ||
-      (edge.node.frontmatter.category === 'P') ||
-      (edge.node.frontmatter.category === 'Q') ||
-      (edge.node.frontmatter.category === 'R') ||
-      (edge.node.frontmatter.category === 'S') ||
-      (edge.node.frontmatter.category === 'T') ||
-      (edge.node.frontmatter.category === 'U') ||
-      (edge.node.frontmatter.category === 'V') ||
-      (edge.node.frontmatter.category === 'W') ||
-      (edge.node.frontmatter.category === 'X') ||
-      (edge.node.frontmatter.category === 'Y') ||
-      (edge.node.frontmatter.category === 'Z') ||
-      (edge.node.frontmatter.category === 'numbers') ) {
-      
+  // if directory else interview page creation
+  markdownQueryResult.data.allMarkdownRemark.edges.forEach((edge) => {
+    if (
+      edge.node.frontmatter.category === "A" ||
+      edge.node.frontmatter.category === "B" ||
+      edge.node.frontmatter.category === "C" ||
+      edge.node.frontmatter.category === "D" ||
+      edge.node.frontmatter.category === "E" ||
+      edge.node.frontmatter.category === "F" ||
+      edge.node.frontmatter.category === "G" ||
+      edge.node.frontmatter.category === "H" ||
+      edge.node.frontmatter.category === "I" ||
+      edge.node.frontmatter.category === "J" ||
+      edge.node.frontmatter.category === "K" ||
+      edge.node.frontmatter.category === "L" ||
+      edge.node.frontmatter.category === "M" ||
+      edge.node.frontmatter.category === "N" ||
+      edge.node.frontmatter.category === "O" ||
+      edge.node.frontmatter.category === "P" ||
+      edge.node.frontmatter.category === "Q" ||
+      edge.node.frontmatter.category === "R" ||
+      edge.node.frontmatter.category === "S" ||
+      edge.node.frontmatter.category === "T" ||
+      edge.node.frontmatter.category === "U" ||
+      edge.node.frontmatter.category === "V" ||
+      edge.node.frontmatter.category === "W" ||
+      edge.node.frontmatter.category === "X" ||
+      edge.node.frontmatter.category === "Y" ||
+      edge.node.frontmatter.category === "Z" ||
+      edge.node.frontmatter.category === "numbers"
+    ) {
       // Paging for directory
       const { postsPerPage } = siteConfig;
       const pageCount = Math.ceil(postsEdges.length / postsPerPage);
@@ -141,33 +139,30 @@ markdownQueryResult.data.allMarkdownRemark.edges.forEach((edge) => {
             limit: postsPerPage,
             skip: pageNum * postsPerPage,
             pageCount,
-            currentPageNum: pageNum + 1
-          }
+            currentPageNum: pageNum + 1,
+          },
         });
       });
-
-    } else if (edge.node.frontmatter.category === 'interview') {
+    } else if (edge.node.frontmatter.category === "interview") {
       // else interview
 
-        createPage({
-          path: edge.node.fields.slug,
-          component: postPage,
-          context: {
-            slug: edge.node.fields.slug,
-            // nexttitle: nextEdge.node.frontmatter.title,
-            // nextslug: nextEdge.node.fields.slug,
-            // prevtitle: prevEdge.node.frontmatter.title,
-            // prevslug: prevEdge.node.fields.slug
-          }
-        });
-      
-
+      createPage({
+        path: edge.node.fields.slug,
+        component: postPage,
+        context: {
+          slug: edge.node.fields.slug,
+          // nexttitle: nextEdge.node.frontmatter.title,
+          // nextslug: nextEdge.node.fields.slug,
+          // prevtitle: prevEdge.node.frontmatter.title,
+          // prevslug: prevEdge.node.fields.slug
+        },
+      });
     }
 
     postsEdges.forEach((edge, index) => {
       // Generate a list of tags
       if (edge.node.frontmatter.tags) {
-        edge.node.frontmatter.tags.forEach(tag => {
+        edge.node.frontmatter.tags.forEach((tag) => {
           tagSet.add(tag);
         });
       }
@@ -183,7 +178,6 @@ markdownQueryResult.data.allMarkdownRemark.edges.forEach((edge) => {
       //     categorySet.add(category);
       //   });
       // }
-    
 
       // Create post pages
       const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
@@ -193,23 +187,21 @@ markdownQueryResult.data.allMarkdownRemark.edges.forEach((edge) => {
     });
   });
 
-
-
   //  Create tag pages
-  tagSet.forEach(tag => {
+  tagSet.forEach((tag) => {
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
-      context: { tag }
+      context: { tag },
     });
   });
 
   // Create category pages
-  categorySet.forEach(category => {
+  categorySet.forEach((category) => {
     createPage({
       path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
-      context: { category }
+      context: { category },
     });
   });
 };

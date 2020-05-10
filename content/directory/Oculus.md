@@ -6,7 +6,7 @@ twit: "https://twitter.com/oculus"
 inst: "https://www.instagram.com/oculus"
 category: "O"
 tags:
-    - Sodo
+    - SODO
     - large
     - environmental
     - ux/ui

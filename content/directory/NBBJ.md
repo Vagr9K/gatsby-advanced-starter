@@ -6,7 +6,7 @@ twit: "https://twitter.com/nbbjdesign"
 inst: "https://www.instagram.com/nbbjdesign"
 category: "N"
 tags:
-    - SLU
+    - South Lake Union
     - large
     - architecture
     - environmental

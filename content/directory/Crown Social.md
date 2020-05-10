@@ -6,7 +6,7 @@ twit: "https://twitter.com/crownsocial"
 inst: "https://www.instagram.com/crownsocial"
 category: "C"
 tags:
-    - SLU
+    - South Lake Union
     - medium
     - advertising
     - marketing

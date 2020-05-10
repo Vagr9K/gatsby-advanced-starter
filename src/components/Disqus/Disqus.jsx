@@ -7,7 +7,7 @@ class Disqus extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toasts: []
+      toasts: [],
     };
     this.notifyAboutComment = this.notifyAboutComment.bind(this);
     this.onSnackbarDismiss = this.onSnackbarDismiss.bind(this);

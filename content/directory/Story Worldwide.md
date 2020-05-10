@@ -8,7 +8,7 @@ category: "S"
 tags:
     - Belltown
     - large
-    - advetising
+    - advertising
     - branding
     - video
 ---

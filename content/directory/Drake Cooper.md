@@ -6,7 +6,7 @@ twit: "https://twitter.com/DrakeCooper"
 inst: ""
 category: "D"
 tags:
-    - SLU
+    - South Lake Union
     - medium
     - branding
     - strategy

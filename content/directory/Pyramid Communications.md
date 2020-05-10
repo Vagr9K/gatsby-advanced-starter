@@ -6,7 +6,7 @@ twit: "https://twitter.com/PyramidComms"
 inst: "https://www.instagram.com/pyramidcomms"
 category: "P"
 tags:
-    - Market
+    - Pike Place Market
     - medium
     - strategy
     - advertising

@@ -6,7 +6,7 @@ twit: "https://twitter.com/hecklerbranding"
 inst: ""
 category: "H"
 tags:
-    - SLU
+    - South Lake Union
     - small
     - branding
 ---

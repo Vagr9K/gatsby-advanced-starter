@@ -6,7 +6,7 @@ twit: "https://twitter.com/jozifirecracker"
 inst: ""
 category: "J"
 tags:
-    - SLU
+    - South Lake Union
     - small
     - advertising
     - ux/ui

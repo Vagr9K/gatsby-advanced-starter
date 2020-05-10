@@ -6,7 +6,7 @@ twit: "https://twitter.com/PCS_News"
 inst: "https://www.instagram.com/productcreationstudio"
 category: "P"
 tags:
-    - SLU
+    - South Lake Union
     - medium
     - industrial
     - product

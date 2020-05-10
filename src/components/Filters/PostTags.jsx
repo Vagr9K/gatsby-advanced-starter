@@ -6,17 +6,33 @@ class PostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <div className="post-tag-container">
+
+      <div className="filter-tag-container">
+        <div className="filter-tag-container">
+          {/* Studio Size: &nbsp; */}
+          <Link className="filter-tag--size" to="/tags/small">small</Link>
+          <Link className="filter-tag--size" to="/tags/medium">medium</Link>
+          <Link className="filter-tag--size" to="/tags/large">large</Link>
+          <Link className="filter-tag--size" to="/tags/huge">huge</Link>
+        </div>
+
+        
+        {/* General list of all tags */}
+        <div id="filter-tag--toggle">
         {tags &&
           tags.map(tag => (
             <Link
               key={tag}
-              style={{ textDecoration: "none" }}
               to={`/tags/${_.kebabCase(tag)}`}
             >
-              <a type="anchor">{tag}</a>
+              <a className="filter-tag--attr" type="anchor">{tag}</a>
             </Link>
+            
           ))}
+        </div>
+        
+        <a id="ShowTags" href="#filter-tag--toggle">SHOW TAGS</a>
+
       </div>
     );
   }

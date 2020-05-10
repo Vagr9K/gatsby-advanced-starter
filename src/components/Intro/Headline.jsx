@@ -1,30 +1,35 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import ButtonDown from "./Form";
+import Subscribe from "./Subscribe";
+
+
 
 class Headline extends Component {
   render() {
+    const { headline } = this.props;
     return (
       <React.Fragment>
-        <div className="logo"><Link to="/"></Link></div>
-          
-          <div className="intro">
-            <div className="introHello">
-              Cataloging the creative studios & internal design teams of the pacific northwest. 
-            </div>
+        <div className="headline">
+          <h1>{headline}</h1>
+        </div>
 
-            {/* rename this away from 'submit' */}
-            <div className="introSubmit">
-              <a target="_blank" href="mailto:jonny@seattlecreative.directory">Contact</a> 
-              <a target="_blank" href="https://buttondown.email/creativedirectory">Subscribe</a> 
-              {/* <a href="#">Add an entry</a>*/}
-            
-              {/* Subscribe form */}
-              {/* <ButtonDown /> */}
-            </div>
+        {/* When you merge this into test, give a name to the form element instead of the derivative styling */}
+        <div className="headline-contact">
+          
+        <Subscribe />
+          <a
+            className="headline-contact--link"
+            target="_blank"
+            href="mailto:jonny@seattlecreative.directory"
+          >
+            Contact
+          </a>
+          
+          
+          
           
         </div>
-      </React.Fragment>  
+      </React.Fragment>
     );
   }
 }

@@ -6,7 +6,7 @@ twit: "https://twitter.com/doubleknottweet"
 inst: ""
 category: "D"
 tags:
-    - SLU
+    - South Lake Union
     - small
     - branding
     - packaging

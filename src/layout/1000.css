@@ -1,0 +1,156 @@
+/* DESKTOP SCREEN */
+
+@media only screen and (min-width: 1250px) { 
+
+    h1 {
+        font: 400 2.5em Spectral, serif;
+        line-height: 140%;
+    }
+    
+    h2 {
+        font: 600 1.2em Spectral, serif;
+    }
+
+    /* BACKGROUND PATTERN */
+    .pattern {
+        grid-template-columns: 2em 1fr 2em;
+        grid-template-rows: 2em 1fr 2em;
+    }
+    /* ----------------------------------------------- */
+
+
+    /* CONTAINER GRID */
+    .container {
+        display: grid;
+        grid-row: 2;
+        grid-column: 2;
+        grid-template-columns: 2em repeat(10, 1fr) 2em;
+        grid-template-rows: 1fr auto auto auto auto auto 8em;
+        grid-gap: .5em;
+        grid-auto-flow: dense;    
+        max-width: 1200px;
+        background-color: var(--color-card);
+        box-shadow:  0px 0px 30px var(--color-bg-coral-dark);
+        border-radius: 10px;
+        grid-template-areas:
+            ".          .           .           .           TitleLeft   Logo        Logo        TitleRight  .           Contact     Contact     ."
+            ".          .           .           Hello       Hello       Hello       Hello       Hello       Hello       .           .           ."
+            ".          Interviews  Interviews  Interviews  Interviews  Interviews  Interviews  .           .           .           .           ."
+            ".          Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      Filters      ."
+            ".          Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   Directory   ."
+            /* ". . Footer . . " */
+            ;
+    }   
+
+
+     /* LOGOMARK */
+
+     .logo { }
+
+    .title-left, .title-right { }
+
+    .title-left { }
+
+    .title-right { }
+
+    /* ----------------------------------------------- */
+    
+    /* HEADLINE */
+    .headline { }
+
+    .headline-contact {
+        margin: 2.2em 0 0 0;
+        grid-area: Contact;
+        align-self: center;
+        text-align: right;
+    }
+
+    .headline-contact--link { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        margin: .3em 0 0 0;
+    }
+
+    /* ----------------------------------------------- */
+
+    /* SUBSCRIBE */
+    .email-form { }
+
+    .email-form input { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        width: 20ch;
+    }
+
+    .email-form input:hover { }
+
+    .email-form input:focus { }
+
+    .email-form button { 
+        font: 400 .8em JetBrains-Mono, sans-serif;
+    }
+
+    .email-form button:hover { }
+    /* ----------------------------------------------- */
+
+    /* INTERVIEW PROMOS */
+    .podcast {
+        display: grid;
+        grid-area: Interviews;
+        grid-auto-flow: row;
+        /* grid-template-columns: repeat(6, minmax(0,1fr)); */
+    }
+
+    .podcast--link {
+        grid-column: span 2;
+    }
+    /* ----------------------------------------------- */
+
+
+    /* DIRECTORY LISTING */
+    .directory {
+        grid-template-columns: repeat(10, minmax(0,1fr));
+    }
+
+    .directory-list {
+        font: 400 .8em JetBrains-Mono, sans-serif;        
+    }
+
+    .directory-block {
+        display: grid;
+        grid-column: span 2;
+        margin: 0 0 0 0;
+    }
+
+    .directory-block--item  {
+        line-height: 1.6em;
+        border-bottom: none;
+    }
+
+    .directory-block--title { }
+
+    /* by filter style */
+    .directory-block--filter { }
+
+    /* hover effects */
+    .directory-block--item:hover { }    
+    /* ----------------------------------------------- */
+
+
+    /* CATEGORY & TAG CONTAINER*/
+    .filters {
+        display: grid;
+        grid-area: Filters;
+        font: 400 .8em JetBrains-Mono, sans-serif;
+        margin: 6em 0 2em 0;
+        /* background-color: var(--color-test); */
+    }
+    
+    .filter-cat-container {
+        display: none;   
+    }
+
+    #ShowTags {             display: none;  }
+    #filter-tag--toggle {   display: block;  }
+
+
+    /* ----------------------------------------------- */
+}

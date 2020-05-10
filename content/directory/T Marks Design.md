@@ -6,7 +6,7 @@ twit: "https://twitter.com/tdaddy61"
 inst: "https://instagram.com/terry.marks/"
 category: "T"
 tags:
-    - SLU
+    - South Lake Union
     - small
     - branding
     - strategy

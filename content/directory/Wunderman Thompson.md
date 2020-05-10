@@ -6,7 +6,7 @@ twit: "https://twitter.com/WunThompson"
 inst: "https://www.instagram.com/wunthompson"
 category: "W"
 tags:
-    - SLU
+    - South Lake Union
     - large
     - strategy
     - marketing
