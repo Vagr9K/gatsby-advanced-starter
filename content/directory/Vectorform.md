@@ -3,7 +3,7 @@ title: "Vectorform"
 featuredImage: ./-hamburgers.png
 website: "https://www.vectorform.com/"
 twit: "https://twitter.com/vectorform"
-inst: ""
+inst: "https://instagram.com/vectorform/"
 category: "V"
 tags:
     - Belltown

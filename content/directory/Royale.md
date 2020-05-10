@@ -6,7 +6,7 @@ twit: "https://twitter.com/weareroyale"
 inst: "https://www.instagram.com/weareroyale"
 category: "R"
 tags:
-    - Capitol Hill
+    - Pioneer Square
     - medium
     - video
     - motion

@@ -3,7 +3,7 @@ title: "Suyama Peterson Deguchi"
 featuredImage: ./-hamburgers.png
 website: "https://suyamapetersondeguchi.com/"
 twit: ""
-inst: ""
+inst: "https://instagram.com/suyamapetersondeguchi/"
 category: "S"
 tags:
     - South Park

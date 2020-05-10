@@ -3,7 +3,7 @@ title: "Publicis"
 featuredImage: ./-hamburgers.png
 website: "http://publicisseattle.com/"
 twit: "https://twitter.com/PublicisSeattle"
-inst: ""
+inst: "https://instagram.com/publicisseattle/"
 category: "P"
 tags:
     - Queen Anne

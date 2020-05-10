@@ -6,7 +6,7 @@ twit: ""
 inst: ""
 category: "S"
 tags:
-    - Pioneer Square
+    - SODO
     - small
     - advertising
     - marketing

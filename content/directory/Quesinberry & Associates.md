@@ -3,7 +3,7 @@ title: "Quesinberry & Associates"
 featuredImage: ./-hamburgers.png
 website: "https://quesinberry.com/"
 twit: ""
-inst: ""
+inst: "https://instagram.com/quesinberryandassociates/"
 category: "Q"
 tags:
     - Capitol Hill

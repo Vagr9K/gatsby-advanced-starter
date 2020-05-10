@@ -3,7 +3,7 @@ title: "Sea Monster Studios"
 featuredImage: ./-hamburgers.png
 website: "https://www.seamonsterstudios.com/"
 twit: "https://twitter.com/the_seamonsters"
-inst: ""
+inst: "https://instagram.com/seamonsterstudios/"
 category: "S"
 tags:
     - Downtown

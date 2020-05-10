@@ -1,12 +1,12 @@
 ---
 title: "T Marks Design"
 featuredImage: ./-hamburgers.png
-website: "https://tmarks.design/"
+website: "https://tmarksdesign.com/"
 twit: "https://twitter.com/tdaddy61"
-inst: ""
+inst: "https://instagram.com/terry.marks/"
 category: "T"
 tags:
-    - International Distric
+    - SLU
     - small
     - branding
     - strategy

@@ -3,7 +3,7 @@ title: "Transom"
 featuredImage: ./-hamburgers.png
 website: "http://www.transom.design/"
 twit: ""
-inst: ""
+inst: "https://instagram.com/transom.design/"
 category: "T"
 tags:
     - Pioneer Square

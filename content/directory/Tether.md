@@ -1,7 +1,7 @@
 ---
 title: "Tether"
 featuredImage: ./-hamburgers.png
-website: "#"
+website: "http://tether.com/"
 twit: "https://twitter.com/tether"
 inst: "https://www.instagram.com/tether"
 category: "T"

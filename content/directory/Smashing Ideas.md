@@ -6,7 +6,7 @@ twit: "https://twitter.com/smashingideas"
 inst: "https://www.instagram.com/smashing_ideas_agency"
 category: "S"
 tags:
-    - Market
+    - Belltown
     - large
     - strategy
     - research
