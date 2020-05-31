@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import urljoin from "url-join";
 import moment from "moment";
 import config from "../../../data/SiteConfig";
@@ -26,7 +26,7 @@ class SEO extends Component {
       image = config.siteLogo;
     }
 
-    const getImagePath = imageURI => {
+    const getImagePath = (imageURI) => {
       if (
         !imageURI.match(
           `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
@@ -55,12 +55,12 @@ class SEO extends Component {
       "@type": "Person",
       name: config.userName,
       email: config.userEmail,
-      address: config.userLocation
+      address: config.userLocation,
     };
 
     const logoJSONLD = {
       "@type": "ImageObject",
-      url: getImagePath(config.siteLogo)
+      url: getImagePath(config.siteLogo),
     };
 
     const blogURL = urljoin(config.siteUrl, config.pathPrefix);
@@ -70,8 +70,8 @@ class SEO extends Component {
         "@type": "WebSite",
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ""
-      }
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+      },
     ];
     if (postSEO) {
       schemaOrgJSONLD.push(
@@ -85,10 +85,10 @@ class SEO extends Component {
               item: {
                 "@id": postURL,
                 name: title,
-                image
-              }
-            }
-          ]
+                image,
+              },
+            },
+          ],
         },
         {
           "@context": "http://schema.org",
@@ -102,10 +102,10 @@ class SEO extends Component {
           publisher: {
             ...authorJSONLD,
             "@type": "Organization",
-            logo: logoJSONLD
+            logo: logoJSONLD,
           },
           datePublished,
-          description
+          description,
         }
       );
     }

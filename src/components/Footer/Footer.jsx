@@ -21,7 +21,8 @@ class Footer extends Component {
             <button>Subscribe</button>
           </Link>
           <h4>
-            Based on{" "}
+            Based on
+            {" "}
             <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
               Gatsby Advanced Starter
             </a>
