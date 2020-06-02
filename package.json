@@ -36,7 +36,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-share": "^4.1.0",
-    "react-twitter-widgets": "^1.7.1",
+    "react-twitter-widgets": "^1.9.4",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
