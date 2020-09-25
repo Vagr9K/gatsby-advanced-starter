@@ -109,6 +109,7 @@ If you are interested in a foundation for building ultra-fast websites, you can 
 - Development tools
   - [ESLint](https://eslint.org/) for linting
   - [Prettier](https://prettier.io/) for code formatting
+  - [React Hooks Linting](https://www.npmjs.com/package/eslint-plugin-react-hooks)
   - Remark-Lint for linting Markdown
   - write-good for linting English prose
   - gh-pages for deploying to GitHub pages
@@ -171,22 +172,22 @@ module.exports = {
     {
       label: "GitHub",
       url: "https://github.com/Vagr9K/gatsby-advanced-starter",
-      iconClassName: "fa fa-github"
+      iconClassName: "fa fa-github",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/Vagr9K",
-      iconClassName: "fa fa-twitter"
+      iconClassName: "fa fa-twitter",
     },
     {
       label: "Email",
       url: "mailto:vagr9k@gmail.com",
-      iconClassName: "fa fa-envelope"
-    }
+      iconClassName: "fa fa-envelope",
+    },
   ],
   copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+  backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
 ```
 
@@ -198,9 +199,9 @@ import CMS from "netlify-cms-app";
 CMS.init({
   config: {
     backend: {
-      name: "git-gateway"
-    }
-  }
+      name: "git-gateway",
+    },
+  },
 });
 ```
 
@@ -209,7 +210,7 @@ You can also optionally set `pathPrefix`:
 ```js
 module.exports = {
   // Note: it must *not* have a trailing slash.
-  pathPrefix: "/gatsby-advanced-starter" // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "/gatsby-advanced-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
 };
 ```
 
