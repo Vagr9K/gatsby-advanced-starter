@@ -132,11 +132,11 @@ Or you can fork the project, make your changes there and merge new features when
 Alternatively:
 
 ```sh
-git clone https://github.com/Vagr9K/gatsby-advanced-starter YourProjectName # Clone the project
-cd YourProjectname
-rm -rf .git # So you can have your own changes stored in VCS.
+# Fork the repo on GitHub
+git clone https://github.com/${YourUsername}/${YourForkName} YourForkName # Clone the fork
+cd YourForkName
 npm install # or yarn install
-npm run develop # or gatsby develop
+npm run develop # or yarn develop
 ```
 
 ## Configuration
