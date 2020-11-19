@@ -120,24 +120,27 @@ NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K
 
 ## Getting Started
 
-Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
+Install this starter by running the following commands from your CLI:
 
 ```sh
 gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
+cd YourProjectName
 npm run develop # or gatsby develop
 ```
 
-Or you can fork the project, make your changes there and merge new features when needed.
+Note that the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli) needs to be installed and updated for the `gatsby` command to work.
 
-Alternatively:
+Alternatively you can fork the project, make your changes and merge new upstream features when needed:
 
-```sh
-# Fork the repo on GitHub
-git clone https://github.com/${YourUsername}/${YourForkName} YourForkName # Clone the fork
-cd YourForkName
-npm install # or yarn install
-npm run develop # or yarn develop
-```
+- [Fork this repository on GitHub](https://github.com/Vagr9K/gatsby-advanced-starter/fork)
+- Run the following commands:
+
+  ```sh
+  git clone https://github.com/${YourUsername}/${YourForkName} YourForkName # Clone your fork
+  cd YourForkName
+  npm install # or yarn install
+  npm run develop # or yarn develop
+  ```
 
 ## Configuration
 
