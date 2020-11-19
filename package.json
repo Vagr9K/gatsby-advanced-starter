@@ -56,6 +56,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
     "write-good": "^1.0.3"
   },
   "keywords": [
@@ -72,6 +73,7 @@
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "clean": "rm -rf public && rm -rf .cache",
     "lint:js": "eslint --ext .js,.jsx .",
+    "lint:styles": "stylelint src/**/*.css",
     "lint:md": "remark content/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write",

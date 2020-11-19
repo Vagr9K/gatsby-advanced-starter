@@ -1,6 +1,3 @@
 {
-    "extends": ["stylelint-config-standard",  "stylelint-config-prettier"],
-    "rules": {
-        "indentation": 4
-    }
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"]
 }

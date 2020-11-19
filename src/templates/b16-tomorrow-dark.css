@@ -22,6 +22,12 @@ pre[class*="language-"] {
   color: #c5c8c6;
 }
 
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
@@ -36,12 +42,6 @@ code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
   background: #b4b7b4;
-}
-
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
 }
 
 :not(pre) > code[class*="language-"] {
