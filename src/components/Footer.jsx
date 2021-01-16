@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import UserLinks from "../UserLinks/UserLinks";
+import UserLinks from "./UserLinks";
 import "./Footer.css";
 
 function Footer({ config }) {
