@@ -1,7 +1,9 @@
 import React from "react";
 import "./UserLinks.css";
 
-function UserLinks({ config, labeled }) {
+const config = require("../../data/SiteConfig");
+
+function UserLinks({ labeled }) {
   function getLinkElements() {
     const { userLinks } = config;
 

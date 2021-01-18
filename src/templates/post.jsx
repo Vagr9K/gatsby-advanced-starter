@@ -33,11 +33,11 @@ export default function PostTemplate({ data, pageContext }) {
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
+            <SocialLinks postPath={slug} postNode={postNode} mobile={false} />
           </div>
-          <UserInfo config={config} />
+          <UserInfo expanded={false} />
           <Disqus postNode={postNode} />
-          <Footer config={config} />
+          <Footer />
         </div>
       </div>
     </Layout>

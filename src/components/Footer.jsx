@@ -3,7 +3,9 @@ import { Link } from "gatsby";
 import UserLinks from "./UserLinks";
 import "./Footer.css";
 
-function Footer({ config }) {
+const config = require("../../data/SiteConfig");
+
+function Footer() {
   const url = config.siteRss;
   const { copyright } = config;
   if (!copyright) {
@@ -11,7 +13,7 @@ function Footer({ config }) {
   }
   return (
     <footer className="footer">
-      <UserLinks config={config} labeled />
+      <UserLinks labeled />
       <div className="notice-container">
         <h4>{copyright}</h4>
 

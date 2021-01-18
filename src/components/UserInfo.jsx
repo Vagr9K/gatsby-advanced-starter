@@ -1,7 +1,9 @@
 import React from "react";
 import { Follow } from "react-twitter-widgets";
 
-function UserInfo({ config, expanded }) {
+const config = require("../../data/SiteConfig");
+
+function UserInfo({ expanded }) {
   const { userTwitter } = config;
 
   return (
