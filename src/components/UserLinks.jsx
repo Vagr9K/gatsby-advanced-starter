@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./UserLinks.css";
-
-const config = require("../../data/SiteConfig");
+import ConfigContext from "../context/ConfigContext";
 
 function UserLinks({ labeled }) {
+  const config = useContext(ConfigContext);
+
   function getLinkElements() {
     const { userLinks } = config;
 

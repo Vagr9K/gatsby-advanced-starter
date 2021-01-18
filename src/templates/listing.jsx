@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 import "./listing.css";
 
 function Listing({ pageContext, data }) {
+  const config = useContext(ConfigContext);
+
   function renderPaging() {
     if (!config.postsPerPage) return null;
 

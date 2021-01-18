@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import urljoin from "url-join";
 import moment from "moment";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 
 function SEO({ postNode, postPath, postSEO }) {
+  const config = useContext(ConfigContext);
+
   let title;
   let description;
   let image;

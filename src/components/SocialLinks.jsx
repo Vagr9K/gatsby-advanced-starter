@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -14,10 +14,12 @@ import {
   RedditIcon,
 } from "react-share";
 import urljoin from "url-join";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 import "./SocialLinks.css";
 
 function SocialLinks({ postNode, postPath, mobile }) {
+  const config = useContext(ConfigContext);
+
   const post = postNode.frontmatter;
   const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
   const iconSize = mobile ? 36 : 48;

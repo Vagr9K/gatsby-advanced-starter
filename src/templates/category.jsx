@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 
 export default function CategoryTemplate({ pageContext, data }) {
+  const config = useContext(ConfigContext);
+
   const { category } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
   return (

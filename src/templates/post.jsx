@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
@@ -8,11 +8,13 @@ import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 export default function PostTemplate({ data, pageContext }) {
+  const config = useContext(ConfigContext);
+
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;

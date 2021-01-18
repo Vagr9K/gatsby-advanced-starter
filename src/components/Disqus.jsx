@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDisqusComments from "react-disqus-comments";
 import urljoin from "url-join";
-import config from "../../data/SiteConfig";
+import ConfigContext from "../context/ConfigContext";
 
 function Disqus({ postNode }) {
+  const config = useContext(ConfigContext);
+
   if (!config.disqusShortname) {
     return null;
   }

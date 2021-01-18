@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "gatsby";
 import UserLinks from "./UserLinks";
+import ConfigContext from "../context/ConfigContext";
 import "./Footer.css";
 
-const config = require("../../data/SiteConfig");
-
 function Footer() {
+  const config = useContext(ConfigContext);
+
   const url = config.siteRss;
   const { copyright } = config;
   if (!copyright) {
