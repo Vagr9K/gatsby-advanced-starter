@@ -9,6 +9,8 @@ import "./listing.css";
 
 function Listing({ pageContext, data }) {
   function renderPaging() {
+    if (!config.postsPerPage) return null;
+
     const { currentPageNum, pageCount } = pageContext;
     const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
     const nextPage = `/${currentPageNum + 1}/`;
@@ -52,9 +54,8 @@ function Listing({ pageContext, data }) {
 
 export default Listing;
 
-/* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
+  query ListingQuery($skip: Int, $limit: Int) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
