@@ -18,9 +18,6 @@ export default function PostTemplate({ data, pageContext }) {
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
-  if (!post.id) {
-    post.id = slug;
-  }
 
   return (
     <Layout>
