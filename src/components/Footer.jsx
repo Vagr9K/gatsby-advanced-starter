@@ -14,7 +14,7 @@ function Footer() {
   }
   return (
     <footer className="footer">
-      <UserLinks labeled />
+      <UserLinks />
       <div className="notice-container">
         <h4>{copyright}</h4>
 

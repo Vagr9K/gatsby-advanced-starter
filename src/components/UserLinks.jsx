@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./UserLinks.css";
 import ConfigContext from "../context/ConfigContext";
 
-function UserLinks({ labeled }) {
+function UserLinks() {
   const config = useContext(ConfigContext);
 
   function getLinkElements() {
@@ -10,7 +10,7 @@ function UserLinks({ labeled }) {
 
     return userLinks.map((link) => (
       <a href={link.url} key={link.label}>
-        <button type="button">{labeled ? link.label : ""}</button>
+        <button type="button">{link.label}</button>
       </a>
     ));
   }
