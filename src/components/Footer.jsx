@@ -7,7 +7,7 @@ import "./Footer.css";
 function Footer() {
   const config = useContext(ConfigContext);
 
-  const url = config.siteRss;
+  const url = config.website.rss;
   const { copyright } = config;
   if (!copyright) {
     return null;

@@ -10,11 +10,13 @@ function AboutPage() {
   return (
     <Layout>
       <div className="about-container">
-        <Helmet title={`About | ${config.siteTitle}`} />
+        <Helmet title={`About | ${config.website.title}`} />
         <About />
       </div>
     </Layout>
   );
 }
+
+// TODO: Make sure About contains the layout
 
 export default AboutPage;

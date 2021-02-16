@@ -9,13 +9,13 @@ const validateSiteConfig = (config) => {
     newConfig.pathPrefix = `/${newConfig.pathPrefix.replace(/^\/|\/$/g, "")}`;
   }
 
-  // Make sure siteUrl doesn't have an ending forward slash
-  if (newConfig.siteUrl.substr(-1) === "/")
-    newConfig.siteUrl = newConfig.siteUrl.slice(0, -1);
+  // Make sure website.url doesn't have an ending forward slash
+  if (newConfig.website.url.substr(-1) === "/")
+    newConfig.website.url = newConfig.website.url.slice(0, -1);
 
-  // Make sure siteRss has a starting forward slash
-  if (newConfig.siteRss && newConfig.siteRss[0] !== "/")
-    newConfig.siteRss = `/${newConfig.siteRss}`;
+  // Make sure website.rss has a starting forward slash
+  if (newConfig.website.rss && newConfig.website.rss[0] !== "/")
+    newConfig.website.rss = `/${newConfig.website.rss}`;
 
   return newConfig;
 };

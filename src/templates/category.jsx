@@ -14,7 +14,7 @@ export default function CategoryTemplate({ pageContext, data }) {
     <Layout>
       <div className="category-container">
         <Helmet
-          title={`Posts in category "${category}" | ${config.siteTitle}`}
+          title={`Posts in category "${category}" | ${config.website.title}`}
         />
         <PostListing postEdges={postEdges} />
       </div>

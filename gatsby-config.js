@@ -8,14 +8,18 @@ const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 module.exports = {
   pathPrefix: validatedPathPrefix,
   siteMetadata: {
-    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+    siteUrl: urljoin(config.website.url, config.pathPrefix),
     rssMetadata: {
-      site_url: urljoin(config.siteUrl, config.pathPrefix),
-      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
-      title: config.siteTitle,
-      description: config.siteDescription,
+      site_url: urljoin(config.website.url, config.pathPrefix),
+      feed_url: urljoin(
+        config.website.url,
+        config.pathPrefix,
+        config.website.rss
+      ),
+      title: config.website.title,
+      description: config.website.description,
       image_url: `${urljoin(
-        config.siteUrl,
+        config.website.url,
         config.pathPrefix
       )}/logos/logo-512.png`,
       copyright: config.copyright,
@@ -86,9 +90,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
+        name: config.website.name,
+        short_name: config.website.titleShort,
+        description: config.website.description,
         start_url: validatedPathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
@@ -187,8 +191,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss,
-            title: config.siteRssTitle,
+            output: config.website.rss,
+            title: config.website.rssTitle,
           },
         ],
       },

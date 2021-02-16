@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
     <ConfigProvider>
       <div className="layout-container">
         <Helmet>
-          <meta name="description" content={config.siteDescription} />
+          <meta name="description" content={config.website.description} />
           <html lang="en" />
         </Helmet>
         {children}

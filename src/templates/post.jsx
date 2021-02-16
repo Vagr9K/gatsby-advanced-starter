@@ -23,7 +23,7 @@ export default function PostTemplate({ data, pageContext }) {
     <Layout>
       <div>
         <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.title} | ${config.website.title}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>

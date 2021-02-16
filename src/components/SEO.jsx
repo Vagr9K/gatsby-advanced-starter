@@ -19,11 +19,11 @@ function SEO({ postNode, postPath, postSEO }) {
       ? postMeta.description
       : postNode.excerpt;
     image = postMeta.cover;
-    postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+    postURL = urljoin(config.website.url, config.pathPrefix, postPath);
   } else {
-    title = config.siteTitle;
-    description = config.siteDescription;
-    image = config.siteLogo;
+    title = config.website.title;
+    description = config.website.description;
+    image = config.website.logoUrl;
   }
 
   const getImagePath = (imageURI) => {
@@ -32,7 +32,7 @@ function SEO({ postNode, postPath, postSEO }) {
         `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
       )
     )
-      return urljoin(config.siteUrl, config.pathPrefix, imageURI);
+      return urljoin(config.website.url, config.pathPrefix, imageURI);
 
     return imageURI;
   };
@@ -60,17 +60,17 @@ function SEO({ postNode, postPath, postSEO }) {
 
   const logoJSONLD = {
     "@type": "ImageObject",
-    url: getImagePath(config.siteLogo),
+    url: getImagePath(config.website.logoUrl),
   };
 
-  const blogURL = urljoin(config.siteUrl, config.pathPrefix);
+  const blogURL = urljoin(config.website.url, config.pathPrefix);
   const schemaOrgJSONLD = [
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
       url: blogURL,
       name: title,
-      alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+      alternateName: config.website.titleAlt ? config.website.titleAlt : "",
     },
   ];
   if (postSEO) {
@@ -95,7 +95,7 @@ function SEO({ postNode, postPath, postSEO }) {
         "@type": "BlogPosting",
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
+        alternateName: config.website.titleAlt ? config.website.titleAlt : "",
         headline: title,
         image: { "@type": "ImageObject", url: image },
         author: authorJSONLD,
@@ -128,7 +128,7 @@ function SEO({ postNode, postPath, postSEO }) {
       <meta property="og:image" content={image} />
       <meta
         property="fb:app_id"
-        content={config.siteFBAppID ? config.siteFBAppID : ""}
+        content={config.website.fbAppId ? config.website.fbAppId : ""}
       />
 
       {/* Twitter Card tags */}

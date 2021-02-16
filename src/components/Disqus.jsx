@@ -10,7 +10,11 @@ function Disqus({ postNode }) {
     return null;
   }
   const post = postNode.frontmatter;
-  const url = urljoin(config.siteUrl, config.pathPrefix, postNode.fields.slug);
+  const url = urljoin(
+    config.website.url,
+    config.pathPrefix,
+    postNode.fields.slug
+  );
   return (
     <ReactDisqusComments
       shortname={config.disqusShortname}

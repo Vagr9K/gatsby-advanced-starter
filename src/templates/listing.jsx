@@ -44,7 +44,7 @@ function Listing({ pageContext, data }) {
     <Layout>
       <div className="listing-container">
         <div className="posts-container">
-          <Helmet title={config.siteTitle} />
+          <Helmet title={config.website.title} />
           <SEO />
           <PostListing postEdges={postEdges} />
         </div>

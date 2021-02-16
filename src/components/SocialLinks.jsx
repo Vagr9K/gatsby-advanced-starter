@@ -21,7 +21,7 @@ function SocialLinks({ postNode, postPath, mobile }) {
   const config = useContext(ConfigContext);
 
   const post = postNode.frontmatter;
-  const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
+  const url = urljoin(config.website.url, config.pathPrefix, postPath);
   const iconSize = mobile ? 36 : 48;
   const filter = (count) => (count > 0 ? count : "");
   const renderShareCount = (count) => (
