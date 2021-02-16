@@ -6,17 +6,17 @@ function UserLinks() {
   const config = useContext(ConfigContext);
 
   function getLinkElements() {
-    const { userLinks } = config;
+    const { links } = config.user;
 
-    return userLinks.map((link) => (
+    return links.map((link) => (
       <a href={link.url} key={link.label}>
         <button type="button">{link.label}</button>
       </a>
     ));
   }
 
-  const { userLinks } = config;
-  if (!userLinks) {
+  const { links } = config.user;
+  if (!links) {
     return null;
   }
   return <div className="user-links">{getLinkElements()}</div>;

@@ -5,11 +5,11 @@ import ConfigContext from "../context/ConfigContext";
 function UserInfo({ expanded }) {
   const config = useContext(ConfigContext);
 
-  const { userTwitter } = config;
+  const { twitterUsername } = config.user;
 
   return (
     <Follow
-      username={userTwitter}
+      username={twitterUsername}
       options={{ count: expanded ? true : "none" }}
     />
   );
