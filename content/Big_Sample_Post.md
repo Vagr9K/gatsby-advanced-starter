@@ -2,7 +2,8 @@
 title: "Big Test"
 cover: "5.jpg"
 category: "moar"
-date: "2018-03-01"
+datePublished: "2018-03-01"
+dateModified: "2018-03-01"
 slug: "Big-Sample_Test"
 tags:
     - test

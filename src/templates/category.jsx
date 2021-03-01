@@ -27,7 +27,7 @@ export const pageQuery = graphql`
   query CategoryPage($category: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___datePublished], order: DESC }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
       totalCount
@@ -35,7 +35,6 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
-            date
           }
           excerpt
           timeToRead
@@ -43,7 +42,7 @@ export const pageQuery = graphql`
             title
             tags
             cover
-            date
+            datePublished
           }
         }
       }

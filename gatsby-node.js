@@ -27,12 +27,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
-        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
-        if (!date.isValid)
-          console.warn(`WARNING: Invalid date.`, node.frontmatter);
+      if (
+        Object.prototype.hasOwnProperty.call(node.frontmatter, "datePublished")
+      ) {
+        const datePublished = moment(
+          node.frontmatter.datePublished,
+          siteConfig.dateFromFormat
+        );
+        if (!datePublished.isValid)
+          console.warn(`WARNING: Invalid datePublished.`, node.frontmatter);
 
-        createNodeField({ node, name: "date", value: date.toISOString() });
+        createNodeField({
+          node,
+          name: "datePublished",
+          value: datePublished.toISOString(),
+        });
       }
     }
     createNodeField({ node, name: "slug", value: slug });
@@ -59,7 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               tags
               category
-              date
+              datePublished
             }
           }
         }
