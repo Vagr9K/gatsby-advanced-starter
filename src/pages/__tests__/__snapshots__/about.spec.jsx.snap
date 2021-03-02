@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page component AboutPage renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="layout-container"
+  >
+    <div
+      class="about-container"
+    >
+      <div
+        class="about"
+      >
+        <h1>
+          Edit About component or pages/about.jsx to include your information.
+        </h1>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

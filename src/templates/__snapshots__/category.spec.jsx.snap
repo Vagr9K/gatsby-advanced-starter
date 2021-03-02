@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page component CategoryPage renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="layout-container"
+  >
+    <div
+      class="category-container"
+    >
+      <div>
+        <a
+          href="/big-sample-test"
+        >
+          <h1>
+            Big Test
+          </h1>
+        </a>
+        <a
+          href="/the-fairys-witches"
+        >
+          <h1>
+            The Fairy's Witches
+          </h1>
+        </a>
+        <a
+          href="/the-butterfly-of-the-edge"
+        >
+          <h1>
+            The Butterfly of the Edge
+          </h1>
+        </a>
+        <a
+          href="/random-project-4-with-super-long-title-phase-one"
+        >
+          <h1>
+            Random project 4 With Super Long Title Phase One
+          </h1>
+        </a>
+        <a
+          href="/angels-of-mist"
+        >
+          <h1>
+            Angels of Mist
+          </h1>
+        </a>
+        <a
+          href="/birch-in-the-roses"
+        >
+          <h1>
+            Birch in the Roses
+          </h1>
+        </a>
+        <a
+          href="/the-fallen-time"
+        >
+          <h1>
+            The Fallen Time
+          </h1>
+        </a>
+        <a
+          href="/bold-mage"
+        >
+          <h1>
+            Bold Mage
+          </h1>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
