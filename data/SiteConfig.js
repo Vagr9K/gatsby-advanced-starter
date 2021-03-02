@@ -41,6 +41,14 @@ const config = {
     ],
   },
 
+  // Organization information used for SEO
+  organization: {
+    name: "Organization Name",
+    description: "Organization description",
+    logoUrl: "/logos/logo-512.png",
+    url: "https://gatsby-advanced-starter-demo.netlify.com", // URL of the organization
+  },
+
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
