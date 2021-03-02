@@ -9,7 +9,7 @@ const config = {
     description: "A GatsbyJS starter with Advanced design in mind.", // Website description used for RSS feeds/meta description tag
     logoUrl: "/logos/logo-1024.png", // Logo used for SEO and manifest
     fbAppId: "1825356251115265", // FB Application ID for using app insights
-    twitterId: "Vagr9K",
+    twitterName: "Vagr9K",
     url: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix
     rss: "/rss.xml", // Path to the RSS file
     rssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
@@ -20,7 +20,7 @@ const config = {
     id: "AdvancedUser",
     firstName: "First",
     lastName: "Last",
-    twitterUsername: "Vagr9K", // Twitter username used for SEO and rendering the "Follow me button"
+    twitterName: "Vagr9K", // Twitter username used for SEO and rendering the "Follow me button"
     email: "AdvancedUser@example.com", // Email used for RSS feed's author segment
     location: "User Location", // User location used for SEO and for the author segment.
     avatar: "https://api.adorable.io/avatars/150/test.png", // User avatar
