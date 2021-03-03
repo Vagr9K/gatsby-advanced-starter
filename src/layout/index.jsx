@@ -1,17 +1,13 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import config from "../../data/SiteConfig";
 import "./index.css";
 import { ConfigProvider } from "../context/ConfigContext";
+import SEO from "../components/SEO";
 
 export default function MainLayout({ children }) {
   return (
     <ConfigProvider>
       <div className="layout-container">
-        <Helmet>
-          <meta name="description" content={config.website.description} />
-          <html lang="en" />
-        </Helmet>
+        <SEO postNode={null} />
         {children}
       </div>
     </ConfigProvider>

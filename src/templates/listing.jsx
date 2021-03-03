@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
@@ -44,8 +43,6 @@ function Listing({ pageContext, data }) {
     <Layout>
       <div className="listing-container">
         <div className="posts-container">
-          <Helmet title={config.website.title} />
-          <SEO />
           <PostListing postEdges={postEdges} />
         </div>
         {renderPaging()}

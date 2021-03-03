@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo";
@@ -8,13 +7,10 @@ import PostTags from "../components/PostTags";
 import SocialLinks from "../components/SocialLinks";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
-import ConfigContext from "../context/ConfigContext";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 export default function PostTemplate({ data, pageContext }) {
-  const config = useContext(ConfigContext);
-
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
@@ -22,10 +18,7 @@ export default function PostTemplate({ data, pageContext }) {
   return (
     <Layout>
       <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.website.title}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <SEO postNode={postNode} />
         <div>
           <h1>{post.title}</h1>
           {/* eslint-disable-next-line react/no-danger */}
@@ -60,6 +53,9 @@ export const pageQuery = graphql`
       fields {
         slug
         datePublished
+      }
+      internal {
+        content
       }
     }
   }

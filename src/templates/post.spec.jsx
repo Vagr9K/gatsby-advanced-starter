@@ -20,5 +20,3 @@ describe("page component PostPage", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
-// TODO: make sure we have componenents
