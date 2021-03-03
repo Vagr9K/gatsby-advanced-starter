@@ -18,5 +18,8 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/test/setup-test-env.js"],
   collectCoverage: true,
   collectCoverageFrom: ["src/**/*.{js,jsx}", "data/**/*.{js,jsx}"],
-  coveragePathIgnorePatterns: ["<rootDir>/src/netlifycms/index.js"],
+  coveragePathIgnorePatterns: [
+    "<rootDir>/src/netlifycms/index.js",
+    "src/components/SEO/tests/TestUtils.js",
+  ],
 };

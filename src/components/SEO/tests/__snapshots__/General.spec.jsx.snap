@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`seo module GeneralTags generates correct tags on article pages 1`] = `
+Array [
+  <title>
+    Post title
+  </title>,
+  <meta
+    content="Post description."
+    name="description"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    name="image"
+  />,
+  <link
+    rel="shortcut icon"
+  />,
+]
+`;
+
+exports[`seo module GeneralTags generates correct tags on website pages 1`] = `
+Array [
+  <title>
+    Website title
+  </title>,
+  <meta
+    content="Website description."
+    name="description"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    name="image"
+  />,
+  <link
+    rel="shortcut icon"
+  />,
+]
+`;
