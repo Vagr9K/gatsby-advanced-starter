@@ -26,7 +26,7 @@ export default Landing;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query LandingQuery {
-    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {

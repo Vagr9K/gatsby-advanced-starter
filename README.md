@@ -36,7 +36,9 @@
 
 A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
-**NOTE**: This branch contains Gatsby v2 compatible version of the starter. To get the Gatsby v1 compatible version, use the [`v1`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v1) branch.
+**NOTE**: This branch contains Gatsby 3 compatible version of the starter.
+To get the Gatsby v2 compatible version, use the [`v2`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v2) branch.
+To get the Gatsby v1 compatible version, use the [`v1`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v1) branch.
 
 ## Lighthouse Audit Score
 
@@ -66,7 +68,7 @@ If you are interested in a foundation for building ultra-fast websites, you can 
 
 ## Features
 
-- Gatsby v2 support
+- Gatsby v3 support
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Posts in Markdown
   - Code syntax highlighting
