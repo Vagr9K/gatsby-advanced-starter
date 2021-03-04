@@ -7,7 +7,6 @@ module.exports = {
   extends: [
     "airbnb",
     "prettier",
-    "prettier/react",
     "plugin:react-hooks/recommended",
     "plugin:jest/all",
     "plugin:testing-library/recommended",
