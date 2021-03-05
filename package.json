@@ -12,7 +12,7 @@
     "gatsby-image": "^3.0.0",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-feed": "^3.0.0",
-    "gatsby-plugin-google-analytics": "^3.0.0",
+    "gatsby-plugin-google-gtag": "^3.0.0",
     "gatsby-plugin-lodash": "^4.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-mdx": "^2.0.0",
