@@ -1,5 +1,11 @@
 const urljoin = require("url-join");
 const path = require("path");
+
+// Remark plugins
+const remarkA11yEmoji = require("@fec/remark-a11y-emoji");
+const remarkExternalLinks = require("remark-external-links");
+
+// Config
 const config = require("./data/SiteConfig");
 
 // Make sure that pathPrefix is not empty
@@ -43,9 +49,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-relative-images`,
           },
@@ -56,12 +63,17 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-responsive-iframe",
+            resolve: "remark-codesandbox/gatsby",
+            options: {
+              mode: "button",
+            },
           },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs",
+          { resolve: "gatsby-remark-copy-linked-files" },
+          { resolve: "gatsby-remark-autolink-headers" },
+
+          { resolve: "gatsby-remark-prismjs" },
         ],
+        remarkPlugins: [remarkA11yEmoji, remarkExternalLinks],
       },
     },
     {
@@ -127,7 +139,7 @@ module.exports = {
       options: {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+          ret.allMdx = ref.query.allMdx;
           ret.generator = "GatsbyJS Advanced Starter";
           return ret;
         },
@@ -149,9 +161,9 @@ module.exports = {
       `,
         feeds: [
           {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
+            serialize({ query: { site, allMdx } }) {
+              const { rssMetadata } = site.siteMetadata;
+              return allMdx.edges.map((edge) => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.datePublished,
                 title: edge.node.frontmatter.title,
@@ -166,7 +178,7 @@ module.exports = {
             },
             query: `
             {
-              allMarkdownRemark(
+              allMdx(
                 limit: 1000,
                 sort: { order: DESC, fields: [frontmatter___datePublished] },
               ) {
@@ -192,6 +204,7 @@ module.exports = {
           `,
             output: config.website.rss,
             title: config.website.rssTitle,
+            site_url: config.website.url,
           },
         ],
       },

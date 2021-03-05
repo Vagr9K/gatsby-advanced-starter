@@ -82,7 +82,7 @@ exports[`component SocialLinks renders correctly 1`] = `
     <button
       aria-label="linkedin"
       class="react-share__ShareButton"
-      description="NOTE: This \\"post\\" is based on Markdown Cheatsheet and is meant to test styling of Markdown generated documents. This is intended as a quick…"
+      description="NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…"
       style="background-color: transparent; padding: 0px; cursor: pointer;"
     >
       <svg
@@ -210,7 +210,7 @@ exports[`component SocialLinks renders correctly on mobile 1`] = `
     <button
       aria-label="linkedin"
       class="react-share__ShareButton"
-      description="NOTE: This \\"post\\" is based on Markdown Cheatsheet and is meant to test styling of Markdown generated documents. This is intended as a quick…"
+      description="NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…"
       style="background-color: transparent; padding: 0px; cursor: pointer;"
     >
       <svg

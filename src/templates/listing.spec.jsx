@@ -4,10 +4,10 @@ import ListingPage from "./listing";
 import ConfigContext from "../context/ConfigContext";
 import config from "../../data/SiteConfig";
 
-const { allMarkdownRemark } = require("../../test/sampleData");
+const { allMdx } = require("../../test/sampleData");
 
 const renderPaging = (postsPerPage = 3, currentPage = 1) => {
-  const pageCount = Math.ceil(allMarkdownRemark.edges.length / postsPerPage);
+  const pageCount = Math.ceil(allMdx.edges.length / postsPerPage);
 
   const pageContext = {
     limit: postsPerPage,
@@ -16,8 +16,8 @@ const renderPaging = (postsPerPage = 3, currentPage = 1) => {
     currentPageNum: currentPage,
   };
   const data = {
-    allMarkdownRemark: {
-      edges: allMarkdownRemark.edges.slice(
+    allMdx: {
+      edges: allMdx.edges.slice(
         pageContext.skip,
         pageContext.skip + pageContext.limit
       ),
@@ -49,13 +49,13 @@ describe("page component ListingPage", () => {
     expect.assertions(1);
 
     const pageContext = {
-      limit: allMarkdownRemark.edges.length,
+      limit: allMdx.edges.length,
       skip: 0,
       pageCount: 1,
       currentPageNum: 1,
     };
     const data = {
-      allMarkdownRemark,
+      allMdx,
     };
 
     const { asFragment } = render(

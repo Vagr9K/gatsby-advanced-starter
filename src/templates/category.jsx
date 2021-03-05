@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../layout";
+import Layout from "../layouts";
 import PostListing from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 
@@ -9,7 +9,7 @@ export default function CategoryTemplate({ pageContext, data }) {
   const config = useContext(ConfigContext);
 
   const { category } = pageContext;
-  const postEdges = data.allMarkdownRemark.edges;
+  const postEdges = data.allMdx.edges;
   return (
     <Layout>
       <div className="category-container">
@@ -25,7 +25,7 @@ export default function CategoryTemplate({ pageContext, data }) {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 1000
       sort: { fields: [frontmatter___datePublished], order: DESC }
       filter: { frontmatter: { category: { eq: $category } } }
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
             tags
             cover
             datePublished
+            dateModified
           }
         }
       }

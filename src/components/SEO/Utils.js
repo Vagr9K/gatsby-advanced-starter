@@ -6,7 +6,7 @@ export const getBaseUrl = (config) => {
   return urlJoin(config.website.url, config.pathPrefix);
 };
 
-// Generate postData from a allMarkdownRemark edge
+// Generate postData from a allMdx edge
 export const generatePostData = (postNode, baseUrl) => {
   const { excerpt, frontmatter, internal } = postNode;
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
-import Layout from "../layout";
+import Layout from "../layouts";
 import About from "../components/About";
 import ConfigContext from "../context/ConfigContext";
 

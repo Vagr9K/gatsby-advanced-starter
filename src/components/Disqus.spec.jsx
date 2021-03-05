@@ -5,13 +5,13 @@ import ConfigContext from "../context/ConfigContext";
 import config from "../../data/SiteConfig";
 
 jest.mock("../../data/SiteConfig");
-const { allMarkdownRemark } = require("../../test/sampleData");
+const { allMdx } = require("../../test/sampleData");
 
 describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is set", () => {
     expect.assertions(1);
 
-    const postNode = allMarkdownRemark.edges[0].node;
+    const postNode = allMdx.edges[0].node;
 
     const { asFragment } = render(
       <ConfigContext.Provider value={config}>
@@ -25,7 +25,7 @@ describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is not set", () => {
     expect.assertions(1);
 
-    const postNode = allMarkdownRemark.edges[0].node;
+    const postNode = allMdx.edges[0].node;
 
     const { asFragment } = render(
       <ConfigContext.Provider

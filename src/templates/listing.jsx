@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../layout";
+import Layout from "../layouts";
 import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
 import ConfigContext from "../context/ConfigContext";
 import "./listing.css";
 
@@ -37,7 +36,7 @@ function Listing({ pageContext, data }) {
     );
   }
 
-  const postEdges = data.allMarkdownRemark.edges;
+  const postEdges = data.allMdx.edges;
 
   return (
     <Layout>
@@ -55,7 +54,7 @@ export default Listing;
 
 export const listingQuery = graphql`
   query ListingQuery($skip: Int, $limit: Int) {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___datePublished], order: DESC }
       limit: $limit
       skip: $skip
@@ -72,6 +71,7 @@ export const listingQuery = graphql`
             tags
             cover
             datePublished
+            dateModified
           }
         }
       }

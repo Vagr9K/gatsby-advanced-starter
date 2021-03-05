@@ -1,6 +1,6 @@
 import SEO from "../index";
 
-import { markdownRemark } from "../../../../test/sampleData";
+import { mdx } from "../../../../test/sampleData";
 
 jest.mock("react", () => {
   const config = require("../../../../data/SiteConfig"); // eslint-disable-line global-require
@@ -15,7 +15,7 @@ describe("component SEO", () => {
   it("renders correctly on article pages", () => {
     expect.assertions(1);
 
-    const postNode = markdownRemark;
+    const postNode = mdx;
     const seoData = SEO({ postNode });
 
     expect(seoData).toMatchSnapshot();

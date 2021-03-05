@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import CategoryPage from "./category";
 
-const { allMarkdownRemark } = require("../../test/sampleData");
+const { allMdx } = require("../../test/sampleData");
 
 describe("page component CategoryPage", () => {
   it("renders correctly", () => {
@@ -10,7 +10,7 @@ describe("page component CategoryPage", () => {
 
     const pageContext = { category: "test-cat" };
     const data = {
-      allMarkdownRemark,
+      allMdx,
     };
 
     const { asFragment } = render(

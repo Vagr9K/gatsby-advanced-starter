@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import TagPage from "./tag";
 import ConfigContext from "../context/ConfigContext";
 
-const { allMarkdownRemark } = require("../../test/sampleData");
+const { allMdx } = require("../../test/sampleData");
 
 describe("page component TagPage", () => {
   it("renders correctly", () => {
@@ -11,7 +11,7 @@ describe("page component TagPage", () => {
 
     const pageContext = { tag: "test-tag" };
     const data = {
-      allMarkdownRemark,
+      allMdx,
     };
 
     const { asFragment } = render(

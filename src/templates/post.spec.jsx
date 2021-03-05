@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import PostPage from "./post";
 
-const { markdownRemark } = require("../../test/sampleData");
+const { mdx } = require("../../test/sampleData");
 
 describe("page component PostPage", () => {
   it("renders correctly", () => {
@@ -10,7 +10,7 @@ describe("page component PostPage", () => {
 
     const pageContext = { slug: "test-slug" };
     const data = {
-      markdownRemark,
+      mdx,
     };
 
     const { asFragment } = render(
