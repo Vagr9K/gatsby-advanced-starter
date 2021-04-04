@@ -2,18 +2,18 @@ import TwitterTags from "../Twitter";
 import {
   tagListHasEmptyValues,
   tagListHasUniqueKeys,
-  sampleData,
+  sampleSeoData,
 } from "./TestUtils";
 
 describe("seo module TwitterTags", () => {
   it("generates correct tags on website pages", () => {
     expect.assertions(1);
 
-    const generatedTags = TwitterTags({
-      seoData: sampleData.seoWebsite,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const generatedTags = TwitterTags(
+      sampleSeoData.seoWebsite,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(generatedTags).toMatchSnapshot();
   });
@@ -21,11 +21,11 @@ describe("seo module TwitterTags", () => {
   it("generates correct tags on article pages", () => {
     expect.assertions(1);
 
-    const generatedTags = TwitterTags({
-      seoData: sampleData.seoArticle,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const generatedTags = TwitterTags(
+      sampleSeoData.seoArticle,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(generatedTags).toMatchSnapshot();
   });
@@ -34,38 +34,38 @@ describe("seo module TwitterTags", () => {
     expect.assertions(4);
 
     // Test for website pages
-    const websiteTags = TwitterTags({
-      seoData: sampleData.seoWebsite,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const websiteTags = TwitterTags(
+      sampleSeoData.seoWebsite,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(tagListHasEmptyValues(websiteTags)).toBe(false);
 
     // Test for article pages
-    const articleTags = TwitterTags({
-      seoData: sampleData.seoArticle,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const articleTags = TwitterTags(
+      sampleSeoData.seoArticle,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(tagListHasEmptyValues(articleTags)).toBe(false);
 
     // Test for missing userTwitterName
-    const tagsWithoutUserTwitter = TwitterTags({
-      seoData: sampleData.seoArticle,
-      websiteData: sampleData.website,
-      userData: { ...sampleData.user, twitterName: null },
-    });
+    const tagsWithoutUserTwitter = TwitterTags(
+      sampleSeoData.seoArticle,
+      { ...sampleSeoData.user, twitterName: null },
+      sampleSeoData.website
+    );
 
     expect(tagListHasEmptyValues(tagsWithoutUserTwitter)).toBe(false);
 
     // Test for missing siteTwitterName
-    const tagsWithoutSiteTwitterName = TwitterTags({
-      seoData: sampleData.seoArticle,
-      websiteData: { ...sampleData.website, twitterName: null },
-      userData: sampleData.user,
-    });
+    const tagsWithoutSiteTwitterName = TwitterTags(
+      sampleSeoData.seoArticle,
+      sampleSeoData.user,
+      { ...sampleSeoData.website, twitterName: null }
+    );
 
     expect(tagListHasEmptyValues(tagsWithoutSiteTwitterName)).toBe(false);
   });
@@ -74,20 +74,20 @@ describe("seo module TwitterTags", () => {
     expect.assertions(2);
 
     // Test for website pages
-    const generatedWebsiteTags = TwitterTags({
-      seoData: sampleData.seoWebsite,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const generatedWebsiteTags = TwitterTags(
+      sampleSeoData.seoWebsite,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(tagListHasUniqueKeys(generatedWebsiteTags)).toBe(true);
 
     // Test for article pages
-    const generatedArticleTags = TwitterTags({
-      seoData: sampleData.seoArticle,
-      websiteData: sampleData.website,
-      userData: sampleData.user,
-    });
+    const generatedArticleTags = TwitterTags(
+      sampleSeoData.seoArticle,
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
 
     expect(tagListHasUniqueKeys(generatedArticleTags)).toBe(true);
   });

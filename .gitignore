@@ -63,3 +63,9 @@ bundle-stats.json
 
 # Local Netlify folder
 .netlify
+
+# TypeScript output
+lib/
+
+# TypeScript coverage
+coverage-ts/

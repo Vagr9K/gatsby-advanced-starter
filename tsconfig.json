@@ -1,0 +1,30 @@
+{
+  "include": ["*", "src/**/*", "test/**/*", "data/**/*", "config/**/*"],
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["dom", "es2015", "es2017"],
+    "allowJs": true,
+    "incremental": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "checkJs": false,
+    "declaration": true,
+    "outDir": "lib",
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // "noUncheckedIndexedAccess": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "preserveConstEnums": true
+  }
+}

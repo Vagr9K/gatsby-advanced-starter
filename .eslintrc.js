@@ -5,7 +5,11 @@ module.exports = {
     "jest/globals": true,
   },
   extends: [
-    "airbnb",
+    "airbnb-typescript",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
     "plugin:react-hooks/recommended",
     "plugin:jest/all",
@@ -20,6 +24,11 @@ module.exports = {
     "jest",
     "testing-library",
     "jest-dom",
+    "graphql",
   ],
   rules: { "react/prop-types": 0 },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+  },
 };

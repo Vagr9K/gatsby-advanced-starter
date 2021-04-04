@@ -6,7 +6,7 @@ const remarkA11yEmoji = require("@fec/remark-a11y-emoji");
 const remarkExternalLinks = require("remark-external-links");
 
 // Config
-const config = require("./data/SiteConfig");
+const config = require("./config");
 
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
@@ -32,6 +32,27 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        jsxPragma: `react`,
+        allExtensions: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typegen`,
+      options: {
+        outputPath: `./src/__generated__/gatsby-types.d.ts`,
+        emitSchema: {
+          "./src/__generated__/gatsby-schema.graphql": true,
+          "./src/__generated__/gatsby-introspection.json": true,
+        },
+        emitPluginDocuments: {
+          "./src/__generated__/gatsby-plugin-documents.graphql": true,
+        },
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {

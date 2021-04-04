@@ -1,5 +1,3 @@
-const validateSiteConfig = require("./Validator");
-
 const config = {
   // Website configuration
   website: {
@@ -61,4 +59,4 @@ const config = {
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
 
-module.exports = validateSiteConfig(config);
+module.exports = config;
