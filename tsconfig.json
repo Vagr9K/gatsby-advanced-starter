@@ -1,5 +1,14 @@
 {
-  "include": ["*", "src/**/*", "test/**/*", "data/**/*", "config/**/*"],
+  "include": [
+    "*",
+    "gatsby/**/*",
+    "src/**/*",
+    "test/**/*",
+    "data/**/*",
+    "config/**/*",
+    "src/.gatsby/gatsby-node.js",
+    "src/.gatsby/gatsby-config.js"
+  ],
   "compilerOptions": {
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],

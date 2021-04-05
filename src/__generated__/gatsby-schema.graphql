@@ -336,8 +336,6 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -661,7 +659,6 @@ type ImageSharpResize {
 type MdxFrontmatter {
   title: String!
   cover: String
-  coverAlt: String
   description: String
   datePublished(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
@@ -690,8 +687,9 @@ type MdxFrontmatter {
     locale: String
   ): Date
   category: String
-  disqus_category_id: Int
   tags: [String]
+  coverAlt: String
+  disqus_category_id: Int
   slug: String
 }
 
@@ -736,19 +734,6 @@ type Mdx implements Node {
 }
 
 type MdxFields {
-  datePublished(
-    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
-    formatString: String
-
-    # Returns a string generated with Moment.js' `fromNow` function
-    fromNow: Boolean
-
-    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
-    difference: String
-
-    # Configures the locale Moment.js will use to format the date.
-    locale: String
-  ): Date
   slug: String
 }
 
@@ -829,6 +814,8 @@ type SitePluginPluginOptions {
   includeRobots: Boolean
   query: String
   feeds: [SitePluginPluginOptionsFeeds]
+  configDir: String
+  projectRoot: String
   pathCheck: Boolean
 }
 
@@ -896,9 +883,9 @@ type Query {
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
-  sitePage(path: StringQueryOperatorInput, component: StringQueryOperatorInput, internalComponentName: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SitePage
+  sitePage(path: StringQueryOperatorInput, component: StringQueryOperatorInput, internalComponentName: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, context: SitePageContextFilterInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput, componentPath: StringQueryOperatorInput): SitePage
   allSitePage(filter: SitePageFilterInput, sort: SitePageSortInput, skip: Int, limit: Int): SitePageConnection!
   imageSharp(fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, gatsbyImageData: JSONQueryOperatorInput, original: ImageSharpOriginalFilterInput, resize: ImageSharpResizeFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): ImageSharp
   allImageSharp(filter: ImageSharpFilterInput, sort: ImageSharpSortInput, skip: Int, limit: Int): ImageSharpConnection!
@@ -1076,13 +1063,13 @@ input MdxFilterInput {
 input MdxFrontmatterFilterInput {
   title: StringQueryOperatorInput
   cover: StringQueryOperatorInput
-  coverAlt: StringQueryOperatorInput
   description: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
   category: StringQueryOperatorInput
-  disqus_category_id: IntQueryOperatorInput
   tags: StringQueryOperatorInput
+  coverAlt: StringQueryOperatorInput
+  disqus_category_id: IntQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1102,7 +1089,6 @@ input MdxWordCountFilterInput {
 }
 
 input MdxFieldsFilterInput {
-  datePublished: DateQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1312,13 +1298,13 @@ enum FileFieldsEnum {
   childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
   childrenMdx___frontmatter___cover
-  childrenMdx___frontmatter___coverAlt
   childrenMdx___frontmatter___description
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
   childrenMdx___frontmatter___category
-  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___tags
+  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___slug
   childrenMdx___slug
   childrenMdx___body
@@ -1333,7 +1319,6 @@ enum FileFieldsEnum {
   childrenMdx___wordCount___paragraphs @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
-  childrenMdx___fields___datePublished @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1377,13 +1362,13 @@ enum FileFieldsEnum {
   childMdx___fileAbsolutePath
   childMdx___frontmatter___title
   childMdx___frontmatter___cover
-  childMdx___frontmatter___coverAlt
   childMdx___frontmatter___description
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
   childMdx___frontmatter___category
-  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___tags
+  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___slug
   childMdx___slug
   childMdx___body
@@ -1398,7 +1383,6 @@ enum FileFieldsEnum {
   childMdx___wordCount___paragraphs @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
-  childMdx___fields___datePublished @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1823,8 +1807,6 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
-  port
-  host
   pathPrefix
   polyfill
   id
@@ -1927,8 +1909,6 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
-  port: IntQueryOperatorInput
-  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -1940,6 +1920,165 @@ input SiteFilterInput {
 input SiteSortInput {
   fields: [SiteFieldsEnum]
   order: [SortOrderEnum] = [ASC]
+}
+
+input SitePageContextFilterInput {
+  limit: IntQueryOperatorInput
+  skip: IntQueryOperatorInput
+  pageCount: IntQueryOperatorInput
+  currentPageNum: IntQueryOperatorInput
+  slug: StringQueryOperatorInput
+  nexttitle: StringQueryOperatorInput
+  nextslug: StringQueryOperatorInput
+  prevtitle: StringQueryOperatorInput
+  prevslug: StringQueryOperatorInput
+  tag: StringQueryOperatorInput
+  category: StringQueryOperatorInput
+}
+
+input SitePluginFilterInput {
+  id: StringQueryOperatorInput
+  parent: NodeFilterInput
+  children: NodeFilterListInput
+  internal: InternalFilterInput
+  resolve: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  version: StringQueryOperatorInput
+  pluginOptions: SitePluginPluginOptionsFilterInput
+  nodeAPIs: StringQueryOperatorInput
+  browserAPIs: StringQueryOperatorInput
+  ssrAPIs: StringQueryOperatorInput
+  pluginFilepath: StringQueryOperatorInput
+  packageJson: SitePluginPackageJsonFilterInput
+}
+
+input SitePluginPluginOptionsFilterInput {
+  isTSX: BooleanQueryOperatorInput
+  jsxPragma: StringQueryOperatorInput
+  allExtensions: BooleanQueryOperatorInput
+  outputPath: StringQueryOperatorInput
+  emitSchema: SitePluginPluginOptionsEmitSchemaFilterInput
+  emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocumentsFilterInput
+  name: StringQueryOperatorInput
+  path: StringQueryOperatorInput
+  extensions: StringQueryOperatorInput
+  gatsbyRemarkPlugins: SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
+  lessBabel: BooleanQueryOperatorInput
+  mediaTypes: StringQueryOperatorInput
+  root: StringQueryOperatorInput
+  trackingIds: StringQueryOperatorInput
+  color: StringQueryOperatorInput
+  base64Width: IntQueryOperatorInput
+  stripMetadata: BooleanQueryOperatorInput
+  defaultQuality: IntQueryOperatorInput
+  failOnError: BooleanQueryOperatorInput
+  output: StringQueryOperatorInput
+  createLinkInHead: BooleanQueryOperatorInput
+  short_name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  start_url: StringQueryOperatorInput
+  background_color: StringQueryOperatorInput
+  theme_color: StringQueryOperatorInput
+  display: StringQueryOperatorInput
+  icons: SitePluginPluginOptionsIconsFilterListInput
+  legacy: BooleanQueryOperatorInput
+  theme_color_in_head: BooleanQueryOperatorInput
+  cache_busting_mode: StringQueryOperatorInput
+  crossOrigin: StringQueryOperatorInput
+  include_favicon: BooleanQueryOperatorInput
+  modulePath: StringQueryOperatorInput
+  enableIdentityWidget: BooleanQueryOperatorInput
+  publicPath: StringQueryOperatorInput
+  htmlTitle: StringQueryOperatorInput
+  includeRobots: BooleanQueryOperatorInput
+  query: StringQueryOperatorInput
+  feeds: SitePluginPluginOptionsFeedsFilterListInput
+  configDir: StringQueryOperatorInput
+  projectRoot: StringQueryOperatorInput
+  pathCheck: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsEmitSchemaFilterInput {
+  _xsrcxxxgeneratedxxxgatsbyxschemaxgraphql: BooleanQueryOperatorInput
+  _xsrcxxxgeneratedxxxgatsbyxintrospectionxjson: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsEmitPluginDocumentsFilterInput {
+  _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
+  elemMatch: SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput
+}
+
+input SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput {
+  resolve: StringQueryOperatorInput
+  options: SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput
+}
+
+input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
+  maxWidth: IntQueryOperatorInput
+  mode: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsIconsFilterListInput {
+  elemMatch: SitePluginPluginOptionsIconsFilterInput
+}
+
+input SitePluginPluginOptionsIconsFilterInput {
+  src: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
+  type: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsFeedsFilterListInput {
+  elemMatch: SitePluginPluginOptionsFeedsFilterInput
+}
+
+input SitePluginPluginOptionsFeedsFilterInput {
+  query: StringQueryOperatorInput
+  output: StringQueryOperatorInput
+  title: StringQueryOperatorInput
+  site_url: StringQueryOperatorInput
+}
+
+input SitePluginPackageJsonFilterInput {
+  name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  version: StringQueryOperatorInput
+  main: StringQueryOperatorInput
+  license: StringQueryOperatorInput
+  dependencies: SitePluginPackageJsonDependenciesFilterListInput
+  devDependencies: SitePluginPackageJsonDevDependenciesFilterListInput
+  peerDependencies: SitePluginPackageJsonPeerDependenciesFilterListInput
+  keywords: StringQueryOperatorInput
+}
+
+input SitePluginPackageJsonDependenciesFilterListInput {
+  elemMatch: SitePluginPackageJsonDependenciesFilterInput
+}
+
+input SitePluginPackageJsonDependenciesFilterInput {
+  name: StringQueryOperatorInput
+  version: StringQueryOperatorInput
+}
+
+input SitePluginPackageJsonDevDependenciesFilterListInput {
+  elemMatch: SitePluginPackageJsonDevDependenciesFilterInput
+}
+
+input SitePluginPackageJsonDevDependenciesFilterInput {
+  name: StringQueryOperatorInput
+  version: StringQueryOperatorInput
+}
+
+input SitePluginPackageJsonPeerDependenciesFilterListInput {
+  elemMatch: SitePluginPackageJsonPeerDependenciesFilterInput
+}
+
+input SitePluginPackageJsonPeerDependenciesFilterInput {
+  name: StringQueryOperatorInput
+  version: StringQueryOperatorInput
 }
 
 type SitePageConnection {
@@ -2049,6 +2188,132 @@ enum SitePageFieldsEnum {
   internal___mediaType
   internal___owner
   internal___type
+  isCreatedByStatefulCreatePages
+  context___limit
+  context___skip
+  context___pageCount
+  context___currentPageNum
+  context___slug
+  context___nexttitle
+  context___nextslug
+  context___prevtitle
+  context___prevslug
+  context___tag
+  context___category
+  pluginCreator___id
+  pluginCreator___parent___id
+  pluginCreator___parent___parent___id
+  pluginCreator___parent___parent___children
+  pluginCreator___parent___children
+  pluginCreator___parent___children___id
+  pluginCreator___parent___children___children
+  pluginCreator___parent___internal___content
+  pluginCreator___parent___internal___contentDigest
+  pluginCreator___parent___internal___description
+  pluginCreator___parent___internal___fieldOwners
+  pluginCreator___parent___internal___ignoreType
+  pluginCreator___parent___internal___mediaType
+  pluginCreator___parent___internal___owner
+  pluginCreator___parent___internal___type
+  pluginCreator___children
+  pluginCreator___children___id
+  pluginCreator___children___parent___id
+  pluginCreator___children___parent___children
+  pluginCreator___children___children
+  pluginCreator___children___children___id
+  pluginCreator___children___children___children
+  pluginCreator___children___internal___content
+  pluginCreator___children___internal___contentDigest
+  pluginCreator___children___internal___description
+  pluginCreator___children___internal___fieldOwners
+  pluginCreator___children___internal___ignoreType
+  pluginCreator___children___internal___mediaType
+  pluginCreator___children___internal___owner
+  pluginCreator___children___internal___type
+  pluginCreator___internal___content
+  pluginCreator___internal___contentDigest
+  pluginCreator___internal___description
+  pluginCreator___internal___fieldOwners
+  pluginCreator___internal___ignoreType
+  pluginCreator___internal___mediaType
+  pluginCreator___internal___owner
+  pluginCreator___internal___type
+  pluginCreator___resolve
+  pluginCreator___name
+  pluginCreator___version
+  pluginCreator___pluginOptions___isTSX
+  pluginCreator___pluginOptions___jsxPragma
+  pluginCreator___pluginOptions___allExtensions
+  pluginCreator___pluginOptions___outputPath
+  pluginCreator___pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxschemaxgraphql
+  pluginCreator___pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxintrospectionxjson
+  pluginCreator___pluginOptions___emitPluginDocuments____xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql
+  pluginCreator___pluginOptions___name
+  pluginCreator___pluginOptions___path
+  pluginCreator___pluginOptions___extensions
+  pluginCreator___pluginOptions___gatsbyRemarkPlugins
+  pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve
+  pluginCreator___pluginOptions___lessBabel
+  pluginCreator___pluginOptions___mediaTypes
+  pluginCreator___pluginOptions___root
+  pluginCreator___pluginOptions___trackingIds
+  pluginCreator___pluginOptions___color
+  pluginCreator___pluginOptions___base64Width
+  pluginCreator___pluginOptions___stripMetadata
+  pluginCreator___pluginOptions___defaultQuality
+  pluginCreator___pluginOptions___failOnError
+  pluginCreator___pluginOptions___output
+  pluginCreator___pluginOptions___createLinkInHead
+  pluginCreator___pluginOptions___short_name
+  pluginCreator___pluginOptions___description
+  pluginCreator___pluginOptions___start_url
+  pluginCreator___pluginOptions___background_color
+  pluginCreator___pluginOptions___theme_color
+  pluginCreator___pluginOptions___display
+  pluginCreator___pluginOptions___icons
+  pluginCreator___pluginOptions___icons___src
+  pluginCreator___pluginOptions___icons___sizes
+  pluginCreator___pluginOptions___icons___type
+  pluginCreator___pluginOptions___legacy
+  pluginCreator___pluginOptions___theme_color_in_head
+  pluginCreator___pluginOptions___cache_busting_mode
+  pluginCreator___pluginOptions___crossOrigin
+  pluginCreator___pluginOptions___include_favicon
+  pluginCreator___pluginOptions___modulePath
+  pluginCreator___pluginOptions___enableIdentityWidget
+  pluginCreator___pluginOptions___publicPath
+  pluginCreator___pluginOptions___htmlTitle
+  pluginCreator___pluginOptions___includeRobots
+  pluginCreator___pluginOptions___query
+  pluginCreator___pluginOptions___feeds
+  pluginCreator___pluginOptions___feeds___query
+  pluginCreator___pluginOptions___feeds___output
+  pluginCreator___pluginOptions___feeds___title
+  pluginCreator___pluginOptions___feeds___site_url
+  pluginCreator___pluginOptions___configDir
+  pluginCreator___pluginOptions___projectRoot
+  pluginCreator___pluginOptions___pathCheck
+  pluginCreator___nodeAPIs
+  pluginCreator___browserAPIs
+  pluginCreator___ssrAPIs
+  pluginCreator___pluginFilepath
+  pluginCreator___packageJson___name
+  pluginCreator___packageJson___description
+  pluginCreator___packageJson___version
+  pluginCreator___packageJson___main
+  pluginCreator___packageJson___license
+  pluginCreator___packageJson___dependencies
+  pluginCreator___packageJson___dependencies___name
+  pluginCreator___packageJson___dependencies___version
+  pluginCreator___packageJson___devDependencies
+  pluginCreator___packageJson___devDependencies___name
+  pluginCreator___packageJson___devDependencies___version
+  pluginCreator___packageJson___peerDependencies
+  pluginCreator___packageJson___peerDependencies___name
+  pluginCreator___packageJson___peerDependencies___version
+  pluginCreator___packageJson___keywords
+  pluginCreatorId
+  componentPath
 }
 
 type SitePageGroupConnection {
@@ -2070,6 +2335,11 @@ input SitePageFilterInput {
   parent: NodeFilterInput
   children: NodeFilterListInput
   internal: InternalFilterInput
+  isCreatedByStatefulCreatePages: BooleanQueryOperatorInput
+  context: SitePageContextFilterInput
+  pluginCreator: SitePluginFilterInput
+  pluginCreatorId: StringQueryOperatorInput
+  componentPath: StringQueryOperatorInput
 }
 
 input SitePageSortInput {
@@ -2247,13 +2517,13 @@ enum MdxFieldsEnum {
   fileAbsolutePath
   frontmatter___title
   frontmatter___cover
-  frontmatter___coverAlt
   frontmatter___description
   frontmatter___datePublished
   frontmatter___dateModified
   frontmatter___category
-  frontmatter___disqus_category_id
   frontmatter___tags
+  frontmatter___coverAlt
+  frontmatter___disqus_category_id
   frontmatter___slug
   slug
   body
@@ -2268,7 +2538,6 @@ enum MdxFieldsEnum {
   wordCount___paragraphs @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
-  fields___datePublished @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2499,133 +2768,6 @@ input SiteBuildMetadataSortInput {
   order: [SortOrderEnum] = [ASC]
 }
 
-input SitePluginPluginOptionsFilterInput {
-  isTSX: BooleanQueryOperatorInput
-  jsxPragma: StringQueryOperatorInput
-  allExtensions: BooleanQueryOperatorInput
-  outputPath: StringQueryOperatorInput
-  emitSchema: SitePluginPluginOptionsEmitSchemaFilterInput
-  emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocumentsFilterInput
-  name: StringQueryOperatorInput
-  path: StringQueryOperatorInput
-  extensions: StringQueryOperatorInput
-  gatsbyRemarkPlugins: SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
-  lessBabel: BooleanQueryOperatorInput
-  mediaTypes: StringQueryOperatorInput
-  root: StringQueryOperatorInput
-  trackingIds: StringQueryOperatorInput
-  color: StringQueryOperatorInput
-  base64Width: IntQueryOperatorInput
-  stripMetadata: BooleanQueryOperatorInput
-  defaultQuality: IntQueryOperatorInput
-  failOnError: BooleanQueryOperatorInput
-  output: StringQueryOperatorInput
-  createLinkInHead: BooleanQueryOperatorInput
-  short_name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  start_url: StringQueryOperatorInput
-  background_color: StringQueryOperatorInput
-  theme_color: StringQueryOperatorInput
-  display: StringQueryOperatorInput
-  icons: SitePluginPluginOptionsIconsFilterListInput
-  legacy: BooleanQueryOperatorInput
-  theme_color_in_head: BooleanQueryOperatorInput
-  cache_busting_mode: StringQueryOperatorInput
-  crossOrigin: StringQueryOperatorInput
-  include_favicon: BooleanQueryOperatorInput
-  modulePath: StringQueryOperatorInput
-  enableIdentityWidget: BooleanQueryOperatorInput
-  publicPath: StringQueryOperatorInput
-  htmlTitle: StringQueryOperatorInput
-  includeRobots: BooleanQueryOperatorInput
-  query: StringQueryOperatorInput
-  feeds: SitePluginPluginOptionsFeedsFilterListInput
-  pathCheck: BooleanQueryOperatorInput
-}
-
-input SitePluginPluginOptionsEmitSchemaFilterInput {
-  _xsrcxxxgeneratedxxxgatsbyxschemaxgraphql: BooleanQueryOperatorInput
-  _xsrcxxxgeneratedxxxgatsbyxintrospectionxjson: BooleanQueryOperatorInput
-}
-
-input SitePluginPluginOptionsEmitPluginDocumentsFilterInput {
-  _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: BooleanQueryOperatorInput
-}
-
-input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
-  elemMatch: SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput
-}
-
-input SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput {
-  resolve: StringQueryOperatorInput
-  options: SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput
-}
-
-input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
-  maxWidth: IntQueryOperatorInput
-  mode: StringQueryOperatorInput
-}
-
-input SitePluginPluginOptionsIconsFilterListInput {
-  elemMatch: SitePluginPluginOptionsIconsFilterInput
-}
-
-input SitePluginPluginOptionsIconsFilterInput {
-  src: StringQueryOperatorInput
-  sizes: StringQueryOperatorInput
-  type: StringQueryOperatorInput
-}
-
-input SitePluginPluginOptionsFeedsFilterListInput {
-  elemMatch: SitePluginPluginOptionsFeedsFilterInput
-}
-
-input SitePluginPluginOptionsFeedsFilterInput {
-  query: StringQueryOperatorInput
-  output: StringQueryOperatorInput
-  title: StringQueryOperatorInput
-  site_url: StringQueryOperatorInput
-}
-
-input SitePluginPackageJsonFilterInput {
-  name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  version: StringQueryOperatorInput
-  main: StringQueryOperatorInput
-  license: StringQueryOperatorInput
-  dependencies: SitePluginPackageJsonDependenciesFilterListInput
-  devDependencies: SitePluginPackageJsonDevDependenciesFilterListInput
-  peerDependencies: SitePluginPackageJsonPeerDependenciesFilterListInput
-  keywords: StringQueryOperatorInput
-}
-
-input SitePluginPackageJsonDependenciesFilterListInput {
-  elemMatch: SitePluginPackageJsonDependenciesFilterInput
-}
-
-input SitePluginPackageJsonDependenciesFilterInput {
-  name: StringQueryOperatorInput
-  version: StringQueryOperatorInput
-}
-
-input SitePluginPackageJsonDevDependenciesFilterListInput {
-  elemMatch: SitePluginPackageJsonDevDependenciesFilterInput
-}
-
-input SitePluginPackageJsonDevDependenciesFilterInput {
-  name: StringQueryOperatorInput
-  version: StringQueryOperatorInput
-}
-
-input SitePluginPackageJsonPeerDependenciesFilterListInput {
-  elemMatch: SitePluginPackageJsonPeerDependenciesFilterInput
-}
-
-input SitePluginPackageJsonPeerDependenciesFilterInput {
-  name: StringQueryOperatorInput
-  version: StringQueryOperatorInput
-}
-
 type SitePluginConnection {
   totalCount: Int!
   edges: [SitePluginEdge!]!
@@ -2782,6 +2924,8 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___output
   pluginOptions___feeds___title
   pluginOptions___feeds___site_url
+  pluginOptions___configDir
+  pluginOptions___projectRoot
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs
@@ -2811,22 +2955,6 @@ type SitePluginGroupConnection {
   pageInfo: PageInfo!
   field: String!
   fieldValue: String
-}
-
-input SitePluginFilterInput {
-  id: StringQueryOperatorInput
-  parent: NodeFilterInput
-  children: NodeFilterListInput
-  internal: InternalFilterInput
-  resolve: StringQueryOperatorInput
-  name: StringQueryOperatorInput
-  version: StringQueryOperatorInput
-  pluginOptions: SitePluginPluginOptionsFilterInput
-  nodeAPIs: StringQueryOperatorInput
-  browserAPIs: StringQueryOperatorInput
-  ssrAPIs: StringQueryOperatorInput
-  pluginFilepath: StringQueryOperatorInput
-  packageJson: SitePluginPackageJsonFilterInput
 }
 
 input SitePluginSortInput {
