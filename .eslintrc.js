@@ -26,7 +26,17 @@ module.exports = {
     "jest-dom",
     "graphql",
   ],
-  rules: { "react/prop-types": 0 },
+  rules: {
+    "react/prop-types": 0,
+    "graphql/template-strings": [
+      "error",
+      {
+        env: "apollo",
+        schemaJson: require("./src/__generated__/gatsby-introspection.json"),
+      },
+    ],
+  },
+
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "./tsconfig.json",
