@@ -54,7 +54,7 @@ describe("seo module TwitterTags", () => {
     // Test for missing userTwitterName
     const tagsWithoutUserTwitter = TwitterTags(
       sampleSeoData.seoArticle,
-      { ...sampleSeoData.user, twitterName: null },
+      { ...sampleSeoData.user, twitterName: undefined },
       sampleSeoData.website
     );
 
@@ -64,7 +64,7 @@ describe("seo module TwitterTags", () => {
     const tagsWithoutSiteTwitterName = TwitterTags(
       sampleSeoData.seoArticle,
       sampleSeoData.user,
-      { ...sampleSeoData.website, twitterName: null }
+      { ...sampleSeoData.website, twitterName: undefined }
     );
 
     expect(tagListHasEmptyValues(tagsWithoutSiteTwitterName)).toBe(false);

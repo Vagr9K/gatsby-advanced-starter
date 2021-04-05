@@ -5,7 +5,7 @@ export interface WebsiteData {
   description: string;
   logoUrl: string;
   fbAppId?: string;
-  twitterName: string;
+  twitterName?: string;
   url: string;
   rss: string;
   rssTitle: string;
@@ -15,7 +15,7 @@ export interface UserData {
   id: string;
   firstName: string;
   lastName: string;
-  twitterName: string;
+  twitterName?: string;
   email: string;
   location: string;
   avatar: string;
@@ -37,10 +37,8 @@ export interface SiteConfig {
   user: UserData;
   organization: OrganizationData;
   pathPrefix: string;
-  googleAnalyticsID: string;
+  googleAnalyticsID?: string;
   disqusShortname?: string;
-  dateFromFormat: string;
-  dateFormat: string;
   postsPerPage: number;
   copyright: string;
   themeColor: string;

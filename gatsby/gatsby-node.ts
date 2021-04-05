@@ -155,10 +155,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
       component: postPage,
       context: {
         slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter?.title,
-        nextslug: nextEdge.node.fields?.slug,
-        prevtitle: prevEdge.node.frontmatter?.title,
-        prevslug: prevEdge.node.fields?.slug,
+        nexttitle: nextEdge?.node.frontmatter?.title,
+        nextslug: nextEdge?.node.fields?.slug,
+        prevtitle: prevEdge?.node.frontmatter?.title,
+        prevslug: prevEdge?.node.fields?.slug,
       },
     });
   });

@@ -1,6 +1,7 @@
 {
   "include": [
     "*",
+    ".eslintrc.js",
     "gatsby/**/*",
     "src/**/*",
     "test/**/*",
@@ -15,7 +16,7 @@
     "incremental": true,
     "target": "esnext",
     "module": "commonjs",
-    "checkJs": false,
+    "checkJs": true,
     "declaration": true,
     "outDir": "lib",
     "strict": true,
@@ -25,9 +26,8 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    // "noUncheckedIndexedAccess": true,
-    // "noPropertyAccessFromIndexSignature": true,
-    "allowSyntheticDefaultImports": true,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,

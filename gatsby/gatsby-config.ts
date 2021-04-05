@@ -144,7 +144,7 @@ const gatsbyConfig = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: path.resolve("src/netlifycms/index.js"), // default: undefined
+        modulePath: path.resolve("src/netlifycms/index.js"),
         enableIdentityWidget: true,
         publicPath: "admin",
         htmlTitle: "Content Manager",

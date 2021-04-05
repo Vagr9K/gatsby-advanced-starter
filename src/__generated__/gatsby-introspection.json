@@ -5283,6 +5283,18 @@
             "deprecationReason": null
           },
           {
+            "name": "coverAlt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "description",
             "description": null,
             "args": [],
@@ -5429,6 +5441,18 @@
             "deprecationReason": null
           },
           {
+            "name": "disqus_category_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "tags",
             "description": null,
             "args": [],
@@ -5440,30 +5464,6 @@
                 "name": "String",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "coverAlt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "disqus_category_id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -11348,6 +11348,18 @@
             "deprecationReason": null
           },
           {
+            "name": "coverAlt",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "description",
             "description": null,
             "type": {
@@ -11396,35 +11408,23 @@
             "deprecationReason": null
           },
           {
-            "name": "tags",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "coverAlt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "disqus_category_id",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tags",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -13040,6 +13040,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childrenMdx___frontmatter___coverAlt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childrenMdx___frontmatter___description",
             "description": null,
             "isDeprecated": false,
@@ -13064,19 +13070,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childrenMdx___frontmatter___tags",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childrenMdx___frontmatter___coverAlt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childrenMdx___frontmatter___disqus_category_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childrenMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -13424,6 +13424,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childMdx___frontmatter___coverAlt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMdx___frontmatter___description",
             "description": null,
             "isDeprecated": false,
@@ -13448,19 +13454,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childMdx___frontmatter___tags",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childMdx___frontmatter___coverAlt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childMdx___frontmatter___disqus_category_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -22646,6 +22646,12 @@
             "deprecationReason": null
           },
           {
+            "name": "frontmatter___coverAlt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "frontmatter___description",
             "description": null,
             "isDeprecated": false,
@@ -22670,19 +22676,13 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___tags",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "frontmatter___coverAlt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "frontmatter___disqus_category_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

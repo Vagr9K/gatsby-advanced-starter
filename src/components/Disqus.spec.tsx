@@ -4,7 +4,7 @@ import Disqus from "./Disqus";
 import ConfigContext from "../context/ConfigContext";
 import config from "../config";
 
-jest.mock("../../config");
+jest.mock("../config");
 
 describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is set", () => {
