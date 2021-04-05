@@ -1,4 +1,6 @@
-const config = {
+import { SiteConfig } from "../src/config/types";
+
+const config: SiteConfig = {
   // Website configuration
   website: {
     title: "Gatsby Advanced Starter", // Site title.
@@ -59,4 +61,4 @@ const config = {
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
 
-module.exports = config;
+export default config;

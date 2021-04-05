@@ -1,7 +1,8 @@
-const isAbsoluteUrl = require("is-absolute-url");
+import isAbsoluteUrl from "is-absolute-url";
+import { SiteConfig } from "./types";
 
 // Validate
-const validateSiteConfig = (config) => {
+const validateSiteConfig = (config: SiteConfig): Readonly<SiteConfig> => {
   const newConfig = config;
   // Make sure pathPrefix is empty if not needed
   if (newConfig.pathPrefix === "/") {
@@ -32,4 +33,4 @@ const validateSiteConfig = (config) => {
   return newConfig;
 };
 
-module.exports = validateSiteConfig;
+export default validateSiteConfig;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import config from "../../config";
+import config from "../config";
 
 const ConfigContext = React.createContext(config);
 

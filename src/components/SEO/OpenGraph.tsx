@@ -1,7 +1,7 @@
 import React from "react";
 
 import { PostData, SeoData, OpenGraphTagList } from "./interfaces";
-import { UserData, WebsiteData } from "../../../config";
+import { UserData, WebsiteData } from "../../config";
 
 // This function acts as a type guard to prevent undefined content from being added
 const addTag = (

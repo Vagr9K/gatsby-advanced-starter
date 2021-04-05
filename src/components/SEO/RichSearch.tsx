@@ -8,7 +8,7 @@ import {
   JsonLdArticleMetadata,
 } from "./interfaces";
 
-import { UserData, OrganizationData } from "../../../config";
+import { UserData, OrganizationData } from "../../config";
 
 export const getAuthorMetadata = (
   userData: UserData

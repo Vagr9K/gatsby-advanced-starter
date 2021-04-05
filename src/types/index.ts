@@ -1,5 +1,5 @@
 import urlJoin from "url-join";
-import config from "../../config";
+import config from "../config";
 
 // Generate a baseURL
 export const getBaseUrl = (): string =>

@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import SocialLinks from "./SocialLinks";
 import ConfigContext from "../context/ConfigContext";
-import config from "../../config";
+import config from "../config";
 
 describe("component SocialLinks", () => {
   it("renders correctly", () => {

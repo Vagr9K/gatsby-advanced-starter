@@ -46,5 +46,3 @@ export interface SiteConfig {
   themeColor: string;
   backgroundColor: string;
 }
-
-export default SiteConfig;

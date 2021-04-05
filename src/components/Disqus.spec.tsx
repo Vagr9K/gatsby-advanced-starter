@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Disqus from "./Disqus";
 import ConfigContext from "../context/ConfigContext";
-import config from "../../config";
+import config from "../config";
 
 jest.mock("../../config");
 

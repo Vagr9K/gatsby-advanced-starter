@@ -1,6 +1,6 @@
 import { isObject } from "lodash";
 import React from "react";
-import { UserData, WebsiteData, OrganizationData } from "../../../../config";
+import { UserData, WebsiteData, OrganizationData } from "../../../config";
 import { SeoData, PostData } from "../interfaces";
 
 // Recursively scan for empty/null values

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { WebsiteData } from "../../../config";
+import { WebsiteData } from "../../config";
 import { SeoData } from "./interfaces";
 
 const GeneralTags = (

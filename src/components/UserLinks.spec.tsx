@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import UserLinks from "./UserLinks";
 import ConfigContext from "../context/ConfigContext";
-import config, { SiteConfig, UserData } from "../../config";
+import config, { SiteConfig, UserData } from "../config";
 
 const testLinks = [
   {

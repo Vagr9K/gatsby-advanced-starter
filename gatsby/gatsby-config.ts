@@ -8,7 +8,7 @@ import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import remarkExternalLinks from "remark-external-links";
 
 // Config
-import config from "../config";
+import config from "../src/config";
 
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;

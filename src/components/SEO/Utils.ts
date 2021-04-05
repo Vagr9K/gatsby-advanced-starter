@@ -1,7 +1,7 @@
 import removeMd from "remove-markdown";
 
 import { SeoData, PostData } from "./interfaces";
-import { WebsiteData } from "../../../config";
+import { WebsiteData } from "../../config";
 
 // Generate postData from a allMdx edge
 export const generatePostData = (postNode: Post): PostData => {

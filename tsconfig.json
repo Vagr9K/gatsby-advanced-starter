@@ -5,7 +5,6 @@
     "src/**/*",
     "test/**/*",
     "data/**/*",
-    "config/**/*",
     "src/.gatsby/gatsby-node.js",
     "src/.gatsby/gatsby-config.js"
   ],

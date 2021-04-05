@@ -1,7 +1,7 @@
 import * as React from "react";
 import SEO from "../index";
 import { post } from "../../../../test/sampleData";
-import config from "../../../../config";
+import config from "../../../config";
 
 jest.mock("react", () => ({
   ...jest.requireActual<typeof React>("react"),
