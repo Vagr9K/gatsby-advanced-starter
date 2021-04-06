@@ -4,7 +4,7 @@ import Layout from "../layouts";
 import About from "../components/About";
 import ConfigContext from "../context/ConfigContext";
 
-const  AboutPage:React.FC= ()=> {
+const AboutPage = (): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
   return (
@@ -15,7 +15,7 @@ const  AboutPage:React.FC= ()=> {
       </div>
     </Layout>
   );
-}
+};
 
 // TODO: Make sure About contains the layout
 

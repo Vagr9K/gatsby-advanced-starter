@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-interface Props {
+type PostListingProps = {
   listing: PostListing;
-}
+};
 
-export const PostListing: React.FC<Props> = ({ listing }) => (
+export const PostListing = ({ listing }: PostListingProps): JSX.Element => (
   <div>
     {
       /* Your post list here. */

@@ -17,19 +17,19 @@ import urljoin from "url-join";
 import ConfigContext from "../context/ConfigContext";
 import "./SocialLinks.css";
 
-type Props = {
+type SocialLinksProps = {
   postSlug: string;
   mobile: boolean;
   postExcerpt?: string;
   postTitle: string;
 };
 
-const SocialLinks: React.FC<Props> = ({
+const SocialLinks = ({
   postSlug,
   mobile,
   postExcerpt,
   postTitle,
-}) => {
+}: SocialLinksProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   const url = urljoin(config.website.url, config.pathPrefix, postSlug);

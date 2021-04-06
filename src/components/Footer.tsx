@@ -4,7 +4,7 @@ import UserLinks from "./UserLinks";
 import ConfigContext from "../context/ConfigContext";
 import "./Footer.css";
 
-const Footer: React.FC = () => {
+const Footer = (): JSX.Element | null => {
   const config = useContext(ConfigContext);
 
   const url = config.website.rss;

@@ -13,12 +13,15 @@ import "./post.css";
 
 import { convertPostQueryResponseIntoPost } from "../types";
 
-type Props = {
+type PostTemplateProps = {
   data: GatsbyTypes.BlogPostBySlugQuery;
   pageContext: { slug: string };
 };
 
-const PostTemplate: React.FC<Props> = ({ data, pageContext }) => {
+const PostTemplate = ({
+  data,
+  pageContext,
+}: PostTemplateProps): JSX.Element => {
   const { slug } = pageContext;
   const post = convertPostQueryResponseIntoPost(data);
 

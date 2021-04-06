@@ -6,14 +6,17 @@ import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import { convertListingQueryResponseIntoListing } from "../types";
 
-interface Props {
+type TagTemplateProps = {
   data: GatsbyTypes.TagPageQuery;
   pageContext: {
     tag: string;
   };
-}
+};
 
-export const TagTemplate: React.FC<Props> = ({ pageContext, data }) => {
+export const TagTemplate = ({
+  pageContext,
+  data,
+}: TagTemplateProps): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
   const { tag } = pageContext;

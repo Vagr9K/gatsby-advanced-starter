@@ -6,7 +6,7 @@ import ConfigContext from "../context/ConfigContext";
 import "./listing.css";
 import { convertListingQueryResponseIntoListing } from "../types";
 
-type Props = {
+type ListingProps = {
   data: GatsbyTypes.ListingQueryQuery;
   pageContext: {
     currentPageNum: number;
@@ -14,7 +14,7 @@ type Props = {
   };
 };
 
-const Listing: React.FC<Props> = ({ pageContext, data }) => {
+const Listing = ({ pageContext, data }: ListingProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   function renderPaging() {
@@ -29,7 +29,7 @@ const Listing: React.FC<Props> = ({ pageContext, data }) => {
     return (
       <div className="paging-container">
         {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
+        {[...Array(pageCount).keys()].map((index) => {
           const pageNum = index + 1;
           return (
             <Link

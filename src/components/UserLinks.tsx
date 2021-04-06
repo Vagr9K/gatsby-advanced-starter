@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./UserLinks.css";
 import ConfigContext from "../context/ConfigContext";
 
-const UserLinks: React.FC = () => {
+const UserLinks = (): JSX.Element | null => {
   const config = useContext(ConfigContext);
 
   function getLinkElements(links: Array<{ label: string; url: string }>) {

@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Follow } from "react-twitter-widgets";
 import ConfigContext from "../context/ConfigContext";
 
-type Props = {
+type UserInfoProps = {
   expanded: boolean;
 };
-const UserInfo: React.FC<Props> = ({ expanded }) => {
+const UserInfo = ({ expanded }: UserInfoProps): JSX.Element | null => {
   const config = useContext(ConfigContext);
 
   const { twitterName } = config.user;

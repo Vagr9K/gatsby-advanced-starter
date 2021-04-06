@@ -1,3 +1,5 @@
+/* eslint "no-console": "off" */
+
 import urlJoin from "url-join";
 import config from "../config";
 

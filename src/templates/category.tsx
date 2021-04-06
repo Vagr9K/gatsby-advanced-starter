@@ -6,12 +6,15 @@ import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import { convertListingQueryResponseIntoListing } from "../types";
 
-type Props = {
+type CategoryTemplateProps = {
   data: GatsbyTypes.CategoryPageQuery;
   pageContext: { category: string };
 };
 
-const CategoryTemplate: React.FC<Props> = ({ pageContext, data }) => {
+const CategoryTemplate = ({
+  pageContext,
+  data,
+}: CategoryTemplateProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   const { category } = pageContext;

@@ -3,7 +3,11 @@ import config from "../config";
 
 const ConfigContext = React.createContext(config);
 
-const ConfigProvider: React.FC = ({ children }) => (
+type ConfigProviderProps = {
+  children: React.ReactNode;
+};
+
+const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => (
   <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>
 );
 

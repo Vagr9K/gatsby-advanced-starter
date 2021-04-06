@@ -2,11 +2,11 @@ import React from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
 
-type Props = {
+type PostTagsProps = {
   tags: string[];
 };
 
-const PostTags: React.FC<Props> = ({ tags }) => (
+const PostTags = ({ tags }: PostTagsProps): JSX.Element => (
   <div className="post-tag-container">
     {tags &&
       tags.map((tag) => (

@@ -1,44 +1,82 @@
+const graphqlSchema = require("./src/__generated__/gatsby-introspection.json");
+
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    "jest/globals": true,
-  },
   extends: [
-    "airbnb-typescript",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
-    "plugin:react-hooks/recommended",
     "plugin:jest/all",
+    "plugin:jest-dom/recommended",
     "plugin:testing-library/recommended",
     "plugin:testing-library/react",
-    "plugin:jest-dom/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb/hooks",
+    "airbnb",
   ],
-  plugins: [
-    "react",
-    "prettier",
-    "react-hooks",
-    "jest",
-    "testing-library",
-    "jest-dom",
-    "graphql",
-  ],
-  rules: {
-    "react/prop-types": 0,
-    "graphql/template-strings": [
-      "error",
-      {
-        env: "apollo",
-        schemaJson: require("./src/__generated__/gatsby-introspection.json"),
+  overrides: [
+    {
+      files: ["**/*.ts", "**/*.tsx"],
+      env: {
+        browser: true,
+        es6: true,
+        "jest/globals": true,
       },
-    ],
-  },
+      extends: [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "airbnb-typescript",
+        "prettier",
+      ],
+      plugins: [
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "jest",
+        "jest-dom",
+        "testing-library",
+        "graphql",
+        "prettier",
+      ],
+      rules: {
+        "react/require-default-props": "off",
+        "graphql/template-strings": [
+          "error",
+          {
+            env: "apollo",
+            schemaJson: graphqlSchema,
+          },
+        ],
+      },
 
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "./tsconfig.json",
-  },
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    {
+      files: ["**/*.js", "**/*.jsx"],
+      env: {
+        browser: true,
+        es6: true,
+        "jest/globals": true,
+      },
+      extends: ["prettier"],
+      rules: {
+        "graphql/template-strings": [
+          "error",
+          {
+            env: "apollo",
+            schemaJson: graphqlSchema,
+          },
+        ],
+      },
+      plugins: [
+        "jest",
+        "jest-dom",
+        "testing-library",
+        "react",
+        "react-hooks",
+        "graphql",
+        "prettier",
+      ],
+    },
+  ],
 };

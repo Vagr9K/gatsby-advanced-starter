@@ -2,3 +2,6 @@ public
 static
 .cache
 content
+coverage
+coverage-ts
+lib

@@ -3,13 +3,17 @@ import ReactDisqusComments from "react-disqus-comments";
 import urljoin from "url-join";
 import ConfigContext from "../context/ConfigContext";
 
-type Props = {
+type DisqusProps = {
   postTitle: string;
   postCategoryId?: number;
   postSlug: string;
 };
 
-const Disqus: React.FC<Props> = ({ postTitle, postCategoryId, postSlug }) => {
+const Disqus = ({
+  postTitle,
+  postCategoryId,
+  postSlug,
+}: DisqusProps): JSX.Element | null => {
   const config = useContext(ConfigContext);
 
   // Do not render if no shortname was provided

@@ -8,11 +8,11 @@ import RichSearchTags from "./RichSearch";
 import TwitterTags from "./Twitter";
 import { generatePostData, generateSeoData } from "./Utils";
 
-interface SeoProps {
+type SeoProps = {
   post?: Post;
-}
+};
 
-const SEO: React.FC<SeoProps> = ({ post }) => {
+const SEO = ({ post }: SeoProps): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
   const postData = post ? generatePostData(post) : null;

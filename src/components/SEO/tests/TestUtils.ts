@@ -4,7 +4,7 @@ import { UserData, WebsiteData, OrganizationData } from "../../../config";
 import { SeoData, PostData } from "../interfaces";
 
 // Recursively scan for empty/null values
-export const containsEmptyValues = (data: any): boolean => {
+export const containsEmptyValues = (data: unknown): boolean => {
   if (Array.isArray(data)) {
     return !!data.find((item) => containsEmptyValues(item));
   }

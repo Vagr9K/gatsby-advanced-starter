@@ -3,7 +3,11 @@ import "./index.css";
 import { ConfigProvider } from "../context/ConfigContext";
 import SEO from "../components/SEO";
 
-const MainLayout: React.FC = ({ children }) => (
+type MainLayoutProps = {
+  children: React.ReactNode;
+};
+
+const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
   <ConfigProvider>
     <div className="layout-container">
       <SEO />
