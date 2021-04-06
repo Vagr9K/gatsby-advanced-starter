@@ -5,6 +5,9 @@ import _ from "lodash";
 import { GatsbyNode } from "gatsby";
 import siteConfig from "../src/config";
 
+import { BasicFrontmatter, GetMdxPostsQuery } from "./types";
+
+// Generates a slug from provided frontmatter/file path
 const generateSlug = (
   parsedFilePath: path.ParsedPath,
   frontmatter?: BasicFrontmatter
@@ -25,6 +28,7 @@ const generateSlug = (
   return `/${parsedFilePath.dir}/`;
 };
 
+// Gets invoked on GraphQl node creation
 export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   node,
   actions,
@@ -32,7 +36,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
 }) => {
   // Filter by Mdx nodes
   if (node.internal.type === "Mdx" && node.parent) {
-    // Find parent filenode
+    // Find parent filenode created by gatsby-source-filesystem
     const fileNode = getNode(node.parent);
 
     // Parse the path and the frontmatter
@@ -47,16 +51,18 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   }
 };
 
+// Gets invoked on page creation stage
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions,
 }) => {
+  // Paths to our page templates
   const postPage = path.resolve("src/templates/post.tsx");
   const tagPage = path.resolve("src/templates/tag.tsx");
   const categoryPage = path.resolve("src/templates/category.tsx");
   const listingPage = path.resolve("./src/templates/listing.tsx");
 
-  // Get a full list of markdown posts
+  // Get a full list of markdown posts sorted by publcation date
   const markdownQueryResult = await graphql<GetMdxPostsQuery>(`
     query GetMdxPosts {
       allMdx(sort: { fields: [frontmatter___datePublished], order: DESC }) {
@@ -77,22 +83,23 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   `);
 
+  // Exit on error
   if (markdownQueryResult.errors) {
     console.error(markdownQueryResult.errors);
     throw markdownQueryResult.errors;
   }
 
+  // Create lists of unique categories and tags
   const tagSet = new Set<string>();
   const categorySet = new Set<string>();
 
   const postsEdges = markdownQueryResult.data?.allMdx?.edges;
-
   if (!postsEdges) {
     console.warn("No Mdx posts were detected. Skipping post page creation.");
     return;
   }
 
-  // Paging
+  // If paging has been enabled, generate multiple listing pages
   const { postsPerPage } = siteConfig;
   if (postsPerPage) {
     const pageCount = Math.ceil(postsEdges.length / postsPerPage);
@@ -110,7 +117,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       });
     });
   } else {
-    // Load the landing page instead
+    // If paging has been disabled, generate one listing page
     actions.createPage({
       path: `/`,
       component: listingPage,
@@ -123,9 +130,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
     });
   }
 
-  // Post page creating
+  // Iterate over posts
   postsEdges.forEach((edge, index) => {
-    // Generate a list of tags
+    // Add post tags to our set
     const tags = edge?.node?.frontmatter?.tags;
     if (tags) {
       tags.forEach((tag) => {
@@ -133,13 +140,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
       });
     }
 
-    // Generate a list of categories
+    // Add post category to our set
     const category = edge?.node?.frontmatter?.category;
     if (category) {
       categorySet.add(category);
     }
 
-    // Create post pages
+    // Link the post page to next and previous pages
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
     const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
     const nextEdge = postsEdges[nextID];
@@ -150,6 +157,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       return;
     }
 
+    // Create a post page
     actions.createPage({
       path: edge.node.fields.slug,
       component: postPage,
@@ -163,7 +171,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     });
   });
 
-  //  Create tag pages
+  //  Create tag listing pages based on our set
   tagSet.forEach((tag) => {
     actions.createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
@@ -172,7 +180,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     });
   });
 
-  // Create category pages
+  // Create category listing pages based on our set
   categorySet.forEach((category) => {
     actions.createPage({
       path: `/categories/${_.kebabCase(category)}/`,

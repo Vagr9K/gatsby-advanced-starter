@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../layouts";
 import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
-import { convertListingQueryResponseIntoListing } from "../types";
+import { queryIntoListing } from "../types";
 
 type TagTemplateProps = {
   data: GatsbyTypes.TagPageQuery;
@@ -25,7 +25,7 @@ export const TagTemplate = ({
     <Layout>
       <div className="tag-container">
         <Helmet title={`Posts tagged as "${tag}" | ${config.website.title}`} />
-        <PostListing listing={convertListingQueryResponseIntoListing(data)} />
+        <PostListing listing={queryIntoListing(data)} />
       </div>
     </Layout>
   );

@@ -1,9 +1,9 @@
-type MdxListingQuery =
+export type MdxListingQuery =
   | GatsbyTypes.ListingQueryQuery
   | GatsbyTypes.TagPageQuery
   | GatsbyTypes.CategoryPageQuery;
 
-type MdxNode = {
+export type MdxNode = {
   body?: string;
   excerpt?: string;
   timeToRead?: number;
@@ -34,7 +34,7 @@ type MdxNode = {
 };
 
 // Post type unifies all post sources into one and is used in all components
-type Post = {
+export type Post = {
   title: string;
 
   description?: string;
@@ -58,4 +58,4 @@ type Post = {
   slug: string;
 };
 
-type PostListing = Array<Post>;
+export type PostList = Array<Post>;

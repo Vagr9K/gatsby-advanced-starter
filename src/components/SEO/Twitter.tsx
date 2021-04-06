@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SeoData, TwitterTagList } from "./interfaces";
+import { SeoData, TwitterTagList } from "./types";
 import { UserData, WebsiteData } from "../../config";
 
 const TwitterTags = (

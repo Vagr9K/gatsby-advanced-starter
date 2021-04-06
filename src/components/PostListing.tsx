@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
+import { PostList } from "../types";
+
 type PostListingProps = {
-  listing: PostListing;
+  listing: PostList;
 };
 
 export const PostListing = ({ listing }: PostListingProps): JSX.Element => (

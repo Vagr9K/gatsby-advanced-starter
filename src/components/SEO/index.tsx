@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
+import { Post } from "../../types";
+
 import ConfigContext from "../../context/ConfigContext";
 import GeneralTags from "./General";
 import OpenGraphTags from "./OpenGraph";

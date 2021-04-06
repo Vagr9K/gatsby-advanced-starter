@@ -1,7 +1,16 @@
 /* eslint "no-console": "off" */
 
+// Here we convert data from multiple sources into a unified Post type
+// Post data validation is also done here, hence cosnole logs/warnings are allowed
+// so we can notify the user during the build stage
+
 import urlJoin from "url-join";
 import config from "../config";
+
+import { MdxNode, Post, MdxListingQuery } from "./types";
+
+// Re-export types
+export * from "./types";
 
 // Generate a baseURL
 export const getBaseUrl = (): string =>
@@ -11,7 +20,7 @@ export const getBaseUrl = (): string =>
 export const getFullUrl = (slug: string): string => urlJoin(getBaseUrl(), slug);
 
 // Convert MDX based GraphQL query responses into a Post object
-export function convertQueryResponseIntoPost(mdxNode: MdxNode): Post {
+export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
   const { frontmatter } = mdxNode;
 
   if (!frontmatter)
@@ -88,25 +97,21 @@ export function convertQueryResponseIntoPost(mdxNode: MdxNode): Post {
 }
 
 // Convert MDX post query into a Post
-export const convertPostQueryResponseIntoPost = (
-  data: GatsbyTypes.BlogPostBySlugQuery
-): Post => {
+export const queryIntoPost = (data: GatsbyTypes.BlogPostBySlugQuery): Post => {
   const postData = data.mdx;
   if (!postData)
     throw Error(
       "convertPostQueryResponseIntoPost: Query doesn't contain post data. Aborting."
     );
 
-  return convertQueryResponseIntoPost(postData);
+  return mdxNodeIntoPost(postData);
 };
 
 // Convert MDX based GraphQL query responses into a Post list
-export const convertListingQueryResponseIntoListing = (
-  listing: MdxListingQuery
-): Array<Post> => {
+export const queryIntoListing = (listing: MdxListingQuery): Array<Post> => {
   const { edges } = listing.allMdx;
 
   const nodes = edges.map((edge: { node: MdxNode }) => edge.node);
 
-  return nodes.map((node) => convertQueryResponseIntoPost(node));
+  return nodes.map((node) => mdxNodeIntoPost(node));
 };

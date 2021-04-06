@@ -10,6 +10,13 @@ import remarkExternalLinks from "remark-external-links";
 // Config
 import config from "../src/config";
 
+// Types
+import {
+  GatsbyPluginFeedData,
+  GatsbyFeedRssMetadata,
+  GatsbyFeedItem,
+} from "./types";
+
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 

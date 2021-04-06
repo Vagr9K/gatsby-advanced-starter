@@ -1,4 +1,6 @@
-const postListing: PostListing = [
+import { PostList } from "../../src/types";
+
+const postListing: PostList = [
   {
     title: "Big Test",
     description: "Decsription",

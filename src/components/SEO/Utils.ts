@@ -1,6 +1,7 @@
 import removeMd from "remove-markdown";
 
-import { SeoData, PostData } from "./interfaces";
+import { SeoData, PostData } from "./types";
+import { Post } from "../../types";
 import { WebsiteData } from "../../config";
 
 // Generate postData from a allMdx edge

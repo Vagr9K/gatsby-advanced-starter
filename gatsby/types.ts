@@ -1,8 +1,6 @@
-declare module "@fec/remark-a11y-emoji";
-
 // For gatsby-node.ts
 
-type GetMdxPostsQuery = {
+export type GetMdxPostsQuery = {
   allMdx: {
     edges: Array<{
       node: {
@@ -18,14 +16,14 @@ type GetMdxPostsQuery = {
   };
 };
 
-interface BasicFrontmatter {
+export interface BasicFrontmatter {
   title?: string;
   slug?: string;
 }
 
 // gatsby-plugin-feed
 
-type GatsbyFeedRssMetadata = {
+export type GatsbyFeedRssMetadata = {
   site_url?: string;
   feed_url?: string;
   title?: string;
@@ -35,13 +33,13 @@ type GatsbyFeedRssMetadata = {
   generator?: string;
 };
 
-type GatsbyFeedSiteQuery = {
+export type GatsbyFeedSiteQuery = {
   siteMetadata?: {
     rssMetadata?: GatsbyFeedRssMetadata;
   };
 };
 
-type GatsbyFeedMdxQuery = {
+export type GatsbyFeedMdxQuery = {
   edges?: [
     {
       node: {
@@ -63,31 +61,32 @@ type GatsbyFeedMdxQuery = {
   ];
 };
 
-type GatsbyFeedQuery = {
+export type GatsbyFeedQuery = {
   site?: GatsbyFeedSiteQuery;
   allMdx?: GatsbyFeedMdxQuery;
 };
 
-type GatsbyFeedConfig = {
-  serialize: (GatsbyFeedData) => GatsbyPluginFeedData;
+export type GatsbyFeedConfig = {
+  serialize: (
+    data: GatsbyPluginFeedData
+  ) => Array<GatsbyFeedItem | undefined> | undefined;
   query: string;
   output: string;
   title: string;
   site_url: string;
 };
 
-type GatsbyPluginFeedData = {
+export type GatsbyPluginFeedData = {
   generator: string;
   query: GatsbyFeedQuery;
   feeds: Array<GatsbyFeedConfig>;
   plugins: [];
-  serialize: (GatsbyFeedData) => Array<GatsbyFeedItem | undefined> | undefined;
   output: string;
   title: string;
   site_url: string;
 };
 
-type GatsbyFeedItem = {
+export type GatsbyFeedItem = {
   categories?: string;
   date?: string;
   title?: string;

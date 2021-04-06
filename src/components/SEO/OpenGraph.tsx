@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PostData, SeoData, OpenGraphTagList } from "./interfaces";
+import { PostData, SeoData, OpenGraphTagList } from "./types";
 import { UserData, WebsiteData } from "../../config";
 
 // This function acts as a type guard to prevent undefined content from being added

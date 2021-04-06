@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../layouts";
 import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
-import { convertListingQueryResponseIntoListing } from "../types";
+import { queryIntoListing } from "../types";
 
 type CategoryTemplateProps = {
   data: GatsbyTypes.CategoryPageQuery;
@@ -24,7 +24,7 @@ const CategoryTemplate = ({
         <Helmet
           title={`Posts in category "${category}" | ${config.website.title}`}
         />
-        <PostListing listing={convertListingQueryResponseIntoListing(data)} />
+        <PostListing listing={queryIntoListing(data)} />
       </div>
     </Layout>
   );

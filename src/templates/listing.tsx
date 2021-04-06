@@ -4,7 +4,7 @@ import Layout from "../layouts";
 import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import "./listing.css";
-import { convertListingQueryResponseIntoListing } from "../types";
+import { queryIntoListing } from "../types";
 
 type ListingProps = {
   data: GatsbyTypes.ListingQueryQuery;
@@ -49,7 +49,7 @@ const Listing = ({ pageContext, data }: ListingProps): JSX.Element => {
     <Layout>
       <div className="listing-container">
         <div className="posts-container">
-          <PostListing listing={convertListingQueryResponseIntoListing(data)} />
+          <PostListing listing={queryIntoListing(data)} />
         </div>
         {renderPaging()}
       </div>

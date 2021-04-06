@@ -6,7 +6,7 @@ import {
   JsonLdAuthorMetadata,
   JsonLdOrganizationMetadata,
   JsonLdArticleMetadata,
-} from "./interfaces";
+} from "./types";
 
 import { UserData, OrganizationData } from "../../config";
 

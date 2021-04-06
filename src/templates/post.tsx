@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
-import { convertPostQueryResponseIntoPost } from "../types";
+import { queryIntoPost } from "../types";
 
 type PostTemplateProps = {
   data: GatsbyTypes.BlogPostBySlugQuery;
@@ -23,7 +23,7 @@ const PostTemplate = ({
   pageContext,
 }: PostTemplateProps): JSX.Element => {
   const { slug } = pageContext;
-  const post = convertPostQueryResponseIntoPost(data);
+  const post = queryIntoPost(data);
 
   if (!post.body)
     throw Error(

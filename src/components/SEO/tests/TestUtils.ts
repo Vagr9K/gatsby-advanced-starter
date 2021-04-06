@@ -1,7 +1,7 @@
 import { isObject } from "lodash";
 import React from "react";
 import { UserData, WebsiteData, OrganizationData } from "../../../config";
-import { SeoData, PostData } from "../interfaces";
+import { SeoData, PostData } from "../types";
 
 // Recursively scan for empty/null values
 export const containsEmptyValues = (data: unknown): boolean => {
@@ -34,8 +34,7 @@ export const tagListHasUniqueKeys = (
   return new Set(keys).size === keys.length;
 };
 
-// Sample date used for testing SEO components
-
+// Sample data used for testing SEO components
 export const sampleSeoData: {
   post: PostData;
   seoArticle: SeoData;
@@ -69,7 +68,7 @@ export const sampleSeoData: {
     description: "Post description.",
   },
 
-  // Generated SEO date for a website
+  // Generated SEO data for a website
   seoWebsite: {
     isArticle: false,
     type: "website",
