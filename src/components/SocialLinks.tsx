@@ -14,8 +14,25 @@ import {
   RedditIcon,
 } from "react-share";
 import urljoin from "url-join";
+import { SiteConfig } from "../config";
 import ConfigContext from "../context/ConfigContext";
 import "./SocialLinks.css";
+
+export const countFilter = (count: number): string =>
+  count > 0 ? count.toString() : "";
+
+export const generateRelatedTwitterNames = (
+  config: SiteConfig
+): Array<string> => {
+  const relatedTwitterNames = [];
+  if (config.user.twitterName)
+    relatedTwitterNames.push(config.user.twitterName);
+
+  if (config.website.twitterName)
+    relatedTwitterNames.push(config.website.twitterName);
+
+  return relatedTwitterNames;
+};
 
 type SocialLinksProps = {
   postSlug: string;
@@ -34,17 +51,12 @@ const SocialLinks = ({
 
   const url = urljoin(config.website.url, config.pathPrefix, postSlug);
   const iconSize = mobile ? 36 : 48;
-  const filter = (count: number) => (count > 0 ? count.toString() : "");
+
   const renderShareCount = (count: number) => (
-    <div className="share-count">{filter(count)}</div>
+    <div className="share-count">{countFilter(count)}</div>
   );
 
-  const relatedTwitterNames = [];
-  if (config.user.twitterName)
-    relatedTwitterNames.push(config.user.twitterName);
-
-  if (config.website.twitterName)
-    relatedTwitterNames.push(config.website.twitterName);
+  const relatedTwitterNames = generateRelatedTwitterNames(config);
 
   return (
     <div className="social-links">

@@ -32,8 +32,47 @@ describe("seo module OpenGraphTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
+  it("generates correct tags when missing description", () => {
+    expect.assertions(1);
+
+    const generatedTags = OpenGraphTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.website,
+      sampleSeoData.user,
+      sampleSeoData.post
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
+  it("doesn't generate tags when missing SEO imageUrl", () => {
+    expect.assertions(1);
+
+    const generatedTags = OpenGraphTags(
+      { ...sampleSeoData.seoArticle, imageUrl: undefined },
+      sampleSeoData.website,
+      sampleSeoData.user,
+      sampleSeoData.post
+    );
+
+    expect(generatedTags).toStrictEqual([]);
+  });
+
+  it("doesn't generate tags when missing SEO imageAlt", () => {
+    expect.assertions(1);
+
+    const generatedTags = OpenGraphTags(
+      { ...sampleSeoData.seoArticle, imageAlt: undefined },
+      sampleSeoData.website,
+      sampleSeoData.user,
+      sampleSeoData.post
+    );
+
+    expect(generatedTags).toStrictEqual([]);
+  });
+
   it("doesn't generate empty tags", () => {
-    expect.assertions(3);
+    expect.assertions(4);
 
     // Test for website pages
     const generatedWebsiteTags = OpenGraphTags(
@@ -64,6 +103,18 @@ describe("seo module OpenGraphTags", () => {
     );
 
     expect(tagListHasEmptyValues(generatedArticleTagsWithoutFbAppId)).toBe(
+      false
+    );
+
+    // Test for missing description case
+    const generatedArticleTagsWithoutDescription = OpenGraphTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.website,
+      sampleSeoData.user,
+      sampleSeoData.post
+    );
+
+    expect(tagListHasEmptyValues(generatedArticleTagsWithoutDescription)).toBe(
       false
     );
   });

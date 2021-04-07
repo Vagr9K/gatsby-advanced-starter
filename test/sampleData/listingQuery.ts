@@ -44,7 +44,7 @@ const mdxListingQuery = {
             description: "Decsription",
             cover: "3.jpg",
             coverAlt: null,
-            tags: null,
+            tags: undefined,
             category: "something",
             datePublished: "2017-04-02",
             dateModified: "2017-04-02",

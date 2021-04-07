@@ -113,4 +113,17 @@ describe("seo utility generatePostData", () => {
 
     expect(postData.tags).toStrictEqual([]);
   });
+
+  it("throws error when internal content isn't available", () => {
+    expect.assertions(1);
+
+    const post = cloneDeep(sampleData.post);
+    post.internalContent = undefined;
+
+    const throwingFn = () => generatePostData(post);
+
+    expect(throwingFn).toThrow(
+      "SEO::generatePostData: Post doesn't contain internal content used for Rich Tags. Aborting."
+    );
+  });
 });

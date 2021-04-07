@@ -24,8 +24,30 @@ describe("seo module GeneralTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
+  it("generates correct tags when missing description", () => {
+    expect.assertions(1);
+
+    const generatedTags = GeneralTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.website
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
+  it("generates correct tags when missing imageUrl", () => {
+    expect.assertions(1);
+
+    const generatedTags = GeneralTags(
+      { ...sampleSeoData.seoArticle, imageUrl: undefined },
+      sampleSeoData.website
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
   it("doesn't generate empty tags", () => {
-    expect.assertions(2);
+    expect.assertions(4);
 
     // Test for website pages
     const generatedWebsiteTags = GeneralTags(
@@ -42,5 +64,25 @@ describe("seo module GeneralTags", () => {
     );
 
     expect(tagListHasEmptyValues(generatedArticleTags)).toBe(false);
+
+    // Test for missing description
+    const generatedArticleTagsWithMissingDesc = GeneralTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.website
+    );
+
+    expect(tagListHasEmptyValues(generatedArticleTagsWithMissingDesc)).toBe(
+      false
+    );
+
+    // Test for missing imageUrl
+    const generatedArticleTagsWithMissingImage = GeneralTags(
+      { ...sampleSeoData.seoArticle, imageUrl: undefined },
+      sampleSeoData.website
+    );
+
+    expect(tagListHasEmptyValues(generatedArticleTagsWithMissingImage)).toBe(
+      false
+    );
   });
 });

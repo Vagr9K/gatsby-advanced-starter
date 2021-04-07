@@ -58,7 +58,7 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     console.warn(
       `Post missing description. Post slug: ${
         mdxNode.fields?.slug || "not defined"
-      }. SEO capabilities will be limited..`
+      }. SEO capabilities will be limited.`
     );
 
   const fullUrl = getFullUrl(mdxNode.fields.slug);

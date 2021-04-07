@@ -2,7 +2,6 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
     "^.+\\.jsx?$": "<rootDir>/test/jest-preprocess.js",
-    // "^.+\\.(tsx?|jsx?)$": `<rootDir>/test/jest-preprocess.js`,
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {
@@ -33,5 +32,6 @@ module.exports = {
   coveragePathIgnorePatterns: [
     "<rootDir>/src/netlifycms/index.js",
     "src/components/SEO/tests/TestUtils.ts",
+    "src/__generated__/",
   ],
 };

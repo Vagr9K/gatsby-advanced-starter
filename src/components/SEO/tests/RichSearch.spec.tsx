@@ -36,6 +36,31 @@ describe("seo module RichSearchTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
+  it("doesn't generate tags when missing post coverImageUrl", () => {
+    expect.assertions(1);
+
+    const generatedTags = RichSearchTags(
+      sampleSeoData.seoArticle,
+      { ...sampleSeoData.post, coverImageUrl: undefined },
+      sampleSeoData.user,
+      sampleSeoData.organization
+    );
+    expect(generatedTags).toStrictEqual([]);
+  });
+
+  it("doesn't generate tags when missing post description", () => {
+    expect.assertions(1);
+
+    const generatedTags = RichSearchTags(
+      sampleSeoData.seoArticle,
+      { ...sampleSeoData.post, description: undefined },
+      sampleSeoData.user,
+      sampleSeoData.organization
+    );
+
+    expect(generatedTags).toStrictEqual([]);
+  });
+
   it("doesn't generate empty tags", () => {
     expect.assertions(2);
 

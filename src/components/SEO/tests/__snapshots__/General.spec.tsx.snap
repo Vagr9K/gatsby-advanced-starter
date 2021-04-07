@@ -39,3 +39,35 @@ Array [
   />,
 ]
 `;
+
+exports[`seo module GeneralTags generates correct tags when missing description 1`] = `
+Array [
+  <title>
+    Post title
+  </title>,
+  <link
+    href="/logos/logo-1024.png"
+    rel="shortcut icon"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    name="image"
+  />,
+]
+`;
+
+exports[`seo module GeneralTags generates correct tags when missing imageUrl 1`] = `
+Array [
+  <title>
+    Post title
+  </title>,
+  <link
+    href="/logos/logo-1024.png"
+    rel="shortcut icon"
+  />,
+  <meta
+    content="Post description."
+    name="description"
+  />,
+]
+`;

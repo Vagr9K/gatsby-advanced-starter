@@ -30,8 +30,44 @@ describe("seo module TwitterTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
+  it("generates correct tags when missing description", () => {
+    expect.assertions(1);
+
+    const generatedTags = TwitterTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
+  it("generates correct tags when missing imageUrl", () => {
+    expect.assertions(1);
+
+    const generatedTags = TwitterTags(
+      { ...sampleSeoData.seoArticle, imageUrl: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
+  it("generates correct tags when missing imageAlt", () => {
+    expect.assertions(1);
+
+    const generatedTags = TwitterTags(
+      { ...sampleSeoData.seoArticle, imageAlt: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
   it("doesn't generate empty tags", () => {
-    expect.assertions(4);
+    expect.assertions(7);
 
     // Test for website pages
     const websiteTags = TwitterTags(
@@ -68,6 +104,33 @@ describe("seo module TwitterTags", () => {
     );
 
     expect(tagListHasEmptyValues(tagsWithoutSiteTwitterName)).toBe(false);
+
+    // Test for missing description
+    const tagsWithoutDescription = TwitterTags(
+      { ...sampleSeoData.seoArticle, description: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(tagListHasEmptyValues(tagsWithoutDescription)).toBe(false);
+
+    // Test for missing imageUrl
+    const tagsWithoutImageUrl = TwitterTags(
+      { ...sampleSeoData.seoArticle, imageUrl: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(tagListHasEmptyValues(tagsWithoutImageUrl)).toBe(false);
+
+    // Test for missing imageAlt
+    const tagsWithoutImageAlt = TwitterTags(
+      { ...sampleSeoData.seoArticle, imageAlt: undefined },
+      sampleSeoData.user,
+      sampleSeoData.website
+    );
+
+    expect(tagListHasEmptyValues(tagsWithoutImageAlt)).toBe(false);
   });
 
   it("generates unique keys", () => {

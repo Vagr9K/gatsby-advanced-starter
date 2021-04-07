@@ -27,7 +27,7 @@ const PostTemplate = ({
 
   if (!post.body)
     throw Error(
-      `PostTemplate: post date doesn't contain MDX body for rendering. Aborting. ${data.toString()}`
+      `PostTemplate: post date doesn't contain MDX body for rendering. Aborting. Post slug: ${slug}`
     );
 
   return (
