@@ -83,7 +83,6 @@ export const listingQuery = graphql`
             category
             datePublished
             dateModified
-            disqus_category_id
           }
           internal {
             content

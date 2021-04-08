@@ -24,8 +24,6 @@ export type MdxNode = {
 
     datePublished?: string;
     dateModified?: string;
-
-    disqus_category_id?: number;
   };
 
   internal?: {
@@ -51,8 +49,6 @@ export type Post = {
   excerpt?: string;
   timeToRead?: number;
   internalContent?: string;
-
-  disqus_category_id?: number;
 
   url: string;
   slug: string;

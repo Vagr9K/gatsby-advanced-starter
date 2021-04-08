@@ -15,7 +15,6 @@ const post: Post = {
   dateModified: new Date("2018-03-01"),
   category: "moar",
   tags: ["test", "huge"],
-  disqus_category_id: 123,
 
   slug: "/big-sample-test",
   url: "http://localhost/big-sample-test",

@@ -21,7 +21,6 @@ const mdxListingQuery = {
             category: "moar",
             datePublished: "2018-03-01",
             dateModified: "2018-03-01",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -48,7 +47,6 @@ const mdxListingQuery = {
             category: "something",
             datePublished: "2017-04-02",
             dateModified: "2017-04-02",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -82,7 +80,6 @@ const mdxListingQuery = {
             category: "tech",
             datePublished: "2017-03-17",
             dateModified: "2017-03-17",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -109,7 +106,6 @@ const mdxListingQuery = {
             category: "random",
             datePublished: "2017-03-02",
             dateModified: "2017-03-02",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -136,7 +132,6 @@ const mdxListingQuery = {
             category: "test3",
             datePublished: "2017-03-01",
             dateModified: "2017-03-01",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -163,7 +158,6 @@ const mdxListingQuery = {
             category: "tech",
             datePublished: "2017-03-01",
             dateModified: "2017-03-01",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -190,7 +184,6 @@ const mdxListingQuery = {
             category: "another one",
             datePublished: "2017-02-01",
             dateModified: "2017-02-01",
-            disqus_category_id: null,
           },
           internal: {
             content:
@@ -217,7 +210,6 @@ const mdxListingQuery = {
             category: "tech",
             datePublished: "2017-01-01",
             dateModified: "2017-01-01",
-            disqus_category_id: 123,
           },
           internal: {
             content:

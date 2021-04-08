@@ -91,8 +91,6 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
 
     url: fullUrl,
     slug: mdxNode.fields.slug,
-
-    disqus_category_id: frontmatter.disqus_category_id,
   };
 }
 

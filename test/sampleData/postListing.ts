@@ -19,7 +19,6 @@ const postListing: PostList = [
     timeToRead: 3,
     url: "http://localhost/big-sample-test",
     slug: "/big-sample-test",
-    disqus_category_id: undefined,
   },
   {
     title: "The Fairy's Witches",
@@ -39,7 +38,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/the-fairys-witches",
     slug: "/the-fairys-witches",
-    disqus_category_id: undefined,
   },
   {
     title: "The Butterfly of the Edge",
@@ -66,7 +64,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/the-butterfly-of-the-edge",
     slug: "/the-butterfly-of-the-edge",
-    disqus_category_id: undefined,
   },
   {
     title: "Random project 4 With Super Long Title Phase One",
@@ -86,7 +83,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/random-project-4-with-super-long-title-phase-one",
     slug: "/random-project-4-with-super-long-title-phase-one",
-    disqus_category_id: undefined,
   },
   {
     title: "Angels of Mist",
@@ -106,7 +102,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/angels-of-mist",
     slug: "/angels-of-mist",
-    disqus_category_id: undefined,
   },
   {
     title: "Birch in the Roses",
@@ -126,7 +121,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/birch-in-the-roses",
     slug: "/birch-in-the-roses",
-    disqus_category_id: undefined,
   },
   {
     title: "The Fallen Time",
@@ -146,7 +140,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/the-fallen-time",
     slug: "/the-fallen-time",
-    disqus_category_id: undefined,
   },
   {
     title: "Bold Mage",
@@ -166,7 +159,6 @@ const postListing: PostList = [
     timeToRead: 1,
     url: "http://localhost/bold-mage",
     slug: "/bold-mage",
-    disqus_category_id: 123,
   },
 ];
 

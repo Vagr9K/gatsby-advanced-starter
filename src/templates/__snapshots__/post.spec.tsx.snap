@@ -1770,11 +1770,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
             twdiv="yes"
           />
         </div>
-        <div>
-          <div
-            id="disqus_thread"
-          />
-        </div>
+        <div
+          id="disqus_thread"
+        />
         <footer
           class="footer"
         >

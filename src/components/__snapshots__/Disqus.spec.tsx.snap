@@ -4,10 +4,8 @@ exports[`component Disqus renders correctly when config.disqusShortname is not s
 
 exports[`component Disqus renders correctly when config.disqusShortname is set 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      id="disqus_thread"
-    />
-  </div>
+  <div
+    id="disqus_thread"
+  />
 </DocumentFragment>
 `;

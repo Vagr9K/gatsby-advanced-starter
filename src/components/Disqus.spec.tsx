@@ -12,11 +12,7 @@ describe("component Disqus", () => {
 
     const { asFragment } = render(
       <ConfigContext.Provider value={config}>
-        <Disqus
-          postTitle="testTitle"
-          postCategoryId={123}
-          postSlug="testSlug"
-        />
+        <Disqus postTitle="testTitle" postSlug="testSlug" />
       </ConfigContext.Provider>
     );
 
@@ -33,11 +29,7 @@ describe("component Disqus", () => {
           disqusShortname: undefined,
         }}
       >
-        <Disqus
-          postTitle="testTitle"
-          postCategoryId={123}
-          postSlug="testSlug"
-        />
+        <Disqus postTitle="testTitle" postSlug="testSlug" />
       </ConfigContext.Provider>
     );
     expect(asFragment()).toMatchSnapshot();

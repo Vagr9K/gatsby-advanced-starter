@@ -47,11 +47,7 @@ const PostTemplate = ({
             />
           </div>
           <UserInfo expanded={false} />
-          <Disqus
-            postSlug={slug}
-            postTitle={post.title}
-            postCategoryId={post.disqus_category_id}
-          />
+          <Disqus postSlug={slug} postTitle={post.title} />
           <Footer />
         </div>
       </div>
@@ -75,7 +71,6 @@ export const pageQuery = graphql`
         dateModified
         category
         tags
-        disqus_category_id
       }
       fields {
         slug

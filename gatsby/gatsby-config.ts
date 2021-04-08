@@ -120,6 +120,12 @@ const gatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: config.disqusShortname,
+      },
+    },
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",

@@ -14,7 +14,6 @@ const postQuery: GatsbyTypes.BlogPostBySlugQuery = {
       dateModified: "2018-03-01",
       category: "moar",
       tags: ["test", "huge"],
-      disqus_category_id: undefined,
     },
     fields: {
       slug: "/big-sample-test",
