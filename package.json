@@ -88,6 +88,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.10.2",
     "gh-pages": "^3.1.0",
+    "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "markdownlint-cli2": "^0.1.2",
@@ -126,6 +127,7 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "write-good": "write-good $(glob 'content/**/*.md')"
+    "write-good": "write-good $(glob 'content/**/*.md')",
+    "prepare": "husky install"
   }
 }
