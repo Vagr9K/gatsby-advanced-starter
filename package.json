@@ -90,9 +90,8 @@
     "gh-pages": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "markdownlint-cli2": "^0.1.2",
     "prettier": "^2.2.1",
-    "remark-cli": "^9.0.0",
-    "remark-preset-lint-recommended": "^5.0.0",
     "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
@@ -116,9 +115,9 @@
     "clean": "rm -rf public && rm -rf .cache",
     "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:styles": "stylelint src/**/*.css",
-    "lint:md": "remark content/",
+    "lint:md": "markdownlint-cli2 content/**/*.{md,mdx}",
     "lint:format": "prettier --check '**/*.{js,jsx,ts,tsx,css}'",
-    "lint:all": "npm run lint:js && npm run lint:styles && npm run lint:format",
+    "lint:all": "npm run lint:js && npm run lint:styles && npm run lint:format && npm run lint:md",
     "format:js": "prettier '**/*.{js,jsx,ts,tsx}' --write",
     "format:styles": "prettier '**/*.css' --write",
     "format:all": "npm run format:js && npm run format:styles",
@@ -128,10 +127,5 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "write-good": "write-good $(glob 'content/**/*.md')"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
   }
 }
