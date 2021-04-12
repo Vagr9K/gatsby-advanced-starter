@@ -2348,30 +2348,6 @@
             "deprecationReason": null
           },
           {
-            "name": "port",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "host",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pathPrefix",
             "description": null,
             "args": [],
@@ -5307,7 +5283,7 @@
             "deprecationReason": null
           },
           {
-            "name": "coverAlt",
+            "name": "category",
             "description": null,
             "args": [],
             "type": {
@@ -5453,7 +5429,23 @@
             "deprecationReason": null
           },
           {
-            "name": "category",
+            "name": "tags",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "coverAlt",
             "description": null,
             "args": [],
             "type": {
@@ -5472,22 +5464,6 @@
               "kind": "SCALAR",
               "name": "Int",
               "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "tags",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8519,30 +8495,6 @@
                 "deprecationReason": null
               },
               {
-                "name": "port",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "IntQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "host",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
                 "name": "pathPrefix",
                 "description": null,
                 "type": {
@@ -11408,7 +11360,7 @@
             "deprecationReason": null
           },
           {
-            "name": "coverAlt",
+            "name": "category",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -11456,7 +11408,19 @@
             "deprecationReason": null
           },
           {
-            "name": "category",
+            "name": "tags",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "coverAlt",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -11473,18 +11437,6 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "IntQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "tags",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -13100,7 +13052,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childrenMdx___frontmatter___coverAlt",
+            "name": "childrenMdx___frontmatter___category",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -13124,19 +13076,19 @@
             "deprecationReason": null
           },
           {
-            "name": "childrenMdx___frontmatter___category",
+            "name": "childrenMdx___frontmatter___tags",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childrenMdx___frontmatter___coverAlt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "childrenMdx___frontmatter___disqus_category_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childrenMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -13484,7 +13436,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childMdx___frontmatter___coverAlt",
+            "name": "childMdx___frontmatter___category",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -13508,19 +13460,19 @@
             "deprecationReason": null
           },
           {
-            "name": "childMdx___frontmatter___category",
+            "name": "childMdx___frontmatter___tags",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMdx___frontmatter___coverAlt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "childMdx___frontmatter___disqus_category_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -17126,18 +17078,6 @@
             "deprecationReason": null
           },
           {
-            "name": "port",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "host",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pathPrefix",
             "description": null,
             "isDeprecated": false,
@@ -17813,30 +17753,6 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "SiteSiteMetadataFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "port",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IntQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "host",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -22760,7 +22676,7 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___coverAlt",
+            "name": "frontmatter___category",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -22784,19 +22700,19 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___category",
+            "name": "frontmatter___tags",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___coverAlt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "frontmatter___disqus_category_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

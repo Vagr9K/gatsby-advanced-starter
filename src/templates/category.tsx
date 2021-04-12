@@ -52,6 +52,7 @@ export const pageQuery = graphql`
             cover
             datePublished
             dateModified
+            description
           }
         }
       }

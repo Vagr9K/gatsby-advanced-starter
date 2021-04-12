@@ -336,8 +336,6 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -661,7 +659,7 @@ type ImageSharpResize {
 type MdxFrontmatter {
   title: String!
   cover: String
-  coverAlt: String
+  category: String
   description: String
   datePublished(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
@@ -689,9 +687,9 @@ type MdxFrontmatter {
     # Configures the locale Moment.js will use to format the date.
     locale: String
   ): Date
-  category: String
-  disqus_category_id: Int
   tags: [String]
+  coverAlt: String
+  disqus_category_id: Int
   slug: String
 }
 
@@ -886,7 +884,7 @@ type Query {
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
   sitePage(path: StringQueryOperatorInput, component: StringQueryOperatorInput, internalComponentName: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, context: SitePageContextFilterInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput, componentPath: StringQueryOperatorInput): SitePage
   allSitePage(filter: SitePageFilterInput, sort: SitePageSortInput, skip: Int, limit: Int): SitePageConnection!
@@ -1066,13 +1064,13 @@ input MdxFilterInput {
 input MdxFrontmatterFilterInput {
   title: StringQueryOperatorInput
   cover: StringQueryOperatorInput
-  coverAlt: StringQueryOperatorInput
+  category: StringQueryOperatorInput
   description: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
-  category: StringQueryOperatorInput
-  disqus_category_id: IntQueryOperatorInput
   tags: StringQueryOperatorInput
+  coverAlt: StringQueryOperatorInput
+  disqus_category_id: IntQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1301,13 +1299,13 @@ enum FileFieldsEnum {
   childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
   childrenMdx___frontmatter___cover
-  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___category
   childrenMdx___frontmatter___description
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
-  childrenMdx___frontmatter___category
-  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___tags
+  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___slug
   childrenMdx___slug
   childrenMdx___body
@@ -1365,13 +1363,13 @@ enum FileFieldsEnum {
   childMdx___fileAbsolutePath
   childMdx___frontmatter___title
   childMdx___frontmatter___cover
-  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___category
   childMdx___frontmatter___description
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
-  childMdx___frontmatter___category
-  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___tags
+  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___slug
   childMdx___slug
   childMdx___body
@@ -1810,8 +1808,6 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
-  port
-  host
   pathPrefix
   polyfill
   id
@@ -1914,8 +1910,6 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
-  port: IntQueryOperatorInput
-  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -2526,13 +2520,13 @@ enum MdxFieldsEnum {
   fileAbsolutePath
   frontmatter___title
   frontmatter___cover
-  frontmatter___coverAlt
+  frontmatter___category
   frontmatter___description
   frontmatter___datePublished
   frontmatter___dateModified
-  frontmatter___category
-  frontmatter___disqus_category_id
   frontmatter___tags
+  frontmatter___coverAlt
+  frontmatter___disqus_category_id
   frontmatter___slug
   slug
   body
