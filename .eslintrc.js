@@ -4,7 +4,6 @@ module.exports = {
   extends: [
     "plugin:jest/all",
     "plugin:jest-dom/recommended",
-    "plugin:testing-library/recommended",
     "plugin:testing-library/react",
     "plugin:react-hooks/recommended",
     "airbnb/hooks",

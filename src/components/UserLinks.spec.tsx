@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import UserLinks from "./UserLinks";
 import ConfigContext from "../context/ConfigContext";
 import config, { SiteConfig, UserData } from "../config";
@@ -28,16 +28,16 @@ const testConfig: SiteConfig = { ...config, user: testUser };
 describe("component UserLinks", () => {
   it("renders links correctly", () => {
     expect.assertions(3); // 3 link checks
-    const { getByRole } = render(
+    render(
       <ConfigContext.Provider value={testConfig}>
         <UserLinks />
       </ConfigContext.Provider>
     );
 
     testLinks.forEach((userLink) => {
-      const userLinkElement = getByRole("button", {
+      const userLinkElement = screen.getByRole("link", {
         name: userLink.label,
-      }).closest("a");
+      });
 
       expect(userLinkElement).toHaveAttribute("href", userLink.url);
     });

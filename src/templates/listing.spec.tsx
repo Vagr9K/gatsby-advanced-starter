@@ -6,7 +6,7 @@ import config from "../config";
 
 import { listingQuery } from "../../test/sampleData";
 
-const renderPaging = (postsPerPage = 3, currentPage = 1) => {
+const renderPage = (postsPerPage = 3, currentPage = 1) => {
   const pageCount = Math.ceil(listingQuery.allMdx.edges.length / postsPerPage);
 
   const pageContext = {
@@ -24,7 +24,7 @@ const renderPaging = (postsPerPage = 3, currentPage = 1) => {
     },
   };
 
-  return render(
+  const view = render(
     <ConfigContext.Provider value={{ ...config, postsPerPage }}>
       <ListingPage
         pageContext={pageContext}
@@ -32,20 +32,25 @@ const renderPaging = (postsPerPage = 3, currentPage = 1) => {
       />
     </ConfigContext.Provider>
   );
+
+  return view.asFragment();
 };
 
 describe("page component ListingPage", () => {
   it("renders correctly with paging", () => {
     expect.assertions(3);
 
-    const firstPage = renderPaging(3, 1);
-    expect(firstPage.asFragment()).toMatchSnapshot();
+    // eslint-disable-next-line testing-library/render-result-naming-convention
+    const firstPage = renderPage(3, 1);
+    expect(firstPage).toMatchSnapshot();
 
-    const secondPage = renderPaging(3, 2);
-    expect(secondPage.asFragment()).toMatchSnapshot();
+    // eslint-disable-next-line testing-library/render-result-naming-convention
+    const secondPage = renderPage(3, 2);
+    expect(secondPage).toMatchSnapshot();
 
-    const lastPage = renderPaging(3, 3);
-    expect(lastPage.asFragment()).toMatchSnapshot();
+    // eslint-disable-next-line testing-library/render-result-naming-convention
+    const lastPage = renderPage(3, 3);
+    expect(lastPage).toMatchSnapshot();
   });
 
   it("renders correctly without paging", () => {

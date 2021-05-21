@@ -1,6 +1,6 @@
 import React from "react";
 import { mocked } from "ts-jest/utils";
-import { render } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import { Link } from "gatsby";
 import { PostListing } from "./PostListing";
 import * as sampleData from "../../test/sampleData";
@@ -15,10 +15,10 @@ describe("component PostListing", () => {
   it("renders post links correctly", () => {
     expect.assertions(3); // 2 href checks and one Link invocation amount check
 
-    const { getByText } = render(<PostListing listing={testListing} />);
+    render(<PostListing listing={testListing} />);
 
     testListing.forEach((post) => {
-      const postLink = getByText(post.title).closest("a");
+      const postLink = screen.getByRole("link", { name: post.title });
 
       expect(postLink).toHaveAttribute("href", post.slug);
     });

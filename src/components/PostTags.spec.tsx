@@ -1,6 +1,6 @@
 import React from "react";
 import { mocked } from "ts-jest/utils";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import _ from "lodash";
 import { Link } from "gatsby";
 import PostTags from "./PostTags";
@@ -14,9 +14,9 @@ describe("component PostTags", () => {
 
     const tags = ["test1", "test2"];
 
-    const { getByRole } = render(<PostTags tags={tags} />);
+    render(<PostTags tags={tags} />);
     tags.forEach((tag) => {
-      const tagLink = getByRole("button", { name: tag }).closest("a");
+      const tagLink = screen.getByRole("link", { name: tag });
 
       expect(tagLink).toHaveAttribute("href", `/tags/${_.kebabCase(tag)}`);
     });

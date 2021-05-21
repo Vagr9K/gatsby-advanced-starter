@@ -51,15 +51,8 @@ const OpenGraphTags = (
   userData: UserData,
   postData: PostData | null
 ): OpenGraphTagList => {
-  const {
-    isArticle,
-    type,
-    title,
-    imageUrl,
-    imageAlt,
-    url,
-    description,
-  } = seoData;
+  const { isArticle, type, title, imageUrl, imageAlt, url, description } =
+    seoData;
 
   const siteName = websiteData.name;
 
