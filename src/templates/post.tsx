@@ -2,12 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layouts";
-import UserInfo from "../components/UserInfo";
-import Disqus from "../components/Disqus";
-import PostTags from "../components/PostTags";
-import SocialLinks from "../components/SocialLinks";
+
 import SEO from "../components/SEO";
-import Footer from "../components/Footer";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
@@ -37,18 +33,6 @@ const PostTemplate = ({
         <div>
           <h1>{post.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
-          <div className="post-meta">
-            <PostTags tags={post.tags || []} />
-            <SocialLinks
-              postSlug={slug}
-              postTitle={post.title}
-              postExcerpt={post.excerpt}
-              mobile={false}
-            />
-          </div>
-          <UserInfo expanded={false} />
-          <Disqus postSlug={slug} postTitle={post.title} />
-          <Footer />
         </div>
       </div>
     </Layout>
