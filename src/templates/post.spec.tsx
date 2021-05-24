@@ -1,6 +1,6 @@
 import React from "react";
 import cloneDeep from "clone-deep";
-
+import "jest-styled-components";
 import { render } from "@testing-library/react";
 import PostPage from "./post";
 

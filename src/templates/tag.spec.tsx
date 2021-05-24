@@ -1,4 +1,5 @@
 import React from "react";
+import "jest-styled-components";
 import { render } from "@testing-library/react";
 import TagPage from "./tag";
 import ConfigContext from "../context/ConfigContext";

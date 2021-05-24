@@ -2,10 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layouts";
-
 import SEO from "../components/SEO";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
 
 import { queryIntoPost } from "../types";
 

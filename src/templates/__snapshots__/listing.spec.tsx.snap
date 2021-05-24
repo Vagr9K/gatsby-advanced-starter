@@ -2,14 +2,62 @@
 
 exports[`page component ListingPage renders correctly with paging 1`] = `
 <DocumentFragment>
-  <div
-    class="layout-container"
+  .c0 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.c1 {
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+
+}
+
+<div
+    class="c0"
   >
     <div
-      class="listing-container"
+      class="c1"
     >
       <div
-        class="posts-container"
+        class="c2"
       >
         <div>
           <a
@@ -66,14 +114,66 @@ exports[`page component ListingPage renders correctly with paging 1`] = `
 
 exports[`page component ListingPage renders correctly with paging 2`] = `
 <DocumentFragment>
-  <div
-    class="layout-container"
+  .c0 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.c1 {
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+<div
+    class="c0"
   >
     <div
-      class="listing-container"
+      class="c1"
     >
       <div
-        class="posts-container"
+        class="c2"
       >
         <div>
           <a
@@ -135,14 +235,70 @@ exports[`page component ListingPage renders correctly with paging 2`] = `
 
 exports[`page component ListingPage renders correctly with paging 3`] = `
 <DocumentFragment>
-  <div
-    class="layout-container"
+  .c0 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.c1 {
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+<div
+    class="c0"
   >
     <div
-      class="listing-container"
+      class="c1"
     >
       <div
-        class="posts-container"
+        class="c2"
       >
         <div>
           <a
@@ -192,14 +348,62 @@ exports[`page component ListingPage renders correctly with paging 3`] = `
 
 exports[`page component ListingPage renders correctly without paging 1`] = `
 <DocumentFragment>
-  <div
-    class="layout-container"
+  .c0 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.c1 {
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+
+}
+
+<div
+    class="c0"
   >
     <div
-      class="listing-container"
+      class="c1"
     >
       <div
-        class="posts-container"
+        class="c2"
       >
         <div>
           <a

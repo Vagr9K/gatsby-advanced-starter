@@ -2,20 +2,26 @@
 
 exports[`page component AboutPage renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="layout-container"
+  .c0 {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+@media (min-width:564px) {
+
+}
+
+<div
+    class="c0"
   >
     <div
       class="about-container"
-    >
-      <div
-        class="about"
-      >
-        <h1>
-          Edit About component or pages/about.jsx to include your information.
-        </h1>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
