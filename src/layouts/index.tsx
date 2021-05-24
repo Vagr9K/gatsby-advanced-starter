@@ -1,7 +1,17 @@
 import * as React from "react";
-import "./index.css";
+import styled from "styled-components";
 import { ConfigProvider } from "../context/ConfigContext";
 import SEO from "../components/SEO";
+import Typography from "./Typography";
+import Color from "./Color";
+import CssReset from "./CssReset";
+
+const LayoutContainer = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  padding: 20px;
+`;
 
 type MainLayoutProps = {
   children: React.ReactNode;
@@ -9,10 +19,13 @@ type MainLayoutProps = {
 
 const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
   <ConfigProvider>
-    <div className="layout-container">
+    <CssReset />
+    <Typography />
+    <Color />
+    <LayoutContainer>
       <SEO />
       {children}
-    </div>
+    </LayoutContainer>
   </ConfigProvider>
 );
 
