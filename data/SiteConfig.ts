@@ -21,24 +21,11 @@ const config: SiteConfig = {
     firstName: "First",
     lastName: "Last",
     twitterName: "Vagr9K", // Twitter username used for SEO and rendering the "Follow me button"
+    linkedIn: "your-linkedin",
+    github: "vagr9k",
     email: "AdvancedUser@example.com", // Email used for RSS feed's author segment
     location: "User Location", // User location used for SEO and for the author segment.
     avatar: "https://api.adorable.io/avatars/150/test.png", // User avatar
-    // Links to social profiles/projects you want to display in the author segment/navigation bar.
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/Vagr9K/gatsby-advanced-starter",
-      },
-      {
-        label: "Twitter",
-        url: "https://twitter.com/Vagr9K",
-      },
-      {
-        label: "Email",
-        url: "mailto:vagr9k@gmail.com",
-      },
-    ],
   },
 
   // Organization information used for SEO
@@ -53,7 +40,7 @@ const config: SiteConfig = {
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postsPerPage: 4, // Amount of posts displayed per listing page.
-  copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "© Copyright 2021 | Ruben Harutyunyan", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };

@@ -16,13 +16,11 @@ export interface UserData {
   firstName: string;
   lastName: string;
   twitterName?: string;
+  linkedIn?: string;
+  github?: string;
   email: string;
   location: string;
   avatar: string;
-  links?: {
-    label: string;
-    url: string;
-  }[];
 }
 
 export interface OrganizationData {

@@ -102,21 +102,6 @@ export const sampleSeoData: {
     email: "AdvancedUser@example.com", // Email used for RSS feed's author segment
     location: "User Location", // User location used for SEO and for the author segment.
     avatar: "https://api.adorable.io/avatars/150/test.png", // User avatar
-    // Links to social profiles/projects you want to display in the author segment/navigation bar.
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/Vagr9K/gatsby-advanced-starter",
-      },
-      {
-        label: "Twitter",
-        url: "https://twitter.com/Vagr9K",
-      },
-      {
-        label: "Email",
-        url: "mailto:vagr9k@gmail.com",
-      },
-    ],
   },
 
   // Organization data
