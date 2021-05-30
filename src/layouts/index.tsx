@@ -2,15 +2,34 @@ import * as React from "react";
 import styled from "styled-components";
 import { ConfigProvider } from "../context/ConfigContext";
 import SEO from "../components/SEO";
-import Typography from "./Typography";
-import Color from "./Color";
-import CssReset from "./CssReset";
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
+import ThemeProvider from "../theme";
 
-const LayoutContainer = styled.div`
+const LayoutGrid = styled.div`
   min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  padding: 20px;
+  min-width: 100%;
+
+  padding-top: 16px;
+
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  align-content: space-between;
+`;
+
+const WidthLimitedGrid = styled.div`
+  padding: 0 16px 0 16px;
+
+  justify-self: center;
+
+  max-width: calc(1144px + 16px * 2);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  align-content: space-between;
+  justify-items: stretch;
 `;
 
 type MainLayoutProps = {
@@ -18,15 +37,18 @@ type MainLayoutProps = {
 };
 
 const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
-  <ConfigProvider>
-    <CssReset />
-    <Typography />
-    <Color />
-    <LayoutContainer>
+  <ThemeProvider>
+    <ConfigProvider>
       <SEO />
-      {children}
-    </LayoutContainer>
-  </ConfigProvider>
+      <LayoutGrid>
+        <WidthLimitedGrid>
+          <Navigation />
+          {children}
+        </WidthLimitedGrid>
+        <Footer />
+      </LayoutGrid>
+    </ConfigProvider>
+  </ThemeProvider>
 );
 
 export default MainLayout;

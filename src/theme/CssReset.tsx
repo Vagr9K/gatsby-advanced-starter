@@ -1,12 +1,17 @@
 import { createGlobalStyle } from "styled-components";
+import "normalize.css";
 
 const CssReset = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
 
   html {
-    height: 100%;
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
   }
 
   body {
@@ -17,9 +22,8 @@ const CssReset = createGlobalStyle`
   }
   #___gatsby #gatsby-focus-wrapper {
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
   }
-
 `;
 
 export default CssReset;
