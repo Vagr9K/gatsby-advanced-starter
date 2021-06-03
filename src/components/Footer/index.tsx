@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { IconLinks } from "../IconLinks";
+import IconLinks from "../IconLinks";
 import { H3, ExternalLink, Caption } from "../../theme";
 
 import ConfigContext from "../../context/ConfigContext";
