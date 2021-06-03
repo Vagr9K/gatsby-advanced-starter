@@ -73,10 +73,11 @@ const MobileCaption = css`
 const MobileOverline = css`
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 `;
 
 const DesktopH1 = css`
