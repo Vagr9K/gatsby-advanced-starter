@@ -1,9 +1,9 @@
 import React from "react";
 import "jest-styled-components";
 import { render } from "@testing-library/react";
-import Disqus from "./Disqus";
-import ConfigContext from "../context/ConfigContext";
-import config from "../config";
+import Disqus from ".";
+import ConfigContext from "../../context/ConfigContext";
+import config from "../../config";
 
 jest.mock("../config");
 

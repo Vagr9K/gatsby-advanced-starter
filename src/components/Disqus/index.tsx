@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Disqus as DisqusPlugin } from "gatsby-plugin-disqus";
 import urljoin from "url-join";
-import ConfigContext from "../context/ConfigContext";
+import ConfigContext from "../../context/ConfigContext";
 
 type DisqusProps = {
   postTitle: string;
