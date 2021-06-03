@@ -47,6 +47,11 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
       `Post missing slug. Post title: ${frontmatter.title}. Aborting.`
     );
 
+  if (!mdxNode.timeToRead)
+    throw Error(
+      `Post missing timeToRead. Post slug: ${mdxNode.fields.slug}. Aborting.`
+    );
+
   if (!frontmatter.cover)
     console.warn(
       `Post missing cover image. Post slug: ${

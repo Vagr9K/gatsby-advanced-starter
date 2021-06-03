@@ -47,7 +47,7 @@ export type Post = {
 
   body?: string;
   excerpt?: string;
-  timeToRead?: number;
+  timeToRead: number;
   internalContent?: string;
 
   url: string;
