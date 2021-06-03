@@ -4,7 +4,7 @@ const config: SiteConfig = {
   // Website configuration
   website: {
     title: "Gatsby Advanced Starter", // Site title.
-    titleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
+    titleShort: "Advanced Blog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
     name: "Gatsby Advanced Starter", // Website name used for homescreen (PWA) and SEO
     description: "A GatsbyJS starter with Advanced design in mind.", // Website description used for RSS feeds/meta description tag
     logoUrl: "/logos/logo-1024.png", // Logo used for SEO and manifest
