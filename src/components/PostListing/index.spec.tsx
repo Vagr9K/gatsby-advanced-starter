@@ -3,8 +3,8 @@ import { mocked } from "ts-jest/utils";
 import "jest-styled-components";
 import { screen, render } from "@testing-library/react";
 import { Link } from "gatsby";
-import { PostListing } from "./PostListing";
-import * as sampleData from "../../test/sampleData";
+import { PostListing } from ".";
+import * as sampleData from "../../../test/sampleData";
 
 jest.mock("gatsby");
 const mockedLink = mocked(Link, true);

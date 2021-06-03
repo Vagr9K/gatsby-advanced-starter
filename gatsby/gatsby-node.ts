@@ -99,36 +99,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return;
   }
 
-  // If paging has been enabled, generate multiple listing pages
-  const { postsPerPage } = siteConfig;
-  if (postsPerPage) {
-    const pageCount = Math.ceil(postsEdges.length / postsPerPage);
-
-    [...Array(pageCount).keys()].forEach((pageNum) => {
-      actions.createPage({
-        path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-        component: listingPage,
-        context: {
-          limit: postsPerPage,
-          skip: pageNum * postsPerPage,
-          pageCount,
-          currentPageNum: pageNum + 1,
-        },
-      });
-    });
-  } else {
-    // If paging has been disabled, generate one listing page
-    actions.createPage({
-      path: `/`,
-      component: listingPage,
-      context: {
-        limit: postsEdges.length,
-        skip: 0,
-        pageCount: 1,
-        currentPageNum: 1,
-      },
-    });
-  }
+  // Generate listing page
+  actions.createPage({
+    path: `/`,
+    component: listingPage,
+    context: {
+      limit: postsEdges.length,
+      skip: 0,
+      pageCount: 1,
+      currentPageNum: 1,
+    },
+  });
 
   // Iterate over posts
   postsEdges.forEach((edge, index) => {
