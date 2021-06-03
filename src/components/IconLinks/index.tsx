@@ -1,23 +1,13 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import { MailSend, Rss } from "@styled-icons/boxicons-regular";
 import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
 import { StyledIcon } from "@styled-icons/styled-icon";
 
-import { SiteConfig } from "../config";
-import ConfigContext from "../context/ConfigContext";
+import { SiteConfig } from "../../config";
+import ConfigContext from "../../context/ConfigContext";
 
-// Styles
-const IconLink = styled.a`
-  color: inherit;
-`;
-
-const LinkContainer = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  gap: 24px;
-`;
+import { IconLink, LinkContainer } from "./style";
 
 // Utilities
 const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (

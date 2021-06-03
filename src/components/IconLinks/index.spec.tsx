@@ -3,10 +3,10 @@ import "jest-styled-components";
 import cloneDeep from "clone-deep";
 import { render } from "@testing-library/react";
 
-import UserLinks from "./UserLinks";
+import UserLinks from ".";
 
-import ConfigContext from "../context/ConfigContext";
-import config from "../config";
+import ConfigContext from "../../context/ConfigContext";
+import config from "../../config";
 
 jest.mock("../config");
 
