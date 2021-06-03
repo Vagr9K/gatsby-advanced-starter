@@ -8,4 +8,5 @@ const babelOptions = {
   ],
 };
 
-module.exports = babelJest.createTransformer(babelOptions);
+// @ts-ignore
+module.exports = babelJest.default.createTransformer(babelOptions);
