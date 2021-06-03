@@ -1,4 +1,4 @@
-import AdvancedLogo from "../../static/logos/gatsby-advanced-starter.svg";
+import AdvancedLogo from "../../static/logos/logo.svg";
 
 export { AdvancedLogo };
 
