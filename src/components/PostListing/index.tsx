@@ -10,7 +10,11 @@ type PostListingProps = {
 export const PostListing = ({ listing }: PostListingProps): JSX.Element => (
   <PostListingContainer>
     {listing.map((post, idx) =>
-      idx === 0 ? <ArticleCard post={post} hero /> : <ArticleCard post={post} />
+      idx === 0 ? (
+        <ArticleCard key={post.slug} post={post} hero />
+      ) : (
+        <ArticleCard key={post.slug} post={post} />
+      )
     )}
   </PostListingContainer>
 );

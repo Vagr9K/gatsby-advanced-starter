@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Navigation renders correctly 1`] = `
+<DocumentFragment>
+  .c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.c4 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 0 0 8px 0;
+  background-color: var(--color-background);
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-width: 0px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.c4.gatsby-link-active {
+  border-bottom-width: 2px;
+}
+
+@media (max-width:500px) {
+  .c2 {
+    display: none;
+  }
+}
+
+<header
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="/"
+    >
+      <test-file-stub
+        height="36"
+        width="36"
+      />
+      <p
+        class="c2"
+      >
+        Advanced Blog
+      </p>
+    </a>
+    <div
+      class="c3"
+    >
+      <a
+        class="c4"
+        href="/"
+      >
+        Posts
+      </a>
+      <a
+        class="c4"
+        href="/about"
+      >
+        About
+      </a>
+    </div>
+  </header>
+</DocumentFragment>
+`;

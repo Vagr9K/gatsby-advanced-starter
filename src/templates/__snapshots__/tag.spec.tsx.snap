@@ -2,85 +2,1368 @@
 
 exports[`page component TagPage renders correctly 1`] = `
 <DocumentFragment>
-  .c0 {
-  min-height: 100vh;
-  min-width: 100vw;
+  .c27 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c34 {
+  color: inherit;
+}
+
+.c33 {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+}
+
+.c23 {
+  font-family: "Alfa Slab One",serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  -webkit-letter-spacing: 0.15px;
+  -moz-letter-spacing: 0.15px;
+  -ms-letter-spacing: 0.15px;
+  letter-spacing: 0.15px;
+}
+
+.c24 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c19 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c37 {
+  color: var(--color-primary);
+}
+
+footer .c36 {
+  color: inherit;
+}
+
+.c31 {
+  display: grid;
+  gap: 40px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 32px 0px 16px;
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-700);
+  fill: var(--color-grey-700);
+}
+
+.c32 {
+  display: inline-grid;
+  gap: 12px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35 {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.c6 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 0 0 8px 0;
+  background-color: var(--color-background);
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-width: 0px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.c6.gatsby-link-active {
+  border-bottom-width: 2px;
+}
+
+.c0 {
+  min-height: 100vh;
+  min-width: 100%;
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+}
+
+.c1 {
+  padding: 0 16px 0 16px;
+  justify-self: center;
+  max-width: calc(1144px + 16px * 2);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  justify-items: stretch;
+}
+
+.c10 {
+  object-fit: cover;
+  box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.c9 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c11 {
+  width: 100%;
+  height: 368px;
+}
+
+.c8 {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.c28 {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.c14 {
+  display: grid;
+  grid-gap: 12px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+}
+
+.c25 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.c30 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.c13 {
+  display: grid;
+  grid-gap: 12px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+}
+
+.c12 {
+  display: grid;
+}
+
+.c29 {
+  display: grid;
+}
+
+.c26 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  display: grid;
+  grid-gap: 12px;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  color: var(--color-primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c22 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.5px;
+  -moz-letter-spacing: 1.5px;
+  -ms-letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.c22::before {
+  content: "#";
+}
+
+.c18 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.c20 {
+  color: var(--color-grey-700);
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c21 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c7 {
+  width: 100%;
+  display: grid;
+  grid-gap: 80px;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (min-width:564px) {
 
 }
 
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+  .c23 {
+    font-family: "Alfa Slab One",serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    line-height: 40px;
+    -webkit-letter-spacing: 0.15px;
+    -moz-letter-spacing: 0.15px;
+    -ms-letter-spacing: 0.15px;
+    letter-spacing: 0.15px;
+  }
+}
+
+@media (min-width:564px) {
+  .c24 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    -webkit-letter-spacing: 0.5px;
+    -moz-letter-spacing: 0.5px;
+    -ms-letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (min-width:564px) {
+  .c19 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width:500px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:500px) {
+  .c11 {
+    height: 320px;
+  }
+}
+
+@media (max-width:440px) {
+  .c11 {
+    height: 270px;
+  }
+}
+
+@media (min-width:1100px) {
+  .c8 {
+    grid-column: span 2;
+    grid-template-columns: 6fr 4fr;
+    grid-auto-flow: column;
+    grid-gap: 32px;
+  }
+}
+
+@media (min-width:1100px) {
+  .c12 {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: space-between;
+    align-content: space-between;
+  }
+}
+
+@media (max-width:1100px) {
+  .c26 {
+    display: none;
+  }
+}
+
+@media (min-width:564px) {
+  .c22 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width:564px) {
+  .c18 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width:1100px) {
+  .c7 {
+    grid-template-columns: 1fr;
+  }
+}
+
 <div
     class="c0"
   >
     <div
-      class="tag-container"
+      class="c1"
     >
-      <div>
+      <header
+        class="c2"
+      >
         <a
-          href="/big-sample-test"
+          class="c3"
+          href="/"
         >
-          <h1>
-            Big Test
-          </h1>
+          <test-file-stub
+            height="36"
+            width="36"
+          />
+          <p
+            class="c4"
+          >
+            Advanced Blog
+          </p>
         </a>
-        <a
-          href="/the-fairys-witches"
+        <div
+          class="c5"
         >
-          <h1>
-            The Fairy's Witches
-          </h1>
-        </a>
-        <a
-          href="/the-butterfly-of-the-edge"
+          <a
+            class="c6"
+            href="/"
+          >
+            Posts
+          </a>
+          <a
+            class="c6"
+            href="/about"
+          >
+            About
+          </a>
+        </div>
+      </header>
+      <div
+        class="tag-container"
+      >
+        <div
+          class="c7"
         >
-          <h1>
-            The Butterfly of the Edge
-          </h1>
-        </a>
-        <a
-          href="/random-project-4-with-super-long-title-phase-one"
-        >
-          <h1>
-            Random project 4 With Super Long Title Phase One
-          </h1>
-        </a>
-        <a
-          href="/angels-of-mist"
-        >
-          <h1>
-            Angels of Mist
-          </h1>
-        </a>
-        <a
-          href="/birch-in-the-roses"
-        >
-          <h1>
-            Birch in the Roses
-          </h1>
-        </a>
-        <a
-          href="/the-fallen-time"
-        >
-          <h1>
-            The Fallen Time
-          </h1>
-        </a>
-        <a
-          href="/bold-mage"
-        >
-          <h1>
-            Bold Mage
-          </h1>
-        </a>
+          <div
+            class="c8"
+          >
+            <a
+              class="c9"
+              href="/big-sample-test"
+            >
+              <img
+                class="c10 c11"
+                src="5.jpg"
+              />
+            </a>
+            <div
+              class="c12"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/moar"
+                      >
+                        moar
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Mar 1, 2018 ⋅ 3 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/test"
+                      >
+                        test
+                      </a>
+                      <a
+                        class="c17 c22"
+                        href="/tags/huge"
+                      >
+                        huge
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/big-sample-test"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      Big Test
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/big-sample-test"
+                >
+                  <p
+                    class="c24 c25"
+                  >
+                    MDX Test Here's a color picker! NOTE: This "post" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…
+                  </p>
+                </a>
+              </div>
+              <a
+                class="c26"
+                href="/big-sample-test"
+              >
+                Read the article 
+                <svg
+                  aria-hidden="true"
+                  class="c27"
+                  fill="currentColor"
+                  focusable="false"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.002 3h-14c-1.103 0-2 .897-2 2v4h2V5h14v14h-14v-4h-2v4c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.898-2-2-2z"
+                  />
+                  <path
+                    d="M11 16l5-4-5-4v3.001H3v2h8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/the-fairys-witches"
+            >
+              <img
+                class="c10 c11"
+                src="3.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/something"
+                      >
+                        something
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Apr 2, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    />
+                  </div>
+                  <a
+                    class="c9"
+                    href="/the-fairys-witches"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      The Fairy's Witches
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/the-fairys-witches"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Eram mora tuas in inter ferens caterva Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab
+testes…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/the-butterfly-of-the-edge"
+            >
+              <img
+                class="c10 c11"
+                src="2.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/tech"
+                      >
+                        tech
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Mar 17, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/programming"
+                      >
+                        programming
+                      </a>
+                      <a
+                        class="c17 c22"
+                        href="/tags/more tags"
+                      >
+                        more tags
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/the-butterfly-of-the-edge"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      The Butterfly of the Edge
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/the-butterfly-of-the-edge"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/random-project-4-with-super-long-title-phase-one"
+            >
+              <img
+                class="c10 c11"
+                src="4.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/random"
+                      >
+                        random
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Mar 2, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/say hi"
+                      >
+                        say hi
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/random-project-4-with-super-long-title-phase-one"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      Random project 4 With Super Long Title Phase One
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/random-project-4-with-super-long-title-phase-one"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Artificem honorati ore temperat Lycus quam antiquum Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/angels-of-mist"
+            >
+              <img
+                class="c10 c11"
+                src="6.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/test3"
+                      >
+                        test3
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Mar 1, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/cheese"
+                      >
+                        cheese
+                      </a>
+                      <a
+                        class="c17 c22"
+                        href="/tags/other"
+                      >
+                        other
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/angels-of-mist"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      Angels of Mist
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/angels-of-mist"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Ab dicemur cura Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;
+rerum? Nunc nec ferunt verbis…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/birch-in-the-roses"
+            >
+              <img
+                class="c10 c11"
+                src="1.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/tech"
+                      >
+                        tech
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Mar 1, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/tag"
+                      >
+                        tag
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/birch-in-the-roses"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      Birch in the Roses
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/birch-in-the-roses"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Domos primus caelum taedia Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/the-fallen-time"
+            >
+              <img
+                class="c10 c11"
+                src="7.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/another one"
+                      >
+                        another one
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Feb 1, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/test"
+                      >
+                        test
+                      </a>
+                      <a
+                        class="c17 c22"
+                        href="/tags/something"
+                      >
+                        something
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/the-fallen-time"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      The Fallen Time
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/the-fallen-time"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Autolyci eminus retenta Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c28"
+          >
+            <a
+              class="c9"
+              href="/bold-mage"
+            >
+              <img
+                alt="Bold mage cover"
+                class="c10 c11"
+                src="8.jpg"
+              />
+            </a>
+            <div
+              class="c29"
+            >
+              <div
+                class="c13"
+              >
+                <div
+                  class="c14"
+                >
+                  <div
+                    class="c15"
+                  >
+                    <div
+                      class="c16"
+                    >
+                      <a
+                        class="c17 c18"
+                        href="/categories/tech"
+                      >
+                        tech
+                      </a>
+                      <p
+                        class="c19 c20"
+                      >
+                         ⋅ Jan 1, 2017 ⋅ 1 min read
+                      </p>
+                    </div>
+                    <div
+                      class="c21"
+                    >
+                      <a
+                        class="c17 c22"
+                        href="/tags/programming"
+                      >
+                        programming
+                      </a>
+                      <a
+                        class="c17 c22"
+                        href="/tags/stuff"
+                      >
+                        stuff
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="c9"
+                    href="/bold-mage"
+                  >
+                    <h3
+                      class="c23"
+                    >
+                      Bold Mage
+                    </h3>
+                  </a>
+                </div>
+                <a
+                  class="c9"
+                  href="/bold-mage"
+                >
+                  <p
+                    class="c24 c30"
+                  >
+                    Quanto et ius coniunctis urbes Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus
+obliquum erigitur…
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <footer
+      class="c31"
+    >
+      <section
+        class="c32"
+      >
+        <h3
+          class="c23"
+        >
+          LINKS
+        </h3>
+        <div
+          class="c33"
+        >
+          <a
+            class="c34"
+            href="https://twitter.com/Vagr9K"
+          >
+            <svg
+              aria-hidden="true"
+              class="c27"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 005.001-1.721 4.036 4.036 0 01-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 01-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 01-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 008.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 014.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 002.556-.973 4.02 4.02 0 01-1.771 2.22 8.073 8.073 0 002.319-.624 8.645 8.645 0 01-2.019 2.083z"
+              />
+            </svg>
+          </a>
+           
+          <a
+            class="c34"
+            href="https://github.com/vagr9k"
+          >
+            <svg
+              aria-hidden="true"
+              class="c27"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 012.496-.336 9.554 9.554 0 012.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            class="c34"
+            href="https://www.linkedin.com/in/your-linkedin"
+          >
+            <svg
+              aria-hidden="true"
+              class="c27"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 3H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 110-3.096 1.548 1.548 0 010 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+              />
+            </svg>
+          </a>
+           
+          <a
+            class="c34"
+            href="mailto:AdvancedUser@example.com"
+          >
+            <svg
+              aria-hidden="true"
+              class="c27"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 001.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z"
+              />
+              <path
+                d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z"
+              />
+            </svg>
+          </a>
+          <a
+            class="c34"
+            href="/rss.xml"
+          >
+            <svg
+              aria-hidden="true"
+              class="c27"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+              />
+              <path
+                d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+              />
+              <circle
+                cx="6"
+                cy="18"
+                r="2"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <div
+        class="c35"
+      >
+        <p
+          class="c19"
+        >
+          Based on 
+          <a
+            class="c36 c37"
+            href="https://github.com/Vagr9K/gatsby-advanced-starter"
+          >
+            Gatsby Advanced Starter
+          </a>
+        </p>
+        <p
+          class="c19"
+        >
+          © Copyright 2021 | Ruben Harutyunyan
+        </p>
+      </div>
+    </footer>
   </div>
 </DocumentFragment>
 `;

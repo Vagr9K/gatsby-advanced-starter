@@ -2,295 +2,567 @@
 
 exports[`page component PostPage renders correctly 1`] = `
 <DocumentFragment>
-  .c0 {
-  min-height: 100vh;
-  min-width: 100vw;
+  .c12 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c11 {
+  color: inherit;
+}
+
+.c10 {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+}
+
+.c9 {
+  font-family: "Alfa Slab One",serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  -webkit-letter-spacing: 0.15px;
+  -moz-letter-spacing: 0.15px;
+  -ms-letter-spacing: 0.15px;
+  letter-spacing: 0.15px;
+}
+
+.c14 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c16 {
+  color: var(--color-primary);
+}
+
+footer .c15 {
+  color: inherit;
+}
+
+.c7 {
+  display: grid;
+  gap: 40px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 32px 0px 16px;
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-700);
+  fill: var(--color-grey-700);
+}
+
+.c8 {
+  display: inline-grid;
+  gap: 12px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13 {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.c6 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 0 0 8px 0;
+  background-color: var(--color-background);
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-width: 0px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.c6.gatsby-link-active {
+  border-bottom-width: 2px;
+}
+
+.c0 {
+  min-height: 100vh;
+  min-width: 100%;
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+}
+
+.c1 {
+  padding: 0 16px 0 16px;
+  justify-self: center;
+  max-width: calc(1144px + 16px * 2);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 80px;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  justify-items: stretch;
 }
 
 @media (min-width:564px) {
 
 }
 
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+
+}
+
+@media (min-width:564px) {
+  .c9 {
+    font-family: "Alfa Slab One",serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    line-height: 40px;
+    -webkit-letter-spacing: 0.15px;
+    -moz-letter-spacing: 0.15px;
+    -ms-letter-spacing: 0.15px;
+    letter-spacing: 0.15px;
+  }
+}
+
+@media (min-width:564px) {
+  .c14 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width:500px) {
+  .c4 {
+    display: none;
+  }
+}
+
 <div
     class="c0"
   >
-    <div>
-      <div>
-        <h1>
-          Big Test
-        </h1>
-        <h1
-          id="mdx-test"
-          style="position: relative;"
-        >
-          <a
-            aria-label="mdx test permalink"
-            class="anchor before"
-            href="#mdx-test"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          MDX Test
-        </h1>
-        <p>
-          Here's a color picker!
-        </p>
-        <h2
-          id="note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents"
-          style="position: relative;"
-        >
-          <a
-            aria-label="note this post is based on markdown cheatsheet and is meant to test styling of markdown generated documents permalink"
-            class="anchor before"
-            href="#note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          NOTE: This "post" is based on 
-          <a
-            href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            Markdown Cheatsheet
-          </a>
-           and is meant to test styling of Markdown generated documents.
-        </h2>
-        <p>
-          This is intended as a quick reference and showcase. For more complete info, see 
-          <a
-            href="http://daringfireball.net/projects/markdown/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            John Gruber's original spec
-          </a>
-           and the 
-          <a
-            href="http://github.github.com/github-flavored-markdown/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            Github-flavored Markdown info page
-          </a>
-          .
-        </p>
-        <p>
-          This cheatsheet is specifically 
-          <em>
-            Markdown Here's
-          </em>
-           version of Github-flavored Markdown. This differs slightly in styling and syntax from what Github uses, so what you see below might vary a little from what you get in a 
-          <em>
-            Markdown Here
-          </em>
-           email, but it should be pretty close.
-        </p>
-        <p>
-          You can play around with Markdown on our 
-          <a
-            href="http://www.markdown-here.com/livedemo.html"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            live demo page
-          </a>
-          .
-        </p>
-        <p>
-          (If you're not a Markdown Here user, check out the 
-          <a
-            href="./Markdown-Cheatsheet"
-          >
-            Markdown Cheatsheet
-          </a>
-           that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. 
-          <a
-            href="http://markdown-here.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            http://markdown-here.com
-          </a>
-          )
-        </p>
-        <h5
-          id="table-of-contents"
-          style="position: relative;"
-        >
-          <a
-            aria-label="table of contents permalink"
-            class="anchor before"
-            href="#table-of-contents"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Table of Contents
-        </h5>
-        <p>
-          <a
-            href="#headers"
-          >
-            Headers
-          </a>
-          
-
-          <a
-            href="#emphasis"
-          >
-            Emphasis
-          </a>
-          
-
-          <a
-            href="#lists"
-          >
-            Lists
-          </a>
-          
-
-          <a
-            href="#links"
-          >
-            Links
-          </a>
-          
-
-          <a
-            href="#images"
-          >
-            Images
-          </a>
-          
-
-          <a
-            href="#code"
-          >
-            Code and Syntax Highlighting
-          </a>
-          
-
-          <a
-            href="#tables"
-          >
-            Tables
-          </a>
-          
-
-          <a
-            href="#blockquotes"
-          >
-            Blockquotes
-          </a>
-          
-
-          <a
-            href="#html"
-          >
-            Inline HTML
-          </a>
-          
-
-          <a
-            href="#hr"
-          >
-            Horizontal Rule
-          </a>
-          
-
-          <a
-            href="#lines"
-          >
-            Line Breaks
-          </a>
-          
-
-          <a
-            href="#videos"
-          >
-            YouTube Videos
-          </a>
-        </p>
+    <div
+      class="c1"
+    >
+      <header
+        class="c2"
+      >
         <a
-          name="headers"
-        />
-        <h2
-          id="headers"
-          style="position: relative;"
+          class="c3"
+          href="/"
+        >
+          <test-file-stub
+            height="36"
+            width="36"
+          />
+          <p
+            class="c4"
+          >
+            Advanced Blog
+          </p>
+        </a>
+        <div
+          class="c5"
         >
           <a
-            aria-label="headers permalink"
-            class="anchor before"
-            href="#headers"
+            class="c6"
+            href="/"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Posts
           </a>
-          Headers
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+          <a
+            class="c6"
+            href="/about"
           >
-            <code
+            About
+          </a>
+        </div>
+      </header>
+      <div>
+        <div>
+          <h1>
+            Big Test
+          </h1>
+          <h1
+            id="mdx-test"
+            style="position: relative;"
+          >
+            <a
+              aria-label="mdx test permalink"
+              class="anchor before"
+              href="#mdx-test"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            MDX Test
+          </h1>
+          <p>
+            Here's a color picker!
+          </p>
+          <h2
+            id="note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents"
+            style="position: relative;"
+          >
+            <a
+              aria-label="note this post is based on markdown cheatsheet and is meant to test styling of markdown generated documents permalink"
+              class="anchor before"
+              href="#note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            NOTE: This "post" is based on 
+            <a
+              href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              Markdown Cheatsheet
+            </a>
+             and is meant to test styling of Markdown generated documents.
+          </h2>
+          <p>
+            This is intended as a quick reference and showcase. For more complete info, see 
+            <a
+              href="http://daringfireball.net/projects/markdown/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              John Gruber's original spec
+            </a>
+             and the 
+            <a
+              href="http://github.github.com/github-flavored-markdown/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              Github-flavored Markdown info page
+            </a>
+            .
+          </p>
+          <p>
+            This cheatsheet is specifically 
+            <em>
+              Markdown Here's
+            </em>
+             version of Github-flavored Markdown. This differs slightly in styling and syntax from what Github uses, so what you see below might vary a little from what you get in a 
+            <em>
+              Markdown Here
+            </em>
+             email, but it should be pretty close.
+          </p>
+          <p>
+            You can play around with Markdown on our 
+            <a
+              href="http://www.markdown-here.com/livedemo.html"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              live demo page
+            </a>
+            .
+          </p>
+          <p>
+            (If you're not a Markdown Here user, check out the 
+            <a
+              href="./Markdown-Cheatsheet"
+            >
+              Markdown Cheatsheet
+            </a>
+             that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. 
+            <a
+              href="http://markdown-here.com"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              http://markdown-here.com
+            </a>
+            )
+          </p>
+          <h5
+            id="table-of-contents"
+            style="position: relative;"
+          >
+            <a
+              aria-label="table of contents permalink"
+              class="anchor before"
+              href="#table-of-contents"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Table of Contents
+          </h5>
+          <p>
+            <a
+              href="#headers"
+            >
+              Headers
+            </a>
+            
+
+            <a
+              href="#emphasis"
+            >
+              Emphasis
+            </a>
+            
+
+            <a
+              href="#lists"
+            >
+              Lists
+            </a>
+            
+
+            <a
+              href="#links"
+            >
+              Links
+            </a>
+            
+
+            <a
+              href="#images"
+            >
+              Images
+            </a>
+            
+
+            <a
+              href="#code"
+            >
+              Code and Syntax Highlighting
+            </a>
+            
+
+            <a
+              href="#tables"
+            >
+              Tables
+            </a>
+            
+
+            <a
+              href="#blockquotes"
+            >
+              Blockquotes
+            </a>
+            
+
+            <a
+              href="#html"
+            >
+              Inline HTML
+            </a>
+            
+
+            <a
+              href="#hr"
+            >
+              Horizontal Rule
+            </a>
+            
+
+            <a
+              href="#lines"
+            >
+              Line Breaks
+            </a>
+            
+
+            <a
+              href="#videos"
+            >
+              YouTube Videos
+            </a>
+          </p>
+          <a
+            name="headers"
+          />
+          <h2
+            id="headers"
+            style="position: relative;"
+          >
+            <a
+              aria-label="headers permalink"
+              class="anchor before"
+              href="#headers"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Headers
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
+          >
+            <pre
               class="language-no-highlight"
             >
-              # H1
+              <code
+                class="language-no-highlight"
+              >
+                # H1
 ## H2
 ### H3
 #### H4
@@ -304,337 +576,337 @@ Alt-H1
 
 Alt-H2
 ------
-            </code>
-          </pre>
-        </div>
-        <h1
-          id="h1"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h1 permalink"
-            class="anchor before"
-            href="#h1"
+              </code>
+            </pre>
+          </div>
+          <h1
+            id="h1"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h1 permalink"
+              class="anchor before"
+              href="#h1"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H1
-        </h1>
-        <h2
-          id="h2"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h2 permalink"
-            class="anchor before"
-            href="#h2"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H1
+          </h1>
+          <h2
+            id="h2"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h2 permalink"
+              class="anchor before"
+              href="#h2"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H2
-        </h2>
-        <h3
-          id="h3"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h3 permalink"
-            class="anchor before"
-            href="#h3"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H2
+          </h2>
+          <h3
+            id="h3"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h3 permalink"
+              class="anchor before"
+              href="#h3"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H3
-        </h3>
-        <h4
-          id="h4"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h4 permalink"
-            class="anchor before"
-            href="#h4"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H3
+          </h3>
+          <h4
+            id="h4"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h4 permalink"
+              class="anchor before"
+              href="#h4"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H4
-        </h4>
-        <h5
-          id="h5"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h5 permalink"
-            class="anchor before"
-            href="#h5"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H4
+          </h4>
+          <h5
+            id="h5"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h5 permalink"
+              class="anchor before"
+              href="#h5"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H5
-        </h5>
-        <h6
-          id="h6"
-          style="position: relative;"
-        >
-          <a
-            aria-label="h6 permalink"
-            class="anchor before"
-            href="#h6"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H5
+          </h5>
+          <h6
+            id="h6"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="h6 permalink"
+              class="anchor before"
+              href="#h6"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          H6
-        </h6>
-        <p>
-          Alternatively, for H1 and H2, an underline-ish style:
-        </p>
-        <h1
-          id="alt-h1"
-          style="position: relative;"
-        >
-          <a
-            aria-label="alt h1 permalink"
-            class="anchor before"
-            href="#alt-h1"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            H6
+          </h6>
+          <p>
+            Alternatively, for H1 and H2, an underline-ish style:
+          </p>
+          <h1
+            id="alt-h1"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="alt h1 permalink"
+              class="anchor before"
+              href="#alt-h1"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Alt-H1
-        </h1>
-        <h2
-          id="alt-h2"
-          style="position: relative;"
-        >
-          <a
-            aria-label="alt h2 permalink"
-            class="anchor before"
-            href="#alt-h2"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Alt-H1
+          </h1>
+          <h2
+            id="alt-h2"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="alt h2 permalink"
+              class="anchor before"
+              href="#alt-h2"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Alt-H2
-        </h2>
-        <a
-          name="emphasis"
-        />
-        <h2
-          id="emphasis"
-          style="position: relative;"
-        >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Alt-H2
+          </h2>
           <a
-            aria-label="emphasis permalink"
-            class="anchor before"
-            href="#emphasis"
+            name="emphasis"
+          />
+          <h2
+            id="emphasis"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="emphasis permalink"
+              class="anchor before"
+              href="#emphasis"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Emphasis
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Emphasis
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              Emphasis, aka italics, with *asterisks* or _underscores_.
+              <code
+                class="language-no-highlight"
+              >
+                Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
 Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
-            </code>
-          </pre>
-        </div>
-        <p>
-          Emphasis, aka italics, with 
-          <em>
-            asterisks
-          </em>
-           or 
-          <em>
-            underscores
-          </em>
-          .
-        </p>
-        <p>
-          Strong emphasis, aka bold, with 
-          <strong>
-            asterisks
-          </strong>
-           or 
-          <strong>
-            underscores
-          </strong>
-          .
-        </p>
-        <p>
-          Combined emphasis with 
-          <strong>
-            asterisks and 
+              </code>
+            </pre>
+          </div>
+          <p>
+            Emphasis, aka italics, with 
+            <em>
+              asterisks
+            </em>
+             or 
             <em>
               underscores
             </em>
-          </strong>
-          .
-        </p>
-        <p>
-          Strikethrough uses two tildes. 
-          <del>
-            Scratch this.
-          </del>
-        </p>
-        <a
-          name="lists"
-        />
-        <h2
-          id="lists"
-          style="position: relative;"
-        >
+            .
+          </p>
+          <p>
+            Strong emphasis, aka bold, with 
+            <strong>
+              asterisks
+            </strong>
+             or 
+            <strong>
+              underscores
+            </strong>
+            .
+          </p>
+          <p>
+            Combined emphasis with 
+            <strong>
+              asterisks and 
+              <em>
+                underscores
+              </em>
+            </strong>
+            .
+          </p>
+          <p>
+            Strikethrough uses two tildes. 
+            <del>
+              Scratch this.
+            </del>
+          </p>
           <a
-            aria-label="lists permalink"
-            class="anchor before"
-            href="#lists"
+            name="lists"
+          />
+          <h2
+            id="lists"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="lists permalink"
+              class="anchor before"
+              href="#lists"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Lists
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Lists
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              1. First ordered list item
+              <code
+                class="language-no-highlight"
+              >
+                1. First ordered list item
 2. Another item
   * Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
@@ -646,101 +918,101 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
-            </code>
-          </pre>
-        </div>
-        <ol>
-          <li>
-            <p>
-              First ordered list item
-            </p>
-          </li>
-          <li>
-            <p>
-              Another item
-            </p>
-            <ul>
-              <li>
-                Unordered sub-list.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <p>
-              Actual numbers don't matter, just that it's a number
-            </p>
-            <ol>
-              <li>
-                Ordered sub-list
-              </li>
-            </ol>
-          </li>
-          <li>
-            <p>
-              And another item.
-            </p>
-            <p>
-              Some text that should be aligned with the above item.
-            </p>
-          </li>
-        </ol>
-        <ul>
-          <li>
-            Unordered list can use asterisks
-          </li>
-        </ul>
-        <ul>
-          <li>
-            Or minuses
-          </li>
-        </ul>
-        <ul>
-          <li>
-            Or pluses
-          </li>
-        </ul>
-        <a
-          name="links"
-        />
-        <h2
-          id="links"
-          style="position: relative;"
-        >
+              </code>
+            </pre>
+          </div>
+          <ol>
+            <li>
+              <p>
+                First ordered list item
+              </p>
+            </li>
+            <li>
+              <p>
+                Another item
+              </p>
+              <ul>
+                <li>
+                  Unordered sub-list.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                Actual numbers don't matter, just that it's a number
+              </p>
+              <ol>
+                <li>
+                  Ordered sub-list
+                </li>
+              </ol>
+            </li>
+            <li>
+              <p>
+                And another item.
+              </p>
+              <p>
+                Some text that should be aligned with the above item.
+              </p>
+            </li>
+          </ol>
+          <ul>
+            <li>
+              Unordered list can use asterisks
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Or minuses
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Or pluses
+            </li>
+          </ul>
           <a
-            aria-label="links permalink"
-            class="anchor before"
-            href="#links"
+            name="links"
+          />
+          <h2
+            id="links"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="links permalink"
+              class="anchor before"
+              href="#links"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Links
-        </h2>
-        <p>
-          There are two ways to create links.
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Links
+          </h2>
+          <p>
+            There are two ways to create links.
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              [I'm an inline-style link](https://www.google.com)
+              <code
+                class="language-no-highlight"
+              >
+                [I'm an inline-style link](https://www.google.com)
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
@@ -757,109 +1029,109 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
-            </code>
-          </pre>
-        </div>
-        <p>
-          <a
-            href="https://www.google.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            I'm an inline-style link
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://www.mozilla.org"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            I'm a reference-style link
-          </a>
-        </p>
-        <p>
-          <a
-            href="http://slashdot.org"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            You can use numbers for reference-style link definitions
-          </a>
-        </p>
-        <p>
-          Or leave it empty and use the 
-          <a
-            href="http://www.reddit.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            link text itself
-          </a>
-        </p>
-        <p>
-          URLs and URLs in angle brackets will automatically get turned into links.
-
-          <a
-            href="http://www.example.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            http://www.example.com
-          </a>
-           or 
-          <a
-            href="http://www.example.com"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            http://www.example.com
-          </a>
-           and sometimes
-example.com (but not on Github, for example).
-        </p>
-        <p>
-          Some text to show that the reference links can follow later.
-        </p>
-        <a
-          name="images"
-        />
-        <h2
-          id="images"
-          style="position: relative;"
-        >
-          <a
-            aria-label="images permalink"
-            class="anchor before"
-            href="#images"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+              </code>
+            </pre>
+          </div>
+          <p>
+            <a
+              href="https://www.google.com"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Images
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              I'm an inline-style link
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.mozilla.org"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              I'm a reference-style link
+            </a>
+          </p>
+          <p>
+            <a
+              href="http://slashdot.org"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              You can use numbers for reference-style link definitions
+            </a>
+          </p>
+          <p>
+            Or leave it empty and use the 
+            <a
+              href="http://www.reddit.com"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              link text itself
+            </a>
+          </p>
+          <p>
+            URLs and URLs in angle brackets will automatically get turned into links.
+
+            <a
+              href="http://www.example.com"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              http://www.example.com
+            </a>
+             or 
+            <a
+              href="http://www.example.com"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              http://www.example.com
+            </a>
+             and sometimes
+example.com (but not on Github, for example).
+          </p>
+          <p>
+            Some text to show that the reference links can follow later.
+          </p>
+          <a
+            name="images"
+          />
+          <h2
+            id="images"
+            style="position: relative;"
           >
-            <code
+            <a
+              aria-label="images permalink"
+              class="anchor before"
+              href="#images"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Images
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
+          >
+            <pre
               class="language-no-highlight"
             >
-              Here's our logo (hover to see the title text):
+              <code
+                class="language-no-highlight"
+              >
+                Here's our logo (hover to see the title text):
 
 Inline-style:
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
@@ -868,283 +1140,283 @@ Reference-style:
 ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-            </code>
-          </pre>
-        </div>
-        <p>
-          Here's our logo (hover to see the title text):
-        </p>
-        <p>
-          Inline-style:
+              </code>
+            </pre>
+          </div>
+          <p>
+            Here's our logo (hover to see the title text):
+          </p>
+          <p>
+            Inline-style:
 
-          <img
-            alt="alt text"
-            src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png"
-            title="Logo Title Text 1"
-          />
-        </p>
-        <p>
-          Reference-style:
+            <img
+              alt="alt text"
+              src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png"
+              title="Logo Title Text 1"
+            />
+          </p>
+          <p>
+            Reference-style:
 
-          <img
-            alt="alt text"
-            src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png"
-            title="Logo Title Text 2"
-          />
-        </p>
-        <a
-          name="code"
-        />
-        <h2
-          id="code-and-syntax-highlighting"
-          style="position: relative;"
-        >
+            <img
+              alt="alt text"
+              src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png"
+              title="Logo Title Text 2"
+            />
+          </p>
           <a
-            aria-label="code and syntax highlighting permalink"
-            class="anchor before"
-            href="#code-and-syntax-highlighting"
+            name="code"
+          />
+          <h2
+            id="code-and-syntax-highlighting"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="code and syntax highlighting permalink"
+              class="anchor before"
+              href="#code-and-syntax-highlighting"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Code and Syntax Highlighting
-        </h2>
-        <p>
-          Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and 
-          <em>
-            Markdown Here
-          </em>
-           -- support syntax highlighting. 
-          <em>
-            Markdown Here
-          </em>
-           supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the 
-          <a
-            href="http://softwaremaniacs.org/media/soft/highlight/test.html"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Code and Syntax Highlighting
+          </h2>
+          <p>
+            Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and 
+            <em>
+              Markdown Here
+            </em>
+             -- support syntax highlighting. 
+            <em>
+              Markdown Here
+            </em>
+             supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the 
+            <a
+              href="http://softwaremaniacs.org/media/soft/highlight/test.html"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              highlight.js demo page
+            </a>
+            .
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            highlight.js demo page
-          </a>
-          .
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
-          >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              Inline \`code\` has \`back-ticks around\` it.
-            </code>
-          </pre>
-        </div>
-        <p>
-          Inline 
-          <code
-            class="language-text"
-          >
-            code
-          </code>
-           has 
-          <code
-            class="language-text"
-          >
-            back-ticks around
-          </code>
-           it.
-        </p>
-        <p>
-          Blocks of code are either fenced by lines with three back-ticks 
-          <code>
-            \`\`\`
-          </code>
-          , or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
-        </p>
-        <pre
-          lang="no-highlight"
-        >
-          <code>
-            \`\`\`javascript var s = "JavaScript syntax highlighting"; alert(s); \`\`\` \`\`\`python s = "Python syntax highlighting" print s \`\`\` \`\`\` No language indicated, so no syntax highlighting. But let's throw in a &lt;b&gt;tag&lt;/b&gt;. \`\`\`
-          </code>
-        </pre>
-        <div
-          class="gatsby-highlight"
-          data-language="javascript"
-        >
-          <pre
-            class="language-javascript"
-          >
-            <code
-              class="language-javascript"
-            >
-              <span
-                class="token keyword"
+              <code
+                class="language-no-highlight"
               >
-                var
-              </span>
-               s 
-              <span
-                class="token operator"
-              >
-                =
-              </span>
-               
-              <span
-                class="token string"
-              >
-                "JavaScript syntax highlighting"
-              </span>
-              <span
-                class="token punctuation"
-              >
-                ;
-              </span>
-              
-
-              <span
-                class="token function"
-              >
-                alert
-              </span>
-              <span
-                class="token punctuation"
-              >
-                (
-              </span>
-              s
-              <span
-                class="token punctuation"
-              >
-                )
-              </span>
-              <span
-                class="token punctuation"
-              >
-                ;
-              </span>
-            </code>
-          </pre>
-        </div>
-        <div
-          class="gatsby-highlight"
-          data-language="python"
-        >
-          <pre
-            class="language-python"
-          >
-            <code
-              class="language-python"
-            >
-              s 
-              <span
-                class="token operator"
-              >
-                =
-              </span>
-               
-              <span
-                class="token string"
-              >
-                "Python syntax highlighting"
-              </span>
-              
-
-              <span
-                class="token keyword"
-              >
-                print
-              </span>
-               s
-            </code>
-          </pre>
-        </div>
-        <div
-          class="gatsby-highlight"
-          data-language="text"
-        >
-          <pre
-            class="language-text"
-          >
+                Inline \`code\` has \`back-ticks around\` it.
+              </code>
+            </pre>
+          </div>
+          <p>
+            Inline 
             <code
               class="language-text"
             >
-              No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+              code
+            </code>
+             has 
+            <code
+              class="language-text"
+            >
+              back-ticks around
+            </code>
+             it.
+          </p>
+          <p>
+            Blocks of code are either fenced by lines with three back-ticks 
+            <code>
+              \`\`\`
+            </code>
+            , or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+          </p>
+          <pre
+            lang="no-highlight"
+          >
+            <code>
+              \`\`\`javascript var s = "JavaScript syntax highlighting"; alert(s); \`\`\` \`\`\`python s = "Python syntax highlighting" print s \`\`\` \`\`\` No language indicated, so no syntax highlighting. But let's throw in a &lt;b&gt;tag&lt;/b&gt;. \`\`\`
             </code>
           </pre>
-        </div>
-        <p>
-          Again, to see what languages are available for highlighting, and how to write those language names, see the 
-          <a
-            href="http://softwaremaniacs.org/media/soft/highlight/test.html"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
+          <div
+            class="gatsby-highlight"
+            data-language="javascript"
           >
-            highlight.js demo page
-          </a>
-          .
-        </p>
-        <a
-          name="tables"
-        />
-        <h2
-          id="tables"
-          style="position: relative;"
-        >
-          <a
-            aria-label="tables permalink"
-            class="anchor before"
-            href="#tables"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <pre
+              class="language-javascript"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Tables
-        </h2>
-        <p>
-          Tables aren't part of the core Markdown spec, but they are part of GFM and 
-          <em>
-            Markdown Here
-          </em>
-           supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <code
+                class="language-javascript"
+              >
+                <span
+                  class="token keyword"
+                >
+                  var
+                </span>
+                 s 
+                <span
+                  class="token operator"
+                >
+                  =
+                </span>
+                 
+                <span
+                  class="token string"
+                >
+                  "JavaScript syntax highlighting"
+                </span>
+                <span
+                  class="token punctuation"
+                >
+                  ;
+                </span>
+                
+
+                <span
+                  class="token function"
+                >
+                  alert
+                </span>
+                <span
+                  class="token punctuation"
+                >
+                  (
+                </span>
+                s
+                <span
+                  class="token punctuation"
+                >
+                  )
+                </span>
+                <span
+                  class="token punctuation"
+                >
+                  ;
+                </span>
+              </code>
+            </pre>
+          </div>
+          <div
+            class="gatsby-highlight"
+            data-language="python"
           >
-            <code
+            <pre
+              class="language-python"
+            >
+              <code
+                class="language-python"
+              >
+                s 
+                <span
+                  class="token operator"
+                >
+                  =
+                </span>
+                 
+                <span
+                  class="token string"
+                >
+                  "Python syntax highlighting"
+                </span>
+                
+
+                <span
+                  class="token keyword"
+                >
+                  print
+                </span>
+                 s
+              </code>
+            </pre>
+          </div>
+          <div
+            class="gatsby-highlight"
+            data-language="text"
+          >
+            <pre
+              class="language-text"
+            >
+              <code
+                class="language-text"
+              >
+                No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+              </code>
+            </pre>
+          </div>
+          <p>
+            Again, to see what languages are available for highlighting, and how to write those language names, see the 
+            <a
+              href="http://softwaremaniacs.org/media/soft/highlight/test.html"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              highlight.js demo page
+            </a>
+            .
+          </p>
+          <a
+            name="tables"
+          />
+          <h2
+            id="tables"
+            style="position: relative;"
+          >
+            <a
+              aria-label="tables permalink"
+              class="anchor before"
+              href="#tables"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Tables
+          </h2>
+          <p>
+            Tables aren't part of the core Markdown spec, but they are part of GFM and 
+            <em>
+              Markdown Here
+            </em>
+             supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
+          >
+            <pre
               class="language-no-highlight"
             >
-              Colons can be used to align columns.
+              <code
+                class="language-no-highlight"
+              >
+                Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- | :-----------: | ----: |
@@ -1158,305 +1430,305 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 | | ------------- | --------------- | ---------- |------- |
 | | *Still*   | \`renders\` | **nicely** | |
 | | 1               | 2                 | 3          |          |
-            </code>
-          </pre>
-        </div>
-        <p>
-          Colons can be used to align columns.
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                Tables
-              </th>
-              <th
-                align="center"
-              >
-                Are
-              </th>
-              <th
-                align="right"
-              >
-                Cool
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                col 3 is
-              </td>
-              <td
-                align="center"
-              >
-                right-aligned
-              </td>
-              <td
-                align="right"
-              >
-                $1600
-              </td>
-            </tr>
-            <tr>
-              <td>
-                col 2 is
-              </td>
-              <td
-                align="center"
-              >
-                centered
-              </td>
-              <td
-                align="right"
-              >
-                $12
-              </td>
-            </tr>
-            <tr>
-              <td>
-                zebra stripes
-              </td>
-              <td
-                align="center"
-              >
-                are neat
-              </td>
-              <td
-                align="right"
-              >
-                $1
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                Markdown
-              </th>
-              <th>
-                Less
-              </th>
-              <th>
-                Pretty
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <em>
-                  Still
-                </em>
-              </td>
-              <td>
-                <code
-                  class="language-text"
+              </code>
+            </pre>
+          </div>
+          <p>
+            Colons can be used to align columns.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Tables
+                </th>
+                <th
+                  align="center"
                 >
-                  renders
-                </code>
-              </td>
-              <td>
-                <strong>
-                  nicely
-                </strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                2
-              </td>
-              <td>
-                3
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <a
-          name="blockquotes"
-        />
-        <h2
-          id="blockquotes"
-          style="position: relative;"
-        >
+                  Are
+                </th>
+                <th
+                  align="right"
+                >
+                  Cool
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  col 3 is
+                </td>
+                <td
+                  align="center"
+                >
+                  right-aligned
+                </td>
+                <td
+                  align="right"
+                >
+                  $1600
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  col 2 is
+                </td>
+                <td
+                  align="center"
+                >
+                  centered
+                </td>
+                <td
+                  align="right"
+                >
+                  $12
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  zebra stripes
+                </td>
+                <td
+                  align="center"
+                >
+                  are neat
+                </td>
+                <td
+                  align="right"
+                >
+                  $1
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Markdown
+                </th>
+                <th>
+                  Less
+                </th>
+                <th>
+                  Pretty
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <em>
+                    Still
+                  </em>
+                </td>
+                <td>
+                  <code
+                    class="language-text"
+                  >
+                    renders
+                  </code>
+                </td>
+                <td>
+                  <strong>
+                    nicely
+                  </strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <a
-            aria-label="blockquotes permalink"
-            class="anchor before"
-            href="#blockquotes"
+            name="blockquotes"
+          />
+          <h2
+            id="blockquotes"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="blockquotes permalink"
+              class="anchor before"
+              href="#blockquotes"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Blockquotes
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Blockquotes
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              &gt; Blockquotes are very handy in email to emulate reply text.
+              <code
+                class="language-no-highlight"
+              >
+                &gt; Blockquotes are very handy in email to emulate reply text.
 &gt; This line is part of the same quote.
 
 Quote break.
 
 &gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
-            </code>
-          </pre>
-        </div>
-        <blockquote>
-          <p>
-            Blockquotes are very handy in email to emulate reply text.
+              </code>
+            </pre>
+          </div>
+          <blockquote>
+            <p>
+              Blockquotes are very handy in email to emulate reply text.
 This line is part of the same quote.
-          </p>
-        </blockquote>
-        <p>
-          Quote break.
-        </p>
-        <blockquote>
+            </p>
+          </blockquote>
           <p>
-            This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can 
-            <em>
-              put
-            </em>
-             
-            <strong>
-              Markdown
-            </strong>
-             into a blockquote.
+            Quote break.
           </p>
-        </blockquote>
-        <a
-          name="html"
-        />
-        <h2
-          id="inline-html"
-          style="position: relative;"
-        >
+          <blockquote>
+            <p>
+              This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can 
+              <em>
+                put
+              </em>
+               
+              <strong>
+                Markdown
+              </strong>
+               into a blockquote.
+            </p>
+          </blockquote>
           <a
-            aria-label="inline html permalink"
-            class="anchor before"
-            href="#inline-html"
+            name="html"
+          />
+          <h2
+            id="inline-html"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="inline html permalink"
+              class="anchor before"
+              href="#inline-html"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Inline HTML
-        </h2>
-        <p>
-          You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Inline HTML
+          </h2>
+          <p>
+            You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
           >
-            <code
+            <pre
               class="language-no-highlight"
             >
-              &lt;dl&gt;
+              <code
+                class="language-no-highlight"
+              >
+                &lt;dl&gt;
   &lt;dt&gt;Definition list&lt;/dt&gt;
   &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
 
   &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
   &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
 &lt;/dl&gt;
-            </code>
-          </pre>
-        </div>
-        <dl>
-          <dt>
-            Definition list
-          </dt>
-          <dd>
-            Is something people use sometimes.
-          </dd>
-          <dt>
-            Markdown in HTML
-          </dt>
-          <dd>
-            Does *not* work **very** well. Use HTML 
-            <em>
-              tags
-            </em>
-            .
-          </dd>
-        </dl>
-        <a
-          name="hr"
-        />
-        <h2
-          id="horizontal-rule"
-          style="position: relative;"
-        >
+              </code>
+            </pre>
+          </div>
+          <dl>
+            <dt>
+              Definition list
+            </dt>
+            <dd>
+              Is something people use sometimes.
+            </dd>
+            <dt>
+              Markdown in HTML
+            </dt>
+            <dd>
+              Does *not* work **very** well. Use HTML 
+              <em>
+                tags
+              </em>
+              .
+            </dd>
+          </dl>
           <a
-            aria-label="horizontal rule permalink"
-            class="anchor before"
-            href="#horizontal-rule"
+            name="hr"
+          />
+          <h2
+            id="horizontal-rule"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="horizontal rule permalink"
+              class="anchor before"
+              href="#horizontal-rule"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Horizontal Rule
-        </h2>
-        <div
-          class="gatsby-highlight"
-          data-language="text"
-        >
-          <pre
-            class="language-text"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Horizontal Rule
+          </h2>
+          <div
+            class="gatsby-highlight"
+            data-language="text"
           >
-            <code
+            <pre
               class="language-text"
             >
-              Three or more...
+              <code
+                class="language-text"
+              >
+                Three or more...
 
 ---
 
@@ -1469,168 +1741,316 @@ Asterisks
 ___
 
 Underscores
-            </code>
-          </pre>
-        </div>
-        <p>
-          Three or more...
-        </p>
-        <hr />
-        <p>
-          Hyphens
-        </p>
-        <hr />
-        <p>
-          Asterisks
-        </p>
-        <hr />
-        <p>
-          Underscores
-        </p>
-        <a
-          name="lines"
-        />
-        <h2
-          id="line-breaks"
-          style="position: relative;"
-        >
+              </code>
+            </pre>
+          </div>
+          <p>
+            Three or more...
+          </p>
+          <hr />
+          <p>
+            Hyphens
+          </p>
+          <hr />
+          <p>
+            Asterisks
+          </p>
+          <hr />
+          <p>
+            Underscores
+          </p>
           <a
-            aria-label="line breaks permalink"
-            class="anchor before"
-            href="#line-breaks"
+            name="lines"
+          />
+          <h2
+            id="line-breaks"
+            style="position: relative;"
           >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+            <a
+              aria-label="line breaks permalink"
+              class="anchor before"
+              href="#line-breaks"
             >
-              <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
-          Line Breaks
-        </h2>
-        <p>
-          My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
-        </p>
-        <p>
-          Here are some things to try out:
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="text"
-        >
-          <pre
-            class="language-text"
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            Line Breaks
+          </h2>
+          <p>
+            My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
+          </p>
+          <p>
+            Here are some things to try out:
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="text"
           >
-            <code
+            <pre
               class="language-text"
             >
-              Here's a line for us to start with.
+              <code
+                class="language-text"
+              >
+                Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-            </code>
-          </pre>
-        </div>
-        <p>
-          Here's a line for us to start with.
-        </p>
-        <p>
-          This line is separated from the one above by two newlines, so it will be a 
-          <em>
-            separate paragraph
-          </em>
-          .
-        </p>
-        <p>
-          This line is also begins a separate paragraph, but...
+              </code>
+            </pre>
+          </div>
+          <p>
+            Here's a line for us to start with.
+          </p>
+          <p>
+            This line is separated from the one above by two newlines, so it will be a 
+            <em>
+              separate paragraph
+            </em>
+            .
+          </p>
+          <p>
+            This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the 
-          <em>
-            same paragraph
-          </em>
-          .
-        </p>
-        <p>
-          (Technical note: 
-          <em>
-            Markdown Here
-          </em>
-           uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
-        </p>
-        <a
-          name="videos"
-        />
-        <h2
-          id="youtube-videos"
-          style="position: relative;"
+            <em>
+              same paragraph
+            </em>
+            .
+          </p>
+          <p>
+            (Technical note: 
+            <em>
+              Markdown Here
+            </em>
+             uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
+          </p>
+          <a
+            name="videos"
+          />
+          <h2
+            id="youtube-videos"
+            style="position: relative;"
+          >
+            <a
+              aria-label="youtube videos permalink"
+              class="anchor before"
+              href="#youtube-videos"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+            YouTube Videos
+          </h2>
+          <p>
+            They can't be added directly but you can add an image with a link to the video like this:
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
+          >
+            <pre
+              class="language-no-highlight"
+            >
+              <code
+                class="language-no-highlight"
+              >
+                &lt;a href="http://www.youtube.com/watch?feature=player_embedded&v=8AkLfYOgIrE
+" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/8AkLfYOgIrE/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
+              </code>
+            </pre>
+          </div>
+          <p>
+            Or, in pure Markdown, but losing the image sizing and border:
+          </p>
+          <div
+            class="gatsby-highlight"
+            data-language="no-highlight"
+          >
+            <pre
+              class="language-no-highlight"
+            >
+              <code
+                class="language-no-highlight"
+              >
+                [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="c7"
+    >
+      <section
+        class="c8"
+      >
+        <h3
+          class="c9"
+        >
+          LINKS
+        </h3>
+        <div
+          class="c10"
         >
           <a
-            aria-label="youtube videos permalink"
-            class="anchor before"
-            href="#youtube-videos"
+            class="c11"
+            href="https://twitter.com/Vagr9K"
           >
             <svg
               aria-hidden="true"
+              class="c12"
+              fill="currentColor"
               focusable="false"
-              height="16"
-              version="1.1"
-              viewBox="0 0 16 16"
-              width="16"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 005.001-1.721 4.036 4.036 0 01-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 01-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 01-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 008.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 014.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 002.556-.973 4.02 4.02 0 01-1.771 2.22 8.073 8.073 0 002.319-.624 8.645 8.645 0 01-2.019 2.083z"
+              />
+            </svg>
+          </a>
+           
+          <a
+            class="c11"
+            href="https://github.com/vagr9k"
+          >
+            <svg
+              aria-hidden="true"
+              class="c12"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 012.496-.336 9.554 9.554 0 012.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
                 fill-rule="evenodd"
               />
             </svg>
           </a>
-          YouTube Videos
-        </h2>
-        <p>
-          They can't be added directly but you can add an image with a link to the video like this:
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+          <a
+            class="c11"
+            href="https://www.linkedin.com/in/your-linkedin"
           >
-            <code
-              class="language-no-highlight"
+            <svg
+              aria-hidden="true"
+              class="c12"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              &lt;a href="http://www.youtube.com/watch?feature=player_embedded&v=8AkLfYOgIrE
-" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/8AkLfYOgIrE/0.jpg"
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
-            </code>
-          </pre>
-        </div>
-        <p>
-          Or, in pure Markdown, but losing the image sizing and border:
-        </p>
-        <div
-          class="gatsby-highlight"
-          data-language="no-highlight"
-        >
-          <pre
-            class="language-no-highlight"
+              <path
+                d="M20 3H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 110-3.096 1.548 1.548 0 010 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+              />
+            </svg>
+          </a>
+           
+          <a
+            class="c11"
+            href="mailto:AdvancedUser@example.com"
           >
-            <code
-              class="language-no-highlight"
+            <svg
+              aria-hidden="true"
+              class="c12"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-            </code>
-          </pre>
+              <path
+                d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 001.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z"
+              />
+              <path
+                d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z"
+              />
+            </svg>
+          </a>
+          <a
+            class="c11"
+            href="/rss.xml"
+          >
+            <svg
+              aria-hidden="true"
+              class="c12"
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+              />
+              <path
+                d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+              />
+              <circle
+                cx="6"
+                cy="18"
+                r="2"
+              />
+            </svg>
+          </a>
         </div>
+      </section>
+      <div
+        class="c13"
+      >
+        <p
+          class="c14"
+        >
+          Based on 
+          <a
+            class="c15 c16"
+            href="https://github.com/Vagr9K/gatsby-advanced-starter"
+          >
+            Gatsby Advanced Starter
+          </a>
+        </p>
+        <p
+          class="c14"
+        >
+          © Copyright 2021 | Ruben Harutyunyan
+        </p>
       </div>
-    </div>
+    </footer>
   </div>
 </DocumentFragment>
 `;

@@ -7,7 +7,7 @@ import Footer from "./index";
 import ConfigContext from "../../context/ConfigContext";
 import config from "../../config";
 
-jest.mock("../config");
+jest.mock("../../config");
 
 describe("component Footer", () => {
   it("renders correctly", () => {
