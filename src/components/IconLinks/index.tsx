@@ -63,7 +63,7 @@ const defaultProps: IconLinksProps = {
   includeRss: false,
 };
 
-export const IconLinks = ({ includeRss }: IconLinksProps): JSX.Element => {
+const IconLinks = ({ includeRss }: IconLinksProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (

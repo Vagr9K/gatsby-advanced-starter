@@ -3,20 +3,18 @@ import "jest-styled-components";
 import cloneDeep from "clone-deep";
 import { render } from "@testing-library/react";
 
-import UserLinks from ".";
+import IconLinks from ".";
 
 import ConfigContext from "../../context/ConfigContext";
 import config from "../../config";
 
-jest.mock("../config");
-
-describe("component UserLinks", () => {
+describe("component IconLinks", () => {
   it("renders correctly without the RSS icon", () => {
     expect.assertions(1);
 
     const { asFragment } = render(
       <ConfigContext.Provider value={config}>
-        <UserLinks />
+        <IconLinks />
       </ConfigContext.Provider>
     );
 
@@ -28,7 +26,7 @@ describe("component UserLinks", () => {
 
     const { asFragment } = render(
       <ConfigContext.Provider value={config}>
-        <UserLinks includeRss />
+        <IconLinks includeRss />
       </ConfigContext.Provider>
     );
 
@@ -45,7 +43,7 @@ describe("component UserLinks", () => {
 
     const { asFragment } = render(
       <ConfigContext.Provider value={strippedConfig}>
-        <UserLinks />
+        <IconLinks />
       </ConfigContext.Provider>
     );
 
