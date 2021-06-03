@@ -2,10 +2,10 @@ import React from "react";
 import "jest-styled-components";
 import { render } from "@testing-library/react";
 
-import Footer from "./Footer";
+import Footer from "./index";
 
-import ConfigContext from "../context/ConfigContext";
-import config from "../config";
+import ConfigContext from "../../context/ConfigContext";
+import config from "../../config";
 
 jest.mock("../config");
 
