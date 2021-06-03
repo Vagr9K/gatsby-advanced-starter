@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component ArticleInfo renders correctly 1`] = `
+<DocumentFragment>
+  .c4 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c2 {
+  color: var(--color-primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.5px;
+  -moz-letter-spacing: 1.5px;
+  -ms-letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.c7::before {
+  content: "#";
+}
+
+.c3 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.c5 {
+  color: var(--color-grey-700);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+  .c4 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (min-width:564px) {
+  .c7 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width:564px) {
+  .c3 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <a
+        class="c2 c3"
+        href="/categories/moar"
+      >
+        moar
+      </a>
+      <p
+        class="c4 c5"
+      >
+         ⋅ Mar 1, 2018 ⋅ 3 min read
+      </p>
+    </div>
+    <div
+      class="c6"
+    >
+      <a
+        class="c2 c7"
+        href="/tags/test"
+      >
+        test
+      </a>
+      <a
+        class="c2 c7"
+        href="/tags/huge"
+      >
+        huge
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component ArticleInfo renders correctly without category 1`] = `
+<DocumentFragment>
+  .c2 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c5 {
+  color: var(--color-primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 {
+  font-family: "Fira Sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  -webkit-letter-spacing: 1.5px;
+  -moz-letter-spacing: 1.5px;
+  -ms-letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.c6::before {
+  content: "#";
+}
+
+.c3 {
+  color: var(--color-grey-700);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:564px) {
+  .c2 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (min-width:564px) {
+  .c6 {
+    font-family: "Fira Sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <p
+        class="c2 c3"
+      >
+        Mar 1, 2018 ⋅ 3 min read
+      </p>
+    </div>
+    <div
+      class="c4"
+    >
+      <a
+        class="c5 c6"
+        href="/tags/test"
+      >
+        test
+      </a>
+      <a
+        class="c5 c6"
+        href="/tags/huge"
+      >
+        huge
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
