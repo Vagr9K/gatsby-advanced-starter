@@ -3,7 +3,6 @@
 import path from "path";
 import _ from "lodash";
 import { GatsbyNode } from "gatsby";
-import siteConfig from "../src/config";
 
 import { BasicFrontmatter, GetMdxPostsQuery } from "./types";
 
