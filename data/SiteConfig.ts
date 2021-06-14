@@ -25,7 +25,8 @@ const config: SiteConfig = {
     github: "vagr9k",
     email: "AdvancedUser@example.com", // Email used for RSS feed's author segment
     location: "User Location", // User location used for SEO and for the author segment.
-    avatar: "https://api.adorable.io/avatars/150/test.png", // User avatar
+    about: "A full-stack web developer looking for a challenge!", // User information used for the author segment.
+    avatar: "https://i.pravatar.cc/300", // User avatar
   },
 
   // Organization information used for SEO
