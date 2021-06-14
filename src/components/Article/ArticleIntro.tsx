@@ -8,7 +8,7 @@ import { ArticleWidthContainer } from "../shared/WidthContainer";
 
 import { Post } from "../../types";
 
-export const Wrapper = styled.section`
+const Wrapper = styled.section`
   width: 100%;
 
   display: grid;
@@ -16,12 +16,12 @@ export const Wrapper = styled.section`
   grid-gap: 24px;
 `;
 
-export const Details = styled.div`
+const Details = styled.div`
   display: grid;
   grid-gap: 24px;
 `;
 
-export const Cover = styled.div`
+const Cover = styled.div`
   width: 100%;
 
   display: grid;

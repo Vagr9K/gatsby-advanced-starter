@@ -19,4 +19,5 @@ const AboutPage = (): JSX.Element => {
 
 // TODO: Make sure About contains the layout
 
+// ts-prune-ignore-next
 export default AboutPage;

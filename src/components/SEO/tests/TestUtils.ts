@@ -113,5 +113,3 @@ export const sampleSeoData: {
     url: "https://gatsby-advanced-starter-demo.netlify.com", // URL of the organization
   },
 };
-
-export default sampleSeoData;

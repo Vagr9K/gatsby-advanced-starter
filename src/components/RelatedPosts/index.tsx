@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { H2 } from "../../theme";
-import { PostListing } from "../PostListing";
+import PostListing from "../PostListing";
 import { PostList } from "../../types";
 
 const Wrapper = styled.div`

@@ -78,7 +78,7 @@ export const generateArticleMetadata = (
   };
 };
 
-export const RichSearchResultTags = (
+const RichSearchResultTags = (
   seoData: SeoData,
   postData: PostData | null,
   userData: UserData,

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../layouts";
-import { PostListing } from "../components/PostListing";
+import PostListing from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import { queryIntoListing } from "../types";
 import ListingPageWrapper from "../components/shared/ListingPageWrapper";
@@ -15,10 +15,7 @@ type TagTemplateProps = {
   };
 };
 
-export const TagTemplate = ({
-  pageContext,
-  data,
-}: TagTemplateProps): JSX.Element => {
+const TagTemplate = ({ pageContext, data }: TagTemplateProps): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
   const { tag } = pageContext;

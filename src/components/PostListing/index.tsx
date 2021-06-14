@@ -6,7 +6,7 @@ import ArticleCard from "../ArticleCard";
 import { constants } from "../../theme";
 import { LayoutWidthContainer } from "../shared/WidthContainer";
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
 
   display: grid;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WidthLimitedGrid = styled(LayoutWidthContainer)`
+const WidthLimitedGrid = styled(LayoutWidthContainer)`
   display: grid;
   grid-template-columns: 100%;
   gap: 80px;
@@ -32,10 +32,7 @@ type PostListingProps = {
   noHero?: boolean;
 };
 
-export const PostListing = ({
-  listing,
-  noHero,
-}: PostListingProps): JSX.Element => (
+const PostListing = ({ listing, noHero }: PostListingProps): JSX.Element => (
   <WidthLimitedGrid>
     <Wrapper>
       {listing.map((post, idx) =>

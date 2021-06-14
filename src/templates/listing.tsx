@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../layouts";
-import { PostListing } from "../components/PostListing";
+import PostListing from "../components/PostListing";
 import { queryIntoListing } from "../types";
 import ListingPageWrapper from "../components/shared/ListingPageWrapper";
 

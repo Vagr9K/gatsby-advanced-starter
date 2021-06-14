@@ -67,9 +67,7 @@ const LinkButton = styled(LinkIcon)`
   cursor: pointer;
 `;
 
-export const generateRelatedTwitterNames = (
-  config: SiteConfig
-): Array<string> => {
+const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
   const relatedTwitterNames = [];
   if (config.user.twitterName)
     relatedTwitterNames.push(config.user.twitterName);

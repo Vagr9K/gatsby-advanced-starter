@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../layouts";
-import { PostListing } from "../components/PostListing";
+import PostListing from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import { queryIntoListing } from "../types";
 import ListingPageWrapper from "../components/shared/ListingPageWrapper";
