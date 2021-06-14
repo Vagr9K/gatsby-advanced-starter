@@ -20,6 +20,7 @@ export interface UserData {
   github?: string;
   email: string;
   location: string;
+  about: string;
   avatar: string;
 }
 

@@ -2,14 +2,7 @@ import React from "react";
 import { format } from "date-fns";
 import { Post } from "../../types";
 
-import {
-  TagLink,
-  ArticleInfoContainer,
-  PostInfo,
-  CategoryLink,
-  PostInfoCaption,
-  TagList,
-} from "./style";
+import * as S from "./styles";
 
 type ArticleInfoProps = {
   post: Post;
@@ -20,31 +13,32 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
     ? `/categories/${post.category}`
     : undefined;
 
-  const publicationDateInfo = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
+  const publicationDate = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
     post.datePublished,
     "LLL d, y"
   )}`;
 
-  const timeToReadInfo = ` ⋅ ${post.timeToRead} min read`;
+  const timeToRead = ` ⋅ ${post.timeToRead} min read`;
 
-  const postInfo = `${publicationDateInfo}${timeToReadInfo}`;
+  const infoCaption = `${publicationDate}${timeToRead}`;
 
+  // Display the first 2 tags
   const tagLinks = post.tags?.slice(0, 2).map((tag) => (
-    <TagLink key={tag} to={`/tags/${tag}`}>
+    <S.TagLink key={tag} to={`/tags/${tag}`}>
       {tag}
-    </TagLink>
+    </S.TagLink>
   ));
 
   return (
-    <ArticleInfoContainer>
-      <PostInfo>
+    <S.Wrapper>
+      <S.InfoGrid>
         {categoryUrl && (
-          <CategoryLink to={categoryUrl}>{post.category}</CategoryLink>
+          <S.CategoryLink to={categoryUrl}>{post.category}</S.CategoryLink>
         )}
-        <PostInfoCaption>{postInfo}</PostInfoCaption>
-      </PostInfo>
-      <TagList>{tagLinks}</TagList>
-    </ArticleInfoContainer>
+        <S.Caption>{infoCaption}</S.Caption>
+      </S.InfoGrid>
+      <S.TagGrid>{tagLinks}</S.TagGrid>
+    </S.Wrapper>
   );
 };
 

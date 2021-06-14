@@ -4,27 +4,22 @@ import NavButton from "./NavButton";
 import { AdvancedLogo } from "../../icons";
 import ConfigContext from "../../context/ConfigContext";
 
-import {
-  NavigationContainer,
-  HomeButton,
-  SiteTitle,
-  ButtonContainer,
-} from "./style";
+import * as S from "./style";
 
 const Navigation = (): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
-    <NavigationContainer>
-      <HomeButton to="/">
+    <S.Wrapper>
+      <S.HomeButton to="/">
         <AdvancedLogo width={36} height={36} />
-        <SiteTitle>{config.website.titleShort}</SiteTitle>
-      </HomeButton>
-      <ButtonContainer>
+        <S.SiteTitle>{config.website.titleShort}</S.SiteTitle>
+      </S.HomeButton>
+      <S.NavGrid>
         <NavButton href="/">Posts</NavButton>
         <NavButton href="/about">About</NavButton>
-      </ButtonContainer>
-    </NavigationContainer>
+      </S.NavGrid>
+    </S.Wrapper>
   );
 };
 

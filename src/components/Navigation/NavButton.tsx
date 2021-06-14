@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { StyledNavButton } from "./style";
+import * as S from "./style";
 
 type NavButtonProps = {
   href: string;
@@ -8,9 +8,9 @@ type NavButtonProps = {
 };
 
 const NavButton = ({ children, href }: NavButtonProps): JSX.Element => (
-  <StyledNavButton activeClassName="gatsby-link-active" to={href}>
+  <S.NavButton activeClassName="gatsby-link-active" to={href}>
     {children}
-  </StyledNavButton>
+  </S.NavButton>
 );
 
 export default NavButton;

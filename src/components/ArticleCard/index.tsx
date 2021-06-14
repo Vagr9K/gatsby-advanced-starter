@@ -4,15 +4,7 @@ import ArticleInfo from "../ArticleInfo";
 import { H3 } from "../../theme";
 import { Post } from "../../types";
 
-import {
-  CardContainer,
-  ArticleLink,
-  Details,
-  ArticleMeta,
-  ArticleHeader,
-  ArticleExcerpt,
-  CardImage,
-} from "./style";
+import * as S from "./styles";
 
 type ArticleHeroCardProps = {
   post: Post;
@@ -20,25 +12,25 @@ type ArticleHeroCardProps = {
 };
 
 const ArticleCard = ({ post, hero }: ArticleHeroCardProps): JSX.Element => (
-  <CardContainer hero={hero}>
-    <ArticleLink to={post.slug}>
-      <CardImage src={post.coverImageUrl} alt={post.coverImageAlt} rounded />
-    </ArticleLink>
-    <Details hero={hero}>
-      <ArticleMeta>
-        <ArticleHeader>
+  <S.Wrapper hero={hero}>
+    <S.TransparentLink to={post.slug}>
+      <S.Cover src={post.coverImageUrl} alt={post.coverImageAlt} rounded />
+    </S.TransparentLink>
+    <S.Details hero={hero}>
+      <S.Meta>
+        <S.Header>
           <ArticleInfo post={post} />
-          <ArticleLink to={post.slug}>
+          <S.TransparentLink to={post.slug}>
             <H3>{post.title}</H3>
-          </ArticleLink>
-        </ArticleHeader>
-        <ArticleLink to={post.slug}>
-          <ArticleExcerpt hero={hero}>{post.excerpt}</ArticleExcerpt>
-        </ArticleLink>
-      </ArticleMeta>
+          </S.TransparentLink>
+        </S.Header>
+        <S.TransparentLink to={post.slug}>
+          <S.Excerpt hero={hero}>{post.excerpt}</S.Excerpt>
+        </S.TransparentLink>
+      </S.Meta>
       {hero && <ReadButton to={post.slug} />}
-    </Details>
-  </CardContainer>
+    </S.Details>
+  </S.Wrapper>
 );
 
 export default ArticleCard;

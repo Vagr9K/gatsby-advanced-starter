@@ -1,22 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import styled from "styled-components";
 import Layout from "../layouts";
 import { PostListing } from "../components/PostListing";
 import { queryIntoListing } from "../types";
-
-const ListingContainer = styled.div`
-  min-height: 100%;
-
-  width: 100%;
-
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`;
+import ListingPageWrapper from "../components/shared/ListingPageWrapper";
 
 type ListingProps = {
   data: GatsbyTypes.ListingQueryQuery;
@@ -24,9 +11,9 @@ type ListingProps = {
 
 const Listing = ({ data }: ListingProps): JSX.Element => (
   <Layout>
-    <ListingContainer>
+    <ListingPageWrapper>
       <PostListing listing={queryIntoListing(data)} />
-    </ListingContainer>
+    </ListingPageWrapper>
   </Layout>
 );
 

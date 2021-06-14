@@ -2,6 +2,8 @@ import * as React from "react";
 import Helmet from "react-helmet";
 import { createGlobalStyle, css } from "styled-components";
 
+import { breakpoints } from "./Constants";
+
 const MobileH1 = css`
   font-family: "Alfa Slab One", serif;
   font-style: normal;
@@ -158,63 +160,63 @@ const DesktopOverline = css`
 
 const H1Style = css`
   ${MobileH1}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH1}
   }
 `;
 
 const H2Style = css`
   ${MobileH2}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH2}
   }
 `;
 
 const H3Style = css`
   ${MobileH3}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH3}
   }
 `;
 
 const H4Style = css`
   ${MobileH4}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH4}
   }
 `;
 
 const H5Style = css`
   ${MobileH5}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH5}
   }
 `;
 
 const H6Style = css`
   ${MobileH6}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopH6}
   }
 `;
 
 const BodyStyle = css`
   ${MobileBody}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopBody}
   }
 `;
 
 const CaptionStyle = css`
   ${MobileCaption}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopCaption}
   }
 `;
 
 const OverlineStyle = css`
   ${MobileOverline}
-  @media (min-width: 564px) {
+  @media (min-width: ${breakpoints.sm}) {
     ${DesktopOverline}
   }
 `;

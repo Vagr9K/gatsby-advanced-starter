@@ -13,7 +13,7 @@ export const HomeButton = styled(Link)`
   align-items: center;
 `;
 
-export const NavigationContainer = styled.header`
+export const Wrapper = styled.header`
   display: flex;
   flex-direction: row;
 
@@ -21,7 +21,7 @@ export const NavigationContainer = styled.header`
   align-items: center;
 `;
 
-export const ButtonContainer = styled.div`
+export const NavGrid = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-gap: 24px;
@@ -37,12 +37,12 @@ export const SiteTitle = styled.p`
   }
 `;
 
-type StyledNavButtonProps = {
+type NavButtonProps = {
   activeClassName: string;
 };
 
-export const StyledNavButton = styled(Link).attrs(
-  ({ activeClassName }: StyledNavButtonProps) => ({
+export const NavButton = styled(Link).attrs(
+  ({ activeClassName }: NavButtonProps) => ({
     activeClassName,
   })
 )`

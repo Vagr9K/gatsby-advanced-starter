@@ -4,7 +4,9 @@ import { ConfigProvider } from "../context/ConfigContext";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
-import ThemeProvider from "../theme";
+import ThemeProvider, { constants } from "../theme";
+
+import { LayoutWidthContainer } from "../components/shared/WidthContainer";
 
 const LayoutGrid = styled.div`
   min-height: 100vh;
@@ -16,20 +18,10 @@ const LayoutGrid = styled.div`
   grid-template-columns: 100%;
   gap: 80px;
   align-content: space-between;
-`;
 
-const WidthLimitedGrid = styled.div`
-  padding: 0 16px 0 16px;
-
-  justify-self: center;
-
-  max-width: calc(1144px + 16px * 2);
-  width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 80px;
-  align-content: space-between;
-  justify-items: stretch;
+  @media (max-width: ${constants.breakpoints.sm}) {
+    gap: 40px;
+  }
 `;
 
 type MainLayoutProps = {
@@ -41,10 +33,10 @@ const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
     <ConfigProvider>
       <SEO />
       <LayoutGrid>
-        <WidthLimitedGrid>
+        <LayoutWidthContainer>
           <Navigation />
-          {children}
-        </WidthLimitedGrid>
+        </LayoutWidthContainer>
+        {children}
         <Footer />
       </LayoutGrid>
     </ConfigProvider>

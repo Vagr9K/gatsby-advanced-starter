@@ -3,11 +3,13 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import Typography, { styles as typographyStyles } from "./Typography";
 import Color from "./Color";
+import Constants from "./Constants";
 import CssReset from "./CssReset";
 
 export * from "./Primitives";
 
 export const styles = { ...typographyStyles };
+export const constants = Constants;
 
 const theme = {
   // TODO: Placeholder for future use
@@ -20,8 +22,8 @@ type ThemeProps = {
 const ThemeProvider = ({ children }: ThemeProps): JSX.Element => (
   <StyledThemeProvider theme={theme}>
     <CssReset />
-    <Typography />
     <Color />
+    <Typography />
     {children}
   </StyledThemeProvider>
 );

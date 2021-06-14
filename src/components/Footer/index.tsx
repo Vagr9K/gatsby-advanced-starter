@@ -1,23 +1,22 @@
 import React, { useContext } from "react";
 
 import IconLinks from "../IconLinks";
-import { H3, ExternalLink, Caption } from "../../theme";
+import { ExternalLink, Caption } from "../../theme";
 
 import ConfigContext from "../../context/ConfigContext";
 
-import { FooterContainer, LinkContainer, InfoContainer } from "./style";
+import * as S from "./styles";
 
 const Footer = (): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
-    <FooterContainer>
-      <LinkContainer>
-        <H3>LINKS</H3>
+    <S.Wrapper>
+      <S.LinkGrid>
+        <S.LinksLabel />
         <IconLinks includeRss />
-      </LinkContainer>
-
-      <InfoContainer>
+      </S.LinkGrid>
+      <S.Info>
         <Caption>
           Based on{" "}
           <ExternalLink href="https://github.com/Vagr9K/gatsby-advanced-starter">
@@ -25,8 +24,8 @@ const Footer = (): JSX.Element => {
           </ExternalLink>
         </Caption>
         <Caption>{config.copyright}</Caption>
-      </InfoContainer>
-    </FooterContainer>
+      </S.Info>
+    </S.Wrapper>
   );
 };
 

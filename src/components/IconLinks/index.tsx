@@ -7,13 +7,13 @@ import { StyledIcon } from "@styled-icons/styled-icon";
 import { SiteConfig } from "../../config";
 import ConfigContext from "../../context/ConfigContext";
 
-import { IconLink, LinkContainer } from "./style";
+import * as S from "./style";
 
 // Utilities
 const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (
-  <IconLink href={url}>
+  <S.IconLink href={url}>
     <Icon size={48} />
-  </IconLink>
+  </S.IconLink>
 );
 
 const renderTwitterLink = (
@@ -57,21 +57,22 @@ const renderRssLink = (config: Readonly<SiteConfig>): JSX.Element =>
 
 type IconLinksProps = {
   includeRss?: boolean;
+  className?: string;
 };
 
 const defaultProps: IconLinksProps = {
   includeRss: false,
 };
 
-const IconLinks = ({ includeRss }: IconLinksProps): JSX.Element => {
+const IconLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
-    <LinkContainer>
+    <S.LinkGrid className={className}>
       {renderTwitterLink(config)} {renderGitHubLink(config)}
       {renderLinkedInLink(config)} {renderEmailLink(config)}
       {includeRss && renderRssLink(config)}
-    </LinkContainer>
+    </S.LinkGrid>
   );
 };
 

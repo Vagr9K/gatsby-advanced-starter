@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+
 import Layout from "../layouts";
 import { PostListing } from "../components/PostListing";
 import ConfigContext from "../context/ConfigContext";
 import { queryIntoListing } from "../types";
+import ListingPageWrapper from "../components/shared/ListingPageWrapper";
 
 type TagTemplateProps = {
   data: GatsbyTypes.TagPageQuery;
@@ -23,10 +25,10 @@ export const TagTemplate = ({
 
   return (
     <Layout>
-      <div className="tag-container">
-        <Helmet title={`Posts tagged as "${tag}" | ${config.website.title}`} />
-        <PostListing listing={queryIntoListing(data)} />
-      </div>
+      <Helmet title={`Posts tagged as "${tag}" | ${config.website.title}`} />
+      <ListingPageWrapper>
+        <PostListing listing={queryIntoListing(data)} noHero />
+      </ListingPageWrapper>
     </Layout>
   );
 };

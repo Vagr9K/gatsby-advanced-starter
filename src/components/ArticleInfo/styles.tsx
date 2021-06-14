@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
 
-import { styles, Caption } from "../../theme";
+import { styles, Caption as BaseCaption } from "../../theme";
 
 const Link = styled(GatsbyLink)`
   color: var(--color-primary);
@@ -24,22 +24,22 @@ export const CategoryLink = styled(Link)`
   text-transform: capitalize;
 `;
 
-export const PostInfoCaption = styled(Caption)`
+export const Caption = styled(BaseCaption)`
   color: var(--color-grey-700);
 `;
 
-export const PostInfo = styled.div`
+export const InfoGrid = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
-export const TagList = styled.div`
+export const TagGrid = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-gap: 16px;
 `;
 
-export const ArticleInfoContainer = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

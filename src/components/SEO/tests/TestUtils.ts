@@ -100,7 +100,8 @@ export const sampleSeoData: {
     lastName: "Last",
     twitterName: "Vagr9K", // Twitter username used for SEO and rendering the "Follow me button"
     email: "AdvancedUser@example.com", // Email used for RSS feed's author segment
-    location: "User Location", // User location used for SEO and for the author segment.
+    about: "A full-stack web developer looking for a challenge!", // User information used for the author segment.
+    location: "A full-stack web developer looking for a challenge!", // User location used for SEO and for the author segment.
     avatar: "https://api.adorable.io/avatars/150/test.png", // User avatar
   },
 

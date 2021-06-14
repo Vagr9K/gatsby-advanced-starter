@@ -1,7 +1,29 @@
 import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 import { Exit } from "@styled-icons/boxicons-regular";
 
-import { ReadButton } from "./style";
+import { styles, constants } from "../../theme";
+
+const ReadButton = styled(Link)`
+  align-self: flex-end;
+
+  text-decoration: none;
+  color: var(--color-primary);
+
+  ${styles.ButtonLabel}
+
+  display: grid;
+  grid-gap: 12px;
+  grid-auto-flow: column;
+
+  justify-content: start;
+  align-items: center;
+
+  @media (max-width: ${constants.breakpoints.lg}) {
+    display: none;
+  }
+`;
 
 type ArticleButtonProps = { to: string };
 

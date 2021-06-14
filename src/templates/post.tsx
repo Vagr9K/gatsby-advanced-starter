@@ -1,37 +1,38 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import styled from "styled-components";
+
 import Layout from "../layouts";
 import SEO from "../components/SEO";
 
+import Article from "../components/Article";
+import AuthorSegment from "../components/AuthorSegment";
+import RelatedPosts from "../components/RelatedPosts";
+
 import { queryIntoPost } from "../types";
+
+const Wrapper = styled.div`
+  display: grid;
+
+  grid-gap: 60px;
+`;
 
 type PostTemplateProps = {
   data: GatsbyTypes.BlogPostBySlugQuery;
-  pageContext: { slug: string };
 };
 
-const PostTemplate = ({
-  data,
-  pageContext,
-}: PostTemplateProps): JSX.Element => {
-  const { slug } = pageContext;
+// TODO: Implement related posts
+const PostTemplate = ({ data }: PostTemplateProps): JSX.Element => {
   const post = queryIntoPost(data);
-
-  if (!post.body)
-    throw Error(
-      `PostTemplate: post date doesn't contain MDX body for rendering. Aborting. Post slug: ${slug}`
-    );
 
   return (
     <Layout>
-      <div>
+      <Wrapper>
         <SEO post={post} />
-        <div>
-          <h1>{post.title}</h1>
-          <MDXRenderer>{post.body}</MDXRenderer>
-        </div>
-      </div>
+        <Article post={post} />
+        <AuthorSegment />
+        <RelatedPosts list={[post, post]} />
+      </Wrapper>
     </Layout>
   );
 };
