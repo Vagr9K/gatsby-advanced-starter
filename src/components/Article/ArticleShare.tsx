@@ -22,7 +22,7 @@ import { Post } from "../../types";
 import { SiteConfig } from "../../config";
 import ConfigContext from "../../context/ConfigContext";
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: grid;
 
   grid-auto-flow: row;

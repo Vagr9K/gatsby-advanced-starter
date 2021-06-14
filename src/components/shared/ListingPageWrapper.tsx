@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ListingPageWrapper = styled.div`
+const ListingPageWrapper = styled.main`
   min-height: 100%;
 
   width: 100%;

@@ -8,7 +8,7 @@ import { ArticleWidthContainer } from "../shared/WidthContainer";
 
 import { Post } from "../../types";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   width: 100%;
 
   display: grid;

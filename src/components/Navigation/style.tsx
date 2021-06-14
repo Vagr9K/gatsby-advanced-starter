@@ -21,7 +21,7 @@ export const Wrapper = styled.header`
   align-items: center;
 `;
 
-export const NavGrid = styled.div`
+export const NavGrid = styled.nav`
   display: grid;
   grid-auto-flow: column;
   grid-gap: 24px;

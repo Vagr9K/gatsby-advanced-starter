@@ -6,7 +6,7 @@ import ArticleIntro from "./ArticleIntro";
 import ArticleRender from "./ArticleRender";
 import ArticleShare from "./ArticleShare";
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   width: 100%;
 
   display: grid;

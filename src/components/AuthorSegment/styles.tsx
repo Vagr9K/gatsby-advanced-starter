@@ -6,7 +6,7 @@ import BasicSeparator from "../shared/Separator";
 
 const SM_BREAKPOINT = "500px";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.aside`
   padding: 0 16px;
 
   justify-self: center;
