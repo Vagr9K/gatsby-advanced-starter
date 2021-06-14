@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import "normalize.css";
+import { normalize } from "styled-normalize";
 
 const CssReset = createGlobalStyle`
+  ${normalize}
 
   html {
     box-sizing: border-box;
