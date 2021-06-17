@@ -48,17 +48,34 @@ export const NavButton = styled(Link).attrs(
 )`
   ${styles.ButtonLabel}
 
-  padding: 0 0 8px 0;
-
   background-color: var(--color-background);
 
-  border-style: solid;
-  border-color: var(--color-primary);
+  &:after {
+    display: block;
+    content: "";
 
-  border-width: 0px;
+    margin: 8px auto 0 auto;
+
+    background-color: var(--color-primary);
+
+    transition: transform 300ms ease;
+    transform: scaleX(0);
+
+    width: 100%;
+    height: 2px;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 
   &.${(props) => props.activeClassName} {
-    border-bottom-width: 2px;
+    &:after {
+      transform: scaleX(1);
+    }
   }
 
   text-decoration: none;
