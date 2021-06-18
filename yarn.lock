@@ -12327,7 +12327,6 @@ fsevents@^1.2.7:
     remark-external-links: ^8.0.0
     remove-markdown: ^0.3.0
     styled-components: ^5.3.0
-    styled-normalize: ^8.0.7
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
@@ -25410,15 +25409,6 @@ resolve@^2.0.0-next.3:
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
   checksum: 19792fc00da531a083963c3679429dc739e03cb1ca7af2adf0317b25fcaf23655b8f37f8595a210be26003aa5a143003c6dc66ef80c545da85447277a4985bd1
-  languageName: node
-  linkType: hard
-
-"styled-normalize@npm:^8.0.7":
-  version: 8.0.7
-  resolution: "styled-normalize@npm:8.0.7"
-  peerDependencies:
-    styled-components: ^4.0.0 || ^5.0.0
-  checksum: afdb450407ec4dcd41b4806a1193060e128f617fbbb6c14cc8679f9a651b93afc54bd13035c84aec3c298a7ae0084aef4a8a651c082c9bf209843b17cfc73305
   languageName: node
   linkType: hard
 

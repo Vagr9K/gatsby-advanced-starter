@@ -60,7 +60,6 @@
     "remark-external-links": "^8.0.0",
     "remove-markdown": "^0.3.0",
     "styled-components": "^5.3.0",
-    "styled-normalize": "^8.0.7",
     "url-join": "^4.0.1"
   },
   "devDependencies": {
