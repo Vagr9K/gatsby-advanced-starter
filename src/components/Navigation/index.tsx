@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 
-import NavButton from "./NavButton";
 import { AdvancedLogo } from "../../icons";
 import ConfigContext from "../../context/ConfigContext";
 
@@ -16,8 +15,8 @@ const Navigation = (): JSX.Element => {
         <S.SiteTitle>{config.website.titleShort}</S.SiteTitle>
       </S.HomeButton>
       <S.NavGrid>
-        <NavButton href="/">Posts</NavButton>
-        <NavButton href="/about">About</NavButton>
+        <S.NavButton to="/">Posts</S.NavButton>
+        <S.NavButton to="/about">About</S.NavButton>
       </S.NavGrid>
     </S.Wrapper>
   );

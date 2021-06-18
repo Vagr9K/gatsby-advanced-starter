@@ -20,8 +20,8 @@ const AuthorSegment = (): JSX.Element => {
         </S.Info>
       </S.Main>
       <S.Contact>
-        <S.ShareLabel> </S.ShareLabel>
-        <S.UserLinkGrid />
+        <S.ShareLabel />
+        <S.TightUserLinks />
       </S.Contact>
       <S.Separator />
     </S.Wrapper>

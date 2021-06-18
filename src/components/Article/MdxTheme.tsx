@@ -4,6 +4,7 @@ import styled, { AnyStyledComponent } from "styled-components";
 import { MDXProvider } from "@mdx-js/react";
 import * as styles from "../../theme";
 
+import { AnimatedLink } from "../Links";
 import Image from "../shared/Image";
 
 const applyHeadingStyle = (component: AnyStyledComponent) => styled(component)`
@@ -38,7 +39,7 @@ const components = {
   code: undefined,
   inlineCode: undefined,
   hr: undefined,
-  a: styles.ExternalLink, // TODO: Figure out if internal links should be used
+  a: AnimatedLink,
   img: Image,
 };
 

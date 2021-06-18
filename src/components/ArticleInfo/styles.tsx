@@ -1,14 +1,9 @@
 import styled from "styled-components";
-import { Link as GatsbyLink } from "gatsby";
+import { PrimaryLink } from "../Links";
 
 import { styles, Caption as BaseCaption } from "../../theme";
 
-const Link = styled(GatsbyLink)`
-  color: var(--color-primary);
-  text-decoration: none;
-`;
-
-export const TagLink = styled(Link)`
+export const TagLink = styled(PrimaryLink)`
   ${styles.Overline}
 
   text-transform: uppercase;
@@ -18,7 +13,7 @@ export const TagLink = styled(Link)`
   }
 `;
 
-export const CategoryLink = styled(Link)`
+export const CategoryLink = styled(PrimaryLink)`
   ${styles.Caption}
 
   text-transform: capitalize;

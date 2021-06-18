@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { Link } from "gatsby";
 import { styles } from "../../theme";
+import { PrimaryLink, AnimatedLink } from "../Links";
 
-export const HomeButton = styled(Link)`
+export const HomeButton = styled(PrimaryLink)`
   text-decoration: none;
   color: var(--color-text);
 
@@ -37,47 +37,12 @@ export const SiteTitle = styled.p`
   }
 `;
 
-type NavButtonProps = {
-  activeClassName: string;
-};
-
-export const NavButton = styled(Link).attrs(
-  ({ activeClassName }: NavButtonProps) => ({
-    activeClassName,
-  })
-)`
+export const NavButton = styled(AnimatedLink)`
   ${styles.ButtonLabel}
 
-  background-color: var(--color-background);
+  color: var(--color-text);
 
   &:after {
-    display: block;
-    content: "";
-
-    margin: 8px auto 0 auto;
-
-    background-color: var(--color-primary);
-
-    transition: transform 300ms ease;
-    transform: scaleX(0);
-
-    width: 100%;
-    height: 2px;
+    margin: 8px 0 0 0;
   }
-
-  &:hover {
-    color: var(--color-primary);
-  }
-  &:hover::after {
-    transform: scaleX(1);
-  }
-
-  &.${(props) => props.activeClassName} {
-    &:after {
-      transform: scaleX(1);
-    }
-  }
-
-  text-decoration: none;
-  color: var(--color-text);
 `;

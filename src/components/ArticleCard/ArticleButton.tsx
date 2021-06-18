@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link as GatsbyLink } from "gatsby";
 import { Exit } from "@styled-icons/boxicons-regular";
 
 import { styles, constants } from "../../theme";
 
-const ReadButton = styled(Link)`
+const ReadButton = styled(GatsbyLink)`
   align-self: flex-end;
 
   text-decoration: none;

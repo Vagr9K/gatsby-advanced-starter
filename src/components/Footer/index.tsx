@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
-import IconLinks from "../IconLinks";
-import { ExternalLink, Caption } from "../../theme";
+import UserLinks from "../UserLinks";
+import { Caption } from "../../theme";
+import { AnimatedLink } from "../Links";
 
 import ConfigContext from "../../context/ConfigContext";
 
@@ -14,14 +15,14 @@ const Footer = (): JSX.Element => {
     <S.Wrapper>
       <S.LinkGrid>
         <S.LinksLabel />
-        <IconLinks includeRss />
+        <UserLinks includeRss />
       </S.LinkGrid>
       <S.Info>
         <Caption>
           Based on{" "}
-          <ExternalLink href="https://github.com/Vagr9K/gatsby-advanced-starter">
+          <AnimatedLink to="https://github.com/Vagr9K/gatsby-advanced-starter">
             Gatsby Advanced Starter
-          </ExternalLink>
+          </AnimatedLink>
         </Caption>
         <Caption>{config.copyright}</Caption>
       </S.Info>

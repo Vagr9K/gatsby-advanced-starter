@@ -1,17 +1,9 @@
 import styled, { css } from "styled-components";
-import { Link } from "gatsby";
 import Image from "../shared/Image";
 
 import { Body, constants } from "../../theme";
 
 type CardStyleProps = { hero?: boolean };
-
-export const TransparentLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-
-  width: 100%;
-`;
 
 export const Cover = styled(Image)`
   width: 100%;

@@ -6,14 +6,15 @@ import { StyledIcon } from "@styled-icons/styled-icon";
 
 import { SiteConfig } from "../../config";
 import ConfigContext from "../../context/ConfigContext";
+import { IconLink } from "../Links";
 
 import * as S from "./style";
 
 // Utilities
 const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (
-  <S.IconLink href={url}>
+  <IconLink to={url}>
     <Icon size={48} />
-  </S.IconLink>
+  </IconLink>
 );
 
 const renderTwitterLink = (
@@ -64,7 +65,7 @@ const defaultProps: IconLinksProps = {
   includeRss: false,
 };
 
-const IconLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
+const UserLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
@@ -76,6 +77,6 @@ const IconLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
   );
 };
 
-IconLinks.defaultProps = defaultProps;
+UserLinks.defaultProps = defaultProps;
 
-export default IconLinks;
+export default UserLinks;

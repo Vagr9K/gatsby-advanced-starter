@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 import {
   Twitter as TwitterIcon,
@@ -7,7 +6,6 @@ import {
   FacebookCircle as FacebookIcon,
   Reddit as RedditIcon,
 } from "@styled-icons/boxicons-logos";
-import { Link as LinkIcon } from "@styled-icons/boxicons-regular";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -16,56 +14,11 @@ import {
 } from "react-share";
 import urlJoin from "url-join";
 
-import Separator from "../shared/Separator";
-import { H3 } from "../../theme";
-import { Post } from "../../types";
-import { SiteConfig } from "../../config";
-import ConfigContext from "../../context/ConfigContext";
-
-const Wrapper = styled.section`
-  display: grid;
-
-  grid-auto-flow: row;
-  grid-gap: 8px;
-`;
-
-const LinkWrapper = styled.div`
-  display: grid;
-
-  grid-auto-flow: column;
-  grid-gap: 24px;
-
-  align-items: center;
-  align-content: center;
-
-  @media (max-width: 404px) {
-    grid-auto-flow: row;
-    grid-gap: 8px;
-
-    justify-content: center;
-    justify-items: center;
-  }
-`;
-
-const Label = styled(H3)`
-  &:after {
-    content: "Share";
-    color: var(--color-grey-300);
-    text-transform: uppercase;
-  }
-`;
-
-const LinkGrid = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 12px;
-
-  color: var(--color-grey-700);
-`;
-
-const LinkButton = styled(LinkIcon)`
-  cursor: pointer;
-`;
+import Separator from "../../shared/Separator";
+import { Post } from "../../../types";
+import { SiteConfig } from "../../../config";
+import ConfigContext from "../../../context/ConfigContext";
+import * as S from "./styles";
 
 const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
   const relatedTwitterNames = [];
@@ -78,11 +31,11 @@ const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
   return relatedTwitterNames;
 };
 
-type SocialLinksProps = {
+type ArticleShareProps = {
   post: Post;
 };
 
-const ArticleShare = ({ post }: SocialLinksProps): JSX.Element => {
+const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
   const { title, excerpt, slug } = post;
 
   const config = useContext(ConfigContext);
@@ -92,10 +45,10 @@ const ArticleShare = ({ post }: SocialLinksProps): JSX.Element => {
   const relatedTwitterNames = generateRelatedTwitterNames(config);
 
   return (
-    <Wrapper>
-      <LinkWrapper>
-        <Label />
-        <LinkGrid>
+    <S.Wrapper>
+      <S.LinkWrapper>
+        <S.Label />
+        <S.LinkGrid>
           <FacebookShareButton url={url} quote={excerpt}>
             <FacebookIcon size={40} />
           </FacebookShareButton>
@@ -118,14 +71,14 @@ const ArticleShare = ({ post }: SocialLinksProps): JSX.Element => {
           >
             <LinkedInIcon size={40} />
           </LinkedinShareButton>
-          <LinkButton
+          <S.LinkButton
             size={40}
             onClick={() => navigator.clipboard.writeText(url)}
           />
-        </LinkGrid>
-      </LinkWrapper>
+        </S.LinkGrid>
+      </S.LinkWrapper>
       <Separator />
-    </Wrapper>
+    </S.Wrapper>
   );
 };
 

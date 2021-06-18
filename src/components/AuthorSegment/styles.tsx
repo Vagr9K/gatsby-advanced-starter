@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import IconLinks from "../IconLinks";
+import UserLinks from "../UserLinks";
 import { H3, styles } from "../../theme";
 import BasicSeparator from "../shared/Separator";
 
@@ -43,8 +43,6 @@ export const Info = styled.div`
 
 export const Contact = styled.div`
   margin-top: 8px;
-
-  color: var(--color-grey-700);
 
   display: grid;
 
@@ -105,7 +103,7 @@ export const AboutText = styled.div`
   }
 `;
 
-export const UserLinkGrid = styled(IconLinks)`
+export const TightUserLinks = styled(UserLinks)`
   grid-gap: 12px;
 `;
 
