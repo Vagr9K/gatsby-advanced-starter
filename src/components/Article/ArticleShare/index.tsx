@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import {
   Twitter as TwitterIcon,
@@ -14,6 +14,7 @@ import {
 } from "react-share";
 import urlJoin from "url-join";
 
+import LinkCopyNotification from "./LinkCopyNotification";
 import Separator from "../../shared/Separator";
 import { Post } from "../../../types";
 import { SiteConfig } from "../../../config";
@@ -37,6 +38,8 @@ type ArticleShareProps = {
 
 const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
   const { title, excerpt, slug } = post;
+
+  const [showLinkNotification, setShowlinkNotification] = useState(false);
 
   const config = useContext(ConfigContext);
 
@@ -73,8 +76,19 @@ const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
           </LinkedinShareButton>
           <S.LinkButton
             size={40}
-            onClick={() => navigator.clipboard.writeText(url)}
+            onClick={() => {
+              // eslint-disable-next-line no-void
+              void navigator.clipboard.writeText(url);
+              setShowlinkNotification(true);
+            }}
           />
+          {showLinkNotification && (
+            <LinkCopyNotification
+              onAnimationEnd={() => {
+                setShowlinkNotification(false);
+              }}
+            />
+          )}
         </S.LinkGrid>
       </S.LinkWrapper>
       <Separator />

@@ -15,7 +15,9 @@ const Colors = css`
     --color-grey-900: #1a1a1a;
 
     --color-text: #000000;
+    --color-inverted-text: #ffffff;
     --color-background: #ffffff;
+    --color-inverted-background: #000000;
   }
 `;
 
