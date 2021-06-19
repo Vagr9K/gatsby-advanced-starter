@@ -1,11 +1,9 @@
 import React from "react";
 
-import { BaseLink, LinkProps } from "./BaseLink";
+import { LinkProps } from "./BaseLink";
 import * as S from "./styles";
 
 export const { IconCSS } = S;
-
-export const Link = BaseLink;
 
 export const IconLink = ({
   to,

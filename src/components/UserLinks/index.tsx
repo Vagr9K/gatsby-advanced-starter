@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 
 import { MailSend, Rss } from "@styled-icons/boxicons-regular";
 import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
@@ -8,7 +9,11 @@ import { SiteConfig } from "../../config";
 import ConfigContext from "../../context/ConfigContext";
 import { IconLink } from "../Links";
 
-import * as S from "./style";
+export const LinkGrid = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+`;
 
 // Utilities
 const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (
@@ -69,11 +74,11 @@ const UserLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
-    <S.LinkGrid className={className}>
+    <LinkGrid className={className}>
       {renderTwitterLink(config)} {renderGitHubLink(config)}
       {renderLinkedInLink(config)} {renderEmailLink(config)}
       {includeRss && renderRssLink(config)}
-    </S.LinkGrid>
+    </LinkGrid>
   );
 };
 
