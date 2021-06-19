@@ -18,7 +18,17 @@ const popUpAnimation = keyframes`
     ${popUpStartState}
   }
 
-  20% {
+  10% {
+    ${popUpEndState}
+  }
+
+  to {
+    ${popUpEndState}
+  }
+`;
+
+const reducedPopUpAnimation = keyframes`
+  from {
     ${popUpEndState}
   }
 
@@ -44,10 +54,14 @@ const PopUp = styled.div`
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12),
     0px 3px 5px rgba(0, 0, 0, 0.2);
 
-  animation: ${popUpAnimation} ease-out 1.5s;
+  animation: ${popUpAnimation} ease-out 3s;
   animation-direction: alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
+
+  @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    animation: ${reducedPopUpAnimation} step-end 3s;
+  }
 `;
 
 type SnackbarProps = {
