@@ -12316,6 +12316,7 @@ fsevents@^1.2.7:
     moment: ^2.29.1
     netlify-cms-app: ^2.15.17
     prettier: ^2.3.0
+    prism-themes: ^1.7.0
     prismjs: ^1.23.0
     react: ^17.0.2
     react-color: ^2.19.3
@@ -21627,6 +21628,13 @@ fsevents@^1.2.7:
     ansi-styles: ^5.0.0
     react-is: ^17.0.1
   checksum: 26a454f1daebcb9b605a56aadc68364728114b2cada38c0647e745accf02e89ba8e098ceef102abb01e9df00cb0d78dd8c1cf4756e21aa560f054069e97646e3
+  languageName: node
+  linkType: hard
+
+"prism-themes@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "prism-themes@npm:1.7.0"
+  checksum: 0a119ef8b05a45f2c8dfebf16470247b0a815c9e1b02a912805fb0d7a710174bc175f5167dd1f8b5938b391e359837923661ede1af2bb6cd3f103791e3a39b39
   languageName: node
   linkType: hard
 

@@ -49,6 +49,7 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "netlify-cms-app": "^2.15.17",
+    "prism-themes": "^1.7.0",
     "prismjs": "^1.23.0",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
