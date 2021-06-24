@@ -37,7 +37,7 @@ const AnimatedCSS = css<LinkStyleProps>`
   text-decoration: none;
   color: var(--color-primary);
 
-  background-color: var(--color-background);
+  background-color: inherit;
 
   &:after {
     display: block;
