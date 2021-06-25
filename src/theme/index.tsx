@@ -3,6 +3,7 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import Typography, { styles as typographyStyles } from "./Typography";
 import Color from "./Color";
+import ScrollbarStyles from "./Scrollbar";
 import Constants from "./Constants";
 import CssReset from "./CssReset";
 
@@ -24,6 +25,7 @@ const ThemeProvider = ({ children }: ThemeProps): JSX.Element => (
     <CssReset />
     <Color />
     <Typography />
+    <ScrollbarStyles />
     {children}
   </StyledThemeProvider>
 );
