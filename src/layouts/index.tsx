@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ThemeProvider, { constants } from "../theme";
 
-import { LayoutWidthContainer } from "../components/shared/WidthContainer";
+import LayoutWidthContainer from "../components/shared/LayoutWidthContainer";
 
 const LayoutGrid = styled.div`
   min-height: 100vh;

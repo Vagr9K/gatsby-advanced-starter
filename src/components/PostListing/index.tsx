@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { PostList } from "../../types";
 import ArticleCard from "../ArticleCard";
 import { constants } from "../../theme";
-import { LayoutWidthContainer } from "../shared/WidthContainer";
+import LayoutWidthContainer from "../shared/LayoutWidthContainer";
 
 const Wrapper = styled.div`
   width: 100%;
