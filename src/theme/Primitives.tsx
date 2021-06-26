@@ -41,11 +41,3 @@ export const Overline = styled.p`
 export const Button = styled.button`
   ${typographyStyles.ButtonLabel}
 `;
-
-export const ExternalLink = styled.a`
-  color: var(--color-primary);
-
-  footer & {
-    color: inherit;
-  }
-`;

@@ -9,7 +9,7 @@ import { SiteConfig } from "../../config";
 import ConfigContext from "../../context/ConfigContext";
 import { IconLink } from "../Links";
 
-export const LinkGrid = styled.div`
+const LinkGrid = styled.div`
   display: grid;
   grid-auto-flow: column;
   gap: 24px;
