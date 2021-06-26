@@ -123,6 +123,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "dev": "npm run develop",
+    "dev:network": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
     "build": "npm run build:types && npm run build:js && gatsby build",
     "build:gh": "npm run clean && npm run build && gh-pages -d public",
