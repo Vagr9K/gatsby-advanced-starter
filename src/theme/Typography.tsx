@@ -82,6 +82,12 @@ const MobileOverline = css`
   text-transform: uppercase;
 `;
 
+const MobileCode = css`
+  font-family: "Fira Code", monospace !important;
+  font-size: 14px !important;
+  line-height: 21px !important;
+`;
+
 const DesktopH1 = css`
   font-family: "Alfa Slab One", serif;
   font-style: normal;
@@ -158,6 +164,12 @@ const DesktopOverline = css`
   text-transform: uppercase;
 `;
 
+const DesktopCode = css`
+  font-family: "Fira Code", monospace !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+`;
+
 const H1Style = css`
   ${MobileH1}
   @media (min-width: ${breakpoints.sm}) {
@@ -221,6 +233,13 @@ const OverlineStyle = css`
   }
 `;
 
+const CodeStyle = css`
+  ${MobileCode}
+  @media (min-width: ${breakpoints.sm}) {
+    ${DesktopCode}
+  }
+`;
+
 const ButtonLabelStyle = css`
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
@@ -263,6 +282,10 @@ const TypographyStyles = createGlobalStyle`
   button {
     ${ButtonLabelStyle}
   }
+
+  code {
+    ${CodeStyle}
+  }
 `;
 
 export const styles = {
@@ -276,13 +299,14 @@ export const styles = {
   Caption: CaptionStyle,
   Overline: OverlineStyle,
   ButtonLabel: ButtonLabelStyle,
+  Code: CodeStyle,
 };
 
 const Typography = (): JSX.Element => (
   <>
     <Helmet>
       <link
-        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@500&display=swap"
         rel="stylesheet"
       />
     </Helmet>
