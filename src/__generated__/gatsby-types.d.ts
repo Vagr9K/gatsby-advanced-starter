@@ -592,13 +592,13 @@ type ImageSharpResize = {
 type MdxFrontmatter = {
   readonly title: Scalars['String'];
   readonly cover: Maybe<Scalars['String']>;
-  readonly coverAlt: Maybe<Scalars['String']>;
+  readonly category: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
-  readonly category: Maybe<Scalars['String']>;
-  readonly disqus_category_id: Maybe<Scalars['Int']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly coverAlt: Maybe<Scalars['String']>;
+  readonly disqus_category_id: Maybe<Scalars['Int']>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -778,8 +778,17 @@ type SitePluginPluginOptionsGatsbyRemarkPlugins = {
 };
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions = {
-  readonly maxWidth: Maybe<Scalars['Int']>;
   readonly mode: Maybe<Scalars['String']>;
+  readonly classPrefix: Maybe<Scalars['String']>;
+  readonly showLineNumbers: Maybe<Scalars['Boolean']>;
+  readonly noInlineHighlight: Maybe<Scalars['Boolean']>;
+  readonly prompt: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt = {
+  readonly user: Maybe<Scalars['String']>;
+  readonly host: Maybe<Scalars['String']>;
+  readonly global: Maybe<Scalars['Boolean']>;
 };
 
 type SitePluginPluginOptionsIcons = {
@@ -1274,13 +1283,13 @@ type MdxFilterInput = {
 type MdxFrontmatterFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly cover: Maybe<StringQueryOperatorInput>;
-  readonly coverAlt: Maybe<StringQueryOperatorInput>;
+  readonly category: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
-  readonly category: Maybe<StringQueryOperatorInput>;
-  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
   readonly tags: Maybe<StringQueryOperatorInput>;
+  readonly coverAlt: Maybe<StringQueryOperatorInput>;
+  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1539,13 +1548,13 @@ type FileFieldsEnum =
   | 'childrenMdx.fileAbsolutePath'
   | 'childrenMdx.frontmatter.title'
   | 'childrenMdx.frontmatter.cover'
-  | 'childrenMdx.frontmatter.coverAlt'
+  | 'childrenMdx.frontmatter.category'
   | 'childrenMdx.frontmatter.description'
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
-  | 'childrenMdx.frontmatter.category'
-  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.frontmatter.tags'
+  | 'childrenMdx.frontmatter.coverAlt'
+  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.frontmatter.slug'
   | 'childrenMdx.slug'
   | 'childrenMdx.body'
@@ -1603,13 +1612,13 @@ type FileFieldsEnum =
   | 'childMdx.fileAbsolutePath'
   | 'childMdx.frontmatter.title'
   | 'childMdx.frontmatter.cover'
-  | 'childMdx.frontmatter.coverAlt'
+  | 'childMdx.frontmatter.category'
   | 'childMdx.frontmatter.description'
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
-  | 'childMdx.frontmatter.category'
-  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.frontmatter.tags'
+  | 'childMdx.frontmatter.coverAlt'
+  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.frontmatter.slug'
   | 'childMdx.slug'
   | 'childMdx.body'
@@ -2494,8 +2503,17 @@ type SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput = {
 };
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput = {
-  readonly maxWidth: Maybe<IntQueryOperatorInput>;
   readonly mode: Maybe<StringQueryOperatorInput>;
+  readonly classPrefix: Maybe<StringQueryOperatorInput>;
+  readonly showLineNumbers: Maybe<BooleanQueryOperatorInput>;
+  readonly noInlineHighlight: Maybe<BooleanQueryOperatorInput>;
+  readonly prompt: Maybe<SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput>;
+};
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput = {
+  readonly user: Maybe<StringQueryOperatorInput>;
+  readonly host: Maybe<StringQueryOperatorInput>;
+  readonly global: Maybe<BooleanQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsIconsFilterListInput = {
@@ -3088,13 +3106,13 @@ type MdxFieldsEnum =
   | 'fileAbsolutePath'
   | 'frontmatter.title'
   | 'frontmatter.cover'
-  | 'frontmatter.coverAlt'
+  | 'frontmatter.category'
   | 'frontmatter.description'
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
-  | 'frontmatter.category'
-  | 'frontmatter.disqus_category_id'
   | 'frontmatter.tags'
+  | 'frontmatter.coverAlt'
+  | 'frontmatter.disqus_category_id'
   | 'frontmatter.slug'
   | 'slug'
   | 'body'
@@ -3520,8 +3538,10 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.extensions'
   | 'pluginOptions.gatsbyRemarkPlugins'
   | 'pluginOptions.gatsbyRemarkPlugins.resolve'
-  | 'pluginOptions.gatsbyRemarkPlugins.options.maxWidth'
   | 'pluginOptions.gatsbyRemarkPlugins.options.mode'
+  | 'pluginOptions.gatsbyRemarkPlugins.options.classPrefix'
+  | 'pluginOptions.gatsbyRemarkPlugins.options.showLineNumbers'
+  | 'pluginOptions.gatsbyRemarkPlugins.options.noInlineHighlight'
   | 'pluginOptions.lessBabel'
   | 'pluginOptions.mediaTypes'
   | 'pluginOptions.root'

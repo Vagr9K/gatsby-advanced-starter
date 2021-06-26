@@ -674,7 +674,7 @@ type ImageSharpResize {
 type MdxFrontmatter {
   title: String!
   cover: String
-  coverAlt: String
+  category: String
   description: String
   datePublished(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
@@ -702,9 +702,9 @@ type MdxFrontmatter {
     # Configures the locale Moment.js will use to format the date.
     locale: String
   ): Date
-  category: String
-  disqus_category_id: Int
   tags: [String]
+  coverAlt: String
+  disqus_category_id: Int
   slug: String
 }
 
@@ -857,8 +857,17 @@ type SitePluginPluginOptionsGatsbyRemarkPlugins {
 }
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions {
-  maxWidth: Int
   mode: String
+  classPrefix: String
+  showLineNumbers: Boolean
+  noInlineHighlight: Boolean
+  prompt: SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt
+}
+
+type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt {
+  user: String
+  host: String
+  global: Boolean
 }
 
 type SitePluginPluginOptionsIcons {
@@ -1088,13 +1097,13 @@ input MdxFilterInput {
 input MdxFrontmatterFilterInput {
   title: StringQueryOperatorInput
   cover: StringQueryOperatorInput
-  coverAlt: StringQueryOperatorInput
+  category: StringQueryOperatorInput
   description: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
-  category: StringQueryOperatorInput
-  disqus_category_id: IntQueryOperatorInput
   tags: StringQueryOperatorInput
+  coverAlt: StringQueryOperatorInput
+  disqus_category_id: IntQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1326,13 +1335,13 @@ enum FileFieldsEnum {
   childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
   childrenMdx___frontmatter___cover
-  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___category
   childrenMdx___frontmatter___description
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
-  childrenMdx___frontmatter___category
-  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___tags
+  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___slug
   childrenMdx___slug
   childrenMdx___body
@@ -1390,13 +1399,13 @@ enum FileFieldsEnum {
   childMdx___fileAbsolutePath
   childMdx___frontmatter___title
   childMdx___frontmatter___cover
-  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___category
   childMdx___frontmatter___description
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
-  childMdx___frontmatter___category
-  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___tags
+  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___slug
   childMdx___slug
   childMdx___body
@@ -2205,8 +2214,17 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput {
 }
 
 input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
-  maxWidth: IntQueryOperatorInput
   mode: StringQueryOperatorInput
+  classPrefix: StringQueryOperatorInput
+  showLineNumbers: BooleanQueryOperatorInput
+  noInlineHighlight: BooleanQueryOperatorInput
+  prompt: SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput
+}
+
+input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput {
+  user: StringQueryOperatorInput
+  host: StringQueryOperatorInput
+  global: BooleanQueryOperatorInput
 }
 
 input SitePluginPluginOptionsIconsFilterListInput {
@@ -2720,13 +2738,13 @@ enum MdxFieldsEnum {
   fileAbsolutePath
   frontmatter___title
   frontmatter___cover
-  frontmatter___coverAlt
+  frontmatter___category
   frontmatter___description
   frontmatter___datePublished
   frontmatter___dateModified
-  frontmatter___category
-  frontmatter___disqus_category_id
   frontmatter___tags
+  frontmatter___coverAlt
+  frontmatter___disqus_category_id
   frontmatter___slug
   slug
   body
@@ -3100,8 +3118,10 @@ enum SitePluginFieldsEnum {
   pluginOptions___extensions
   pluginOptions___gatsbyRemarkPlugins
   pluginOptions___gatsbyRemarkPlugins___resolve
-  pluginOptions___gatsbyRemarkPlugins___options___maxWidth
   pluginOptions___gatsbyRemarkPlugins___options___mode
+  pluginOptions___gatsbyRemarkPlugins___options___classPrefix
+  pluginOptions___gatsbyRemarkPlugins___options___showLineNumbers
+  pluginOptions___gatsbyRemarkPlugins___options___noInlineHighlight
   pluginOptions___lessBabel
   pluginOptions___mediaTypes
   pluginOptions___root

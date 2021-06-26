@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import { H1, Body } from "../../theme";
 import ArticleInfo from "../ArticleInfo";
-import ArticleImage from "./ArticleImage";
-import { ArticleWidthContainer } from "../shared/WidthContainer";
+import Image from "./Image";
+import { WidthWrapper } from "./Spacing";
 
 import { Post } from "../../types";
 
@@ -31,21 +31,17 @@ const Cover = styled.div`
 
 const ArticleIntro = ({ post }: { post: Post }): JSX.Element => (
   <Wrapper>
-    <ArticleWidthContainer>
+    <WidthWrapper>
       <Details>
         <H1>{post.title}</H1>
         <Body>{post.excerpt}</Body>
       </Details>
-    </ArticleWidthContainer>
+    </WidthWrapper>
     <Cover>
-      <ArticleWidthContainer>
+      <WidthWrapper>
         <ArticleInfo post={post} />
-      </ArticleWidthContainer>
-      <ArticleImage
-        src={post.coverImageUrl}
-        caption={post.coverImageAlt}
-        noMargins
-      />
+      </WidthWrapper>
+      <Image src={post.coverImageUrl} caption={post.coverImageAlt} cover />
     </Cover>
   </Wrapper>
 );

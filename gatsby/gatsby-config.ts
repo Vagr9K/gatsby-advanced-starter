@@ -6,6 +6,7 @@ import path from "path";
 // Remark plugins
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import remarkExternalLinks from "remark-external-links";
+import unwrapImages from "remark-unwrap-images";
 
 // Config
 import config from "../src/config";
@@ -97,9 +98,6 @@ const gatsbyConfig = {
           },
           {
             resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 690,
-            },
           },
           {
             resolve: "remark-codesandbox/gatsby",
@@ -108,7 +106,6 @@ const gatsbyConfig = {
             },
           },
           { resolve: "gatsby-remark-copy-linked-files" },
-          { resolve: "gatsby-remark-autolink-headers" },
 
           {
             resolve: "gatsby-remark-prismjs",
@@ -127,7 +124,7 @@ const gatsbyConfig = {
             },
           },
         ],
-        remarkPlugins: [remarkA11yEmoji, remarkExternalLinks],
+        remarkPlugins: [unwrapImages, remarkA11yEmoji, remarkExternalLinks],
       },
     },
     {

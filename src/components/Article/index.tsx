@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Post } from "../../types";
 
-import ArticleIntro from "./ArticleIntro";
-import ArticleRender from "./ArticleRender";
-import ArticleShare from "./ArticleShare";
+import Intro from "./Intro";
+import Render from "./Render";
+import Share from "./Share";
 
 const Wrapper = styled.article`
   width: 100%;
@@ -20,9 +20,9 @@ type ArticleProps = {
 
 const Article = ({ post }: ArticleProps): JSX.Element => (
   <Wrapper>
-    <ArticleIntro post={post} />
-    <ArticleRender post={post} />
-    <ArticleShare post={post} />
+    <Intro post={post} />
+    <Render post={post} />
+    <Share post={post} />
   </Wrapper>
 );
 

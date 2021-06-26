@@ -12326,6 +12326,7 @@ fsevents@^1.2.7:
     react-twitter-widgets: ^1.10.0
     remark-codesandbox: ^0.10.0
     remark-external-links: ^8.0.0
+    remark-unwrap-images: ^2.1.0
     remove-markdown: ^0.3.0
     styled-components: ^5.3.0
     stylelint: ^13.13.1
@@ -23327,6 +23328,16 @@ fsevents@^1.2.7:
   dependencies:
     mdast-util-to-markdown: ^0.6.0
   checksum: 93f46076f4d96ab1946d13e7dd43e83088480ac6b1dfe05a65e2c2f0e33d1f52a50175199b464a81803fc0f5b3bf182037665f89720b30515eba37bec4d63d56
+  languageName: node
+  linkType: hard
+
+"remark-unwrap-images@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "remark-unwrap-images@npm:2.1.0"
+  dependencies:
+    hast-util-whitespace: ^1.0.0
+    unist-util-visit: ^2.0.0
+  checksum: 7c662c536f076f4cfe3c871875f15d321a5a460e1ddbe171321835d49f4c37584e476d079564d3e6f0a63f07724758c8ec4945856438e9032579ae0e471d59d7
   languageName: node
   linkType: hard
 
