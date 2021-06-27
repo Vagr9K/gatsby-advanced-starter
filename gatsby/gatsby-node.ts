@@ -4,7 +4,9 @@ import path from "path";
 import _ from "lodash";
 import { GatsbyNode } from "gatsby";
 
-import { BasicFrontmatter, GetMdxPostsQuery } from "./types";
+import { BasicFrontmatter } from "./types";
+import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
+import { initFeedMeta, createFeed } from "./feeds";
 
 // Generates a slug from provided frontmatter/file path
 const generateSlug = (
@@ -61,59 +63,22 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const categoryPage = path.resolve("src/templates/category.tsx");
   const listingPage = path.resolve("./src/templates/listing.tsx");
 
-  // Get a full list of markdown posts sorted by publcation date
-  const markdownQueryResult = await graphql<GetMdxPostsQuery>(`
-    query GetMdxPosts {
-      allMdx(sort: { fields: [frontmatter___datePublished], order: DESC }) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              tags
-              category
-              datePublished
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  // Exit on error
-  if (markdownQueryResult.errors) {
-    console.error(markdownQueryResult.errors);
-    throw markdownQueryResult.errors;
-  }
-
   // Create lists of unique categories and tags
   const tagSet = new Set<string>();
   const categorySet = new Set<string>();
 
-  const postsEdges = markdownQueryResult.data?.allMdx?.edges;
-  if (!postsEdges) {
-    console.warn("No Mdx posts were detected. Skipping post page creation.");
-    return;
-  }
+  // Initialize feed metadata
+  initFeedMeta();
 
-  // Generate listing page
-  actions.createPage({
-    path: `/`,
-    component: listingPage,
-    context: {
-      limit: postsEdges.length,
-      skip: 0,
-      pageCount: 1,
-      currentPageNum: 1,
-    },
-  });
+  // Get full post listing
+  const fullListing = await getIndexListing(graphql);
+  // Create a main "index" feed
+  await createFeed(actions, listingPage, fullListing, "index");
 
   // Iterate over posts
-  postsEdges.forEach((edge, index) => {
+  fullListing.forEach((post, index) => {
     // Add post tags to our set
-    const tags = edge?.node?.frontmatter?.tags;
+    const { tags } = post;
     if (tags) {
       tags.forEach((tag) => {
         tagSet.add(tag);
@@ -121,51 +86,52 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
 
     // Add post category to our set
-    const category = edge?.node?.frontmatter?.category;
+    const { category } = post;
     if (category) {
       categorySet.add(category);
     }
 
     // Link the post page to next and previous pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
-
-    if (!edge.node.fields?.slug) {
-      console.log(`Mdx post is missing a slug. Skipping page creation.`);
-      return;
-    }
+    const nextID = index + 1 < fullListing.length ? index + 1 : 0;
+    const prevID = index - 1 >= 0 ? index - 1 : fullListing.length - 1;
+    const nextPost = fullListing[nextID];
+    const prevPost = fullListing[prevID];
 
     // Create a post page
     actions.createPage({
-      path: edge.node.fields.slug,
+      path: post.slug,
       component: postPage,
       context: {
-        slug: edge.node.fields.slug,
-        nexttitle: nextEdge?.node.frontmatter?.title,
-        nextslug: nextEdge?.node.fields?.slug,
-        prevtitle: prevEdge?.node.frontmatter?.title,
-        prevslug: prevEdge?.node.fields?.slug,
+        slug: post.slug,
+        nexttitle: nextPost?.title,
+        nextslug: nextPost?.slug,
+        prevtitle: prevPost?.title,
+        prevslug: prevPost?.slug,
       },
     });
   });
 
-  //  Create tag listing pages based on our set
-  tagSet.forEach((tag) => {
-    actions.createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagPage,
-      context: { tag },
-    });
+  //  Create tag listing feeds based on our set
+  const tagTasks = Array.from(tagSet.keys()).map(async (tag) => {
+    const tagListing = await getTagListing(graphql, tag);
+
+    await createFeed(actions, tagPage, tagListing, "tags", tag);
   });
 
-  // Create category listing pages based on our set
-  categorySet.forEach((category) => {
-    actions.createPage({
-      path: `/categories/${_.kebabCase(category)}/`,
-      component: categoryPage,
-      context: { category },
-    });
+  await Promise.all(tagTasks);
+
+  // Create category listing feeds based on our set
+  const categoryTasks = Array.from(categorySet.keys()).map(async (category) => {
+    const categoryListing = await getCategoryListing(graphql, category);
+
+    await createFeed(
+      actions,
+      categoryPage,
+      categoryListing,
+      "categories",
+      category
+    );
   });
+
+  await Promise.all(categoryTasks);
 };
