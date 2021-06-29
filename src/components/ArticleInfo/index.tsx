@@ -1,5 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
+import _ from "lodash";
+
 import { Post } from "../../types";
 
 import * as S from "./styles";
@@ -10,7 +12,7 @@ type ArticleInfoProps = {
 
 const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
   const categoryUrl = post.category
-    ? `/categories/${post.category}`
+    ? `/category/${_.kebabCase(post.category)}`
     : undefined;
 
   const publicationDate = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
@@ -24,7 +26,7 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
 
   // Display the first 2 tags
   const tagLinks = post.tags?.slice(0, 2).map((tag) => (
-    <S.TagLink key={tag} to={`/tags/${tag}`}>
+    <S.TagLink key={tag} to={`/tag/${_.kebabCase(tag)}`}>
       {tag}
     </S.TagLink>
   ));

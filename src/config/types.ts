@@ -36,6 +36,8 @@ export interface SiteConfig {
   user: UserData;
   organization: OrganizationData;
   pathPrefix: string;
+  postsPerFeedPage: number;
+  feedMetaDirectory: string;
   googleAnalyticsID?: string;
   disqusShortname?: string;
   postsPerPage: number;

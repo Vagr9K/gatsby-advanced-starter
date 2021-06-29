@@ -1,7 +1,29 @@
-export type MdxListingQuery =
-  | GatsbyTypes.ListingQueryQuery
-  | GatsbyTypes.TagPageQuery
-  | GatsbyTypes.CategoryPageQuery;
+export type MdxListingQuery = {
+  readonly allMdx: {
+    readonly edges: ReadonlyArray<{
+      readonly node: Pick<
+        GatsbyTypes.Mdx,
+        "body" | "excerpt" | "timeToRead"
+      > & {
+        readonly fields: GatsbyTypes.Maybe<Pick<GatsbyTypes.MdxFields, "slug">>;
+        readonly frontmatter: GatsbyTypes.Maybe<
+          Pick<
+            GatsbyTypes.MdxFrontmatter,
+            | "title"
+            | "description"
+            | "cover"
+            | "coverAlt"
+            | "tags"
+            | "category"
+            | "datePublished"
+            | "dateModified"
+          >
+        >;
+        readonly internal: Pick<GatsbyTypes.Internal, "content">;
+      };
+    }>;
+  };
+};
 
 export type MdxNode = {
   body?: string;
@@ -55,3 +77,39 @@ export type Post = {
 };
 
 export type PostList = Array<Post>;
+
+export type PostFromJson = {
+  title: string;
+
+  description?: string;
+  coverImageUrl?: string;
+  coverImageAlt?: string;
+
+  datePublished: string;
+  dateModified: string;
+
+  category?: string;
+  tags?: string[];
+
+  excerpt?: string;
+  timeToRead: number;
+
+  url: string;
+  slug: string;
+};
+
+export type PostFromJsonList = Array<PostFromJson>;
+
+export type FeedPageMeta = {
+  current: number;
+  next?: number;
+  prev?: number;
+  posts: PostList;
+};
+
+export type FeedPageMetaFromJson = {
+  current: number;
+  next?: number;
+  prev?: number;
+  posts: PostFromJsonList;
+};

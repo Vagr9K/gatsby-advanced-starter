@@ -5,26 +5,28 @@ import fs from "fs";
 import _ from "lodash";
 import { Actions } from "gatsby";
 
-import { PostList } from "../../src/types";
+import config from "../../src/config";
 
-const FEED_META_DIR = "public/feed_meta/";
-const POSTS_PER_PAGE = 6;
+import { FeedPageMeta, PostList } from "../../src/types";
+
+const FEED_META_DIR = `public/${config.feedMetaDirectory}`;
+const POSTS_PER_PAGE = config.postsPerFeedPage;
+
+const FEED_COMPONENT = path.resolve("src/templates/feed/index.tsx");
 
 // Save feed page metadata in the public folder for later retrieval by the client side code
 const saveFeedPageMeta = async (
   feedType: string,
   feedPageIndex: number,
-  pagePostListing: PostList,
-  feedIdentifier?: string
+  pageMeta: FeedPageMeta,
+  feedId?: string
 ) => {
   const filePath = path.join(
     FEED_META_DIR,
-    `${feedType}${
-      feedIdentifier ? `-${feedIdentifier}` : ""
-    }-${feedPageIndex}.json`
+    `${feedType}${feedId ? `-${feedId}` : ""}-${feedPageIndex}.json`
   );
 
-  const stringifiedListing = JSON.stringify(pagePostListing);
+  const stringifiedListing = JSON.stringify(pageMeta);
 
   await fs.promises.writeFile(filePath, stringifiedListing);
 };
@@ -42,10 +44,9 @@ export const initFeedMeta = (): void => {
 // Creates a paginated feed with Gatsby pages and feed metadata
 export const createFeed = async (
   actions: Actions,
-  pageComponentPath: string,
   feedPosts: PostList,
   feedType: string,
-  feedIdentifier?: string
+  feedId?: string
 ): Promise<void> => {
   // Calculate the page count
   const pageCount = Math.ceil(feedPosts.length / POSTS_PER_PAGE);
@@ -57,9 +58,20 @@ export const createFeed = async (
 
     const feedPagePosts = feedPosts.slice(skip, skip + limit);
 
-    const formattedFeedId = _.kebabCase(feedIdentifier);
+    const formattedFeedId = _.kebabCase(feedId);
 
-    await saveFeedPageMeta(feedType, pageIndex, feedPagePosts, formattedFeedId);
+    // Compute and save a feed page metadata file
+    const nextPage = pageIndex + 1 < pageCount ? pageIndex + 1 : undefined;
+    const prevPage = pageIndex > 0 ? pageIndex - 1 : undefined;
+
+    const pageMeta: FeedPageMeta = {
+      current: pageIndex,
+      next: nextPage,
+      prev: prevPage,
+      posts: feedPagePosts,
+    };
+
+    await saveFeedPageMeta(feedType, pageIndex, pageMeta, formattedFeedId);
 
     // Index page resides on `/${PageNum}`
     // Other feeds have the `${feedName}/${feedId}/${PageNum}` format
@@ -77,13 +89,15 @@ export const createFeed = async (
     // Create a Gatsby page based on the calculated information
     actions.createPage({
       path: routePath,
-      component: pageComponentPath,
+      component: FEED_COMPONENT,
       context: {
         limit,
         skip,
         pageCount,
-        initPageIndex: pageIndex,
-        [feedType]: feedIdentifier,
+        pageIndex,
+        feedType,
+        feedId,
+        feedPageMeta: pageMeta,
       },
     });
   });

@@ -7,7 +7,7 @@
 import urlJoin from "url-join";
 import config from "../config";
 
-import { MdxNode, Post, MdxListingQuery } from "./types";
+import { MdxNode, Post, MdxListingQuery, PostFromJson } from "./types";
 
 // Re-export types
 export * from "./types";
@@ -117,4 +117,42 @@ export const queryIntoListing = (listing: MdxListingQuery): Array<Post> => {
   const nodes = edges.map((edge: { node: MdxNode }) => edge.node);
 
   return nodes.map((node) => mdxNodeIntoPost(node));
+};
+
+// Convert PostMeta to a Post
+export const jsonPostIntoPost = (meta: PostFromJson): Post => {
+  const {
+    dateModified,
+    datePublished,
+    slug,
+    timeToRead,
+    title,
+    url,
+    category,
+    coverImageAlt,
+    coverImageUrl,
+    description,
+    excerpt,
+    tags,
+  } = meta;
+
+  return {
+    title,
+
+    description,
+    coverImageUrl,
+    coverImageAlt,
+
+    datePublished: new Date(datePublished),
+    dateModified: new Date(dateModified),
+
+    category,
+    tags,
+
+    excerpt,
+    timeToRead,
+
+    url,
+    slug,
+  };
 };

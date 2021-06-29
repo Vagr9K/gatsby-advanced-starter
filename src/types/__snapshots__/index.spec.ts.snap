@@ -2489,7 +2489,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "moar",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "5.jpg",
     "dateModified": 2018-03-01T00:00:00.000Z,
     "datePublished": 2018-03-01T00:00:00.000Z,
@@ -3058,7 +3058,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "something",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "3.jpg",
     "dateModified": 2017-04-02T00:00:00.000Z,
     "datePublished": 2017-04-02T00:00:00.000Z,
@@ -3297,7 +3297,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "tech",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "2.jpg",
     "dateModified": 2017-03-17T00:00:00.000Z,
     "datePublished": 2017-03-17T00:00:00.000Z,
@@ -3552,7 +3552,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "random",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "4.jpg",
     "dateModified": 2017-03-02T00:00:00.000Z,
     "datePublished": 2017-03-02T00:00:00.000Z,
@@ -4028,7 +4028,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "test3",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "6.jpg",
     "dateModified": 2017-03-01T00:00:00.000Z,
     "datePublished": 2017-03-01T00:00:00.000Z,
@@ -4288,7 +4288,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "tech",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "1.jpg",
     "dateModified": 2017-03-01T00:00:00.000Z,
     "datePublished": 2017-03-01T00:00:00.000Z,
@@ -4947,7 +4947,7 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "another one",
-    "coverImageAlt": null,
+    "coverImageAlt": undefined,
     "coverImageUrl": "7.jpg",
     "dateModified": 2017-02-01T00:00:00.000Z,
     "datePublished": 2017-02-01T00:00:00.000Z,

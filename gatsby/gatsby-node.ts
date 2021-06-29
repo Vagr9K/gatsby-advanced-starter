@@ -8,6 +8,8 @@ import { BasicFrontmatter } from "./types";
 import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
 import { initFeedMeta, createFeed } from "./feeds";
 
+const POST_PAGE_COMPONENT = path.resolve("src/templates/post.tsx");
+
 // Generates a slug from provided frontmatter/file path
 const generateSlug = (
   parsedFilePath: path.ParsedPath,
@@ -58,10 +60,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
   actions,
 }) => {
   // Paths to our page templates
-  const postPage = path.resolve("src/templates/post.tsx");
-  const tagPage = path.resolve("src/templates/tag.tsx");
-  const categoryPage = path.resolve("src/templates/category.tsx");
-  const listingPage = path.resolve("./src/templates/listing.tsx");
 
   // Create lists of unique categories and tags
   const tagSet = new Set<string>();
@@ -73,7 +71,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Get full post listing
   const fullListing = await getIndexListing(graphql);
   // Create a main "index" feed
-  await createFeed(actions, listingPage, fullListing, "index");
+  await createFeed(actions, fullListing, "index");
 
   // Iterate over posts
   fullListing.forEach((post, index) => {
@@ -100,7 +98,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     // Create a post page
     actions.createPage({
       path: post.slug,
-      component: postPage,
+      component: POST_PAGE_COMPONENT,
       context: {
         slug: post.slug,
         nexttitle: nextPost?.title,
@@ -115,7 +113,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const tagTasks = Array.from(tagSet.keys()).map(async (tag) => {
     const tagListing = await getTagListing(graphql, tag);
 
-    await createFeed(actions, tagPage, tagListing, "tags", tag);
+    await createFeed(actions, tagListing, "tag", tag);
   });
 
   await Promise.all(tagTasks);
@@ -124,13 +122,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const categoryTasks = Array.from(categorySet.keys()).map(async (category) => {
     const categoryListing = await getCategoryListing(graphql, category);
 
-    await createFeed(
-      actions,
-      categoryPage,
-      categoryListing,
-      "categories",
-      category
-    );
+    await createFeed(actions, categoryListing, "category", category);
   });
 
   await Promise.all(categoryTasks);

@@ -37,6 +37,8 @@ const config: SiteConfig = {
     url: "https://gatsby-advanced-starter-demo.netlify.com", // URL of the organization
   },
 
+  postsPerFeedPage: 5,
+  feedMetaDirectory: "feed_meta/",
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.

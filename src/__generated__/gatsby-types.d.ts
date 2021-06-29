@@ -329,14 +329,37 @@ type SitePageContext = {
   readonly limit: Maybe<Scalars['Int']>;
   readonly skip: Maybe<Scalars['Int']>;
   readonly pageCount: Maybe<Scalars['Int']>;
-  readonly currentPageNum: Maybe<Scalars['Int']>;
+  readonly pageIndex: Maybe<Scalars['Int']>;
+  readonly feedType: Maybe<Scalars['String']>;
+  readonly feedId: Maybe<Scalars['String']>;
+  readonly feedPageMeta: Maybe<SitePageContextFeedPageMeta>;
   readonly slug: Maybe<Scalars['String']>;
   readonly nexttitle: Maybe<Scalars['String']>;
   readonly nextslug: Maybe<Scalars['String']>;
   readonly prevtitle: Maybe<Scalars['String']>;
   readonly prevslug: Maybe<Scalars['String']>;
-  readonly tag: Maybe<Scalars['String']>;
+};
+
+type SitePageContextFeedPageMeta = {
+  readonly current: Maybe<Scalars['Int']>;
+  readonly next: Maybe<Scalars['Int']>;
+  readonly prev: Maybe<Scalars['Int']>;
+  readonly posts: Maybe<ReadonlyArray<Maybe<SitePageContextFeedPageMetaPosts>>>;
+};
+
+type SitePageContextFeedPageMetaPosts = {
+  readonly title: Maybe<Scalars['String']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly coverImageUrl: Maybe<Scalars['String']>;
+  readonly coverImageAlt: Maybe<Scalars['String']>;
+  readonly datePublished: Maybe<Scalars['Date']>;
+  readonly dateModified: Maybe<Scalars['Date']>;
   readonly category: Maybe<Scalars['String']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly excerpt: Maybe<Scalars['String']>;
+  readonly timeToRead: Maybe<Scalars['Int']>;
+  readonly url: Maybe<Scalars['String']>;
+  readonly slug: Maybe<Scalars['String']>;
 };
 
 type ImageFormat =
@@ -592,10 +615,10 @@ type ImageSharpResize = {
 type MdxFrontmatter = {
   readonly title: Scalars['String'];
   readonly cover: Maybe<Scalars['String']>;
-  readonly category: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
+  readonly category: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly coverAlt: Maybe<Scalars['String']>;
   readonly disqus_category_id: Maybe<Scalars['Int']>;
@@ -1283,10 +1306,10 @@ type MdxFilterInput = {
 type MdxFrontmatterFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly cover: Maybe<StringQueryOperatorInput>;
-  readonly category: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
+  readonly category: Maybe<StringQueryOperatorInput>;
   readonly tags: Maybe<StringQueryOperatorInput>;
   readonly coverAlt: Maybe<StringQueryOperatorInput>;
   readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
@@ -1548,10 +1571,10 @@ type FileFieldsEnum =
   | 'childrenMdx.fileAbsolutePath'
   | 'childrenMdx.frontmatter.title'
   | 'childrenMdx.frontmatter.cover'
-  | 'childrenMdx.frontmatter.category'
   | 'childrenMdx.frontmatter.description'
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
+  | 'childrenMdx.frontmatter.category'
   | 'childrenMdx.frontmatter.tags'
   | 'childrenMdx.frontmatter.coverAlt'
   | 'childrenMdx.frontmatter.disqus_category_id'
@@ -1612,10 +1635,10 @@ type FileFieldsEnum =
   | 'childMdx.fileAbsolutePath'
   | 'childMdx.frontmatter.title'
   | 'childMdx.frontmatter.cover'
-  | 'childMdx.frontmatter.category'
   | 'childMdx.frontmatter.description'
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
+  | 'childMdx.frontmatter.category'
   | 'childMdx.frontmatter.tags'
   | 'childMdx.frontmatter.coverAlt'
   | 'childMdx.frontmatter.disqus_category_id'
@@ -2404,14 +2427,41 @@ type SitePageContextFilterInput = {
   readonly limit: Maybe<IntQueryOperatorInput>;
   readonly skip: Maybe<IntQueryOperatorInput>;
   readonly pageCount: Maybe<IntQueryOperatorInput>;
-  readonly currentPageNum: Maybe<IntQueryOperatorInput>;
+  readonly pageIndex: Maybe<IntQueryOperatorInput>;
+  readonly feedType: Maybe<StringQueryOperatorInput>;
+  readonly feedId: Maybe<StringQueryOperatorInput>;
+  readonly feedPageMeta: Maybe<SitePageContextFeedPageMetaFilterInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
   readonly nexttitle: Maybe<StringQueryOperatorInput>;
   readonly nextslug: Maybe<StringQueryOperatorInput>;
   readonly prevtitle: Maybe<StringQueryOperatorInput>;
   readonly prevslug: Maybe<StringQueryOperatorInput>;
-  readonly tag: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextFeedPageMetaFilterInput = {
+  readonly current: Maybe<IntQueryOperatorInput>;
+  readonly next: Maybe<IntQueryOperatorInput>;
+  readonly prev: Maybe<IntQueryOperatorInput>;
+  readonly posts: Maybe<SitePageContextFeedPageMetaPostsFilterListInput>;
+};
+
+type SitePageContextFeedPageMetaPostsFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextFeedPageMetaPostsFilterInput>;
+};
+
+type SitePageContextFeedPageMetaPostsFilterInput = {
+  readonly title: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly coverImageUrl: Maybe<StringQueryOperatorInput>;
+  readonly coverImageAlt: Maybe<StringQueryOperatorInput>;
+  readonly datePublished: Maybe<DateQueryOperatorInput>;
+  readonly dateModified: Maybe<DateQueryOperatorInput>;
   readonly category: Maybe<StringQueryOperatorInput>;
+  readonly tags: Maybe<StringQueryOperatorInput>;
+  readonly excerpt: Maybe<StringQueryOperatorInput>;
+  readonly timeToRead: Maybe<IntQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+  readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginFilterInput = {
@@ -2717,14 +2767,30 @@ type SitePageFieldsEnum =
   | 'context.limit'
   | 'context.skip'
   | 'context.pageCount'
-  | 'context.currentPageNum'
+  | 'context.pageIndex'
+  | 'context.feedType'
+  | 'context.feedId'
+  | 'context.feedPageMeta.current'
+  | 'context.feedPageMeta.next'
+  | 'context.feedPageMeta.prev'
+  | 'context.feedPageMeta.posts'
+  | 'context.feedPageMeta.posts.title'
+  | 'context.feedPageMeta.posts.description'
+  | 'context.feedPageMeta.posts.coverImageUrl'
+  | 'context.feedPageMeta.posts.coverImageAlt'
+  | 'context.feedPageMeta.posts.datePublished'
+  | 'context.feedPageMeta.posts.dateModified'
+  | 'context.feedPageMeta.posts.category'
+  | 'context.feedPageMeta.posts.tags'
+  | 'context.feedPageMeta.posts.excerpt'
+  | 'context.feedPageMeta.posts.timeToRead'
+  | 'context.feedPageMeta.posts.url'
+  | 'context.feedPageMeta.posts.slug'
   | 'context.slug'
   | 'context.nexttitle'
   | 'context.nextslug'
   | 'context.prevtitle'
   | 'context.prevslug'
-  | 'context.tag'
-  | 'context.category'
   | 'pluginCreator.id'
   | 'pluginCreator.parent.id'
   | 'pluginCreator.parent.parent.id'
@@ -3106,10 +3172,10 @@ type MdxFieldsEnum =
   | 'fileAbsolutePath'
   | 'frontmatter.title'
   | 'frontmatter.cover'
-  | 'frontmatter.category'
   | 'frontmatter.description'
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
+  | 'frontmatter.category'
   | 'frontmatter.tags'
   | 'frontmatter.coverAlt'
   | 'frontmatter.disqus_category_id'
@@ -3618,17 +3684,6 @@ type SitePluginSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type ListingQueryQueryVariables = Exact<{
-  skip: Maybe<Scalars['Int']>;
-  limit: Maybe<Scalars['Int']>;
-}>;
-
-
-type ListingQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'body' | 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title' | 'description' | 'cover' | 'coverAlt' | 'tags' | 'category' | 'datePublished' | 'dateModified'>>, readonly internal: Pick<Internal, 'content'> }
-      ) }> } };
-
 type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
@@ -3638,32 +3693,6 @@ type BlogPostBySlugQuery = { readonly mdx: Maybe<(
     Pick<Mdx, 'body' | 'timeToRead' | 'excerpt'>
     & { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title' | 'description' | 'cover' | 'coverAlt' | 'datePublished' | 'dateModified' | 'category' | 'tags'>>, readonly fields: Maybe<Pick<MdxFields, 'slug'>>, readonly internal: Pick<Internal, 'content'> }
   )> };
-
-type TagPageQueryVariables = Exact<{
-  tag: Maybe<Scalars['String']>;
-}>;
-
-
-type TagPageQuery = { readonly allMdx: (
-    Pick<MdxConnection, 'totalCount'>
-    & { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title' | 'tags' | 'cover' | 'datePublished' | 'dateModified' | 'description'>> }
-      ) }> }
-  ) };
-
-type CategoryPageQueryVariables = Exact<{
-  category: Maybe<Scalars['String']>;
-}>;
-
-
-type CategoryPageQuery = { readonly allMdx: (
-    Pick<MdxConnection, 'totalCount'>
-    & { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<Mdx, 'excerpt' | 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MdxFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title' | 'tags' | 'cover' | 'datePublished' | 'dateModified' | 'description'>> }
-      ) }> }
-  ) };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

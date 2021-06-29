@@ -3,98 +3,11 @@
 
 import { queryIntoListing, PostList, MdxListingQuery } from "../../src/types";
 
-// GraphQL queries for each feed
-const indexListingQuery = `
-query ListingQuery($skip: Int, $limit: Int) {
-  allMdx(
-    sort: { fields: [frontmatter___datePublished], order: DESC }
-    limit: $limit
-    skip: $skip
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        body
-        excerpt
-        timeToRead
-        frontmatter {
-          title
-          description
-          cover
-          coverAlt
-          tags
-          category
-          datePublished
-          dateModified
-        }
-        internal {
-          content
-        }
-      }
-    }
-  }
-}
-`;
-
-const tagListingQuery = `
-query TagPage($tag: String) {
-  allMdx(
-    limit: 1000
-    sort: { fields: [frontmatter___datePublished], order: DESC }
-    filter: { frontmatter: { tags: { in: [$tag] } } }
-  ) {
-    totalCount
-    edges {
-      node {
-        fields {
-          slug
-        }
-        excerpt
-        timeToRead
-        frontmatter {
-          title
-          tags
-          cover
-          datePublished
-          dateModified
-          description
-        }
-      }
-    }
-  }
-}
-`;
-
-const categoryListingQuery = `
-query CategoryPage($category: String) {
-  allMdx(
-    limit: 1000
-    sort: { fields: [frontmatter___datePublished], order: DESC }
-    filter: { frontmatter: { category: { eq: $category } } }
-  ) {
-    totalCount
-    edges {
-      node {
-        fields {
-          slug
-        }
-        excerpt
-        timeToRead
-        frontmatter {
-          title
-          tags
-          cover
-          datePublished
-          dateModified
-          description
-        }
-      }
-    }
-  }
-}
-`;
+import {
+  categoryListingQuery,
+  indexListingQuery,
+  tagListingQuery,
+} from "../../src/templates/feed/queries";
 
 type GraphqlType = <TData, TVariables = any>(
   query: string,
