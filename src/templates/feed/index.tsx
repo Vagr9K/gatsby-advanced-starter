@@ -3,23 +3,20 @@ import { Helmet } from "react-helmet";
 
 import Layout from "../../layouts";
 import PostListing from "../../components/PostListing";
-import { jsonPostIntoPost, PostFromJsonList } from "../../types";
 import ListingPageWrapper from "../../components/shared/ListingPageWrapper";
 import ConfigContext from "../../context/ConfigContext";
 
-type ListingProps = {
-  pageContext: {
-    limit: number;
-    skip: number;
-    pageCount: number;
-    pageIndex: number;
-    feedType: string;
-    feedId: string;
-    pagePosts: PostFromJsonList;
-  };
+import useInfiniteFeed from "./useInfiniteFeed";
+
+import { PageContext } from "./types";
+
+type FeedProps = {
+  pageContext: PageContext;
 };
 
-const Listing = ({ pageContext }: ListingProps): JSX.Element => {
+const Feed = ({ pageContext }: FeedProps): JSX.Element => {
+  const { postList, feedElementRef } = useInfiniteFeed(pageContext);
+
   const config = useContext(ConfigContext);
 
   // Don't show hero images on non-index feeds
@@ -47,14 +44,11 @@ const Listing = ({ pageContext }: ListingProps): JSX.Element => {
   return (
     <Layout>
       {getTitleOverride()}
-      <ListingPageWrapper>
-        <PostListing
-          listing={pageContext.pagePosts.map(jsonPostIntoPost)}
-          noHero={noHero}
-        />
+      <ListingPageWrapper ref={feedElementRef}>
+        <PostListing listing={postList} noHero={noHero} />
       </ListingPageWrapper>
     </Layout>
   );
 };
 
-export default Listing;
+export default Feed;
