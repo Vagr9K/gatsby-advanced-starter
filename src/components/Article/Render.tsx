@@ -55,7 +55,7 @@ const Render = ({ post }: RenderProps): JSX.Element => {
 
   return (
     <Wrapper>
-      <MDXTheme>
+      <MDXTheme post={post}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXTheme>
     </Wrapper>

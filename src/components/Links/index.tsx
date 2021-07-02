@@ -72,3 +72,20 @@ export const TransparentLink = ({
     {children}
   </S.TransparentLink>
 );
+
+export const HeadingLink = ({
+  to,
+  href,
+  className,
+  children,
+  activeClassName,
+}: LinkProps): JSX.Element => (
+  <S.HeadingLink
+    to={to}
+    href={href}
+    className={className}
+    activeClassName={activeClassName}
+  >
+    {children}
+  </S.HeadingLink>
+);

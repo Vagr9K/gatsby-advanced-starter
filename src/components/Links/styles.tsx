@@ -66,6 +66,21 @@ const AnimatedCSS = css<LinkStyleProps>`
   }
 `;
 
+const HeadingCss = css`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover::before {
+    content: "#";
+    display: block;
+    position: absolute;
+    transform: translateX(-100%);
+    padding-right: 8px;
+
+    color: var(--color-primary);
+  }
+`;
+
 export const AnimatedLink = styled(BaseLink).attrs(
   ({ activeClassName }: LinkStyleProps) => ({
     activeClassName: activeClassName || "gatsby-active-link",
@@ -84,4 +99,8 @@ export const PrimaryLink = styled(BaseLink)`
 
 export const IconLink = styled(BaseLink)`
   ${IconCSS}
+`;
+
+export const HeadingLink = styled(BaseLink)`
+  ${HeadingCss}
 `;

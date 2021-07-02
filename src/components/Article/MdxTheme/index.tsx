@@ -7,49 +7,56 @@ import * as CodeComponents from "./Code";
 import * as TableComponents from "./Table";
 import * as ListComponents from "./List";
 import * as MiscComponents from "./Misc";
+import { Post } from "../../../types";
 
 // Camponent mapping for the MDX render to use
-const componentMapping = {
-  p: TextComponents.Paragraph,
-  h1: TextComponents.H1,
-  h2: TextComponents.H2,
-  h3: TextComponents.H3,
-  h4: TextComponents.H4,
-  h5: TextComponents.H5,
-  h6: TextComponents.H6,
+const getComponentMapping = (post: Post) => {
+  // Generate heading components with correct hashlinks
+  const headings = TextComponents.createHeadings(post.slug);
 
-  blockquote: TextComponents.Blockquote,
+  return {
+    p: TextComponents.Paragraph,
+    h1: headings.H1,
+    h2: headings.H2,
+    h3: headings.H3,
+    h4: headings.H4,
+    h5: headings.H5,
+    h6: headings.H6,
 
-  ul: ListComponents.Unordered,
-  ol: ListComponents.Ordered,
-  li: ListComponents.Item,
+    blockquote: TextComponents.Blockquote,
 
-  table: TableComponents.Table,
-  thead: TableComponents.Head,
-  tbody: TableComponents.Body,
-  tr: TableComponents.Row,
-  td: TableComponents.BodyCell,
-  th: TableComponents.HeadCell,
+    ul: ListComponents.Unordered,
+    ol: ListComponents.Ordered,
+    li: ListComponents.Item,
 
-  pre: CodeComponents.Pre,
-  code: CodeComponents.Code,
-  inlineCode: CodeComponents.InlineCode,
+    table: TableComponents.Table,
+    thead: TableComponents.Head,
+    tbody: TableComponents.Body,
+    tr: TableComponents.Row,
+    td: TableComponents.BodyCell,
+    th: TableComponents.HeadCell,
 
-  hr: MiscComponents.Break,
-  thematicBreak: MiscComponents.Break,
+    pre: CodeComponents.Pre,
+    code: CodeComponents.Code,
+    inlineCode: CodeComponents.InlineCode,
 
-  a: MiscComponents.Link,
-  img: MiscComponents.Image,
+    hr: MiscComponents.Break,
+    thematicBreak: MiscComponents.Break,
+
+    a: MiscComponents.Link,
+    img: MiscComponents.Image,
+  };
 };
 
 type MDXThemeProps = {
   children: React.ReactNode;
+  post: Post;
 };
 
-const MDXTheme = ({ children }: MDXThemeProps): JSX.Element => (
+const MDXTheme = ({ children, post }: MDXThemeProps): JSX.Element => (
   <>
     <CodeComponents.GlobalCodeStyle />
-    <MDXProvider components={componentMapping}>{children}</MDXProvider>
+    <MDXProvider components={getComponentMapping(post)}>{children}</MDXProvider>
   </>
 );
 
