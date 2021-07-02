@@ -343,6 +343,7 @@ type SitePageContext = {
 type SitePageContextFeedPageMeta = {
   readonly current: Maybe<Scalars['Int']>;
   readonly next: Maybe<Scalars['Int']>;
+  readonly nextCount: Maybe<Scalars['Int']>;
   readonly prev: Maybe<Scalars['Int']>;
   readonly posts: Maybe<ReadonlyArray<Maybe<SitePageContextFeedPageMetaPosts>>>;
 };
@@ -2441,6 +2442,7 @@ type SitePageContextFilterInput = {
 type SitePageContextFeedPageMetaFilterInput = {
   readonly current: Maybe<IntQueryOperatorInput>;
   readonly next: Maybe<IntQueryOperatorInput>;
+  readonly nextCount: Maybe<IntQueryOperatorInput>;
   readonly prev: Maybe<IntQueryOperatorInput>;
   readonly posts: Maybe<SitePageContextFeedPageMetaPostsFilterListInput>;
 };
@@ -2772,6 +2774,7 @@ type SitePageFieldsEnum =
   | 'context.feedId'
   | 'context.feedPageMeta.current'
   | 'context.feedPageMeta.next'
+  | 'context.feedPageMeta.nextCount'
   | 'context.feedPageMeta.prev'
   | 'context.feedPageMeta.posts'
   | 'context.feedPageMeta.posts.title'

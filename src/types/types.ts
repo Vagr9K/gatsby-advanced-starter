@@ -103,14 +103,18 @@ export type PostFromJsonList = Array<PostFromJson>;
 export type FeedPageMeta = {
   current: number;
   next?: number;
+  nextCount?: number;
   prev?: number;
+  prevCount?: number;
   posts: PostList;
 };
 
 export type FeedPageMetaFromJson = {
   current: number;
   next?: number;
+  nextCount?: number;
   prev?: number;
+  prevCount?: number;
   posts: PostFromJsonList;
 };
 

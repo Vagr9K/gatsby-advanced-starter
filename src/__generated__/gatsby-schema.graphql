@@ -410,6 +410,7 @@ type SitePageContext {
 type SitePageContextFeedPageMeta {
   current: Int
   next: Int
+  nextCount: Int
   prev: Int
   posts: [SitePageContextFeedPageMetaPosts]
 }
@@ -2152,6 +2153,7 @@ input SitePageContextFilterInput {
 input SitePageContextFeedPageMetaFilterInput {
   current: IntQueryOperatorInput
   next: IntQueryOperatorInput
+  nextCount: IntQueryOperatorInput
   prev: IntQueryOperatorInput
   posts: SitePageContextFeedPageMetaPostsFilterListInput
 }
@@ -2456,6 +2458,7 @@ enum SitePageFieldsEnum {
   context___feedId
   context___feedPageMeta___current
   context___feedPageMeta___next
+  context___feedPageMeta___nextCount
   context___feedPageMeta___prev
   context___feedPageMeta___posts
   context___feedPageMeta___posts___title

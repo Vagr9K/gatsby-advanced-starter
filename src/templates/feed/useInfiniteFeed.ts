@@ -81,12 +81,24 @@ const useInfiniteFeed = (
 
     // When loading the next page, show placeholder posts
     if (feedQuery.isFetchingNextPage) {
-      list.push(...createPostPlaceholders(config.postsPerFeedPage, "next"));
+      const lastPage = feedQuery.data?.pages[feedQuery.data?.pages.length - 1];
+      list.push(
+        ...createPostPlaceholders(
+          lastPage?.nextCount || config.postsPerFeedPage,
+          "next"
+        )
+      );
     }
 
     // When loading the previous page, show placeholder posts
     if (feedQuery.isFetchingPreviousPage) {
-      list.unshift(...createPostPlaceholders(config.postsPerFeedPage, "prev"));
+      const firstPage = feedQuery.data?.pages[0];
+      list.unshift(
+        ...createPostPlaceholders(
+          firstPage?.prevCount || config.postsPerFeedPage,
+          "prev"
+        )
+      );
     }
 
     return list;

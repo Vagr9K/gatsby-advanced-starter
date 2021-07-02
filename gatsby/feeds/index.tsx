@@ -64,10 +64,18 @@ export const createFeed = async (
     const nextPage = pageIndex + 1 < pageCount ? pageIndex + 1 : undefined;
     const prevPage = pageIndex > 0 ? pageIndex - 1 : undefined;
 
+    // Calculate the amount of pages in the next batch
+    const nextCount = nextPage
+      ? Math.min(pageCount - skip + 1, limit)
+      : undefined;
+    const prevCount = prevPage ? limit : undefined;
+
     const pageMeta: FeedPageMeta = {
       current: pageIndex,
       next: nextPage,
+      nextCount,
       prev: prevPage,
+      prevCount,
       posts: feedPagePosts,
     };
 

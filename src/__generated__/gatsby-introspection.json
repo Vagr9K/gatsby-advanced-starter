@@ -3215,6 +3215,18 @@
             "deprecationReason": null
           },
           {
+            "name": "nextCount",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "prev",
             "description": null,
             "args": [],
@@ -20417,6 +20429,18 @@
             "deprecationReason": null
           },
           {
+            "name": "nextCount",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "prev",
             "description": null,
             "type": {
@@ -23055,6 +23079,12 @@
           },
           {
             "name": "context___feedPageMeta___next",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "context___feedPageMeta___nextCount",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
