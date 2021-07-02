@@ -16,7 +16,7 @@ export const IconCSS = css`
   color: var(--color-grey-700);
 
   &:hover {
-    color: var(--color-grey-900);
+    color: var(--color-primary);
   }
 `;
 
