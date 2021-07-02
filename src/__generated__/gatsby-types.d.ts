@@ -615,13 +615,13 @@ type ImageSharpResize = {
 type MdxFrontmatter = {
   readonly title: Scalars['String'];
   readonly cover: Maybe<Scalars['String']>;
+  readonly coverAlt: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
   readonly category: Maybe<Scalars['String']>;
-  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly coverAlt: Maybe<Scalars['String']>;
   readonly disqus_category_id: Maybe<Scalars['Int']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -1306,13 +1306,13 @@ type MdxFilterInput = {
 type MdxFrontmatterFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly cover: Maybe<StringQueryOperatorInput>;
+  readonly coverAlt: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
   readonly category: Maybe<StringQueryOperatorInput>;
-  readonly tags: Maybe<StringQueryOperatorInput>;
-  readonly coverAlt: Maybe<StringQueryOperatorInput>;
   readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
+  readonly tags: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1571,13 +1571,13 @@ type FileFieldsEnum =
   | 'childrenMdx.fileAbsolutePath'
   | 'childrenMdx.frontmatter.title'
   | 'childrenMdx.frontmatter.cover'
+  | 'childrenMdx.frontmatter.coverAlt'
   | 'childrenMdx.frontmatter.description'
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
   | 'childrenMdx.frontmatter.category'
-  | 'childrenMdx.frontmatter.tags'
-  | 'childrenMdx.frontmatter.coverAlt'
   | 'childrenMdx.frontmatter.disqus_category_id'
+  | 'childrenMdx.frontmatter.tags'
   | 'childrenMdx.frontmatter.slug'
   | 'childrenMdx.slug'
   | 'childrenMdx.body'
@@ -1635,13 +1635,13 @@ type FileFieldsEnum =
   | 'childMdx.fileAbsolutePath'
   | 'childMdx.frontmatter.title'
   | 'childMdx.frontmatter.cover'
+  | 'childMdx.frontmatter.coverAlt'
   | 'childMdx.frontmatter.description'
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
   | 'childMdx.frontmatter.category'
-  | 'childMdx.frontmatter.tags'
-  | 'childMdx.frontmatter.coverAlt'
   | 'childMdx.frontmatter.disqus_category_id'
+  | 'childMdx.frontmatter.tags'
   | 'childMdx.frontmatter.slug'
   | 'childMdx.slug'
   | 'childMdx.body'
@@ -3172,13 +3172,13 @@ type MdxFieldsEnum =
   | 'fileAbsolutePath'
   | 'frontmatter.title'
   | 'frontmatter.cover'
+  | 'frontmatter.coverAlt'
   | 'frontmatter.description'
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
   | 'frontmatter.category'
-  | 'frontmatter.tags'
-  | 'frontmatter.coverAlt'
   | 'frontmatter.disqus_category_id'
+  | 'frontmatter.tags'
   | 'frontmatter.slug'
   | 'slug'
   | 'body'

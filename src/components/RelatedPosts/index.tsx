@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { H2 } from "../../theme";
-import PostListing from "../PostListing";
+import FeedListing from "../FeedListing";
 import { PostList } from "../../types";
 
 const Wrapper = styled.div`
@@ -28,7 +28,7 @@ type RelatedPostsProps = {
 const RelatedPosts = ({ list }: RelatedPostsProps): JSX.Element => (
   <Wrapper>
     <Label />
-    <PostListing noHero listing={list} />
+    <FeedListing noHero listing={list} />
   </Wrapper>
 );
 

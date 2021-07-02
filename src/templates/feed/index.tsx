@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../../layouts";
-import PostListing from "../../components/PostListing";
+import FeedListing from "../../components/FeedListing";
 import ListingPageWrapper from "../../components/shared/ListingPageWrapper";
 import ConfigContext from "../../context/ConfigContext";
 
@@ -15,7 +15,7 @@ type FeedProps = {
 };
 
 const Feed = ({ pageContext }: FeedProps): JSX.Element => {
-  const { postList, feedElementRef } = useInfiniteFeed(pageContext);
+  const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
   const config = useContext(ConfigContext);
 
@@ -45,7 +45,7 @@ const Feed = ({ pageContext }: FeedProps): JSX.Element => {
     <Layout>
       {getTitleOverride()}
       <ListingPageWrapper ref={feedElementRef}>
-        <PostListing listing={postList} noHero={noHero} />
+        <FeedListing listing={feedListing} noHero={noHero} />
       </ListingPageWrapper>
     </Layout>
   );

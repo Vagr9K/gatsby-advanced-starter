@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { PostList } from "../../types";
 import ArticleCard from "../ArticleCard";
 import { constants } from "../../theme";
 import LayoutWidthContainer from "../shared/LayoutWidthContainer";
+import { FeedList } from "../../types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -28,22 +28,26 @@ const WidthLimitedGrid = styled(LayoutWidthContainer)`
 `;
 
 type PostListingProps = {
-  listing: PostList;
+  listing: FeedList;
   noHero?: boolean;
 };
 
-const PostListing = ({ listing, noHero }: PostListingProps): JSX.Element => (
+const FeedListing = ({ listing, noHero }: PostListingProps): JSX.Element => (
   <WidthLimitedGrid>
     <Wrapper>
-      {listing.map((post, idx) =>
-        idx === 0 && !noHero ? (
-          <ArticleCard key={post.slug} post={post} hero />
+      {listing.map((feedItem, idx) => {
+        // Check if we're rendering a placeholder
+        if ("isPlaceholder" in feedItem)
+          return <ArticleCard key={feedItem.key} />;
+
+        return idx === 0 && !noHero ? (
+          <ArticleCard key={feedItem.slug} post={feedItem} hero />
         ) : (
-          <ArticleCard key={post.slug} post={post} />
-        )
-      )}
+          <ArticleCard key={feedItem.slug} post={feedItem} />
+        );
+      })}
     </Wrapper>
   </WidthLimitedGrid>
 );
 
-export default PostListing;
+export default FeedListing;

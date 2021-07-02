@@ -8,8 +8,9 @@ import useScrollBasedFetching from "./useScrollBasedFetching";
 import {
   FeedPageMetaFromJson,
   PostFromJsonList,
-  PostList,
   jsonPostIntoPost,
+  FeedList,
+  PostPlaceholder,
 } from "../../types";
 import { PageContext } from "./types";
 import { SiteConfig } from "../../config";
@@ -31,9 +32,24 @@ const getFetchFunc =
     return response.json() as Promise<FeedPageMetaFromJson>;
   };
 
+// Generate placeholders for currently loading posts
+const createPostPlaceholders = (
+  count: number,
+  keyPrefix: string
+): PostPlaceholder[] =>
+  Array(count)
+    .fill(0)
+    .map((_, idx) => ({
+      isPlaceholder: true,
+      key: `${keyPrefix}-${idx}`,
+    }));
+
 const useInfiniteFeed = (
   pageContext: PageContext
-): { feedElementRef: React.RefObject<HTMLDivElement>; postList: PostList } => {
+): {
+  feedElementRef: React.RefObject<HTMLDivElement>;
+  feedListing: FeedList;
+} => {
   const config = useContext(ConfigContext);
 
   const baseUrl = getBaseUrl(config, pageContext);
@@ -56,19 +72,35 @@ const useInfiniteFeed = (
   const feedElementRef = useScrollBasedFetching(feedQuery);
 
   // Memoize the postList
-  const postList = useMemo(() => {
+  const feedListing = useMemo(() => {
     const jsonPostList: PostFromJsonList =
-      feedQuery?.data?.pages
-        .map((page) => page.posts)
-        .flat()
-        .filter(Boolean) || pageContext.feedPageMeta.posts;
+      feedQuery?.data?.pages.map((page) => page.posts).flat() ||
+      pageContext.feedPageMeta.posts;
 
-    return jsonPostList.map(jsonPostIntoPost);
-  }, [feedQuery.data, pageContext.feedPageMeta.posts]);
+    const list: FeedList = jsonPostList.map(jsonPostIntoPost);
+
+    // When loading the next page, show placeholder posts
+    if (feedQuery.isFetchingNextPage) {
+      list.push(...createPostPlaceholders(config.postsPerFeedPage, "next"));
+    }
+
+    // When loading the previous page, show placeholder posts
+    if (feedQuery.isFetchingPreviousPage) {
+      list.unshift(...createPostPlaceholders(config.postsPerFeedPage, "prev"));
+    }
+
+    return list;
+  }, [
+    feedQuery.data,
+    pageContext.feedPageMeta.posts,
+    feedQuery.isFetchingNextPage,
+    feedQuery.isFetchingPreviousPage,
+    config.postsPerFeedPage,
+  ]);
 
   return {
     feedElementRef,
-    postList,
+    feedListing,
   };
 };
 

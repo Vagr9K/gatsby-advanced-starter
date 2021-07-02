@@ -113,3 +113,10 @@ export type FeedPageMetaFromJson = {
   prev?: number;
   posts: PostFromJsonList;
 };
+
+export type PostPlaceholder = {
+  isPlaceholder: boolean;
+  key: string;
+};
+
+export type FeedList = Array<Post | PostPlaceholder>;
