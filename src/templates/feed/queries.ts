@@ -47,6 +47,7 @@ query TagFeedListing($tag: String) {
         frontmatter {
           title
           tags
+          category
           cover
           datePublished
           dateModified
@@ -76,6 +77,7 @@ query CategoryFeedListing($category: String) {
         frontmatter {
           title
           tags
+          category
           cover
           datePublished
           dateModified
