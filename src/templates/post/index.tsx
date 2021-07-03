@@ -2,14 +2,14 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 
-import Layout from "../layouts";
-import SEO from "../components/SEO";
+import Layout from "../../layouts";
+import SEO from "../../components/SEO";
 
-import Article from "../components/Article";
-import AuthorSegment from "../components/AuthorSegment";
-import RelatedPosts from "../components/RelatedPosts";
+import Article from "../../components/Article";
+import AuthorSegment from "../../components/AuthorSegment";
+import RelatedPosts from "../../components/RelatedPosts";
 
-import { queryIntoPost } from "../types";
+import { PostFromJsonList, queryIntoPost, jsonPostIntoPost } from "../../types";
 
 const Wrapper = styled.div`
   display: grid;
@@ -17,12 +17,18 @@ const Wrapper = styled.div`
   grid-gap: 60px;
 `;
 
+type PageContext = {
+  relatedPosts: PostFromJsonList;
+};
 type PostTemplateProps = {
   data: GatsbyTypes.BlogPostBySlugQuery;
+  pageContext: PageContext;
 };
 
-// TODO: Implement related posts
-const PostTemplate = ({ data }: PostTemplateProps): JSX.Element => {
+const PostTemplate = ({
+  data,
+  pageContext,
+}: PostTemplateProps): JSX.Element => {
   const post = queryIntoPost(data);
 
   return (
@@ -31,7 +37,7 @@ const PostTemplate = ({ data }: PostTemplateProps): JSX.Element => {
         <SEO post={post} />
         <Article post={post} />
         <AuthorSegment />
-        <RelatedPosts list={[post, post]} />
+        <RelatedPosts list={pageContext.relatedPosts.map(jsonPostIntoPost)} />
       </Wrapper>
     </Layout>
   );

@@ -7,8 +7,9 @@ import { GatsbyNode } from "gatsby";
 import { BasicFrontmatter } from "./types";
 import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
 import { initFeedMeta, createFeed } from "./feeds";
+import getRelatedPosts from "./posts/getRelatedPosts";
 
-const POST_PAGE_COMPONENT = path.resolve("src/templates/post.tsx");
+const POST_PAGE_COMPONENT = path.resolve("src/templates/post/index.tsx");
 
 // Generates a slug from provided frontmatter/file path
 const generateSlug = (
@@ -70,8 +71,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   // Get full post listing
   const fullListing = await getIndexListing(graphql);
-  // Create a main "index" feed
-  await createFeed(actions, fullListing, "index");
 
   // Iterate over posts
   fullListing.forEach((post, index) => {
@@ -95,6 +94,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
     const nextPost = fullListing[nextID];
     const prevPost = fullListing[prevID];
 
+    // Posts related to the current post
+    const relatedPosts = getRelatedPosts(post, fullListing);
+
     // Create a post page
     actions.createPage({
       path: post.slug,
@@ -105,9 +107,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
         nextslug: nextPost?.slug,
         prevtitle: prevPost?.title,
         prevslug: prevPost?.slug,
+        relatedPosts,
       },
     });
   });
+
+  // Create a main "index" feed
+  await createFeed(actions, fullListing, "index");
 
   //  Create tag listing feeds based on our set
   const tagTasks = Array.from(tagSet.keys()).map(async (tag) => {

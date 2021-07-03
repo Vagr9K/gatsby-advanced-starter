@@ -74,6 +74,8 @@ export type Post = {
 
   url: string;
   slug: string;
+
+  relatedPosts?: PostList;
 };
 
 export type PostList = Array<Post>;
@@ -96,6 +98,8 @@ export type PostFromJson = {
 
   url: string;
   slug: string;
+
+  relatedPosts?: PostFromJsonList;
 };
 
 export type PostFromJsonList = Array<PostFromJson>;

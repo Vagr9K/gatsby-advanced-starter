@@ -134,6 +134,7 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     description,
     excerpt,
     tags,
+    relatedPosts,
   } = meta;
 
   return {
@@ -154,5 +155,7 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
 
     url,
     slug,
+
+    relatedPosts: relatedPosts ? relatedPosts.map(jsonPostIntoPost) : undefined,
   };
 };

@@ -393,6 +393,12 @@ type SitePage implements Node {
 }
 
 type SitePageContext {
+  slug: String
+  nexttitle: String
+  nextslug: String
+  prevtitle: String
+  prevslug: String
+  relatedPosts: [SitePageContextRelatedPosts]
   limit: Int
   skip: Int
   pageCount: Int
@@ -400,11 +406,21 @@ type SitePageContext {
   feedType: String
   feedId: String
   feedPageMeta: SitePageContextFeedPageMeta
+}
+
+type SitePageContextRelatedPosts {
+  title: String
+  description: String
+  coverImageUrl: String
+  coverImageAlt: String
+  datePublished: Date
+  dateModified: Date
+  category: String
+  tags: [String]
+  excerpt: String
+  timeToRead: Int
+  url: String
   slug: String
-  nexttitle: String
-  nextslug: String
-  prevtitle: String
-  prevslug: String
 }
 
 type SitePageContextFeedPageMeta {
@@ -698,7 +714,7 @@ type ImageSharpResize {
 type MdxFrontmatter {
   title: String!
   cover: String
-  coverAlt: String
+  category: String
   description: String
   datePublished(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
@@ -726,9 +742,9 @@ type MdxFrontmatter {
     # Configures the locale Moment.js will use to format the date.
     locale: String
   ): Date
-  category: String
-  disqus_category_id: Int
   tags: [String]
+  coverAlt: String
+  disqus_category_id: Int
   slug: String
 }
 
@@ -1121,13 +1137,13 @@ input MdxFilterInput {
 input MdxFrontmatterFilterInput {
   title: StringQueryOperatorInput
   cover: StringQueryOperatorInput
-  coverAlt: StringQueryOperatorInput
+  category: StringQueryOperatorInput
   description: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
-  category: StringQueryOperatorInput
-  disqus_category_id: IntQueryOperatorInput
   tags: StringQueryOperatorInput
+  coverAlt: StringQueryOperatorInput
+  disqus_category_id: IntQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1359,13 +1375,13 @@ enum FileFieldsEnum {
   childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
   childrenMdx___frontmatter___cover
-  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___category
   childrenMdx___frontmatter___description
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
-  childrenMdx___frontmatter___category
-  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___tags
+  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___slug
   childrenMdx___slug
   childrenMdx___body
@@ -1423,13 +1439,13 @@ enum FileFieldsEnum {
   childMdx___fileAbsolutePath
   childMdx___frontmatter___title
   childMdx___frontmatter___cover
-  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___category
   childMdx___frontmatter___description
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
-  childMdx___frontmatter___category
-  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___tags
+  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___slug
   childMdx___slug
   childMdx___body
@@ -2136,6 +2152,12 @@ input SiteFunctionSortInput {
 }
 
 input SitePageContextFilterInput {
+  slug: StringQueryOperatorInput
+  nexttitle: StringQueryOperatorInput
+  nextslug: StringQueryOperatorInput
+  prevtitle: StringQueryOperatorInput
+  prevslug: StringQueryOperatorInput
+  relatedPosts: SitePageContextRelatedPostsFilterListInput
   limit: IntQueryOperatorInput
   skip: IntQueryOperatorInput
   pageCount: IntQueryOperatorInput
@@ -2143,11 +2165,25 @@ input SitePageContextFilterInput {
   feedType: StringQueryOperatorInput
   feedId: StringQueryOperatorInput
   feedPageMeta: SitePageContextFeedPageMetaFilterInput
+}
+
+input SitePageContextRelatedPostsFilterListInput {
+  elemMatch: SitePageContextRelatedPostsFilterInput
+}
+
+input SitePageContextRelatedPostsFilterInput {
+  title: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  coverImageUrl: StringQueryOperatorInput
+  coverImageAlt: StringQueryOperatorInput
+  datePublished: DateQueryOperatorInput
+  dateModified: DateQueryOperatorInput
+  category: StringQueryOperatorInput
+  tags: StringQueryOperatorInput
+  excerpt: StringQueryOperatorInput
+  timeToRead: IntQueryOperatorInput
+  url: StringQueryOperatorInput
   slug: StringQueryOperatorInput
-  nexttitle: StringQueryOperatorInput
-  nextslug: StringQueryOperatorInput
-  prevtitle: StringQueryOperatorInput
-  prevslug: StringQueryOperatorInput
 }
 
 input SitePageContextFeedPageMetaFilterInput {
@@ -2450,6 +2486,24 @@ enum SitePageFieldsEnum {
   internal___owner
   internal___type
   isCreatedByStatefulCreatePages
+  context___slug
+  context___nexttitle
+  context___nextslug
+  context___prevtitle
+  context___prevslug
+  context___relatedPosts
+  context___relatedPosts___title
+  context___relatedPosts___description
+  context___relatedPosts___coverImageUrl
+  context___relatedPosts___coverImageAlt
+  context___relatedPosts___datePublished
+  context___relatedPosts___dateModified
+  context___relatedPosts___category
+  context___relatedPosts___tags
+  context___relatedPosts___excerpt
+  context___relatedPosts___timeToRead
+  context___relatedPosts___url
+  context___relatedPosts___slug
   context___limit
   context___skip
   context___pageCount
@@ -2473,11 +2527,6 @@ enum SitePageFieldsEnum {
   context___feedPageMeta___posts___timeToRead
   context___feedPageMeta___posts___url
   context___feedPageMeta___posts___slug
-  context___slug
-  context___nexttitle
-  context___nextslug
-  context___prevtitle
-  context___prevslug
   pluginCreator___id
   pluginCreator___parent___id
   pluginCreator___parent___parent___id
@@ -2807,13 +2856,13 @@ enum MdxFieldsEnum {
   fileAbsolutePath
   frontmatter___title
   frontmatter___cover
-  frontmatter___coverAlt
+  frontmatter___category
   frontmatter___description
   frontmatter___datePublished
   frontmatter___dateModified
-  frontmatter___category
-  frontmatter___disqus_category_id
   frontmatter___tags
+  frontmatter___coverAlt
+  frontmatter___disqus_category_id
   frontmatter___slug
   slug
   body
