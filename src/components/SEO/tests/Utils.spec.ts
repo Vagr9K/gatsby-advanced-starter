@@ -81,17 +81,6 @@ describe("seo utility generatePostData", () => {
     expect(postData.description).toBe(post.excerpt);
   });
 
-  it("falls back to post title when no cover alt is available", () => {
-    expect.assertions(1);
-
-    const post = cloneDeep(sampleData.post);
-    post.coverImageAlt = undefined;
-
-    const postData = generatePostData(post);
-
-    expect(postData.coverImageAlt).toBe(post.title);
-  });
-
   it("falls back to None when no category is available", () => {
     expect.assertions(1);
 

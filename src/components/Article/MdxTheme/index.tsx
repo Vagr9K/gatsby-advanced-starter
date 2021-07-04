@@ -55,6 +55,7 @@ type MDXThemeProps = {
 
 const MDXTheme = ({ children, post }: MDXThemeProps): JSX.Element => (
   <>
+    <MiscComponents.GlobalGatsbyImageStyle />
     <CodeComponents.GlobalCodeStyle />
     <MDXProvider components={getComponentMapping(post)}>{children}</MDXProvider>
   </>

@@ -16,7 +16,11 @@ query IndexFeedListing($skip: Int, $limit: Int) {
         frontmatter {
           title
           description
-          cover
+          cover {
+            childImageSharp {
+              gatsbyImageData(height: 368)
+            }
+          }
           coverAlt
           tags
           category
@@ -48,7 +52,12 @@ query TagFeedListing($tag: String) {
           title
           tags
           category
-          cover
+          cover {
+            childImageSharp {
+              gatsbyImageData(height: 368)
+            }
+          }
+          coverAlt
           datePublished
           dateModified
           description
@@ -78,7 +87,12 @@ query CategoryFeedListing($category: String) {
           title
           tags
           category
-          cover
+          cover {
+            childImageSharp {
+              gatsbyImageData(height: 368)
+            }
+          }
+          coverAlt
           datePublished
           dateModified
           description

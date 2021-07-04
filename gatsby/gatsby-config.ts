@@ -89,6 +89,20 @@ const gatsbyConfig = {
       },
     },
     {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          formats: ["auto", "webp", "avif"],
+          placeholder: "blurred",
+          backgroundColor: "transparent",
+        },
+        failOnError: true,
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
+    "gatsby-remark-images",
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
@@ -98,6 +112,10 @@ const gatsbyConfig = {
           },
           {
             resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 768,
+              showCaptions: ["title", "alt"],
+            },
           },
           {
             resolve: "remark-codesandbox/gatsby",
@@ -139,8 +157,6 @@ const gatsbyConfig = {
         color: config.themeColor,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -275,7 +291,6 @@ const gatsbyConfig = {
                     }
                     frontmatter {
                       title
-                      cover
                       datePublished
                       category
                       tags

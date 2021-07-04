@@ -7,8 +7,11 @@ const postQuery: GatsbyTypes.BlogPostBySlugQuery = {
     frontmatter: {
       title: "Big Test",
       description: "Decsription",
-      cover: "5.jpg",
-      coverAlt: undefined,
+      cover: {
+        publicURL: "/static/23f3810b769821db9ccc2f180c4a95bb/cover_5.jpeg",
+        childImageSharp: undefined,
+      },
+      coverAlt: "Cover alt",
       datePublished: "2018-03-01",
       dateModified: "2018-03-01",
       category: "moar",

@@ -1028,8 +1028,9 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
   "category": "moar",
-  "coverImageAlt": undefined,
-  "coverImageUrl": "5.jpg",
+  "coverImageAlt": "Cover alt",
+  "coverImageUrl": undefined,
+  "coverImg": undefined,
   "dateModified": 2018-03-01T00:00:00.000Z,
   "datePublished": 2018-03-01T00:00:00.000Z,
   "description": "Decsription",
@@ -1472,7 +1473,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"Big Test\\",
-  \\"cover\\": \\"5.jpg\\",
+  \\"cover\\": \\"images/cover_8.jpeg\\",
+  \\"coverAlt\\": \\"Big test\\",
   \\"description\\": \\"Decsription\\",
   \\"category\\": \\"moar\\",
   \\"datePublished\\": \\"2018-03-01\\",
@@ -1491,53 +1493,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"mdx-test\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#mdx-test\\",
-    \\"aria-label\\": \\"mdx test permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"MDX Test\\"), mdx(\\"p\\", null, \\"Here's a color picker!\\"), mdx(SketchPicker, {
-    mdxType: \\"SketchPicker\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#note-this-post-is-based-on-markdown-cheatsheet-and-is-meant-to-test-styling-of-markdown-generated-documents\\",
-    \\"aria-label\\": \\"note this post is based on markdown cheatsheet and is meant to test styling of markdown generated documents permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"NOTE: This \\\\\\"post\\\\\\" is based on \\", mdx(\\"a\\", {
+  }), mdx(\\"h2\\", null, \\"NOTE: This \\\\\\"post\\\\\\" is based on \\", mdx(\\"a\\", {
     parentName: \\"h2\\",
     \\"href\\": \\"https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\\",
     \\"target\\": \\"_blank\\",
@@ -1569,29 +1525,7 @@ return function MDXContent(_ref) {
     \\"href\\": \\"http://markdown-here.com\\",
     \\"target\\": \\"_blank\\",
     \\"rel\\": \\"nofollow noopener noreferrer\\"
-  }, \\"http://markdown-here.com\\"), \\")\\"), mdx(\\"h5\\", {
-    \\"id\\": \\"table-of-contents\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h5\\",
-    \\"href\\": \\"#table-of-contents\\",
-    \\"aria-label\\": \\"table of contents permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Table of Contents\\"), mdx(\\"p\\", null, mdx(\\"a\\", {
+  }, \\"http://markdown-here.com\\"), \\")\\"), mdx(\\"h2\\", null, \\"Table of Contents\\"), mdx(\\"p\\", null, mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"#headers\\"
   }, \\"Headers\\"), \\"\\\\n\\", mdx(\\"a\\", {
@@ -1627,31 +1561,7 @@ return function MDXContent(_ref) {
   }, \\"Line Breaks\\"), \\"\\\\n\\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"#videos\\"
-  }, \\"YouTube Videos\\")), mdx(\\"a\\", {
-    name: \\"headers\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"headers\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#headers\\",
-    \\"aria-label\\": \\"headers permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Headers\\"), mdx(\\"div\\", {
+  }, \\"YouTube Videos\\")), mdx(\\"h2\\", null, \\"Headers\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -1660,207 +1570,7 @@ return function MDXContent(_ref) {
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
     \\"className\\": \\"language-no-highlight\\"
-  }, \\"# H1\\\\n## H2\\\\n### H3\\\\n#### H4\\\\n##### H5\\\\n###### H6\\\\n\\\\nAlternatively, for H1 and H2, an underline-ish style:\\\\n\\\\nAlt-H1\\\\n======\\\\n\\\\nAlt-H2\\\\n------\\"))), mdx(\\"h1\\", {
-    \\"id\\": \\"h1\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#h1\\",
-    \\"aria-label\\": \\"h1 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H1\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"h2\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#h2\\",
-    \\"aria-label\\": \\"h2 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H2\\"), mdx(\\"h3\\", {
-    \\"id\\": \\"h3\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h3\\",
-    \\"href\\": \\"#h3\\",
-    \\"aria-label\\": \\"h3 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H3\\"), mdx(\\"h4\\", {
-    \\"id\\": \\"h4\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h4\\",
-    \\"href\\": \\"#h4\\",
-    \\"aria-label\\": \\"h4 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H4\\"), mdx(\\"h5\\", {
-    \\"id\\": \\"h5\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h5\\",
-    \\"href\\": \\"#h5\\",
-    \\"aria-label\\": \\"h5 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H5\\"), mdx(\\"h6\\", {
-    \\"id\\": \\"h6\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h6\\",
-    \\"href\\": \\"#h6\\",
-    \\"aria-label\\": \\"h6 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"H6\\"), mdx(\\"p\\", null, \\"Alternatively, for H1 and H2, an underline-ish style:\\"), mdx(\\"h1\\", {
-    \\"id\\": \\"alt-h1\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#alt-h1\\",
-    \\"aria-label\\": \\"alt h1 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Alt-H1\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"alt-h2\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#alt-h2\\",
-    \\"aria-label\\": \\"alt h2 permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Alt-H2\\"), mdx(\\"a\\", {
-    name: \\"emphasis\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"emphasis\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#emphasis\\",
-    \\"aria-label\\": \\"emphasis permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Emphasis\\"), mdx(\\"div\\", {
+  }, \\"# H1\\\\n## H2\\\\n### H3\\\\n#### H4\\\\n##### H5\\\\n###### H6\\\\n\\\\nAlternatively, for H1 and H2, an underline-ish style:\\\\n\\\\nAlt-H1\\\\n======\\\\n\\\\nAlt-H2\\\\n------\\"))), mdx(\\"h1\\", null, \\"H1\\"), mdx(\\"h2\\", null, \\"H2\\"), mdx(\\"h3\\", null, \\"H3\\"), mdx(\\"h4\\", null, \\"H4\\"), mdx(\\"h5\\", null, \\"H5\\"), mdx(\\"h6\\", null, \\"H6\\"), mdx(\\"p\\", null, \\"Alternatively, for H1 and H2, an underline-ish style:\\"), mdx(\\"h1\\", null, \\"Alt-H1\\"), mdx(\\"h2\\", null, \\"Alt-H2\\"), mdx(\\"h2\\", null, \\"Emphasis\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -1883,31 +1593,7 @@ return function MDXContent(_ref) {
     parentName: \\"strong\\"
   }, \\"underscores\\")), \\".\\"), mdx(\\"p\\", null, \\"Strikethrough uses two tildes. \\", mdx(\\"del\\", {
     parentName: \\"p\\"
-  }, \\"Scratch this.\\")), mdx(\\"a\\", {
-    name: \\"lists\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"lists\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#lists\\",
-    \\"aria-label\\": \\"lists permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Lists\\"), mdx(\\"div\\", {
+  }, \\"Scratch this.\\")), mdx(\\"h2\\", null, \\"Lists\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -1948,31 +1634,7 @@ return function MDXContent(_ref) {
     parentName: \\"ul\\"
   }, \\"Or minuses\\")), mdx(\\"ul\\", null, mdx(\\"li\\", {
     parentName: \\"ul\\"
-  }, \\"Or pluses\\")), mdx(\\"a\\", {
-    name: \\"links\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"links\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#links\\",
-    \\"aria-label\\": \\"links permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Links\\"), mdx(\\"p\\", null, \\"There are two ways to create links.\\"), mdx(\\"div\\", {
+  }, \\"Or pluses\\")), mdx(\\"h2\\", null, \\"Links\\"), mdx(\\"p\\", null, \\"There are two ways to create links.\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -2011,31 +1673,7 @@ return function MDXContent(_ref) {
     \\"href\\": \\"http://www.example.com\\",
     \\"target\\": \\"_blank\\",
     \\"rel\\": \\"nofollow noopener noreferrer\\"
-  }, \\"http://www.example.com\\"), \\" and sometimes\\\\nexample.com (but not on Github, for example).\\"), mdx(\\"p\\", null, \\"Some text to show that the reference links can follow later.\\"), mdx(\\"a\\", {
-    name: \\"images\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"images\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#images\\",
-    \\"aria-label\\": \\"images permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Images\\"), mdx(\\"div\\", {
+  }, \\"http://www.example.com\\"), \\" and sometimes\\\\nexample.com (but not on Github, for example).\\"), mdx(\\"p\\", null, \\"Some text to show that the reference links can follow later.\\"), mdx(\\"h2\\", null, \\"Images\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -2054,31 +1692,66 @@ return function MDXContent(_ref) {
     \\"src\\": \\"https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png\\",
     \\"alt\\": \\"alt text\\",
     \\"title\\": \\"Logo Title Text 2\\"
-  })), mdx(\\"a\\", {
-    name: \\"code\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"code-and-syntax-highlighting\\",
+  })), mdx(\\"p\\", null, \\"Local picture:\\"), mdx(\\"figure\\", {
+    \\"className\\": \\"gatsby-resp-image-figure\\",
+    \\"style\\": {}
+  }, \\"\\\\n    \\", mdx(\\"span\\", {
+    parentName: \\"figure\\",
+    \\"className\\": \\"gatsby-resp-image-wrapper\\",
     \\"style\\": {
-      \\"position\\": \\"relative\\"
+      \\"position\\": \\"relative\\",
+      \\"display\\": \\"block\\",
+      \\"marginLeft\\": \\"auto\\",
+      \\"marginRight\\": \\"auto\\",
+      \\"maxWidth\\": \\"768px\\"
     }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#code-and-syntax-highlighting\\",
-    \\"aria-label\\": \\"code and syntax highlighting permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
+  }, \\"\\\\n      \\", mdx(\\"a\\", {
+    parentName: \\"span\\",
+    \\"className\\": \\"gatsby-resp-image-link\\",
+    \\"href\\": \\"/static/0b4aefd8546d18764fc705dcc3653561/08688/local_test.jpg\\",
+    \\"style\\": {
+      \\"display\\": \\"block\\"
+    },
+    \\"target\\": \\"_blank\\",
+    \\"rel\\": \\"noopener\\"
+  }, \\"\\\\n    \\", mdx(\\"span\\", {
     parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Code and Syntax Highlighting\\"), mdx(\\"p\\", null, \\"Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and \\", mdx(\\"em\\", {
+    \\"className\\": \\"gatsby-resp-image-background-image\\",
+    \\"style\\": {
+      \\"paddingBottom\\": \\"40.10416666666667%\\",
+      \\"position\\": \\"relative\\",
+      \\"bottom\\": \\"0\\",
+      \\"left\\": \\"0\\",
+      \\"backgroundImage\\": \\"url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAABtmCtYIf/xAAZEAEAAgMAAAAAAAAAAAAAAAABAgMAETH/2gAIAQEAAQUCuZ6JWOHP/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAEDAQE/ARyf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BSf/EABkQAAIDAQAAAAAAAAAAAAAAAAEiAAIQMf/aAAgBAQAGPwJeRKEZ/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFBgf/aAAgBAQABPyGTDfUWRh5DGcXZ/9oADAMBAAIAAwAAABCH/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPxCg/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EKMf/8QAGhAAAwEBAQEAAAAAAAAAAAAAAREhAGExUf/aAAgBAQABPxAcphBMU4s1UQmg+1kzcJVfd//Z')\\",
+      \\"backgroundSize\\": \\"cover\\",
+      \\"display\\": \\"block\\"
+    }
+  }), \\"\\\\n  \\", mdx(\\"img\\", {
+    parentName: \\"a\\",
+    \\"className\\": \\"gatsby-resp-image-image\\",
+    \\"alt\\": \\"local picture\\",
+    \\"title\\": \\"local picture\\",
+    \\"src\\": \\"/static/0b4aefd8546d18764fc705dcc3653561/212bf/local_test.jpg\\",
+    \\"srcSet\\": [\\"/static/0b4aefd8546d18764fc705dcc3653561/7809d/local_test.jpg 192w\\", \\"/static/0b4aefd8546d18764fc705dcc3653561/4ecad/local_test.jpg 384w\\", \\"/static/0b4aefd8546d18764fc705dcc3653561/212bf/local_test.jpg 768w\\", \\"/static/0b4aefd8546d18764fc705dcc3653561/5ef17/local_test.jpg 1152w\\", \\"/static/0b4aefd8546d18764fc705dcc3653561/ac99c/local_test.jpg 1536w\\", \\"/static/0b4aefd8546d18764fc705dcc3653561/08688/local_test.jpg 2500w\\"],
+    \\"sizes\\": \\"(max-width: 768px) 100vw, 768px\\",
+    \\"style\\": {
+      \\"width\\": \\"100%\\",
+      \\"height\\": \\"100%\\",
+      \\"margin\\": \\"0\\",
+      \\"verticalAlign\\": \\"middle\\",
+      \\"position\\": \\"absolute\\",
+      \\"top\\": \\"0\\",
+      \\"left\\": \\"0\\"
+    },
+    \\"loading\\": \\"lazy\\",
+    \\"decoding\\": \\"async\\"
+  }), \\"\\\\n  \\"), \\"\\\\n    \\"), \\"\\\\n    \\", mdx(\\"figcaption\\", {
+    parentName: \\"figure\\",
+    \\"className\\": \\"gatsby-resp-image-figcaption\\"
+  }, \\"local picture\\"), \\"\\\\n  \\"), mdx(\\"p\\", null, \\"Big picture:\\"), mdx(\\"img\\", {
+    \\"src\\": \\"https://source.unsplash.com/1600x900/?nature,water\\",
+    \\"alt\\": \\"big picture that applies to water or nature\\"
+  }), mdx(\\"h2\\", null, \\"Code and Syntax Highlighting\\"), mdx(\\"p\\", null, \\"Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"Markdown Here\\"), \\" -- support syntax highlighting. \\", mdx(\\"em\\", {
     parentName: \\"p\\"
@@ -2102,9 +1775,7 @@ return function MDXContent(_ref) {
   }, \\"code\\"), \\" has \\", mdx(\\"code\\", {
     parentName: \\"p\\",
     \\"className\\": \\"language-text\\"
-  }, \\"back-ticks around\\"), \\" it.\\"), mdx(\\"p\\", null, \\"Blocks of code are either fenced by lines with three back-ticks \\", mdx(\\"code\\", null, \\"\`\`\`\\"), \\", or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.\\"), mdx(\\"pre\\", {
-    lang: \\"no-highlight\\"
-  }, mdx(\\"code\\", null, \\"\`\`\`javascript var s = \\\\\\"JavaScript syntax highlighting\\\\\\"; alert(s); \`\`\` \`\`\`python s = \\\\\\"Python syntax highlighting\\\\\\" print s \`\`\` \`\`\` No language indicated, so no syntax highlighting. But let's throw in a <b>tag</b>. \`\`\`\\")), mdx(\\"div\\", {
+  }, \\"back-ticks around\\"), \\" it.\\"), mdx(\\"p\\", null, \\"Blocks of code are either fenced by lines with three back-ticks \\", mdx(\\"code\\", null, \\"\`\`\`\\"), \\", or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"javascript\\"
   }, mdx(\\"pre\\", {
@@ -2157,43 +1828,19 @@ return function MDXContent(_ref) {
     \\"className\\": \\"token keyword\\"
   }, \\"print\\"), \\" s\\"))), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
-    \\"data-language\\": \\"text\\"
+    \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
     parentName: \\"div\\",
-    \\"className\\": \\"language-text\\"
+    \\"className\\": \\"language-no-highlight\\"
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
-    \\"className\\": \\"language-text\\"
+    \\"className\\": \\"language-no-highlight\\"
   }, \\"No language indicated, so no syntax highlighting in Markdown Here (varies on Github).\\\\nBut let's throw in a <b>tag</b>.\\"))), mdx(\\"p\\", null, \\"Again, to see what languages are available for highlighting, and how to write those language names, see the \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://softwaremaniacs.org/media/soft/highlight/test.html\\",
     \\"target\\": \\"_blank\\",
     \\"rel\\": \\"nofollow noopener noreferrer\\"
-  }, \\"highlight.js demo page\\"), \\".\\"), mdx(\\"a\\", {
-    name: \\"tables\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"tables\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#tables\\",
-    \\"aria-label\\": \\"tables permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Tables\\"), mdx(\\"p\\", null, \\"Tables aren't part of the core Markdown spec, but they are part of GFM and \\", mdx(\\"em\\", {
+  }, \\"highlight.js demo page\\"), \\".\\"), mdx(\\"h2\\", null, \\"Tables\\"), mdx(\\"p\\", null, \\"Tables aren't part of the core Markdown spec, but they are part of GFM and \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"Markdown Here\\"), \\" supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
@@ -2204,7 +1851,7 @@ return function MDXContent(_ref) {
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
     \\"className\\": \\"language-no-highlight\\"
-  }, \\"Colons can be used to align columns.\\\\n\\\\n| Tables        | Are           | Cool  |\\\\n| ------------- | :-----------: | ----: |\\\\n| col 3 is      | right-aligned | $1600 |\\\\n| col 2 is      | centered      | $12   |\\\\n| zebra stripes | are neat      | $1    |\\\\n\\\\nThe outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.\\\\n\\\\n| | Markdown | Less           | Pretty     |     |\\\\n| | ------------- | --------------- | ---------- |------- |\\\\n| | *Still*   | \`renders\` | **nicely** | |\\\\n| | 1               | 2                 | 3          |          |\\"))), mdx(\\"p\\", null, \\"Colons can be used to align columns.\\"), mdx(\\"table\\", null, mdx(\\"thead\\", {
+  }, \\"Colons can be used to align columns.\\\\n\\\\n| Tables        |      Are      |  Cool |\\\\n| ------------- | :-----------: | ----: |\\\\n| col 3 is      | right-aligned | $1600 |\\\\n| col 2 is      |   centered    |   $12 |\\\\n| zebra stripes |   are neat    |    $1 |\\\\n\\\\nThe outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.\\\\n\\\\n| | Markdown | Less           | Pretty     |     |\\\\n| | ------------- | --------------- | ---------- |------- |\\\\n| | *Still*   | \`renders\` | **nicely** | |\\\\n| | 1               | 2                 | 3          |          |\\"))), mdx(\\"p\\", null, \\"Colons can be used to align columns.\\"), mdx(\\"table\\", null, mdx(\\"thead\\", {
     parentName: \\"table\\"
   }, mdx(\\"tr\\", {
     parentName: \\"thead\\"
@@ -2265,6 +1912,12 @@ return function MDXContent(_ref) {
   }, \\"Less\\"), mdx(\\"th\\", {
     parentName: \\"tr\\",
     \\"align\\": null
+  }, \\"Pretty\\"), mdx(\\"th\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
+  }, \\"Pretty\\"), mdx(\\"th\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
   }, \\"Pretty\\"))), mdx(\\"tbody\\", {
     parentName: \\"table\\"
   }, mdx(\\"tr\\", {
@@ -2285,6 +1938,16 @@ return function MDXContent(_ref) {
     \\"align\\": null
   }, mdx(\\"strong\\", {
     parentName: \\"td\\"
+  }, \\"nicely\\")), mdx(\\"td\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
+  }, mdx(\\"strong\\", {
+    parentName: \\"td\\"
+  }, \\"nicely\\")), mdx(\\"td\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
+  }, mdx(\\"strong\\", {
+    parentName: \\"td\\"
   }, \\"nicely\\"))), mdx(\\"tr\\", {
     parentName: \\"tbody\\"
   }, mdx(\\"td\\", {
@@ -2296,31 +1959,13 @@ return function MDXContent(_ref) {
   }, \\"2\\"), mdx(\\"td\\", {
     parentName: \\"tr\\",
     \\"align\\": null
-  }, \\"3\\")))), mdx(\\"a\\", {
-    name: \\"blockquotes\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"blockquotes\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#blockquotes\\",
-    \\"aria-label\\": \\"blockquotes permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Blockquotes\\"), mdx(\\"div\\", {
+  }, \\"3\\"), mdx(\\"td\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
+  }, \\"3\\"), mdx(\\"td\\", {
+    parentName: \\"tr\\",
+    \\"align\\": null
+  }, \\"3\\")))), mdx(\\"h2\\", null, \\"Blockquotes\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -2337,31 +1982,7 @@ return function MDXContent(_ref) {
     parentName: \\"p\\"
   }, \\"put\\"), \\" \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
-  }, \\"Markdown\\"), \\" into a blockquote.\\")), mdx(\\"a\\", {
-    name: \\"html\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"inline-html\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#inline-html\\",
-    \\"aria-label\\": \\"inline html permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Inline HTML\\"), mdx(\\"p\\", null, \\"You can also use raw HTML in your Markdown, and it'll mostly work pretty well.\\"), mdx(\\"div\\", {
+  }, \\"Markdown\\"), \\" into a blockquote.\\")), mdx(\\"h2\\", null, \\"Inline HTML\\"), mdx(\\"p\\", null, \\"You can also use raw HTML in your Markdown, and it'll mostly work pretty well.\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -2370,103 +1991,31 @@ return function MDXContent(_ref) {
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
     \\"className\\": \\"language-no-highlight\\"
-  }, \\"<dl>\\\\n  <dt>Definition list</dt>\\\\n  <dd>Is something people use sometimes.</dd>\\\\n\\\\n  <dt>Markdown in HTML</dt>\\\\n  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>\\\\n</dl>\\"))), mdx(\\"dl\\", null, mdx(\\"dt\\", null, \\"Definition list\\"), mdx(\\"dd\\", null, \\"Is something people use sometimes.\\"), mdx(\\"dt\\", null, \\"Markdown in HTML\\"), mdx(\\"dd\\", null, \\"Does *not* work **very** well. Use HTML \\", mdx(\\"em\\", null, \\"tags\\"), \\".\\")), mdx(\\"a\\", {
-    name: \\"hr\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"horizontal-rule\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#horizontal-rule\\",
-    \\"aria-label\\": \\"horizontal rule permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Horizontal Rule\\"), mdx(\\"div\\", {
+  }, \\"<dl>\\\\n  <dt>Definition list</dt>\\\\n  <dd>Is something people use sometimes.</dd>\\\\n\\\\n  <dt>Markdown in HTML</dt>\\\\n  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>\\\\n</dl>\\"))), mdx(\\"dl\\", null, mdx(\\"dt\\", null, \\"Definition list\\"), mdx(\\"dd\\", null, \\"Is something people use sometimes.\\"), mdx(\\"dt\\", null, \\"Markdown in HTML\\"), mdx(\\"dd\\", null, \\"Does *not* work **very** well. Use HTML \\", mdx(\\"em\\", null, \\"tags\\"), \\".\\")), mdx(\\"h2\\", null, \\"Horizontal Rule\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
-    \\"data-language\\": \\"text\\"
+    \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
     parentName: \\"div\\",
-    \\"className\\": \\"language-text\\"
+    \\"className\\": \\"language-no-highlight\\"
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
-    \\"className\\": \\"language-text\\"
-  }, \\"Three or more...\\\\n\\\\n---\\\\n\\\\nHyphens\\\\n\\\\n***\\\\n\\\\nAsterisks\\\\n\\\\n___\\\\n\\\\nUnderscores\\"))), mdx(\\"p\\", null, \\"Three or more...\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Hyphens\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Asterisks\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Underscores\\"), mdx(\\"a\\", {
-    name: \\"lines\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"line-breaks\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#line-breaks\\",
-    \\"aria-label\\": \\"line breaks permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Line Breaks\\"), mdx(\\"p\\", null, \\"My basic recommendation for learning how line breaks work is to experiment and discover -- hit \\", \\"<\\", \\"Enter\\", \\">\\", \\" once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. \\\\\\"Markdown Toggle\\\\\\" is your friend.\\"), mdx(\\"p\\", null, \\"Here are some things to try out:\\"), mdx(\\"div\\", {
+    \\"className\\": \\"language-no-highlight\\"
+  }, \\"Three or more...\\\\n\\\\n---\\\\n\\\\nHyphens\\\\n\\\\n***\\\\n\\\\nAsterisks\\\\n\\\\n___\\\\n\\\\nUnderscores\\"))), mdx(\\"p\\", null, \\"Three or more...\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Hyphens\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Asterisks\\"), mdx(\\"hr\\", null), mdx(\\"p\\", null, \\"Underscores\\"), mdx(\\"h2\\", null, \\"Line Breaks\\"), mdx(\\"p\\", null, \\"My basic recommendation for learning how line breaks work is to experiment and discover -- hit \\", \\"<\\", \\"Enter\\", \\">\\", \\" once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. \\\\\\"Markdown Toggle\\\\\\" is your friend.\\"), mdx(\\"p\\", null, \\"Here are some things to try out:\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
-    \\"data-language\\": \\"text\\"
+    \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
     parentName: \\"div\\",
-    \\"className\\": \\"language-text\\"
+    \\"className\\": \\"language-no-highlight\\"
   }, mdx(\\"code\\", {
     parentName: \\"pre\\",
-    \\"className\\": \\"language-text\\"
+    \\"className\\": \\"language-no-highlight\\"
   }, \\"Here's a line for us to start with.\\\\n\\\\nThis line is separated from the one above by two newlines, so it will be a *separate paragraph*.\\\\n\\\\nThis line is also a separate paragraph, but...\\\\nThis line is only separated by a single newline, so it's a separate line in the *same paragraph*.\\"))), mdx(\\"p\\", null, \\"Here's a line for us to start with.\\"), mdx(\\"p\\", null, \\"This line is separated from the one above by two newlines, so it will be a \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"separate paragraph\\"), \\".\\"), mdx(\\"p\\", null, \\"This line is also begins a separate paragraph, but...\\\\nThis line is only separated by a single newline, so it's a separate line in the \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"same paragraph\\"), \\".\\"), mdx(\\"p\\", null, \\"(Technical note: \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"Markdown Here\\"), \\" uses GFM line breaks, so there's no need to use MD's two-space line breaks.)\\"), mdx(\\"a\\", {
-    name: \\"videos\\"
-  }), mdx(\\"h2\\", {
-    \\"id\\": \\"youtube-videos\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#youtube-videos\\",
-    \\"aria-label\\": \\"youtube videos permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"YouTube Videos\\"), mdx(\\"p\\", null, \\"They can't be added directly but you can add an image with a link to the video like this:\\"), mdx(\\"div\\", {
+  }, \\"Markdown Here\\"), \\" uses GFM line breaks, so there's no need to use MD's two-space line breaks.)\\"), mdx(\\"h2\\", null, \\"YouTube Videos\\"), mdx(\\"p\\", null, \\"They can't be added directly but you can add an image with a link to the video like this:\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"no-highlight\\"
   }, mdx(\\"pre\\", {
@@ -2489,15 +2038,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "moar",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "5.jpg",
+    "coverImageAlt": "Big test",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2018-03-01T00:00:00.000Z,
     "datePublished": 2018-03-01T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
+    "excerpt": "NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…",
     "internalContent": "---
 title: \\"Big Test\\"
-cover: \\"5.jpg\\"
+cover: images/cover_8.jpeg
+coverAlt: \\"Big test\\"
 description: \\"Decsription\\"
 category: \\"moar\\"
 datePublished: \\"2018-03-01\\"
@@ -2507,15 +2058,7 @@ tags:
   - test
   - huge
 ---
-
-# MDX Test
-
-import { SketchPicker } from \\"react-color\\";
-
-Here's a color picker!
-
-<SketchPicker />
-
+<!-- markdownlint-disable-->
 ## NOTE: This \\"post\\" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
@@ -2526,7 +2069,7 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 
 (If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
 
-##### Table of Contents
+## Table of Contents
 
 [Headers](#headers)
 [Emphasis](#emphasis)
@@ -2540,8 +2083,6 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 [Horizontal Rule](#hr)
 [Line Breaks](#lines)
 [YouTube Videos](#videos)
-
-<a name=\\"headers\\" />
 
 ## Headers
 
@@ -2580,8 +2121,6 @@ Alternatively, for H1 and H2, an underline-ish style:
 
 ## Alt-H2
 
-<a name=\\"emphasis\\" />
-
 ## Emphasis
 
 \`\`\`no-highlight
@@ -2601,8 +2140,6 @@ Strong emphasis, aka bold, with **asterisks** or **underscores**.
 Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
-
-<a name=\\"lists\\" />
 
 ## Lists
 
@@ -2639,8 +2176,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Or minuses
 
 - Or pluses
-
-<a name=\\"links\\" />
 
 ## Links
 
@@ -2684,8 +2219,6 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-<a name=\\"images\\" />
-
 ## Images
 
 \`\`\`no-highlight
@@ -2710,7 +2243,13 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \\"Logo Title Text 2\\"
 
-<a name=\\"code\\" />
+Local picture:
+
+![local picture](./images/local_test.jpeg)
+
+Big picture:
+
+![big picture that applies to water or nature](https://source.unsplash.com/1600x900/?nature,water)
 
 ## Code and Syntax Highlighting
 
@@ -2724,15 +2263,6 @@ Inline \`code\` has \`back-ticks around\` it.
 
 Blocks of code are either fenced by lines with three back-ticks <code>\`\`\`</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-<pre lang=\\"no-highlight\\">
-  <code>
-    \`\`\`javascript var s = \\"JavaScript syntax highlighting\\"; alert(s); \`\`\`
-    \`\`\`python s = \\"Python syntax highlighting\\" print s \`\`\` \`\`\` No language
-    indicated, so no syntax highlighting. But let's throw in a
-    &lt;b&gt;tag&lt;/b&gt;. \`\`\`
-  </code>
-</pre>
-
 \`\`\`javascript
 var s = \\"JavaScript syntax highlighting\\";
 alert(s);
@@ -2743,14 +2273,12 @@ s = \\"Python syntax highlighting\\"
 print s
 \`\`\`
 
-\`\`\`
+\`\`\`no-highlight
 No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
 But let's throw in a <b>tag</b>.
 \`\`\`
 
 Again, to see what languages are available for highlighting, and how to write those language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
-
-<a name=\\"tables\\" />
 
 ## Tables
 
@@ -2759,11 +2287,11 @@ Tables aren't part of the core Markdown spec, but they are part of GFM and _Mark
 \`\`\`no-highlight
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
+| Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      | $12   |
-| zebra stripes | are neat      | $1    |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
@@ -2783,12 +2311,10 @@ Colons can be used to align columns.
 
 The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | \`renders\` | **nicely** |
-| 1        | 2         | 3          |
-
-<a name=\\"blockquotes\\" />
+| Markdown | Less      | Pretty     | Pretty     | Pretty     |
+| -------- | --------- | ---------- | ---------- | ---------- |
+| _Still_  | \`renders\` | **nicely** | **nicely** | **nicely** |
+| 1        | 2         | 3          | 3          | 3          |
 
 ## Blockquotes
 
@@ -2807,8 +2333,6 @@ Quote break.
 Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
-<a name=\\"html\\" />
 
 ## Inline HTML
 
@@ -2832,11 +2356,9 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
-<a name=\\"hr\\" />
-
 ## Horizontal Rule
 
-\`\`\`
+\`\`\`no-highlight
 Three or more...
 
 ---
@@ -2866,15 +2388,13 @@ Asterisks
 
 Underscores
 
-<a name=\\"lines\\" />
-
 ## Line Breaks
 
 My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. \\"Markdown Toggle\\" is your friend.
 
 Here are some things to try out:
 
-\`\`\`
+\`\`\`no-highlight
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
@@ -2891,8 +2411,6 @@ This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
 
 (Technical note: _Markdown Here_ uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
-
-<a name=\\"videos\\" />
 
 ## YouTube Videos
 
@@ -2931,7 +2449,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"The Fairy's Witches\\",
-  \\"cover\\": \\"3.jpg\\",
+  \\"cover\\": \\"images/cover_5.jpeg\\",
   \\"description\\": \\"Decsription\\",
   \\"category\\": \\"something\\",
   \\"datePublished\\": \\"2017-04-02\\",
@@ -2948,51 +2466,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"eram-mora-tuas-in-inter-ferens-caterva\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#eram-mora-tuas-in-inter-ferens-caterva\\",
-    \\"aria-label\\": \\"eram mora tuas in inter ferens caterva permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Eram mora tuas in inter ferens caterva\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"ait-oculos\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#ait-oculos\\",
-    \\"aria-label\\": \\"ait oculos permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Ait oculos\\"), mdx(\\"p\\", null, \\"Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab\\\\ntestes moderantum. Somno curas obscurum, et \\", mdx(\\"em\\", {
+  }), mdx(\\"h2\\", null, \\"Ait oculos\\"), mdx(\\"p\\", null, \\"Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab\\\\ntestes moderantum. Somno curas obscurum, et \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"regna spectare\\"), \\" quaeque tot arte\\\\nMinyeia. Labens Actaeis potentior et \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
@@ -3010,29 +2484,7 @@ return function MDXContent(_ref) {
     \\"rel\\": \\"nofollow noopener noreferrer\\"
   }, \\"hamadryadas erat dei\\"), \\" parente\\\\niuvenali, suum caput haud foedera nocti transferre.\\")), mdx(\\"p\\", null, \\"Quae nova: campis peragebant omnemque direptos ipsi ore erat volucris neque;\\\\nformae. Trepidare figuram minanti longa, nec seris, ibat plus madent, nec compos\\\\natque iuvenis dimotis; ferunt. An urbes ab deae Pentheus erit: non capere cui\\\\nausim fallit omnia et estque caede. Meas haec una ab est iter exstantibus illo\\\\n\\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"summae flecti\\"), \\".\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"tyrios-inquit\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#tyrios-inquit\\",
-    \\"aria-label\\": \\"tyrios inquit permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Tyrios inquit\\"), mdx(\\"p\\", null, \\"Os inquit pensa sidereus: membra nomen superi magicaeque nympha ire \\", mdx(\\"a\\", {
+  }, \\"summae flecti\\"), \\".\\"), mdx(\\"h2\\", null, \\"Tyrios inquit\\"), mdx(\\"p\\", null, \\"Os inquit pensa sidereus: membra nomen superi magicaeque nympha ire \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://vulnere-riget.com/\\",
     \\"target\\": \\"_blank\\",
@@ -3058,23 +2510,23 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "something",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "3.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-04-02T00:00:00.000Z,
     "datePublished": 2017-04-02T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Eram mora tuas in inter ferens caterva Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab
-testes…",
+    "excerpt": "Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab
+testes moderantum. Somno curas obscurum, et  regna…",
     "internalContent": "---
 title: \\"The Fairy's Witches\\"
-cover: \\"3.jpg\\"
+cover: images/cover_5.jpeg
 description: \\"Decsription\\"
 category: \\"something\\"
 datePublished: \\"2017-04-02\\"
 dateModified: \\"2017-04-02\\"
 ---
 
-# Eram mora tuas in inter ferens caterva
 
 ## Ait oculos
 
@@ -3111,11 +2563,11 @@ Nusquam sagitta ad ferre, ore terras mihi sopor mundi; tanti terga abstulit; tum
 terreris **adhuc sinistro** ad. Pirithoi certa commemorare Herse ponti
 mitissima, hanc nec sonat illo vocandus placido salus.
 
-1.  Clamant donec
-2.  Posuitque et relicto parent
-3.  Mediis est Siculo eveniet de dictis
-4.  Ripae formaque devexaque pecudes domum vidistis proles
-5.  Dumque moenia amnes coniugium dumque in saxa
+1. Clamant donec
+2. Posuitque et relicto parent
+3. Mediis est Siculo eveniet de dictis
+4. Ripae formaque devexaque pecudes domum vidistis proles
+5. Dumque moenia amnes coniugium dumque in saxa
 
 Si patres terram! Mille habenas tractataque forte. Tenebris viscera gelidos
 fuit? Hamos deinde longique quisquis pugnat moriens, nec Tmolo **ferebat**.
@@ -3138,7 +2590,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"The Butterfly of the Edge\\",
-  \\"cover\\": \\"2.jpg\\",
+  \\"cover\\": \\"images/cover_6.jpeg\\",
   \\"description\\": \\"Decsription\\",
   \\"category\\": \\"tech\\",
   \\"datePublished\\": \\"2017-03-17\\",
@@ -3156,80 +2608,14 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"hanc-indeploratum-seram-amphitryoniadae-tremulis-pauperque-manum\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#hanc-indeploratum-seram-amphitryoniadae-tremulis-pauperque-manum\\",
-    \\"aria-label\\": \\"hanc indeploratum seram amphitryoniadae tremulis pauperque manum permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"cognoscenti-audeat-ulterius-sublimia-terga-potiorque-saxo\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#cognoscenti-audeat-ulterius-sublimia-terga-potiorque-saxo\\",
-    \\"aria-label\\": \\"cognoscenti audeat ulterius sublimia terga potiorque saxo permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Cognoscenti audeat ulterius sublimia terga potiorque saxo\\"), mdx(\\"p\\", null, \\"Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili\\\\nsermone! Tibi Oileos \\", mdx(\\"a\\", {
+  }), mdx(\\"h2\\", null, \\"Cognoscenti audeat ulterius sublimia terga potiorque saxo\\"), mdx(\\"p\\", null, \\"Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili\\\\nsermone! Tibi Oileos \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://nuncet.org/hic-gens.php\\",
     \\"target\\": \\"_blank\\",
     \\"rel\\": \\"nofollow noopener noreferrer\\"
   }, \\"unda\\"), \\", lux celeberrima\\\\nheros inlustre Copia, \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"humo\\"), \\": huius.\\"), mdx(\\"p\\", null, \\"Ecce ruris resupino pugnat nudaque certum piacula componar advertite homines\\\\nterris: iam. Huc amnem cura lustrabere pro videt ferat lupi quoque tepido\\\\namplexa aures es subito ad sagittis silvis lacrimans.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"ad-maximus-superest-illa-defendit-vias\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#ad-maximus-superest-illa-defendit-vias\\",
-    \\"aria-label\\": \\"ad maximus superest illa defendit vias permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Ad maximus superest illa defendit vias\\"), mdx(\\"p\\", null, \\"Penetravit velocius. \\", mdx(\\"a\\", {
+  }, \\"humo\\"), \\": huius.\\"), mdx(\\"p\\", null, \\"Ecce ruris resupino pugnat nudaque certum piacula componar advertite homines\\\\nterris: iam. Huc amnem cura lustrabere pro videt ferat lupi quoque tepido\\\\namplexa aures es subito ad sagittis silvis lacrimans.\\"), mdx(\\"h2\\", null, \\"Ad maximus superest illa defendit vias\\"), mdx(\\"p\\", null, \\"Penetravit velocius. \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://quamlaevum.com/parnasia\\",
     \\"target\\": \\"_blank\\",
@@ -3249,29 +2635,7 @@ return function MDXContent(_ref) {
     parentName: \\"ol\\"
   }, \\"Per nec tenaci solitoque peto Neoptolemum vitamque\\"), mdx(\\"li\\", {
     parentName: \\"ol\\"
-  }, \\"Dianae minoris tum\\")), mdx(\\"h2\\", {
-    \\"id\\": \\"ferentem-natam-simillimus-et-erat-commota-pacifer\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#ferentem-natam-simillimus-et-erat-commota-pacifer\\",
-    \\"aria-label\\": \\"ferentem natam simillimus et erat commota pacifer permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Ferentem natam simillimus et erat commota pacifer\\"), mdx(\\"p\\", null, \\"Strigis rite; reseret dixerat, nec ille remittit sororque satis non discedit ad\\\\nlilia ferunt, \\", mdx(\\"strong\\", {
+  }, \\"Dianae minoris tum\\")), mdx(\\"h2\\", null, \\"Ferentem natam simillimus et erat commota pacifer\\"), mdx(\\"p\\", null, \\"Strigis rite; reseret dixerat, nec ille remittit sororque satis non discedit ad\\\\nlilia ferunt, \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"es\\"), \\". Gentes caducifer sustinui glaeba; pars restat montes iura!\\\\nPello in bacis, pontus a videtur pulsa: arcus posita \\", mdx(\\"a\\", {
     parentName: \\"p\\",
@@ -3297,15 +2661,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "tech",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "2.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-03-17T00:00:00.000Z,
     "datePublished": 2017-03-17T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum…",
+    "excerpt": "Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili
+sermone…",
     "internalContent": "---
 title: \\"The Butterfly of the Edge\\"
-cover: \\"2.jpg\\"
+cover: images/cover_6.jpeg
 description: \\"Decsription\\"
 category: \\"tech\\"
 datePublished: \\"2017-03-17\\"
@@ -3319,7 +2685,6 @@ tags:
   - other
 ---
 
-# Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 
 ## Cognoscenti audeat ulterius sublimia terga potiorque saxo
 
@@ -3341,10 +2706,10 @@ quis](http://www.ipse-in.org/meritosenis.html) ardescunt cervicis. Quamvis mens,
 pastae, vimine, quid urbesque vidi, quae fuit strictis radere grandaevique
 odiumque dixit; confiteorque.
 
-1.  Dryades resupinum
-2.  Lassus vota illos et visis liceret
-3.  Per nec tenaci solitoque peto Neoptolemum vitamque
-4.  Dianae minoris tum
+1. Dryades resupinum
+2. Lassus vota illos et visis liceret
+3. Per nec tenaci solitoque peto Neoptolemum vitamque
+4. Dianae minoris tum
 
 ## Ferentem natam simillimus et erat commota pacifer
 
@@ -3391,7 +2756,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"Random project 4 With Super Long Title Phase One\\",
-  \\"cover\\": \\"4.jpg\\",
+  \\"cover\\": \\"images/cover_4.jpeg\\",
   \\"description\\": \\"Decsription\\",
   \\"category\\": \\"random\\",
   \\"datePublished\\": \\"2017-03-02\\",
@@ -3409,51 +2774,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"artificem-honorati-ore-temperat-lycus-quam-antiquum\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#artificem-honorati-ore-temperat-lycus-quam-antiquum\\",
-    \\"aria-label\\": \\"artificem honorati ore temperat lycus quam antiquum permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Artificem honorati ore temperat Lycus quam antiquum\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"mendaci-pinu-ipsi-nunc\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#mendaci-pinu-ipsi-nunc\\",
-    \\"aria-label\\": \\"mendaci pinu ipsi nunc permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Mendaci pinu ipsi nunc\\"), mdx(\\"p\\", null, \\"Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,\\\\ntardius pello ostentare; dixit. \\", mdx(\\"a\\", {
+  }), mdx(\\"h2\\", null, \\"Mendaci pinu ipsi nunc\\"), mdx(\\"p\\", null, \\"Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,\\\\ntardius pello ostentare; dixit. \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://accessit.net/\\",
     \\"target\\": \\"_blank\\",
@@ -3472,29 +2793,7 @@ return function MDXContent(_ref) {
     parentName: \\"p\\"
   }, \\"videt vos\\"), \\", meus licet bipennem, Acheronte! Fulvae vulneris et\\\\nmunus succurritis coma simulacraque amborum semper, insequar quae \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
-  }, \\"simul\\\\ntela\\"), \\".\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"facta-huic-laboras-matris-tandem-scelus\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#facta-huic-laboras-matris-tandem-scelus\\",
-    \\"aria-label\\": \\"facta huic laboras matris tandem scelus permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Facta huic laboras matris tandem scelus\\"), mdx(\\"p\\", null, \\"Per praesuta occupat stratum, manuque te femina magni Nelidae. \\", mdx(\\"a\\", {
+  }, \\"simul\\\\ntela\\"), \\".\\"), mdx(\\"h2\\", null, \\"Facta huic laboras matris tandem scelus\\"), mdx(\\"p\\", null, \\"Per praesuta occupat stratum, manuque te femina magni Nelidae. \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://www.in.io/\\",
     \\"target\\": \\"_blank\\",
@@ -3509,29 +2808,7 @@ return function MDXContent(_ref) {
     parentName: \\"p\\"
   }, \\"simulacra\\"), \\"? Cum cupido alis. Ulmi redit\\\\nadpellatque tellus, soror robore sequerere cuspidis quae putares! Mihi solidas\\\\nsed tyranni tecta pennas virgine, unus aufer, \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"Oete\\"), \\" neve femina, vos quid.\\\\nOscula dignior.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"corpore-motae-iam\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#corpore-motae-iam\\",
-    \\"aria-label\\": \\"corpore motae iam permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Corpore motae iam\\"), mdx(\\"p\\", null, \\"Est humum data tardus et movet attrahit ferro\\\\n\\", mdx(\\"a\\", {
+  }, \\"Oete\\"), \\" neve femina, vos quid.\\\\nOscula dignior.\\"), mdx(\\"h2\\", null, \\"Corpore motae iam\\"), mdx(\\"p\\", null, \\"Est humum data tardus et movet attrahit ferro\\\\n\\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://soleta.org/lectos\\",
     \\"target\\": \\"_blank\\",
@@ -3552,15 +2829,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "random",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "4.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-03-02T00:00:00.000Z,
     "datePublished": 2017-03-02T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Artificem honorati ore temperat Lycus quam antiquum Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur…",
+    "excerpt": "Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
+tardius pello ostentare; dixit.  Agit…",
     "internalContent": "---
 title: \\"Random project 4 With Super Long Title Phase One\\"
-cover: \\"4.jpg\\"
+cover: images/cover_4.jpeg
 description: \\"Decsription\\"
 category: \\"random\\"
 datePublished: \\"2017-03-02\\"
@@ -3568,8 +2847,6 @@ dateModified: \\"2017-03-02\\"
 tags:
   - say hi
 ---
-
-# Artificem honorati ore temperat Lycus quam antiquum
 
 ## Mendaci pinu ipsi nunc
 
@@ -3635,7 +2912,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"Angels of Mist\\",
-  \\"cover\\": \\"6.jpg\\",
+  \\"cover\\": \\"images/cover_3.jpeg\\",
   \\"category\\": \\"test3\\",
   \\"description\\": \\"Decsription\\",
   \\"datePublished\\": \\"2017-03-01\\",
@@ -3653,51 +2930,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"ab-dicemur-cura\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#ab-dicemur-cura\\",
-    \\"aria-label\\": \\"ab dicemur cura permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Ab dicemur cura\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"mane-oscula-anxia\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#mane-oscula-anxia\\",
-    \\"aria-label\\": \\"mane oscula anxia permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Mane oscula anxia\\"), mdx(\\"p\\", null, \\"Lorem markdownum alius, \\", mdx(\\"strong\\", {
+  }), mdx(\\"h2\\", null, \\"Mane oscula anxia\\"), mdx(\\"p\\", null, \\"Lorem markdownum alius, \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"non voluntas supremaque\\"), \\": canes ager cingere quis;\\\\nrerum? Nunc nec ferunt verbis vultumque candentia sequi visa Phrygii \\", mdx(\\"em\\", {
     parentName: \\"p\\"
@@ -3901,29 +3134,7 @@ return function MDXContent(_ref) {
   }, \\"+\\"), \\" hub\\", mdx(\\"span\\", {
     parentName: \\"code\\",
     \\"className\\": \\"token punctuation\\"
-  }, \\";\\")))), mdx(\\"h2\\", {
-    \\"id\\": \\"vehi-arcus-quondam-australem-agitabitur-excessitque-coniuge\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#vehi-arcus-quondam-australem-agitabitur-excessitque-coniuge\\",
-    \\"aria-label\\": \\"vehi arcus quondam australem agitabitur excessitque coniuge permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Vehi arcus quondam australem agitabitur excessitque coniuge\\"), mdx(\\"p\\", null, \\"Celebrant est hausto \\", mdx(\\"em\\", {
+  }, \\";\\")))), mdx(\\"h2\\", null, \\"Vehi arcus quondam australem agitabitur excessitque coniuge\\"), mdx(\\"p\\", null, \\"Celebrant est hausto \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"reperire et\\"), \\" unam \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
@@ -3938,77 +3149,11 @@ return function MDXContent(_ref) {
     parentName: \\"p\\"
   }, \\"effundite lacrimas ferax\\"), \\", suo neve. Hoc postquam misceri melius ille\\\\nvertice frena \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"fratremque quibus\\"), \\".\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"tulit-lapis-decore-altis-vidi-solida\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#tulit-lapis-decore-altis-vidi-solida\\",
-    \\"aria-label\\": \\"tulit lapis decore altis vidi solida permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Tulit lapis decore altis vidi solida\\"), mdx(\\"p\\", null, \\"Templi egreditur genitore parte. Captavit est \\", mdx(\\"em\\", {
+  }, \\"fratremque quibus\\"), \\".\\"), mdx(\\"h2\\", null, \\"Tulit lapis decore altis vidi solida\\"), mdx(\\"p\\", null, \\"Templi egreditur genitore parte. Captavit est \\", mdx(\\"em\\", {
     parentName: \\"p\\"
   }, \\"vicisse filia abesse\\"), \\" quem tibi\\\\ndubie, fit ille mirantia, nymphae mox dumque intentare monstri. Exempla\\\\nuberibus, non \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"res\\"), \\" saevique sic commenta aquis fugit sacris aliquidque totis,\\\\ntamen.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"hic-simul-et-tibi-adversam-quaeris-senes\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#hic-simul-et-tibi-adversam-quaeris-senes\\",
-    \\"aria-label\\": \\"hic simul et tibi adversam quaeris senes permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Hic simul et tibi adversam quaeris senes\\"), mdx(\\"p\\", null, \\"Quae nescio fauces contigit in visus, abstitimus colorem enim ieiuna candescere\\\\naerane mihi stipite nolle sunt. Non tabuit miratur caelesti simulacra fere\\\\nParnasia principio genetricis atria potentia Hippotaden et terrae iuvere subdita\\\\nquid.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"moderatus-fluctibus-mitibus\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#moderatus-fluctibus-mitibus\\",
-    \\"aria-label\\": \\"moderatus fluctibus mitibus permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Moderatus fluctibus mitibus\\"), mdx(\\"p\\", null, \\"Ille non revelli o dignare, scelus, loqui Solis quid flebam! Terras in Ixione\\\\ntemeraria Orphea pectora. Suis aere da ante praeponere dignus magna tenuit\\\\nNereides agrestem stare obstipuit threicius cadit haud.\\"), mdx(\\"ul\\", null, mdx(\\"li\\", {
+  }, \\"res\\"), \\" saevique sic commenta aquis fugit sacris aliquidque totis,\\\\ntamen.\\"), mdx(\\"h2\\", null, \\"Hic simul et tibi adversam quaeris senes\\"), mdx(\\"p\\", null, \\"Quae nescio fauces contigit in visus, abstitimus colorem enim ieiuna candescere\\\\naerane mihi stipite nolle sunt. Non tabuit miratur caelesti simulacra fere\\\\nParnasia principio genetricis atria potentia Hippotaden et terrae iuvere subdita\\\\nquid.\\"), mdx(\\"h2\\", null, \\"Moderatus fluctibus mitibus\\"), mdx(\\"p\\", null, \\"Ille non revelli o dignare, scelus, loqui Solis quid flebam! Terras in Ixione\\\\ntemeraria Orphea pectora. Suis aere da ante praeponere dignus magna tenuit\\\\nNereides agrestem stare obstipuit threicius cadit haud.\\"), mdx(\\"ul\\", null, mdx(\\"li\\", {
     parentName: \\"ul\\"
   }, \\"Iam legebantur inter tum sensit enim similis\\"), mdx(\\"li\\", {
     parentName: \\"ul\\"
@@ -4028,16 +3173,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "test3",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "6.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-03-01T00:00:00.000Z,
     "datePublished": 2017-03-01T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Ab dicemur cura Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;
-rerum? Nunc nec ferunt verbis…",
+    "excerpt": "Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;
+rerum? Nunc nec ferunt verbis vultumque…",
     "internalContent": "---
 title: \\"Angels of Mist\\"
-cover: \\"6.jpg\\"
+cover: images/cover_3.jpeg
 category: \\"test3\\"
 description: \\"Decsription\\"
 datePublished: \\"2017-03-01\\"
@@ -4046,8 +3192,6 @@ tags:
   - cheese
   - other
 ---
-
-# Ab dicemur cura
 
 ## Mane oscula anxia
 
@@ -4131,7 +3275,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"Birch in the Roses\\",
-  \\"cover\\": \\"1.jpg\\",
+  \\"cover\\": \\"images/cover_7.jpeg\\",
   \\"description\\": \\"Decsription\\",
   \\"datePublished\\": \\"2017-03-01\\",
   \\"dateModified\\": \\"2017-03-01\\",
@@ -4149,51 +3293,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"domos-primus-caelum-taedia\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#domos-primus-caelum-taedia\\",
-    \\"aria-label\\": \\"domos primus caelum taedia permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Domos primus caelum taedia\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"accipit-alto-fecerat-mutato-centauri-haerent-dominoque\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#accipit-alto-fecerat-mutato-centauri-haerent-dominoque\\",
-    \\"aria-label\\": \\"accipit alto fecerat mutato centauri haerent dominoque permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Accipit alto fecerat mutato centauri haerent dominoque\\"), mdx(\\"p\\", null, \\"Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit\\\\nhuic, non bis, summa retemptat. Praedelassat tollitur parte capiebant lustratum\\\\nhominem loco coniuge quota, nec aura. Cum constiterat, animos sic videre dumque\\\\naltus \\", mdx(\\"strong\\", {
+  }), mdx(\\"h2\\", null, \\"Accipit alto fecerat mutato centauri haerent dominoque\\"), mdx(\\"p\\", null, \\"Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit\\\\nhuic, non bis, summa retemptat. Praedelassat tollitur parte capiebant lustratum\\\\nhominem loco coniuge quota, nec aura. Cum constiterat, animos sic videre dumque\\\\naltus \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"de vesper\\"), \\" membra blanditiis aethera orgia.\\"), mdx(\\"ol\\", null, mdx(\\"li\\", {
     parentName: \\"ol\\"
@@ -4201,51 +3301,7 @@ return function MDXContent(_ref) {
     parentName: \\"ol\\"
   }, \\"Publica animalia suoque sub\\"), mdx(\\"li\\", {
     parentName: \\"ol\\"
-  }, \\"Stupet eiusdem paventem meum\\")), mdx(\\"h2\\", {
-    \\"id\\": \\"supersunt-prothoenora-arida-moturaque-fuerit-demissaque-aut\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#supersunt-prothoenora-arida-moturaque-fuerit-demissaque-aut\\",
-    \\"aria-label\\": \\"supersunt prothoenora arida moturaque fuerit demissaque aut permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Supersunt Prothoenora arida moturaque fuerit demissaque aut\\"), mdx(\\"p\\", null, \\"Hunc adventare duxit lacrimis hospes futurum fecerat inde manus reditum annos,\\\\nfuerat usque foedus mihi, priscum? Amanti tu costis occursu: dentes alios,\\\\nadflabitur poteram. Quaerit regaliter porrigitur coire loquendo modo habet\\\\nemicat, ipse qui ausi matrem priorem quietis. Caelum auras sibi Tritonidos potui\\\\npraefixaque sumus sanguineaque dentibus, mucrone? Saucius iuvenis sunt.\\"), mdx(\\"p\\", null, \\"Ita ultor restituit tollere. Ferox cupidusque nescit; aether, cortice, ac\\\\nDictaeaque pectora vulnus ligones carinae secutum: artis etiam hunc adde. Necem\\\\nignigenamque cetera tellus optas abstractus vocis in aura claro signa pervenit\\\\nessem! Turbatque aequora remanet accepit in digitos, refert reus sanguine.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"mediis-plura-sono\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#mediis-plura-sono\\",
-    \\"aria-label\\": \\"mediis plura sono permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Mediis plura sono\\"), mdx(\\"p\\", null, \\"Haec dedisset pendens quem exul medios nec fecundus unde, concursibus. Iste in\\\\nsuperat, omnem cognovit nulla inpendere in silvae certatim.\\"), mdx(\\"ol\\", null, mdx(\\"li\\", {
+  }, \\"Stupet eiusdem paventem meum\\")), mdx(\\"h2\\", null, \\"Supersunt Prothoenora arida moturaque fuerit demissaque aut\\"), mdx(\\"p\\", null, \\"Hunc adventare duxit lacrimis hospes futurum fecerat inde manus reditum annos,\\\\nfuerat usque foedus mihi, priscum? Amanti tu costis occursu: dentes alios,\\\\nadflabitur poteram. Quaerit regaliter porrigitur coire loquendo modo habet\\\\nemicat, ipse qui ausi matrem priorem quietis. Caelum auras sibi Tritonidos potui\\\\npraefixaque sumus sanguineaque dentibus, mucrone? Saucius iuvenis sunt.\\"), mdx(\\"p\\", null, \\"Ita ultor restituit tollere. Ferox cupidusque nescit; aether, cortice, ac\\\\nDictaeaque pectora vulnus ligones carinae secutum: artis etiam hunc adde. Necem\\\\nignigenamque cetera tellus optas abstractus vocis in aura claro signa pervenit\\\\nessem! Turbatque aequora remanet accepit in digitos, refert reus sanguine.\\"), mdx(\\"h2\\", null, \\"Mediis plura sono\\"), mdx(\\"p\\", null, \\"Haec dedisset pendens quem exul medios nec fecundus unde, concursibus. Iste in\\\\nsuperat, omnem cognovit nulla inpendere in silvae certatim.\\"), mdx(\\"ol\\", null, mdx(\\"li\\", {
     parentName: \\"ol\\"
   }, \\"Nimium contigerat fera incipit Lichan nata\\"), mdx(\\"li\\", {
     parentName: \\"ol\\"
@@ -4257,29 +3313,7 @@ return function MDXContent(_ref) {
     parentName: \\"ol\\"
   }, \\"In plura dubitat\\"), mdx(\\"li\\", {
     parentName: \\"ol\\"
-  }, \\"Vivit doceri et rexerit atque\\")), mdx(\\"h2\\", {
-    \\"id\\": \\"venisse-qui-fortis-nimis-horruit-ignarus-quaeque\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#venisse-qui-fortis-nimis-horruit-ignarus-quaeque\\",
-    \\"aria-label\\": \\"venisse qui fortis nimis horruit ignarus quaeque permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Venisse qui fortis nimis horruit ignarus quaeque\\"), mdx(\\"p\\", null, \\"Caede rursus rostro unumque inscribit Musae; fuit hoc manibusque aestus,\\\\nconcrescere retro \\", mdx(\\"strong\\", {
+  }, \\"Vivit doceri et rexerit atque\\")), mdx(\\"h2\\", null, \\"Venisse qui fortis nimis horruit ignarus quaeque\\"), mdx(\\"p\\", null, \\"Caede rursus rostro unumque inscribit Musae; fuit hoc manibusque aestus,\\\\nconcrescere retro \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"tosta\\"), \\", non. Per illi duce hebetastis viridesque stellis et\\\\nesse parum poteras biformis posuisti maxima odit. Praedam detruncatque iuvat\\\\nutinam sed, non nemo mixtos thyrsos. Inobservata subsunt.\\"), mdx(\\"p\\", null, \\"Coniuge contraxit in flagrantis et sacra Paridis pietas nymphas dextra et aequor\\\\nerat insignia virginei medi. Acervo ferrum! Undecimus rabiemque elusam superesse\\\\n\\", mdx(\\"em\\", {
     parentName: \\"p\\"
@@ -4288,15 +3322,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "tech",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "1.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-03-01T00:00:00.000Z,
     "datePublished": 2017-03-01T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Domos primus caelum taedia Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse…",
+    "excerpt": "Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit
+huic, non…",
     "internalContent": "---
 title: \\"Birch in the Roses\\"
-cover: \\"1.jpg\\"
+cover: images/cover_7.jpeg
 description: \\"Decsription\\"
 datePublished: \\"2017-03-01\\"
 dateModified: \\"2017-03-01\\"
@@ -4304,9 +3340,6 @@ category: \\"tech\\"
 tags:
   - tag
 ---
-
-# Domos primus caelum taedia
-
 ## Accipit alto fecerat mutato centauri haerent dominoque
 
 Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit
@@ -4314,9 +3347,9 @@ huic, non bis, summa retemptat. Praedelassat tollitur parte capiebant lustratum
 hominem loco coniuge quota, nec aura. Cum constiterat, animos sic videre dumque
 altus **de vesper** membra blanditiis aethera orgia.
 
-1.  Sicyonius color
-2.  Publica animalia suoque sub
-3.  Stupet eiusdem paventem meum
+1. Sicyonius color
+2. Publica animalia suoque sub
+3. Stupet eiusdem paventem meum
 
 ## Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
@@ -4336,12 +3369,12 @@ essem! Turbatque aequora remanet accepit in digitos, refert reus sanguine.
 Haec dedisset pendens quem exul medios nec fecundus unde, concursibus. Iste in
 superat, omnem cognovit nulla inpendere in silvae certatim.
 
-1.  Nimium contigerat fera incipit Lichan nata
-2.  Prothoenora rapti contendisse comae
-3.  Colloque mitisque
-4.  Utinam rogum adeunda dic ausus magnus canam
-5.  In plura dubitat
-6.  Vivit doceri et rexerit atque
+1. Nimium contigerat fera incipit Lichan nata
+2. Prothoenora rapti contendisse comae
+3. Colloque mitisque
+4. Utinam rogum adeunda dic ausus magnus canam
+5. In plura dubitat
+6. Vivit doceri et rexerit atque
 
 ## Venisse qui fortis nimis horruit ignarus quaeque
 
@@ -4375,7 +3408,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"The Fallen Time\\",
-  \\"cover\\": \\"7.jpg\\",
+  \\"cover\\": \\"images/cover_2.jpeg\\",
   \\"description\\": \\"Decsription\\",
   \\"datePublished\\": \\"2017-02-01\\",
   \\"dateModified\\": \\"2017-02-01\\",
@@ -4393,51 +3426,7 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"autolyci-eminus-retenta\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#autolyci-eminus-retenta\\",
-    \\"aria-label\\": \\"autolyci eminus retenta permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Autolyci eminus retenta\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"hoc-domum-solitos-veteremque-nostrum\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#hoc-domum-solitos-veteremque-nostrum\\",
-    \\"aria-label\\": \\"hoc domum solitos veteremque nostrum permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Hoc domum solitos veteremque nostrum\\"), mdx(\\"p\\", null, \\"Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus\\\\nquales dant, puppim hanc!\\"), mdx(\\"div\\", {
+  }), mdx(\\"h2\\", null, \\"Hoc domum solitos veteremque nostrum\\"), mdx(\\"p\\", null, \\"Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus\\\\nquales dant, puppim hanc!\\"), mdx(\\"div\\", {
     \\"className\\": \\"gatsby-highlight\\",
     \\"data-language\\": \\"js\\"
   }, mdx(\\"pre\\", {
@@ -4596,79 +3585,13 @@ return function MDXContent(_ref) {
   }, \\")\\"), mdx(\\"span\\", {
     parentName: \\"code\\",
     \\"className\\": \\"token punctuation\\"
-  }, \\";\\")))), mdx(\\"h2\\", {
-    \\"id\\": \\"in-nunc\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#in-nunc\\",
-    \\"aria-label\\": \\"in nunc permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"In nunc\\"), mdx(\\"p\\", null, \\"Superinposita dira me Iove, lanigeris tendunt! Illis gladii, in pignusque dixit\\\\ntrisulcis latices. Me mora usque carchesia plenaque idem femineo: abditus\\\\nnumeris percurrere rectum orbataque. Lucibus nocuisse et nova attactu et secura,\\\\nenim poterentur.\\"), mdx(\\"p\\", null, \\"Infelix ait eadem. Non loquar, iungitur vulnere ludos violentaque natam sanguine\\\\nhominemque et mille citharam blanditiis deum pecoris. Vibrabant et crimina\\\\niterum: et nisi victa quietis litore? Cera sistere publica \\", mdx(\\"strong\\", {
+  }, \\";\\")))), mdx(\\"h2\\", null, \\"In nunc\\"), mdx(\\"p\\", null, \\"Superinposita dira me Iove, lanigeris tendunt! Illis gladii, in pignusque dixit\\\\ntrisulcis latices. Me mora usque carchesia plenaque idem femineo: abditus\\\\nnumeris percurrere rectum orbataque. Lucibus nocuisse et nova attactu et secura,\\\\nenim poterentur.\\"), mdx(\\"p\\", null, \\"Infelix ait eadem. Non loquar, iungitur vulnere ludos violentaque natam sanguine\\\\nhominemque et mille citharam blanditiis deum pecoris. Vibrabant et crimina\\\\niterum: et nisi victa quietis litore? Cera sistere publica \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"infelix\\\\nharundinibus\\"), \\" quam ad et, deos iacent, \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"hunc tulit\\"), \\", spicula, natantes!\\\\nMelioribus imperat fugit \\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"me natum\\"), \\" quem sequitur nocturnae moras tantummodo et\\\\nsecus aethera umentes vidisse terrae sororum laboris, fraterno.\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"perpetiar-lacrimas-non-dare\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#perpetiar-lacrimas-non-dare\\",
-    \\"aria-label\\": \\"perpetiar lacrimas non dare permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Perpetiar lacrimas Non dare\\"), mdx(\\"p\\", null, \\"Tibi ducit incursu nomina terrae, feratur satis Telethusa corpore Eurynome in\\\\nsemina adiecit! Et spargit pluvialibus, intervenit bracchia pacatum ulciscere\\\\ndolore, thyrso iuvit quo ardere est requiem laesaque in dedimus?\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"est-in-sit-suos-fessa\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#est-in-sit-suos-fessa\\",
-    \\"aria-label\\": \\"est in sit suos fessa permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Est in sit suos fessa\\"), mdx(\\"p\\", null, \\"Est illo Osiris aevo, et \\", mdx(\\"strong\\", {
+  }, \\"me natum\\"), \\" quem sequitur nocturnae moras tantummodo et\\\\nsecus aethera umentes vidisse terrae sororum laboris, fraterno.\\"), mdx(\\"h2\\", null, \\"Perpetiar lacrimas Non dare\\"), mdx(\\"p\\", null, \\"Tibi ducit incursu nomina terrae, feratur satis Telethusa corpore Eurynome in\\\\nsemina adiecit! Et spargit pluvialibus, intervenit bracchia pacatum ulciscere\\\\ndolore, thyrso iuvit quo ardere est requiem laesaque in dedimus?\\"), mdx(\\"h2\\", null, \\"Est in sit suos fessa\\"), mdx(\\"p\\", null, \\"Est illo Osiris aevo, et \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"dextrae\\"), \\" quoque et, illa. Cumque in facto haec\\\\nThemis malis fatali vehebat gerit; coniunx Minyeidas patruo sanguine collo\\\\ndextra undas aestus, proceres. Falso ut relictas me ara illa \\", mdx(\\"em\\", {
     parentName: \\"p\\"
@@ -4947,15 +3870,17 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
     "category": "another one",
-    "coverImageAlt": undefined,
-    "coverImageUrl": "7.jpg",
+    "coverImageAlt": "Cover alt",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-02-01T00:00:00.000Z,
     "datePublished": 2017-02-01T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Autolyci eminus retenta Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus…",
+    "excerpt": "Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus
+quales dant, puppim…",
     "internalContent": "---
 title: \\"The Fallen Time\\"
-cover: \\"7.jpg\\"
+cover: images/cover_2.jpeg
 description: \\"Decsription\\"
 datePublished: \\"2017-02-01\\"
 dateModified: \\"2017-02-01\\"
@@ -4965,8 +3890,6 @@ tags:
   - something
   - tagging
 ---
-
-# Autolyci eminus retenta
 
 ## Hoc domum solitos veteremque nostrum
 
@@ -5062,7 +3985,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /* @jsx mdx */
 var _frontmatter = {
   \\"title\\": \\"Bold Mage\\",
-  \\"cover\\": \\"8.jpg\\",
+  \\"cover\\": \\"images/cover_1.jpeg\\",
   \\"coverAlt\\": \\"Bold mage cover\\",
   \\"description\\": \\"Decsription\\",
   \\"datePublished\\": \\"2017-01-01\\",
@@ -5082,79 +4005,13 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: \\"MDXLayout\\"
-  }), mdx(\\"h1\\", {
-    \\"id\\": \\"quanto-et-ius-coniunctis-urbes\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h1\\",
-    \\"href\\": \\"#quanto-et-ius-coniunctis-urbes\\",
-    \\"aria-label\\": \\"quanto et ius coniunctis urbes permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Quanto et ius coniunctis urbes\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"sedisti-civiliter\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#sedisti-civiliter\\",
-    \\"aria-label\\": \\"sedisti civiliter permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Sedisti civiliter\\"), mdx(\\"p\\", null, \\"Lorem \\", mdx(\\"strong\\", {
+  }), mdx(\\"h2\\", null, \\"Sedisti civiliter\\"), mdx(\\"p\\", null, \\"Lorem \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"markdownum\\"), \\" Ixione palus \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"semper peritura barbaque\\"), \\" in aureus\\\\nobliquum erigitur gemmae utque cur natus, aera supplice de nudae. Manus\\\\nambrosiam tendens, saecula tenet, conponere et ense et cucurri. Tantique\\\\nanimalia praeceps Meleagre greges venisse corpore et ignara, umquam ipse? Quam\\\\n\\", mdx(\\"em\\", {
     parentName: \\"p\\"
-  }, \\"Talibus ausis\\"), \\".\\"), mdx(\\"h2\\", {
-    \\"id\\": \\"vultusque-subsequitur-pallas-regis-datis-inde-animaque\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#vultusque-subsequitur-pallas-regis-datis-inde-animaque\\",
-    \\"aria-label\\": \\"vultusque subsequitur pallas regis datis inde animaque permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Vultusque subsequitur Pallas regis datis inde animaque\\"), mdx(\\"p\\", null, \\"At securim cautum capitis, creatos sanguinis turbant iam concita videor, edere.\\\\nAlis genas rudis felix quas \\", mdx(\\"strong\\", {
+  }, \\"Talibus ausis\\"), \\".\\"), mdx(\\"h2\\", null, \\"Vultusque subsequitur Pallas regis datis inde animaque\\"), mdx(\\"p\\", null, \\"At securim cautum capitis, creatos sanguinis turbant iam concita videor, edere.\\\\nAlis genas rudis felix quas \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
   }, \\"longum\\"), \\" suorum manu ante prima \\", mdx(\\"strong\\", {
     parentName: \\"p\\"
@@ -5217,29 +4074,7 @@ return function MDXContent(_ref) {
   }, \\"*=\\"), \\" cdnThumbnailUri\\", mdx(\\"span\\", {
     parentName: \\"code\\",
     \\"className\\": \\"token punctuation\\"
-  }, \\";\\")))), mdx(\\"h2\\", {
-    \\"id\\": \\"fortis-dextrae-humo-limina-tempus-singultibus-illa\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#fortis-dextrae-humo-limina-tempus-singultibus-illa\\",
-    \\"aria-label\\": \\"fortis dextrae humo limina tempus singultibus illa permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Fortis dextrae humo limina Tempus singultibus illa\\"), mdx(\\"p\\", null, \\"Nate muros orbe \\", mdx(\\"a\\", {
+  }, \\";\\")))), mdx(\\"h2\\", null, \\"Fortis dextrae humo limina Tempus singultibus illa\\"), mdx(\\"p\\", null, \\"Nate muros orbe \\", mdx(\\"a\\", {
     parentName: \\"p\\",
     \\"href\\": \\"http://debebuntilla.org/res-ego\\",
     \\"target\\": \\"_blank\\",
@@ -5387,43 +4222,22 @@ return function MDXContent(_ref) {
   }, \\")\\"), mdx(\\"span\\", {
     parentName: \\"code\\",
     \\"className\\": \\"token punctuation\\"
-  }, \\";\\")))), mdx(\\"h2\\", {
-    \\"id\\": \\"nati-expugnacior-nympha-milia-nascuntur-amico\\",
-    \\"style\\": {
-      \\"position\\": \\"relative\\"
-    }
-  }, mdx(\\"a\\", {
-    parentName: \\"h2\\",
-    \\"href\\": \\"#nati-expugnacior-nympha-milia-nascuntur-amico\\",
-    \\"aria-label\\": \\"nati expugnacior nympha milia nascuntur amico permalink\\",
-    \\"className\\": \\"anchor before\\"
-  }, mdx(\\"svg\\", {
-    parentName: \\"a\\",
-    \\"aria-hidden\\": \\"true\\",
-    \\"focusable\\": \\"false\\",
-    \\"height\\": \\"16\\",
-    \\"version\\": \\"1.1\\",
-    \\"viewBox\\": \\"0 0 16 16\\",
-    \\"width\\": \\"16\\"
-  }, mdx(\\"path\\", {
-    parentName: \\"svg\\",
-    \\"fillRule\\": \\"evenodd\\",
-    \\"d\\": \\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\\"
-  }))), \\"Nati expugnacior nympha milia nascuntur amico\\"), mdx(\\"p\\", null, \\"Multis timidus hic si auctor hausit. Suos taedasque, malis est nitente sceleri\\\\nsunt florem.\\"), mdx(\\"p\\", null, \\"Sub quid deprenderat mores postquam tectoque maiestatemque debebat quibus;\\\\nsubitam amittere illius esse dona. Quamvis patris virtutem, partem una per\\\\niuvenaliter, stupet, sed nullae sepulto moderato? Nec phaedimus aequoris dixit.\\\\nHic bis parenti: e petunt satis.\\"));
+  }, \\";\\")))), mdx(\\"h2\\", null, \\"Nati expugnacior nympha milia nascuntur amico\\"), mdx(\\"p\\", null, \\"Multis timidus hic si auctor hausit. Suos taedasque, malis est nitente sceleri\\\\nsunt florem.\\"), mdx(\\"p\\", null, \\"Sub quid deprenderat mores postquam tectoque maiestatemque debebat quibus;\\\\nsubitam amittere illius esse dona. Quamvis patris virtutem, partem una per\\\\niuvenaliter, stupet, sed nullae sepulto moderato? Nec phaedimus aequoris dixit.\\\\nHic bis parenti: e petunt satis.\\"));
 }
 ;
 MDXContent.isMDXComponent = true;",
     "category": "tech",
     "coverImageAlt": "Bold mage cover",
-    "coverImageUrl": "8.jpg",
+    "coverImageUrl": undefined,
+    "coverImg": undefined,
     "dateModified": 2017-01-01T00:00:00.000Z,
     "datePublished": 2017-01-01T00:00:00.000Z,
     "description": "Decsription",
-    "excerpt": "Quanto et ius coniunctis urbes Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus
-obliquum erigitur…",
+    "excerpt": "Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus
+obliquum erigitur gemmae utque cur natus, aera…",
     "internalContent": "---
 title: \\"Bold Mage\\"
-cover: \\"8.jpg\\"
+cover: images/cover_1.jpeg
 coverAlt: \\"Bold mage cover\\"
 description: \\"Decsription\\"
 datePublished: \\"2017-01-01\\"
@@ -5435,8 +4249,6 @@ tags:
   - stuff
   - other
 ---
-
-# Quanto et ius coniunctis urbes
 
 ## Sedisti civiliter
 
@@ -6535,8 +5347,9 @@ return function MDXContent(_ref) {
 ;
 MDXContent.isMDXComponent = true;",
   "category": "moar",
-  "coverImageAlt": undefined,
-  "coverImageUrl": "5.jpg",
+  "coverImageAlt": "Cover alt",
+  "coverImageUrl": undefined,
+  "coverImg": undefined,
   "dateModified": 2018-03-01T00:00:00.000Z,
   "datePublished": 2018-03-01T00:00:00.000Z,
   "description": "Decsription",

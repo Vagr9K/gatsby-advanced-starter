@@ -83,7 +83,7 @@ describe("mdxNodeIntoPost", () => {
   });
 
   it("warns about SEO fields missing", () => {
-    expect.assertions(3);
+    expect.assertions(2);
 
     const partialMdx = cloneDeep(postQuery.mdx) as MdxNode;
 
@@ -92,15 +92,12 @@ describe("mdxNodeIntoPost", () => {
 
     // Test missing description and cover
     partialMdx.frontmatter.description = undefined;
-    partialMdx.frontmatter.cover = undefined;
 
     mdxNodeIntoPost(partialMdx);
 
-    const coverWarning = `Post missing cover image. Post slug: /big-sample-test. SEO capabilities will be limited.`;
     const descriptionWarning = `Post missing description. Post slug: /big-sample-test. SEO capabilities will be limited.`;
 
-    expect(consoleWarnSpy).toHaveBeenCalledTimes(2);
-    expect(consoleWarnSpy).toHaveBeenCalledWith(coverWarning);
+    expect(consoleWarnSpy).toHaveBeenCalledTimes(1);
     expect(consoleWarnSpy).toHaveBeenCalledWith(descriptionWarning);
   });
 });

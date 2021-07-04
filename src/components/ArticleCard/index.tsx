@@ -1,4 +1,5 @@
 import React from "react";
+import { getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import ReadButton from "./ArticleButton";
 import ArticleInfo from "../ArticleInfo";
 import { H3 } from "../../theme";
@@ -18,10 +19,16 @@ const ArticleCard = ({ post, hero }: ArticleHeroCardProps): JSX.Element => {
   // If no post is provided, render a skeleton view with a loading animation
   if (!post) return <ArticleCardSkeleton />;
 
+  if (!post.coverImg)
+    throw Error("Failed to render ArticleCard without Gatsby coverImg.");
+
   return (
     <S.Wrapper hero={hero}>
       <TransparentLink to={post.slug}>
-        <S.Cover src={post.coverImageUrl} alt={post.coverImageAlt} rounded />
+        <S.Cover
+          image={getImage(post.coverImg) as IGatsbyImageData}
+          alt={post.coverImageAlt}
+        />
       </TransparentLink>
       <S.Details hero={hero}>
         <S.Meta>

@@ -1,11 +1,13 @@
 import styled, { css } from "styled-components";
-import Image from "../shared/Image";
+
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import { Body, constants } from "../../theme";
+import { ImageShadow } from "../shared/Image";
 
 type CardStyleProps = { hero?: boolean };
 
-export const Cover = styled(Image)`
+export const Cover = styled(GatsbyImage)`
   width: 100%;
   height: 368px;
 
@@ -16,6 +18,11 @@ export const Cover = styled(Image)`
 
   @media (max-width: 440px) {
     height: 270px;
+  }
+
+  & img {
+    ${ImageShadow}
+    border-radius: 10px;
   }
 `;
 

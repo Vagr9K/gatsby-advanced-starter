@@ -336,8 +336,6 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -411,7 +409,7 @@ type SitePageContext {
 type SitePageContextRelatedPosts {
   title: String
   description: String
-  coverImageUrl: String
+  coverImg: SitePageContextRelatedPostsCoverImg
   coverImageAlt: String
   datePublished: Date
   dateModified: Date
@@ -421,6 +419,40 @@ type SitePageContextRelatedPosts {
   timeToRead: Int
   url: String
   slug: String
+}
+
+type SitePageContextRelatedPostsCoverImg {
+  gatsbyImageData: SitePageContextRelatedPostsCoverImgGatsbyImageData
+}
+
+type SitePageContextRelatedPostsCoverImgGatsbyImageData {
+  layout: String
+  placeholder: SitePageContextRelatedPostsCoverImgGatsbyImageDataPlaceholder
+  backgroundColor: String
+  images: SitePageContextRelatedPostsCoverImgGatsbyImageDataImages
+  width: Int
+  height: Int
+}
+
+type SitePageContextRelatedPostsCoverImgGatsbyImageDataPlaceholder {
+  fallback: String
+}
+
+type SitePageContextRelatedPostsCoverImgGatsbyImageDataImages {
+  fallback: SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFallback
+  sources: [SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSources]
+}
+
+type SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFallback {
+  src: String
+  srcSet: String
+  sizes: String
+}
+
+type SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSources {
+  srcSet: String
+  type: String
+  sizes: String
 }
 
 type SitePageContextFeedPageMeta {
@@ -434,7 +466,7 @@ type SitePageContextFeedPageMeta {
 type SitePageContextFeedPageMetaPosts {
   title: String
   description: String
-  coverImageUrl: String
+  coverImg: SitePageContextFeedPageMetaPostsCoverImg
   coverImageAlt: String
   datePublished: Date
   dateModified: Date
@@ -444,6 +476,40 @@ type SitePageContextFeedPageMetaPosts {
   timeToRead: Int
   url: String
   slug: String
+}
+
+type SitePageContextFeedPageMetaPostsCoverImg {
+  gatsbyImageData: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageData
+}
+
+type SitePageContextFeedPageMetaPostsCoverImgGatsbyImageData {
+  layout: String
+  placeholder: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataPlaceholder
+  backgroundColor: String
+  images: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImages
+  width: Int
+  height: Int
+}
+
+type SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataPlaceholder {
+  fallback: String
+}
+
+type SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImages {
+  fallback: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFallback
+  sources: [SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSources]
+}
+
+type SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFallback {
+  src: String
+  srcSet: String
+  sizes: String
+}
+
+type SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSources {
+  srcSet: String
+  type: String
+  sizes: String
 }
 
 enum ImageFormat {
@@ -711,10 +777,38 @@ type ImageSharpResize {
   originalName: String
 }
 
+type Mdx implements Node {
+  frontmatter: MdxFrontmatter
+  rawBody: String!
+  fileAbsolutePath: String!
+  slug: String
+  body: String!
+  excerpt(pruneLength: Int = 140, truncate: Boolean = false): String!
+  headings(depth: HeadingsMdx): [MdxHeadingMdx]
+  html: String
+  mdxAST: JSON
+  tableOfContents(maxDepth: Int): JSON
+  timeToRead: Int
+  wordCount: MdxWordCount
+  fields: MdxFields
+  id: ID!
+  parent: Node
+  children: [Node!]!
+  internal: Internal!
+}
+
+type MdxFields {
+  slug: String
+}
+
+type Frontmatter {
+  cover: File
+}
+
 type MdxFrontmatter {
   title: String!
-  cover: String
-  category: String
+  cover: File
+  coverAlt: String
   description: String
   datePublished(
     # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
@@ -742,9 +836,9 @@ type MdxFrontmatter {
     # Configures the locale Moment.js will use to format the date.
     locale: String
   ): Date
-  tags: [String]
-  coverAlt: String
+  category: String
   disqus_category_id: Int
+  tags: [String]
   slug: String
 }
 
@@ -766,50 +860,6 @@ type MdxWordCount {
   paragraphs: Int
   sentences: Int
   words: Int
-}
-
-type Mdx implements Node {
-  rawBody: String!
-  fileAbsolutePath: String!
-  frontmatter: MdxFrontmatter
-  slug: String
-  body: String!
-  excerpt(pruneLength: Int = 140, truncate: Boolean = false): String!
-  headings(depth: HeadingsMdx): [MdxHeadingMdx]
-  html: String
-  mdxAST: JSON
-  tableOfContents(maxDepth: Int): JSON
-  timeToRead: Int
-  wordCount: MdxWordCount
-  fields: MdxFields
-  id: ID!
-  parent: Node
-  children: [Node!]!
-  internal: Internal!
-}
-
-type MdxFields {
-  slug: String
-}
-
-type SiteBuildMetadata implements Node {
-  id: ID!
-  parent: Node
-  children: [Node!]!
-  internal: Internal!
-  buildTime(
-    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
-    formatString: String
-
-    # Returns a string generated with Moment.js' `fromNow` function
-    fromNow: Boolean
-
-    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
-    difference: String
-
-    # Configures the locale Moment.js will use to format the date.
-    locale: String
-  ): Date
 }
 
 type SitePlugin implements Node {
@@ -843,6 +893,24 @@ type SitePluginPluginOptions {
   pure: Boolean
   name: String
   path: String
+  defaults: SitePluginPluginOptionsDefaults
+  failOnError: Boolean
+  base64Width: Int
+  stripMetadata: Boolean
+  defaultQuality: Int
+  maxWidth: Int
+  linkImagesToOriginal: Boolean
+  showCaptions: Boolean
+  markdownCaptions: Boolean
+  sizeByPixelDensity: Boolean
+  backgroundColor: String
+  quality: Int
+  withWebp: Boolean
+  tracedSVG: Boolean
+  loading: String
+  decoding: String
+  disableBgImageOnAlpha: Boolean
+  disableBgImage: Boolean
   extensions: [String]
   gatsbyRemarkPlugins: [SitePluginPluginOptionsGatsbyRemarkPlugins]
   lessBabel: Boolean
@@ -850,10 +918,6 @@ type SitePluginPluginOptions {
   root: String
   trackingIds: [String]
   color: String
-  base64Width: Int
-  stripMetadata: Boolean
-  defaultQuality: Int
-  failOnError: Boolean
   shortname: String
   output: String
   createLinkInHead: Boolean
@@ -891,12 +955,20 @@ type SitePluginPluginOptionsEmitPluginDocuments {
   _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: Boolean
 }
 
+type SitePluginPluginOptionsDefaults {
+  formats: [String]
+  placeholder: String
+  backgroundColor: String
+}
+
 type SitePluginPluginOptionsGatsbyRemarkPlugins {
   resolve: String
   options: SitePluginPluginOptionsGatsbyRemarkPluginsOptions
 }
 
 type SitePluginPluginOptionsGatsbyRemarkPluginsOptions {
+  maxWidth: Int
+  showCaptions: [String]
   mode: String
   classPrefix: String
   showLineNumbers: Boolean
@@ -950,12 +1022,32 @@ type SitePluginPackageJsonPeerDependencies {
   version: String
 }
 
+type SiteBuildMetadata implements Node {
+  id: ID!
+  parent: Node
+  children: [Node!]!
+  internal: Internal!
+  buildTime(
+    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    formatString: String
+
+    # Returns a string generated with Moment.js' `fromNow` function
+    fromNow: Boolean
+
+    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
+    difference: String
+
+    # Configures the locale Moment.js will use to format the date.
+    locale: String
+  ): Date
+}
+
 type Query {
   file(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, publicURL: StringQueryOperatorInput, childrenImageSharp: ImageSharpFilterListInput, childImageSharp: ImageSharpFilterInput, childrenMdx: MdxFilterListInput, childMdx: MdxFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): File
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
   siteFunction(functionRoute: StringQueryOperatorInput, pluginName: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput, absoluteCompiledFilePath: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SiteFunction
   allSiteFunction(filter: SiteFunctionFilterInput, sort: SiteFunctionSortInput, skip: Int, limit: Int): SiteFunctionConnection!
@@ -963,12 +1055,12 @@ type Query {
   allSitePage(filter: SitePageFilterInput, sort: SitePageSortInput, skip: Int, limit: Int): SitePageConnection!
   imageSharp(fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, gatsbyImageData: JSONQueryOperatorInput, original: ImageSharpOriginalFilterInput, resize: ImageSharpResizeFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): ImageSharp
   allImageSharp(filter: ImageSharpFilterInput, sort: ImageSharpSortInput, skip: Int, limit: Int): ImageSharpConnection!
-  mdx(rawBody: StringQueryOperatorInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, slug: StringQueryOperatorInput, body: StringQueryOperatorInput, excerpt: StringQueryOperatorInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, mdxAST: JSONQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput, fields: MdxFieldsFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Mdx
+  mdx(frontmatter: MdxFrontmatterFilterInput, rawBody: StringQueryOperatorInput, fileAbsolutePath: StringQueryOperatorInput, slug: StringQueryOperatorInput, body: StringQueryOperatorInput, excerpt: StringQueryOperatorInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, mdxAST: JSONQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput, fields: MdxFieldsFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Mdx
   allMdx(filter: MdxFilterInput, sort: MdxSortInput, skip: Int, limit: Int): MdxConnection!
-  siteBuildMetadata(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, buildTime: DateQueryOperatorInput): SiteBuildMetadata
-  allSiteBuildMetadata(filter: SiteBuildMetadataFilterInput, sort: SiteBuildMetadataSortInput, skip: Int, limit: Int): SiteBuildMetadataConnection!
   sitePlugin(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, resolve: StringQueryOperatorInput, name: StringQueryOperatorInput, version: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, nodeAPIs: StringQueryOperatorInput, browserAPIs: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, pluginFilepath: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput): SitePlugin
   allSitePlugin(filter: SitePluginFilterInput, sort: SitePluginSortInput, skip: Int, limit: Int): SitePluginConnection!
+  siteBuildMetadata(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, buildTime: DateQueryOperatorInput): SiteBuildMetadata
+  allSiteBuildMetadata(filter: SiteBuildMetadataFilterInput, sort: SiteBuildMetadataSortInput, skip: Int, limit: Int): SiteBuildMetadataConnection!
 }
 
 input StringQueryOperatorInput {
@@ -1115,9 +1207,9 @@ input MdxFilterListInput {
 }
 
 input MdxFilterInput {
+  frontmatter: MdxFrontmatterFilterInput
   rawBody: StringQueryOperatorInput
   fileAbsolutePath: StringQueryOperatorInput
-  frontmatter: MdxFrontmatterFilterInput
   slug: StringQueryOperatorInput
   body: StringQueryOperatorInput
   excerpt: StringQueryOperatorInput
@@ -1136,15 +1228,60 @@ input MdxFilterInput {
 
 input MdxFrontmatterFilterInput {
   title: StringQueryOperatorInput
-  cover: StringQueryOperatorInput
-  category: StringQueryOperatorInput
+  cover: FileFilterInput
+  coverAlt: StringQueryOperatorInput
   description: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
-  tags: StringQueryOperatorInput
-  coverAlt: StringQueryOperatorInput
+  category: StringQueryOperatorInput
   disqus_category_id: IntQueryOperatorInput
+  tags: StringQueryOperatorInput
   slug: StringQueryOperatorInput
+}
+
+input FileFilterInput {
+  sourceInstanceName: StringQueryOperatorInput
+  absolutePath: StringQueryOperatorInput
+  relativePath: StringQueryOperatorInput
+  extension: StringQueryOperatorInput
+  size: IntQueryOperatorInput
+  prettySize: StringQueryOperatorInput
+  modifiedTime: DateQueryOperatorInput
+  accessTime: DateQueryOperatorInput
+  changeTime: DateQueryOperatorInput
+  birthTime: DateQueryOperatorInput
+  root: StringQueryOperatorInput
+  dir: StringQueryOperatorInput
+  base: StringQueryOperatorInput
+  ext: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  relativeDirectory: StringQueryOperatorInput
+  dev: IntQueryOperatorInput
+  mode: IntQueryOperatorInput
+  nlink: IntQueryOperatorInput
+  uid: IntQueryOperatorInput
+  gid: IntQueryOperatorInput
+  rdev: IntQueryOperatorInput
+  ino: FloatQueryOperatorInput
+  atimeMs: FloatQueryOperatorInput
+  mtimeMs: FloatQueryOperatorInput
+  ctimeMs: FloatQueryOperatorInput
+  atime: DateQueryOperatorInput
+  mtime: DateQueryOperatorInput
+  ctime: DateQueryOperatorInput
+  birthtime: DateQueryOperatorInput
+  birthtimeMs: FloatQueryOperatorInput
+  blksize: IntQueryOperatorInput
+  blocks: IntQueryOperatorInput
+  publicURL: StringQueryOperatorInput
+  childrenImageSharp: ImageSharpFilterListInput
+  childImageSharp: ImageSharpFilterInput
+  childrenMdx: MdxFilterListInput
+  childMdx: MdxFilterInput
+  id: StringQueryOperatorInput
+  parent: NodeFilterInput
+  children: NodeFilterListInput
+  internal: InternalFilterInput
 }
 
 input MdxHeadingMdxFilterListInput {
@@ -1371,18 +1508,55 @@ enum FileFieldsEnum {
   childImageSharp___internal___owner @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childImageSharp___internal___type @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx
-  childrenMdx___rawBody
-  childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
-  childrenMdx___frontmatter___cover
-  childrenMdx___frontmatter___category
+  childrenMdx___frontmatter___cover___sourceInstanceName
+  childrenMdx___frontmatter___cover___absolutePath
+  childrenMdx___frontmatter___cover___relativePath
+  childrenMdx___frontmatter___cover___extension
+  childrenMdx___frontmatter___cover___size
+  childrenMdx___frontmatter___cover___prettySize
+  childrenMdx___frontmatter___cover___modifiedTime
+  childrenMdx___frontmatter___cover___accessTime
+  childrenMdx___frontmatter___cover___changeTime
+  childrenMdx___frontmatter___cover___birthTime
+  childrenMdx___frontmatter___cover___root
+  childrenMdx___frontmatter___cover___dir
+  childrenMdx___frontmatter___cover___base
+  childrenMdx___frontmatter___cover___ext
+  childrenMdx___frontmatter___cover___name
+  childrenMdx___frontmatter___cover___relativeDirectory
+  childrenMdx___frontmatter___cover___dev
+  childrenMdx___frontmatter___cover___mode
+  childrenMdx___frontmatter___cover___nlink
+  childrenMdx___frontmatter___cover___uid
+  childrenMdx___frontmatter___cover___gid
+  childrenMdx___frontmatter___cover___rdev
+  childrenMdx___frontmatter___cover___ino
+  childrenMdx___frontmatter___cover___atimeMs
+  childrenMdx___frontmatter___cover___mtimeMs
+  childrenMdx___frontmatter___cover___ctimeMs
+  childrenMdx___frontmatter___cover___atime
+  childrenMdx___frontmatter___cover___mtime
+  childrenMdx___frontmatter___cover___ctime
+  childrenMdx___frontmatter___cover___birthtime
+  childrenMdx___frontmatter___cover___birthtimeMs
+  childrenMdx___frontmatter___cover___blksize
+  childrenMdx___frontmatter___cover___blocks
+  childrenMdx___frontmatter___cover___publicURL
+  childrenMdx___frontmatter___cover___childrenImageSharp
+  childrenMdx___frontmatter___cover___childrenMdx
+  childrenMdx___frontmatter___cover___id
+  childrenMdx___frontmatter___cover___children
+  childrenMdx___frontmatter___coverAlt
   childrenMdx___frontmatter___description
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
-  childrenMdx___frontmatter___tags
-  childrenMdx___frontmatter___coverAlt
+  childrenMdx___frontmatter___category
   childrenMdx___frontmatter___disqus_category_id
+  childrenMdx___frontmatter___tags
   childrenMdx___frontmatter___slug
+  childrenMdx___rawBody
+  childrenMdx___fileAbsolutePath
   childrenMdx___slug
   childrenMdx___body
   childrenMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1435,18 +1609,55 @@ enum FileFieldsEnum {
   childrenMdx___internal___mediaType @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___internal___owner @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___internal___type @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
-  childMdx___rawBody
-  childMdx___fileAbsolutePath
   childMdx___frontmatter___title
-  childMdx___frontmatter___cover
-  childMdx___frontmatter___category
+  childMdx___frontmatter___cover___sourceInstanceName
+  childMdx___frontmatter___cover___absolutePath
+  childMdx___frontmatter___cover___relativePath
+  childMdx___frontmatter___cover___extension
+  childMdx___frontmatter___cover___size
+  childMdx___frontmatter___cover___prettySize
+  childMdx___frontmatter___cover___modifiedTime
+  childMdx___frontmatter___cover___accessTime
+  childMdx___frontmatter___cover___changeTime
+  childMdx___frontmatter___cover___birthTime
+  childMdx___frontmatter___cover___root
+  childMdx___frontmatter___cover___dir
+  childMdx___frontmatter___cover___base
+  childMdx___frontmatter___cover___ext
+  childMdx___frontmatter___cover___name
+  childMdx___frontmatter___cover___relativeDirectory
+  childMdx___frontmatter___cover___dev
+  childMdx___frontmatter___cover___mode
+  childMdx___frontmatter___cover___nlink
+  childMdx___frontmatter___cover___uid
+  childMdx___frontmatter___cover___gid
+  childMdx___frontmatter___cover___rdev
+  childMdx___frontmatter___cover___ino
+  childMdx___frontmatter___cover___atimeMs
+  childMdx___frontmatter___cover___mtimeMs
+  childMdx___frontmatter___cover___ctimeMs
+  childMdx___frontmatter___cover___atime
+  childMdx___frontmatter___cover___mtime
+  childMdx___frontmatter___cover___ctime
+  childMdx___frontmatter___cover___birthtime
+  childMdx___frontmatter___cover___birthtimeMs
+  childMdx___frontmatter___cover___blksize
+  childMdx___frontmatter___cover___blocks
+  childMdx___frontmatter___cover___publicURL
+  childMdx___frontmatter___cover___childrenImageSharp
+  childMdx___frontmatter___cover___childrenMdx
+  childMdx___frontmatter___cover___id
+  childMdx___frontmatter___cover___children
+  childMdx___frontmatter___coverAlt
   childMdx___frontmatter___description
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
-  childMdx___frontmatter___tags
-  childMdx___frontmatter___coverAlt
+  childMdx___frontmatter___category
   childMdx___frontmatter___disqus_category_id
+  childMdx___frontmatter___tags
   childMdx___frontmatter___slug
+  childMdx___rawBody
+  childMdx___fileAbsolutePath
   childMdx___slug
   childMdx___body
   childMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1594,51 +1805,6 @@ type FileGroupConnection {
   pageInfo: PageInfo!
   field: String!
   fieldValue: String
-}
-
-input FileFilterInput {
-  sourceInstanceName: StringQueryOperatorInput
-  absolutePath: StringQueryOperatorInput
-  relativePath: StringQueryOperatorInput
-  extension: StringQueryOperatorInput
-  size: IntQueryOperatorInput
-  prettySize: StringQueryOperatorInput
-  modifiedTime: DateQueryOperatorInput
-  accessTime: DateQueryOperatorInput
-  changeTime: DateQueryOperatorInput
-  birthTime: DateQueryOperatorInput
-  root: StringQueryOperatorInput
-  dir: StringQueryOperatorInput
-  base: StringQueryOperatorInput
-  ext: StringQueryOperatorInput
-  name: StringQueryOperatorInput
-  relativeDirectory: StringQueryOperatorInput
-  dev: IntQueryOperatorInput
-  mode: IntQueryOperatorInput
-  nlink: IntQueryOperatorInput
-  uid: IntQueryOperatorInput
-  gid: IntQueryOperatorInput
-  rdev: IntQueryOperatorInput
-  ino: FloatQueryOperatorInput
-  atimeMs: FloatQueryOperatorInput
-  mtimeMs: FloatQueryOperatorInput
-  ctimeMs: FloatQueryOperatorInput
-  atime: DateQueryOperatorInput
-  mtime: DateQueryOperatorInput
-  ctime: DateQueryOperatorInput
-  birthtime: DateQueryOperatorInput
-  birthtimeMs: FloatQueryOperatorInput
-  blksize: IntQueryOperatorInput
-  blocks: IntQueryOperatorInput
-  publicURL: StringQueryOperatorInput
-  childrenImageSharp: ImageSharpFilterListInput
-  childImageSharp: ImageSharpFilterInput
-  childrenMdx: MdxFilterListInput
-  childMdx: MdxFilterInput
-  id: StringQueryOperatorInput
-  parent: NodeFilterInput
-  children: NodeFilterListInput
-  internal: InternalFilterInput
 }
 
 input FileSortInput {
@@ -1890,8 +2056,6 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
-  port
-  host
   pathPrefix
   polyfill
   id
@@ -1994,8 +2158,6 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
-  port: IntQueryOperatorInput
-  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -2174,7 +2336,7 @@ input SitePageContextRelatedPostsFilterListInput {
 input SitePageContextRelatedPostsFilterInput {
   title: StringQueryOperatorInput
   description: StringQueryOperatorInput
-  coverImageUrl: StringQueryOperatorInput
+  coverImg: SitePageContextRelatedPostsCoverImgFilterInput
   coverImageAlt: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
@@ -2184,6 +2346,44 @@ input SitePageContextRelatedPostsFilterInput {
   timeToRead: IntQueryOperatorInput
   url: StringQueryOperatorInput
   slug: StringQueryOperatorInput
+}
+
+input SitePageContextRelatedPostsCoverImgFilterInput {
+  gatsbyImageData: SitePageContextRelatedPostsCoverImgGatsbyImageDataFilterInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataFilterInput {
+  layout: StringQueryOperatorInput
+  placeholder: SitePageContextRelatedPostsCoverImgGatsbyImageDataPlaceholderFilterInput
+  backgroundColor: StringQueryOperatorInput
+  images: SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFilterInput
+  width: IntQueryOperatorInput
+  height: IntQueryOperatorInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataPlaceholderFilterInput {
+  fallback: StringQueryOperatorInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFilterInput {
+  fallback: SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFallbackFilterInput
+  sources: SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSourcesFilterListInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesFallbackFilterInput {
+  src: StringQueryOperatorInput
+  srcSet: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSourcesFilterListInput {
+  elemMatch: SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSourcesFilterInput
+}
+
+input SitePageContextRelatedPostsCoverImgGatsbyImageDataImagesSourcesFilterInput {
+  srcSet: StringQueryOperatorInput
+  type: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
 }
 
 input SitePageContextFeedPageMetaFilterInput {
@@ -2201,7 +2401,7 @@ input SitePageContextFeedPageMetaPostsFilterListInput {
 input SitePageContextFeedPageMetaPostsFilterInput {
   title: StringQueryOperatorInput
   description: StringQueryOperatorInput
-  coverImageUrl: StringQueryOperatorInput
+  coverImg: SitePageContextFeedPageMetaPostsCoverImgFilterInput
   coverImageAlt: StringQueryOperatorInput
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
@@ -2211,6 +2411,44 @@ input SitePageContextFeedPageMetaPostsFilterInput {
   timeToRead: IntQueryOperatorInput
   url: StringQueryOperatorInput
   slug: StringQueryOperatorInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgFilterInput {
+  gatsbyImageData: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataFilterInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataFilterInput {
+  layout: StringQueryOperatorInput
+  placeholder: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataPlaceholderFilterInput
+  backgroundColor: StringQueryOperatorInput
+  images: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFilterInput
+  width: IntQueryOperatorInput
+  height: IntQueryOperatorInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataPlaceholderFilterInput {
+  fallback: StringQueryOperatorInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFilterInput {
+  fallback: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFallbackFilterInput
+  sources: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSourcesFilterListInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesFallbackFilterInput {
+  src: StringQueryOperatorInput
+  srcSet: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSourcesFilterListInput {
+  elemMatch: SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSourcesFilterInput
+}
+
+input SitePageContextFeedPageMetaPostsCoverImgGatsbyImageDataImagesSourcesFilterInput {
+  srcSet: StringQueryOperatorInput
+  type: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
 }
 
 input SitePluginFilterInput {
@@ -2244,6 +2482,24 @@ input SitePluginPluginOptionsFilterInput {
   pure: BooleanQueryOperatorInput
   name: StringQueryOperatorInput
   path: StringQueryOperatorInput
+  defaults: SitePluginPluginOptionsDefaultsFilterInput
+  failOnError: BooleanQueryOperatorInput
+  base64Width: IntQueryOperatorInput
+  stripMetadata: BooleanQueryOperatorInput
+  defaultQuality: IntQueryOperatorInput
+  maxWidth: IntQueryOperatorInput
+  linkImagesToOriginal: BooleanQueryOperatorInput
+  showCaptions: BooleanQueryOperatorInput
+  markdownCaptions: BooleanQueryOperatorInput
+  sizeByPixelDensity: BooleanQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
+  quality: IntQueryOperatorInput
+  withWebp: BooleanQueryOperatorInput
+  tracedSVG: BooleanQueryOperatorInput
+  loading: StringQueryOperatorInput
+  decoding: StringQueryOperatorInput
+  disableBgImageOnAlpha: BooleanQueryOperatorInput
+  disableBgImage: BooleanQueryOperatorInput
   extensions: StringQueryOperatorInput
   gatsbyRemarkPlugins: SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
   lessBabel: BooleanQueryOperatorInput
@@ -2251,10 +2507,6 @@ input SitePluginPluginOptionsFilterInput {
   root: StringQueryOperatorInput
   trackingIds: StringQueryOperatorInput
   color: StringQueryOperatorInput
-  base64Width: IntQueryOperatorInput
-  stripMetadata: BooleanQueryOperatorInput
-  defaultQuality: IntQueryOperatorInput
-  failOnError: BooleanQueryOperatorInput
   shortname: StringQueryOperatorInput
   output: StringQueryOperatorInput
   createLinkInHead: BooleanQueryOperatorInput
@@ -2292,6 +2544,12 @@ input SitePluginPluginOptionsEmitPluginDocumentsFilterInput {
   _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: BooleanQueryOperatorInput
 }
 
+input SitePluginPluginOptionsDefaultsFilterInput {
+  formats: StringQueryOperatorInput
+  placeholder: StringQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
+}
+
 input SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput {
   elemMatch: SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput
 }
@@ -2302,6 +2560,8 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsFilterInput {
 }
 
 input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsFilterInput {
+  maxWidth: IntQueryOperatorInput
+  showCaptions: StringQueryOperatorInput
   mode: StringQueryOperatorInput
   classPrefix: StringQueryOperatorInput
   showLineNumbers: BooleanQueryOperatorInput
@@ -2494,7 +2754,6 @@ enum SitePageFieldsEnum {
   context___relatedPosts
   context___relatedPosts___title
   context___relatedPosts___description
-  context___relatedPosts___coverImageUrl
   context___relatedPosts___coverImageAlt
   context___relatedPosts___datePublished
   context___relatedPosts___dateModified
@@ -2517,7 +2776,6 @@ enum SitePageFieldsEnum {
   context___feedPageMeta___posts
   context___feedPageMeta___posts___title
   context___feedPageMeta___posts___description
-  context___feedPageMeta___posts___coverImageUrl
   context___feedPageMeta___posts___coverImageAlt
   context___feedPageMeta___posts___datePublished
   context___feedPageMeta___posts___dateModified
@@ -2583,6 +2841,26 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___pure
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___path
+  pluginCreator___pluginOptions___defaults___formats
+  pluginCreator___pluginOptions___defaults___placeholder
+  pluginCreator___pluginOptions___defaults___backgroundColor
+  pluginCreator___pluginOptions___failOnError
+  pluginCreator___pluginOptions___base64Width
+  pluginCreator___pluginOptions___stripMetadata
+  pluginCreator___pluginOptions___defaultQuality
+  pluginCreator___pluginOptions___maxWidth
+  pluginCreator___pluginOptions___linkImagesToOriginal
+  pluginCreator___pluginOptions___showCaptions
+  pluginCreator___pluginOptions___markdownCaptions
+  pluginCreator___pluginOptions___sizeByPixelDensity
+  pluginCreator___pluginOptions___backgroundColor
+  pluginCreator___pluginOptions___quality
+  pluginCreator___pluginOptions___withWebp
+  pluginCreator___pluginOptions___tracedSVG
+  pluginCreator___pluginOptions___loading
+  pluginCreator___pluginOptions___decoding
+  pluginCreator___pluginOptions___disableBgImageOnAlpha
+  pluginCreator___pluginOptions___disableBgImage
   pluginCreator___pluginOptions___extensions
   pluginCreator___pluginOptions___gatsbyRemarkPlugins
   pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve
@@ -2591,10 +2869,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___root
   pluginCreator___pluginOptions___trackingIds
   pluginCreator___pluginOptions___color
-  pluginCreator___pluginOptions___base64Width
-  pluginCreator___pluginOptions___stripMetadata
-  pluginCreator___pluginOptions___defaultQuality
-  pluginCreator___pluginOptions___failOnError
   pluginCreator___pluginOptions___shortname
   pluginCreator___pluginOptions___output
   pluginCreator___pluginOptions___createLinkInHead
@@ -2852,18 +3126,97 @@ type MdxEdge {
 }
 
 enum MdxFieldsEnum {
-  rawBody
-  fileAbsolutePath
   frontmatter___title
-  frontmatter___cover
-  frontmatter___category
+  frontmatter___cover___sourceInstanceName
+  frontmatter___cover___absolutePath
+  frontmatter___cover___relativePath
+  frontmatter___cover___extension
+  frontmatter___cover___size
+  frontmatter___cover___prettySize
+  frontmatter___cover___modifiedTime
+  frontmatter___cover___accessTime
+  frontmatter___cover___changeTime
+  frontmatter___cover___birthTime
+  frontmatter___cover___root
+  frontmatter___cover___dir
+  frontmatter___cover___base
+  frontmatter___cover___ext
+  frontmatter___cover___name
+  frontmatter___cover___relativeDirectory
+  frontmatter___cover___dev
+  frontmatter___cover___mode
+  frontmatter___cover___nlink
+  frontmatter___cover___uid
+  frontmatter___cover___gid
+  frontmatter___cover___rdev
+  frontmatter___cover___ino
+  frontmatter___cover___atimeMs
+  frontmatter___cover___mtimeMs
+  frontmatter___cover___ctimeMs
+  frontmatter___cover___atime
+  frontmatter___cover___mtime
+  frontmatter___cover___ctime
+  frontmatter___cover___birthtime
+  frontmatter___cover___birthtimeMs
+  frontmatter___cover___blksize
+  frontmatter___cover___blocks
+  frontmatter___cover___publicURL
+  frontmatter___cover___childrenImageSharp
+  frontmatter___cover___childrenImageSharp___gatsbyImageData @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenImageSharp___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenImageSharp___children @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childImageSharp___gatsbyImageData @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childImageSharp___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childImageSharp___children @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx
+  frontmatter___cover___childrenMdx___rawBody
+  frontmatter___cover___childrenMdx___fileAbsolutePath
+  frontmatter___cover___childrenMdx___slug
+  frontmatter___cover___childrenMdx___body
+  frontmatter___cover___childrenMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___headings @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___html @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___mdxAST @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___tableOfContents @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___timeToRead @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childrenMdx___children @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___rawBody
+  frontmatter___cover___childMdx___fileAbsolutePath
+  frontmatter___cover___childMdx___slug
+  frontmatter___cover___childMdx___body
+  frontmatter___cover___childMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___headings @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___html @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___mdxAST @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___tableOfContents @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___timeToRead @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___childMdx___children @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  frontmatter___cover___id
+  frontmatter___cover___parent___id
+  frontmatter___cover___parent___children
+  frontmatter___cover___children
+  frontmatter___cover___children___id
+  frontmatter___cover___children___children
+  frontmatter___cover___internal___content
+  frontmatter___cover___internal___contentDigest
+  frontmatter___cover___internal___description
+  frontmatter___cover___internal___fieldOwners
+  frontmatter___cover___internal___ignoreType
+  frontmatter___cover___internal___mediaType
+  frontmatter___cover___internal___owner
+  frontmatter___cover___internal___type
+  frontmatter___coverAlt
   frontmatter___description
   frontmatter___datePublished
   frontmatter___dateModified
-  frontmatter___tags
-  frontmatter___coverAlt
+  frontmatter___category
   frontmatter___disqus_category_id
+  frontmatter___tags
   frontmatter___slug
+  rawBody
+  fileAbsolutePath
   slug
   body
   excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2977,6 +3330,231 @@ type MdxGroupConnection {
 
 input MdxSortInput {
   fields: [MdxFieldsEnum]
+  order: [SortOrderEnum] = [ASC]
+}
+
+type SitePluginConnection {
+  totalCount: Int!
+  edges: [SitePluginEdge!]!
+  nodes: [SitePlugin!]!
+  pageInfo: PageInfo!
+  distinct(field: SitePluginFieldsEnum!): [String!]!
+  max(field: SitePluginFieldsEnum!): Float
+  min(field: SitePluginFieldsEnum!): Float
+  sum(field: SitePluginFieldsEnum!): Float
+  group(skip: Int, limit: Int, field: SitePluginFieldsEnum!): [SitePluginGroupConnection!]!
+}
+
+type SitePluginEdge {
+  next: SitePlugin
+  node: SitePlugin!
+  previous: SitePlugin
+}
+
+enum SitePluginFieldsEnum {
+  id
+  parent___id
+  parent___parent___id
+  parent___parent___parent___id
+  parent___parent___parent___children
+  parent___parent___children
+  parent___parent___children___id
+  parent___parent___children___children
+  parent___parent___internal___content
+  parent___parent___internal___contentDigest
+  parent___parent___internal___description
+  parent___parent___internal___fieldOwners
+  parent___parent___internal___ignoreType
+  parent___parent___internal___mediaType
+  parent___parent___internal___owner
+  parent___parent___internal___type
+  parent___children
+  parent___children___id
+  parent___children___parent___id
+  parent___children___parent___children
+  parent___children___children
+  parent___children___children___id
+  parent___children___children___children
+  parent___children___internal___content
+  parent___children___internal___contentDigest
+  parent___children___internal___description
+  parent___children___internal___fieldOwners
+  parent___children___internal___ignoreType
+  parent___children___internal___mediaType
+  parent___children___internal___owner
+  parent___children___internal___type
+  parent___internal___content
+  parent___internal___contentDigest
+  parent___internal___description
+  parent___internal___fieldOwners
+  parent___internal___ignoreType
+  parent___internal___mediaType
+  parent___internal___owner
+  parent___internal___type
+  children
+  children___id
+  children___parent___id
+  children___parent___parent___id
+  children___parent___parent___children
+  children___parent___children
+  children___parent___children___id
+  children___parent___children___children
+  children___parent___internal___content
+  children___parent___internal___contentDigest
+  children___parent___internal___description
+  children___parent___internal___fieldOwners
+  children___parent___internal___ignoreType
+  children___parent___internal___mediaType
+  children___parent___internal___owner
+  children___parent___internal___type
+  children___children
+  children___children___id
+  children___children___parent___id
+  children___children___parent___children
+  children___children___children
+  children___children___children___id
+  children___children___children___children
+  children___children___internal___content
+  children___children___internal___contentDigest
+  children___children___internal___description
+  children___children___internal___fieldOwners
+  children___children___internal___ignoreType
+  children___children___internal___mediaType
+  children___children___internal___owner
+  children___children___internal___type
+  children___internal___content
+  children___internal___contentDigest
+  children___internal___description
+  children___internal___fieldOwners
+  children___internal___ignoreType
+  children___internal___mediaType
+  children___internal___owner
+  children___internal___type
+  internal___content
+  internal___contentDigest
+  internal___description
+  internal___fieldOwners
+  internal___ignoreType
+  internal___mediaType
+  internal___owner
+  internal___type
+  resolve
+  name
+  version
+  pluginOptions___isTSX
+  pluginOptions___jsxPragma
+  pluginOptions___allExtensions
+  pluginOptions___outputPath
+  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxschemaxgraphql
+  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxintrospectionxjson
+  pluginOptions___emitPluginDocuments____xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql
+  pluginOptions___displayName
+  pluginOptions___fileName
+  pluginOptions___minify
+  pluginOptions___namespace
+  pluginOptions___transpileTemplateLiterals
+  pluginOptions___pure
+  pluginOptions___name
+  pluginOptions___path
+  pluginOptions___defaults___formats
+  pluginOptions___defaults___placeholder
+  pluginOptions___defaults___backgroundColor
+  pluginOptions___failOnError
+  pluginOptions___base64Width
+  pluginOptions___stripMetadata
+  pluginOptions___defaultQuality
+  pluginOptions___maxWidth
+  pluginOptions___linkImagesToOriginal
+  pluginOptions___showCaptions
+  pluginOptions___markdownCaptions
+  pluginOptions___sizeByPixelDensity
+  pluginOptions___backgroundColor
+  pluginOptions___quality
+  pluginOptions___withWebp
+  pluginOptions___tracedSVG
+  pluginOptions___loading
+  pluginOptions___decoding
+  pluginOptions___disableBgImageOnAlpha
+  pluginOptions___disableBgImage
+  pluginOptions___extensions
+  pluginOptions___gatsbyRemarkPlugins
+  pluginOptions___gatsbyRemarkPlugins___resolve
+  pluginOptions___gatsbyRemarkPlugins___options___maxWidth
+  pluginOptions___gatsbyRemarkPlugins___options___showCaptions
+  pluginOptions___gatsbyRemarkPlugins___options___mode
+  pluginOptions___gatsbyRemarkPlugins___options___classPrefix
+  pluginOptions___gatsbyRemarkPlugins___options___showLineNumbers
+  pluginOptions___gatsbyRemarkPlugins___options___noInlineHighlight
+  pluginOptions___lessBabel
+  pluginOptions___mediaTypes
+  pluginOptions___root
+  pluginOptions___trackingIds
+  pluginOptions___color
+  pluginOptions___shortname
+  pluginOptions___output
+  pluginOptions___createLinkInHead
+  pluginOptions___entryLimit
+  pluginOptions___query
+  pluginOptions___short_name
+  pluginOptions___description
+  pluginOptions___start_url
+  pluginOptions___background_color
+  pluginOptions___theme_color
+  pluginOptions___display
+  pluginOptions___icons
+  pluginOptions___icons___src
+  pluginOptions___icons___sizes
+  pluginOptions___icons___type
+  pluginOptions___legacy
+  pluginOptions___theme_color_in_head
+  pluginOptions___cache_busting_mode
+  pluginOptions___crossOrigin
+  pluginOptions___include_favicon
+  pluginOptions___modulePath
+  pluginOptions___enableIdentityWidget
+  pluginOptions___publicPath
+  pluginOptions___htmlTitle
+  pluginOptions___includeRobots
+  pluginOptions___feeds
+  pluginOptions___feeds___query
+  pluginOptions___feeds___output
+  pluginOptions___feeds___title
+  pluginOptions___feeds___site_url
+  pluginOptions___configDir
+  pluginOptions___projectRoot
+  pluginOptions___pathCheck
+  nodeAPIs
+  browserAPIs
+  ssrAPIs
+  pluginFilepath
+  packageJson___name
+  packageJson___description
+  packageJson___version
+  packageJson___main
+  packageJson___license
+  packageJson___dependencies
+  packageJson___dependencies___name
+  packageJson___dependencies___version
+  packageJson___devDependencies
+  packageJson___devDependencies___name
+  packageJson___devDependencies___version
+  packageJson___peerDependencies
+  packageJson___peerDependencies___name
+  packageJson___peerDependencies___version
+  packageJson___keywords
+}
+
+type SitePluginGroupConnection {
+  totalCount: Int!
+  edges: [SitePluginEdge!]!
+  nodes: [SitePlugin!]!
+  pageInfo: PageInfo!
+  field: String!
+  fieldValue: String
+}
+
+input SitePluginSortInput {
+  fields: [SitePluginFieldsEnum]
   order: [SortOrderEnum] = [ASC]
 }
 
@@ -3107,212 +3685,5 @@ input SiteBuildMetadataFilterInput {
 
 input SiteBuildMetadataSortInput {
   fields: [SiteBuildMetadataFieldsEnum]
-  order: [SortOrderEnum] = [ASC]
-}
-
-type SitePluginConnection {
-  totalCount: Int!
-  edges: [SitePluginEdge!]!
-  nodes: [SitePlugin!]!
-  pageInfo: PageInfo!
-  distinct(field: SitePluginFieldsEnum!): [String!]!
-  max(field: SitePluginFieldsEnum!): Float
-  min(field: SitePluginFieldsEnum!): Float
-  sum(field: SitePluginFieldsEnum!): Float
-  group(skip: Int, limit: Int, field: SitePluginFieldsEnum!): [SitePluginGroupConnection!]!
-}
-
-type SitePluginEdge {
-  next: SitePlugin
-  node: SitePlugin!
-  previous: SitePlugin
-}
-
-enum SitePluginFieldsEnum {
-  id
-  parent___id
-  parent___parent___id
-  parent___parent___parent___id
-  parent___parent___parent___children
-  parent___parent___children
-  parent___parent___children___id
-  parent___parent___children___children
-  parent___parent___internal___content
-  parent___parent___internal___contentDigest
-  parent___parent___internal___description
-  parent___parent___internal___fieldOwners
-  parent___parent___internal___ignoreType
-  parent___parent___internal___mediaType
-  parent___parent___internal___owner
-  parent___parent___internal___type
-  parent___children
-  parent___children___id
-  parent___children___parent___id
-  parent___children___parent___children
-  parent___children___children
-  parent___children___children___id
-  parent___children___children___children
-  parent___children___internal___content
-  parent___children___internal___contentDigest
-  parent___children___internal___description
-  parent___children___internal___fieldOwners
-  parent___children___internal___ignoreType
-  parent___children___internal___mediaType
-  parent___children___internal___owner
-  parent___children___internal___type
-  parent___internal___content
-  parent___internal___contentDigest
-  parent___internal___description
-  parent___internal___fieldOwners
-  parent___internal___ignoreType
-  parent___internal___mediaType
-  parent___internal___owner
-  parent___internal___type
-  children
-  children___id
-  children___parent___id
-  children___parent___parent___id
-  children___parent___parent___children
-  children___parent___children
-  children___parent___children___id
-  children___parent___children___children
-  children___parent___internal___content
-  children___parent___internal___contentDigest
-  children___parent___internal___description
-  children___parent___internal___fieldOwners
-  children___parent___internal___ignoreType
-  children___parent___internal___mediaType
-  children___parent___internal___owner
-  children___parent___internal___type
-  children___children
-  children___children___id
-  children___children___parent___id
-  children___children___parent___children
-  children___children___children
-  children___children___children___id
-  children___children___children___children
-  children___children___internal___content
-  children___children___internal___contentDigest
-  children___children___internal___description
-  children___children___internal___fieldOwners
-  children___children___internal___ignoreType
-  children___children___internal___mediaType
-  children___children___internal___owner
-  children___children___internal___type
-  children___internal___content
-  children___internal___contentDigest
-  children___internal___description
-  children___internal___fieldOwners
-  children___internal___ignoreType
-  children___internal___mediaType
-  children___internal___owner
-  children___internal___type
-  internal___content
-  internal___contentDigest
-  internal___description
-  internal___fieldOwners
-  internal___ignoreType
-  internal___mediaType
-  internal___owner
-  internal___type
-  resolve
-  name
-  version
-  pluginOptions___isTSX
-  pluginOptions___jsxPragma
-  pluginOptions___allExtensions
-  pluginOptions___outputPath
-  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxschemaxgraphql
-  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxintrospectionxjson
-  pluginOptions___emitPluginDocuments____xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql
-  pluginOptions___displayName
-  pluginOptions___fileName
-  pluginOptions___minify
-  pluginOptions___namespace
-  pluginOptions___transpileTemplateLiterals
-  pluginOptions___pure
-  pluginOptions___name
-  pluginOptions___path
-  pluginOptions___extensions
-  pluginOptions___gatsbyRemarkPlugins
-  pluginOptions___gatsbyRemarkPlugins___resolve
-  pluginOptions___gatsbyRemarkPlugins___options___mode
-  pluginOptions___gatsbyRemarkPlugins___options___classPrefix
-  pluginOptions___gatsbyRemarkPlugins___options___showLineNumbers
-  pluginOptions___gatsbyRemarkPlugins___options___noInlineHighlight
-  pluginOptions___lessBabel
-  pluginOptions___mediaTypes
-  pluginOptions___root
-  pluginOptions___trackingIds
-  pluginOptions___color
-  pluginOptions___base64Width
-  pluginOptions___stripMetadata
-  pluginOptions___defaultQuality
-  pluginOptions___failOnError
-  pluginOptions___shortname
-  pluginOptions___output
-  pluginOptions___createLinkInHead
-  pluginOptions___entryLimit
-  pluginOptions___query
-  pluginOptions___short_name
-  pluginOptions___description
-  pluginOptions___start_url
-  pluginOptions___background_color
-  pluginOptions___theme_color
-  pluginOptions___display
-  pluginOptions___icons
-  pluginOptions___icons___src
-  pluginOptions___icons___sizes
-  pluginOptions___icons___type
-  pluginOptions___legacy
-  pluginOptions___theme_color_in_head
-  pluginOptions___cache_busting_mode
-  pluginOptions___crossOrigin
-  pluginOptions___include_favicon
-  pluginOptions___modulePath
-  pluginOptions___enableIdentityWidget
-  pluginOptions___publicPath
-  pluginOptions___htmlTitle
-  pluginOptions___includeRobots
-  pluginOptions___feeds
-  pluginOptions___feeds___query
-  pluginOptions___feeds___output
-  pluginOptions___feeds___title
-  pluginOptions___feeds___site_url
-  pluginOptions___configDir
-  pluginOptions___projectRoot
-  pluginOptions___pathCheck
-  nodeAPIs
-  browserAPIs
-  ssrAPIs
-  pluginFilepath
-  packageJson___name
-  packageJson___description
-  packageJson___version
-  packageJson___main
-  packageJson___license
-  packageJson___dependencies
-  packageJson___dependencies___name
-  packageJson___dependencies___version
-  packageJson___devDependencies
-  packageJson___devDependencies___name
-  packageJson___devDependencies___version
-  packageJson___peerDependencies
-  packageJson___peerDependencies___name
-  packageJson___peerDependencies___version
-  packageJson___keywords
-}
-
-type SitePluginGroupConnection {
-  totalCount: Int!
-  edges: [SitePluginEdge!]!
-  nodes: [SitePlugin!]!
-  pageInfo: PageInfo!
-  field: String!
-  fieldValue: String
-}
-
-input SitePluginSortInput {
-  fields: [SitePluginFieldsEnum]
   order: [SortOrderEnum] = [ASC]
 }

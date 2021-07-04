@@ -53,7 +53,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        cover
+        cover {
+          publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         coverAlt
         datePublished
         dateModified

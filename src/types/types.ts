@@ -1,3 +1,5 @@
+import { IGatsbyImageData, ImageDataLike } from "gatsby-plugin-image";
+
 export type MdxListingQuery = {
   readonly allMdx: {
     readonly edges: ReadonlyArray<{
@@ -11,13 +13,19 @@ export type MdxListingQuery = {
             GatsbyTypes.MdxFrontmatter,
             | "title"
             | "description"
-            | "cover"
             | "coverAlt"
             | "tags"
             | "category"
             | "datePublished"
             | "dateModified"
-          >
+          > & {
+            readonly cover?: Pick<GatsbyTypes.File, "publicURL"> & {
+              readonly childImageSharp?: Pick<
+                GatsbyTypes.ImageSharp,
+                "gatsbyImageData"
+              >;
+            };
+          }
         >;
         readonly internal: Pick<GatsbyTypes.Internal, "content">;
       };
@@ -38,7 +46,10 @@ export type MdxNode = {
     title: string;
     description?: string;
 
-    cover?: string;
+    cover?: {
+      publicUrl?: string;
+      childImageSharp?: IGatsbyImageData;
+    };
     coverAlt?: string;
 
     category?: string;
@@ -58,8 +69,9 @@ export type Post = {
   title: string;
 
   description?: string;
+  coverImg?: ImageDataLike;
   coverImageUrl?: string;
-  coverImageAlt?: string;
+  coverImageAlt: string;
 
   datePublished: Date;
   dateModified: Date;
@@ -84,8 +96,9 @@ export type PostFromJson = {
   title: string;
 
   description?: string;
+  coverImg: ImageDataLike;
   coverImageUrl?: string;
-  coverImageAlt?: string;
+  coverImageAlt: string;
 
   datePublished: string;
   dateModified: string;

@@ -53,10 +53,17 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     );
 
   if (!frontmatter.cover)
-    console.warn(
+    throw Error(
       `Post missing cover image. Post slug: ${
         mdxNode.fields?.slug || "not defined"
-      }. SEO capabilities will be limited.`
+      }. Aborting.`
+    );
+
+  if (!frontmatter.coverAlt)
+    throw Error(
+      `Post missing cover alt. Post slug: ${
+        mdxNode.fields?.slug || "not defined"
+      }. Aborting.`
     );
 
   if (!frontmatter.description)
@@ -78,7 +85,8 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     title: frontmatter.title,
 
     description: frontmatter.description,
-    coverImageUrl: frontmatter.cover,
+    coverImg: frontmatter.cover.childImageSharp,
+    coverImageUrl: frontmatter.cover.publicUrl,
     coverImageAlt: frontmatter.coverAlt,
 
     datePublished: new Date(frontmatter.datePublished),
@@ -129,6 +137,7 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     title,
     url,
     category,
+    coverImg,
     coverImageAlt,
     coverImageUrl,
     description,
@@ -141,6 +150,7 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     title,
 
     description,
+    coverImg,
     coverImageUrl,
     coverImageAlt,
 

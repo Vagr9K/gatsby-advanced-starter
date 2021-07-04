@@ -1,0 +1,108 @@
+fragment GatsbyImageSharpFixed on ImageSharpFixed {
+  base64
+  width
+  height
+  src
+  srcSet
+}
+
+fragment GatsbyImageSharpFixed_tracedSVG on ImageSharpFixed {
+  tracedSVG
+  width
+  height
+  src
+  srcSet
+}
+
+fragment GatsbyImageSharpFixed_withWebp on ImageSharpFixed {
+  base64
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+
+fragment GatsbyImageSharpFixed_withWebp_tracedSVG on ImageSharpFixed {
+  tracedSVG
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+
+fragment GatsbyImageSharpFixed_noBase64 on ImageSharpFixed {
+  width
+  height
+  src
+  srcSet
+}
+
+fragment GatsbyImageSharpFixed_withWebp_noBase64 on ImageSharpFixed {
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+
+fragment GatsbyImageSharpFluid on ImageSharpFluid {
+  base64
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+
+fragment GatsbyImageSharpFluidLimitPresentationSize on ImageSharpFluid {
+  maxHeight: presentationHeight
+  maxWidth: presentationWidth
+}
+
+fragment GatsbyImageSharpFluid_tracedSVG on ImageSharpFluid {
+  tracedSVG
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+
+fragment GatsbyImageSharpFluid_withWebp on ImageSharpFluid {
+  base64
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
+
+fragment GatsbyImageSharpFluid_withWebp_tracedSVG on ImageSharpFluid {
+  tracedSVG
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
+
+fragment GatsbyImageSharpFluid_noBase64 on ImageSharpFluid {
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+
+fragment GatsbyImageSharpFluid_withWebp_noBase64 on ImageSharpFluid {
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
