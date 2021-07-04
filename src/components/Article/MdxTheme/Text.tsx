@@ -73,7 +73,7 @@ const BlockquoteStyle = styled.blockquote`
 
   background-color: var(--color-grey-100);
 
-  border-left: 8px solid var(--color-grey-300);
+  border-left: 8px solid var(--color-primary-300);
 `;
 
 type BlockquoteProps = {
