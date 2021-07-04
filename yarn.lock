@@ -13380,6 +13380,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gatsby-remark-embed-video@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "gatsby-remark-embed-video@npm:3.1.1"
+  dependencies:
+    get-video-id: ^3.1.9
+    remark-burger: ^1.0.1
+    unist-util-visit: ^2.0.3
+  checksum: a5042fff739afd78b997143effeb2f2021abbc3a11256bb0dbdf9515b7bb6712e0334844270d5f58136051bf7d7985d29a2078fabb0f2eb9f4c15d4ad56c2fb5
+  languageName: node
+  linkType: hard
+
 "gatsby-remark-images@npm:^5.5.0":
   version: 5.5.0
   resolution: "gatsby-remark-images@npm:5.5.0"
@@ -13541,6 +13552,7 @@ fsevents@^1.2.7:
     gatsby-plugin-typescript: ^3.8.0
     gatsby-remark-autolink-headers: ^4.5.0
     gatsby-remark-copy-linked-files: ^4.5.0
+    gatsby-remark-embed-video: ^3.1.1
     gatsby-remark-images: ^5.5.0
     gatsby-remark-prismjs: ^5.5.0
     gatsby-remark-relative-images: ^2.0.2
@@ -13916,6 +13928,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"get-src@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "get-src@npm:1.0.1"
+  checksum: 2692736bc816102a177c6e17e7a852cc87b2c54c12b45388eef1a7abed37b703ec68b9325bc219d85edf5242297bb7c80483c9343e20128d96c185da110232e5
+  languageName: node
+  linkType: hard
+
 "get-stdin@npm:^4.0.1":
   version: 4.0.1
   resolution: "get-stdin@npm:4.0.1"
@@ -13976,6 +13995,15 @@ fsevents@^1.2.7:
   version: 2.0.6
   resolution: "get-value@npm:2.0.6"
   checksum: 5c3b99cb5398ea8016bf46ff17afc5d1d286874d2ad38ca5edb6e87d75c0965b0094cb9a9dddef2c59c23d250702323539a7fbdd870620db38c7e7d7ec87c1eb
+  languageName: node
+  linkType: hard
+
+"get-video-id@npm:^3.1.9":
+  version: 3.2.0
+  resolution: "get-video-id@npm:3.2.0"
+  dependencies:
+    get-src: ^1.0.1
+  checksum: 456310afb758d3f3cf1cd0b64e1fb3b249ef6db7dac48051600b02729db1bbcbc0dc0d9e19656adaad0eb8d9730d10f61e3a45a56396b2eed891041af1e3a9e5
   languageName: node
   linkType: hard
 
@@ -24379,6 +24407,13 @@ fsevents@^1.2.7:
     "@babel/runtime": ^7.0.0
     fbjs: ^3.0.0
   checksum: 46cea0ac104382fb9a66ed5f7b8480cad319aa6482664e8a3754ebb7e082fcae449932fe206f32c3e74c22844fb25ce3dcef5bb3fb5b7d03890c6d4d091cefe2
+  languageName: node
+  linkType: hard
+
+"remark-burger@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "remark-burger@npm:1.0.1"
+  checksum: d1248fed6f5bc2b5b6d2cfe65c63b78251a498bae6816de98a8f56682e0d39e2fcfeb3e9c0539c314505dde250be72d922f37722e1b7e7e8a4fe5d61a527082f
   languageName: node
   linkType: hard
 

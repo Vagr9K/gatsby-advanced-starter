@@ -39,6 +39,7 @@
     "gatsby-plugin-typescript": "^3.8.0",
     "gatsby-remark-autolink-headers": "^4.5.0",
     "gatsby-remark-copy-linked-files": "^4.5.0",
+    "gatsby-remark-embed-video": "^3.1.1",
     "gatsby-remark-images": "^5.5.0",
     "gatsby-remark-prismjs": "^5.5.0",
     "gatsby-remark-relative-images": "^2.0.2",

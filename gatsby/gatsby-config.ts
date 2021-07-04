@@ -108,6 +108,15 @@ const gatsbyConfig = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 920,
+            },
+          },
+          {
+            resolve: "gatsby-remark-responsive-iframe",
+          },
+          {
             resolve: `gatsby-remark-relative-images`,
           },
           {
