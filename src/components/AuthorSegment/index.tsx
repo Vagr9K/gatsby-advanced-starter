@@ -5,8 +5,10 @@ import { Body } from "../../theme";
 
 import * as S from "./styles";
 
-const AuthorSegment = (): JSX.Element => {
+const AuthorSegment = (): JSX.Element | null => {
   const config = useContext(ConfigContext);
+
+  if (!config.user) return null;
 
   return (
     <S.Wrapper>

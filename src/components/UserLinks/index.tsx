@@ -25,7 +25,7 @@ const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (
 const renderTwitterLink = (
   config: Readonly<SiteConfig>
 ): JSX.Element | null => {
-  const userName = config.user.twitterName;
+  const userName = config.user?.twitterName;
 
   if (!userName) return null;
 
@@ -34,7 +34,7 @@ const renderTwitterLink = (
 };
 
 const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
-  const userName = config.user.github;
+  const userName = config.user?.github;
 
   if (!userName) return null;
 
@@ -45,7 +45,7 @@ const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
 const renderLinkedInLink = (
   config: Readonly<SiteConfig>
 ): JSX.Element | null => {
-  const userName = config.user.linkedIn;
+  const userName = config.user?.linkedIn;
 
   if (!userName) return null;
 
@@ -54,7 +54,7 @@ const renderLinkedInLink = (
 };
 
 const renderEmailLink = (config: Readonly<SiteConfig>): JSX.Element => {
-  const url = `mailto:${config.user.email}`;
+  const url = `mailto:${config.user?.email || ""}`;
   return renderLink(url, MailSend);
 };
 
@@ -70,8 +70,13 @@ const defaultProps: IconLinksProps = {
   includeRss: false,
 };
 
-const UserLinks = ({ includeRss, className }: IconLinksProps): JSX.Element => {
+const UserLinks = ({
+  includeRss,
+  className,
+}: IconLinksProps): JSX.Element | null => {
   const config = useContext(ConfigContext);
+
+  if (!config.user) return null;
 
   return (
     <LinkGrid className={className}>

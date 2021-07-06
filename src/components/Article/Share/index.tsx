@@ -23,7 +23,7 @@ import * as S from "./styles";
 
 const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
   const relatedTwitterNames = [];
-  if (config.user.twitterName)
+  if (config.user?.twitterName)
     relatedTwitterNames.push(config.user.twitterName);
 
   if (config.website.twitterName)

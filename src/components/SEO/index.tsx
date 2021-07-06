@@ -17,7 +17,7 @@ type SeoProps = {
 const SEO = ({ post }: SeoProps): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
-  const postData = post ? generatePostData(post) : null;
+  const postData = post ? generatePostData(post) : undefined;
   const seoData = generateSeoData(config.website, postData);
 
   const websiteData = config.website;
@@ -26,9 +26,9 @@ const SEO = ({ post }: SeoProps): JSX.Element => {
 
   const tagList = [
     ...GeneralTags(seoData, config.website),
-    ...OpenGraphTags(seoData, websiteData, userData, postData),
-    ...RichSearchTags(seoData, postData, userData, orgData),
-    ...TwitterTags(seoData, userData, websiteData),
+    ...OpenGraphTags({ seoData, websiteData, userData, postData }),
+    ...RichSearchTags({ seoData, postData, userData, orgData }),
+    ...TwitterTags({ seoData, userData, websiteData }),
   ];
 
   return <Helmet>{tagList}</Helmet>;

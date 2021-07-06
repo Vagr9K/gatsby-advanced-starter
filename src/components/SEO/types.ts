@@ -52,9 +52,9 @@ export type JsonLdArticleMetadata = {
   dateCreated: Date;
   datePublished: Date;
   dateModified: Date;
-  author: JsonLdAuthorMetadata;
-  creator: JsonLdAuthorMetadata;
-  publisher: JsonLdOrganizationMetadata;
+  author?: JsonLdAuthorMetadata;
+  creator?: JsonLdAuthorMetadata;
+  publisher?: JsonLdOrganizationMetadata;
   keywords: Array<string>;
   articleSection: string;
   articleBody: string;

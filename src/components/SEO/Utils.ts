@@ -44,9 +44,9 @@ export const generatePostData = (postNode: Post): PostData => {
 // Generate shared SEO metadata
 export const generateSeoData = (
   websiteData: WebsiteData,
-  postData: PostData | null
+  postData?: PostData
 ): SeoData => {
-  const isArticle = postData !== null;
+  const isArticle = !!postData;
   const title = postData ? postData.title : websiteData.title;
   const type = postData ? "article" : "website";
   const imageUrl = postData ? postData.coverImageUrl : websiteData.logoUrl;

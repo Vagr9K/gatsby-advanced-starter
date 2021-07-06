@@ -9,8 +9,12 @@ testConfig.pathPrefix = "/";
 testConfig.website.url = "http://www.example-website-url.com";
 testConfig.website.rss = "test";
 testConfig.website.logoUrl = "/test/URL";
-testConfig.organization.url = "http://www.example-org-url.com";
-testConfig.organization.logoUrl = "/test/URL";
+testConfig.organization = {
+  url: "http://www.example-org-url.com",
+  logoUrl: "/test/URL",
+  name: "test-org-name",
+  description: "test-org-description",
+};
 
 describe("siteConfig validator", () => {
   it("makes sure pathPrefix is empty if not needed", () => {
@@ -65,7 +69,12 @@ describe("siteConfig validator", () => {
     expect.assertions(1);
 
     const config = cloneDeep(testConfig);
-    config.organization.url = "/not-absoulte-url/";
+    config.organization = {
+      url: "/not-absolute-url",
+      logoUrl: "/test/URL",
+      name: "test-org-name",
+      description: "test-org-description",
+    };
 
     expect(() =>
       validateSiteConfig({ ...config, pathPrefix: "/test/" })

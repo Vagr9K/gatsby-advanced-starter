@@ -37,8 +37,8 @@ export const generateOrganizationMetadata = (
 
 export const generateArticleMetadata = (
   postData: PostData,
-  userData: UserData,
-  orgData: OrganizationData
+  orgData?: OrganizationData,
+  userData?: UserData
 ): JsonLdArticleMetadata | null => {
   const {
     title,
@@ -52,8 +52,10 @@ export const generateArticleMetadata = (
     url,
   } = postData;
 
-  const authorData = getAuthorMetadata(userData);
-  const orgMetaData = generateOrganizationMetadata(orgData);
+  const orgMetaData = orgData
+    ? generateOrganizationMetadata(orgData)
+    : undefined;
+  const authorData = userData ? getAuthorMetadata(userData) : undefined;
 
   if (!coverImageUrl || !description) return null;
 
@@ -78,18 +80,29 @@ export const generateArticleMetadata = (
   };
 };
 
-const RichSearchResultTags = (
-  seoData: SeoData,
-  postData: PostData | null,
-  userData: UserData,
-  orgData: OrganizationData
-): RichSearchTag[] => {
+type SeoArgs = {
+  seoData: SeoData;
+  postData?: PostData;
+  userData?: UserData;
+  orgData?: OrganizationData;
+};
+
+const RichSearchResultTags = ({
+  seoData,
+  postData,
+  userData,
+  orgData,
+}: SeoArgs): RichSearchTag[] => {
   const { isArticle } = seoData;
 
-  const jsonLdData =
+  const articleJsonLd =
     isArticle && postData
-      ? generateArticleMetadata(postData, userData, orgData)
-      : generateOrganizationMetadata(orgData);
+      ? generateArticleMetadata(postData, orgData, userData)
+      : undefined;
+
+  const orgJsonLd = orgData ? generateOrganizationMetadata(orgData) : undefined;
+
+  const jsonLdData = isArticle ? articleJsonLd : orgJsonLd;
 
   return jsonLdData
     ? [

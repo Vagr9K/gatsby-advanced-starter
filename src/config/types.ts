@@ -7,8 +7,12 @@ export interface WebsiteData {
   fbAppId?: string;
   twitterName?: string;
   url: string;
+  copyright: string;
   rss: string;
   rssTitle: string;
+  googleAnalyticsId?: string;
+  themeColor: string;
+  backgroundColor: string;
 }
 
 export interface UserData {
@@ -33,15 +37,17 @@ export interface OrganizationData {
 
 export interface SiteConfig {
   website: WebsiteData;
-  user: UserData;
-  organization: OrganizationData;
+  user?: UserData;
+  organization?: OrganizationData;
+
   pathPrefix: string;
+
   postsPerFeedPage: number;
   feedMetaDirectory: string;
-  googleAnalyticsID?: string;
-  disqusShortname?: string;
-  postsPerPage: number;
-  copyright: string;
-  themeColor: string;
-  backgroundColor: string;
+
+  contentDir: string;
+  assetDir: string;
+
+  embededImageWidth: number;
+  embededVideoWidth: number;
 }

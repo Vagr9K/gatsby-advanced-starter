@@ -13,12 +13,11 @@ describe("seo module RichSearchTags", () => {
   it("generates correct tags on website pages", () => {
     expect.assertions(1);
 
-    const generatedTags = RichSearchTags(
-      sampleSeoData.seoWebsite,
-      null,
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoWebsite,
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
 
     expect(generatedTags).toMatchSnapshot();
   });
@@ -26,12 +25,12 @@ describe("seo module RichSearchTags", () => {
   it("generates correct tags on article pages", () => {
     expect.assertions(1);
 
-    const generatedTags = RichSearchTags(
-      sampleSeoData.seoArticle,
-      sampleSeoData.post,
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
 
     expect(generatedTags).toMatchSnapshot();
   });
@@ -39,24 +38,24 @@ describe("seo module RichSearchTags", () => {
   it("doesn't generate tags when missing post coverImageUrl", () => {
     expect.assertions(1);
 
-    const generatedTags = RichSearchTags(
-      sampleSeoData.seoArticle,
-      { ...sampleSeoData.post, coverImageUrl: undefined },
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: { ...sampleSeoData.post, coverImageUrl: undefined },
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
     expect(generatedTags).toStrictEqual([]);
   });
 
   it("doesn't generate tags when missing post description", () => {
     expect.assertions(1);
 
-    const generatedTags = RichSearchTags(
-      sampleSeoData.seoArticle,
-      { ...sampleSeoData.post, description: undefined },
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: { ...sampleSeoData.post, description: undefined },
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
 
     expect(generatedTags).toStrictEqual([]);
   });
@@ -65,22 +64,21 @@ describe("seo module RichSearchTags", () => {
     expect.assertions(2);
 
     // Test for website pages
-    const generatedWebsiteTags = RichSearchTags(
-      sampleSeoData.seoWebsite,
-      null,
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedWebsiteTags = RichSearchTags({
+      seoData: sampleSeoData.seoWebsite,
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
 
     expect(tagListHasEmptyValues(generatedWebsiteTags)).toBe(false);
 
     // Test for article pages
-    const generatedArticleTags = RichSearchTags(
-      sampleSeoData.seoArticle,
-      sampleSeoData.post,
-      sampleSeoData.user,
-      sampleSeoData.organization
-    );
+    const generatedArticleTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: sampleSeoData.user,
+      orgData: sampleSeoData.organization,
+    });
 
     expect(tagListHasEmptyValues(generatedArticleTags)).toBe(false);
   });
@@ -118,8 +116,8 @@ describe("seo module RichSearchTags's utility generateArticleMetadata", () => {
 
     const generatedTags = generateArticleMetadata(
       sampleSeoData.post,
-      sampleSeoData.user,
-      sampleSeoData.organization
+      sampleSeoData.organization,
+      sampleSeoData.user
     );
 
     expect(containsEmptyValues(generatedTags)).toBe(false);

@@ -10,7 +10,7 @@ describe("seo utility generateSeoData", () => {
 
     const websiteData = sampleSeoData.website;
 
-    const seoData = generateSeoData(websiteData, null);
+    const seoData = generateSeoData(websiteData);
 
     expect(seoData.title).toBe(websiteData.title);
     expect(seoData.description).toBe(websiteData.description);

@@ -14,7 +14,7 @@ const addTag = (
 
 const createArticleTagList = (
   postData: PostData,
-  userData: UserData
+  userData?: UserData
 ): OpenGraphTagList => {
   const metaTags: OpenGraphTagList = [];
 
@@ -33,9 +33,13 @@ const createArticleTagList = (
     "article:author",
     "http://examples.opengraphprotocol.us/profile.html"
   );
-  addTag(metaTags, "profile:first_name", userData.firstName);
-  addTag(metaTags, "profile:last_name", userData.lastName);
-  addTag(metaTags, "profile:username", userData.id);
+
+  if (userData) {
+    addTag(metaTags, "profile:first_name", userData.firstName);
+    addTag(metaTags, "profile:last_name", userData.lastName);
+    addTag(metaTags, "profile:username", userData.id);
+  }
+
   addTag(metaTags, "article:section", postData.category);
 
   postData.tags.forEach((tag) => {
@@ -45,12 +49,19 @@ const createArticleTagList = (
   return metaTags;
 };
 
-const OpenGraphTags = (
-  seoData: SeoData,
-  websiteData: WebsiteData,
-  userData: UserData,
-  postData: PostData | null
-): OpenGraphTagList => {
+type SeoArgs = {
+  seoData: SeoData;
+  websiteData: WebsiteData;
+  userData?: UserData;
+  postData?: PostData;
+};
+
+const OpenGraphTags = ({
+  seoData,
+  websiteData,
+  userData,
+  postData,
+}: SeoArgs): OpenGraphTagList => {
   const { isArticle, type, title, imageUrl, imageAlt, url, description } =
     seoData;
 

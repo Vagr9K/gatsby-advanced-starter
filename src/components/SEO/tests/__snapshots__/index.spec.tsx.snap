@@ -137,7 +137,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     rel="shortcut icon"
   />
   <meta
-    content="A GatsbyJS starter with Advanced design in mind."
+    content="A GatsbyJS starter equipped with advanced features."
     name="description"
   />
   <meta
@@ -161,7 +161,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     property="og:image"
   />
   <meta
-    content="A GatsbyJS starter with Advanced design in mind."
+    content="A GatsbyJS starter equipped with advanced features."
     property="og:image:alt"
   />
   <meta
@@ -169,7 +169,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     property="og:site_name"
   />
   <meta
-    content="A GatsbyJS starter with Advanced design in mind."
+    content="A GatsbyJS starter equipped with advanced features."
     property="og:description"
   />
   <meta
@@ -190,7 +190,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     name="twitter:title"
   />
   <meta
-    content="A GatsbyJS starter with Advanced design in mind."
+    content="A GatsbyJS starter equipped with advanced features."
     name="twitter:description"
   />
   <meta
@@ -198,7 +198,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     name="twitter:image"
   />
   <meta
-    content="A GatsbyJS starter with Advanced design in mind."
+    content="A GatsbyJS starter equipped with advanced features."
     name="twitter:image:alt"
   />
   <meta

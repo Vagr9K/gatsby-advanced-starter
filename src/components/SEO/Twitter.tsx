@@ -3,13 +3,19 @@ import React from "react";
 import { SeoData, TwitterTagList } from "./types";
 import { UserData, WebsiteData } from "../../config";
 
-const TwitterTags = (
-  seoData: SeoData,
-  userData: UserData,
-  websiteData: WebsiteData
-): TwitterTagList => {
+type SeoArgs = {
+  seoData: SeoData;
+  userData?: UserData;
+  websiteData: WebsiteData;
+};
+
+const TwitterTags = ({
+  seoData,
+  userData,
+  websiteData,
+}: SeoArgs): TwitterTagList => {
   const { title, description, imageUrl, imageAlt } = seoData;
-  const userTwitterName = userData.twitterName;
+  const userTwitterName = userData?.twitterName;
   const siteTwitterName = websiteData.twitterName;
 
   const tagList: TwitterTagList = [];

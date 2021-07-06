@@ -24,7 +24,7 @@ const Footer = (): JSX.Element => {
             Gatsby Advanced Starter
           </AnimatedLink>
         </Caption>
-        <Caption>{config.copyright}</Caption>
+        <Caption>{config.website.copyright}</Caption>
       </S.Info>
     </S.Wrapper>
   );

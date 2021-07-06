@@ -1,7 +1,6 @@
 /* eslint "no-console": "off" */
 
 import urljoin from "url-join";
-import path from "path";
 
 // Remark plugins
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
@@ -21,7 +20,7 @@ import {
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 
-const gatsbyConfig = {
+const gatsbyConfig = () => ({
   pathPrefix: validatedPathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.website.url, config.pathPrefix),
@@ -34,11 +33,10 @@ const gatsbyConfig = {
       ),
       title: config.website.title,
       description: config.website.description,
-      image_url: `${urljoin(
-        config.website.url,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
-      copyright: config.copyright,
+      image_url: `${urljoin(config.website.url, config.pathPrefix)}${
+        config.website.logoUrl
+      }`,
+      copyright: config.website.copyright,
     },
   },
   plugins: [
@@ -78,14 +76,14 @@ const gatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",
-        path: `${__dirname}/../static/`,
+        path: config.assetDir,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/../content/`,
+        path: config.contentDir,
       },
     },
     {
@@ -110,7 +108,7 @@ const gatsbyConfig = {
           {
             resolve: "gatsby-remark-embed-video",
             options: {
-              width: 920,
+              width: config.embededVideoWidth,
             },
           },
           {
@@ -122,7 +120,7 @@ const gatsbyConfig = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 768,
+              maxWidth: config.embededImageWidth,
               showCaptions: ["title", "alt"],
             },
           },
@@ -157,19 +155,13 @@ const gatsbyConfig = {
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingIds: [config.googleAnalyticsID],
+        trackingIds: [config.website.googleAnalyticsId],
       },
     },
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
-        color: config.themeColor,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: config.disqusShortname,
+        color: config.website.themeColor,
       },
     },
     "gatsby-plugin-catch-links",
@@ -182,8 +174,8 @@ const gatsbyConfig = {
         short_name: config.website.titleShort,
         description: config.website.description,
         start_url: validatedPathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        background_color: config.website.backgroundColor,
+        theme_color: config.website.themeColor,
         display: "minimal-ui",
         icons: [
           {
@@ -203,7 +195,7 @@ const gatsbyConfig = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: path.resolve("src/netlifycms/index.js"),
+        modulePath: require.resolve("./src/netlifycms/index.js"),
         enableIdentityWidget: true,
         publicPath: "admin",
         htmlTitle: "Content Manager",
@@ -277,7 +269,7 @@ const gatsbyConfig = {
                   guid: url,
                   custom_elements: [
                     { "content:encoded": node.html },
-                    { author: config.user.email },
+                    { author: config.user?.email },
                   ],
                 };
               });
@@ -317,6 +309,6 @@ const gatsbyConfig = {
       },
     },
   ],
-};
+});
 
 export default gatsbyConfig;

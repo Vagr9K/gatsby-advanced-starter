@@ -26,7 +26,7 @@ const validateSiteConfig = (config: SiteConfig): Readonly<SiteConfig> => {
   }
 
   // Make sure that organization.url is an absolute URL
-  if (!isAbsoluteUrl(newConfig.organization.url)) {
+  if (newConfig.organization && !isAbsoluteUrl(newConfig.organization.url)) {
     throw new Error("SiteConfig.organization.url is not absolute.");
   }
 
