@@ -9,7 +9,7 @@ import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
 import { initFeedMeta, createFeed } from "./feeds";
 import getRelatedPosts from "./posts/getRelatedPosts";
 
-const POST_PAGE_COMPONENT = require.resolve("./src/templates/post/index.tsx");
+const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/index.tsx");
 
 // Generates a slug from provided frontmatter/file path
 const generateSlug = (

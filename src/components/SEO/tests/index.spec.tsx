@@ -1,11 +1,11 @@
 import * as React from "react";
 import SEO from "../index";
 import { post } from "../../../../test/sampleData";
-import config from "../../../config";
+import { defaultConfig } from "../../../config";
 
 jest.mock("react", () => ({
   ...jest.requireActual<typeof React>("react"),
-  useContext: () => config,
+  useContext: () => defaultConfig,
 }));
 
 describe("component SEO", () => {

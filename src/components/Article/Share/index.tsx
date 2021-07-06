@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 
+import { withPrefix } from "gatsby";
+
 import {
   Twitter as TwitterIcon,
   LinkedinSquare as LinkedInIcon,
@@ -43,7 +45,7 @@ const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
 
   const config = useContext(ConfigContext);
 
-  const url = urlJoin(config.website.url, config.pathPrefix, slug);
+  const url = urlJoin(config.website.url, withPrefix(slug));
 
   const relatedTwitterNames = generateRelatedTwitterNames(config);
 

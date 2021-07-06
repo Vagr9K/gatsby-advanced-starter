@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled, { AnyStyledComponent } from "styled-components";
+
+import { withPrefix } from "gatsby";
 import _ from "lodash";
-import urlJoin from "url-join";
 
 import * as styles from "../../../theme";
-import ConfigContext from "../../../context/ConfigContext";
 import { ExtendingWrapper } from "../Spacing";
 import { HeadingLink } from "../../Links";
 
@@ -35,8 +35,7 @@ type HeadingComponent = (props: HeadingProps) => JSX.Element;
 const createHeading =
   (slug: string, HeadingComponent: AnyStyledComponent): HeadingComponent =>
   ({ children }: HeadingProps): JSX.Element => {
-    const config = useContext(ConfigContext);
-    const baseUrl = urlJoin(config.pathPrefix, slug);
+    const baseUrl = withPrefix(slug);
 
     const hashLink = getHeaderHashLink(children);
 

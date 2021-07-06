@@ -1,16 +1,10 @@
 import { mocked } from "ts-jest/utils";
 import cloneDeep from "clone-deep";
 
-import {
-  getBaseUrl,
-  getFullUrl,
-  mdxNodeIntoPost,
-  queryIntoListing,
-  queryIntoPost,
-} from "./index";
+import { mdxNodeIntoPost, queryIntoListing, queryIntoPost } from "./index";
 
 import { listingQuery, postQuery } from "../../test/sampleData";
-import config, { SiteConfig } from "../config";
+import { defaultConfig, SiteConfig } from "../config";
 import { MdxNode } from "./types";
 
 const consoleWarnSpy = jest
@@ -19,7 +13,7 @@ const consoleWarnSpy = jest
 
 // Test data setup
 jest.mock("../config");
-const mockedConfig = mocked(config as SiteConfig, true);
+const mockedConfig = mocked(defaultConfig as SiteConfig, true);
 mockedConfig.website.url = "http://test.com";
 mockedConfig.pathPrefix = "/test";
 
@@ -129,25 +123,5 @@ describe("queryIntoListing", () => {
     const postList = queryIntoListing(listingQuery);
 
     expect(postList).toMatchSnapshot();
-  });
-});
-
-describe("utility function getBaseUrl", () => {
-  it("computes baseUrl correctly", () => {
-    expect.assertions(1);
-
-    const baseUrl = getBaseUrl();
-
-    expect(baseUrl).toBe("http://test.com/test");
-  });
-});
-
-describe("utility function getFullUrl", () => {
-  it("computes fullUrl correctly", () => {
-    expect.assertions(1);
-
-    const fullUrl = getFullUrl("/slug");
-
-    expect(fullUrl).toBe("http://test.com/test/slug");
   });
 });

@@ -16,7 +16,6 @@ const postListing: PostList = [
     excerpt:
       'MDX Test Here\'s a color picker! NOTE: This "post" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…',
     timeToRead: 3,
-    url: "http://localhost/big-sample-test",
     slug: "/big-sample-test",
   },
   {
@@ -34,7 +33,6 @@ const postListing: PostList = [
     excerpt:
       "Eram mora tuas in inter ferens caterva Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab\ntestes…",
     timeToRead: 1,
-    url: "http://localhost/the-fairys-witches",
     slug: "/the-fairys-witches",
   },
   {
@@ -59,7 +57,6 @@ const postListing: PostList = [
     excerpt:
       "Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum…",
     timeToRead: 1,
-    url: "http://localhost/the-butterfly-of-the-edge",
     slug: "/the-butterfly-of-the-edge",
   },
   {
@@ -77,7 +74,6 @@ const postListing: PostList = [
     excerpt:
       "Artificem honorati ore temperat Lycus quam antiquum Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur…",
     timeToRead: 1,
-    url: "http://localhost/random-project-4-with-super-long-title-phase-one",
     slug: "/random-project-4-with-super-long-title-phase-one",
   },
   {
@@ -95,7 +91,6 @@ const postListing: PostList = [
     excerpt:
       "Ab dicemur cura Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;\nrerum? Nunc nec ferunt verbis…",
     timeToRead: 1,
-    url: "http://localhost/angels-of-mist",
     slug: "/angels-of-mist",
   },
   {
@@ -113,7 +108,6 @@ const postListing: PostList = [
     excerpt:
       "Domos primus caelum taedia Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse…",
     timeToRead: 1,
-    url: "http://localhost/birch-in-the-roses",
     slug: "/birch-in-the-roses",
   },
   {
@@ -131,7 +125,6 @@ const postListing: PostList = [
     excerpt:
       "Autolyci eminus retenta Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus…",
     timeToRead: 1,
-    url: "http://localhost/the-fallen-time",
     slug: "/the-fallen-time",
   },
   {
@@ -149,7 +142,6 @@ const postListing: PostList = [
     excerpt:
       "Quanto et ius coniunctis urbes Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus\nobliquum erigitur…",
     timeToRead: 1,
-    url: "http://localhost/bold-mage",
     slug: "/bold-mage",
   },
 ];

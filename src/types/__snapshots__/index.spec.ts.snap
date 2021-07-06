@@ -1455,7 +1455,6 @@ Or, in pure Markdown, but losing the image sizing and border:
   ],
   "timeToRead": 3,
   "title": "Big Test",
-  "url": "http://test.com/test/big-sample-test",
 }
 `;
 
@@ -2435,7 +2434,6 @@ Or, in pure Markdown, but losing the image sizing and border:
     ],
     "timeToRead": 3,
     "title": "Big Test",
-    "url": "http://test.com/test/big-sample-test",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -2576,7 +2574,6 @@ fuit? Hamos deinde longique quisquis pugnat moriens, nec Tmolo **ferebat**.
     "tags": Array [],
     "timeToRead": 1,
     "title": "The Fairy's Witches",
-    "url": "http://test.com/test/the-fairys-witches",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -2742,7 +2739,6 @@ apro** incubat qui! Torserat conplexa cum, Rhoetus tibi ignes crudelis marinae.
     ],
     "timeToRead": 1,
     "title": "The Butterfly of the Edge",
-    "url": "http://test.com/test/the-butterfly-of-the-edge",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -2898,7 +2894,6 @@ Quibus **se intus montibus**. Auro terrae: mare e adulterium, per dolet et.
     ],
     "timeToRead": 1,
     "title": "Random project 4 With Super Long Title Phase One",
-    "url": "http://test.com/test/random-project-4-with-super-long-title-phase-one",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -3261,7 +3256,6 @@ Inmittite hostem, succinctis insuper lentisciferumque Cerealis
     ],
     "timeToRead": 1,
     "title": "Angels of Mist",
-    "url": "http://test.com/test/angels-of-mist",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -3394,7 +3388,6 @@ inter Cynthia est gemitu crimina sis, et preces cuncta tamen?
     ],
     "timeToRead": 1,
     "title": "Birch in the Roses",
-    "url": "http://test.com/test/birch-in-the-roses",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -3971,7 +3964,6 @@ dixit paratibus tenera contiguas occupat **seque casu**.
     ],
     "timeToRead": 1,
     "title": "The Fallen Time",
-    "url": "http://test.com/test/the-fallen-time",
   },
   Object {
     "body": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -4314,7 +4306,6 @@ Hic bis parenti: e petunt satis.
     ],
     "timeToRead": 1,
     "title": "Bold Mage",
-    "url": "http://test.com/test/bold-mage",
   },
 ]
 `;
@@ -5774,6 +5765,5 @@ Or, in pure Markdown, but losing the image sizing and border:
   ],
   "timeToRead": 3,
   "title": "Big Test",
-  "url": "http://test.com/test/big-sample-test",
 }
 `;

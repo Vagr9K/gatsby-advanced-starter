@@ -1,10 +1,10 @@
 import { cloneDeep } from "lodash";
 import validateSiteConfig from "./Validator";
-import realConfig from "./index";
+import { defaultConfig } from "./index";
 import { SiteConfig } from "./types";
 
 // Setup a configuration for a test
-const testConfig = cloneDeep(realConfig) as SiteConfig;
+const testConfig = cloneDeep(defaultConfig) as SiteConfig;
 testConfig.pathPrefix = "/";
 testConfig.website.url = "http://www.example-website-url.com";
 testConfig.website.rss = "test";

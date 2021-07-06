@@ -349,57 +349,8 @@ type Site implements Node {
 type SiteSiteMetadata {
   title: String
   description: String
-  config: SiteSiteMetadataConfig
   siteUrl: String
   rssMetadata: SiteSiteMetadataRssMetadata
-}
-
-type SiteSiteMetadataConfig {
-  website: SiteSiteMetadataConfigWebsite
-  user: SiteSiteMetadataConfigUser
-  organization: SiteSiteMetadataConfigOrganization
-  postsPerFeedPage: Int
-  feedMetaDirectory: String
-  pathPrefix: String
-  googleAnalyticsID: String
-  disqusShortname: String
-  postsPerPage: Int
-  copyright: String
-  themeColor: String
-  backgroundColor: String
-}
-
-type SiteSiteMetadataConfigWebsite {
-  title: String
-  titleShort: String
-  name: String
-  description: String
-  logoUrl: String
-  fbAppId: String
-  twitterName: String
-  url: String
-  rss: String
-  rssTitle: String
-}
-
-type SiteSiteMetadataConfigUser {
-  id: String
-  firstName: String
-  lastName: String
-  twitterName: String
-  linkedIn: String
-  github: String
-  email: String
-  location: String
-  about: String
-  avatar: String
-}
-
-type SiteSiteMetadataConfigOrganization {
-  name: String
-  description: String
-  logoUrl: String
-  url: String
 }
 
 type SiteSiteMetadataRssMetadata {
@@ -468,7 +419,6 @@ type SitePageContextRelatedPosts {
   tags: [String]
   excerpt: String
   timeToRead: Int
-  url: String
   slug: String
 }
 
@@ -525,7 +475,6 @@ type SitePageContextFeedPageMetaPosts {
   tags: [String]
   excerpt: String
   timeToRead: Int
-  url: String
   slug: String
 }
 
@@ -969,7 +918,6 @@ type SitePluginPluginOptions {
   root: String
   trackingIds: [String]
   color: String
-  shortname: String
   output: String
   createLinkInHead: Boolean
   entryLimit: Int
@@ -2066,57 +2014,8 @@ input DirectorySortInput {
 input SiteSiteMetadataFilterInput {
   title: StringQueryOperatorInput
   description: StringQueryOperatorInput
-  config: SiteSiteMetadataConfigFilterInput
   siteUrl: StringQueryOperatorInput
   rssMetadata: SiteSiteMetadataRssMetadataFilterInput
-}
-
-input SiteSiteMetadataConfigFilterInput {
-  website: SiteSiteMetadataConfigWebsiteFilterInput
-  user: SiteSiteMetadataConfigUserFilterInput
-  organization: SiteSiteMetadataConfigOrganizationFilterInput
-  postsPerFeedPage: IntQueryOperatorInput
-  feedMetaDirectory: StringQueryOperatorInput
-  pathPrefix: StringQueryOperatorInput
-  googleAnalyticsID: StringQueryOperatorInput
-  disqusShortname: StringQueryOperatorInput
-  postsPerPage: IntQueryOperatorInput
-  copyright: StringQueryOperatorInput
-  themeColor: StringQueryOperatorInput
-  backgroundColor: StringQueryOperatorInput
-}
-
-input SiteSiteMetadataConfigWebsiteFilterInput {
-  title: StringQueryOperatorInput
-  titleShort: StringQueryOperatorInput
-  name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  logoUrl: StringQueryOperatorInput
-  fbAppId: StringQueryOperatorInput
-  twitterName: StringQueryOperatorInput
-  url: StringQueryOperatorInput
-  rss: StringQueryOperatorInput
-  rssTitle: StringQueryOperatorInput
-}
-
-input SiteSiteMetadataConfigUserFilterInput {
-  id: StringQueryOperatorInput
-  firstName: StringQueryOperatorInput
-  lastName: StringQueryOperatorInput
-  twitterName: StringQueryOperatorInput
-  linkedIn: StringQueryOperatorInput
-  github: StringQueryOperatorInput
-  email: StringQueryOperatorInput
-  location: StringQueryOperatorInput
-  about: StringQueryOperatorInput
-  avatar: StringQueryOperatorInput
-}
-
-input SiteSiteMetadataConfigOrganizationFilterInput {
-  name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  logoUrl: StringQueryOperatorInput
-  url: StringQueryOperatorInput
 }
 
 input SiteSiteMetadataRssMetadataFilterInput {
@@ -2150,39 +2049,6 @@ enum SiteFieldsEnum {
   buildTime
   siteMetadata___title
   siteMetadata___description
-  siteMetadata___config___website___title
-  siteMetadata___config___website___titleShort
-  siteMetadata___config___website___name
-  siteMetadata___config___website___description
-  siteMetadata___config___website___logoUrl
-  siteMetadata___config___website___fbAppId
-  siteMetadata___config___website___twitterName
-  siteMetadata___config___website___url
-  siteMetadata___config___website___rss
-  siteMetadata___config___website___rssTitle
-  siteMetadata___config___user___id
-  siteMetadata___config___user___firstName
-  siteMetadata___config___user___lastName
-  siteMetadata___config___user___twitterName
-  siteMetadata___config___user___linkedIn
-  siteMetadata___config___user___github
-  siteMetadata___config___user___email
-  siteMetadata___config___user___location
-  siteMetadata___config___user___about
-  siteMetadata___config___user___avatar
-  siteMetadata___config___organization___name
-  siteMetadata___config___organization___description
-  siteMetadata___config___organization___logoUrl
-  siteMetadata___config___organization___url
-  siteMetadata___config___postsPerFeedPage
-  siteMetadata___config___feedMetaDirectory
-  siteMetadata___config___pathPrefix
-  siteMetadata___config___googleAnalyticsID
-  siteMetadata___config___disqusShortname
-  siteMetadata___config___postsPerPage
-  siteMetadata___config___copyright
-  siteMetadata___config___themeColor
-  siteMetadata___config___backgroundColor
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url
@@ -2482,7 +2348,6 @@ input SitePageContextRelatedPostsFilterInput {
   tags: StringQueryOperatorInput
   excerpt: StringQueryOperatorInput
   timeToRead: IntQueryOperatorInput
-  url: StringQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -2547,7 +2412,6 @@ input SitePageContextFeedPageMetaPostsFilterInput {
   tags: StringQueryOperatorInput
   excerpt: StringQueryOperatorInput
   timeToRead: IntQueryOperatorInput
-  url: StringQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -2645,7 +2509,6 @@ input SitePluginPluginOptionsFilterInput {
   root: StringQueryOperatorInput
   trackingIds: StringQueryOperatorInput
   color: StringQueryOperatorInput
-  shortname: StringQueryOperatorInput
   output: StringQueryOperatorInput
   createLinkInHead: BooleanQueryOperatorInput
   entryLimit: IntQueryOperatorInput
@@ -2900,7 +2763,6 @@ enum SitePageFieldsEnum {
   context___relatedPosts___tags
   context___relatedPosts___excerpt
   context___relatedPosts___timeToRead
-  context___relatedPosts___url
   context___relatedPosts___slug
   context___limit
   context___skip
@@ -2922,7 +2784,6 @@ enum SitePageFieldsEnum {
   context___feedPageMeta___posts___tags
   context___feedPageMeta___posts___excerpt
   context___feedPageMeta___posts___timeToRead
-  context___feedPageMeta___posts___url
   context___feedPageMeta___posts___slug
   pluginCreator___id
   pluginCreator___parent___id
@@ -3008,7 +2869,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___root
   pluginCreator___pluginOptions___trackingIds
   pluginCreator___pluginOptions___color
-  pluginCreator___pluginOptions___shortname
   pluginCreator___pluginOptions___output
   pluginCreator___pluginOptions___createLinkInHead
   pluginCreator___pluginOptions___entryLimit
@@ -3630,7 +3490,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___root
   pluginOptions___trackingIds
   pluginOptions___color
-  pluginOptions___shortname
   pluginOptions___output
   pluginOptions___createLinkInHead
   pluginOptions___entryLimit

@@ -1,7 +1,7 @@
 import validateSiteConfig from "./Validator";
-import userConfig from "../../data/SiteConfig";
+import baseConfig from "./defaultConfig";
 
-const validatedConfig = validateSiteConfig(userConfig);
+const validatedConfig = validateSiteConfig(baseConfig);
 
 export type {
   SiteConfig,
@@ -9,4 +9,5 @@ export type {
   UserData,
   WebsiteData,
 } from "./types";
-export default validatedConfig;
+
+export const defaultConfig = validatedConfig;

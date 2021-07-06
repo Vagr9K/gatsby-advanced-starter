@@ -84,7 +84,6 @@ export type Post = {
   timeToRead: number;
   internalContent?: string;
 
-  url: string;
   slug: string;
 
   relatedPosts?: PostList;
@@ -109,7 +108,6 @@ export type PostFromJson = {
   excerpt?: string;
   timeToRead: number;
 
-  url: string;
   slug: string;
 
   relatedPosts?: PostFromJsonList;

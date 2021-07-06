@@ -282,57 +282,8 @@ type Site_buildTimeArgs = {
 type SiteSiteMetadata = {
   readonly title: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly config: Maybe<SiteSiteMetadataConfig>;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly rssMetadata: Maybe<SiteSiteMetadataRssMetadata>;
-};
-
-type SiteSiteMetadataConfig = {
-  readonly website: Maybe<SiteSiteMetadataConfigWebsite>;
-  readonly user: Maybe<SiteSiteMetadataConfigUser>;
-  readonly organization: Maybe<SiteSiteMetadataConfigOrganization>;
-  readonly postsPerFeedPage: Maybe<Scalars['Int']>;
-  readonly feedMetaDirectory: Maybe<Scalars['String']>;
-  readonly pathPrefix: Maybe<Scalars['String']>;
-  readonly googleAnalyticsID: Maybe<Scalars['String']>;
-  readonly disqusShortname: Maybe<Scalars['String']>;
-  readonly postsPerPage: Maybe<Scalars['Int']>;
-  readonly copyright: Maybe<Scalars['String']>;
-  readonly themeColor: Maybe<Scalars['String']>;
-  readonly backgroundColor: Maybe<Scalars['String']>;
-};
-
-type SiteSiteMetadataConfigWebsite = {
-  readonly title: Maybe<Scalars['String']>;
-  readonly titleShort: Maybe<Scalars['String']>;
-  readonly name: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly logoUrl: Maybe<Scalars['String']>;
-  readonly fbAppId: Maybe<Scalars['String']>;
-  readonly twitterName: Maybe<Scalars['String']>;
-  readonly url: Maybe<Scalars['String']>;
-  readonly rss: Maybe<Scalars['String']>;
-  readonly rssTitle: Maybe<Scalars['String']>;
-};
-
-type SiteSiteMetadataConfigUser = {
-  readonly id: Maybe<Scalars['String']>;
-  readonly firstName: Maybe<Scalars['String']>;
-  readonly lastName: Maybe<Scalars['String']>;
-  readonly twitterName: Maybe<Scalars['String']>;
-  readonly linkedIn: Maybe<Scalars['String']>;
-  readonly github: Maybe<Scalars['String']>;
-  readonly email: Maybe<Scalars['String']>;
-  readonly location: Maybe<Scalars['String']>;
-  readonly about: Maybe<Scalars['String']>;
-  readonly avatar: Maybe<Scalars['String']>;
-};
-
-type SiteSiteMetadataConfigOrganization = {
-  readonly name: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly logoUrl: Maybe<Scalars['String']>;
-  readonly url: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataRssMetadata = {
@@ -401,7 +352,6 @@ type SitePageContextRelatedPosts = {
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly excerpt: Maybe<Scalars['String']>;
   readonly timeToRead: Maybe<Scalars['Int']>;
-  readonly url: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -458,7 +408,6 @@ type SitePageContextFeedPageMetaPosts = {
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly excerpt: Maybe<Scalars['String']>;
   readonly timeToRead: Maybe<Scalars['Int']>;
-  readonly url: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -894,7 +843,6 @@ type SitePluginPluginOptions = {
   readonly root: Maybe<Scalars['String']>;
   readonly trackingIds: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly color: Maybe<Scalars['String']>;
-  readonly shortname: Maybe<Scalars['String']>;
   readonly output: Maybe<Scalars['String']>;
   readonly createLinkInHead: Maybe<Scalars['Boolean']>;
   readonly entryLimit: Maybe<Scalars['Int']>;
@@ -2303,57 +2251,8 @@ type DirectorySortInput = {
 type SiteSiteMetadataFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
-  readonly config: Maybe<SiteSiteMetadataConfigFilterInput>;
   readonly siteUrl: Maybe<StringQueryOperatorInput>;
   readonly rssMetadata: Maybe<SiteSiteMetadataRssMetadataFilterInput>;
-};
-
-type SiteSiteMetadataConfigFilterInput = {
-  readonly website: Maybe<SiteSiteMetadataConfigWebsiteFilterInput>;
-  readonly user: Maybe<SiteSiteMetadataConfigUserFilterInput>;
-  readonly organization: Maybe<SiteSiteMetadataConfigOrganizationFilterInput>;
-  readonly postsPerFeedPage: Maybe<IntQueryOperatorInput>;
-  readonly feedMetaDirectory: Maybe<StringQueryOperatorInput>;
-  readonly pathPrefix: Maybe<StringQueryOperatorInput>;
-  readonly googleAnalyticsID: Maybe<StringQueryOperatorInput>;
-  readonly disqusShortname: Maybe<StringQueryOperatorInput>;
-  readonly postsPerPage: Maybe<IntQueryOperatorInput>;
-  readonly copyright: Maybe<StringQueryOperatorInput>;
-  readonly themeColor: Maybe<StringQueryOperatorInput>;
-  readonly backgroundColor: Maybe<StringQueryOperatorInput>;
-};
-
-type SiteSiteMetadataConfigWebsiteFilterInput = {
-  readonly title: Maybe<StringQueryOperatorInput>;
-  readonly titleShort: Maybe<StringQueryOperatorInput>;
-  readonly name: Maybe<StringQueryOperatorInput>;
-  readonly description: Maybe<StringQueryOperatorInput>;
-  readonly logoUrl: Maybe<StringQueryOperatorInput>;
-  readonly fbAppId: Maybe<StringQueryOperatorInput>;
-  readonly twitterName: Maybe<StringQueryOperatorInput>;
-  readonly url: Maybe<StringQueryOperatorInput>;
-  readonly rss: Maybe<StringQueryOperatorInput>;
-  readonly rssTitle: Maybe<StringQueryOperatorInput>;
-};
-
-type SiteSiteMetadataConfigUserFilterInput = {
-  readonly id: Maybe<StringQueryOperatorInput>;
-  readonly firstName: Maybe<StringQueryOperatorInput>;
-  readonly lastName: Maybe<StringQueryOperatorInput>;
-  readonly twitterName: Maybe<StringQueryOperatorInput>;
-  readonly linkedIn: Maybe<StringQueryOperatorInput>;
-  readonly github: Maybe<StringQueryOperatorInput>;
-  readonly email: Maybe<StringQueryOperatorInput>;
-  readonly location: Maybe<StringQueryOperatorInput>;
-  readonly about: Maybe<StringQueryOperatorInput>;
-  readonly avatar: Maybe<StringQueryOperatorInput>;
-};
-
-type SiteSiteMetadataConfigOrganizationFilterInput = {
-  readonly name: Maybe<StringQueryOperatorInput>;
-  readonly description: Maybe<StringQueryOperatorInput>;
-  readonly logoUrl: Maybe<StringQueryOperatorInput>;
-  readonly url: Maybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataRssMetadataFilterInput = {
@@ -2414,39 +2313,6 @@ type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata.title'
   | 'siteMetadata.description'
-  | 'siteMetadata.config.website.title'
-  | 'siteMetadata.config.website.titleShort'
-  | 'siteMetadata.config.website.name'
-  | 'siteMetadata.config.website.description'
-  | 'siteMetadata.config.website.logoUrl'
-  | 'siteMetadata.config.website.fbAppId'
-  | 'siteMetadata.config.website.twitterName'
-  | 'siteMetadata.config.website.url'
-  | 'siteMetadata.config.website.rss'
-  | 'siteMetadata.config.website.rssTitle'
-  | 'siteMetadata.config.user.id'
-  | 'siteMetadata.config.user.firstName'
-  | 'siteMetadata.config.user.lastName'
-  | 'siteMetadata.config.user.twitterName'
-  | 'siteMetadata.config.user.linkedIn'
-  | 'siteMetadata.config.user.github'
-  | 'siteMetadata.config.user.email'
-  | 'siteMetadata.config.user.location'
-  | 'siteMetadata.config.user.about'
-  | 'siteMetadata.config.user.avatar'
-  | 'siteMetadata.config.organization.name'
-  | 'siteMetadata.config.organization.description'
-  | 'siteMetadata.config.organization.logoUrl'
-  | 'siteMetadata.config.organization.url'
-  | 'siteMetadata.config.postsPerFeedPage'
-  | 'siteMetadata.config.feedMetaDirectory'
-  | 'siteMetadata.config.pathPrefix'
-  | 'siteMetadata.config.googleAnalyticsID'
-  | 'siteMetadata.config.disqusShortname'
-  | 'siteMetadata.config.postsPerPage'
-  | 'siteMetadata.config.copyright'
-  | 'siteMetadata.config.themeColor'
-  | 'siteMetadata.config.backgroundColor'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.rssMetadata.site_url'
   | 'siteMetadata.rssMetadata.feed_url'
@@ -2771,7 +2637,6 @@ type SitePageContextRelatedPostsFilterInput = {
   readonly tags: Maybe<StringQueryOperatorInput>;
   readonly excerpt: Maybe<StringQueryOperatorInput>;
   readonly timeToRead: Maybe<IntQueryOperatorInput>;
-  readonly url: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2836,7 +2701,6 @@ type SitePageContextFeedPageMetaPostsFilterInput = {
   readonly tags: Maybe<StringQueryOperatorInput>;
   readonly excerpt: Maybe<StringQueryOperatorInput>;
   readonly timeToRead: Maybe<IntQueryOperatorInput>;
-  readonly url: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2934,7 +2798,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly root: Maybe<StringQueryOperatorInput>;
   readonly trackingIds: Maybe<StringQueryOperatorInput>;
   readonly color: Maybe<StringQueryOperatorInput>;
-  readonly shortname: Maybe<StringQueryOperatorInput>;
   readonly output: Maybe<StringQueryOperatorInput>;
   readonly createLinkInHead: Maybe<BooleanQueryOperatorInput>;
   readonly entryLimit: Maybe<IntQueryOperatorInput>;
@@ -3216,7 +3079,6 @@ type SitePageFieldsEnum =
   | 'context.relatedPosts.tags'
   | 'context.relatedPosts.excerpt'
   | 'context.relatedPosts.timeToRead'
-  | 'context.relatedPosts.url'
   | 'context.relatedPosts.slug'
   | 'context.limit'
   | 'context.skip'
@@ -3238,7 +3100,6 @@ type SitePageFieldsEnum =
   | 'context.feedPageMeta.posts.tags'
   | 'context.feedPageMeta.posts.excerpt'
   | 'context.feedPageMeta.posts.timeToRead'
-  | 'context.feedPageMeta.posts.url'
   | 'context.feedPageMeta.posts.slug'
   | 'pluginCreator.id'
   | 'pluginCreator.parent.id'
@@ -3324,7 +3185,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.root'
   | 'pluginCreator.pluginOptions.trackingIds'
   | 'pluginCreator.pluginOptions.color'
-  | 'pluginCreator.pluginOptions.shortname'
   | 'pluginCreator.pluginOptions.output'
   | 'pluginCreator.pluginOptions.createLinkInHead'
   | 'pluginCreator.pluginOptions.entryLimit'
@@ -4024,7 +3884,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.root'
   | 'pluginOptions.trackingIds'
   | 'pluginOptions.color'
-  | 'pluginOptions.shortname'
   | 'pluginOptions.output'
   | 'pluginOptions.createLinkInHead'
   | 'pluginOptions.entryLimit'
@@ -4293,19 +4152,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type SiteConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type SiteConfigQuery = { readonly site: Maybe<(
-    Pick<Site, 'id'>
-    & { readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'description' | 'siteUrl'>
-      & { readonly config: Maybe<(
-        Pick<SiteSiteMetadataConfig, 'pathPrefix' | 'backgroundColor' | 'copyright' | 'disqusShortname' | 'feedMetaDirectory' | 'googleAnalyticsID' | 'postsPerFeedPage' | 'postsPerPage' | 'themeColor'>
-        & { readonly organization: Maybe<Pick<SiteSiteMetadataConfigOrganization, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<SiteSiteMetadataConfigUser, 'about' | 'avatar' | 'firstName' | 'email' | 'github' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Maybe<Pick<SiteSiteMetadataConfigWebsite, 'description' | 'fbAppId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'title' | 'twitterName' | 'titleShort' | 'url'>> }
-      )> }
-    )> }
-  )> };
 
 }

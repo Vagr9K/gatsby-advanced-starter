@@ -3,21 +3,10 @@
 // Here we convert data from multiple sources into a unified Post type
 // Post data validation is also done here, hence cosnole logs/warnings are allowed
 // so we can notify the user during the build stage
-
-import urlJoin from "url-join";
-import config from "../config";
-
 import { MdxNode, Post, MdxListingQuery, PostFromJson } from "./types";
 
 // Re-export types
 export * from "./types";
-
-// Generate a baseURL
-export const getBaseUrl = (): string =>
-  urlJoin(config.website.url, config.pathPrefix);
-
-// Get full post URL
-export const getFullUrl = (slug: string): string => urlJoin(getBaseUrl(), slug);
 
 // Convert MDX based GraphQL query responses into a Post object
 export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
@@ -73,8 +62,6 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
       }. SEO capabilities will be limited.`
     );
 
-  const fullUrl = getFullUrl(mdxNode.fields.slug);
-
   const tagList = frontmatter.tags
     ? frontmatter.tags.filter(
         (tag: string | undefined): tag is string => typeof tag !== "undefined"
@@ -102,7 +89,6 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     excerpt: mdxNode.excerpt,
     timeToRead: mdxNode.timeToRead,
 
-    url: fullUrl,
     slug: mdxNode.fields.slug,
   };
 }
@@ -135,7 +121,6 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     slug,
     timeToRead,
     title,
-    url,
     category,
     coverImg,
     coverImageAlt,
@@ -163,7 +148,6 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     excerpt,
     timeToRead,
 
-    url,
     slug,
 
     relatedPosts: relatedPosts ? relatedPosts.map(jsonPostIntoPost) : undefined,

@@ -5,14 +5,14 @@ import fs from "fs";
 import _ from "lodash";
 import { Actions } from "gatsby";
 
-import config from "../../src/config";
+import { defaultConfig } from "../../src/config";
 
 import { FeedPageMeta, PostList } from "../../src/types";
 
-const FEED_META_DIR = `public/${config.feedMetaDirectory}`;
-const POSTS_PER_PAGE = config.postsPerFeedPage;
+const FEED_META_DIR = `public/${defaultConfig.feedMetaDirectory}`;
+const POSTS_PER_PAGE = defaultConfig.postsPerFeedPage;
 
-const FEED_COMPONENT = path.resolve("./src/templates/feed/index.tsx");
+const FEED_COMPONENT = require.resolve("../../src/templates/feed/index.tsx");
 
 // Save feed page metadata in the public folder for later retrieval by the client side code
 const saveFeedPageMeta = async (
