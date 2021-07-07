@@ -44,7 +44,7 @@ describe("seo utility generatePostData", () => {
 
     const { post } = sampleData;
 
-    const postData = generatePostData(sampleSeoData.website, post);
+    const postData = generatePostData(post);
 
     expect(postData.body).toBe(removeMd(post.internalContent as string));
     expect(postData.category).toBe(post.category);
@@ -64,7 +64,7 @@ describe("seo utility generatePostData", () => {
 
     post.internalContent = "Content with [Markdown](/link).";
 
-    const postData = generatePostData(sampleSeoData.website, post);
+    const postData = generatePostData(post);
 
     expect(postData.body).toBe("Content with Markdown.");
   });
@@ -75,7 +75,7 @@ describe("seo utility generatePostData", () => {
     const post = cloneDeep(sampleData.post);
     post.description = undefined;
 
-    const postData = generatePostData(sampleSeoData.website, post);
+    const postData = generatePostData(post);
 
     expect(postData.description).toBe(post.excerpt);
   });
@@ -86,7 +86,7 @@ describe("seo utility generatePostData", () => {
     const post = cloneDeep(sampleData.post);
     post.category = undefined;
 
-    const postData = generatePostData(sampleSeoData.website, post);
+    const postData = generatePostData(post);
 
     expect(postData.category).toBe("None");
   });
@@ -97,7 +97,7 @@ describe("seo utility generatePostData", () => {
     const post = cloneDeep(sampleData.post);
     post.tags = undefined;
 
-    const postData = generatePostData(sampleSeoData.website, post);
+    const postData = generatePostData(post);
 
     expect(postData.tags).toStrictEqual([]);
   });
@@ -108,7 +108,7 @@ describe("seo utility generatePostData", () => {
     const post = cloneDeep(sampleData.post);
     post.internalContent = undefined;
 
-    const throwingFn = () => generatePostData(sampleSeoData.website, post);
+    const throwingFn = () => generatePostData(post);
 
     expect(throwingFn).toThrow(
       "SEO::generatePostData: Post doesn't contain internal content used for Rich Tags. Aborting."

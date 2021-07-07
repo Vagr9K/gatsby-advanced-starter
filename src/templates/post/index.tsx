@@ -67,6 +67,9 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        route
+        pathName
+        url
       }
       internal {
         content

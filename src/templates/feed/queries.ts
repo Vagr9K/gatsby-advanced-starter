@@ -1,5 +1,5 @@
 // GraphQL queries for each feed
-export const indexListingQuery = `
+export const indexListingQuery = `#graphql
 query IndexFeedListing($skip: Int, $limit: Int) {
   allMdx(
     sort: { fields: [frontmatter___datePublished], order: DESC }
@@ -10,6 +10,9 @@ query IndexFeedListing($skip: Int, $limit: Int) {
       node {
         fields {
           slug
+          route
+          pathName
+          url
         }
         excerpt
         timeToRead
@@ -33,7 +36,7 @@ query IndexFeedListing($skip: Int, $limit: Int) {
 }
 `;
 
-export const tagListingQuery = `
+export const tagListingQuery = `#graphql
 query TagFeedListing($tag: String) {
   allMdx(
     limit: 1000
@@ -45,6 +48,9 @@ query TagFeedListing($tag: String) {
       node {
         fields {
           slug
+          route
+          pathName
+          url
         }
         excerpt
         timeToRead
@@ -68,7 +74,7 @@ query TagFeedListing($tag: String) {
 }
 `;
 
-export const categoryListingQuery = `
+export const categoryListingQuery = `#graphql
 query CategoryFeedListing($category: String) {
   allMdx(
     limit: 1000
@@ -80,6 +86,9 @@ query CategoryFeedListing($category: String) {
       node {
         fields {
           slug
+          route
+          pathName
+          url
         }
         excerpt
         timeToRead

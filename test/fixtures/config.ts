@@ -51,6 +51,8 @@ const config: SiteConfig = {
 
   embededImageWidth: 768, // MDX embeded image width. Used by gatsby-plugin-image for optimization
   embededVideoWidth: 920, // MDX embeded video width in pixels
+
+  basePath: "",
 };
 
 export default config;

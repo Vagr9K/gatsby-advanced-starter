@@ -11,12 +11,14 @@ export const IconLink = ({
   className,
   children,
   activeClassName,
+  noBasePath,
 }: LinkProps): JSX.Element => (
   <S.IconLink
     to={to}
     href={href}
     className={className}
     activeClassName={activeClassName}
+    noBasePath={noBasePath}
   >
     {children}
   </S.IconLink>
@@ -28,12 +30,14 @@ export const PrimaryLink = ({
   className,
   children,
   activeClassName,
+  noBasePath,
 }: LinkProps): JSX.Element => (
   <S.PrimaryLink
     to={to}
     href={href}
     className={className}
     activeClassName={activeClassName}
+    noBasePath={noBasePath}
   >
     {children}
   </S.PrimaryLink>
@@ -45,12 +49,14 @@ export const AnimatedLink = ({
   className,
   children,
   activeClassName,
+  noBasePath,
 }: LinkProps): JSX.Element => (
   <S.AnimatedLink
     to={to}
     href={href}
     className={className}
     activeClassName={activeClassName}
+    noBasePath={noBasePath}
   >
     {children}
   </S.AnimatedLink>
@@ -62,12 +68,14 @@ export const TransparentLink = ({
   className,
   children,
   activeClassName,
+  noBasePath,
 }: LinkProps): JSX.Element => (
   <S.TransparentLink
     to={to}
     href={href}
     className={className}
     activeClassName={activeClassName}
+    noBasePath={noBasePath}
   >
     {children}
   </S.TransparentLink>
@@ -79,12 +87,14 @@ export const HeadingLink = ({
   className,
   children,
   activeClassName,
+  noBasePath,
 }: LinkProps): JSX.Element => (
   <S.HeadingLink
     to={to}
     href={href}
     className={className}
     activeClassName={activeClassName}
+    noBasePath={noBasePath}
   >
     {children}
   </S.HeadingLink>

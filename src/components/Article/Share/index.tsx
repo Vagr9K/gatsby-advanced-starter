@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 
-import { withPrefix } from "gatsby";
-
 import {
   Twitter as TwitterIcon,
   LinkedinSquare as LinkedInIcon,
@@ -14,7 +12,6 @@ import {
   TwitterShareButton,
   RedditShareButton,
 } from "react-share";
-import urlJoin from "url-join";
 
 import LinkCopyNotification from "./LinkCopyNotification";
 import Separator from "../../shared/Separator";
@@ -39,13 +36,11 @@ type ArticleShareProps = {
 };
 
 const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
-  const { title, excerpt, slug } = post;
+  const { title, excerpt, url } = post;
 
   const [showLinkNotification, setShowlinkNotification] = useState(false);
 
   const config = useContext(ConfigContext);
-
-  const url = urlJoin(config.website.url, withPrefix(slug));
 
   const relatedTwitterNames = generateRelatedTwitterNames(config);
 

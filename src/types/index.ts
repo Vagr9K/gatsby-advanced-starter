@@ -36,6 +36,21 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
       `Post missing slug. Post title: ${frontmatter.title}. Aborting.`
     );
 
+  if (!mdxNode.fields.pathName)
+    throw Error(
+      `Post missing pathName. Post slug: ${mdxNode.fields.slug}. Aborting.`
+    );
+
+  if (!mdxNode.fields.url)
+    throw Error(
+      `Post missing url. Post slug: ${mdxNode.fields.slug}. Aborting.`
+    );
+
+  if (!mdxNode.fields.route)
+    throw Error(
+      `Post missing route. Post slug: ${mdxNode.fields.slug}. Aborting.`
+    );
+
   if (!mdxNode.timeToRead)
     throw Error(
       `Post missing timeToRead. Post slug: ${mdxNode.fields.slug}. Aborting.`
@@ -90,6 +105,9 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     timeToRead: mdxNode.timeToRead,
 
     slug: mdxNode.fields.slug,
+    route: mdxNode.fields.route,
+    pathName: mdxNode.fields.pathName,
+    url: mdxNode.fields.url,
   };
 }
 
@@ -119,6 +137,9 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     dateModified,
     datePublished,
     slug,
+    route,
+    pathName,
+    url,
     timeToRead,
     title,
     category,
@@ -149,6 +170,9 @@ export const jsonPostIntoPost = (meta: PostFromJson): Post => {
     timeToRead,
 
     slug,
+    route,
+    pathName,
+    url,
 
     relatedPosts: relatedPosts ? relatedPosts.map(jsonPostIntoPost) : undefined,
   };

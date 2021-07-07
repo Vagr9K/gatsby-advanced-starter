@@ -40,6 +40,9 @@ export type MdxNode = {
 
   fields?: {
     slug?: string;
+    pathName?: string;
+    route?: string;
+    url?: string;
   };
 
   frontmatter?: {
@@ -85,6 +88,9 @@ export type Post = {
   internalContent?: string;
 
   slug: string;
+  route: string;
+  pathName: string;
+  url: string;
 
   relatedPosts?: PostList;
 };
@@ -109,6 +115,9 @@ export type PostFromJson = {
   timeToRead: number;
 
   slug: string;
+  route: string;
+  pathName: string;
+  url: string;
 
   relatedPosts?: PostFromJsonList;
 };

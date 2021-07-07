@@ -1,5 +1,3 @@
-import { withPrefix } from "gatsby";
-import urlJoin from "url-join";
 import removeMd from "remove-markdown";
 
 import { SeoData, PostData } from "./types";
@@ -7,10 +5,7 @@ import { Post } from "../../types";
 import { WebsiteData } from "../../config";
 
 // Generate postData from a allMdx edge
-export const generatePostData = (
-  websiteData: WebsiteData,
-  post: Post
-): PostData => {
+export const generatePostData = (post: Post): PostData => {
   const {
     coverImageUrl,
     coverImageAlt,
@@ -31,9 +26,6 @@ export const generatePostData = (
 
   const body = removeMd(internalContent);
 
-  // Absolute URL to the post
-  const url = urlJoin(websiteData.url, withPrefix(post.slug));
-
   return {
     title,
     description: description || excerpt,
@@ -44,7 +36,7 @@ export const generatePostData = (
     category: category || "None",
     tags: tags || [],
     body,
-    url,
+    url: post.url,
   };
 };
 

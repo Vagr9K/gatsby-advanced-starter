@@ -3,10 +3,10 @@
 import path from "path";
 import fs from "fs";
 import _ from "lodash";
+
 import { Actions } from "gatsby";
 
-import { constants } from "../../src/config";
-
+import { constants, SiteConfig, withBasePath } from "../../src/config";
 import { FeedPageMeta, PostList } from "../../src/types";
 
 const FEED_META_DIR = `public/${constants.feedMetaDirectory}`;
@@ -43,6 +43,7 @@ export const initFeedMeta = (): void => {
 
 // Creates a paginated feed with Gatsby pages and feed metadata
 export const createFeed = async (
+  config: SiteConfig,
   actions: Actions,
   feedPosts: PostList,
   feedType: string,
@@ -89,14 +90,17 @@ export const createFeed = async (
         ? "/"
         : `/${feedType}${formattedFeedId ? `/${formattedFeedId}` : ""}`;
 
-    const routePath =
+    const slug =
       pageIndex === 0
         ? slugPrefix
         : `${slugPrefix !== "/" ? `${slugPrefix}` : ""}/${pageIndex + 1}/`;
 
+    // Add basePath if needed
+    const route = withBasePath(config, slug);
+
     // Create a Gatsby page based on the calculated information
     actions.createPage({
-      path: routePath,
+      path: route,
       component: FEED_COMPONENT,
       context: {
         limit,

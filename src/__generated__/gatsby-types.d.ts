@@ -354,6 +354,9 @@ type SitePageContextRelatedPosts = {
   readonly excerpt: Maybe<Scalars['String']>;
   readonly timeToRead: Maybe<Scalars['Int']>;
   readonly slug: Maybe<Scalars['String']>;
+  readonly route: Maybe<Scalars['String']>;
+  readonly pathName: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
 };
 
 type SitePageContextRelatedPostsCoverImg = {
@@ -410,6 +413,9 @@ type SitePageContextFeedPageMetaPosts = {
   readonly excerpt: Maybe<Scalars['String']>;
   readonly timeToRead: Maybe<Scalars['Int']>;
   readonly slug: Maybe<Scalars['String']>;
+  readonly route: Maybe<Scalars['String']>;
+  readonly pathName: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
 };
 
 type SitePageContextFeedPageMetaPostsCoverImg = {
@@ -734,6 +740,9 @@ type Mdx_tableOfContentsArgs = {
 
 type MdxFields = {
   readonly slug: Maybe<Scalars['String']>;
+  readonly route: Maybe<Scalars['String']>;
+  readonly pathName: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
 };
 
 type Frontmatter = {
@@ -786,6 +795,7 @@ type SiteConfig = {
   readonly assetDir: Scalars['String'];
   readonly embededImageWidth: Scalars['Int'];
   readonly embededVideoWidth: Scalars['Int'];
+  readonly basePath: Scalars['String'];
   readonly projectRoot: Maybe<Scalars['String']>;
   readonly configDir: Maybe<Scalars['String']>;
   readonly cacheDir: Maybe<Scalars['String']>;
@@ -1547,6 +1557,9 @@ type MdxWordCountFilterInput = {
 
 type MdxFieldsFilterInput = {
   readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly route: Maybe<StringQueryOperatorInput>;
+  readonly pathName: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
 };
 
 type FileConnection = {
@@ -1844,6 +1857,9 @@ type FileFieldsEnum =
   | 'childrenMdx.wordCount.sentences'
   | 'childrenMdx.wordCount.words'
   | 'childrenMdx.fields.slug'
+  | 'childrenMdx.fields.route'
+  | 'childrenMdx.fields.pathName'
+  | 'childrenMdx.fields.url'
   | 'childrenMdx.id'
   | 'childrenMdx.parent.id'
   | 'childrenMdx.parent.parent.id'
@@ -1945,6 +1961,9 @@ type FileFieldsEnum =
   | 'childMdx.wordCount.sentences'
   | 'childMdx.wordCount.words'
   | 'childMdx.fields.slug'
+  | 'childMdx.fields.route'
+  | 'childMdx.fields.pathName'
+  | 'childMdx.fields.url'
   | 'childMdx.id'
   | 'childMdx.parent.id'
   | 'childMdx.parent.parent.id'
@@ -2325,6 +2344,7 @@ type SiteConfigFilterInput = {
   readonly assetDir: Maybe<StringQueryOperatorInput>;
   readonly embededImageWidth: Maybe<IntQueryOperatorInput>;
   readonly embededVideoWidth: Maybe<IntQueryOperatorInput>;
+  readonly basePath: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
   readonly configDir: Maybe<StringQueryOperatorInput>;
   readonly cacheDir: Maybe<StringQueryOperatorInput>;
@@ -2466,6 +2486,7 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.assetDir'
   | 'siteMetadata.config.embededImageWidth'
   | 'siteMetadata.config.embededVideoWidth'
+  | 'siteMetadata.config.basePath'
   | 'siteMetadata.config.projectRoot'
   | 'siteMetadata.config.configDir'
   | 'siteMetadata.config.cacheDir'
@@ -2798,6 +2819,9 @@ type SitePageContextRelatedPostsFilterInput = {
   readonly excerpt: Maybe<StringQueryOperatorInput>;
   readonly timeToRead: Maybe<IntQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly route: Maybe<StringQueryOperatorInput>;
+  readonly pathName: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageContextRelatedPostsCoverImgFilterInput = {
@@ -2862,6 +2886,9 @@ type SitePageContextFeedPageMetaPostsFilterInput = {
   readonly excerpt: Maybe<StringQueryOperatorInput>;
   readonly timeToRead: Maybe<IntQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly route: Maybe<StringQueryOperatorInput>;
+  readonly pathName: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageContextFeedPageMetaPostsCoverImgFilterInput = {
@@ -3240,6 +3267,9 @@ type SitePageFieldsEnum =
   | 'context.relatedPosts.excerpt'
   | 'context.relatedPosts.timeToRead'
   | 'context.relatedPosts.slug'
+  | 'context.relatedPosts.route'
+  | 'context.relatedPosts.pathName'
+  | 'context.relatedPosts.url'
   | 'context.limit'
   | 'context.skip'
   | 'context.pageCount'
@@ -3261,6 +3291,9 @@ type SitePageFieldsEnum =
   | 'context.feedPageMeta.posts.excerpt'
   | 'context.feedPageMeta.posts.timeToRead'
   | 'context.feedPageMeta.posts.slug'
+  | 'context.feedPageMeta.posts.route'
+  | 'context.feedPageMeta.posts.pathName'
+  | 'context.feedPageMeta.posts.url'
   | 'pluginCreator.id'
   | 'pluginCreator.parent.id'
   | 'pluginCreator.parent.parent.id'
@@ -3758,6 +3791,9 @@ type MdxFieldsEnum =
   | 'wordCount.sentences'
   | 'wordCount.words'
   | 'fields.slug'
+  | 'fields.route'
+  | 'fields.pathName'
+  | 'fields.url'
   | 'id'
   | 'parent.id'
   | 'parent.parent.id'
@@ -4279,13 +4315,21 @@ type BlogPostBySlugQuery = { readonly mdx: Maybe<(
         Pick<File, 'publicURL'>
         & { readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }
       )> }
-    )>, readonly fields: Maybe<Pick<MdxFields, 'slug'>>, readonly internal: Pick<Internal, 'content'> }
+    )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
   )> };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'pathPrefix'>
+        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -4312,13 +4356,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'pathPrefix'>
-        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
 
 }

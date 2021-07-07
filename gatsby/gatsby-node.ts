@@ -2,13 +2,19 @@
 
 import path from "path";
 import _ from "lodash";
-import { GatsbyNode } from "gatsby";
+import { GatsbyNode, withPrefix } from "gatsby";
 
+import urlJoin from "url-join";
 import { BasicFrontmatter } from "./types";
 import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
 import { initFeedMeta, createFeed } from "./feeds";
 import getRelatedPosts from "./posts/getRelatedPosts";
-import { schema as configSchema } from "../src/config";
+import {
+  schema as configSchema,
+  SiteConfig,
+  withBasePath,
+  withDefaults,
+} from "../src/config";
 
 const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/index.tsx");
 
@@ -34,11 +40,12 @@ const generateSlug = (
 };
 
 // Gets invoked on GraphQl node creation
-export const onCreateNode: GatsbyNode["onCreateNode"] = ({
-  node,
-  actions,
-  getNode,
-}) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = (
+  { node, actions, getNode },
+  themeOptions
+) => {
+  const config = withDefaults(themeOptions as unknown as SiteConfig);
+
   // Filter by Mdx nodes
   if (node.internal.type === "Mdx" && node.parent) {
     // Find parent filenode created by gatsby-source-filesystem
@@ -51,8 +58,20 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
     // Generate a slug
     const slug = generateSlug(parsedFilePath, frontmatter);
 
-    // Set it as a field
+    // Route is the pathName without the pathPrefix, used for creating pages
+    const route = withBasePath(config, slug);
+
+    // Pathname is used for internal linking
+    const pathName = withPrefix(route);
+
+    // URL is the absolute website url to the post
+    const url = urlJoin(config.website.url, pathName);
+
+    // Set route/url/pathName/slug fields
     actions.createNodeField({ node, name: "slug", value: slug });
+    actions.createNodeField({ node, name: "route", value: route });
+    actions.createNodeField({ node, name: "pathName", value: pathName });
+    actions.createNodeField({ node, name: "url", value: url });
   }
 };
 
@@ -73,11 +92,11 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
   };
 
 // Gets invoked on page creation stage
-export const createPages: GatsbyNode["createPages"] = async ({
-  graphql,
-  actions,
-}) => {
-  // Paths to our page templates
+export const createPages: GatsbyNode["createPages"] = async (
+  { graphql, actions },
+  themeOptions
+) => {
+  const config = withDefaults(themeOptions as unknown as SiteConfig);
 
   // Create lists of unique categories and tags
   const tagSet = new Set<string>();
@@ -116,7 +135,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
     // Create a post page
     actions.createPage({
-      path: post.slug,
+      path: post.route,
       component: POST_PAGE_COMPONENT,
       context: {
         slug: post.slug,
@@ -130,13 +149,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
   });
 
   // Create a main "index" feed
-  await createFeed(actions, fullListing, "index");
+  await createFeed(config, actions, fullListing, "index");
 
   //  Create tag listing feeds based on our set
   const tagTasks = Array.from(tagSet.keys()).map(async (tag) => {
     const tagListing = await getTagListing(graphql, tag);
 
-    await createFeed(actions, tagListing, "tag", tag);
+    await createFeed(config, actions, tagListing, "tag", tag);
   });
 
   await Promise.all(tagTasks);
@@ -145,7 +164,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const categoryTasks = Array.from(categorySet.keys()).map(async (category) => {
     const categoryListing = await getCategoryListing(graphql, category);
 
-    await createFeed(actions, categoryListing, "category", category);
+    await createFeed(config, actions, categoryListing, "category", category);
   });
 
   await Promise.all(categoryTasks);

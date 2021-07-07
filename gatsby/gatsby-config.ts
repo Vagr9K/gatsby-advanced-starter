@@ -9,7 +9,7 @@ import remarkExternalLinks from "remark-external-links";
 import unwrapImages from "remark-unwrap-images";
 
 // Config
-import { SiteConfig, defaultConfig } from "../src/config";
+import { SiteConfig, withBasePath, withDefaults } from "../src/config";
 
 // Types
 import {
@@ -22,7 +22,7 @@ import {
 
 const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
   // Merge user and default configurations
-  const config = Object.assign(defaultConfig, userConfig);
+  const config = withDefaults(userConfig);
 
   const validatedPathPrefix =
     config.pathPrefix === "" ? "/" : config.pathPrefix;
@@ -309,7 +309,7 @@ const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
               }
             }
           `,
-              output: config.website.rss,
+              output: withBasePath(config, config.website.rss),
               title: config.website.rssTitle,
               site_url: config.website.url,
             },

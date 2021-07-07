@@ -49,6 +49,8 @@ export const schema = `#graphql
 
     embededImageWidth: Int!
     embededVideoWidth: Int!
+
+    basePath: String!
   }
 
   type SiteSiteMetadata {

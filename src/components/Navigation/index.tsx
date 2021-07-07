@@ -16,7 +16,9 @@ const Navigation = (): JSX.Element => {
       </S.HomeButton>
       <S.NavGrid>
         <S.NavButton to="/">Posts</S.NavButton>
-        <S.NavButton to="/about">About</S.NavButton>
+        <S.NavButton noBasePath to="/about">
+          About
+        </S.NavButton>
       </S.NavGrid>
     </S.Wrapper>
   );

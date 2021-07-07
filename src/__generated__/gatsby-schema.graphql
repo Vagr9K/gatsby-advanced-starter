@@ -421,6 +421,9 @@ type SitePageContextRelatedPosts {
   excerpt: String
   timeToRead: Int
   slug: String
+  route: String
+  pathName: String
+  url: String
 }
 
 type SitePageContextRelatedPostsCoverImg {
@@ -477,6 +480,9 @@ type SitePageContextFeedPageMetaPosts {
   excerpt: String
   timeToRead: Int
   slug: String
+  route: String
+  pathName: String
+  url: String
 }
 
 type SitePageContextFeedPageMetaPostsCoverImg {
@@ -800,6 +806,9 @@ type Mdx implements Node {
 
 type MdxFields {
   slug: String
+  route: String
+  pathName: String
+  url: String
 }
 
 type Frontmatter {
@@ -852,6 +861,7 @@ type SiteConfig {
   assetDir: String!
   embededImageWidth: Int!
   embededVideoWidth: Int!
+  basePath: String!
   projectRoot: String
   configDir: String
   cacheDir: String
@@ -1361,6 +1371,9 @@ input MdxWordCountFilterInput {
 
 input MdxFieldsFilterInput {
   slug: StringQueryOperatorInput
+  route: StringQueryOperatorInput
+  pathName: StringQueryOperatorInput
+  url: StringQueryOperatorInput
 }
 
 type FileConnection {
@@ -1631,6 +1644,9 @@ enum FileFieldsEnum {
   childrenMdx___wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childrenMdx___fields___route @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childrenMdx___fields___pathName @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childrenMdx___fields___url @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___parent___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1732,6 +1748,9 @@ enum FileFieldsEnum {
   childMdx___wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___fields___route @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___fields___pathName @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___fields___url @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childMdx___parent___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2088,6 +2107,7 @@ input SiteConfigFilterInput {
   assetDir: StringQueryOperatorInput
   embededImageWidth: IntQueryOperatorInput
   embededVideoWidth: IntQueryOperatorInput
+  basePath: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
   configDir: StringQueryOperatorInput
   cacheDir: StringQueryOperatorInput
@@ -2202,6 +2222,7 @@ enum SiteFieldsEnum {
   siteMetadata___config___assetDir
   siteMetadata___config___embededImageWidth
   siteMetadata___config___embededVideoWidth
+  siteMetadata___config___basePath
   siteMetadata___config___projectRoot
   siteMetadata___config___configDir
   siteMetadata___config___cacheDir
@@ -2509,6 +2530,9 @@ input SitePageContextRelatedPostsFilterInput {
   excerpt: StringQueryOperatorInput
   timeToRead: IntQueryOperatorInput
   slug: StringQueryOperatorInput
+  route: StringQueryOperatorInput
+  pathName: StringQueryOperatorInput
+  url: StringQueryOperatorInput
 }
 
 input SitePageContextRelatedPostsCoverImgFilterInput {
@@ -2573,6 +2597,9 @@ input SitePageContextFeedPageMetaPostsFilterInput {
   excerpt: StringQueryOperatorInput
   timeToRead: IntQueryOperatorInput
   slug: StringQueryOperatorInput
+  route: StringQueryOperatorInput
+  pathName: StringQueryOperatorInput
+  url: StringQueryOperatorInput
 }
 
 input SitePageContextFeedPageMetaPostsCoverImgFilterInput {
@@ -2924,6 +2951,9 @@ enum SitePageFieldsEnum {
   context___relatedPosts___excerpt
   context___relatedPosts___timeToRead
   context___relatedPosts___slug
+  context___relatedPosts___route
+  context___relatedPosts___pathName
+  context___relatedPosts___url
   context___limit
   context___skip
   context___pageCount
@@ -2945,6 +2975,9 @@ enum SitePageFieldsEnum {
   context___feedPageMeta___posts___excerpt
   context___feedPageMeta___posts___timeToRead
   context___feedPageMeta___posts___slug
+  context___feedPageMeta___posts___route
+  context___feedPageMeta___posts___pathName
+  context___feedPageMeta___posts___url
   pluginCreator___id
   pluginCreator___parent___id
   pluginCreator___parent___parent___id
@@ -3390,6 +3423,9 @@ enum MdxFieldsEnum {
   wordCount___sentences @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   wordCount___words @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   fields___slug @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___route @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___pathName @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___url @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   parent___parent___id @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")

@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { AnyStyledComponent } from "styled-components";
 
-import { withPrefix } from "gatsby";
 import _ from "lodash";
 
 import * as styles from "../../../theme";
@@ -35,13 +34,11 @@ type HeadingComponent = (props: HeadingProps) => JSX.Element;
 const createHeading =
   (slug: string, HeadingComponent: AnyStyledComponent): HeadingComponent =>
   ({ children }: HeadingProps): JSX.Element => {
-    const baseUrl = withPrefix(slug);
-
     const hashLink = getHeaderHashLink(children);
 
     return hashLink ? (
       <HeadingComponent id={hashLink}>
-        <HeadingLink to={`${baseUrl}#${hashLink}`}>{children} </HeadingLink>
+        <HeadingLink to={`${slug}#${hashLink}`}>{children} </HeadingLink>
       </HeadingComponent>
     ) : (
       <HeadingComponent>{children}</HeadingComponent>

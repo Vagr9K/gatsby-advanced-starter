@@ -17,6 +17,9 @@ const postListing: PostList = [
       'MDX Test Here\'s a color picker! NOTE: This "post" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…',
     timeToRead: 3,
     slug: "/big-sample-test",
+    route: "/blog/big-sample-test",
+    pathName: "/blog/big-sample-test",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test",
   },
   {
     title: "The Fairy's Witches",
@@ -34,6 +37,9 @@ const postListing: PostList = [
       "Eram mora tuas in inter ferens caterva Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab\ntestes…",
     timeToRead: 1,
     slug: "/the-fairys-witches",
+    route: "/blog/the-fairys-witches",
+    pathName: "/blog/the-fairys-witches",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/the-fairys-witches",
   },
   {
     title: "The Butterfly of the Edge",
@@ -58,6 +64,9 @@ const postListing: PostList = [
       "Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum…",
     timeToRead: 1,
     slug: "/the-butterfly-of-the-edge",
+    route: "/blog/the-butterfly-of-the-edge",
+    pathName: "/blog/the-butterfly-of-the-edge",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/the-butterfly-of-the-edge",
   },
   {
     title: "Random project 4 With Super Long Title Phase One",
@@ -75,6 +84,9 @@ const postListing: PostList = [
       "Artificem honorati ore temperat Lycus quam antiquum Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur…",
     timeToRead: 1,
     slug: "/random-project-4-with-super-long-title-phase-one",
+    route: "/blog/random-project-4-with-super-long-title-phase-one",
+    pathName: "/blog/random-project-4-with-super-long-title-phase-one",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/random-project-4-with-super-long-title-phase-one",
   },
   {
     title: "Angels of Mist",
@@ -92,6 +104,9 @@ const postListing: PostList = [
       "Ab dicemur cura Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;\nrerum? Nunc nec ferunt verbis…",
     timeToRead: 1,
     slug: "/angels-of-mist",
+    route: "/blog/angels-of-mist",
+    pathName: "/blog/angels-of-mist",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/angels-of-mist",
   },
   {
     title: "Birch in the Roses",
@@ -109,6 +124,9 @@ const postListing: PostList = [
       "Domos primus caelum taedia Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse…",
     timeToRead: 1,
     slug: "/birch-in-the-roses",
+    route: "/blog/birch-in-the-roses",
+    pathName: "/blog/birch-in-the-roses",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/birch-in-the-roses",
   },
   {
     title: "The Fallen Time",
@@ -126,6 +144,9 @@ const postListing: PostList = [
       "Autolyci eminus retenta Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus…",
     timeToRead: 1,
     slug: "/the-fallen-time",
+    route: "/blog/the-fallen-time",
+    pathName: "/blog/the-fallen-time",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/the-fallen-time",
   },
   {
     title: "Bold Mage",
@@ -143,6 +164,9 @@ const postListing: PostList = [
       "Quanto et ius coniunctis urbes Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus\nobliquum erigitur…",
     timeToRead: 1,
     slug: "/bold-mage",
+    route: "/blog/bold-mage",
+    pathName: "/blog/bold-mage",
+    url: "https://gatsby-advanced-starter-demo.netlify.com/blog/bold-mage",
   },
 ];
 

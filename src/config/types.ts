@@ -47,4 +47,6 @@ export interface SiteConfig {
 
   embededImageWidth: number;
   embededVideoWidth: number;
+
+  basePath: string;
 }

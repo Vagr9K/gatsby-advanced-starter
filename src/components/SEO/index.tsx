@@ -17,7 +17,7 @@ type SeoProps = {
 const SEO = ({ post }: SeoProps): JSX.Element => {
   const config = React.useContext(ConfigContext);
 
-  const postData = post ? generatePostData(config.website, post) : undefined;
+  const postData = post ? generatePostData(post) : undefined;
   const seoData = generateSeoData(config.website, postData);
 
   const websiteData = config.website;
