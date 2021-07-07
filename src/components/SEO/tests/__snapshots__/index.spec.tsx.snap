@@ -49,7 +49,7 @@ exports[`component SEO renders correctly on article pages 1`] = `
     property="og:description"
   />
   <meta
-    content="1825356251115265"
+    content="1111111111111111"
     property="fb:app_id"
   />
   <meta
@@ -173,7 +173,7 @@ exports[`component SEO renders correctly on website pages 1`] = `
     property="og:description"
   />
   <meta
-    content="1825356251115265"
+    content="1111111111111111"
     property="fb:app_id"
   />
   <script

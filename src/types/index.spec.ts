@@ -3,8 +3,11 @@ import cloneDeep from "clone-deep";
 
 import { mdxNodeIntoPost, queryIntoListing, queryIntoPost } from "./index";
 
-import { listingQuery, postQuery } from "../../test/sampleData";
-import { defaultConfig, SiteConfig } from "../config";
+import {
+  listingQuery,
+  postQuery,
+  config as configFixture,
+} from "../../test/fixtures";
 import { MdxNode } from "./types";
 
 const consoleWarnSpy = jest
@@ -13,7 +16,7 @@ const consoleWarnSpy = jest
 
 // Test data setup
 jest.mock("../config");
-const mockedConfig = mocked(defaultConfig as SiteConfig, true);
+const mockedConfig = mocked(configFixture, true);
 mockedConfig.website.url = "http://test.com";
 mockedConfig.pathPrefix = "/test";
 
