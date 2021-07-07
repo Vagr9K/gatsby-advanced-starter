@@ -5,12 +5,12 @@ import fs from "fs";
 import _ from "lodash";
 import { Actions } from "gatsby";
 
-import { defaultConfig } from "../../src/config";
+import { constants } from "../../src/config";
 
 import { FeedPageMeta, PostList } from "../../src/types";
 
-const FEED_META_DIR = `public/${defaultConfig.feedMetaDirectory}`;
-const POSTS_PER_PAGE = defaultConfig.postsPerFeedPage;
+const FEED_META_DIR = `public/${constants.feedMetaDirectory}`;
+const POSTS_PER_PAGE = constants.postsPerFeedPage;
 
 const FEED_COMPONENT = require.resolve("../../src/templates/feed/index.tsx");
 

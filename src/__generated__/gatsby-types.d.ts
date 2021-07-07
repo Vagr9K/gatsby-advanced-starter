@@ -782,8 +782,6 @@ type SiteConfig = {
   readonly user: Maybe<UserData>;
   readonly organization: Maybe<OrganizationData>;
   readonly pathPrefix: Scalars['String'];
-  readonly postsPerFeedPage: Scalars['Int'];
-  readonly feedMetaDirectory: Scalars['String'];
   readonly contentDir: Scalars['String'];
   readonly assetDir: Scalars['String'];
   readonly embededImageWidth: Scalars['Int'];
@@ -2323,8 +2321,6 @@ type SiteConfigFilterInput = {
   readonly user: Maybe<UserDataFilterInput>;
   readonly organization: Maybe<OrganizationDataFilterInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
-  readonly postsPerFeedPage: Maybe<IntQueryOperatorInput>;
-  readonly feedMetaDirectory: Maybe<StringQueryOperatorInput>;
   readonly contentDir: Maybe<StringQueryOperatorInput>;
   readonly assetDir: Maybe<StringQueryOperatorInput>;
   readonly embededImageWidth: Maybe<IntQueryOperatorInput>;
@@ -2466,8 +2462,6 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.organization.logoUrl'
   | 'siteMetadata.config.organization.url'
   | 'siteMetadata.config.pathPrefix'
-  | 'siteMetadata.config.postsPerFeedPage'
-  | 'siteMetadata.config.feedMetaDirectory'
   | 'siteMetadata.config.contentDir'
   | 'siteMetadata.config.assetDir'
   | 'siteMetadata.config.embededImageWidth'
@@ -4293,14 +4287,6 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'feedMetaDirectory' | 'pathPrefix' | 'postsPerFeedPage'>
-        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
-
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -4326,5 +4312,13 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'pathPrefix'>
+        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 }

@@ -46,9 +46,6 @@ const config: SiteConfig = {
   // Gatsby Configuration
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
 
-  postsPerFeedPage: 5, // Posts per feed page
-  feedMetaDirectory: "feed_meta/", // Directory for storing the feed page metadata
-
   contentDir: "./content", // Directory for MDX posts
   assetDir: "./static", // Asset directory
 

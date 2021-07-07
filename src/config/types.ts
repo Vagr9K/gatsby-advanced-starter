@@ -42,9 +42,6 @@ export interface SiteConfig {
 
   pathPrefix: string;
 
-  postsPerFeedPage: number;
-  feedMetaDirectory: string;
-
   contentDir: string;
   assetDir: string;
 

@@ -1,7 +1,5 @@
-import { useContext, useMemo } from "react";
+import { useMemo } from "react";
 import { useInfiniteQuery } from "react-query";
-
-import ConfigContext from "../../context/ConfigContext";
 
 import useScrollBasedFetching from "./useScrollBasedFetching";
 
@@ -13,11 +11,11 @@ import {
   PostPlaceholder,
 } from "../../types";
 import { PageContext } from "./types";
-import { SiteConfig } from "../../config";
+import { constants } from "../../config";
 
 // Calculate the base URL for the feed
-const getBaseUrl = (config: SiteConfig, pageContext: PageContext): string =>
-  `/${config.feedMetaDirectory}${pageContext.feedType}${
+const getBaseUrl = (pageContext: PageContext): string =>
+  `/${constants.feedMetaDirectory}${pageContext.feedType}${
     pageContext.feedId ? `-${pageContext.feedId}` : ""
   }`;
 
@@ -50,9 +48,7 @@ const useInfiniteFeed = (
   feedElementRef: React.RefObject<HTMLDivElement>;
   feedListing: FeedList;
 } => {
-  const config = useContext(ConfigContext);
-
-  const baseUrl = getBaseUrl(config, pageContext);
+  const baseUrl = getBaseUrl(pageContext);
 
   // Setup an infinite feed query
   const feedQuery = useInfiniteQuery(
@@ -84,7 +80,7 @@ const useInfiniteFeed = (
       const lastPage = feedQuery.data?.pages[feedQuery.data?.pages.length - 1];
       list.push(
         ...createPostPlaceholders(
-          lastPage?.nextCount || config.postsPerFeedPage,
+          lastPage?.nextCount || constants.postsPerFeedPage,
           "next"
         )
       );
@@ -95,7 +91,7 @@ const useInfiniteFeed = (
       const firstPage = feedQuery.data?.pages[0];
       list.unshift(
         ...createPostPlaceholders(
-          firstPage?.prevCount || config.postsPerFeedPage,
+          firstPage?.prevCount || constants.postsPerFeedPage,
           "prev"
         )
       );
@@ -107,7 +103,6 @@ const useInfiniteFeed = (
     pageContext.feedPageMeta.posts,
     feedQuery.isFetchingNextPage,
     feedQuery.isFetchingPreviousPage,
-    config.postsPerFeedPage,
   ]);
 
   return {

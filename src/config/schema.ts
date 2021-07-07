@@ -44,9 +44,6 @@ export const schema = `#graphql
 
     pathPrefix: String!
 
-    postsPerFeedPage: Int!
-    feedMetaDirectory: String!
-
     contentDir: String!
     assetDir: String!
 

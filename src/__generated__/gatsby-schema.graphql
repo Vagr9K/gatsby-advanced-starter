@@ -848,8 +848,6 @@ type SiteConfig {
   user: UserData
   organization: OrganizationData
   pathPrefix: String!
-  postsPerFeedPage: Int!
-  feedMetaDirectory: String!
   contentDir: String!
   assetDir: String!
   embededImageWidth: Int!
@@ -2086,8 +2084,6 @@ input SiteConfigFilterInput {
   user: UserDataFilterInput
   organization: OrganizationDataFilterInput
   pathPrefix: StringQueryOperatorInput
-  postsPerFeedPage: IntQueryOperatorInput
-  feedMetaDirectory: StringQueryOperatorInput
   contentDir: StringQueryOperatorInput
   assetDir: StringQueryOperatorInput
   embededImageWidth: IntQueryOperatorInput
@@ -2202,8 +2198,6 @@ enum SiteFieldsEnum {
   siteMetadata___config___organization___logoUrl
   siteMetadata___config___organization___url
   siteMetadata___config___pathPrefix
-  siteMetadata___config___postsPerFeedPage
-  siteMetadata___config___feedMetaDirectory
   siteMetadata___config___contentDir
   siteMetadata___config___assetDir
   siteMetadata___config___embededImageWidth

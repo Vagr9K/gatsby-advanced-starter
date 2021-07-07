@@ -21,7 +21,6 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
               assetDir
               embededImageWidth
               embededVideoWidth
-              feedMetaDirectory
               organization {
                 description
                 logoUrl
@@ -29,7 +28,6 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
                 url
               }
               pathPrefix
-              postsPerFeedPage
               user {
                 about
                 avatar
