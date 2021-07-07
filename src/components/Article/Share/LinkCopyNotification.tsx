@@ -44,6 +44,8 @@ const PopUp = styled.div`
 
   max-width: 90%;
 
+  z-index: 9999;
+
   left: 50%;
   transform: translateX(-50%);
 
