@@ -20,7 +20,7 @@ import {
 
 // Make sure that pathPrefix is not empty
 
-const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
+const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
   // Merge user and default configurations
   const config = Object.assign(defaultConfig, userConfig);
 
@@ -30,6 +30,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
   return {
     pathPrefix: validatedPathPrefix,
     siteMetadata: {
+      config, // Make the merged configuration available via GraphQL
       siteUrl: urljoin(config.website.url, config.pathPrefix),
       rssMetadata: {
         site_url: urljoin(config.website.url, config.pathPrefix),

@@ -349,6 +349,7 @@ type Site implements Node {
 type SiteSiteMetadata {
   title: String
   description: String
+  config: SiteConfig!
   siteUrl: String
   rssMetadata: SiteSiteMetadataRssMetadata
 }
@@ -803,6 +804,67 @@ type MdxFields {
 
 type Frontmatter {
   cover: File
+}
+
+type WebsiteData {
+  title: String!
+  titleShort: String!
+  name: String!
+  description: String!
+  logoUrl: String!
+  fbAppId: String
+  twitterName: String
+  url: String!
+  copyright: String!
+  rss: String!
+  rssTitle: String!
+  googleAnalyticsId: String
+  themeColor: String!
+  backgroundColor: String!
+}
+
+type UserData {
+  id: String!
+  firstName: String!
+  lastName: String!
+  twitterName: String
+  linkedIn: String
+  github: String
+  email: String!
+  location: String!
+  about: String!
+  avatar: String!
+}
+
+type OrganizationData {
+  name: String!
+  description: String!
+  logoUrl: String!
+  url: String!
+}
+
+type SiteConfig {
+  website: WebsiteData!
+  user: UserData
+  organization: OrganizationData
+  pathPrefix: String!
+  postsPerFeedPage: Int!
+  feedMetaDirectory: String!
+  contentDir: String!
+  assetDir: String!
+  embededImageWidth: Int!
+  embededVideoWidth: Int!
+  projectRoot: String
+  configDir: String
+  cacheDir: String
+  endpoints: SiteSiteMetadataConfigEndpoints
+}
+
+type SiteSiteMetadataConfigEndpoints {
+  node: [String]
+  browser: [String]
+  ssr: [String]
+  config: [String]
 }
 
 type MdxFrontmatter {
@@ -2014,8 +2076,70 @@ input DirectorySortInput {
 input SiteSiteMetadataFilterInput {
   title: StringQueryOperatorInput
   description: StringQueryOperatorInput
+  config: SiteConfigFilterInput
   siteUrl: StringQueryOperatorInput
   rssMetadata: SiteSiteMetadataRssMetadataFilterInput
+}
+
+input SiteConfigFilterInput {
+  website: WebsiteDataFilterInput
+  user: UserDataFilterInput
+  organization: OrganizationDataFilterInput
+  pathPrefix: StringQueryOperatorInput
+  postsPerFeedPage: IntQueryOperatorInput
+  feedMetaDirectory: StringQueryOperatorInput
+  contentDir: StringQueryOperatorInput
+  assetDir: StringQueryOperatorInput
+  embededImageWidth: IntQueryOperatorInput
+  embededVideoWidth: IntQueryOperatorInput
+  projectRoot: StringQueryOperatorInput
+  configDir: StringQueryOperatorInput
+  cacheDir: StringQueryOperatorInput
+  endpoints: SiteSiteMetadataConfigEndpointsFilterInput
+}
+
+input WebsiteDataFilterInput {
+  title: StringQueryOperatorInput
+  titleShort: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  logoUrl: StringQueryOperatorInput
+  fbAppId: StringQueryOperatorInput
+  twitterName: StringQueryOperatorInput
+  url: StringQueryOperatorInput
+  copyright: StringQueryOperatorInput
+  rss: StringQueryOperatorInput
+  rssTitle: StringQueryOperatorInput
+  googleAnalyticsId: StringQueryOperatorInput
+  themeColor: StringQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
+}
+
+input UserDataFilterInput {
+  id: StringQueryOperatorInput
+  firstName: StringQueryOperatorInput
+  lastName: StringQueryOperatorInput
+  twitterName: StringQueryOperatorInput
+  linkedIn: StringQueryOperatorInput
+  github: StringQueryOperatorInput
+  email: StringQueryOperatorInput
+  location: StringQueryOperatorInput
+  about: StringQueryOperatorInput
+  avatar: StringQueryOperatorInput
+}
+
+input OrganizationDataFilterInput {
+  name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  logoUrl: StringQueryOperatorInput
+  url: StringQueryOperatorInput
+}
+
+input SiteSiteMetadataConfigEndpointsFilterInput {
+  node: StringQueryOperatorInput
+  browser: StringQueryOperatorInput
+  ssr: StringQueryOperatorInput
+  config: StringQueryOperatorInput
 }
 
 input SiteSiteMetadataRssMetadataFilterInput {
@@ -2049,6 +2173,48 @@ enum SiteFieldsEnum {
   buildTime
   siteMetadata___title
   siteMetadata___description
+  siteMetadata___config___website___title
+  siteMetadata___config___website___titleShort
+  siteMetadata___config___website___name
+  siteMetadata___config___website___description
+  siteMetadata___config___website___logoUrl
+  siteMetadata___config___website___fbAppId
+  siteMetadata___config___website___twitterName
+  siteMetadata___config___website___url
+  siteMetadata___config___website___copyright
+  siteMetadata___config___website___rss
+  siteMetadata___config___website___rssTitle
+  siteMetadata___config___website___googleAnalyticsId
+  siteMetadata___config___website___themeColor
+  siteMetadata___config___website___backgroundColor
+  siteMetadata___config___user___id
+  siteMetadata___config___user___firstName
+  siteMetadata___config___user___lastName
+  siteMetadata___config___user___twitterName
+  siteMetadata___config___user___linkedIn
+  siteMetadata___config___user___github
+  siteMetadata___config___user___email
+  siteMetadata___config___user___location
+  siteMetadata___config___user___about
+  siteMetadata___config___user___avatar
+  siteMetadata___config___organization___name
+  siteMetadata___config___organization___description
+  siteMetadata___config___organization___logoUrl
+  siteMetadata___config___organization___url
+  siteMetadata___config___pathPrefix
+  siteMetadata___config___postsPerFeedPage
+  siteMetadata___config___feedMetaDirectory
+  siteMetadata___config___contentDir
+  siteMetadata___config___assetDir
+  siteMetadata___config___embededImageWidth
+  siteMetadata___config___embededVideoWidth
+  siteMetadata___config___projectRoot
+  siteMetadata___config___configDir
+  siteMetadata___config___cacheDir
+  siteMetadata___config___endpoints___node
+  siteMetadata___config___endpoints___browser
+  siteMetadata___config___endpoints___ssr
+  siteMetadata___config___endpoints___config
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url

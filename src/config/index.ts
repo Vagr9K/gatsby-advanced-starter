@@ -10,4 +10,6 @@ export type {
   WebsiteData,
 } from "./types";
 
+export { default as schema } from "./schema";
+
 export const defaultConfig = validatedConfig;

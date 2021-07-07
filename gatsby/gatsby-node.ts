@@ -8,6 +8,7 @@ import { BasicFrontmatter } from "./types";
 import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
 import { initFeedMeta, createFeed } from "./feeds";
 import getRelatedPosts from "./posts/getRelatedPosts";
+import { schema as configSchema } from "../src/config";
 
 const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/index.tsx");
 
@@ -59,13 +60,15 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
   ({ actions }) => {
     // Make sure the cover is a file node
-    actions.createTypes(`
+    actions.createTypes(`#graphql
    type Mdx implements Node {
      frontmatter: Frontmatter
    }
    type Frontmatter {
      cover: File
    }
+
+   ${configSchema}
  `);
   };
 

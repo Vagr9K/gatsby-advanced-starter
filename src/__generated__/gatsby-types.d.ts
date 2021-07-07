@@ -282,6 +282,7 @@ type Site_buildTimeArgs = {
 type SiteSiteMetadata = {
   readonly title: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly config: SiteConfig;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly rssMetadata: Maybe<SiteSiteMetadataRssMetadata>;
 };
@@ -737,6 +738,67 @@ type MdxFields = {
 
 type Frontmatter = {
   readonly cover: Maybe<File>;
+};
+
+type WebsiteData = {
+  readonly title: Scalars['String'];
+  readonly titleShort: Scalars['String'];
+  readonly name: Scalars['String'];
+  readonly description: Scalars['String'];
+  readonly logoUrl: Scalars['String'];
+  readonly fbAppId: Maybe<Scalars['String']>;
+  readonly twitterName: Maybe<Scalars['String']>;
+  readonly url: Scalars['String'];
+  readonly copyright: Scalars['String'];
+  readonly rss: Scalars['String'];
+  readonly rssTitle: Scalars['String'];
+  readonly googleAnalyticsId: Maybe<Scalars['String']>;
+  readonly themeColor: Scalars['String'];
+  readonly backgroundColor: Scalars['String'];
+};
+
+type UserData = {
+  readonly id: Scalars['String'];
+  readonly firstName: Scalars['String'];
+  readonly lastName: Scalars['String'];
+  readonly twitterName: Maybe<Scalars['String']>;
+  readonly linkedIn: Maybe<Scalars['String']>;
+  readonly github: Maybe<Scalars['String']>;
+  readonly email: Scalars['String'];
+  readonly location: Scalars['String'];
+  readonly about: Scalars['String'];
+  readonly avatar: Scalars['String'];
+};
+
+type OrganizationData = {
+  readonly name: Scalars['String'];
+  readonly description: Scalars['String'];
+  readonly logoUrl: Scalars['String'];
+  readonly url: Scalars['String'];
+};
+
+type SiteConfig = {
+  readonly website: WebsiteData;
+  readonly user: Maybe<UserData>;
+  readonly organization: Maybe<OrganizationData>;
+  readonly pathPrefix: Scalars['String'];
+  readonly postsPerFeedPage: Scalars['Int'];
+  readonly feedMetaDirectory: Scalars['String'];
+  readonly contentDir: Scalars['String'];
+  readonly assetDir: Scalars['String'];
+  readonly embededImageWidth: Scalars['Int'];
+  readonly embededVideoWidth: Scalars['Int'];
+  readonly projectRoot: Maybe<Scalars['String']>;
+  readonly configDir: Maybe<Scalars['String']>;
+  readonly cacheDir: Maybe<Scalars['String']>;
+  readonly endpoints: Maybe<SiteSiteMetadataConfigEndpoints>;
+};
+
+type SiteSiteMetadataConfigEndpoints = {
+  readonly node: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly browser: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly ssr: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly config: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
 };
 
 type MdxFrontmatter = {
@@ -2251,8 +2313,70 @@ type DirectorySortInput = {
 type SiteSiteMetadataFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
+  readonly config: Maybe<SiteConfigFilterInput>;
   readonly siteUrl: Maybe<StringQueryOperatorInput>;
   readonly rssMetadata: Maybe<SiteSiteMetadataRssMetadataFilterInput>;
+};
+
+type SiteConfigFilterInput = {
+  readonly website: Maybe<WebsiteDataFilterInput>;
+  readonly user: Maybe<UserDataFilterInput>;
+  readonly organization: Maybe<OrganizationDataFilterInput>;
+  readonly pathPrefix: Maybe<StringQueryOperatorInput>;
+  readonly postsPerFeedPage: Maybe<IntQueryOperatorInput>;
+  readonly feedMetaDirectory: Maybe<StringQueryOperatorInput>;
+  readonly contentDir: Maybe<StringQueryOperatorInput>;
+  readonly assetDir: Maybe<StringQueryOperatorInput>;
+  readonly embededImageWidth: Maybe<IntQueryOperatorInput>;
+  readonly embededVideoWidth: Maybe<IntQueryOperatorInput>;
+  readonly projectRoot: Maybe<StringQueryOperatorInput>;
+  readonly configDir: Maybe<StringQueryOperatorInput>;
+  readonly cacheDir: Maybe<StringQueryOperatorInput>;
+  readonly endpoints: Maybe<SiteSiteMetadataConfigEndpointsFilterInput>;
+};
+
+type WebsiteDataFilterInput = {
+  readonly title: Maybe<StringQueryOperatorInput>;
+  readonly titleShort: Maybe<StringQueryOperatorInput>;
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly logoUrl: Maybe<StringQueryOperatorInput>;
+  readonly fbAppId: Maybe<StringQueryOperatorInput>;
+  readonly twitterName: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+  readonly copyright: Maybe<StringQueryOperatorInput>;
+  readonly rss: Maybe<StringQueryOperatorInput>;
+  readonly rssTitle: Maybe<StringQueryOperatorInput>;
+  readonly googleAnalyticsId: Maybe<StringQueryOperatorInput>;
+  readonly themeColor: Maybe<StringQueryOperatorInput>;
+  readonly backgroundColor: Maybe<StringQueryOperatorInput>;
+};
+
+type UserDataFilterInput = {
+  readonly id: Maybe<StringQueryOperatorInput>;
+  readonly firstName: Maybe<StringQueryOperatorInput>;
+  readonly lastName: Maybe<StringQueryOperatorInput>;
+  readonly twitterName: Maybe<StringQueryOperatorInput>;
+  readonly linkedIn: Maybe<StringQueryOperatorInput>;
+  readonly github: Maybe<StringQueryOperatorInput>;
+  readonly email: Maybe<StringQueryOperatorInput>;
+  readonly location: Maybe<StringQueryOperatorInput>;
+  readonly about: Maybe<StringQueryOperatorInput>;
+  readonly avatar: Maybe<StringQueryOperatorInput>;
+};
+
+type OrganizationDataFilterInput = {
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly logoUrl: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataConfigEndpointsFilterInput = {
+  readonly node: Maybe<StringQueryOperatorInput>;
+  readonly browser: Maybe<StringQueryOperatorInput>;
+  readonly ssr: Maybe<StringQueryOperatorInput>;
+  readonly config: Maybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataRssMetadataFilterInput = {
@@ -2313,6 +2437,48 @@ type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata.title'
   | 'siteMetadata.description'
+  | 'siteMetadata.config.website.title'
+  | 'siteMetadata.config.website.titleShort'
+  | 'siteMetadata.config.website.name'
+  | 'siteMetadata.config.website.description'
+  | 'siteMetadata.config.website.logoUrl'
+  | 'siteMetadata.config.website.fbAppId'
+  | 'siteMetadata.config.website.twitterName'
+  | 'siteMetadata.config.website.url'
+  | 'siteMetadata.config.website.copyright'
+  | 'siteMetadata.config.website.rss'
+  | 'siteMetadata.config.website.rssTitle'
+  | 'siteMetadata.config.website.googleAnalyticsId'
+  | 'siteMetadata.config.website.themeColor'
+  | 'siteMetadata.config.website.backgroundColor'
+  | 'siteMetadata.config.user.id'
+  | 'siteMetadata.config.user.firstName'
+  | 'siteMetadata.config.user.lastName'
+  | 'siteMetadata.config.user.twitterName'
+  | 'siteMetadata.config.user.linkedIn'
+  | 'siteMetadata.config.user.github'
+  | 'siteMetadata.config.user.email'
+  | 'siteMetadata.config.user.location'
+  | 'siteMetadata.config.user.about'
+  | 'siteMetadata.config.user.avatar'
+  | 'siteMetadata.config.organization.name'
+  | 'siteMetadata.config.organization.description'
+  | 'siteMetadata.config.organization.logoUrl'
+  | 'siteMetadata.config.organization.url'
+  | 'siteMetadata.config.pathPrefix'
+  | 'siteMetadata.config.postsPerFeedPage'
+  | 'siteMetadata.config.feedMetaDirectory'
+  | 'siteMetadata.config.contentDir'
+  | 'siteMetadata.config.assetDir'
+  | 'siteMetadata.config.embededImageWidth'
+  | 'siteMetadata.config.embededVideoWidth'
+  | 'siteMetadata.config.projectRoot'
+  | 'siteMetadata.config.configDir'
+  | 'siteMetadata.config.cacheDir'
+  | 'siteMetadata.config.endpoints.node'
+  | 'siteMetadata.config.endpoints.browser'
+  | 'siteMetadata.config.endpoints.ssr'
+  | 'siteMetadata.config.endpoints.config'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.rssMetadata.site_url'
   | 'siteMetadata.rssMetadata.feed_url'
@@ -4126,6 +4292,14 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'feedMetaDirectory' | 'pathPrefix' | 'postsPerFeedPage'>
+        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
