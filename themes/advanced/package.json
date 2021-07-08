@@ -130,7 +130,7 @@
     "vagr9k"
   ],
   "license": "MIT",
-  "main": "n/a",
+  "main": "index.js",
   "scripts": {
     "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:deadcode": "ts-prune -i '(test|gatsby)'",
