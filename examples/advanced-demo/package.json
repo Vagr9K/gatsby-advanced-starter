@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-theme-advanced-demo",
+  "version": "3.0.0",
+  "main": "index.js",
+  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "dev": "npm run develop",
+    "dev:network": "gatsby develop -H 0.0.0.0",
+    "serve": "gatsby serve",
+    "build": "npm run build:types && npm run build:js && gatsby build",
+    "build:skip-typecheck": "npm run build:js && gatsby build",
+    "build:gh": "npm run clean && npm run build && gh-pages -d public",
+    "clean": "rm -rf public && rm -rf .cache",
+    "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
+    "lint:deadcode": "ts-prune -i '(test|gatsby)'",
+    "lint:styles": "stylelint src/**/*.{js,jsx,ts,tsx,css}",
+    "lint:md": "markdownlint-cli2 content/**/*.{md,mdx}",
+    "lint:format": "prettier --check '**/*.{js,jsx,ts,tsx,css}'",
+    "lint:all": "npm run lint:js && npm run lint:deadcode && npm run lint:styles && npm run lint:format && npm run lint:md",
+    "format:js": "prettier '**/*.{js,jsx,ts,tsx}' --write",
+    "format:styles": "prettier '**/*.css' --write",
+    "format:all": "npm run format:js && npm run format:styles",
+    "test": "jest",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "write-good": "write-good $(glob 'content/**/*.md')"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-starter",
+    "vagr9k"
+  ],
+  "dependencies": {
+    "gatsby": "^3.8.1",
+    "gatsby-theme-advanced": "workspace:*",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

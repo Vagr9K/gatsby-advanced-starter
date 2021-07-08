@@ -62,7 +62,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = (
     const route = withBasePath(config, slug);
 
     // Pathname is used for internal linking
-    const pathName = withPrefix(route);
+    const pathName = route; // TODO: Fix
 
     // URL is the absolute website url to the post
     const url = urlJoin(config.website.url, pathName);

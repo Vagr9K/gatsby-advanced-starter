@@ -1,14 +1,5 @@
 {
-  "include": [
-    "*",
-    ".eslintrc.js",
-    "gatsby/**/*",
-    "src/**/*",
-    "test/**/*",
-    "data/**/*",
-    "src/.gatsby/gatsby-node.js",
-    "src/.gatsby/gatsby-config.js"
-  ],
+  "include": ["*", ".eslintrc.js", "gatsby/**/*", "src/**/*", "test/**/*"],
   "compilerOptions": {
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017", "es2019"],

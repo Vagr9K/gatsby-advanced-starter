@@ -336,6 +336,8 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
+  port: Int
+  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -1000,6 +1002,17 @@ type SitePluginPluginOptions {
   createLinkInHead: Boolean
   entryLimit: Int
   query: String
+  short_name: String
+  description: String
+  start_url: String
+  background_color: String
+  theme_color: String
+  display: String
+  cache_busting_mode: String
+  legacy: Boolean
+  theme_color_in_head: Boolean
+  crossOrigin: String
+  include_favicon: Boolean
   modulePath: String
   enableIdentityWidget: Boolean
   publicPath: String
@@ -1008,29 +1021,18 @@ type SitePluginPluginOptions {
   feeds: [SitePluginPluginOptionsFeeds]
   configDir: String
   projectRoot: String
+  basePath: String
+  iconPath: String
   pathCheck: Boolean
-  short_name: String
-  description: String
-  start_url: String
-  background_color: String
-  theme_color: String
-  display: String
-  cache_busting_mode: String
-  icon: String
-  legacy: Boolean
-  theme_color_in_head: Boolean
-  crossOrigin: String
-  include_favicon: Boolean
-  workboxConfig: SitePluginPluginOptionsWorkboxConfig
 }
 
 type SitePluginPluginOptionsEmitSchema {
-  _xsrcxxxgeneratedxxxgatsbyxschemaxgraphql: Boolean
-  _xsrcxxxgeneratedxxxgatsbyxintrospectionxjson: Boolean
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql: Boolean
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json: Boolean
 }
 
 type SitePluginPluginOptionsEmitPluginDocuments {
-  _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: Boolean
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql: Boolean
 }
 
 type SitePluginPluginOptionsDefaults {
@@ -1066,10 +1068,6 @@ type SitePluginPluginOptionsFeeds {
   output: String
   title: String
   site_url: String
-}
-
-type SitePluginPluginOptionsWorkboxConfig {
-  globPatterns: [String]
 }
 
 type SitePluginPackageJson {
@@ -1124,7 +1122,7 @@ type Query {
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
   siteFunction(functionRoute: StringQueryOperatorInput, pluginName: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput, absoluteCompiledFilePath: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SiteFunction
   allSiteFunction(filter: SiteFunctionFilterInput, sort: SiteFunctionSortInput, skip: Int, limit: Int): SiteFunctionConnection!
@@ -2265,6 +2263,8 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
+  port
+  host
   pathPrefix
   polyfill
   id
@@ -2367,6 +2367,8 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
+  port: IntQueryOperatorInput
+  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -2724,6 +2726,17 @@ input SitePluginPluginOptionsFilterInput {
   createLinkInHead: BooleanQueryOperatorInput
   entryLimit: IntQueryOperatorInput
   query: StringQueryOperatorInput
+  short_name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  start_url: StringQueryOperatorInput
+  background_color: StringQueryOperatorInput
+  theme_color: StringQueryOperatorInput
+  display: StringQueryOperatorInput
+  cache_busting_mode: StringQueryOperatorInput
+  legacy: BooleanQueryOperatorInput
+  theme_color_in_head: BooleanQueryOperatorInput
+  crossOrigin: StringQueryOperatorInput
+  include_favicon: BooleanQueryOperatorInput
   modulePath: StringQueryOperatorInput
   enableIdentityWidget: BooleanQueryOperatorInput
   publicPath: StringQueryOperatorInput
@@ -2732,29 +2745,18 @@ input SitePluginPluginOptionsFilterInput {
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
+  basePath: StringQueryOperatorInput
+  iconPath: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
-  short_name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  start_url: StringQueryOperatorInput
-  background_color: StringQueryOperatorInput
-  theme_color: StringQueryOperatorInput
-  display: StringQueryOperatorInput
-  cache_busting_mode: StringQueryOperatorInput
-  icon: StringQueryOperatorInput
-  legacy: BooleanQueryOperatorInput
-  theme_color_in_head: BooleanQueryOperatorInput
-  crossOrigin: StringQueryOperatorInput
-  include_favicon: BooleanQueryOperatorInput
-  workboxConfig: SitePluginPluginOptionsWorkboxConfigFilterInput
 }
 
 input SitePluginPluginOptionsEmitSchemaFilterInput {
-  _xsrcxxxgeneratedxxxgatsbyxschemaxgraphql: BooleanQueryOperatorInput
-  _xsrcxxxgeneratedxxxgatsbyxintrospectionxjson: BooleanQueryOperatorInput
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql: BooleanQueryOperatorInput
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json: BooleanQueryOperatorInput
 }
 
 input SitePluginPluginOptionsEmitPluginDocumentsFilterInput {
-  _xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql: BooleanQueryOperatorInput
+  _home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql: BooleanQueryOperatorInput
 }
 
 input SitePluginPluginOptionsDefaultsFilterInput {
@@ -2798,10 +2800,6 @@ input SitePluginPluginOptionsFeedsFilterInput {
   output: StringQueryOperatorInput
   title: StringQueryOperatorInput
   site_url: StringQueryOperatorInput
-}
-
-input SitePluginPluginOptionsWorkboxConfigFilterInput {
-  globPatterns: StringQueryOperatorInput
 }
 
 input SitePluginPackageJsonFilterInput {
@@ -3042,9 +3040,9 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___jsxPragma
   pluginCreator___pluginOptions___allExtensions
   pluginCreator___pluginOptions___outputPath
-  pluginCreator___pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxschemaxgraphql
-  pluginCreator___pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxintrospectionxjson
-  pluginCreator___pluginOptions___emitPluginDocuments____xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql
+  pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
+  pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
+  pluginCreator___pluginOptions___emitPluginDocuments____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql
   pluginCreator___pluginOptions___displayName
   pluginCreator___pluginOptions___fileName
   pluginCreator___pluginOptions___minify
@@ -3085,6 +3083,17 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___createLinkInHead
   pluginCreator___pluginOptions___entryLimit
   pluginCreator___pluginOptions___query
+  pluginCreator___pluginOptions___short_name
+  pluginCreator___pluginOptions___description
+  pluginCreator___pluginOptions___start_url
+  pluginCreator___pluginOptions___background_color
+  pluginCreator___pluginOptions___theme_color
+  pluginCreator___pluginOptions___display
+  pluginCreator___pluginOptions___cache_busting_mode
+  pluginCreator___pluginOptions___legacy
+  pluginCreator___pluginOptions___theme_color_in_head
+  pluginCreator___pluginOptions___crossOrigin
+  pluginCreator___pluginOptions___include_favicon
   pluginCreator___pluginOptions___modulePath
   pluginCreator___pluginOptions___enableIdentityWidget
   pluginCreator___pluginOptions___publicPath
@@ -3097,20 +3106,9 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
+  pluginCreator___pluginOptions___basePath
+  pluginCreator___pluginOptions___iconPath
   pluginCreator___pluginOptions___pathCheck
-  pluginCreator___pluginOptions___short_name
-  pluginCreator___pluginOptions___description
-  pluginCreator___pluginOptions___start_url
-  pluginCreator___pluginOptions___background_color
-  pluginCreator___pluginOptions___theme_color
-  pluginCreator___pluginOptions___display
-  pluginCreator___pluginOptions___cache_busting_mode
-  pluginCreator___pluginOptions___icon
-  pluginCreator___pluginOptions___legacy
-  pluginCreator___pluginOptions___theme_color_in_head
-  pluginCreator___pluginOptions___crossOrigin
-  pluginCreator___pluginOptions___include_favicon
-  pluginCreator___pluginOptions___workboxConfig___globPatterns
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
   pluginCreator___ssrAPIs
@@ -3657,9 +3655,9 @@ enum SitePluginFieldsEnum {
   pluginOptions___jsxPragma
   pluginOptions___allExtensions
   pluginOptions___outputPath
-  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxschemaxgraphql
-  pluginOptions___emitSchema____xsrcxxxgeneratedxxxgatsbyxintrospectionxjson
-  pluginOptions___emitPluginDocuments____xsrcxxxgeneratedxxxgatsbyxpluginxdocumentsxgraphql
+  pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
+  pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
+  pluginOptions___emitPluginDocuments____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql
   pluginOptions___displayName
   pluginOptions___fileName
   pluginOptions___minify
@@ -3707,6 +3705,17 @@ enum SitePluginFieldsEnum {
   pluginOptions___createLinkInHead
   pluginOptions___entryLimit
   pluginOptions___query
+  pluginOptions___short_name
+  pluginOptions___description
+  pluginOptions___start_url
+  pluginOptions___background_color
+  pluginOptions___theme_color
+  pluginOptions___display
+  pluginOptions___cache_busting_mode
+  pluginOptions___legacy
+  pluginOptions___theme_color_in_head
+  pluginOptions___crossOrigin
+  pluginOptions___include_favicon
   pluginOptions___modulePath
   pluginOptions___enableIdentityWidget
   pluginOptions___publicPath
@@ -3719,20 +3728,9 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___site_url
   pluginOptions___configDir
   pluginOptions___projectRoot
+  pluginOptions___basePath
+  pluginOptions___iconPath
   pluginOptions___pathCheck
-  pluginOptions___short_name
-  pluginOptions___description
-  pluginOptions___start_url
-  pluginOptions___background_color
-  pluginOptions___theme_color
-  pluginOptions___display
-  pluginOptions___cache_busting_mode
-  pluginOptions___icon
-  pluginOptions___legacy
-  pluginOptions___theme_color_in_head
-  pluginOptions___crossOrigin
-  pluginOptions___include_favicon
-  pluginOptions___workboxConfig___globPatterns
   nodeAPIs
   browserAPIs
   ssrAPIs

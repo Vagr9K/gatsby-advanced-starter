@@ -1,6 +1,6 @@
 module.exports = {
   client: {
-    name: "gatsby-advanced-starter",
+    name: "gatsby-theme-advanced",
     tagName: "graphql",
     includes: [
       "./src/**/*.{ts,tsx}",

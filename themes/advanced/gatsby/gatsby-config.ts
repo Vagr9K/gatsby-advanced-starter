@@ -59,13 +59,17 @@ const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
       {
         resolve: `gatsby-plugin-typegen`,
         options: {
-          outputPath: `./src/__generated__/gatsby-types.d.ts`,
+          outputPath: require.resolve("../src/__generated__/gatsby-types.d.ts"),
           emitSchema: {
-            "./src/__generated__/gatsby-schema.graphql": true,
-            "./src/__generated__/gatsby-introspection.json": true,
+            [require.resolve("../src/__generated__/gatsby-schema.graphql")]:
+              true,
+            [require.resolve("../src/__generated__/gatsby-introspection.json")]:
+              true,
           },
           emitPluginDocuments: {
-            "./src/__generated__/gatsby-plugin-documents.graphql": true,
+            [require.resolve(
+              "../src/__generated__/gatsby-plugin-documents.graphql"
+            )]: true,
           },
         },
       },
@@ -187,7 +191,7 @@ const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
           display: "minimal-ui",
           cache_busting_mode: "none",
           icon: config.iconPath,
-          icons: config.iconPath ? undefined : config.iconList,
+          icons: config.iconPath ? undefined : config.iconList || [],
         },
       },
       {
