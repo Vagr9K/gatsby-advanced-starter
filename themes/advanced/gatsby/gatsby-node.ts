@@ -1,7 +1,7 @@
 /* eslint "no-console": "off" */
 
 import path from "path";
-import _ from "lodash";
+import { kebabCase } from "lodash";
 import { ITSConfigFn } from "gatsby-plugin-ts-config";
 
 import urlJoin from "url-join";
@@ -25,9 +25,9 @@ const generateSlug = (
 ): string => {
   if (frontmatter) {
     const { slug, title } = frontmatter;
-    if (slug) return `/${_.kebabCase(slug)}`;
+    if (slug) return `/${kebabCase(slug)}`;
 
-    if (title) return `/${_.kebabCase(title)}`;
+    if (title) return `/${kebabCase(title)}`;
   }
 
   if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
