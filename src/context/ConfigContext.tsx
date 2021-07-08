@@ -22,6 +22,14 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
               embededImageWidth
               embededVideoWidth
               basePath
+              iconPath
+              iconCachePath
+              iconList {
+                src
+                sizes
+                type
+                purpose
+              }
               organization {
                 description
                 logoUrl

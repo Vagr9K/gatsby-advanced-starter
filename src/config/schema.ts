@@ -36,6 +36,13 @@ export const schema = `#graphql
     url: String!
   }
 
+  type IconManifest {
+    src: String!
+    sizes: String!
+    type: String!
+    purpose: String
+  }
+
 
   type  SiteConfig {
     website: WebsiteData!
@@ -49,6 +56,10 @@ export const schema = `#graphql
 
     embededImageWidth: Int!
     embededVideoWidth: Int!
+
+    iconPath: String
+    iconList: [IconManifest]
+    iconCachePath: String
 
     basePath: String!
   }

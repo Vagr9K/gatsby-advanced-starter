@@ -35,6 +35,13 @@ export interface OrganizationData {
   url: string;
 }
 
+type IconManifest = {
+  src: string;
+  sizes: string;
+  type: string;
+  purpose?: string;
+};
+
 export interface SiteConfig {
   website: WebsiteData;
   user?: UserData;
@@ -47,6 +54,10 @@ export interface SiteConfig {
 
   embededImageWidth: number;
   embededVideoWidth: number;
+
+  iconPath?: string;
+  iconList?: Readonly<Array<IconManifest | undefined>>;
+  iconCachePath?: string;
 
   basePath: string;
 }

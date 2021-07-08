@@ -336,8 +336,6 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -852,6 +850,13 @@ type OrganizationData {
   url: String!
 }
 
+type IconManifest {
+  src: String!
+  sizes: String!
+  type: String!
+  purpose: String
+}
+
 type SiteConfig {
   website: WebsiteData!
   user: UserData
@@ -861,6 +866,9 @@ type SiteConfig {
   assetDir: String!
   embededImageWidth: Int!
   embededVideoWidth: Int!
+  iconPath: String
+  iconList: [IconManifest]
+  iconCachePath: String
   basePath: String!
   projectRoot: String
   configDir: String
@@ -992,18 +1000,6 @@ type SitePluginPluginOptions {
   createLinkInHead: Boolean
   entryLimit: Int
   query: String
-  short_name: String
-  description: String
-  start_url: String
-  background_color: String
-  theme_color: String
-  display: String
-  icons: [SitePluginPluginOptionsIcons]
-  legacy: Boolean
-  theme_color_in_head: Boolean
-  cache_busting_mode: String
-  crossOrigin: String
-  include_favicon: Boolean
   modulePath: String
   enableIdentityWidget: Boolean
   publicPath: String
@@ -1013,6 +1009,19 @@ type SitePluginPluginOptions {
   configDir: String
   projectRoot: String
   pathCheck: Boolean
+  short_name: String
+  description: String
+  start_url: String
+  background_color: String
+  theme_color: String
+  display: String
+  cache_busting_mode: String
+  icon: String
+  legacy: Boolean
+  theme_color_in_head: Boolean
+  crossOrigin: String
+  include_favicon: Boolean
+  workboxConfig: SitePluginPluginOptionsWorkboxConfig
 }
 
 type SitePluginPluginOptionsEmitSchema {
@@ -1052,17 +1061,15 @@ type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt {
   global: Boolean
 }
 
-type SitePluginPluginOptionsIcons {
-  src: String
-  sizes: String
-  type: String
-}
-
 type SitePluginPluginOptionsFeeds {
   query: String
   output: String
   title: String
   site_url: String
+}
+
+type SitePluginPluginOptionsWorkboxConfig {
+  globPatterns: [String]
 }
 
 type SitePluginPackageJson {
@@ -1117,7 +1124,7 @@ type Query {
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
   siteFunction(functionRoute: StringQueryOperatorInput, pluginName: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput, absoluteCompiledFilePath: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SiteFunction
   allSiteFunction(filter: SiteFunctionFilterInput, sort: SiteFunctionSortInput, skip: Int, limit: Int): SiteFunctionConnection!
@@ -2107,6 +2114,9 @@ input SiteConfigFilterInput {
   assetDir: StringQueryOperatorInput
   embededImageWidth: IntQueryOperatorInput
   embededVideoWidth: IntQueryOperatorInput
+  iconPath: StringQueryOperatorInput
+  iconList: IconManifestFilterListInput
+  iconCachePath: StringQueryOperatorInput
   basePath: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
   configDir: StringQueryOperatorInput
@@ -2149,6 +2159,17 @@ input OrganizationDataFilterInput {
   description: StringQueryOperatorInput
   logoUrl: StringQueryOperatorInput
   url: StringQueryOperatorInput
+}
+
+input IconManifestFilterListInput {
+  elemMatch: IconManifestFilterInput
+}
+
+input IconManifestFilterInput {
+  src: StringQueryOperatorInput
+  sizes: StringQueryOperatorInput
+  type: StringQueryOperatorInput
+  purpose: StringQueryOperatorInput
 }
 
 input SiteSiteMetadataConfigEndpointsFilterInput {
@@ -2222,6 +2243,13 @@ enum SiteFieldsEnum {
   siteMetadata___config___assetDir
   siteMetadata___config___embededImageWidth
   siteMetadata___config___embededVideoWidth
+  siteMetadata___config___iconPath
+  siteMetadata___config___iconList
+  siteMetadata___config___iconList___src
+  siteMetadata___config___iconList___sizes
+  siteMetadata___config___iconList___type
+  siteMetadata___config___iconList___purpose
+  siteMetadata___config___iconCachePath
   siteMetadata___config___basePath
   siteMetadata___config___projectRoot
   siteMetadata___config___configDir
@@ -2237,8 +2265,6 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
-  port
-  host
   pathPrefix
   polyfill
   id
@@ -2341,8 +2367,6 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
-  port: IntQueryOperatorInput
-  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -2700,18 +2724,6 @@ input SitePluginPluginOptionsFilterInput {
   createLinkInHead: BooleanQueryOperatorInput
   entryLimit: IntQueryOperatorInput
   query: StringQueryOperatorInput
-  short_name: StringQueryOperatorInput
-  description: StringQueryOperatorInput
-  start_url: StringQueryOperatorInput
-  background_color: StringQueryOperatorInput
-  theme_color: StringQueryOperatorInput
-  display: StringQueryOperatorInput
-  icons: SitePluginPluginOptionsIconsFilterListInput
-  legacy: BooleanQueryOperatorInput
-  theme_color_in_head: BooleanQueryOperatorInput
-  cache_busting_mode: StringQueryOperatorInput
-  crossOrigin: StringQueryOperatorInput
-  include_favicon: BooleanQueryOperatorInput
   modulePath: StringQueryOperatorInput
   enableIdentityWidget: BooleanQueryOperatorInput
   publicPath: StringQueryOperatorInput
@@ -2721,6 +2733,19 @@ input SitePluginPluginOptionsFilterInput {
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
+  short_name: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  start_url: StringQueryOperatorInput
+  background_color: StringQueryOperatorInput
+  theme_color: StringQueryOperatorInput
+  display: StringQueryOperatorInput
+  cache_busting_mode: StringQueryOperatorInput
+  icon: StringQueryOperatorInput
+  legacy: BooleanQueryOperatorInput
+  theme_color_in_head: BooleanQueryOperatorInput
+  crossOrigin: StringQueryOperatorInput
+  include_favicon: BooleanQueryOperatorInput
+  workboxConfig: SitePluginPluginOptionsWorkboxConfigFilterInput
 }
 
 input SitePluginPluginOptionsEmitSchemaFilterInput {
@@ -2764,16 +2789,6 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput {
   global: BooleanQueryOperatorInput
 }
 
-input SitePluginPluginOptionsIconsFilterListInput {
-  elemMatch: SitePluginPluginOptionsIconsFilterInput
-}
-
-input SitePluginPluginOptionsIconsFilterInput {
-  src: StringQueryOperatorInput
-  sizes: StringQueryOperatorInput
-  type: StringQueryOperatorInput
-}
-
 input SitePluginPluginOptionsFeedsFilterListInput {
   elemMatch: SitePluginPluginOptionsFeedsFilterInput
 }
@@ -2783,6 +2798,10 @@ input SitePluginPluginOptionsFeedsFilterInput {
   output: StringQueryOperatorInput
   title: StringQueryOperatorInput
   site_url: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsWorkboxConfigFilterInput {
+  globPatterns: StringQueryOperatorInput
 }
 
 input SitePluginPackageJsonFilterInput {
@@ -3066,21 +3085,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___createLinkInHead
   pluginCreator___pluginOptions___entryLimit
   pluginCreator___pluginOptions___query
-  pluginCreator___pluginOptions___short_name
-  pluginCreator___pluginOptions___description
-  pluginCreator___pluginOptions___start_url
-  pluginCreator___pluginOptions___background_color
-  pluginCreator___pluginOptions___theme_color
-  pluginCreator___pluginOptions___display
-  pluginCreator___pluginOptions___icons
-  pluginCreator___pluginOptions___icons___src
-  pluginCreator___pluginOptions___icons___sizes
-  pluginCreator___pluginOptions___icons___type
-  pluginCreator___pluginOptions___legacy
-  pluginCreator___pluginOptions___theme_color_in_head
-  pluginCreator___pluginOptions___cache_busting_mode
-  pluginCreator___pluginOptions___crossOrigin
-  pluginCreator___pluginOptions___include_favicon
   pluginCreator___pluginOptions___modulePath
   pluginCreator___pluginOptions___enableIdentityWidget
   pluginCreator___pluginOptions___publicPath
@@ -3094,6 +3098,19 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
   pluginCreator___pluginOptions___pathCheck
+  pluginCreator___pluginOptions___short_name
+  pluginCreator___pluginOptions___description
+  pluginCreator___pluginOptions___start_url
+  pluginCreator___pluginOptions___background_color
+  pluginCreator___pluginOptions___theme_color
+  pluginCreator___pluginOptions___display
+  pluginCreator___pluginOptions___cache_busting_mode
+  pluginCreator___pluginOptions___icon
+  pluginCreator___pluginOptions___legacy
+  pluginCreator___pluginOptions___theme_color_in_head
+  pluginCreator___pluginOptions___crossOrigin
+  pluginCreator___pluginOptions___include_favicon
+  pluginCreator___pluginOptions___workboxConfig___globPatterns
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
   pluginCreator___ssrAPIs
@@ -3690,21 +3707,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___createLinkInHead
   pluginOptions___entryLimit
   pluginOptions___query
-  pluginOptions___short_name
-  pluginOptions___description
-  pluginOptions___start_url
-  pluginOptions___background_color
-  pluginOptions___theme_color
-  pluginOptions___display
-  pluginOptions___icons
-  pluginOptions___icons___src
-  pluginOptions___icons___sizes
-  pluginOptions___icons___type
-  pluginOptions___legacy
-  pluginOptions___theme_color_in_head
-  pluginOptions___cache_busting_mode
-  pluginOptions___crossOrigin
-  pluginOptions___include_favicon
   pluginOptions___modulePath
   pluginOptions___enableIdentityWidget
   pluginOptions___publicPath
@@ -3718,6 +3720,19 @@ enum SitePluginFieldsEnum {
   pluginOptions___configDir
   pluginOptions___projectRoot
   pluginOptions___pathCheck
+  pluginOptions___short_name
+  pluginOptions___description
+  pluginOptions___start_url
+  pluginOptions___background_color
+  pluginOptions___theme_color
+  pluginOptions___display
+  pluginOptions___cache_busting_mode
+  pluginOptions___icon
+  pluginOptions___legacy
+  pluginOptions___theme_color_in_head
+  pluginOptions___crossOrigin
+  pluginOptions___include_favicon
+  pluginOptions___workboxConfig___globPatterns
   nodeAPIs
   browserAPIs
   ssrAPIs

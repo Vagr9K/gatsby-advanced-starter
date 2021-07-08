@@ -261,8 +261,6 @@ type Directory_ctimeArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
-  readonly port: Maybe<Scalars['Int']>;
-  readonly host: Maybe<Scalars['String']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly id: Scalars['ID'];
@@ -786,6 +784,13 @@ type OrganizationData = {
   readonly url: Scalars['String'];
 };
 
+type IconManifest = {
+  readonly src: Scalars['String'];
+  readonly sizes: Scalars['String'];
+  readonly type: Scalars['String'];
+  readonly purpose: Maybe<Scalars['String']>;
+};
+
 type SiteConfig = {
   readonly website: WebsiteData;
   readonly user: Maybe<UserData>;
@@ -795,6 +800,9 @@ type SiteConfig = {
   readonly assetDir: Scalars['String'];
   readonly embededImageWidth: Scalars['Int'];
   readonly embededVideoWidth: Scalars['Int'];
+  readonly iconPath: Maybe<Scalars['String']>;
+  readonly iconList: Maybe<ReadonlyArray<Maybe<IconManifest>>>;
+  readonly iconCachePath: Maybe<Scalars['String']>;
   readonly basePath: Scalars['String'];
   readonly projectRoot: Maybe<Scalars['String']>;
   readonly configDir: Maybe<Scalars['String']>;
@@ -917,18 +925,6 @@ type SitePluginPluginOptions = {
   readonly createLinkInHead: Maybe<Scalars['Boolean']>;
   readonly entryLimit: Maybe<Scalars['Int']>;
   readonly query: Maybe<Scalars['String']>;
-  readonly short_name: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly start_url: Maybe<Scalars['String']>;
-  readonly background_color: Maybe<Scalars['String']>;
-  readonly theme_color: Maybe<Scalars['String']>;
-  readonly display: Maybe<Scalars['String']>;
-  readonly icons: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsIcons>>>;
-  readonly legacy: Maybe<Scalars['Boolean']>;
-  readonly theme_color_in_head: Maybe<Scalars['Boolean']>;
-  readonly cache_busting_mode: Maybe<Scalars['String']>;
-  readonly crossOrigin: Maybe<Scalars['String']>;
-  readonly include_favicon: Maybe<Scalars['Boolean']>;
   readonly modulePath: Maybe<Scalars['String']>;
   readonly enableIdentityWidget: Maybe<Scalars['Boolean']>;
   readonly publicPath: Maybe<Scalars['String']>;
@@ -938,6 +934,19 @@ type SitePluginPluginOptions = {
   readonly configDir: Maybe<Scalars['String']>;
   readonly projectRoot: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
+  readonly short_name: Maybe<Scalars['String']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly start_url: Maybe<Scalars['String']>;
+  readonly background_color: Maybe<Scalars['String']>;
+  readonly theme_color: Maybe<Scalars['String']>;
+  readonly display: Maybe<Scalars['String']>;
+  readonly cache_busting_mode: Maybe<Scalars['String']>;
+  readonly icon: Maybe<Scalars['String']>;
+  readonly legacy: Maybe<Scalars['Boolean']>;
+  readonly theme_color_in_head: Maybe<Scalars['Boolean']>;
+  readonly crossOrigin: Maybe<Scalars['String']>;
+  readonly include_favicon: Maybe<Scalars['Boolean']>;
+  readonly workboxConfig: Maybe<SitePluginPluginOptionsWorkboxConfig>;
 };
 
 type SitePluginPluginOptionsEmitSchema = {
@@ -977,17 +986,15 @@ type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt = {
   readonly global: Maybe<Scalars['Boolean']>;
 };
 
-type SitePluginPluginOptionsIcons = {
-  readonly src: Maybe<Scalars['String']>;
-  readonly sizes: Maybe<Scalars['String']>;
-  readonly type: Maybe<Scalars['String']>;
-};
-
 type SitePluginPluginOptionsFeeds = {
   readonly query: Maybe<Scalars['String']>;
   readonly output: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
   readonly site_url: Maybe<Scalars['String']>;
+};
+
+type SitePluginPluginOptionsWorkboxConfig = {
+  readonly globPatterns: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
 };
 
 type SitePluginPackageJson = {
@@ -1161,8 +1168,6 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  port: Maybe<IntQueryOperatorInput>;
-  host: Maybe<StringQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -2344,6 +2349,9 @@ type SiteConfigFilterInput = {
   readonly assetDir: Maybe<StringQueryOperatorInput>;
   readonly embededImageWidth: Maybe<IntQueryOperatorInput>;
   readonly embededVideoWidth: Maybe<IntQueryOperatorInput>;
+  readonly iconPath: Maybe<StringQueryOperatorInput>;
+  readonly iconList: Maybe<IconManifestFilterListInput>;
+  readonly iconCachePath: Maybe<StringQueryOperatorInput>;
   readonly basePath: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
   readonly configDir: Maybe<StringQueryOperatorInput>;
@@ -2386,6 +2394,17 @@ type OrganizationDataFilterInput = {
   readonly description: Maybe<StringQueryOperatorInput>;
   readonly logoUrl: Maybe<StringQueryOperatorInput>;
   readonly url: Maybe<StringQueryOperatorInput>;
+};
+
+type IconManifestFilterListInput = {
+  readonly elemMatch: Maybe<IconManifestFilterInput>;
+};
+
+type IconManifestFilterInput = {
+  readonly src: Maybe<StringQueryOperatorInput>;
+  readonly sizes: Maybe<StringQueryOperatorInput>;
+  readonly type: Maybe<StringQueryOperatorInput>;
+  readonly purpose: Maybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataConfigEndpointsFilterInput = {
@@ -2486,6 +2505,13 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.assetDir'
   | 'siteMetadata.config.embededImageWidth'
   | 'siteMetadata.config.embededVideoWidth'
+  | 'siteMetadata.config.iconPath'
+  | 'siteMetadata.config.iconList'
+  | 'siteMetadata.config.iconList.src'
+  | 'siteMetadata.config.iconList.sizes'
+  | 'siteMetadata.config.iconList.type'
+  | 'siteMetadata.config.iconList.purpose'
+  | 'siteMetadata.config.iconCachePath'
   | 'siteMetadata.config.basePath'
   | 'siteMetadata.config.projectRoot'
   | 'siteMetadata.config.configDir'
@@ -2501,8 +2527,6 @@ type SiteFieldsEnum =
   | 'siteMetadata.rssMetadata.description'
   | 'siteMetadata.rssMetadata.image_url'
   | 'siteMetadata.rssMetadata.copyright'
-  | 'port'
-  | 'host'
   | 'pathPrefix'
   | 'polyfill'
   | 'id'
@@ -2604,8 +2628,6 @@ type SiteGroupConnection = {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  readonly port: Maybe<IntQueryOperatorInput>;
-  readonly host: Maybe<StringQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -2989,18 +3011,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly createLinkInHead: Maybe<BooleanQueryOperatorInput>;
   readonly entryLimit: Maybe<IntQueryOperatorInput>;
   readonly query: Maybe<StringQueryOperatorInput>;
-  readonly short_name: Maybe<StringQueryOperatorInput>;
-  readonly description: Maybe<StringQueryOperatorInput>;
-  readonly start_url: Maybe<StringQueryOperatorInput>;
-  readonly background_color: Maybe<StringQueryOperatorInput>;
-  readonly theme_color: Maybe<StringQueryOperatorInput>;
-  readonly display: Maybe<StringQueryOperatorInput>;
-  readonly icons: Maybe<SitePluginPluginOptionsIconsFilterListInput>;
-  readonly legacy: Maybe<BooleanQueryOperatorInput>;
-  readonly theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
-  readonly cache_busting_mode: Maybe<StringQueryOperatorInput>;
-  readonly crossOrigin: Maybe<StringQueryOperatorInput>;
-  readonly include_favicon: Maybe<BooleanQueryOperatorInput>;
   readonly modulePath: Maybe<StringQueryOperatorInput>;
   readonly enableIdentityWidget: Maybe<BooleanQueryOperatorInput>;
   readonly publicPath: Maybe<StringQueryOperatorInput>;
@@ -3010,6 +3020,19 @@ type SitePluginPluginOptionsFilterInput = {
   readonly configDir: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
+  readonly short_name: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly start_url: Maybe<StringQueryOperatorInput>;
+  readonly background_color: Maybe<StringQueryOperatorInput>;
+  readonly theme_color: Maybe<StringQueryOperatorInput>;
+  readonly display: Maybe<StringQueryOperatorInput>;
+  readonly cache_busting_mode: Maybe<StringQueryOperatorInput>;
+  readonly icon: Maybe<StringQueryOperatorInput>;
+  readonly legacy: Maybe<BooleanQueryOperatorInput>;
+  readonly theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
+  readonly crossOrigin: Maybe<StringQueryOperatorInput>;
+  readonly include_favicon: Maybe<BooleanQueryOperatorInput>;
+  readonly workboxConfig: Maybe<SitePluginPluginOptionsWorkboxConfigFilterInput>;
 };
 
 type SitePluginPluginOptionsEmitSchemaFilterInput = {
@@ -3053,16 +3076,6 @@ type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput = {
   readonly global: Maybe<BooleanQueryOperatorInput>;
 };
 
-type SitePluginPluginOptionsIconsFilterListInput = {
-  readonly elemMatch: Maybe<SitePluginPluginOptionsIconsFilterInput>;
-};
-
-type SitePluginPluginOptionsIconsFilterInput = {
-  readonly src: Maybe<StringQueryOperatorInput>;
-  readonly sizes: Maybe<StringQueryOperatorInput>;
-  readonly type: Maybe<StringQueryOperatorInput>;
-};
-
 type SitePluginPluginOptionsFeedsFilterListInput = {
   readonly elemMatch: Maybe<SitePluginPluginOptionsFeedsFilterInput>;
 };
@@ -3072,6 +3085,10 @@ type SitePluginPluginOptionsFeedsFilterInput = {
   readonly output: Maybe<StringQueryOperatorInput>;
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly site_url: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePluginPluginOptionsWorkboxConfigFilterInput = {
+  readonly globPatterns: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPackageJsonFilterInput = {
@@ -3382,21 +3399,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.createLinkInHead'
   | 'pluginCreator.pluginOptions.entryLimit'
   | 'pluginCreator.pluginOptions.query'
-  | 'pluginCreator.pluginOptions.short_name'
-  | 'pluginCreator.pluginOptions.description'
-  | 'pluginCreator.pluginOptions.start_url'
-  | 'pluginCreator.pluginOptions.background_color'
-  | 'pluginCreator.pluginOptions.theme_color'
-  | 'pluginCreator.pluginOptions.display'
-  | 'pluginCreator.pluginOptions.icons'
-  | 'pluginCreator.pluginOptions.icons.src'
-  | 'pluginCreator.pluginOptions.icons.sizes'
-  | 'pluginCreator.pluginOptions.icons.type'
-  | 'pluginCreator.pluginOptions.legacy'
-  | 'pluginCreator.pluginOptions.theme_color_in_head'
-  | 'pluginCreator.pluginOptions.cache_busting_mode'
-  | 'pluginCreator.pluginOptions.crossOrigin'
-  | 'pluginCreator.pluginOptions.include_favicon'
   | 'pluginCreator.pluginOptions.modulePath'
   | 'pluginCreator.pluginOptions.enableIdentityWidget'
   | 'pluginCreator.pluginOptions.publicPath'
@@ -3410,6 +3412,19 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.configDir'
   | 'pluginCreator.pluginOptions.projectRoot'
   | 'pluginCreator.pluginOptions.pathCheck'
+  | 'pluginCreator.pluginOptions.short_name'
+  | 'pluginCreator.pluginOptions.description'
+  | 'pluginCreator.pluginOptions.start_url'
+  | 'pluginCreator.pluginOptions.background_color'
+  | 'pluginCreator.pluginOptions.theme_color'
+  | 'pluginCreator.pluginOptions.display'
+  | 'pluginCreator.pluginOptions.cache_busting_mode'
+  | 'pluginCreator.pluginOptions.icon'
+  | 'pluginCreator.pluginOptions.legacy'
+  | 'pluginCreator.pluginOptions.theme_color_in_head'
+  | 'pluginCreator.pluginOptions.crossOrigin'
+  | 'pluginCreator.pluginOptions.include_favicon'
+  | 'pluginCreator.pluginOptions.workboxConfig.globPatterns'
   | 'pluginCreator.nodeAPIs'
   | 'pluginCreator.browserAPIs'
   | 'pluginCreator.ssrAPIs'
@@ -4084,21 +4099,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.createLinkInHead'
   | 'pluginOptions.entryLimit'
   | 'pluginOptions.query'
-  | 'pluginOptions.short_name'
-  | 'pluginOptions.description'
-  | 'pluginOptions.start_url'
-  | 'pluginOptions.background_color'
-  | 'pluginOptions.theme_color'
-  | 'pluginOptions.display'
-  | 'pluginOptions.icons'
-  | 'pluginOptions.icons.src'
-  | 'pluginOptions.icons.sizes'
-  | 'pluginOptions.icons.type'
-  | 'pluginOptions.legacy'
-  | 'pluginOptions.theme_color_in_head'
-  | 'pluginOptions.cache_busting_mode'
-  | 'pluginOptions.crossOrigin'
-  | 'pluginOptions.include_favicon'
   | 'pluginOptions.modulePath'
   | 'pluginOptions.enableIdentityWidget'
   | 'pluginOptions.publicPath'
@@ -4112,6 +4112,19 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.configDir'
   | 'pluginOptions.projectRoot'
   | 'pluginOptions.pathCheck'
+  | 'pluginOptions.short_name'
+  | 'pluginOptions.description'
+  | 'pluginOptions.start_url'
+  | 'pluginOptions.background_color'
+  | 'pluginOptions.theme_color'
+  | 'pluginOptions.display'
+  | 'pluginOptions.cache_busting_mode'
+  | 'pluginOptions.icon'
+  | 'pluginOptions.legacy'
+  | 'pluginOptions.theme_color_in_head'
+  | 'pluginOptions.crossOrigin'
+  | 'pluginOptions.include_favicon'
+  | 'pluginOptions.workboxConfig.globPatterns'
   | 'nodeAPIs'
   | 'browserAPIs'
   | 'ssrAPIs'
@@ -4318,19 +4331,6 @@ type BlogPostBySlugQuery = { readonly mdx: Maybe<(
     )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
   )> };
 
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'pathPrefix'>
-        & { readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
-
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -4356,5 +4356,13 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 }

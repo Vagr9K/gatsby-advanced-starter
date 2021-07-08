@@ -185,21 +185,21 @@ const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
           background_color: config.website.backgroundColor,
           theme_color: config.website.themeColor,
           display: "minimal-ui",
-          icons: [
-            {
-              src: "/logos/logo-192.png",
-              sizes: "192x192",
-              type: "image/png",
-            },
-            {
-              src: "/logos/logo-512.png",
-              sizes: "512x512",
-              type: "image/png",
-            },
-          ],
+          cache_busting_mode: "none",
+          icon: config.iconPath,
+          icons: config.iconPath ? undefined : config.iconList,
         },
       },
-      "gatsby-plugin-offline",
+      {
+        resolve: "gatsby-plugin-offline",
+        options: {
+          workboxConfig: {
+            globPatterns: config.iconCachePath
+              ? [config.iconCachePath]
+              : undefined,
+          },
+        },
+      },
       {
         resolve: "gatsby-plugin-netlify-cms",
         options: {
