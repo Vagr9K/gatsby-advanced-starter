@@ -1,6 +1,6 @@
 /* eslint "no-console": "off" */
 
-import { GatsbyConfig } from "gatsby";
+import { ITSConfigFn } from "gatsby-plugin-ts-config";
 import urljoin from "url-join";
 
 // Remark plugins
@@ -20,7 +20,7 @@ import {
 
 // Make sure that pathPrefix is not empty
 
-const gatsbyConfig = (userConfig: Readonly<SiteConfig>): GatsbyConfig => {
+const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
   // Merge user and default configurations
   const config = withDefaults(userConfig);
 

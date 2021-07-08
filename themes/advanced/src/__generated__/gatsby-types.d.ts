@@ -806,17 +806,6 @@ type SiteConfig = {
   readonly iconList: Maybe<ReadonlyArray<Maybe<IconManifest>>>;
   readonly iconCachePath: Maybe<Scalars['String']>;
   readonly basePath: Scalars['String'];
-  readonly projectRoot: Maybe<Scalars['String']>;
-  readonly configDir: Maybe<Scalars['String']>;
-  readonly cacheDir: Maybe<Scalars['String']>;
-  readonly endpoints: Maybe<SiteSiteMetadataConfigEndpoints>;
-};
-
-type SiteSiteMetadataConfigEndpoints = {
-  readonly node: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly browser: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly ssr: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly config: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
 };
 
 type MdxFrontmatter = {
@@ -934,6 +923,7 @@ type SitePluginPluginOptions = {
   readonly theme_color: Maybe<Scalars['String']>;
   readonly display: Maybe<Scalars['String']>;
   readonly cache_busting_mode: Maybe<Scalars['String']>;
+  readonly icon: Maybe<Scalars['String']>;
   readonly legacy: Maybe<Scalars['Boolean']>;
   readonly theme_color_in_head: Maybe<Scalars['Boolean']>;
   readonly crossOrigin: Maybe<Scalars['String']>;
@@ -2353,10 +2343,6 @@ type SiteConfigFilterInput = {
   readonly iconList: Maybe<IconManifestFilterListInput>;
   readonly iconCachePath: Maybe<StringQueryOperatorInput>;
   readonly basePath: Maybe<StringQueryOperatorInput>;
-  readonly projectRoot: Maybe<StringQueryOperatorInput>;
-  readonly configDir: Maybe<StringQueryOperatorInput>;
-  readonly cacheDir: Maybe<StringQueryOperatorInput>;
-  readonly endpoints: Maybe<SiteSiteMetadataConfigEndpointsFilterInput>;
 };
 
 type WebsiteDataFilterInput = {
@@ -2405,13 +2391,6 @@ type IconManifestFilterInput = {
   readonly sizes: Maybe<StringQueryOperatorInput>;
   readonly type: Maybe<StringQueryOperatorInput>;
   readonly purpose: Maybe<StringQueryOperatorInput>;
-};
-
-type SiteSiteMetadataConfigEndpointsFilterInput = {
-  readonly node: Maybe<StringQueryOperatorInput>;
-  readonly browser: Maybe<StringQueryOperatorInput>;
-  readonly ssr: Maybe<StringQueryOperatorInput>;
-  readonly config: Maybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataRssMetadataFilterInput = {
@@ -2513,13 +2492,6 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.iconList.purpose'
   | 'siteMetadata.config.iconCachePath'
   | 'siteMetadata.config.basePath'
-  | 'siteMetadata.config.projectRoot'
-  | 'siteMetadata.config.configDir'
-  | 'siteMetadata.config.cacheDir'
-  | 'siteMetadata.config.endpoints.node'
-  | 'siteMetadata.config.endpoints.browser'
-  | 'siteMetadata.config.endpoints.ssr'
-  | 'siteMetadata.config.endpoints.config'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.rssMetadata.site_url'
   | 'siteMetadata.rssMetadata.feed_url'
@@ -3022,6 +2994,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly theme_color: Maybe<StringQueryOperatorInput>;
   readonly display: Maybe<StringQueryOperatorInput>;
   readonly cache_busting_mode: Maybe<StringQueryOperatorInput>;
+  readonly icon: Maybe<StringQueryOperatorInput>;
   readonly legacy: Maybe<BooleanQueryOperatorInput>;
   readonly theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
   readonly crossOrigin: Maybe<StringQueryOperatorInput>;
@@ -3406,6 +3379,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.theme_color'
   | 'pluginCreator.pluginOptions.display'
   | 'pluginCreator.pluginOptions.cache_busting_mode'
+  | 'pluginCreator.pluginOptions.icon'
   | 'pluginCreator.pluginOptions.legacy'
   | 'pluginCreator.pluginOptions.theme_color_in_head'
   | 'pluginCreator.pluginOptions.crossOrigin'
@@ -4106,6 +4080,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.theme_color'
   | 'pluginOptions.display'
   | 'pluginOptions.cache_busting_mode'
+  | 'pluginOptions.icon'
   | 'pluginOptions.legacy'
   | 'pluginOptions.theme_color_in_head'
   | 'pluginOptions.crossOrigin'

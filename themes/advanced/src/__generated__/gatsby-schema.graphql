@@ -872,17 +872,6 @@ type SiteConfig {
   iconList: [IconManifest]
   iconCachePath: String
   basePath: String!
-  projectRoot: String
-  configDir: String
-  cacheDir: String
-  endpoints: SiteSiteMetadataConfigEndpoints
-}
-
-type SiteSiteMetadataConfigEndpoints {
-  node: [String]
-  browser: [String]
-  ssr: [String]
-  config: [String]
 }
 
 type MdxFrontmatter {
@@ -1009,6 +998,7 @@ type SitePluginPluginOptions {
   theme_color: String
   display: String
   cache_busting_mode: String
+  icon: String
   legacy: Boolean
   theme_color_in_head: Boolean
   crossOrigin: String
@@ -2116,10 +2106,6 @@ input SiteConfigFilterInput {
   iconList: IconManifestFilterListInput
   iconCachePath: StringQueryOperatorInput
   basePath: StringQueryOperatorInput
-  projectRoot: StringQueryOperatorInput
-  configDir: StringQueryOperatorInput
-  cacheDir: StringQueryOperatorInput
-  endpoints: SiteSiteMetadataConfigEndpointsFilterInput
 }
 
 input WebsiteDataFilterInput {
@@ -2168,13 +2154,6 @@ input IconManifestFilterInput {
   sizes: StringQueryOperatorInput
   type: StringQueryOperatorInput
   purpose: StringQueryOperatorInput
-}
-
-input SiteSiteMetadataConfigEndpointsFilterInput {
-  node: StringQueryOperatorInput
-  browser: StringQueryOperatorInput
-  ssr: StringQueryOperatorInput
-  config: StringQueryOperatorInput
 }
 
 input SiteSiteMetadataRssMetadataFilterInput {
@@ -2249,13 +2228,6 @@ enum SiteFieldsEnum {
   siteMetadata___config___iconList___purpose
   siteMetadata___config___iconCachePath
   siteMetadata___config___basePath
-  siteMetadata___config___projectRoot
-  siteMetadata___config___configDir
-  siteMetadata___config___cacheDir
-  siteMetadata___config___endpoints___node
-  siteMetadata___config___endpoints___browser
-  siteMetadata___config___endpoints___ssr
-  siteMetadata___config___endpoints___config
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url
@@ -2733,6 +2705,7 @@ input SitePluginPluginOptionsFilterInput {
   theme_color: StringQueryOperatorInput
   display: StringQueryOperatorInput
   cache_busting_mode: StringQueryOperatorInput
+  icon: StringQueryOperatorInput
   legacy: BooleanQueryOperatorInput
   theme_color_in_head: BooleanQueryOperatorInput
   crossOrigin: StringQueryOperatorInput
@@ -3090,6 +3063,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___theme_color
   pluginCreator___pluginOptions___display
   pluginCreator___pluginOptions___cache_busting_mode
+  pluginCreator___pluginOptions___icon
   pluginCreator___pluginOptions___legacy
   pluginCreator___pluginOptions___theme_color_in_head
   pluginCreator___pluginOptions___crossOrigin
@@ -3712,6 +3686,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___theme_color
   pluginOptions___display
   pluginOptions___cache_busting_mode
+  pluginOptions___icon
   pluginOptions___legacy
   pluginOptions___theme_color_in_head
   pluginOptions___crossOrigin
