@@ -4299,14 +4299,6 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
-        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
-
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -4332,5 +4324,13 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 }

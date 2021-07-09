@@ -1,5 +1,6 @@
 {
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "themes", "examples"],
+  "include": ["./src/"],
   "compilerOptions": {
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017", "es2019"],
