@@ -44,7 +44,7 @@ function Listing({ pageContext, data }) {
           <SEO />
           <PostListing postEdges={postEdges} />
         </div>
-        {renderPaging()}
+        {/* {renderPaging()} */}
       </div>
     </Layout>
   );

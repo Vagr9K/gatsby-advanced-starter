@@ -1,9 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 * {
   box-sizing: border-box;
 }
 
 html {
   height: 100%;
+  background-color: black;
+  color: blanchedalmond;
+  text-decoration: none;
 }
 
 body {
@@ -11,6 +16,7 @@ body {
   padding: 0;
   min-height: 100%;
   min-width: 100%;
+  font-family: "Oswald", Arial, sans-serif;
 }
 
 #___gatsby #gatsby-focus-wrapper {
@@ -22,5 +28,22 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  padding: 20px;
+  padding: 20vmin;
+
 }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 34px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 10px;
+    position: relative;
+  }

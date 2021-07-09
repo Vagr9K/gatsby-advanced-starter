@@ -3,3 +3,12 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.post {
+}
+
+.post-title {
+  font-size: 3rem;
+  color: antiquewhite;
+  font-weight: 300 !important;
+}

@@ -22,22 +22,23 @@ export default function PostTemplate({ data, pageContext }) {
 
   return (
     <Layout>
-      <div>
+      <div className="post">
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <h1>{post.title}</h1>
+          <h1 className="post-title">{post.title}</h1>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
-            <PostTags tags={post.tags} />
+            {/* <PostTags tags={post.tags} /> */}
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
-          <UserInfo config={config} />
+          <a href="/" className="post-page-home-button">home</a>
+          {/* <UserInfo config={config} />
           <Disqus postNode={postNode} />
-          <Footer config={config} />
+          <Footer config={config} /> */}
         </div>
       </div>
     </Layout>
