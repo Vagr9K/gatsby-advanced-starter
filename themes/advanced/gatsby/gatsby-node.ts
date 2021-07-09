@@ -63,7 +63,7 @@ const gatsbyNode: ITSConfigFn<"node", SiteConfig> = (
       const route = withBasePath(config, slug);
 
       // Pathname is used for internal linking
-      const pathName = route; // TODO: Fix
+      const pathName = urlJoin(config.pathPrefix, route);
 
       // URL is the absolute website url to the post
       const url = urlJoin(config.website.url, pathName);
