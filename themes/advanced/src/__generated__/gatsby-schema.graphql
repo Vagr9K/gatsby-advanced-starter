@@ -998,7 +998,6 @@ type SitePluginPluginOptions {
   theme_color: String
   display: String
   cache_busting_mode: String
-  icon: String
   legacy: Boolean
   theme_color_in_head: Boolean
   crossOrigin: String
@@ -1011,8 +1010,6 @@ type SitePluginPluginOptions {
   feeds: [SitePluginPluginOptionsFeeds]
   configDir: String
   projectRoot: String
-  basePath: String
-  iconPath: String
   pathCheck: Boolean
 }
 
@@ -2705,7 +2702,6 @@ input SitePluginPluginOptionsFilterInput {
   theme_color: StringQueryOperatorInput
   display: StringQueryOperatorInput
   cache_busting_mode: StringQueryOperatorInput
-  icon: StringQueryOperatorInput
   legacy: BooleanQueryOperatorInput
   theme_color_in_head: BooleanQueryOperatorInput
   crossOrigin: StringQueryOperatorInput
@@ -2718,8 +2714,6 @@ input SitePluginPluginOptionsFilterInput {
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
-  basePath: StringQueryOperatorInput
-  iconPath: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
 }
 
@@ -3063,7 +3057,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___theme_color
   pluginCreator___pluginOptions___display
   pluginCreator___pluginOptions___cache_busting_mode
-  pluginCreator___pluginOptions___icon
   pluginCreator___pluginOptions___legacy
   pluginCreator___pluginOptions___theme_color_in_head
   pluginCreator___pluginOptions___crossOrigin
@@ -3080,8 +3073,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
-  pluginCreator___pluginOptions___basePath
-  pluginCreator___pluginOptions___iconPath
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
@@ -3686,7 +3677,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___theme_color
   pluginOptions___display
   pluginOptions___cache_busting_mode
-  pluginOptions___icon
   pluginOptions___legacy
   pluginOptions___theme_color_in_head
   pluginOptions___crossOrigin
@@ -3703,8 +3693,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___site_url
   pluginOptions___configDir
   pluginOptions___projectRoot
-  pluginOptions___basePath
-  pluginOptions___iconPath
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs

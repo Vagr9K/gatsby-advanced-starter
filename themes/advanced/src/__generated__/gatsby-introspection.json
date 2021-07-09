@@ -8791,18 +8791,6 @@
             "deprecationReason": null
           },
           {
-            "name": "icon",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "legacy",
             "description": null,
             "args": [],
@@ -8940,30 +8928,6 @@
           },
           {
             "name": "projectRoot",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "basePath",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "iconPath",
             "description": null,
             "args": [],
             "type": {
@@ -25395,18 +25359,6 @@
             "deprecationReason": null
           },
           {
-            "name": "icon",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "legacy",
             "description": null,
             "type": {
@@ -25540,30 +25492,6 @@
           },
           {
             "name": "projectRoot",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "basePath",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "iconPath",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -28026,12 +27954,6 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginCreator___pluginOptions___icon",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pluginCreator___pluginOptions___legacy",
             "description": null,
             "isDeprecated": false,
@@ -28123,18 +28045,6 @@
           },
           {
             "name": "pluginCreator___pluginOptions___projectRoot",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___basePath",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___iconPath",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32745,12 +32655,6 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___icon",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pluginOptions___legacy",
             "description": null,
             "isDeprecated": false,
@@ -32842,18 +32746,6 @@
           },
           {
             "name": "pluginOptions___projectRoot",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___basePath",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___iconPath",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

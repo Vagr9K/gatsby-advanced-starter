@@ -923,7 +923,6 @@ type SitePluginPluginOptions = {
   readonly theme_color: Maybe<Scalars['String']>;
   readonly display: Maybe<Scalars['String']>;
   readonly cache_busting_mode: Maybe<Scalars['String']>;
-  readonly icon: Maybe<Scalars['String']>;
   readonly legacy: Maybe<Scalars['Boolean']>;
   readonly theme_color_in_head: Maybe<Scalars['Boolean']>;
   readonly crossOrigin: Maybe<Scalars['String']>;
@@ -936,8 +935,6 @@ type SitePluginPluginOptions = {
   readonly feeds: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFeeds>>>;
   readonly configDir: Maybe<Scalars['String']>;
   readonly projectRoot: Maybe<Scalars['String']>;
-  readonly basePath: Maybe<Scalars['String']>;
-  readonly iconPath: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
 };
 
@@ -2994,7 +2991,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly theme_color: Maybe<StringQueryOperatorInput>;
   readonly display: Maybe<StringQueryOperatorInput>;
   readonly cache_busting_mode: Maybe<StringQueryOperatorInput>;
-  readonly icon: Maybe<StringQueryOperatorInput>;
   readonly legacy: Maybe<BooleanQueryOperatorInput>;
   readonly theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
   readonly crossOrigin: Maybe<StringQueryOperatorInput>;
@@ -3007,8 +3003,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly feeds: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   readonly configDir: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
-  readonly basePath: Maybe<StringQueryOperatorInput>;
-  readonly iconPath: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3379,7 +3373,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.theme_color'
   | 'pluginCreator.pluginOptions.display'
   | 'pluginCreator.pluginOptions.cache_busting_mode'
-  | 'pluginCreator.pluginOptions.icon'
   | 'pluginCreator.pluginOptions.legacy'
   | 'pluginCreator.pluginOptions.theme_color_in_head'
   | 'pluginCreator.pluginOptions.crossOrigin'
@@ -3396,8 +3389,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.feeds.site_url'
   | 'pluginCreator.pluginOptions.configDir'
   | 'pluginCreator.pluginOptions.projectRoot'
-  | 'pluginCreator.pluginOptions.basePath'
-  | 'pluginCreator.pluginOptions.iconPath'
   | 'pluginCreator.pluginOptions.pathCheck'
   | 'pluginCreator.nodeAPIs'
   | 'pluginCreator.browserAPIs'
@@ -4080,7 +4071,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.theme_color'
   | 'pluginOptions.display'
   | 'pluginOptions.cache_busting_mode'
-  | 'pluginOptions.icon'
   | 'pluginOptions.legacy'
   | 'pluginOptions.theme_color_in_head'
   | 'pluginOptions.crossOrigin'
@@ -4097,8 +4087,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.feeds.site_url'
   | 'pluginOptions.configDir'
   | 'pluginOptions.projectRoot'
-  | 'pluginOptions.basePath'
-  | 'pluginOptions.iconPath'
   | 'pluginOptions.pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
