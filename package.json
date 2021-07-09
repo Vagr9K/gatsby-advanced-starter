@@ -16,6 +16,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "check": "yarn workspaces foreach run lint:all && yarn workspaces foreach run type-check",
     "prepare": "husky install"
   }
 }

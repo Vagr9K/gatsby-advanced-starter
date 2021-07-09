@@ -24,6 +24,7 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "removeComments": false,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "noEmit": true
   }
 }

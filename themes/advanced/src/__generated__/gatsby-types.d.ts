@@ -261,8 +261,6 @@ type Directory_ctimeArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
-  readonly port: Maybe<Scalars['Int']>;
-  readonly host: Maybe<Scalars['String']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly id: Scalars['ID'];
@@ -813,12 +811,12 @@ type MdxFrontmatter = {
   readonly cover: Maybe<File>;
   readonly coverAlt: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly category: Maybe<Scalars['String']>;
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
-  readonly category: Maybe<Scalars['String']>;
-  readonly disqus_category_id: Maybe<Scalars['Int']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly slug: Maybe<Scalars['String']>;
+  readonly disqus_category_id: Maybe<Scalars['Int']>;
 };
 
 
@@ -1156,8 +1154,6 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  port: Maybe<IntQueryOperatorInput>;
-  host: Maybe<StringQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1482,12 +1478,12 @@ type MdxFrontmatterFilterInput = {
   readonly cover: Maybe<FileFilterInput>;
   readonly coverAlt: Maybe<StringQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
+  readonly category: Maybe<StringQueryOperatorInput>;
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
-  readonly category: Maybe<StringQueryOperatorInput>;
-  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
   readonly tags: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
 };
 
 type FileFilterInput = {
@@ -1830,12 +1826,12 @@ type FileFieldsEnum =
   | 'childrenMdx.frontmatter.cover.children'
   | 'childrenMdx.frontmatter.coverAlt'
   | 'childrenMdx.frontmatter.description'
+  | 'childrenMdx.frontmatter.category'
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
-  | 'childrenMdx.frontmatter.category'
-  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.frontmatter.tags'
   | 'childrenMdx.frontmatter.slug'
+  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.rawBody'
   | 'childrenMdx.fileAbsolutePath'
   | 'childrenMdx.slug'
@@ -1934,12 +1930,12 @@ type FileFieldsEnum =
   | 'childMdx.frontmatter.cover.children'
   | 'childMdx.frontmatter.coverAlt'
   | 'childMdx.frontmatter.description'
+  | 'childMdx.frontmatter.category'
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
-  | 'childMdx.frontmatter.category'
-  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.frontmatter.tags'
   | 'childMdx.frontmatter.slug'
+  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.rawBody'
   | 'childMdx.fileAbsolutePath'
   | 'childMdx.slug'
@@ -2499,8 +2495,6 @@ type SiteFieldsEnum =
   | 'siteMetadata.rssMetadata.description'
   | 'siteMetadata.rssMetadata.image_url'
   | 'siteMetadata.rssMetadata.copyright'
-  | 'port'
-  | 'host'
   | 'pathPrefix'
   | 'polyfill'
   | 'id'
@@ -2602,8 +2596,6 @@ type SiteGroupConnection = {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  readonly port: Maybe<IntQueryOperatorInput>;
-  readonly host: Maybe<StringQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -3758,12 +3750,12 @@ type MdxFieldsEnum =
   | 'frontmatter.cover.internal.type'
   | 'frontmatter.coverAlt'
   | 'frontmatter.description'
+  | 'frontmatter.category'
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
-  | 'frontmatter.category'
-  | 'frontmatter.disqus_category_id'
   | 'frontmatter.tags'
   | 'frontmatter.slug'
+  | 'frontmatter.disqus_category_id'
   | 'rawBody'
   | 'fileAbsolutePath'
   | 'slug'
@@ -4290,35 +4282,6 @@ type SiteBuildMetadataSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type BlogPostBySlugQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-type BlogPostBySlugQuery = { readonly mdx: Maybe<(
-    Pick<Mdx, 'body' | 'timeToRead' | 'excerpt'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MdxFrontmatter, 'title' | 'description' | 'coverAlt' | 'datePublished' | 'dateModified' | 'category' | 'tags'>
-      & { readonly cover: Maybe<(
-        Pick<File, 'publicURL'>
-        & { readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }
-      )> }
-    )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
-  )> };
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
-        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
-
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -4344,5 +4307,29 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type BlogPostBySlugQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+type BlogPostBySlugQuery = { readonly mdx: Maybe<(
+    Pick<Mdx, 'body' | 'timeToRead' | 'excerpt'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MdxFrontmatter, 'title' | 'description' | 'coverAlt' | 'datePublished' | 'dateModified' | 'category' | 'tags'>
+      & { readonly cover: Maybe<(
+        Pick<File, 'publicURL'>
+        & { readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }
+      )> }
+    )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
+  )> };
+
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 }

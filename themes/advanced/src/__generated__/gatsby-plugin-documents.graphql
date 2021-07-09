@@ -106,3 +106,90 @@ fragment GatsbyImageSharpFluid_withWebp_noBase64 on ImageSharpFluid {
   srcSetWebp
   sizes
 }
+query BlogPostBySlug($slug: String!) {
+  mdx(fields: { slug: { eq: $slug } }) {
+    body
+    timeToRead
+    excerpt
+    frontmatter {
+      title
+      description
+      cover {
+        publicURL
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+      coverAlt
+      datePublished
+      dateModified
+      category
+      tags
+    }
+    fields {
+      slug
+      route
+      pathName
+      url
+    }
+    internal {
+      content
+    }
+  }
+}
+query UserConfig {
+  site {
+    siteMetadata {
+      config {
+        contentDir
+        assetDir
+        embededImageWidth
+        embededVideoWidth
+        basePath
+        iconPath
+        iconCachePath
+        iconList {
+          src
+          sizes
+          type
+          purpose
+        }
+        organization {
+          description
+          logoUrl
+          name
+          url
+        }
+        pathPrefix
+        user {
+          about
+          avatar
+          firstName
+          github
+          email
+          id
+          lastName
+          linkedIn
+          location
+          twitterName
+        }
+        website {
+          backgroundColor
+          copyright
+          description
+          fbAppId
+          googleAnalyticsId
+          logoUrl
+          name
+          rss
+          rssTitle
+          themeColor
+          title
+          titleShort
+          twitterName
+          url
+        }
+      }
+    }
+  }
+}

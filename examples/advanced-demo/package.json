@@ -9,7 +9,7 @@
     "dev": "npm run develop",
     "dev:network": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
-    "build": "npm run build:types && npm run build:js && gatsby build",
+    "build": "npm run type-check && gatsby build",
     "build:skip-typecheck": "npm run build:js && gatsby build",
     "build:gh": "npm run clean && npm run build && gh-pages -d public",
     "clean": "rm -rf public && rm -rf .cache",
@@ -25,8 +25,6 @@
     "test": "jest",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "write-good": "write-good $(glob 'content/**/*.md')"
   },
   "keywords": [
@@ -39,5 +37,8 @@
     "gatsby-theme-advanced": "workspace:*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.1.3"
   }
 }

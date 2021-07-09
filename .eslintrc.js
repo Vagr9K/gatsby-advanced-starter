@@ -1,6 +1,10 @@
-const graphqlSchema = require("./src/__generated__/gatsby-introspection.json");
-
 module.exports = {
+  ignorePatterns: [
+    "**/public/**",
+    "**/.cache/**",
+    "**/static/**",
+    "**/content/**",
+  ],
   extends: [
     "plugin:jest/all",
     "plugin:jest-dom/recommended",
@@ -36,19 +40,12 @@ module.exports = {
       ],
       rules: {
         "react/require-default-props": "off",
-        "graphql/template-strings": [
-          "error",
-          {
-            env: "apollo",
-            schemaJson: graphqlSchema,
-          },
-        ],
       },
 
       parser: "@typescript-eslint/parser",
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: "./tsconfig.json",
+        project: ["./tsconfig.json", "**/tsconfig.json"],
       },
     },
     {
@@ -59,15 +56,7 @@ module.exports = {
         "jest/globals": true,
       },
       extends: ["prettier"],
-      rules: {
-        "graphql/template-strings": [
-          "error",
-          {
-            env: "apollo",
-            schemaJson: graphqlSchema,
-          },
-        ],
-      },
+      rules: {},
       plugins: [
         "jest",
         "jest-dom",
