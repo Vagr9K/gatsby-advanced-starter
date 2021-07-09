@@ -9,23 +9,9 @@
     "dev": "npm run develop",
     "dev:network": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
-    "build": "npm run type-check && gatsby build",
-    "build:skip-typecheck": "npm run build:js && gatsby build",
+    "build": "gatsby build",
     "build:gh": "npm run clean && npm run build && gh-pages -d public",
-    "clean": "rm -rf public && rm -rf .cache",
-    "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
-    "lint:deadcode": "ts-prune -i '(test|gatsby)'",
-    "lint:styles": "stylelint src/**/*.{js,jsx,ts,tsx,css}",
-    "lint:md": "markdownlint-cli2 content/**/*.{md,mdx}",
-    "lint:format": "prettier --check '**/*.{js,jsx,ts,tsx,css}'",
-    "lint:all": "npm run lint:js && npm run lint:deadcode && npm run lint:styles && npm run lint:format && npm run lint:md",
-    "format:js": "prettier '**/*.{js,jsx,ts,tsx}' --write",
-    "format:styles": "prettier '**/*.css' --write",
-    "format:all": "npm run format:js && npm run format:styles",
-    "test": "jest",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch",
-    "write-good": "write-good $(glob 'content/**/*.md')"
+    "clean": "rm -rf public && rm -rf .cache"
   },
   "keywords": [
     "gatsby",
@@ -37,8 +23,5 @@
     "gatsby-theme-advanced": "workspace:*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "markdownlint-cli2": "^0.1.3"
   }
 }

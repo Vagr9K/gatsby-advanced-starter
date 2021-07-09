@@ -49,8 +49,8 @@ export interface SiteConfig {
 
   pathPrefix: string;
 
-  contentDir: string;
-  assetDir: string;
+  contentDir?: string;
+  assetDir?: string;
 
   embededImageWidth: number;
   embededVideoWidth: number;

@@ -9,6 +9,7 @@ import remarkExternalLinks from "remark-external-links";
 import unwrapImages from "remark-unwrap-images";
 
 // Config
+import path from "path/posix";
 import { SiteConfig, withBasePath, withDefaults } from "../src/config";
 
 // Types
@@ -88,14 +89,14 @@ const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "assets",
-          path: config.assetDir,
+          path: config.assetDir || path.join(__dirname, "../static"),
         },
       },
       {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "posts",
-          path: config.contentDir,
+          path: config.contentDir || path.join(__dirname, "../content"),
         },
       },
       {
