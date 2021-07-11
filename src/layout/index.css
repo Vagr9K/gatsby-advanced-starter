@@ -47,3 +47,39 @@ body {
     margin: 10px;
     position: relative;
   }
+
+  .home-post-wrapper {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .home-post-link { 
+    max-width: 33vw;
+    max-height: 33vh;
+    background: rgb(30 65 30 / 88%);
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .home-post-link:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+  }
+
+
+  .filler {
+    width: 33vw;
+    height: 33vh;
+    /* border: 1px solid green; */
+  }

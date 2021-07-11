@@ -2,7 +2,7 @@
 title: "Studio"
 cover: "5.jpg"
 category: "moar"
-date: "2018-03-01"
+date: "7-11-2021"
 slug: "Big-Sample_Test"
 tags:
     - studio 

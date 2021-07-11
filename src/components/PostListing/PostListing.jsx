@@ -14,16 +14,60 @@ function PostListing({ postEdges }) {
       timeToRead: postEdge.node.timeToRead,
     });
   });
+  const squares = [
+    {
+      render: true,
+      index: 0,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: true,
+      index: 1,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: true,
+      index: 2,
+    },
+  ];
 
   return (
-    <div>
+    <div className="home-post-wrapper">
       {
         /* Your post list here. */
-        postList.map((post) => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
-        ))
+        squares.map((square) =>
+          square.render ? (
+            <>
+              <Link
+                className="home-post-link"
+                to={postList[square.index].path}
+                key={postList[square.index].title}
+              >
+                <h1 className="home-post-title">
+                  {postList[square.index].title}
+                </h1>
+              </Link>
+            </>
+          ) : (
+            <div className="filler" />
+          )
+        )
       }
     </div>
   );
