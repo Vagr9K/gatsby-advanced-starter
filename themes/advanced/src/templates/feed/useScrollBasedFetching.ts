@@ -21,23 +21,27 @@ const useScrollBasedFetching = (
     }
   };
 
+  const checkScrollState = async () => {
+    if (feedElementRef.current) {
+      // If we're on the bottom edge of the feed element, load next page
+      if (
+        feedElementRef.current.getBoundingClientRect().bottom <=
+        window.innerHeight
+      ) {
+        await loadNext();
+      }
+
+      // If we're on the top edge of the feed element, load previous page
+      if (feedElementRef.current.getBoundingClientRect().top > 0) {
+        await loadPrev();
+      }
+    }
+  };
+
   // Handle loading next/previous pages on scroll
   useEffect(() => {
     const onScroll = async (): Promise<void> => {
-      if (feedElementRef.current) {
-        // If we're on the bottom edge of the feed element, load next page
-        if (
-          feedElementRef.current.getBoundingClientRect().bottom <=
-          window.innerHeight
-        ) {
-          await loadNext();
-        }
-
-        // If we're on the top edge of the feed element, load previous page
-        if (feedElementRef.current.getBoundingClientRect().top > 0) {
-          await loadPrev();
-        }
-      }
+      await checkScrollState();
     };
 
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
@@ -47,6 +51,12 @@ const useScrollBasedFetching = (
       window.removeEventListener("scroll", onScroll);
     };
   });
+
+  // Check state on rerenders
+  // This prevents edge cases when no scrollbar is availble but all the data is already loaded
+
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
+  checkScrollState();
 
   return feedElementRef;
 };
