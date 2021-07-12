@@ -1,5 +1,5 @@
 ---
-title: "Web Consulting"
+title: "Web"
 cover: "5.jpg"
 category: "web"
 date: "7-11-2021"
@@ -16,8 +16,8 @@ tags:
 
 
 [home](https://web.xo9.io/)
-[react](https://web.xo9.io/react)
-[gatsby](https://web.xo9.io/gatsby)
-[WYSIWYG](https://web.xo9.io/wysiwyg)
-[about](https://web.xo9.io/about)
+[react](https://web.xo9.io/)
+[gatsby](https://web.xo9.io/)
+[WYSIWYG](https://web.xo9.io/)
+[about](https://web.xo9.io/)
 

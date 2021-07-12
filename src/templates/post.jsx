@@ -27,15 +27,17 @@ export default function PostTemplate({ data, pageContext }) {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
+        <div className="post-wrapper">
           <h1 className="post-title">{post.title}</h1>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            {/* <PostTags tags={post.tags} /> */}
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
-          <a href="/" className="post-page-home-button">home</a>
+          {/* <div className="post-meta"> */}
+          {/* <PostTags tags={post.tags} /> */}
+          {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+          {/* </div> */}
+          <a href="/" className="post-page-home-button">
+            home
+          </a>
           {/* <UserInfo config={config} />
           <Disqus postNode={postNode} />
           <Footer config={config} /> */}

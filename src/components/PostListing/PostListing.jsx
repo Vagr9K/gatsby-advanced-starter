@@ -1,9 +1,10 @@
+/* eslint-disable no-nested-ternary */
 import React from "react";
 import { Link } from "gatsby";
 
 function PostListing({ postEdges }) {
   const postList = [];
-  postEdges.forEach(postEdge => {
+  postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
       tags: postEdge.node.frontmatter.tags,
@@ -11,40 +12,40 @@ function PostListing({ postEdges }) {
       title: postEdge.node.frontmatter.title,
       date: postEdge.node.fields.date,
       excerpt: postEdge.node.excerpt,
-      timeToRead: postEdge.node.timeToRead
+      timeToRead: postEdge.node.timeToRead,
     });
   });
   const squares = [
     {
       render: true,
-      index: 0
+      index: 0,
     },
     {
-      render: false
+      render: false,
     },
     {
-      render: false
+      render: false,
     },
     {
-      render: false
-    },
-    {
-      render: true,
-      index: 1
-    },
-    {
-      render: false
-    },
-    {
-      render: false
-    },
-    {
-      render: false
+      render: false,
     },
     {
       render: true,
-      index: 2
-    }
+      index: 1,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: false,
+    },
+    {
+      render: true,
+      index: 2,
+    },
   ];
 
   return (
@@ -54,7 +55,6 @@ function PostListing({ postEdges }) {
         squares.map((square, index) => {
           const renderSquare = square.render;
           const renderIndex = square.index;
-          debugger;
           const to =
             renderSquare && postList
               ? postList[renderIndex]
