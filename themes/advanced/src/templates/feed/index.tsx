@@ -1,11 +1,7 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
-import Layout from "../../layouts";
-import FeedListing from "../../components/FeedListing";
-import ListingPageWrapper from "../../components/shared/ListingPageWrapper";
 import ConfigContext from "../../context/ConfigContext";
-
 import useInfiniteFeed from "./useInfiniteFeed";
 
 import { PageContext } from "./types";
@@ -18,9 +14,6 @@ const Feed = ({ pageContext }: FeedProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
   const config = useContext(ConfigContext);
-
-  // Don't show hero images on non-index feeds
-  const noHero = pageContext.feedType !== "index";
 
   // Override the title for non-index feeds
   const getTitleOverride = () => {
@@ -42,12 +35,16 @@ const Feed = ({ pageContext }: FeedProps): JSX.Element => {
   };
 
   return (
-    <Layout>
-      {getTitleOverride()}
-      <ListingPageWrapper ref={feedElementRef}>
-        <FeedListing listing={feedListing} noHero={noHero} />
-      </ListingPageWrapper>
-    </Layout>
+    <>
+      <div className="feed-wrapper" ref={feedElementRef}>
+        {getTitleOverride()}
+        {feedListing.map((post) => (
+          <pre>
+            <code>{JSON.stringify(post, null, 2)}</code>
+          </pre>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,5 @@
+src/__generated__
+.cache
+coverage
+static
+content

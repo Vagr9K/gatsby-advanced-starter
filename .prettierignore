@@ -3,5 +3,4 @@ coverage
 static
 content
 public
-themes
-examples
+themes/advanced/src/__generated__

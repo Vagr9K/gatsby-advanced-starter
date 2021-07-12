@@ -1,21 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import styled from "styled-components";
 
-import Layout from "../../layouts";
 import SEO from "../../components/SEO";
 
-import Article from "../../components/Article";
-import AuthorSegment from "../../components/AuthorSegment";
-import RelatedPosts from "../../components/RelatedPosts";
-
-import { PostFromJsonList, queryIntoPost, jsonPostIntoPost } from "../../types";
-
-const Wrapper = styled.div`
-  display: grid;
-
-  grid-gap: 60px;
-`;
+import { PostFromJsonList, queryIntoPost } from "../../types";
 
 type PageContext = {
   relatedPosts: PostFromJsonList;
@@ -32,14 +20,15 @@ const PostTemplate = ({
   const post = queryIntoPost(data);
 
   return (
-    <Layout>
-      <Wrapper>
-        <SEO post={post} />
-        <Article post={post} />
-        <AuthorSegment />
-        <RelatedPosts list={pageContext.relatedPosts.map(jsonPostIntoPost)} />
-      </Wrapper>
-    </Layout>
+    <>
+      <SEO post={post} />
+      <pre>
+        <code>{JSON.stringify(post, null, 2)}</code>
+      </pre>
+      <pre>
+        <code>{JSON.stringify(pageContext, null, 2)}</code>
+      </pre>
+    </>
   );
 };
 

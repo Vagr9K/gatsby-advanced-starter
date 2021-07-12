@@ -954,12 +954,6 @@ type SitePluginPluginOptions {
   outputPath: String
   emitSchema: SitePluginPluginOptionsEmitSchema
   emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocuments
-  displayName: Boolean
-  fileName: Boolean
-  minify: Boolean
-  namespace: String
-  transpileTemplateLiterals: Boolean
-  pure: Boolean
   name: String
   path: String
   defaults: SitePluginPluginOptionsDefaults
@@ -2658,12 +2652,6 @@ input SitePluginPluginOptionsFilterInput {
   outputPath: StringQueryOperatorInput
   emitSchema: SitePluginPluginOptionsEmitSchemaFilterInput
   emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocumentsFilterInput
-  displayName: BooleanQueryOperatorInput
-  fileName: BooleanQueryOperatorInput
-  minify: BooleanQueryOperatorInput
-  namespace: StringQueryOperatorInput
-  transpileTemplateLiterals: BooleanQueryOperatorInput
-  pure: BooleanQueryOperatorInput
   name: StringQueryOperatorInput
   path: StringQueryOperatorInput
   defaults: SitePluginPluginOptionsDefaultsFilterInput
@@ -3010,12 +2998,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
   pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
   pluginCreator___pluginOptions___emitPluginDocuments____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql
-  pluginCreator___pluginOptions___displayName
-  pluginCreator___pluginOptions___fileName
-  pluginCreator___pluginOptions___minify
-  pluginCreator___pluginOptions___namespace
-  pluginCreator___pluginOptions___transpileTemplateLiterals
-  pluginCreator___pluginOptions___pure
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___defaults___formats
@@ -3623,12 +3605,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
   pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
   pluginOptions___emitPluginDocuments____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_plugin_documents_graphql
-  pluginOptions___displayName
-  pluginOptions___fileName
-  pluginOptions___minify
-  pluginOptions___namespace
-  pluginOptions___transpileTemplateLiterals
-  pluginOptions___pure
   pluginOptions___name
   pluginOptions___path
   pluginOptions___defaults___formats

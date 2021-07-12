@@ -1,0 +1,13 @@
+.post-wrapper {
+  display: grid;
+
+  grid-gap: 60px;
+
+  justify-items: center;
+}
+
+.related-posts-wrapper {
+  display: grid;
+
+  justify-items: center;
+}

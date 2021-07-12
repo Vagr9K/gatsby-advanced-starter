@@ -82,7 +82,6 @@ const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
           },
         },
       },
-      "gatsby-plugin-styled-components",
       "gatsby-plugin-react-helmet",
       "gatsby-plugin-lodash",
       {

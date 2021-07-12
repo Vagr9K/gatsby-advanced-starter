@@ -1,0 +1,11 @@
+.layout-grid {
+  min-height: 100vh;
+  min-width: 100%;
+
+  padding-top: 16px;
+
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 40px;
+  align-content: space-between;
+}
