@@ -12909,6 +12909,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-disqus@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "gatsby-plugin-disqus@npm:1.2.2"
+  peerDependencies:
+    react: ^16.8.5
+  checksum: df9d33ad50723d4d3c68a0c3ebf0ced695979461b7d138ac7639b43c498b3287aab436083fab15c70f1cc4ad05281a00ba89de1dafc99fc8d98adb4753d975f7
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-feed@npm:^3.8.0":
   version: 3.8.0
   resolution: "gatsby-plugin-feed@npm:3.8.0"
@@ -13760,6 +13769,7 @@ fsevents@^1.2.7:
     gatsby-image: ^3.8.0
     gatsby-plugin-catch-links: ^3.8.0
     gatsby-plugin-compile-es6-packages: ^2.1.0
+    gatsby-plugin-disqus: ^1.2.2
     gatsby-plugin-feed: ^3.8.0
     gatsby-plugin-google-gtag: ^3.8.0
     gatsby-plugin-image: ^1.8.0

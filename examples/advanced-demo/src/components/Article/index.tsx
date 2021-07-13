@@ -2,7 +2,7 @@ import React from "react";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Types } from "gatsby-theme-advanced";
+import { Types, Disqus } from "gatsby-theme-advanced";
 
 import Intro from "./Intro";
 import Share from "./Share";
@@ -26,6 +26,7 @@ const Article = ({ post }: ArticleProps): JSX.Element => {
         <MDXRenderer>{post.body}</MDXRenderer>
       </div>
       <Share post={post} />
+      <Disqus post={post} />
     </article>
   );
 };

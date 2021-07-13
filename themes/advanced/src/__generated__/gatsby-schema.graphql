@@ -828,6 +828,7 @@ type WebsiteData {
   rss: String!
   rssTitle: String!
   googleAnalyticsId: String
+  disqusShortname: String
   themeColor: String!
   backgroundColor: String!
 }
@@ -872,7 +873,6 @@ type SiteConfig {
   iconList: [IconManifest]
   iconCachePath: String
   basePath: String!
-  themeColor: String
 }
 
 type MdxFrontmatter {
@@ -981,6 +981,7 @@ type SitePluginPluginOptions {
   lessBabel: Boolean
   mediaTypes: [String]
   root: String
+  shortname: String
   trackingIds: [String]
   color: String
   output: String
@@ -1006,7 +1007,7 @@ type SitePluginPluginOptions {
   feeds: [SitePluginPluginOptionsFeeds]
   configDir: String
   projectRoot: String
-  themeColor: String
+  website: SitePluginPluginOptionsWebsite
   pathCheck: Boolean
 }
 
@@ -1052,6 +1053,10 @@ type SitePluginPluginOptionsFeeds {
   output: String
   title: String
   site_url: String
+}
+
+type SitePluginPluginOptionsWebsite {
+  disqusShortname: String
 }
 
 type SitePluginPackageJson {
@@ -2100,7 +2105,6 @@ input SiteConfigFilterInput {
   iconList: IconManifestFilterListInput
   iconCachePath: StringQueryOperatorInput
   basePath: StringQueryOperatorInput
-  themeColor: StringQueryOperatorInput
 }
 
 input WebsiteDataFilterInput {
@@ -2116,6 +2120,7 @@ input WebsiteDataFilterInput {
   rss: StringQueryOperatorInput
   rssTitle: StringQueryOperatorInput
   googleAnalyticsId: StringQueryOperatorInput
+  disqusShortname: StringQueryOperatorInput
   themeColor: StringQueryOperatorInput
   backgroundColor: StringQueryOperatorInput
 }
@@ -2194,6 +2199,7 @@ enum SiteFieldsEnum {
   siteMetadata___config___website___rss
   siteMetadata___config___website___rssTitle
   siteMetadata___config___website___googleAnalyticsId
+  siteMetadata___config___website___disqusShortname
   siteMetadata___config___website___themeColor
   siteMetadata___config___website___backgroundColor
   siteMetadata___config___user___id
@@ -2223,7 +2229,6 @@ enum SiteFieldsEnum {
   siteMetadata___config___iconList___purpose
   siteMetadata___config___iconCachePath
   siteMetadata___config___basePath
-  siteMetadata___config___themeColor
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url
@@ -2683,6 +2688,7 @@ input SitePluginPluginOptionsFilterInput {
   lessBabel: BooleanQueryOperatorInput
   mediaTypes: StringQueryOperatorInput
   root: StringQueryOperatorInput
+  shortname: StringQueryOperatorInput
   trackingIds: StringQueryOperatorInput
   color: StringQueryOperatorInput
   output: StringQueryOperatorInput
@@ -2708,7 +2714,7 @@ input SitePluginPluginOptionsFilterInput {
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
-  themeColor: StringQueryOperatorInput
+  website: SitePluginPluginOptionsWebsiteFilterInput
   pathCheck: BooleanQueryOperatorInput
 }
 
@@ -2762,6 +2768,10 @@ input SitePluginPluginOptionsFeedsFilterInput {
   output: StringQueryOperatorInput
   title: StringQueryOperatorInput
   site_url: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsWebsiteFilterInput {
+  disqusShortname: StringQueryOperatorInput
 }
 
 input SitePluginPackageJsonFilterInput {
@@ -3034,6 +3044,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___lessBabel
   pluginCreator___pluginOptions___mediaTypes
   pluginCreator___pluginOptions___root
+  pluginCreator___pluginOptions___shortname
   pluginCreator___pluginOptions___trackingIds
   pluginCreator___pluginOptions___color
   pluginCreator___pluginOptions___output
@@ -3063,7 +3074,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
-  pluginCreator___pluginOptions___themeColor
+  pluginCreator___pluginOptions___website___disqusShortname
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
@@ -3650,6 +3661,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___lessBabel
   pluginOptions___mediaTypes
   pluginOptions___root
+  pluginOptions___shortname
   pluginOptions___trackingIds
   pluginOptions___color
   pluginOptions___output
@@ -3679,7 +3691,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___site_url
   pluginOptions___configDir
   pluginOptions___projectRoot
-  pluginOptions___themeColor
+  pluginOptions___website___disqusShortname
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs

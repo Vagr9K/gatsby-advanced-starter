@@ -15,6 +15,7 @@
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-catch-links": "^3.8.0",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-feed": "^3.8.0",
     "gatsby-plugin-google-gtag": "^3.8.0",
     "gatsby-plugin-image": "^1.8.0",

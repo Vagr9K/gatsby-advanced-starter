@@ -55,6 +55,7 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
                 description
                 fbAppId
                 googleAnalyticsId
+                disqusShortname
                 logoUrl
                 name
                 rss

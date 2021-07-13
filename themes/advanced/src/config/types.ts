@@ -11,6 +11,7 @@ export interface WebsiteData {
   rss: string;
   rssTitle: string;
   googleAnalyticsId?: string;
+  disqusShortname?: string;
   themeColor: string;
   backgroundColor: string;
 }

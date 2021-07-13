@@ -7067,6 +7067,18 @@
             "deprecationReason": null
           },
           {
+            "name": "disqusShortname",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "themeColor",
             "description": null,
             "args": [],
@@ -7582,18 +7594,6 @@
                 "name": "String",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "themeColor",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8587,6 +8587,18 @@
             "deprecationReason": null
           },
           {
+            "name": "shortname",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "trackingIds",
             "description": null,
             "args": [],
@@ -8895,12 +8907,12 @@
             "deprecationReason": null
           },
           {
-            "name": "themeColor",
+            "name": "website",
             "description": null,
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "String",
+              "kind": "OBJECT",
+              "name": "SitePluginPluginOptionsWebsite",
               "ofType": null
             },
             "isDeprecated": false,
@@ -9276,6 +9288,30 @@
           },
           {
             "name": "site_url",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SitePluginPluginOptionsWebsite",
+        "description": null,
+        "specifiedByUrl": null,
+        "fields": [
+          {
+            "name": "disqusShortname",
             "description": null,
             "args": [],
             "type": {
@@ -20075,18 +20111,6 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "themeColor",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -20234,6 +20258,18 @@
           },
           {
             "name": "googleAnalyticsId",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "disqusShortname",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -21070,6 +21106,12 @@
             "deprecationReason": null
           },
           {
+            "name": "siteMetadata___config___website___disqusShortname",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "siteMetadata___config___website___themeColor",
             "description": null,
             "isDeprecated": false,
@@ -21239,12 +21281,6 @@
           },
           {
             "name": "siteMetadata___config___basePath",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "siteMetadata___config___themeColor",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -25129,6 +25165,18 @@
             "deprecationReason": null
           },
           {
+            "name": "shortname",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "trackingIds",
             "description": null,
             "type": {
@@ -25429,11 +25477,11 @@
             "deprecationReason": null
           },
           {
-            "name": "themeColor",
+            "name": "website",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
+              "name": "SitePluginPluginOptionsWebsiteFilterInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -25850,6 +25898,30 @@
           },
           {
             "name": "site_url",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SitePluginPluginOptionsWebsiteFilterInput",
+        "description": null,
+        "specifiedByUrl": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "disqusShortname",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -27784,6 +27856,12 @@
             "deprecationReason": null
           },
           {
+            "name": "pluginCreator___pluginOptions___shortname",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pluginCreator___pluginOptions___trackingIds",
             "description": null,
             "isDeprecated": false,
@@ -27958,7 +28036,7 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginCreator___pluginOptions___themeColor",
+            "name": "pluginCreator___pluginOptions___website___disqusShortname",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32461,6 +32539,12 @@
             "deprecationReason": null
           },
           {
+            "name": "pluginOptions___shortname",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pluginOptions___trackingIds",
             "description": null,
             "isDeprecated": false,
@@ -32635,7 +32719,7 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___themeColor",
+            "name": "pluginOptions___website___disqusShortname",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

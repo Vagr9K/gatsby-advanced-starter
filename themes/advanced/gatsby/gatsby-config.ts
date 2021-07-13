@@ -171,6 +171,12 @@ const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
         },
       },
       {
+        resolve: "gatsby-plugin-disqus",
+        options: {
+          shortname: config.website.disqusShortname,
+        },
+      },
+      {
         resolve: "gatsby-plugin-google-gtag",
         options: {
           trackingIds: [config.website.googleAnalyticsId],

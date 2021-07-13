@@ -12,6 +12,7 @@ export const schema = `#graphql
     rss: String!
     rssTitle: String!
     googleAnalyticsId: String
+    disqusShortname: String
     themeColor: String!
     backgroundColor: String!
   }

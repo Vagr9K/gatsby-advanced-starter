@@ -39,3 +39,13 @@ table {
 
   max-width: 760px;
 }
+
+#disqus_thread {
+  width: 100%;
+  max-width: 760px;
+}
+
+#disqus_recommendations {
+  width: 100%;
+  max-width: 760px;
+}
