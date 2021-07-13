@@ -806,6 +806,7 @@ type SiteConfig = {
   readonly iconList: Maybe<ReadonlyArray<Maybe<IconManifest>>>;
   readonly iconCachePath: Maybe<Scalars['String']>;
   readonly basePath: Scalars['String'];
+  readonly themeColor: Maybe<Scalars['String']>;
 };
 
 type MdxFrontmatter = {
@@ -816,8 +817,8 @@ type MdxFrontmatter = {
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
   readonly category: Maybe<Scalars['String']>;
-  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly disqus_category_id: Maybe<Scalars['Int']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -930,6 +931,7 @@ type SitePluginPluginOptions = {
   readonly feeds: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFeeds>>>;
   readonly configDir: Maybe<Scalars['String']>;
   readonly projectRoot: Maybe<Scalars['String']>;
+  readonly themeColor: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
 };
 
@@ -1477,8 +1479,8 @@ type MdxFrontmatterFilterInput = {
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
   readonly category: Maybe<StringQueryOperatorInput>;
-  readonly tags: Maybe<StringQueryOperatorInput>;
   readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
+  readonly tags: Maybe<StringQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1825,8 +1827,8 @@ type FileFieldsEnum =
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
   | 'childrenMdx.frontmatter.category'
-  | 'childrenMdx.frontmatter.tags'
   | 'childrenMdx.frontmatter.disqus_category_id'
+  | 'childrenMdx.frontmatter.tags'
   | 'childrenMdx.frontmatter.slug'
   | 'childrenMdx.rawBody'
   | 'childrenMdx.fileAbsolutePath'
@@ -1929,8 +1931,8 @@ type FileFieldsEnum =
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
   | 'childMdx.frontmatter.category'
-  | 'childMdx.frontmatter.tags'
   | 'childMdx.frontmatter.disqus_category_id'
+  | 'childMdx.frontmatter.tags'
   | 'childMdx.frontmatter.slug'
   | 'childMdx.rawBody'
   | 'childMdx.fileAbsolutePath'
@@ -2335,6 +2337,7 @@ type SiteConfigFilterInput = {
   readonly iconList: Maybe<IconManifestFilterListInput>;
   readonly iconCachePath: Maybe<StringQueryOperatorInput>;
   readonly basePath: Maybe<StringQueryOperatorInput>;
+  readonly themeColor: Maybe<StringQueryOperatorInput>;
 };
 
 type WebsiteDataFilterInput = {
@@ -2484,6 +2487,7 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.iconList.purpose'
   | 'siteMetadata.config.iconCachePath'
   | 'siteMetadata.config.basePath'
+  | 'siteMetadata.config.themeColor'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.rssMetadata.site_url'
   | 'siteMetadata.rssMetadata.feed_url'
@@ -2993,6 +2997,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly feeds: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   readonly configDir: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
+  readonly themeColor: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3374,6 +3379,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.feeds.site_url'
   | 'pluginCreator.pluginOptions.configDir'
   | 'pluginCreator.pluginOptions.projectRoot'
+  | 'pluginCreator.pluginOptions.themeColor'
   | 'pluginCreator.pluginOptions.pathCheck'
   | 'pluginCreator.nodeAPIs'
   | 'pluginCreator.browserAPIs'
@@ -3737,8 +3743,8 @@ type MdxFieldsEnum =
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
   | 'frontmatter.category'
-  | 'frontmatter.tags'
   | 'frontmatter.disqus_category_id'
+  | 'frontmatter.tags'
   | 'frontmatter.slug'
   | 'rawBody'
   | 'fileAbsolutePath'
@@ -4067,6 +4073,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.feeds.site_url'
   | 'pluginOptions.configDir'
   | 'pluginOptions.projectRoot'
+  | 'pluginOptions.themeColor'
   | 'pluginOptions.pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -4279,6 +4286,14 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
+
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -4304,13 +4319,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
-        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
 
 }
