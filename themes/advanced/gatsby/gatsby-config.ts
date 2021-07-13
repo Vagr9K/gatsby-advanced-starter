@@ -50,6 +50,12 @@ const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
     },
     plugins: [
       {
+        resolve: "gatsby-plugin-compile-es6-packages",
+        options: {
+          modules: ["gatsby-plugin-image"],
+        },
+      },
+      {
         resolve: `gatsby-plugin-typescript`,
         options: {
           isTSX: true,
