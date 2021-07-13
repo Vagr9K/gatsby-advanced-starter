@@ -12897,6 +12897,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-compile-es6-packages@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "gatsby-plugin-compile-es6-packages@npm:2.1.0"
+  dependencies:
+    "@babel/runtime": ^7.0.0
+    regex-escape: ^3.4.8
+  peerDependencies:
+    gatsby: ">2.0.0-alpha"
+  checksum: d3a7041668cea179af6eff106f1ba280f49da23009627c1a62976a9f14b90d29c370bd4d79f43adbbd47243cbe02940e5592bd8a25c96c61b6a12e35f28573be
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-feed@npm:^3.8.0":
   version: 3.8.0
   resolution: "gatsby-plugin-feed@npm:3.8.0"
@@ -13747,6 +13759,7 @@ fsevents@^1.2.7:
     gatsby: ^3.8.1
     gatsby-image: ^3.8.0
     gatsby-plugin-catch-links: ^3.8.0
+    gatsby-plugin-compile-es6-packages: ^2.1.0
     gatsby-plugin-feed: ^3.8.0
     gatsby-plugin-google-gtag: ^3.8.0
     gatsby-plugin-image: ^1.8.0
@@ -13822,11 +13835,9 @@ fsevents@^1.2.7:
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^12.0.0
     "@types/jest": ^26.0.23
-    "@types/lodash": ^4
     "@types/node": ^16.0.0
     "@types/react": ^17.0.13
     "@types/react-dom": ^17.0.8
-    "@types/react-helmet": ^6.1.1
     "@typescript-eslint/eslint-plugin": ^4.28.1
     babel-jest: ^27.0.6
     eslint: ^7.30.0
@@ -13842,18 +13853,13 @@ fsevents@^1.2.7:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^4.7.0
     gatsby: ^3.8.1
-    gatsby-plugin-image: ^1.9.0
-    gatsby-plugin-mdx: ^2.9.0
     gatsby-theme-amaranth: "workspace:*"
     gh-pages: ^3.2.3
     jest: ^27.0.6
-    lodash: ^4.17.21
     markdownlint-cli2: ^0.1.3
     prettier: ^2.3.2
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-helmet: ^6.1.0
-    react-share: ^4.4.0
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
@@ -24594,6 +24600,13 @@ fsevents@^1.2.7:
   dependencies:
     "@babel/runtime": ^7.8.4
   checksum: ed07c2c1d08f4828807f9366621ca1d62102969f5af575662c9e5f085f7b49df068e4944e17c7016898bc125cdc7b0d74014e9856bff3a6a147714c4e7de3ed9
+  languageName: node
+  linkType: hard
+
+"regex-escape@npm:^3.4.8":
+  version: 3.4.10
+  resolution: "regex-escape@npm:3.4.10"
+  checksum: 4f41e41fe02be1f485e1e3e4f4d3ed8e7d5310e14f45fe72685a062ea0e9eb6a9d73e3aaf8a7c022a364b99e7506d86adf1d1847f593cd6945b7db7406bf67da
   languageName: node
   linkType: hard
 

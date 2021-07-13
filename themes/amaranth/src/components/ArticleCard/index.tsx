@@ -1,6 +1,6 @@
 import React from "react";
 import { getImage, IGatsbyImageData } from "gatsby-plugin-image";
-import { Post } from "gatsby-theme-advanced/src//types";
+import { Types } from "gatsby-theme-advanced";
 
 import ReadButton from "./ArticleButton";
 import ArticleInfo from "../ArticleInfo";
@@ -12,7 +12,7 @@ import ArticleCardSkeleton from "./Skeleton";
 import * as S from "./styles";
 
 type ArticleHeroCardProps = {
-  post?: Post;
+  post?: Types.Post;
   hero?: boolean;
 };
 

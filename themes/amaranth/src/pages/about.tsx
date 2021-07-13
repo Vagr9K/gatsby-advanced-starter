@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
+import { ConfigContext } from "gatsby-theme-advanced";
 
 import Layout from "../layouts";
 

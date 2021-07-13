@@ -2,12 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 
-import SEO from "gatsby-theme-advanced/src/components/SEO";
-import {
-  PostFromJsonList,
-  queryIntoPost,
-  jsonPostIntoPost,
-} from "gatsby-theme-advanced/src/types";
+import { SEO, Types, PostTemplateProps } from "gatsby-theme-advanced";
 
 import Layout from "../../../layouts";
 import Article from "../../../components/Article";
@@ -20,19 +15,11 @@ const Wrapper = styled.div`
   grid-gap: 60px;
 `;
 
-type PageContext = {
-  relatedPosts: PostFromJsonList;
-};
-type PostTemplateProps = {
-  data: GatsbyTypes.BlogPostBySlugQuery;
-  pageContext: PageContext;
-};
-
 const PostTemplate = ({
   data,
   pageContext,
 }: PostTemplateProps): JSX.Element => {
-  const post = queryIntoPost(data);
+  const post = Types.queryIntoPost(data);
 
   return (
     <Layout>
@@ -40,45 +27,12 @@ const PostTemplate = ({
         <SEO post={post} />
         <Article post={post} />
         <AuthorSegment />
-        <RelatedPosts list={pageContext.relatedPosts.map(jsonPostIntoPost)} />
+        <RelatedPosts
+          list={pageContext.relatedPosts.map(Types.jsonPostIntoPost)}
+        />
       </Wrapper>
     </Layout>
   );
 };
-
-/* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query GetBlogPostBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        description
-        cover {
-          publicURL
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        coverAlt
-        datePublished
-        dateModified
-        category
-        tags
-      }
-      fields {
-        slug
-        route
-        pathName
-        url
-      }
-      internal {
-        content
-      }
-    }
-  }
-`;
 
 export default PostTemplate;

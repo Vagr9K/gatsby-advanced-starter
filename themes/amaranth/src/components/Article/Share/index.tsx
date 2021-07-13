@@ -13,15 +13,15 @@ import {
   RedditShareButton,
 } from "react-share";
 
-import { Post } from "gatsby-theme-advanced/src/types";
-import { SiteConfig } from "gatsby-theme-advanced/src/config";
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
+import { Types, ConfigContext } from "gatsby-theme-advanced";
 
 import LinkCopyNotification from "./LinkCopyNotification";
 import Separator from "../../shared/Separator";
 import * as S from "./styles";
 
-const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
+const generateRelatedTwitterNames = (
+  config: Types.SiteConfig
+): Array<string> => {
   const relatedTwitterNames = [];
   if (config.user?.twitterName)
     relatedTwitterNames.push(config.user.twitterName);
@@ -33,7 +33,7 @@ const generateRelatedTwitterNames = (config: SiteConfig): Array<string> => {
 };
 
 type ArticleShareProps = {
-  post: Post;
+  post: Types.Post;
 };
 
 const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {

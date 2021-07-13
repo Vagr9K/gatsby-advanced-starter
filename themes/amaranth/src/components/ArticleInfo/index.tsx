@@ -2,12 +2,12 @@ import React from "react";
 import { format } from "date-fns";
 import _ from "lodash";
 
-import { Post } from "gatsby-theme-advanced/src//types";
+import { Types } from "gatsby-theme-advanced";
 
 import * as S from "./styles";
 
 type ArticleInfoProps = {
-  post: Post;
+  post: Types.Post;
 };
 
 const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {

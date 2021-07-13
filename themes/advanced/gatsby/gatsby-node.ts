@@ -16,7 +16,7 @@ import {
   withDefaults,
 } from "../src/config";
 
-const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/index.tsx");
+const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/query.ts");
 
 // Generates a slug from provided frontmatter/file path
 const generateSlug = (

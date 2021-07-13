@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
+import { ConfigContext } from "gatsby-theme-advanced";
 
 import { AdvancedLogo } from "../../icons";
 

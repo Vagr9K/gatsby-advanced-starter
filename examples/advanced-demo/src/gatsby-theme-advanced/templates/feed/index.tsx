@@ -1,20 +1,18 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
-import useInfiniteFeed from "gatsby-theme-advanced/src/templates/feed/useInfiniteFeed";
-import { PageContext } from "gatsby-theme-advanced/src/templates/feed/types";
+import {
+  ConfigContext,
+  FeedTemplateProps,
+  useInfiniteFeed,
+} from "gatsby-theme-advanced";
 
 import Layout from "../../../layouts";
 import FeedListing from "../../../components/FeedListing";
 
 import "./styles.css";
 
-type FeedProps = {
-  pageContext: PageContext;
-};
-
-const Feed = ({ pageContext }: FeedProps): JSX.Element => {
+const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
   const config = useContext(ConfigContext);

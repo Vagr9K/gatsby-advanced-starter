@@ -1,12 +1,11 @@
 import * as React from "react";
 
-import Link from "gatsby-theme-advanced/src/components/Link";
-import { FeedList } from "gatsby-theme-advanced/src/types";
+import { Link, Types } from "gatsby-theme-advanced";
 
 import "./styles.css";
 
 type PostListingProps = {
-  listing: FeedList;
+  listing: Types.FeedList;
 };
 
 const FeedListing = ({ listing }: PostListingProps): JSX.Element => (

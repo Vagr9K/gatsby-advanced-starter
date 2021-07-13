@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { getImage } from "gatsby-plugin-image";
 
-import { Post } from "gatsby-theme-advanced/src/types";
+import { Types } from "gatsby-theme-advanced";
 
 import { H1, Body } from "../../theme";
 import ArticleInfo from "../ArticleInfo";
@@ -31,7 +31,11 @@ const Cover = styled.div`
   grid-gap: 8px;
 `;
 
-const ArticleIntro = ({ post }: { post: Post }): JSX.Element => {
+type ArticleIntroProps = {
+  post: Types.Post;
+};
+
+const ArticleIntro = ({ post }: ArticleIntroProps): JSX.Element => {
   if (!post.coverImg)
     throw Error(
       "ArticleIntro: Failed to render ArticleIntro without cover image."

@@ -6,11 +6,11 @@ import useInfiniteFeed from "./useInfiniteFeed";
 
 import { PageContext } from "./types";
 
-type FeedProps = {
+export type FeedTemplateProps = {
   pageContext: PageContext;
 };
 
-const Feed = ({ pageContext }: FeedProps): JSX.Element => {
+const FeedTemplate = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
   const config = useContext(ConfigContext);
@@ -48,4 +48,4 @@ const Feed = ({ pageContext }: FeedProps): JSX.Element => {
   );
 };
 
-export default Feed;
+export default FeedTemplate;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { FeedList } from "gatsby-theme-advanced/src/types";
+import { Types } from "gatsby-theme-advanced";
 
 import ArticleCard from "../ArticleCard";
 import { constants } from "../../theme";
@@ -29,7 +29,7 @@ const WidthLimitedGrid = styled(LayoutWidthContainer)`
 `;
 
 type PostListingProps = {
-  listing: FeedList;
+  listing: Types.FeedList;
   noHero?: boolean;
 };
 

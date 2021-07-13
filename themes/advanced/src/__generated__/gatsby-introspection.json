@@ -7785,18 +7785,6 @@
             "deprecationReason": null
           },
           {
-            "name": "disqus_category_id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "tags",
             "description": null,
             "args": [],
@@ -7808,6 +7796,18 @@
                 "name": "String",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "disqus_category_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8174,6 +8174,22 @@
         "description": null,
         "specifiedByUrl": null,
         "fields": [
+          {
+            "name": "modules",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "isTSX",
             "description": null,
@@ -13929,11 +13945,11 @@
             "deprecationReason": null
           },
           {
-            "name": "disqus_category_id",
+            "name": "tags",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "IntQueryOperatorInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -13941,11 +13957,11 @@
             "deprecationReason": null
           },
           {
-            "name": "tags",
+            "name": "disqus_category_id",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
+              "name": "IntQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -16440,13 +16456,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childrenMdx___frontmatter___disqus_category_id",
+            "name": "childrenMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childrenMdx___frontmatter___tags",
+            "name": "childrenMdx___frontmatter___disqus_category_id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -17064,13 +17080,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childMdx___frontmatter___disqus_category_id",
+            "name": "childMdx___frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "childMdx___frontmatter___tags",
+            "name": "childMdx___frontmatter___disqus_category_id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -24687,6 +24703,18 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "modules",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "isTSX",
             "description": null,
             "type": {
@@ -27481,6 +27509,12 @@
           },
           {
             "name": "pluginCreator___version",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___modules",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -30414,13 +30448,13 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___disqus_category_id",
+            "name": "frontmatter___tags",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___tags",
+            "name": "frontmatter___disqus_category_id",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32104,6 +32138,12 @@
           },
           {
             "name": "version",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___modules",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

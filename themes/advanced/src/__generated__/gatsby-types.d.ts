@@ -816,8 +816,8 @@ type MdxFrontmatter = {
   readonly datePublished: Maybe<Scalars['Date']>;
   readonly dateModified: Maybe<Scalars['Date']>;
   readonly category: Maybe<Scalars['String']>;
-  readonly disqus_category_id: Maybe<Scalars['Int']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly disqus_category_id: Maybe<Scalars['Int']>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
@@ -873,6 +873,7 @@ type SitePlugin = Node & {
 };
 
 type SitePluginPluginOptions = {
+  readonly modules: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly isTSX: Maybe<Scalars['Boolean']>;
   readonly jsxPragma: Maybe<Scalars['String']>;
   readonly allExtensions: Maybe<Scalars['Boolean']>;
@@ -1476,8 +1477,8 @@ type MdxFrontmatterFilterInput = {
   readonly datePublished: Maybe<DateQueryOperatorInput>;
   readonly dateModified: Maybe<DateQueryOperatorInput>;
   readonly category: Maybe<StringQueryOperatorInput>;
-  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
   readonly tags: Maybe<StringQueryOperatorInput>;
+  readonly disqus_category_id: Maybe<IntQueryOperatorInput>;
   readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1824,8 +1825,8 @@ type FileFieldsEnum =
   | 'childrenMdx.frontmatter.datePublished'
   | 'childrenMdx.frontmatter.dateModified'
   | 'childrenMdx.frontmatter.category'
-  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.frontmatter.tags'
+  | 'childrenMdx.frontmatter.disqus_category_id'
   | 'childrenMdx.frontmatter.slug'
   | 'childrenMdx.rawBody'
   | 'childrenMdx.fileAbsolutePath'
@@ -1928,8 +1929,8 @@ type FileFieldsEnum =
   | 'childMdx.frontmatter.datePublished'
   | 'childMdx.frontmatter.dateModified'
   | 'childMdx.frontmatter.category'
-  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.frontmatter.tags'
+  | 'childMdx.frontmatter.disqus_category_id'
   | 'childMdx.frontmatter.slug'
   | 'childMdx.rawBody'
   | 'childMdx.fileAbsolutePath'
@@ -2935,6 +2936,7 @@ type SitePluginFilterInput = {
 };
 
 type SitePluginPluginOptionsFilterInput = {
+  readonly modules: Maybe<StringQueryOperatorInput>;
   readonly isTSX: Maybe<BooleanQueryOperatorInput>;
   readonly jsxPragma: Maybe<StringQueryOperatorInput>;
   readonly allExtensions: Maybe<BooleanQueryOperatorInput>;
@@ -3307,6 +3309,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.resolve'
   | 'pluginCreator.name'
   | 'pluginCreator.version'
+  | 'pluginCreator.pluginOptions.modules'
   | 'pluginCreator.pluginOptions.isTSX'
   | 'pluginCreator.pluginOptions.jsxPragma'
   | 'pluginCreator.pluginOptions.allExtensions'
@@ -3734,8 +3737,8 @@ type MdxFieldsEnum =
   | 'frontmatter.datePublished'
   | 'frontmatter.dateModified'
   | 'frontmatter.category'
-  | 'frontmatter.disqus_category_id'
   | 'frontmatter.tags'
+  | 'frontmatter.disqus_category_id'
   | 'frontmatter.slug'
   | 'rawBody'
   | 'fileAbsolutePath'
@@ -3992,6 +3995,7 @@ type SitePluginFieldsEnum =
   | 'resolve'
   | 'name'
   | 'version'
+  | 'pluginOptions.modules'
   | 'pluginOptions.isTSX'
   | 'pluginOptions.jsxPragma'
   | 'pluginOptions.allExtensions'
@@ -4254,12 +4258,12 @@ type SiteBuildMetadataSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type GetBlogPostBySlugQueryVariables = Exact<{
+type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type GetBlogPostBySlugQuery = { readonly mdx: Maybe<(
+type BlogPostBySlugQuery = { readonly mdx: Maybe<(
     Pick<Mdx, 'body' | 'timeToRead' | 'excerpt'>
     & { readonly frontmatter: Maybe<(
       Pick<MdxFrontmatter, 'title' | 'description' | 'coverAlt' | 'datePublished' | 'dateModified' | 'category' | 'tags'>
@@ -4274,14 +4278,6 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
-        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -4309,20 +4305,12 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type BlogPostBySlugQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogPostBySlugQuery = { readonly mdx: Maybe<(
-    Pick<Mdx, 'body' | 'timeToRead' | 'excerpt'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MdxFrontmatter, 'title' | 'description' | 'coverAlt' | 'datePublished' | 'dateModified' | 'category' | 'tags'>
-      & { readonly cover: Maybe<(
-        Pick<File, 'publicURL'>
-        & { readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }
-      )> }
-    )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
-  )> };
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'fbAppId' | 'googleAnalyticsId' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
 
 }

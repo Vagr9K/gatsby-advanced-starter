@@ -3,6 +3,8 @@
   "description": "GatsbyJS theme equipped with advanced features.",
   "version": "3.0.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "license": "MIT",
+  "main": "index.ts",
   "dependencies": {
     "@fec/remark-a11y-emoji": "^3.1.0",
     "@mdx-js/mdx": "^1.6.22",
@@ -12,6 +14,7 @@
     "eslint-plugin-graphql": "^4.0.0",
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-catch-links": "^3.8.0",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-feed": "^3.8.0",
     "gatsby-plugin-google-gtag": "^3.8.0",
     "gatsby-plugin-image": "^1.8.0",
@@ -122,8 +125,6 @@
     "gatsby-theme",
     "vagr9k"
   ],
-  "license": "MIT",
-  "main": "index.js",
   "scripts": {
     "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:deadcode": "ts-prune -i '(test|gatsby)'",

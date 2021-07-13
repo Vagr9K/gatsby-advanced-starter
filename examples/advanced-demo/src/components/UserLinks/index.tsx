@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
-import Link from "gatsby-theme-advanced/src/components/Link";
-import { SiteConfig } from "gatsby-theme-advanced/src/config";
+import { ConfigContext, Link, Types } from "gatsby-theme-advanced";
 
 import "./styles.css";
+
+type SiteConfig = Types.SiteConfig;
 
 // Utilities
 const renderLink = (url: string, text: string): JSX.Element => (

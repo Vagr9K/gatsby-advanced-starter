@@ -1,7 +1,6 @@
 import * as React from "react";
 
-import { ConfigProvider } from "gatsby-theme-advanced/src/context/ConfigContext";
-import SEO from "gatsby-theme-advanced/src/components/SEO";
+import { ConfigProvider, SEO } from "gatsby-theme-advanced";
 
 import Footer from "../components/Footer";
 

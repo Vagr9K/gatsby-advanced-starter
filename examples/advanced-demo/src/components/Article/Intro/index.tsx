@@ -3,10 +3,11 @@ import React from "react";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { kebabCase } from "lodash";
 
-import Link from "gatsby-theme-advanced/src/components/Link";
-import { Post } from "gatsby-theme-advanced/src/types";
+import { Link, Types } from "gatsby-theme-advanced";
 
 import "./styles.css";
+
+type Post = Types.Post;
 
 type IntroProps = {
   post: Post;

@@ -2,7 +2,7 @@ import React from "react";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Post } from "gatsby-theme-advanced/src/types";
+import { Types } from "gatsby-theme-advanced";
 
 import Intro from "./Intro";
 import Share from "./Share";
@@ -10,7 +10,7 @@ import Share from "./Share";
 import "./styles.css";
 
 type ArticleProps = {
-  post: Post;
+  post: Types.Post;
 };
 
 const Article = ({ post }: ArticleProps): JSX.Element => {

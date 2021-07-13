@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PostList } from "gatsby-theme-advanced/src/types";
+import { Types } from "gatsby-theme-advanced";
 
 import { H2 } from "../../theme";
 import FeedListing from "../FeedListing";
@@ -23,7 +23,7 @@ const Label = styled(H2)`
 `;
 
 type RelatedPostsProps = {
-  list: PostList;
+  list: Types.PostList;
 };
 
 const RelatedPosts = ({ list }: RelatedPostsProps): JSX.Element => (

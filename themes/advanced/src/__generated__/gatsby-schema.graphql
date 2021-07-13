@@ -906,8 +906,8 @@ type MdxFrontmatter {
     locale: String
   ): Date
   category: String
-  disqus_category_id: Int
   tags: [String]
+  disqus_category_id: Int
   slug: String
 }
 
@@ -948,6 +948,7 @@ type SitePlugin implements Node {
 }
 
 type SitePluginPluginOptions {
+  modules: [String]
   isTSX: Boolean
   jsxPragma: String
   allExtensions: Boolean
@@ -1290,8 +1291,8 @@ input MdxFrontmatterFilterInput {
   datePublished: DateQueryOperatorInput
   dateModified: DateQueryOperatorInput
   category: StringQueryOperatorInput
-  disqus_category_id: IntQueryOperatorInput
   tags: StringQueryOperatorInput
+  disqus_category_id: IntQueryOperatorInput
   slug: StringQueryOperatorInput
 }
 
@@ -1611,8 +1612,8 @@ enum FileFieldsEnum {
   childrenMdx___frontmatter___datePublished
   childrenMdx___frontmatter___dateModified
   childrenMdx___frontmatter___category
-  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___tags
+  childrenMdx___frontmatter___disqus_category_id
   childrenMdx___frontmatter___slug
   childrenMdx___rawBody
   childrenMdx___fileAbsolutePath
@@ -1715,8 +1716,8 @@ enum FileFieldsEnum {
   childMdx___frontmatter___datePublished
   childMdx___frontmatter___dateModified
   childMdx___frontmatter___category
-  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___tags
+  childMdx___frontmatter___disqus_category_id
   childMdx___frontmatter___slug
   childMdx___rawBody
   childMdx___fileAbsolutePath
@@ -2646,6 +2647,7 @@ input SitePluginFilterInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
+  modules: StringQueryOperatorInput
   isTSX: BooleanQueryOperatorInput
   jsxPragma: StringQueryOperatorInput
   allExtensions: BooleanQueryOperatorInput
@@ -2991,6 +2993,7 @@ enum SitePageFieldsEnum {
   pluginCreator___resolve
   pluginCreator___name
   pluginCreator___version
+  pluginCreator___pluginOptions___modules
   pluginCreator___pluginOptions___isTSX
   pluginCreator___pluginOptions___jsxPragma
   pluginCreator___pluginOptions___allExtensions
@@ -3366,8 +3369,8 @@ enum MdxFieldsEnum {
   frontmatter___datePublished
   frontmatter___dateModified
   frontmatter___category
-  frontmatter___disqus_category_id
   frontmatter___tags
+  frontmatter___disqus_category_id
   frontmatter___slug
   rawBody
   fileAbsolutePath
@@ -3598,6 +3601,7 @@ enum SitePluginFieldsEnum {
   resolve
   name
   version
+  pluginOptions___modules
   pluginOptions___isTSX
   pluginOptions___jsxPragma
   pluginOptions___allExtensions

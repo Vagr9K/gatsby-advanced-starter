@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Post } from "gatsby-theme-advanced/src/types";
+import { Types } from "gatsby-theme-advanced";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import MDXTheme from "./MdxTheme";
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 `;
 
 type RenderProps = {
-  post: Post;
+  post: Types.Post;
 };
 
 const Render = ({ post }: RenderProps): JSX.Element => {

@@ -15,9 +15,7 @@ import {
   RedditIcon,
 } from "react-share";
 
-import { Post } from "gatsby-theme-advanced/src/types";
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
-import { SiteConfig } from "gatsby-theme-advanced/src/config";
+import { Types, ConfigContext } from "gatsby-theme-advanced";
 
 import "./styles.css";
 
@@ -25,7 +23,7 @@ export const countFilter = (count: number): string =>
   count > 0 ? count.toString() : "";
 
 export const generateRelatedTwitterNames = (
-  config: SiteConfig
+  config: Types.SiteConfig
 ): Array<string> => {
   const relatedTwitterNames = [];
 
@@ -39,7 +37,7 @@ export const generateRelatedTwitterNames = (
 };
 
 type SocialLinksProps = {
-  post: Post;
+  post: Types.Post;
 };
 
 const ShareLinks = ({ post }: SocialLinksProps): JSX.Element => {

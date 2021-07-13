@@ -5,10 +5,11 @@ import { MailSend, Rss } from "@styled-icons/boxicons-regular";
 import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
 import { StyledIcon } from "@styled-icons/styled-icon";
 
-import { SiteConfig } from "gatsby-theme-advanced/src/config";
-import ConfigContext from "gatsby-theme-advanced/src/context/ConfigContext";
+import { Types, ConfigContext } from "gatsby-theme-advanced";
 
 import { IconLink } from "../Links";
+
+type SiteConfig = Types.SiteConfig;
 
 const LinkGrid = styled.div`
   display: grid;
