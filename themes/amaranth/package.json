@@ -132,14 +132,14 @@
     "vagr9k"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "lint:js": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:deadcode": "ts-prune -i '(test|gatsby)'",
     "lint:styles": "stylelint src/**/*.{js,jsx,ts,tsx,css}",
     "lint:md": "markdownlint-cli2 content/**/*.{md,mdx}",
     "lint:format": "prettier --check '**/*.{js,jsx,ts,tsx,css}'",
-    "lint:all": "npm run lint:js && npm run lint:deadcode && npm run lint:styles && npm run lint:format && npm run lint:md",
+    "lint:all": "npm run lint:js && npm run lint:styles && npm run lint:format && npm run lint:md",
     "format:js": "prettier '**/*.{js,jsx,ts,tsx}' --write",
     "format:styles": "prettier '**/*.css' --write",
     "format:all": "npm run format:js && npm run format:styles",

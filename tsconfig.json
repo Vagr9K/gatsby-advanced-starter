@@ -1,6 +1,13 @@
 {
-  "exclude": ["node_modules", "themes", "examples"],
-  "include": ["./src/"],
+  "exclude": ["node_modules", "**/gatsby-config.js"],
+  "include": [
+    "./src/",
+    ".eslintrc.js",
+    "**/gatsby/**/*",
+    "**/src/**/*",
+    "**/test/**/*",
+    "**/index.ts"
+  ],
   "compilerOptions": {
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017", "es2019"],

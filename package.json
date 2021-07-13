@@ -28,7 +28,7 @@
     "lint:styles": "stylelint src/**/*.{js,jsx,ts,tsx,css}",
     "lint:md": "markdownlint-cli2 content/**/*.{md,mdx}",
     "lint:format": "prettier --check '**/*.{js,jsx,ts,tsx,css}'",
-    "lint:all": "npm run lint:js && npm run lint:deadcode && npm run lint:styles && npm run lint:format && npm run lint:md",
+    "lint:all": "npm run lint:js && npm run lint:styles && npm run lint:format && npm run lint:md",
     "format:js": "prettier '**/*.{js,jsx,ts,tsx}' --write",
     "format:styles": "prettier '**/*.css' --write",
     "format:all": "npm run format:js && npm run format:styles",
@@ -36,7 +36,7 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "write-good": "write-good $(glob 'content/**/*.md')",
-    "check": "yarn workspaces foreach run lint:all && yarn workspaces foreach run type-check",
+    "check": "yarn workspaces foreach -A -v -p run lint:all && yarn workspaces foreach -A -v -p run type-check",
     "prepare": "husky install"
   },
   "dependencies": {

@@ -1,5 +1,0 @@
-{
-  "include": ["*", ".eslintrc.js", "gatsby/**/*", "src/**/*", "test/**/*"],
-  "exclude": ["gatsby-config.js"],
-  "extends": "../../tsconfig.json"
-}
