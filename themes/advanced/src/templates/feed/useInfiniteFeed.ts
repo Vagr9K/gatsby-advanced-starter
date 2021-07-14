@@ -33,10 +33,10 @@ const getFetchFunc =
 
 // Generate placeholders for currently loading posts
 const createPostPlaceholders = (
-  count: number,
-  keyPrefix: string
+  keyPrefix: string,
+  count?: number
 ): PostPlaceholder[] =>
-  Array(count)
+  Array(count || constants.postsPerFeedPage)
     .fill(0)
     .map((_, idx) => ({
       isPlaceholder: true,
@@ -79,23 +79,13 @@ const useInfiniteFeed = (
     // When loading the next page, show placeholder posts
     if (feedQuery.isFetchingNextPage) {
       const lastPage = feedQuery.data?.pages[feedQuery.data?.pages.length - 1];
-      list.push(
-        ...createPostPlaceholders(
-          lastPage?.nextCount || constants.postsPerFeedPage,
-          "next"
-        )
-      );
+      list.push(...createPostPlaceholders("next", lastPage?.nextCount));
     }
 
     // When loading the previous page, show placeholder posts
     if (feedQuery.isFetchingPreviousPage) {
       const firstPage = feedQuery.data?.pages[0];
-      list.unshift(
-        ...createPostPlaceholders(
-          firstPage?.prevCount || constants.postsPerFeedPage,
-          "prev"
-        )
-      );
+      list.unshift(...createPostPlaceholders("prev", firstPage?.prevCount));
     }
 
     return list;

@@ -106,37 +106,6 @@ fragment GatsbyImageSharpFluid_withWebp_noBase64 on ImageSharpFluid {
   srcSetWebp
   sizes
 }
-query BlogPostBySlug($slug: String!) {
-  mdx(fields: { slug: { eq: $slug } }) {
-    body
-    timeToRead
-    excerpt
-    frontmatter {
-      title
-      description
-      cover {
-        publicURL
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-      coverAlt
-      datePublished
-      dateModified
-      category
-      tags
-    }
-    fields {
-      slug
-      route
-      pathName
-      url
-    }
-    internal {
-      content
-    }
-  }
-}
 query UserConfig {
   site {
     siteMetadata {
@@ -179,6 +148,7 @@ query UserConfig {
           description
           fbAppId
           googleAnalyticsId
+          disqusShortname
           logoUrl
           name
           rss
@@ -190,6 +160,37 @@ query UserConfig {
           url
         }
       }
+    }
+  }
+}
+query BlogPostBySlug($slug: String!) {
+  mdx(fields: { slug: { eq: $slug } }) {
+    body
+    timeToRead
+    excerpt
+    frontmatter {
+      title
+      description
+      cover {
+        publicURL
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+      coverAlt
+      datePublished
+      dateModified
+      category
+      tags
+    }
+    fields {
+      slug
+      route
+      pathName
+      url
+    }
+    internal {
+      content
     }
   }
 }

@@ -67,7 +67,7 @@ export const createFeed = async (
 
     // Calculate the amount of pages in the next batch
     const nextCount = nextPage
-      ? Math.min(pageCount - skip + 1, limit)
+      ? Math.min(pageCount * POSTS_PER_PAGE - skip + 1, limit)
       : undefined;
     const prevCount = prevPage ? limit : undefined;
 
