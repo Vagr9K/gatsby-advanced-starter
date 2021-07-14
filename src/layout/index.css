@@ -55,17 +55,16 @@ a {
   top: 0;
   left: 0;
   flex-wrap: wrap;
-  justify-content: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  align-content: center;
 }
 
 .home-post-link {
   max-width: 33vw;
   max-height: 33vh;
-  background: rgb(19 25 19 / 65%);
-  padding: 5rem;
+  /* background: rgb(19 25 19); */
+  /* padding: 10rem; */
+  font-size: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;

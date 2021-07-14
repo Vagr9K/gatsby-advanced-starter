@@ -15,75 +15,18 @@ function PostListing({ postEdges }) {
       timeToRead: postEdge.node.timeToRead,
     });
   });
-  const squares = [
-    {
-      render: true,
-      index: 0,
-    },
-    {
-      render: false,
-    },
-    {
-      render: false,
-    },
-    {
-      render: false,
-    },
-    {
-      render: true,
-      index: 1,
-    },
-    {
-      render: false,
-    },
-    {
-      render: false,
-    },
-    {
-      render: false,
-    },
-    {
-      render: true,
-      index: 2,
-    },
-  ];
 
   return (
     <div className="home-post-wrapper">
       {
         /* Your post list here. */
-        squares.map((square, index) => {
-          const renderSquare = square.render;
-          const renderIndex = square.index;
-          const to =
-            renderSquare && postList
-              ? postList[renderIndex]
-                ? postList[renderIndex].path
-                : null
-              : null;
-          const key =
-            renderSquare && postList
-              ? postList[renderIndex]
-                ? postList[renderIndex].title
-                : `postListFiller${index}`
-              : `postListFiller${index}`;
-          const title =
-            renderSquare && postList
-              ? postList[renderIndex]
-                ? postList[renderIndex].title
-                : null
-              : null;
-
-          return square.render ? (
-            <div className="home-square">
-              <Link className="home-post-link" to={to} key={key}>
-                <h1 className="home-post-title">{title}</h1>
-              </Link>
-            </div>
-          ) : (
-            <div className="home-square filler" key={key} />
-          );
-        })
+        postList.map((post) => (
+          <div className="home-square">
+            <Link className="home-post-link" to={post.path} key={post.title}>
+              <h1 className="home-post-title">{post.title}</h1>
+            </Link>
+          </div>
+        ))
       }
     </div>
   );
