@@ -2,7 +2,6 @@
 
 import path from "path";
 import fs from "fs";
-import _ from "lodash";
 
 import { Actions } from "gatsby";
 
@@ -59,8 +58,6 @@ export const createFeed = async (
 
     const feedPagePosts = feedPosts.slice(skip, skip + limit);
 
-    const formattedFeedId = _.kebabCase(feedId);
-
     // Compute and save a feed page metadata file
     const nextPage = pageIndex + 1 < pageCount ? pageIndex + 1 : undefined;
     const prevPage = pageIndex > 0 ? pageIndex - 1 : undefined;
@@ -80,15 +77,13 @@ export const createFeed = async (
       posts: feedPagePosts,
     };
 
-    await saveFeedPageMeta(feedType, pageIndex, pageMeta, formattedFeedId);
+    await saveFeedPageMeta(feedType, pageIndex, pageMeta, feedId);
 
     // Index page resides on `/${PageNum}`
     // Other feeds have the `${feedName}/${feedId}/${PageNum}` format
     // Except for the first page which is on `${feedName}/${feedId}/` and "/" respectively
     const slugPrefix =
-      feedType === "index"
-        ? "/"
-        : `/${feedType}${formattedFeedId ? `/${formattedFeedId}` : ""}`;
+      feedType === "index" ? "/" : `/${feedType}${feedId ? `/${feedId}` : ""}`;
 
     const slug =
       pageIndex === 0

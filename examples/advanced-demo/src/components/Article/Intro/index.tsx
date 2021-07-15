@@ -1,7 +1,6 @@
 import React from "react";
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import { kebabCase } from "lodash";
 
 import { Link, Types } from "gatsby-theme-advanced";
 
@@ -17,7 +16,7 @@ const renderTags = (post: Post): JSX.Element | null => {
   if (!post.tags) return null;
 
   const tagList = post.tags.map((tag) => (
-    <Link key={tag} to={`/tag/${kebabCase(tag.toLowerCase())}`}>
+    <Link key={tag} to={`/tag/${tag}`}>
       <h3>{tag}</h3>
     </Link>
   ));
@@ -38,7 +37,7 @@ const renderCategory = (post: Post): JSX.Element | null => {
   return (
     <div className="category-container">
       <h3>Category:</h3>
-      <Link to={`/category/${kebabCase(category.toLowerCase())}`}>
+      <Link to={`/category/${category}`}>
         <h3>{category}</h3>
       </Link>
     </div>

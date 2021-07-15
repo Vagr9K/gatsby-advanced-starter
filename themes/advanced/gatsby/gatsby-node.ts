@@ -150,32 +150,21 @@ const gatsbyNode: ITSConfigFn<"node", SiteConfig> = (
 
     //  Create tag listing feeds based on our set
     const tagTasks = Array.from(tagSet.keys())
-      .map((tag) => tag.toLowerCase())
-      .map(async (tag) => {
-        const tagListing = await getTagListing(graphql, tag);
+    .map(async (tag) => {
+      const tagListing = await getTagListing(graphql, tag);
 
-        await createFeed(config, actions, tagListing, "tag", tag);
-      });
+      await createFeed(config, actions, tagListing, "tag", tag);
+    });
 
     await Promise.all(tagTasks);
 
     // Create category listing feeds based on our set
     const categoryTasks = Array.from(categorySet.keys())
-      .map((category) => category.toLowerCase())
-      .map(async (category) => {
-        const categoryListing = await getCategoryListing(
-          graphql,
-          category.toLowerCase()
-        );
+    .map(async (category) => {
+      const categoryListing = await getCategoryListing(graphql, category);
 
-        await createFeed(
-          config,
-          actions,
-          categoryListing,
-          "category",
-          category
-        );
-      });
+      await createFeed(config, actions, categoryListing, "category", category);
+    });
 
     await Promise.all(categoryTasks);
   },

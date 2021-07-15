@@ -1,6 +1,5 @@
 import React from "react";
 import { format } from "date-fns";
-import _ from "lodash";
 
 import { Types } from "gatsby-theme-advanced";
 
@@ -11,9 +10,7 @@ type ArticleInfoProps = {
 };
 
 const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
-  const categoryUrl = post.category
-    ? `/category/${_.kebabCase(post.category.toLowerCase())}`
-    : undefined;
+  const categoryUrl = post.category ? `/category/${post.category}` : undefined;
 
   const publicationDate = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
     post.datePublished,
@@ -26,7 +23,7 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
 
   // Display the first 2 tags
   const tagLinks = post.tags?.slice(0, 2).map((tag) => (
-    <S.TagLink key={tag} to={`/tag/${_.kebabCase(tag.toLowerCase())}`}>
+    <S.TagLink key={tag} to={`/tag/${tag}`}>
       {tag}
     </S.TagLink>
   ));

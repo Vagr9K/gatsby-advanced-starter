@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useInfiniteQuery } from "react-query";
-import { kebabCase } from "lodash";
 
 import useScrollBasedFetching from "./useScrollBasedFetching";
 
@@ -17,7 +16,7 @@ import { constants } from "../../config";
 // Calculate the base URL for the feed
 const getBaseUrl = (pageContext: PageContext): string =>
   `/${constants.feedMetaDirectory}${pageContext.feedType}${
-    pageContext.feedId ? `-${kebabCase(pageContext.feedId)}` : ""
+    pageContext.feedId ? `-${pageContext.feedId}` : ""
   }`;
 
 // Generate a fetch function for the feed
