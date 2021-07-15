@@ -12,7 +12,7 @@ type ArticleInfoProps = {
 
 const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
   const categoryUrl = post.category
-    ? `/category/${_.kebabCase(post.category)}`
+    ? `/category/${_.kebabCase(post.category.toLowerCase())}`
     : undefined;
 
   const publicationDate = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
@@ -26,7 +26,7 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
 
   // Display the first 2 tags
   const tagLinks = post.tags?.slice(0, 2).map((tag) => (
-    <S.TagLink key={tag} to={`/tag/${_.kebabCase(tag)}`}>
+    <S.TagLink key={tag} to={`/tag/${_.kebabCase(tag.toLowerCase())}`}>
       {tag}
     </S.TagLink>
   ));

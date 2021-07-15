@@ -98,20 +98,21 @@ export const createFeed = async (
     // Add basePath if needed
     const route = withBasePath(config, slug);
 
-    // Create a Gatsby page based on the calculated information
-    actions.createPage({
-      path: route,
-      component: FEED_COMPONENT,
-      context: {
-        limit,
-        skip,
-        pageCount,
-        pageIndex,
-        feedType,
-        feedId,
-        feedPageMeta: pageMeta,
-      },
-    });
+    // Create a Gatsby page for the main feed
+    if (pageIndex === 0)
+      actions.createPage({
+        path: route,
+        component: FEED_COMPONENT,
+        context: {
+          limit,
+          skip,
+          pageCount,
+          pageIndex,
+          feedType,
+          feedId,
+          feedPageMeta: pageMeta,
+        },
+      });
   });
 
   await Promise.all(tasks);

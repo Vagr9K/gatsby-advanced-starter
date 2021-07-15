@@ -149,18 +149,24 @@ const gatsbyNode: ITSConfigFn<"node", SiteConfig> = (
     await createFeed(config, actions, fullListing, "index");
 
     //  Create tag listing feeds based on our set
-    const tagTasks = Array.from(tagSet.keys()).map(async (tag) => {
-      const tagListing = await getTagListing(graphql, tag);
+    const tagTasks = Array.from(tagSet.keys())
+      .map((tag) => tag.toLowerCase())
+      .map(async (tag) => {
+        const tagListing = await getTagListing(graphql, tag);
 
-      await createFeed(config, actions, tagListing, "tag", tag);
-    });
+        await createFeed(config, actions, tagListing, "tag", tag);
+      });
 
     await Promise.all(tagTasks);
 
     // Create category listing feeds based on our set
-    const categoryTasks = Array.from(categorySet.keys()).map(
-      async (category) => {
-        const categoryListing = await getCategoryListing(graphql, category);
+    const categoryTasks = Array.from(categorySet.keys())
+      .map((category) => category.toLowerCase())
+      .map(async (category) => {
+        const categoryListing = await getCategoryListing(
+          graphql,
+          category.toLowerCase()
+        );
 
         await createFeed(
           config,
@@ -169,8 +175,7 @@ const gatsbyNode: ITSConfigFn<"node", SiteConfig> = (
           "category",
           category
         );
-      }
-    );
+      });
 
     await Promise.all(categoryTasks);
   },
