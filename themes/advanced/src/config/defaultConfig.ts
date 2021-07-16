@@ -7,6 +7,7 @@ const config: SiteConfig = {
     titleShort: "Advanced Blog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
     name: "Gatsby Advanced Starter", // Website name used for homescreen (PWA) and SEO
     description: "A GatsbyJS starter equipped with advanced features.", // Website description used for RSS feeds/meta description tag
+    language: "en", // Sets the global HTML lang attribute
     logoUrl: "/logos/logo-1024.png", // Logo used for SEO
     fbAppId: "1825356251115265", // FB Application ID for using app insights
     twitterName: "Vagr9K", // Twitter handle of the website

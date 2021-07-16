@@ -10,7 +10,7 @@ const Footer = (): JSX.Element => {
   const config = useContext(ConfigContext);
 
   return (
-    <div className="footer-wrapper">
+    <footer className="footer-wrapper">
       <div className="link-grid">
         <UserLinks includeRss />
       </div>
@@ -23,7 +23,7 @@ const Footer = (): JSX.Element => {
         </p>
         <p>{config.website.copyright}</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

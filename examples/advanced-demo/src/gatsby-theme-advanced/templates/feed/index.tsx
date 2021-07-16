@@ -38,10 +38,10 @@ const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
 
   return (
     <Layout>
-      <div className="feed-wrapper" ref={feedElementRef}>
+      <main className="feed-wrapper" ref={feedElementRef}>
         {getTitleOverride()}
         <FeedListing listing={feedListing} />
-      </div>
+      </main>
     </Layout>
   );
 };

@@ -53,6 +53,7 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
                 backgroundColor
                 copyright
                 description
+                language
                 fbAppId
                 googleAnalyticsId
                 disqusShortname

@@ -14,7 +14,7 @@ const Post = ({ data, pageContext }: PostTemplateProps): JSX.Element => {
   return (
     <Layout>
       <SEO post={post} />
-      <div className="post-wrapper">
+      <main className="post-wrapper">
         <Article post={post} />
         <div className="related-posts-wrapper">
           <h1>Related posts:</h1>
@@ -22,7 +22,7 @@ const Post = ({ data, pageContext }: PostTemplateProps): JSX.Element => {
             listing={pageContext.relatedPosts.map(Types.jsonPostIntoPost)}
           />
         </div>
-      </div>
+      </main>
     </Layout>
   );
 };

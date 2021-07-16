@@ -17,13 +17,13 @@ const renderTags = (post: Post): JSX.Element | null => {
 
   const tagList = post.tags.map((tag) => (
     <Link key={tag} to={`/tag/${tag}`}>
-      <h3>{tag}</h3>
+      <h2>{tag}</h2>
     </Link>
   ));
 
   return (
     <div className="article-tag-grid ">
-      <h3>Tags:</h3>
+      <h2>Tags:</h2>
       {tagList}
     </div>
   );
@@ -36,9 +36,9 @@ const renderCategory = (post: Post): JSX.Element | null => {
 
   return (
     <div className="category-container">
-      <h3>Category:</h3>
+      <h2>Category:</h2>
       <Link to={`/category/${category}`}>
-        <h3>{category}</h3>
+        <h2>{category}</h2>
       </Link>
     </div>
   );
@@ -64,7 +64,7 @@ const Intro = ({ post }: IntroProps): JSX.Element => {
         <GatsbyImage image={gatsbyImage} alt={post.coverImageAlt} />
         <figcaption>{post.coverImageAlt}</figcaption>
       </figure>
-      <h3>{`Time to read: ${post.timeToRead} minutes`}</h3>
+      <h2>{`Time to read: ${post.timeToRead} minutes`}</h2>
       {renderCategory(post)}
       {renderTags(post)}
     </div>

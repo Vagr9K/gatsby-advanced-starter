@@ -4,6 +4,10 @@ code {
   word-break: break-word !important;
 }
 
+code > a {
+  color: rgb(59, 187, 230);
+}
+
 figcaption {
   text-align: center;
 }

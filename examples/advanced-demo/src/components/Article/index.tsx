@@ -20,14 +20,14 @@ const Article = ({ post }: ArticleProps): JSX.Element => {
     );
 
   return (
-    <article className="article-wrapper">
+    <section className="article-wrapper">
       <Intro post={post} />
-      <div className="article-content-wrapper">
+      <article className="article-content-wrapper">
         <MDXRenderer>{post.body}</MDXRenderer>
-      </div>
+      </article>
       <Share post={post} />
       <Disqus post={post} />
-    </article>
+    </section>
   );
 };
 

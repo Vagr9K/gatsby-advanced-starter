@@ -4,6 +4,7 @@ export const schema = `#graphql
     titleShort: String!
     name: String!
     description: String!
+    language: String!
     logoUrl: String!
     fbAppId: String
     twitterName: String

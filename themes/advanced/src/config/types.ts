@@ -3,6 +3,7 @@ export interface WebsiteData {
   titleShort: string;
   name: string;
   description: string;
+  language: string;
   logoUrl: string;
   fbAppId?: string;
   twitterName?: string;
