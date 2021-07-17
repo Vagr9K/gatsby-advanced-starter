@@ -1,3 +1,5 @@
 # Build Files
 public/
 .cache/
+cypress/screenshots
+cypress/videos

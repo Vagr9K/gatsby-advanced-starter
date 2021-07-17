@@ -4290,6 +4290,14 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
+        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
+        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'language' | 'fbAppId' | 'googleAnalyticsId' | 'disqusShortname' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
+      ) }> }> };
+
 type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
@@ -4305,13 +4313,5 @@ type BlogPostBySlugQuery = { readonly mdx: Maybe<(
       )> }
     )>, readonly fields: Maybe<Pick<MdxFields, 'slug' | 'route' | 'pathName' | 'url'>>, readonly internal: Pick<Internal, 'content'> }
   )> };
-
-type UserConfigQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type UserConfigQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<{ readonly config: (
-        Pick<SiteConfig, 'contentDir' | 'assetDir' | 'embededImageWidth' | 'embededVideoWidth' | 'basePath' | 'iconPath' | 'iconCachePath' | 'pathPrefix'>
-        & { readonly iconList: Maybe<ReadonlyArray<Maybe<Pick<IconManifest, 'src' | 'sizes' | 'type' | 'purpose'>>>>, readonly organization: Maybe<Pick<OrganizationData, 'description' | 'logoUrl' | 'name' | 'url'>>, readonly user: Maybe<Pick<UserData, 'about' | 'avatar' | 'firstName' | 'github' | 'email' | 'id' | 'lastName' | 'linkedIn' | 'location' | 'twitterName'>>, readonly website: Pick<WebsiteData, 'backgroundColor' | 'copyright' | 'description' | 'language' | 'fbAppId' | 'googleAnalyticsId' | 'disqusShortname' | 'logoUrl' | 'name' | 'rss' | 'rssTitle' | 'themeColor' | 'title' | 'titleShort' | 'twitterName' | 'url'> }
-      ) }> }> };
 
 }
