@@ -1,10 +1,9 @@
 module.exports = {
   plugins: [
+    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-theme-amaranth",
-      options: {
-        themeColor: "#38d960",
-      },
+      options: {},
     },
   ],
 };
