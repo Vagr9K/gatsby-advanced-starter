@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { H3 } from "../../theme";
-
 export const Wrapper = styled.footer`
   display: grid;
   gap: 40px;
@@ -10,7 +8,6 @@ export const Wrapper = styled.footer`
   padding: 32px 0px 16px;
   background-color: var(--color-grey-100);
   color: var(--color-grey-700);
-  fill: var(--color-grey-700);
 `;
 
 export const LinkGrid = styled.section`
@@ -25,10 +22,13 @@ export const Info = styled.div`
   gap: 8px;
   justify-items: center;
   align-items: center;
-`;
 
-export const LinksLabel = styled(H3)`
-  &:after {
-    content: "LINKS";
+  /* Override link colors to improve color contrast */
+  & a {
+    color: var(--color-primary-600);
+
+    :hover {
+      color: var(--color-primary-600);
+    }
   }
 `;

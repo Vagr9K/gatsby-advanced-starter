@@ -871,6 +871,7 @@ type SiteConfig {
   iconList: [IconManifest]
   iconCachePath: String
   basePath: String!
+  themeColor: String
 }
 
 type MdxFrontmatter {
@@ -978,7 +979,6 @@ type SitePluginPluginOptions {
   lessBabel: Boolean
   mediaTypes: [String]
   root: String
-  shortname: String
   trackingIds: [String]
   color: String
   output: String
@@ -1004,7 +1004,7 @@ type SitePluginPluginOptions {
   feeds: [SitePluginPluginOptionsFeeds]
   configDir: String
   projectRoot: String
-  website: SitePluginPluginOptionsWebsite
+  themeColor: String
   pathCheck: Boolean
 }
 
@@ -1050,10 +1050,6 @@ type SitePluginPluginOptionsFeeds {
   output: String
   title: String
   site_url: String
-}
-
-type SitePluginPluginOptionsWebsite {
-  disqusShortname: String
 }
 
 type SitePluginPackageJson {
@@ -2099,6 +2095,7 @@ input SiteConfigFilterInput {
   iconList: IconManifestFilterListInput
   iconCachePath: StringQueryOperatorInput
   basePath: StringQueryOperatorInput
+  themeColor: StringQueryOperatorInput
 }
 
 input WebsiteDataFilterInput {
@@ -2225,6 +2222,7 @@ enum SiteFieldsEnum {
   siteMetadata___config___iconList___purpose
   siteMetadata___config___iconCachePath
   siteMetadata___config___basePath
+  siteMetadata___config___themeColor
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url
@@ -2679,7 +2677,6 @@ input SitePluginPluginOptionsFilterInput {
   lessBabel: BooleanQueryOperatorInput
   mediaTypes: StringQueryOperatorInput
   root: StringQueryOperatorInput
-  shortname: StringQueryOperatorInput
   trackingIds: StringQueryOperatorInput
   color: StringQueryOperatorInput
   output: StringQueryOperatorInput
@@ -2705,7 +2702,7 @@ input SitePluginPluginOptionsFilterInput {
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
-  website: SitePluginPluginOptionsWebsiteFilterInput
+  themeColor: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
 }
 
@@ -2759,10 +2756,6 @@ input SitePluginPluginOptionsFeedsFilterInput {
   output: StringQueryOperatorInput
   title: StringQueryOperatorInput
   site_url: StringQueryOperatorInput
-}
-
-input SitePluginPluginOptionsWebsiteFilterInput {
-  disqusShortname: StringQueryOperatorInput
 }
 
 input SitePluginPackageJsonFilterInput {
@@ -3034,7 +3027,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___lessBabel
   pluginCreator___pluginOptions___mediaTypes
   pluginCreator___pluginOptions___root
-  pluginCreator___pluginOptions___shortname
   pluginCreator___pluginOptions___trackingIds
   pluginCreator___pluginOptions___color
   pluginCreator___pluginOptions___output
@@ -3064,7 +3056,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
-  pluginCreator___pluginOptions___website___disqusShortname
+  pluginCreator___pluginOptions___themeColor
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
@@ -3650,7 +3642,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___lessBabel
   pluginOptions___mediaTypes
   pluginOptions___root
-  pluginOptions___shortname
   pluginOptions___trackingIds
   pluginOptions___color
   pluginOptions___output
@@ -3680,7 +3671,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___site_url
   pluginOptions___configDir
   pluginOptions___projectRoot
-  pluginOptions___website___disqusShortname
+  pluginOptions___themeColor
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs

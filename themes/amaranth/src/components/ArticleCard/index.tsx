@@ -25,7 +25,7 @@ const ArticleCard = ({ post, hero }: ArticleHeroCardProps): JSX.Element => {
 
   return (
     <S.Wrapper hero={hero}>
-      <TransparentLink to={post.slug}>
+      <TransparentLink to={post.slug} ariaLabel={post.title}>
         <S.Cover
           image={getImage(post.coverImg) as IGatsbyImageData}
           alt={post.coverImageAlt}
@@ -36,10 +36,11 @@ const ArticleCard = ({ post, hero }: ArticleHeroCardProps): JSX.Element => {
           <S.Header>
             <ArticleInfo post={post} />
             <TransparentLink to={post.slug}>
-              <H3>{post.title}</H3>
+              {/* Display as an H2 for accessibility and title semantics */}
+              <H3 as="h2">{post.title}</H3>
             </TransparentLink>
           </S.Header>
-          <TransparentLink to={post.slug}>
+          <TransparentLink to={post.slug} ariaLabel={post.title}>
             <S.Excerpt hero={hero}>{post.excerpt}</S.Excerpt>
           </TransparentLink>
         </S.Meta>

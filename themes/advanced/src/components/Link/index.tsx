@@ -12,6 +12,7 @@ export type LinkProps = {
   to: string;
   href?: string;
   noBasePath?: boolean;
+  ariaLabel?: string;
 };
 
 const Link = ({
@@ -21,6 +22,7 @@ const Link = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => {
   const config = useContext(ConfigContext);
 
@@ -36,11 +38,12 @@ const Link = ({
       activeClassName={activeClassName}
       className={className}
       to={internalUrl}
+      aria-label={ariaLabel}
     >
       {children}
     </GatsbyLink>
   ) : (
-    <a className={className} href={url}>
+    <a className={className} href={url} aria-label={ariaLabel}>
       {children}
     </a>
   );

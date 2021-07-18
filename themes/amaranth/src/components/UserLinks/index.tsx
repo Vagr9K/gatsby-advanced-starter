@@ -18,8 +18,12 @@ const LinkGrid = styled.div`
 `;
 
 // Utilities
-const renderLink = (url: string, Icon: StyledIcon): JSX.Element => (
-  <IconLink to={url}>
+const renderLink = (
+  url: string,
+  label: string,
+  Icon: StyledIcon
+): JSX.Element => (
+  <IconLink to={url} ariaLabel={label}>
     <Icon size={48} />
   </IconLink>
 );
@@ -32,7 +36,7 @@ const renderTwitterLink = (
   if (!userName) return null;
 
   const url = `https://twitter.com/${userName}`;
-  return renderLink(url, Twitter);
+  return renderLink(url, "Twitter Profile", Twitter);
 };
 
 const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
@@ -41,7 +45,7 @@ const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
   if (!userName) return null;
 
   const url = `https://github.com/${userName}`;
-  return renderLink(url, Github);
+  return renderLink(url, "GitHub Profile", Github);
 };
 
 const renderLinkedInLink = (
@@ -52,16 +56,16 @@ const renderLinkedInLink = (
   if (!userName) return null;
 
   const url = `https://www.linkedin.com/in/${userName}`;
-  return renderLink(url, LinkedinSquare);
+  return renderLink(url, "LinkedIn Profile", LinkedinSquare);
 };
 
 const renderEmailLink = (config: Readonly<SiteConfig>): JSX.Element => {
   const url = `mailto:${config.user?.email || ""}`;
-  return renderLink(url, MailSend);
+  return renderLink(url, "E-Mail", MailSend);
 };
 
 const renderRssLink = (config: Readonly<SiteConfig>): JSX.Element =>
-  renderLink(config.website.rss, Rss);
+  renderLink(config.website.rss, "RSS Feed", Rss);
 
 type IconLinksProps = {
   includeRss?: boolean;

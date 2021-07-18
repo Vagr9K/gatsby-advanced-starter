@@ -31,11 +31,8 @@ export const LinkWrapper = styled.div`
 `;
 
 export const Label = styled(H3)`
-  &:after {
-    content: "Share";
-    color: var(--color-grey-300);
-    text-transform: uppercase;
-  }
+  color: var(--color-grey-600);
+  text-transform: uppercase;
 `;
 
 export const LinkGrid = styled.div`

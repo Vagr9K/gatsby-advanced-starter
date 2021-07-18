@@ -8,7 +8,7 @@ import MDXTheme from "./MdxTheme";
 
 import { WrapperCss } from "./Spacing";
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   width: 100%;
   max-width: 100%;
 

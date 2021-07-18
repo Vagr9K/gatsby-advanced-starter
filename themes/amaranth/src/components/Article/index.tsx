@@ -7,7 +7,7 @@ import Intro from "./Intro";
 import Render from "./Render";
 import Share from "./Share";
 
-const Wrapper = styled.article`
+const Wrapper = styled.main`
   width: 100%;
 
   display: grid;

@@ -805,6 +805,7 @@ type SiteConfig = {
   readonly iconList: Maybe<ReadonlyArray<Maybe<IconManifest>>>;
   readonly iconCachePath: Maybe<Scalars['String']>;
   readonly basePath: Scalars['String'];
+  readonly themeColor: Maybe<Scalars['String']>;
 };
 
 type MdxFrontmatter = {
@@ -903,7 +904,6 @@ type SitePluginPluginOptions = {
   readonly lessBabel: Maybe<Scalars['Boolean']>;
   readonly mediaTypes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly root: Maybe<Scalars['String']>;
-  readonly shortname: Maybe<Scalars['String']>;
   readonly trackingIds: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly color: Maybe<Scalars['String']>;
   readonly output: Maybe<Scalars['String']>;
@@ -929,7 +929,7 @@ type SitePluginPluginOptions = {
   readonly feeds: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFeeds>>>;
   readonly configDir: Maybe<Scalars['String']>;
   readonly projectRoot: Maybe<Scalars['String']>;
-  readonly website: Maybe<SitePluginPluginOptionsWebsite>;
+  readonly themeColor: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
 };
 
@@ -975,10 +975,6 @@ type SitePluginPluginOptionsFeeds = {
   readonly output: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
   readonly site_url: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsWebsite = {
-  readonly disqusShortname: Maybe<Scalars['String']>;
 };
 
 type SitePluginPackageJson = {
@@ -2334,6 +2330,7 @@ type SiteConfigFilterInput = {
   readonly iconList: Maybe<IconManifestFilterListInput>;
   readonly iconCachePath: Maybe<StringQueryOperatorInput>;
   readonly basePath: Maybe<StringQueryOperatorInput>;
+  readonly themeColor: Maybe<StringQueryOperatorInput>;
 };
 
 type WebsiteDataFilterInput = {
@@ -2487,6 +2484,7 @@ type SiteFieldsEnum =
   | 'siteMetadata.config.iconList.purpose'
   | 'siteMetadata.config.iconCachePath'
   | 'siteMetadata.config.basePath'
+  | 'siteMetadata.config.themeColor'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.rssMetadata.site_url'
   | 'siteMetadata.rssMetadata.feed_url'
@@ -2966,7 +2964,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly lessBabel: Maybe<BooleanQueryOperatorInput>;
   readonly mediaTypes: Maybe<StringQueryOperatorInput>;
   readonly root: Maybe<StringQueryOperatorInput>;
-  readonly shortname: Maybe<StringQueryOperatorInput>;
   readonly trackingIds: Maybe<StringQueryOperatorInput>;
   readonly color: Maybe<StringQueryOperatorInput>;
   readonly output: Maybe<StringQueryOperatorInput>;
@@ -2992,7 +2989,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly feeds: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   readonly configDir: Maybe<StringQueryOperatorInput>;
   readonly projectRoot: Maybe<StringQueryOperatorInput>;
-  readonly website: Maybe<SitePluginPluginOptionsWebsiteFilterInput>;
+  readonly themeColor: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3046,10 +3043,6 @@ type SitePluginPluginOptionsFeedsFilterInput = {
   readonly output: Maybe<StringQueryOperatorInput>;
   readonly title: Maybe<StringQueryOperatorInput>;
   readonly site_url: Maybe<StringQueryOperatorInput>;
-};
-
-type SitePluginPluginOptionsWebsiteFilterInput = {
-  readonly disqusShortname: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPackageJsonFilterInput = {
@@ -3348,7 +3341,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.lessBabel'
   | 'pluginCreator.pluginOptions.mediaTypes'
   | 'pluginCreator.pluginOptions.root'
-  | 'pluginCreator.pluginOptions.shortname'
   | 'pluginCreator.pluginOptions.trackingIds'
   | 'pluginCreator.pluginOptions.color'
   | 'pluginCreator.pluginOptions.output'
@@ -3378,7 +3370,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.feeds.site_url'
   | 'pluginCreator.pluginOptions.configDir'
   | 'pluginCreator.pluginOptions.projectRoot'
-  | 'pluginCreator.pluginOptions.website.disqusShortname'
+  | 'pluginCreator.pluginOptions.themeColor'
   | 'pluginCreator.pluginOptions.pathCheck'
   | 'pluginCreator.nodeAPIs'
   | 'pluginCreator.browserAPIs'
@@ -4042,7 +4034,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.lessBabel'
   | 'pluginOptions.mediaTypes'
   | 'pluginOptions.root'
-  | 'pluginOptions.shortname'
   | 'pluginOptions.trackingIds'
   | 'pluginOptions.color'
   | 'pluginOptions.output'
@@ -4072,7 +4063,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.feeds.site_url'
   | 'pluginOptions.configDir'
   | 'pluginOptions.projectRoot'
-  | 'pluginOptions.website.disqusShortname'
+  | 'pluginOptions.themeColor'
   | 'pluginOptions.pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'

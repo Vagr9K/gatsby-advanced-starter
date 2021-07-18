@@ -12,6 +12,7 @@ export const IconLink = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => (
   <S.IconLink
     to={to}
@@ -19,6 +20,7 @@ export const IconLink = ({
     className={className}
     activeClassName={activeClassName}
     noBasePath={noBasePath}
+    ariaLabel={ariaLabel}
   >
     {children}
   </S.IconLink>
@@ -31,6 +33,7 @@ export const PrimaryLink = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => (
   <S.PrimaryLink
     to={to}
@@ -38,6 +41,7 @@ export const PrimaryLink = ({
     className={className}
     activeClassName={activeClassName}
     noBasePath={noBasePath}
+    ariaLabel={ariaLabel}
   >
     {children}
   </S.PrimaryLink>
@@ -50,6 +54,7 @@ export const AnimatedLink = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => (
   <S.AnimatedLink
     to={to}
@@ -57,6 +62,7 @@ export const AnimatedLink = ({
     className={className}
     activeClassName={activeClassName}
     noBasePath={noBasePath}
+    ariaLabel={ariaLabel}
   >
     {children}
   </S.AnimatedLink>
@@ -69,6 +75,7 @@ export const TransparentLink = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => (
   <S.TransparentLink
     to={to}
@@ -76,6 +83,7 @@ export const TransparentLink = ({
     className={className}
     activeClassName={activeClassName}
     noBasePath={noBasePath}
+    ariaLabel={ariaLabel}
   >
     {children}
   </S.TransparentLink>
@@ -88,6 +96,7 @@ export const HeadingLink = ({
   children,
   activeClassName,
   noBasePath,
+  ariaLabel,
 }: LinkProps): JSX.Element => (
   <S.HeadingLink
     to={to}
@@ -95,6 +104,7 @@ export const HeadingLink = ({
     className={className}
     activeClassName={activeClassName}
     noBasePath={noBasePath}
+    ariaLabel={ariaLabel}
   >
     {children}
   </S.HeadingLink>

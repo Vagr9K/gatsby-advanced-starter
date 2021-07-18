@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import UserLinks from "../UserLinks";
-import { H3, styles } from "../../theme";
+import { H3 } from "../../theme";
 import BasicSeparator from "../shared/Separator";
 
 const SM_BREAKPOINT = "500px";
@@ -71,14 +71,9 @@ export const Avatar = styled.img`
 `;
 
 export const ShareLabel = styled(H3)`
-  color: var(--color-grey-300);
+  color: var(--color-grey-600);
 
   line-height: 100%;
-
-  &:after {
-    content: "Find me on";
-    ${styles.H3}
-  }
 `;
 
 export const AuthorName = styled(H3)`

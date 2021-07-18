@@ -11,19 +11,21 @@ const AuthorSegment = (): JSX.Element | null => {
 
   if (!config.user) return null;
 
+  const authorFullName = `${config.user.firstName} ${config.user.lastName}`;
+
   return (
     <S.Wrapper>
       <S.Main>
-        <S.Avatar src={config.user.avatar} />
+        <S.Avatar src={config.user.avatar} alt={authorFullName} />
         <S.Info>
-          <S.AuthorName>{`${config.user.firstName} ${config.user.lastName}`}</S.AuthorName>
+          <S.AuthorName>{authorFullName}</S.AuthorName>
           <S.AboutText>
             <Body>{config.user.about}</Body>
           </S.AboutText>
         </S.Info>
       </S.Main>
       <S.Contact>
-        <S.ShareLabel />
+        <S.ShareLabel>Find me on</S.ShareLabel>
         <S.TightUserLinks />
       </S.Contact>
       <S.Separator />

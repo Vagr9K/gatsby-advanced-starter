@@ -6,7 +6,7 @@ import { Types } from "gatsby-theme-advanced";
 import { H2 } from "../../theme";
 import FeedListing from "../FeedListing";
 
-const Wrapper = styled.div`
+const Wrapper = styled.aside`
   display: grid;
   grid-gap: 40px;
 
@@ -16,10 +16,6 @@ const Wrapper = styled.div`
 const Label = styled(H2)`
   text-transform: uppercase;
   color: var(--color-grey-700);
-
-  &:after {
-    content: "related posts";
-  }
 `;
 
 type RelatedPostsProps = {
@@ -28,7 +24,7 @@ type RelatedPostsProps = {
 
 const RelatedPosts = ({ list }: RelatedPostsProps): JSX.Element => (
   <Wrapper>
-    <Label />
+    <Label>RELATED POSTS</Label>
     <FeedListing noHero listing={list} />
   </Wrapper>
 );

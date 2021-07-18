@@ -10,6 +10,7 @@ import {
 import Layout from "../../../layouts";
 import FeedListing from "../../../components/FeedListing";
 import ListingPageWrapper from "../../../components/shared/ListingPageWrapper";
+import { ScreenReaderH1 } from "../../../components/shared/ScreenReader";
 
 const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
@@ -42,6 +43,7 @@ const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
     <Layout>
       {getTitleOverride()}
       <ListingPageWrapper ref={feedElementRef}>
+        <ScreenReaderH1>Recent Posts</ScreenReaderH1>
         <FeedListing listing={feedListing} noHero={noHero} />
       </ListingPageWrapper>
     </Layout>
