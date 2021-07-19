@@ -1,6 +1,6 @@
 require("source-map-support").install();
 require("ts-node").register({
-  transpileOnly: false,
+  transpileOnly: true,
   files: true,
   ignore: ["(?:^|/)node_modules/", "(?:^|/).cache/", "(?:^|/)public/"],
 });
