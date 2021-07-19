@@ -14,7 +14,7 @@ const AuthorSegment = (): JSX.Element | null => {
   const authorFullName = `${config.user.firstName} ${config.user.lastName}`;
 
   return (
-    <S.Wrapper>
+    <S.Wrapper aria-label="About the author">
       <S.Main>
         <S.Avatar src={config.user.avatar} alt={authorFullName} />
         <S.Info>

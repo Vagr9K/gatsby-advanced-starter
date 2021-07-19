@@ -46,7 +46,7 @@ const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
   const relatedTwitterNames = generateRelatedTwitterNames(config);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper aria-label="Share on social media">
       <S.LinkWrapper>
         <S.Label>SHARE</S.Label>
         <S.LinkGrid>
