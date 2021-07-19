@@ -19938,7 +19938,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.20, nanoid@npm:^3.1.23":
+"nanoid@npm:^3.1.23":
   version: 3.1.23
   resolution: "nanoid@npm:3.1.23"
   bin:
@@ -22932,36 +22932,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.2.6":
-  version: 8.2.6
-  resolution: "postcss@npm:8.2.6"
-  dependencies:
-    colorette: ^1.2.1
-    nanoid: ^3.1.20
-    source-map: ^0.6.1
-  checksum: 31dcc6632589e5b0d06ae3854122073a38952f3a25280511fa4bd8c2bc254c05d1d1db0913848ed3171c84d41b233ec3fe5d7349de4700f624a16fa93553ccac
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^7.0.14, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.27, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.6":
-  version: 7.0.35
-  resolution: "postcss@npm:7.0.35"
-  dependencies:
-    chalk: ^2.4.2
-    source-map: ^0.6.1
-    supports-color: ^6.1.0
-  checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.8, postcss@npm:^8.2.9":
-  version: 8.3.0
-  resolution: "postcss@npm:8.3.0"
+"postcss@npm:8.3.5":
+  version: 8.3.5
+  resolution: "postcss@npm:8.3.5"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: 438f9b9ea5a1ad66a36c944c77a55218ea0ac9d07ba63891854e8597b1a3b7710caa25d01f7783a6b8f4a3a8d52c295da422b92e546b37d6896909c19c7d4975
+  checksum: 87dc16efcf40286fad4ded0a433497ddbc55dfad3d7ddb200ba9c0761ec376280fa2c06a522628583c9284def85894c52bc361cffedf0679f4936370c084a145
   languageName: node
   linkType: hard
 
