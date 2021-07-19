@@ -57,14 +57,6 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
         },
       },
       {
-        resolve: `gatsby-plugin-typescript`,
-        options: {
-          isTSX: true,
-          jsxPragma: `react`,
-          allExtensions: true,
-        },
-      },
-      {
         resolve: `gatsby-plugin-typegen`,
         options: {
           outputPath: require.resolve("../src/__generated__/gatsby-types.d.ts"),
