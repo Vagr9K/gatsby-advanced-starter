@@ -14334,6 +14334,7 @@ fsevents@^1.2.7:
     "@types/styled-components": ^5.1.11
     "@types/xml2js": ^0.4.9
     "@typescript-eslint/eslint-plugin": ^4.28.1
+    axe-core: ^4.3.1
     babel-jest: ^27.0.6
     babel-plugin-styled-components: ^1.13.2
     cypress: ^7.7.0
