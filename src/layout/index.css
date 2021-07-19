@@ -28,55 +28,15 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  padding: 20vmin;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 a {
-  display: inline-block;
-  vertical-align: top;
-  width: 100px;
-  height: 34px;
-  line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  letter-spacing: 0.2em;
-  text-align: center;
-  font-size: 0.8rem;
-  margin: 10px;
-  position: relative;
-}
-
-.home-post-wrapper {
-  display: flex;
-  width: 100vw;
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.home-post-link {
-  max-width: 33vw;
-  max-height: 33vh;
-  /* background: rgb(19 25 19); */
-  /* padding: 10rem; */
-  font-size: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home-post-link:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease-in-out;
-}
-
-.home-sqaure {
-  width: 33vw;
-  height: 33vh;
 }
 
 .filler {
@@ -101,4 +61,14 @@ a {
 .post-page-home-button {
   padding-top: 20vh;
   font-size: 2.4rem;
+}
+
+.landing-title {
+  font-size: 5rem;
+  /* padding: 1rem; */
+}
+.landing-post {
+  padding: 1rem;
+  flex: auto;
+  /* border: 10px solid gold; */
 }

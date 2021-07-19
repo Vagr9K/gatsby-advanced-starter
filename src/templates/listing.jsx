@@ -38,14 +38,9 @@ function Listing({ pageContext, data }) {
 
   return (
     <Layout>
-      <div className="listing-container">
-        <div className="posts-container">
-          <Helmet title={config.siteTitle} />
-          <SEO />
-          <PostListing postEdges={postEdges} />
-        </div>
-        {/* {renderPaging()} */}
-      </div>
+      <Helmet title={config.siteTitle} />
+      <SEO />
+      <PostListing postEdges={postEdges} />
     </Layout>
   );
 }
