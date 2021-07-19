@@ -871,7 +871,6 @@ type SiteConfig {
   iconList: [IconManifest]
   iconCachePath: String
   basePath: String!
-  themeColor: String
 }
 
 type MdxFrontmatter {
@@ -947,6 +946,12 @@ type SitePlugin implements Node {
 }
 
 type SitePluginPluginOptions {
+  displayName: Boolean
+  fileName: Boolean
+  minify: Boolean
+  namespace: String
+  transpileTemplateLiterals: Boolean
+  pure: Boolean
   modules: [String]
   isTSX: Boolean
   jsxPragma: String
@@ -1004,7 +1009,6 @@ type SitePluginPluginOptions {
   feeds: [SitePluginPluginOptionsFeeds]
   configDir: String
   projectRoot: String
-  themeColor: String
   pathCheck: Boolean
 }
 
@@ -2095,7 +2099,6 @@ input SiteConfigFilterInput {
   iconList: IconManifestFilterListInput
   iconCachePath: StringQueryOperatorInput
   basePath: StringQueryOperatorInput
-  themeColor: StringQueryOperatorInput
 }
 
 input WebsiteDataFilterInput {
@@ -2222,7 +2225,6 @@ enum SiteFieldsEnum {
   siteMetadata___config___iconList___purpose
   siteMetadata___config___iconCachePath
   siteMetadata___config___basePath
-  siteMetadata___config___themeColor
   siteMetadata___siteUrl
   siteMetadata___rssMetadata___site_url
   siteMetadata___rssMetadata___feed_url
@@ -2645,6 +2647,12 @@ input SitePluginFilterInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
+  displayName: BooleanQueryOperatorInput
+  fileName: BooleanQueryOperatorInput
+  minify: BooleanQueryOperatorInput
+  namespace: StringQueryOperatorInput
+  transpileTemplateLiterals: BooleanQueryOperatorInput
+  pure: BooleanQueryOperatorInput
   modules: StringQueryOperatorInput
   isTSX: BooleanQueryOperatorInput
   jsxPragma: StringQueryOperatorInput
@@ -2702,7 +2710,6 @@ input SitePluginPluginOptionsFilterInput {
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   configDir: StringQueryOperatorInput
   projectRoot: StringQueryOperatorInput
-  themeColor: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
 }
 
@@ -2991,6 +2998,12 @@ enum SitePageFieldsEnum {
   pluginCreator___resolve
   pluginCreator___name
   pluginCreator___version
+  pluginCreator___pluginOptions___displayName
+  pluginCreator___pluginOptions___fileName
+  pluginCreator___pluginOptions___minify
+  pluginCreator___pluginOptions___namespace
+  pluginCreator___pluginOptions___transpileTemplateLiterals
+  pluginCreator___pluginOptions___pure
   pluginCreator___pluginOptions___modules
   pluginCreator___pluginOptions___isTSX
   pluginCreator___pluginOptions___jsxPragma
@@ -3056,7 +3069,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___projectRoot
-  pluginCreator___pluginOptions___themeColor
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
@@ -3599,6 +3611,12 @@ enum SitePluginFieldsEnum {
   resolve
   name
   version
+  pluginOptions___displayName
+  pluginOptions___fileName
+  pluginOptions___minify
+  pluginOptions___namespace
+  pluginOptions___transpileTemplateLiterals
+  pluginOptions___pure
   pluginOptions___modules
   pluginOptions___isTSX
   pluginOptions___jsxPragma
@@ -3671,7 +3689,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___site_url
   pluginOptions___configDir
   pluginOptions___projectRoot
-  pluginOptions___themeColor
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs

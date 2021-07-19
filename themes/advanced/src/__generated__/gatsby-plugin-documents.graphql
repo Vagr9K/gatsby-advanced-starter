@@ -1,3 +1,61 @@
+query UserConfig {
+  site {
+    siteMetadata {
+      config {
+        contentDir
+        assetDir
+        embededImageWidth
+        embededVideoWidth
+        basePath
+        iconPath
+        iconCachePath
+        iconList {
+          src
+          sizes
+          type
+          purpose
+        }
+        organization {
+          description
+          logoUrl
+          name
+          url
+        }
+        pathPrefix
+        user {
+          about
+          avatar
+          firstName
+          github
+          email
+          id
+          lastName
+          linkedIn
+          location
+          twitterName
+        }
+        website {
+          backgroundColor
+          copyright
+          description
+          language
+          fbAppId
+          googleAnalyticsId
+          disqusShortname
+          logoUrl
+          name
+          rss
+          rssTitle
+          themeColor
+          title
+          titleShort
+          twitterName
+          url
+        }
+      }
+    }
+  }
+}
 fragment GatsbyImageSharpFixed on ImageSharpFixed {
   base64
   width
@@ -105,64 +163,6 @@ fragment GatsbyImageSharpFluid_withWebp_noBase64 on ImageSharpFluid {
   srcWebp
   srcSetWebp
   sizes
-}
-query UserConfig {
-  site {
-    siteMetadata {
-      config {
-        contentDir
-        assetDir
-        embededImageWidth
-        embededVideoWidth
-        basePath
-        iconPath
-        iconCachePath
-        iconList {
-          src
-          sizes
-          type
-          purpose
-        }
-        organization {
-          description
-          logoUrl
-          name
-          url
-        }
-        pathPrefix
-        user {
-          about
-          avatar
-          firstName
-          github
-          email
-          id
-          lastName
-          linkedIn
-          location
-          twitterName
-        }
-        website {
-          backgroundColor
-          copyright
-          description
-          language
-          fbAppId
-          googleAnalyticsId
-          disqusShortname
-          logoUrl
-          name
-          rss
-          rssTitle
-          themeColor
-          title
-          titleShort
-          twitterName
-          url
-        }
-      }
-    }
-  }
 }
 query BlogPostBySlug($slug: String!) {
   mdx(fields: { slug: { eq: $slug } }) {

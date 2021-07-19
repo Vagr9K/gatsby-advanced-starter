@@ -25,8 +25,8 @@ const config: SiteConfig = {
   // User configuration
   user: {
     id: "AdvancedUser", // Unique identifier of the user on the website. User for OpenGraph SEO tags
-    firstName: "First", // Used for SEO
-    lastName: "Last", // Used for SEO
+    firstName: "Advanced", // Used for SEO
+    lastName: "User", // Used for SEO
     twitterName: "Vagr9K", // Twitter username used for SEO
     linkedIn: "your-linkedin", // Used for contact information
     github: "vagr9k", // Used for contact information
