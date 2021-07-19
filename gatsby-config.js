@@ -95,12 +95,12 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192.png",
+            src: "/logo.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/logos/logo-512.png",
+            src: "/logo.png",
             sizes: "512x512",
             type: "image/png",
           },

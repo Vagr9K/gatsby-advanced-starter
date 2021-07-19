@@ -1,9 +1,10 @@
 ---
 title: "Studio"
 cover: "5.jpg"
-category: "moar"
+category: "studio"
 date: "7-11-2021"
-slug: "Big-Sample_Test"
+slug: "studio"
+description: The studio stems off as a branch from Mikes first wedding photography company SFCH Photo. That business was sold during my transition into a career in Tech, but the passion for photography has since remained. xo9 takes that skill forward with photography services and other creative solutions. 
 tags:
     - studio 
     - photography 

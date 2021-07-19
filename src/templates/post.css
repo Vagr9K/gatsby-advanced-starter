@@ -1,14 +1,35 @@
 .post-meta {
-  display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .post {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* border: 10px solid gold; */
 }
 
 .post-title {
   font-size: 3rem;
-  color: antiquewhite;
+  color: white;
   font-weight: 300 !important;
+}
+
+div > p > a {
+  /* border: 10px solid gold; */
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.post-wrapper {
+  color: white;
+}
+
+.post-wrapper > p {
+  padding: 2rem;
+  font-size: 1.1rem;
 }

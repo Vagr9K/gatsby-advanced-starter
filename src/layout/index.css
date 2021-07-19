@@ -46,18 +46,6 @@ a {
   }
 }
 
-.post {
-  flex: auto;
-  border: 1px solid #cccccc;
-  align-items: center;
-  text-align: center;
-}
-
-.post-page-home-button {
-  padding-top: 20vh;
-  font-size: 2.4rem;
-}
-
 .landing-title {
   font-size: 5rem;
   text-align: center;

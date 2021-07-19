@@ -20,3 +20,4 @@ collections:
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Description", name: "description", widget: "markdown" }
