@@ -31,18 +31,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 a {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-}
-
-.filler {
-  width: 33vw;
-  height: 33vh;
-  /* border: 1px solid green; */
 }
 
 @media screen and (max-width: 1010px) {
@@ -65,10 +60,20 @@ a {
 
 .landing-title {
   font-size: 5rem;
-  /* padding: 1rem; */
+  text-align: center;
+  padding: 3rem;
 }
+
+.landing-title:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
 .landing-post {
-  padding: 1rem;
   flex: auto;
-  /* border: 10px solid gold; */
 }
+
+/* @media screen and (max-width: 588px) {
+  .layout-container {
+  }
+} */

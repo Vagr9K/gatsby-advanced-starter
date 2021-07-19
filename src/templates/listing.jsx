@@ -5,34 +5,33 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import "./listing.css";
 
-function Listing({ pageContext, data }) {
-  function renderPaging() {
-    const { currentPageNum, pageCount } = pageContext;
-    const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
-    const nextPage = `/${currentPageNum + 1}/`;
-    const isFirstPage = currentPageNum === 1;
-    const isLastPage = currentPageNum === pageCount;
+function Listing({ data }) {
+  // function renderPaging() {
+  //   const { currentPageNum, pageCount } = pageContext;
+  //   const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
+  //   const nextPage = `/${currentPageNum + 1}/`;
+  //   const isFirstPage = currentPageNum === 1;
+  //   const isLastPage = currentPageNum === pageCount;
 
-    return (
-      <div className="paging-container">
-        {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
-          const pageNum = index + 1;
-          return (
-            <Link
-              key={`listing-page-${pageNum}`}
-              to={pageNum === 1 ? "/" : `/${pageNum}/`}
-            >
-              {pageNum}
-            </Link>
-          );
-        })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
-      </div>
-    );
-  }
+  //   return (
+  //     <div className="paging-container">
+  //       {!isFirstPage && <Link to={prevPage}>Previous</Link>}
+  //       {[...Array(pageCount)].map((_val, index) => {
+  //         const pageNum = index + 1;
+  //         return (
+  //           <Link
+  //             key={`listing-page-${pageNum}`}
+  //             to={pageNum === 1 ? "/" : `/${pageNum}/`}
+  //           >
+  //             {pageNum}
+  //           </Link>
+  //         );
+  //       })}
+  //       {!isLastPage && <Link to={nextPage}>Next</Link>}
+  //     </div>
+  //   );
+  // }
 
   const postEdges = data.allMarkdownRemark.edges;
 

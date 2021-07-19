@@ -17,7 +17,7 @@ function PostListing({ postEdges }) {
   });
 
   return (
-    <div>
+    <>
       {
         /* Your post list here. */
         postList.map((post) => (
@@ -28,7 +28,7 @@ function PostListing({ postEdges }) {
           </div>
         ))
       }
-    </div>
+    </>
   );
 }
 
