@@ -57,23 +57,6 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
         },
       },
       {
-        resolve: `gatsby-plugin-typegen`,
-        options: {
-          outputPath: require.resolve("../src/__generated__/gatsby-types.d.ts"),
-          emitSchema: {
-            [require.resolve("../src/__generated__/gatsby-schema.graphql")]:
-              true,
-            [require.resolve("../src/__generated__/gatsby-introspection.json")]:
-              true,
-          },
-          emitPluginDocuments: {
-            [require.resolve(
-              "../src/__generated__/gatsby-plugin-documents.graphql"
-            )]: true,
-          },
-        },
-      },
-      {
         resolve: "gatsby-plugin-react-svg",
         options: {
           rule: {

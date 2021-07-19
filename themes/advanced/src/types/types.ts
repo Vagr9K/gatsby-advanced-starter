@@ -1,35 +1,12 @@
 import { IGatsbyImageData, ImageDataLike } from "gatsby-plugin-image";
 
+export type BlogPostBySlugQuery = {
+  mdx?: MdxNode;
+};
+
 export type MdxListingQuery = {
-  readonly allMdx: {
-    readonly edges: ReadonlyArray<{
-      readonly node: Pick<
-        GatsbyTypes.Mdx,
-        "body" | "excerpt" | "timeToRead"
-      > & {
-        readonly fields: GatsbyTypes.Maybe<Pick<GatsbyTypes.MdxFields, "slug">>;
-        readonly frontmatter: GatsbyTypes.Maybe<
-          Pick<
-            GatsbyTypes.MdxFrontmatter,
-            | "title"
-            | "description"
-            | "coverAlt"
-            | "tags"
-            | "category"
-            | "datePublished"
-            | "dateModified"
-          > & {
-            readonly cover?: Pick<GatsbyTypes.File, "publicURL"> & {
-              readonly childImageSharp?: Pick<
-                GatsbyTypes.ImageSharp,
-                "gatsbyImageData"
-              >;
-            };
-          }
-        >;
-        readonly internal: Pick<GatsbyTypes.Internal, "content">;
-      };
-    }>;
+  allMdx: {
+    edges: { node: MdxNode }[];
   };
 };
 
@@ -46,11 +23,10 @@ export type MdxNode = {
   };
 
   frontmatter?: {
-    title: string;
+    title?: string;
     description?: string;
-
     cover?: {
-      publicUrl?: string;
+      publicURL?: string;
       childImageSharp?: IGatsbyImageData;
     };
     coverAlt?: string;

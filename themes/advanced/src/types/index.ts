@@ -3,7 +3,13 @@
 // Here we convert data from multiple sources into a unified Post type
 // Post data validation is also done here, hence cosnole logs/warnings are allowed
 // so we can notify the user during the build stage
-import { MdxNode, Post, MdxListingQuery, PostFromJson } from "./types";
+import {
+  MdxNode,
+  Post,
+  MdxListingQuery,
+  PostFromJson,
+  BlogPostBySlugQuery,
+} from "./types";
 
 // Re-export types
 export * from "./types";
@@ -23,6 +29,13 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
   if (!frontmatter)
     throw Error(
       `Post missing frontmatter. Post slug: ${
+        mdxNode.fields?.slug || "not defined"
+      }. Aborting.`
+    );
+
+  if (!frontmatter.title)
+    throw Error(
+      `Post missing title. Post slug: ${
         mdxNode.fields?.slug || "not defined"
       }. Aborting.`
     );
@@ -96,7 +109,7 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
 
     description: frontmatter.description,
     coverImg: frontmatter.cover.childImageSharp,
-    coverImageUrl: frontmatter.cover.publicUrl,
+    coverImageUrl: frontmatter.cover.publicURL,
     coverImageAlt: frontmatter.coverAlt,
 
     datePublished: new Date(frontmatter.datePublished),
@@ -120,7 +133,7 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
 }
 
 // Convert MDX post query into a Post
-export const queryIntoPost = (data: GatsbyTypes.BlogPostBySlugQuery): Post => {
+export const queryIntoPost = (data: BlogPostBySlugQuery): Post => {
   const postData = data.mdx;
   if (!postData)
     throw Error(
@@ -134,7 +147,7 @@ export const queryIntoPost = (data: GatsbyTypes.BlogPostBySlugQuery): Post => {
 export const queryIntoListing = (listing: MdxListingQuery): Array<Post> => {
   const { edges } = listing.allMdx;
 
-  const nodes = edges.map((edge: { node: MdxNode }) => edge.node);
+  const nodes = edges.map((edge) => edge.node);
 
   return nodes.map((node) => mdxNodeIntoPost(node));
 };

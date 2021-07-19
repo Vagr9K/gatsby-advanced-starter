@@ -5,13 +5,21 @@ import { defaultConfig, SiteConfig } from "../config";
 
 const ConfigContext = React.createContext<SiteConfig>(defaultConfig);
 
+type UserConfigQueryType = {
+  site?: {
+    siteMetadata?: {
+      config?: SiteConfig;
+    };
+  };
+};
+
 type ConfigProviderProps = {
   children: React.ReactNode;
 };
 
 const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
   // Query and provide SiteConfig
-  const resp = useStaticQuery<GatsbyTypes.UserConfigQuery>(
+  const resp = useStaticQuery<UserConfigQueryType>(
     graphql`
       query UserConfig {
         site {

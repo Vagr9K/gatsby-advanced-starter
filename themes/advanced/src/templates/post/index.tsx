@@ -2,14 +2,18 @@ import React from "react";
 
 import SEO from "../../components/SEO";
 
-import { PostFromJsonList, queryIntoPost } from "../../types";
+import {
+  BlogPostBySlugQuery,
+  PostFromJsonList,
+  queryIntoPost,
+} from "../../types";
 
 type PageContext = {
   relatedPosts: PostFromJsonList;
 };
 
 export type PostTemplateProps = {
-  data: GatsbyTypes.BlogPostBySlugQuery;
+  data: BlogPostBySlugQuery;
   pageContext: PageContext;
 };
 
