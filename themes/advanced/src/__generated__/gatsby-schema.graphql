@@ -336,8 +336,6 @@ type Site implements Node {
     locale: String
   ): Date
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
   id: ID!
@@ -783,10 +781,66 @@ type ImageSharpResize {
   originalName: String
 }
 
+type MdxFrontmatter {
+  title: String!
+  cover: File
+  coverAlt: String
+  description: String
+  datePublished(
+    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    formatString: String
+
+    # Returns a string generated with Moment.js' `fromNow` function
+    fromNow: Boolean
+
+    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
+    difference: String
+
+    # Configures the locale Moment.js will use to format the date.
+    locale: String
+  ): Date
+  dateModified(
+    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    formatString: String
+
+    # Returns a string generated with Moment.js' `fromNow` function
+    fromNow: Boolean
+
+    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
+    difference: String
+
+    # Configures the locale Moment.js will use to format the date.
+    locale: String
+  ): Date
+  category: String
+  tags: [String]
+  slug: String
+}
+
+type MdxHeadingMdx {
+  value: String
+  depth: Int
+}
+
+enum HeadingsMdx {
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+}
+
+type MdxWordCount {
+  paragraphs: Int
+  sentences: Int
+  words: Int
+}
+
 type Mdx implements Node {
-  frontmatter: MdxFrontmatter
   rawBody: String!
   fileAbsolutePath: String!
+  frontmatter: MdxFrontmatter
   slug: String
   body: String!
   excerpt(pruneLength: Int = 140, truncate: Boolean = false): String!
@@ -808,10 +862,6 @@ type MdxFields {
   route: String
   pathName: String
   url: String
-}
-
-type Frontmatter {
-  cover: File
 }
 
 type WebsiteData {
@@ -875,62 +925,6 @@ type SiteConfig {
   basePath: String!
 }
 
-type MdxFrontmatter {
-  title: String!
-  cover: File
-  coverAlt: String
-  description: String
-  datePublished(
-    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
-    formatString: String
-
-    # Returns a string generated with Moment.js' `fromNow` function
-    fromNow: Boolean
-
-    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
-    difference: String
-
-    # Configures the locale Moment.js will use to format the date.
-    locale: String
-  ): Date
-  dateModified(
-    # Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
-    formatString: String
-
-    # Returns a string generated with Moment.js' `fromNow` function
-    fromNow: Boolean
-
-    # Returns the difference between this date and the current time. Defaults to "milliseconds" but you can also pass in as the measurement "years", "months", "weeks", "days", "hours", "minutes", and "seconds".
-    difference: String
-
-    # Configures the locale Moment.js will use to format the date.
-    locale: String
-  ): Date
-  category: String
-  tags: [String]
-  slug: String
-}
-
-type MdxHeadingMdx {
-  value: String
-  depth: Int
-}
-
-enum HeadingsMdx {
-  h1
-  h2
-  h3
-  h4
-  h5
-  h6
-}
-
-type MdxWordCount {
-  paragraphs: Int
-  sentences: Int
-  words: Int
-}
-
 type SitePlugin implements Node {
   id: ID!
   parent: Node
@@ -955,9 +949,6 @@ type SitePluginPluginOptions {
   transpileTemplateLiterals: Boolean
   pure: Boolean
   modules: [String]
-  isTSX: Boolean
-  jsxPragma: String
-  allExtensions: Boolean
   outputPath: String
   emitSchema: SitePluginPluginOptionsEmitSchema
   emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocuments
@@ -983,6 +974,7 @@ type SitePluginPluginOptions {
   disableBgImage: Boolean
   extensions: [String]
   gatsbyRemarkPlugins: [SitePluginPluginOptionsGatsbyRemarkPlugins]
+  remarkPlugins: [[SitePluginPluginOptionsRemarkPlugins]]
   lessBabel: Boolean
   mediaTypes: [String]
   root: String
@@ -1010,6 +1002,9 @@ type SitePluginPluginOptions {
   includeRobots: Boolean
   feeds: [SitePluginPluginOptionsFeeds]
   pathCheck: Boolean
+  allExtensions: Boolean
+  isTSX: Boolean
+  jsxPragma: String
 }
 
 type SitePluginPluginOptionsEmitSchema {
@@ -1047,6 +1042,11 @@ type SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPrompt {
   user: String
   host: String
   global: Boolean
+}
+
+type SitePluginPluginOptionsRemarkPlugins {
+  onlyRunWithMarker: Boolean
+  pattyName: String
 }
 
 type SitePluginPluginOptionsFeeds {
@@ -1108,7 +1108,7 @@ type Query {
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection!
   directory(sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, ino: FloatQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Directory
   allDirectory(filter: DirectoryFilterInput, sort: DirectorySortInput, skip: Int, limit: Int): DirectoryConnection!
-  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, port: IntQueryOperatorInput, host: StringQueryOperatorInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
+  site(buildTime: DateQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Site
   allSite(filter: SiteFilterInput, sort: SiteSortInput, skip: Int, limit: Int): SiteConnection!
   siteFunction(functionRoute: StringQueryOperatorInput, pluginName: StringQueryOperatorInput, originalAbsoluteFilePath: StringQueryOperatorInput, originalRelativeFilePath: StringQueryOperatorInput, relativeCompiledFilePath: StringQueryOperatorInput, absoluteCompiledFilePath: StringQueryOperatorInput, matchPath: StringQueryOperatorInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): SiteFunction
   allSiteFunction(filter: SiteFunctionFilterInput, sort: SiteFunctionSortInput, skip: Int, limit: Int): SiteFunctionConnection!
@@ -1116,7 +1116,7 @@ type Query {
   allSitePage(filter: SitePageFilterInput, sort: SitePageSortInput, skip: Int, limit: Int): SitePageConnection!
   imageSharp(fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, gatsbyImageData: JSONQueryOperatorInput, original: ImageSharpOriginalFilterInput, resize: ImageSharpResizeFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): ImageSharp
   allImageSharp(filter: ImageSharpFilterInput, sort: ImageSharpSortInput, skip: Int, limit: Int): ImageSharpConnection!
-  mdx(frontmatter: MdxFrontmatterFilterInput, rawBody: StringQueryOperatorInput, fileAbsolutePath: StringQueryOperatorInput, slug: StringQueryOperatorInput, body: StringQueryOperatorInput, excerpt: StringQueryOperatorInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, mdxAST: JSONQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput, fields: MdxFieldsFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Mdx
+  mdx(rawBody: StringQueryOperatorInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, slug: StringQueryOperatorInput, body: StringQueryOperatorInput, excerpt: StringQueryOperatorInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, mdxAST: JSONQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput, fields: MdxFieldsFilterInput, id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput): Mdx
   allMdx(filter: MdxFilterInput, sort: MdxSortInput, skip: Int, limit: Int): MdxConnection!
   sitePlugin(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, resolve: StringQueryOperatorInput, name: StringQueryOperatorInput, version: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, nodeAPIs: StringQueryOperatorInput, browserAPIs: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, pluginFilepath: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput): SitePlugin
   allSitePlugin(filter: SitePluginFilterInput, sort: SitePluginSortInput, skip: Int, limit: Int): SitePluginConnection!
@@ -1268,9 +1268,9 @@ input MdxFilterListInput {
 }
 
 input MdxFilterInput {
-  frontmatter: MdxFrontmatterFilterInput
   rawBody: StringQueryOperatorInput
   fileAbsolutePath: StringQueryOperatorInput
+  frontmatter: MdxFrontmatterFilterInput
   slug: StringQueryOperatorInput
   body: StringQueryOperatorInput
   excerpt: StringQueryOperatorInput
@@ -1571,6 +1571,8 @@ enum FileFieldsEnum {
   childImageSharp___internal___owner @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childImageSharp___internal___type @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx
+  childrenMdx___rawBody
+  childrenMdx___fileAbsolutePath
   childrenMdx___frontmatter___title
   childrenMdx___frontmatter___cover___sourceInstanceName
   childrenMdx___frontmatter___cover___absolutePath
@@ -1617,8 +1619,6 @@ enum FileFieldsEnum {
   childrenMdx___frontmatter___category
   childrenMdx___frontmatter___tags
   childrenMdx___frontmatter___slug
-  childrenMdx___rawBody
-  childrenMdx___fileAbsolutePath
   childrenMdx___slug
   childrenMdx___body
   childrenMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1674,6 +1674,8 @@ enum FileFieldsEnum {
   childrenMdx___internal___mediaType @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___internal___owner @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
   childrenMdx___internal___type @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
+  childMdx___rawBody
+  childMdx___fileAbsolutePath
   childMdx___frontmatter___title
   childMdx___frontmatter___cover___sourceInstanceName
   childMdx___frontmatter___cover___absolutePath
@@ -1720,8 +1722,6 @@ enum FileFieldsEnum {
   childMdx___frontmatter___category
   childMdx___frontmatter___tags
   childMdx___frontmatter___slug
-  childMdx___rawBody
-  childMdx___fileAbsolutePath
   childMdx___slug
   childMdx___body
   childMdx___excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2232,8 +2232,6 @@ enum SiteFieldsEnum {
   siteMetadata___rssMetadata___description
   siteMetadata___rssMetadata___image_url
   siteMetadata___rssMetadata___copyright
-  port
-  host
   pathPrefix
   polyfill
   id
@@ -2336,8 +2334,6 @@ type SiteGroupConnection {
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   siteMetadata: SiteSiteMetadataFilterInput
-  port: IntQueryOperatorInput
-  host: StringQueryOperatorInput
   pathPrefix: StringQueryOperatorInput
   polyfill: BooleanQueryOperatorInput
   id: StringQueryOperatorInput
@@ -2658,9 +2654,6 @@ input SitePluginPluginOptionsFilterInput {
   transpileTemplateLiterals: BooleanQueryOperatorInput
   pure: BooleanQueryOperatorInput
   modules: StringQueryOperatorInput
-  isTSX: BooleanQueryOperatorInput
-  jsxPragma: StringQueryOperatorInput
-  allExtensions: BooleanQueryOperatorInput
   outputPath: StringQueryOperatorInput
   emitSchema: SitePluginPluginOptionsEmitSchemaFilterInput
   emitPluginDocuments: SitePluginPluginOptionsEmitPluginDocumentsFilterInput
@@ -2686,6 +2679,7 @@ input SitePluginPluginOptionsFilterInput {
   disableBgImage: BooleanQueryOperatorInput
   extensions: StringQueryOperatorInput
   gatsbyRemarkPlugins: SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput
+  remarkPlugins: SitePluginPluginOptionsRemarkPluginsFilterListInput
   lessBabel: BooleanQueryOperatorInput
   mediaTypes: StringQueryOperatorInput
   root: StringQueryOperatorInput
@@ -2713,6 +2707,9 @@ input SitePluginPluginOptionsFilterInput {
   includeRobots: BooleanQueryOperatorInput
   feeds: SitePluginPluginOptionsFeedsFilterListInput
   pathCheck: BooleanQueryOperatorInput
+  allExtensions: BooleanQueryOperatorInput
+  isTSX: BooleanQueryOperatorInput
+  jsxPragma: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsEmitSchemaFilterInput {
@@ -2754,6 +2751,15 @@ input SitePluginPluginOptionsGatsbyRemarkPluginsOptionsPromptFilterInput {
   user: StringQueryOperatorInput
   host: StringQueryOperatorInput
   global: BooleanQueryOperatorInput
+}
+
+input SitePluginPluginOptionsRemarkPluginsFilterListInput {
+  elemMatch: SitePluginPluginOptionsRemarkPluginsFilterInput
+}
+
+input SitePluginPluginOptionsRemarkPluginsFilterInput {
+  onlyRunWithMarker: BooleanQueryOperatorInput
+  pattyName: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsFeedsFilterListInput {
@@ -3007,9 +3013,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___transpileTemplateLiterals
   pluginCreator___pluginOptions___pure
   pluginCreator___pluginOptions___modules
-  pluginCreator___pluginOptions___isTSX
-  pluginCreator___pluginOptions___jsxPragma
-  pluginCreator___pluginOptions___allExtensions
   pluginCreator___pluginOptions___outputPath
   pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
   pluginCreator___pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
@@ -3039,6 +3042,9 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___extensions
   pluginCreator___pluginOptions___gatsbyRemarkPlugins
   pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve
+  pluginCreator___pluginOptions___remarkPlugins
+  pluginCreator___pluginOptions___remarkPlugins___onlyRunWithMarker
+  pluginCreator___pluginOptions___remarkPlugins___pattyName
   pluginCreator___pluginOptions___lessBabel
   pluginCreator___pluginOptions___mediaTypes
   pluginCreator___pluginOptions___root
@@ -3070,6 +3076,9 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___feeds___title
   pluginCreator___pluginOptions___feeds___site_url
   pluginCreator___pluginOptions___pathCheck
+  pluginCreator___pluginOptions___allExtensions
+  pluginCreator___pluginOptions___isTSX
+  pluginCreator___pluginOptions___jsxPragma
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
   pluginCreator___ssrAPIs
@@ -3294,6 +3303,8 @@ type MdxEdge {
 }
 
 enum MdxFieldsEnum {
+  rawBody
+  fileAbsolutePath
   frontmatter___title
   frontmatter___cover___sourceInstanceName
   frontmatter___cover___absolutePath
@@ -3382,8 +3393,6 @@ enum MdxFieldsEnum {
   frontmatter___category
   frontmatter___tags
   frontmatter___slug
-  rawBody
-  fileAbsolutePath
   slug
   body
   excerpt @deprecated(reason: "Sorting on fields that need arguments to resolve is deprecated.")
@@ -3618,9 +3627,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___transpileTemplateLiterals
   pluginOptions___pure
   pluginOptions___modules
-  pluginOptions___isTSX
-  pluginOptions___jsxPragma
-  pluginOptions___allExtensions
   pluginOptions___outputPath
   pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_schema_graphql
   pluginOptions___emitSchema____home_ruben_Git_gatsby_advanced_starter_themes_advanced_src___generated___gatsby_introspection_json
@@ -3657,6 +3663,9 @@ enum SitePluginFieldsEnum {
   pluginOptions___gatsbyRemarkPlugins___options___classPrefix
   pluginOptions___gatsbyRemarkPlugins___options___showLineNumbers
   pluginOptions___gatsbyRemarkPlugins___options___noInlineHighlight
+  pluginOptions___remarkPlugins
+  pluginOptions___remarkPlugins___onlyRunWithMarker
+  pluginOptions___remarkPlugins___pattyName
   pluginOptions___lessBabel
   pluginOptions___mediaTypes
   pluginOptions___root
@@ -3688,6 +3697,9 @@ enum SitePluginFieldsEnum {
   pluginOptions___feeds___title
   pluginOptions___feeds___site_url
   pluginOptions___pathCheck
+  pluginOptions___allExtensions
+  pluginOptions___isTSX
+  pluginOptions___jsxPragma
   nodeAPIs
   browserAPIs
   ssrAPIs

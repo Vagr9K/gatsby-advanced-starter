@@ -79,15 +79,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = (
 // Customize Gatsby schema
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
   ({ actions }) => {
-    // Make sure the cover is a file node
     actions.createTypes(`#graphql
-     type Mdx implements Node {
-       frontmatter: Frontmatter
-     }
-     type Frontmatter {
-       cover: File
-     }
-
      ${configSchema}
    `);
   };
