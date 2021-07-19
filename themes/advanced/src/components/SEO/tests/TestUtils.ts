@@ -85,6 +85,7 @@ export const sampleSeoData: {
     titleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
     name: "Gatsby Advanced Starter", // Website name used for homescreen (PWA) and SEO
     description: "A GatsbyJS starter with Advanced design in mind.", // Website description used for RSS feeds/meta description tag
+    language: "en",
     logoUrl: "/logos/logo-1024.png", // Logo used for SEO and manifest
     fbAppId: "1825356251115265", // FB Application ID for using app insights
     twitterName: "Vagr9K",

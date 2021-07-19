@@ -1,7 +1,8 @@
 /* eslint "no-console": "off" */
 
-import { ITSConfigFn } from "gatsby-plugin-ts-config";
 import urljoin from "url-join";
+
+import { GatsbyConfig } from "gatsby";
 
 // Remark plugins
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
@@ -21,7 +22,7 @@ import {
 
 // Make sure that pathPrefix is not empty
 
-const gatsbyConfig: ITSConfigFn<"config", SiteConfig> = (_, userConfig) => {
+const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
   // Merge user and default configurations
   const config = withDefaults(userConfig);
 

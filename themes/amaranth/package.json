@@ -31,7 +31,6 @@
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-plugin-sitemap": "^4.4.0",
     "gatsby-plugin-styled-components": "^4.8.0",
-    "gatsby-plugin-ts-config": "^1.1.5",
     "gatsby-plugin-twitter": "^3.8.0",
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-plugin-typescript": "^3.8.0",

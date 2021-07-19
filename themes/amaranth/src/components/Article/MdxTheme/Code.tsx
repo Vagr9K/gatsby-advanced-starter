@@ -45,6 +45,12 @@ export const StyledCode = styled.code`
   max-width: 100%;
 `;
 
-export const Code = (props) => <StyledCode {...props} tabIndex={0} />;
+type CodeProps = { className?: string; children?: React.ReactChildren };
+
+export const Code = ({ className, children }: CodeProps): JSX.Element => (
+  <StyledCode className={className} tabIndex={0}>
+    {children}
+  </StyledCode>
+);
 
 export const InlineCode = undefined; // Default style works great

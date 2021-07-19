@@ -1,5 +1,11 @@
 {
-  "exclude": ["node_modules", "**/gatsby-config.js"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "**/.cache/*",
+    "**/public",
+    "**/cypress"
+  ],
   "include": [
     "./src/",
     ".eslintrc.js",
