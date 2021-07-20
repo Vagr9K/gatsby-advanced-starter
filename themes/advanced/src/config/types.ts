@@ -61,5 +61,5 @@ export interface SiteConfig {
   iconList?: Readonly<Array<IconManifest | undefined>>;
   iconCachePath?: string;
 
-  basePath: string;
+  basePath?: string;
 }

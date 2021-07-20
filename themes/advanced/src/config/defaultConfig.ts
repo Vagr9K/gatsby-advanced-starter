@@ -57,7 +57,7 @@ const config: SiteConfig = {
   iconList: undefined, // Icons used for the web manifest. Can be used to override iconPath for a more pixel perfect control.
   iconCachePath: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
 
-  basePath: "", // Base path for mounting pages. Allows for multiple themes to be used in a single website.
+  basePath: undefined, // Base path for mounting pages. Allows for multiple themes to be used in a single website.
 };
 
 export default config;
