@@ -10,7 +10,7 @@ const QueryWrapper = ({
   element,
 }: {
   element: React.ReactChild;
-}): React.ReactNode => (
+}): JSX.Element => (
   <QueryClientProvider client={queryClient}>
     {element}
     <ReactQueryDevtools initialIsOpen={false} />

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`context QueryWrapper renders correctly 1`] = `
+<QueryClientProvider
+  client={
+    QueryClient {
+      "defaultOptions": Object {},
+      "mutationCache": MutationCache {
+        "config": Object {},
+        "listeners": Array [],
+        "mutationId": 0,
+        "mutations": Array [],
+      },
+      "mutationDefaults": Array [],
+      "queryCache": QueryCache {
+        "config": Object {},
+        "listeners": Array [],
+        "queries": Array [],
+        "queriesMap": Object {},
+      },
+      "queryDefaults": Array [],
+    }
+  }
+>
+  Test
+  <ReactQueryDevtools
+    initialIsOpen={false}
+  />
+</QueryClientProvider>
+`;
