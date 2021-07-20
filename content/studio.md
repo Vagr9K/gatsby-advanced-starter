@@ -4,7 +4,7 @@ cover: "5.jpg"
 category: "studio"
 date: "7-11-2021"
 slug: "studio"
-description: The studio stems off as a branch from Mikes first wedding photography company SFCH Photo. That business was sold during my transition into a career in Tech, but the passion for photography has since remained. xo9 takes that skill forward with photography services and other creative solutions. 
+description: xo9 aims to exceed all expectations and provide customers with a truly unique experience. We hope through our professionalism and dedication to detail and quality that we can provide exceptional value and service to all our customers. Check out the studio's website by clicking on the links above. Please feel free to contact us today at studio@xo9.io with any questions or to book a reservation. 
 tags:
     - studio 
     - photography 
