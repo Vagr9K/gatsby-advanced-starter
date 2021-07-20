@@ -5,6 +5,7 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import BackgroundLogo from "../components/BackgroundLogo";
 
 function Landing({ data }) {
   const postEdges = data.allMarkdownRemark.edges;
@@ -13,6 +14,7 @@ function Landing({ data }) {
       <Helmet title={config.siteTitle} />
       <SEO />
       <PostListing postEdges={postEdges} />
+      <BackgroundLogo />
     </Layout>
   );
 }

@@ -20,16 +20,13 @@ function PostListing({ postEdges }) {
     <>
       {
         /* Your post list here. */
-        postList.map((post) => {
-          console.log("this is the post listing path", post.path);
-          return (
-            <div className="landing-post">
-              <Link to={post.path} key={post.title}>
-                <h1 className="landing-title">{post.title}</h1>
-              </Link>
-            </div>
-          );
-        })
+        postList.map((post) => (
+          <div className="landing-post">
+            <Link to={post.path} key={post.title}>
+              <h1 className="landing-title">{post.title}</h1>
+            </Link>
+          </div>
+        ))
       }
     </>
   );

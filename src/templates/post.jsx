@@ -8,16 +8,22 @@ import "./b16-tomorrow-dark.css";
 import "./post.css";
 import Footer from "../components/Footer/Footer";
 
+const protocol = "https://";
+const suffix = ".xo9.io";
+
 export default function PostTemplate({ data, pageContext }) {
   const { slug } = pageContext;
   const postNode = data.markdownRemark;
   // const post = postNode.frontmatter;
-  const { frontmatter: { description } = { description: "" }, post = "" } =
-    postNode;
+  const {
+    frontmatter: { description, title } = { description: "", title: "" },
+    post = "",
+  } = postNode;
   if (post && !post.id) {
     post.id = slug;
   }
 
+  const forwardHref = `${protocol}${title.toLowerCase()}${suffix}`;
   return (
     <Layout>
       <div className="post">
@@ -30,7 +36,9 @@ export default function PostTemplate({ data, pageContext }) {
           <a href="/" className="post-page-home-button">
             <img src="/logo.jpg" alt="Logo" width="200px" height="200px" />
           </a>
-          <h3 className="post-title">{post.title}</h3>
+          <a href={forwardHref} className="post-title-link">
+            <h3 className="post-title">{title}</h3>
+          </a>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <p>{description}</p>

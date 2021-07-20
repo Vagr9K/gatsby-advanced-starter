@@ -7,9 +7,9 @@
   min-height: 100vh;
   width: 100%;
   max-width: 880px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  z-index: 88;
   /* border: 10px solid gold; */
 }
 
@@ -27,9 +27,16 @@ div > p > a {
 
 .post-wrapper {
   color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post-wrapper > p {
   padding: 2rem;
   font-size: 1.1rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  flex: 2 2 auto;
 }

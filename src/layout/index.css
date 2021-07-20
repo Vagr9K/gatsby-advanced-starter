@@ -25,13 +25,16 @@ body {
 }
 
 .layout-container {
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 a {
@@ -59,9 +62,31 @@ a {
 
 .landing-post {
   flex: auto;
+  z-index: 9;
 }
 
 /* @media screen and (max-width: 588px) {
   .layout-container {
   }
 } */
+
+.backgroundWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 588px) {
+  .backgroundLogo {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    /* border: 10px solid gold; */
+  }
+}
+/* backgroundLogo */
