@@ -7,9 +7,13 @@ import { GatsbyNode } from "gatsby";
 
 import urlJoin from "url-join";
 import { BasicFrontmatter } from "./types";
-import { getIndexListing, getTagListing, getCategoryListing } from "./queries";
-import { initFeedMeta, createFeed } from "./feeds";
-import getRelatedPosts from "./posts/getRelatedPosts";
+import {
+  getIndexListing,
+  getTagListing,
+  getCategoryListing,
+} from "./utils/queries";
+import { initFeedMeta, createFeed } from "./utils/feeds";
+import getRelatedPosts from "./utils/getRelatedPosts";
 import {
   schema as configSchema,
   SiteConfig,
