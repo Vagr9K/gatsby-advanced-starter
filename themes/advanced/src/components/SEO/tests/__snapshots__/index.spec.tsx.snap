@@ -4,6 +4,11 @@ exports[`component SEO renders correctly on article pages 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en",
+    }
+  }
 >
   <title>
     Big Test
@@ -128,6 +133,11 @@ exports[`component SEO renders correctly on website pages 1`] = `
 <HelmetWrapper
   defer={true}
   encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en",
+    }
+  }
 >
   <title>
     Gatsby Advanced Starter
