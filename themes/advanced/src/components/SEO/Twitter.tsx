@@ -32,7 +32,7 @@ const TwitterTags = ({
 
   if (imageUrl) addTag("twitter:image", imageUrl);
 
-  if (imageAlt) addTag("twitter:image:alt", imageAlt);
+  addTag("twitter:image:alt", imageAlt);
 
   if (userTwitterName) addTag("twitter:creator", userTwitterName);
 

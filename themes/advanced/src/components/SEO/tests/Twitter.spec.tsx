@@ -54,20 +54,8 @@ describe("seo module TwitterTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
-  it("generates correct tags when missing imageAlt", () => {
-    expect.assertions(1);
-
-    const generatedTags = TwitterTags({
-      seoData: { ...sampleSeoData.seoArticle, imageAlt: undefined },
-      userData: sampleSeoData.user,
-      websiteData: sampleSeoData.website,
-    });
-
-    expect(generatedTags).toMatchSnapshot();
-  });
-
   it("doesn't generate empty tags", () => {
-    expect.assertions(7);
+    expect.assertions(6);
 
     // Test for website pages
     const websiteTags = TwitterTags({
@@ -122,15 +110,6 @@ describe("seo module TwitterTags", () => {
     });
 
     expect(tagListHasEmptyValues(tagsWithoutImageUrl)).toBe(false);
-
-    // Test for missing imageAlt
-    const tagsWithoutImageAlt = TwitterTags({
-      seoData: { ...sampleSeoData.seoArticle, imageAlt: undefined },
-      userData: sampleSeoData.user,
-      websiteData: sampleSeoData.website,
-    });
-
-    expect(tagListHasEmptyValues(tagsWithoutImageAlt)).toBe(false);
   });
 
   it("generates unique keys", () => {

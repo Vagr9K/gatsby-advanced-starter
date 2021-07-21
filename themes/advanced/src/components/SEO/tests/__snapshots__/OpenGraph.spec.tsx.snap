@@ -110,6 +110,67 @@ Array [
 ]
 `;
 
+exports[`seo module OpenGraphTags generates correct tags when missing UserData 1`] = `
+Array [
+  <meta
+    content="Post title"
+    property="og:title"
+  />,
+  <meta
+    content="article"
+    property="og:type"
+  />,
+  <meta
+    content="/posts/url"
+    property="og:url"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />,
+  <meta
+    content="Post cover image alt text."
+    property="og:image:alt"
+  />,
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />,
+  <meta
+    content="Post description."
+    property="og:description"
+  />,
+  <meta
+    content="1825356251115265"
+    property="fb:app_id"
+  />,
+  <meta
+    content="2021-12-16T23:24:00.000Z"
+    property="article:published_time"
+  />,
+  <meta
+    content="2021-12-19T23:24:00.000Z"
+    property="article:modified_time"
+  />,
+  <meta
+    content="http://examples.opengraphprotocol.us/profile.html"
+    property="article:author"
+  />,
+  <meta
+    content="Tech"
+    property="article:section"
+  />,
+  <meta
+    content="Tag1"
+    property="article:tag"
+  />,
+  <meta
+    content="Tag2"
+    property="article:tag"
+  />,
+]
+`;
+
 exports[`seo module OpenGraphTags generates correct tags when missing description 1`] = `
 Array [
   <meta

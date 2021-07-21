@@ -30,7 +30,7 @@ export const generatePostData = (post: Post): PostData => {
     title,
     description: description || excerpt,
     coverImageUrl,
-    coverImageAlt: coverImageAlt || title,
+    coverImageAlt,
     datePublished,
     dateModified,
     category: category || "None",

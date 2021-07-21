@@ -95,35 +95,6 @@ Array [
 ]
 `;
 
-exports[`seo module TwitterTags generates correct tags when missing imageAlt 1`] = `
-Array [
-  <meta
-    content="summary_large_image"
-    name="twitter:card"
-  />,
-  <meta
-    content="Post title"
-    name="twitter:title"
-  />,
-  <meta
-    content="Post description."
-    name="twitter:description"
-  />,
-  <meta
-    content="/logos/logo-1024.png"
-    name="twitter:image"
-  />,
-  <meta
-    content="Vagr9K"
-    name="twitter:creator"
-  />,
-  <meta
-    content="Vagr9K"
-    name="twitter:site"
-  />,
-]
-`;
-
 exports[`seo module TwitterTags generates correct tags when missing imageUrl 1`] = `
 Array [
   <meta

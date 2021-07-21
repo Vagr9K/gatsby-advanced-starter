@@ -5,7 +5,7 @@ export interface SeoData {
   type: "website" | "article";
   title: string;
   imageUrl?: string;
-  imageAlt?: string;
+  imageAlt: string;
   url: string;
   description?: string;
 }

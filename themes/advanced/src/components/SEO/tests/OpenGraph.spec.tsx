@@ -44,6 +44,19 @@ describe("seo module OpenGraphTags", () => {
     expect(generatedTags).toMatchSnapshot();
   });
 
+  it("generates correct tags when missing UserData", () => {
+    expect.assertions(1);
+
+    const generatedTags = OpenGraphTags({
+      seoData: sampleSeoData.seoArticle,
+      websiteData: sampleSeoData.website,
+      userData: undefined,
+      postData: sampleSeoData.post,
+    });
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
   it("doesn't generate tags when missing SEO imageUrl", () => {
     expect.assertions(1);
 
@@ -57,21 +70,8 @@ describe("seo module OpenGraphTags", () => {
     expect(generatedTags).toStrictEqual([]);
   });
 
-  it("doesn't generate tags when missing SEO imageAlt", () => {
-    expect.assertions(1);
-
-    const generatedTags = OpenGraphTags({
-      seoData: { ...sampleSeoData.seoArticle, imageAlt: undefined },
-      websiteData: sampleSeoData.website,
-      userData: sampleSeoData.user,
-      postData: sampleSeoData.post,
-    });
-
-    expect(generatedTags).toStrictEqual([]);
-  });
-
   it("doesn't generate empty tags", () => {
-    expect.assertions(4);
+    expect.assertions(5);
 
     // Test for website pages
     const generatedWebsiteTags = OpenGraphTags({
@@ -115,6 +115,16 @@ describe("seo module OpenGraphTags", () => {
     expect(tagListHasEmptyValues(generatedArticleTagsWithoutDescription)).toBe(
       false
     );
+
+    // Test for missing UserData case
+    const generatedTagsWithoutUserData = OpenGraphTags({
+      seoData: sampleSeoData.seoArticle,
+      websiteData: sampleSeoData.website,
+      userData: undefined,
+      postData: sampleSeoData.post,
+    });
+
+    expect(tagListHasEmptyValues(generatedTagsWithoutUserData)).toBe(false);
   });
 
   it("generates unique keys", () => {

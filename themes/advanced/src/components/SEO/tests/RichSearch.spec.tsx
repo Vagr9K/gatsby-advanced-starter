@@ -60,8 +60,34 @@ describe("seo module RichSearchTags", () => {
     expect(generatedTags).toStrictEqual([]);
   });
 
+  it("generates correct tags when missing UserData", () => {
+    expect.assertions(1);
+
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: undefined,
+      orgData: sampleSeoData.organization,
+    });
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
+  it("generates correct tags when missing OrgData", () => {
+    expect.assertions(1);
+
+    const generatedTags = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: sampleSeoData.user,
+      orgData: undefined,
+    });
+
+    expect(generatedTags).toMatchSnapshot();
+  });
+
   it("doesn't generate empty tags", () => {
-    expect.assertions(2);
+    expect.assertions(4);
 
     // Test for website pages
     const generatedWebsiteTags = RichSearchTags({
@@ -81,6 +107,28 @@ describe("seo module RichSearchTags", () => {
     });
 
     expect(tagListHasEmptyValues(generatedArticleTags)).toBe(false);
+
+    // Test for missing UserData
+    const generatedArticleTagsWithoutUserData = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: undefined,
+      orgData: sampleSeoData.organization,
+    });
+
+    expect(tagListHasEmptyValues(generatedArticleTagsWithoutUserData)).toBe(
+      false
+    );
+
+    // Test for missing OrgData
+    const generatedTagsWithoutOrgData = RichSearchTags({
+      seoData: sampleSeoData.seoArticle,
+      postData: sampleSeoData.post,
+      userData: sampleSeoData.user,
+      orgData: undefined,
+    });
+
+    expect(tagListHasEmptyValues(generatedTagsWithoutOrgData)).toBe(false);
   });
 });
 
