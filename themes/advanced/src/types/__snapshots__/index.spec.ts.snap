@@ -1,5 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jsonPostIntoPost correctly converts JSON based post metadata into a Post 1`] = `
+Object {
+  "category": "moar",
+  "coverImageAlt": "CoverImageAlt",
+  "coverImageUrl": "5.jpg",
+  "coverImg": undefined,
+  "dateModified": 2018-03-01T00:00:00.000Z,
+  "datePublished": 2018-03-01T00:00:00.000Z,
+  "description": "Decsription",
+  "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
+  "pathName": "/blog/big-sample-test",
+  "relatedPosts": undefined,
+  "route": "/blog/big-sample-test",
+  "slug": "/big-sample-test",
+  "tags": Array [
+    "test",
+    "huge",
+  ],
+  "timeToRead": 3,
+  "title": "Big Test",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test",
+}
+`;
+
+exports[`jsonPostIntoPost correctly converts JSON based post metadata into a Post 2`] = `
+Object {
+  "category": "moar",
+  "coverImageAlt": "CoverImageAlt",
+  "coverImageUrl": "5.jpg",
+  "coverImg": undefined,
+  "dateModified": 2018-03-01T00:00:00.000Z,
+  "datePublished": 2018-03-01T00:00:00.000Z,
+  "description": "Decsription",
+  "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
+  "pathName": "/blog/big-sample-test",
+  "relatedPosts": Array [
+    Object {
+      "category": "moar",
+      "coverImageAlt": "CoverImageAlt",
+      "coverImageUrl": "5.jpg",
+      "coverImg": undefined,
+      "dateModified": 2018-03-01T00:00:00.000Z,
+      "datePublished": 2018-03-01T00:00:00.000Z,
+      "description": "Decsription",
+      "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
+      "pathName": "/blog/big-sample-test",
+      "relatedPosts": undefined,
+      "route": "/blog/big-sample-test",
+      "slug": "/big-sample-test",
+      "tags": Array [
+        "test",
+        "huge",
+      ],
+      "timeToRead": 3,
+      "title": "Big Test",
+      "url": "https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test",
+    },
+  ],
+  "route": "/blog/big-sample-test",
+  "slug": "/big-sample-test",
+  "tags": Array [
+    "test",
+    "huge",
+  ],
+  "timeToRead": 3,
+  "title": "Big Test",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test",
+}
+`;
+
 exports[`mdxNodeIntoPost generates correct post data 1`] = `
 Object {
   "body": "var _excluded = [\\"components\\"];
