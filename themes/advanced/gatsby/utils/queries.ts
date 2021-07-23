@@ -26,12 +26,15 @@ type QueryResult = {
 const processQueryResult = (result: QueryResult): PostList => {
   // Exit on error
   if (result.errors) {
+    console.error("Error while processing query results:");
     console.error(result.errors);
-    throw result.errors;
+    throw Error(result.errors);
   }
 
   if (!result.data) {
-    console.warn("No data returned by the query. Returning empty PostList.");
+    console.warn(
+      "processQueryResult: No data returned by the query. Returning empty PostList."
+    );
     return [];
   }
 
