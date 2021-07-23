@@ -46,7 +46,6 @@ export const getFeedRoute = (
 // Cleans up and sets up the feed meta folder
 export const initFeedMeta = (): void => {
   if (!fs.existsSync(FEED_META_DIR)) {
-    console.log(FEED_META_DIR, "no exists");
     fs.mkdirSync(FEED_META_DIR);
   } else {
     fs.rmdirSync(FEED_META_DIR, { recursive: true });
