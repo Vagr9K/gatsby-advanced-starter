@@ -14,12 +14,12 @@ const POSTS_PER_PAGE = constants.postsPerFeedPage;
 const FEED_COMPONENT = require.resolve("../../src/templates/feed/index.tsx");
 
 // Save feed page metadata in the public folder for later retrieval by the client side code
-const saveFeedPageMeta = async (
+export const saveFeedPageMeta = async (
   feedType: string,
   feedPageIndex: number,
   pageMeta: FeedPageMeta,
   feedId?: string
-) => {
+): Promise<void> => {
   const filePath = path.join(
     FEED_META_DIR,
     `${feedType}${feedId ? `-${feedId}` : ""}-${feedPageIndex}.json`
@@ -30,14 +30,58 @@ const saveFeedPageMeta = async (
   await fs.promises.writeFile(filePath, stringifiedListing);
 };
 
+// Calculate feed path
+export const getFeedRoute = (
+  config: SiteConfig,
+  feedType: string,
+  feedId?: string
+): string => {
+  const slug =
+    feedType === "index" ? "/" : `/${feedType}${feedId ? `/${feedId}` : ""}`;
+
+  // Add basePath
+  return withBasePath(config, slug);
+};
+
 // Cleans up and sets up the feed meta folder
 export const initFeedMeta = (): void => {
   if (!fs.existsSync(FEED_META_DIR)) {
+    console.log(FEED_META_DIR, "no exists");
     fs.mkdirSync(FEED_META_DIR);
   } else {
-    fs.rmSync(FEED_META_DIR, { recursive: true });
+    fs.rmdirSync(FEED_META_DIR, { recursive: true });
     fs.mkdirSync(FEED_META_DIR);
   }
+};
+
+// Calculate the metadata for a feed page
+export const createPageMeta = (
+  pageIndex: number,
+  pageCount: number,
+  feedPosts: PostList
+): FeedPageMeta => {
+  const limit = POSTS_PER_PAGE;
+  const skip = pageIndex * POSTS_PER_PAGE;
+
+  const feedPagePosts = feedPosts.slice(skip, skip + limit);
+
+  // Compute and save a feed page metadata file
+  const nextPage = pageIndex + 1 < pageCount ? pageIndex + 1 : undefined;
+  const prevPage = pageIndex > 0 ? pageIndex - 1 : undefined;
+
+  // Calculate the amount of pages in the next batch
+  const postsLeft = feedPosts.length - skip - limit;
+  const nextCount = postsLeft > 0 ? Math.min(postsLeft, limit) : undefined;
+  const prevCount = typeof prevPage === "number" ? limit : undefined;
+
+  return {
+    current: pageIndex,
+    next: nextPage,
+    nextCount,
+    prev: prevPage,
+    prevCount,
+    posts: feedPagePosts,
+  };
 };
 
 // Creates a paginated feed with Gatsby pages and feed metadata
@@ -53,54 +97,17 @@ export const createFeed = async (
 
   // For each page
   const tasks = [...Array(pageCount).keys()].map(async (pageIndex) => {
-    const limit = POSTS_PER_PAGE;
-    const skip = pageIndex * POSTS_PER_PAGE;
-
-    const feedPagePosts = feedPosts.slice(skip, skip + limit);
-
-    // Compute and save a feed page metadata file
-    const nextPage = pageIndex + 1 < pageCount ? pageIndex + 1 : undefined;
-    const prevPage = pageIndex > 0 ? pageIndex - 1 : undefined;
-
-    // Calculate the amount of pages in the next batch
-    const nextCount = nextPage
-      ? Math.min(pageCount * POSTS_PER_PAGE - skip + 1, limit)
-      : undefined;
-    const prevCount = prevPage ? limit : undefined;
-
-    const pageMeta: FeedPageMeta = {
-      current: pageIndex,
-      next: nextPage,
-      nextCount,
-      prev: prevPage,
-      prevCount,
-      posts: feedPagePosts,
-    };
-
+    const pageMeta = createPageMeta(pageIndex, pageCount, feedPosts);
     await saveFeedPageMeta(feedType, pageIndex, pageMeta, feedId);
 
-    // Index page resides on `/${PageNum}`
-    // Other feeds have the `${feedName}/${feedId}/${PageNum}` format
-    // Except for the first page which is on `${feedName}/${feedId}/` and "/" respectively
-    const slugPrefix =
-      feedType === "index" ? "/" : `/${feedType}${feedId ? `/${feedId}` : ""}`;
+    // Create an index page that resides on `${feedId}/`
+    if (pageIndex === 0) {
+      const route = getFeedRoute(config, feedType, feedId);
 
-    const slug =
-      pageIndex === 0
-        ? slugPrefix
-        : `${slugPrefix !== "/" ? `${slugPrefix}` : ""}/${pageIndex + 1}/`;
-
-    // Add basePath if needed
-    const route = withBasePath(config, slug);
-
-    // Create a Gatsby page for the main feed
-    if (pageIndex === 0)
       actions.createPage({
         path: route,
         component: FEED_COMPONENT,
         context: {
-          limit,
-          skip,
           pageCount,
           pageIndex,
           feedType,
@@ -108,6 +115,7 @@ export const createFeed = async (
           feedPageMeta: pageMeta,
         },
       });
+    }
   });
 
   await Promise.all(tasks);
