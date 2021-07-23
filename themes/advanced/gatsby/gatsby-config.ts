@@ -1,5 +1,3 @@
-/* eslint "no-console": "off" */
-
 import urljoin from "url-join";
 
 import { GatsbyConfig } from "gatsby";
@@ -10,15 +8,11 @@ import remarkExternalLinks from "remark-external-links";
 import unwrapImages from "remark-unwrap-images";
 
 // Config
-import path from "path/posix";
+import path from "path";
 import { SiteConfig, withBasePath, withDefaults } from "../src/config";
 
-// Types
-import {
-  GatsbyPluginFeedData,
-  GatsbyFeedRssMetadata,
-  GatsbyFeedItem,
-} from "./types";
+// RSS Utils
+import * as RssUtils from "./utils/rss";
 
 // Make sure that pathPrefix is not empty
 
@@ -203,19 +197,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
       {
         resolve: "gatsby-plugin-feed",
         options: {
-          setup(ref: GatsbyPluginFeedData): GatsbyFeedRssMetadata {
-            const ret = ref.query?.site?.siteMetadata?.rssMetadata;
-
-            if (!ret) {
-              throw Error(
-                "gatsby-plugin-feed rssMetadata is missing. Aborting feed setup."
-              );
-            }
-
-            ret.generator = "GatsbyJS Advanced Starter";
-
-            return ret;
-          },
+          setup: RssUtils.setup,
           query: `
         {
           site {
@@ -234,46 +216,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
       `,
           feeds: [
             {
-              serialize(
-                data: GatsbyPluginFeedData
-              ): Array<GatsbyFeedItem | undefined> | undefined {
-                const {
-                  query: { allMdx },
-                } = data;
-
-                const edges = allMdx?.edges;
-
-                if (!edges) {
-                  console.warn(`No Mdx edges available for feed generation.`);
-                  return undefined;
-                }
-
-                const res = edges.map((edge): GatsbyFeedItem | undefined => {
-                  const { node } = edge;
-
-                  if (!node) return undefined;
-
-                  const slug = node.fields?.slug;
-                  const url = slug
-                    ? config.website.url + slug
-                    : config.website.url;
-
-                  return {
-                    categories: node?.frontmatter?.tags,
-                    date: node?.frontmatter?.datePublished,
-                    title: node?.frontmatter?.title,
-                    description: node.excerpt,
-                    url,
-                    guid: url,
-                    custom_elements: [
-                      { "content:encoded": node.html },
-                      { author: config.user?.email },
-                    ],
-                  };
-                });
-
-                return res;
-              },
+              serialize: RssUtils.getSerialize(config),
               query: `
             {
               allMdx(
