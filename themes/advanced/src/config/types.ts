@@ -58,8 +58,8 @@ export interface SiteConfig {
   embededVideoWidth: number;
 
   iconPath?: string;
-  iconList?: Readonly<Array<IconManifest | undefined>>;
-  iconCachePath?: string;
+  iconList: Readonly<Array<IconManifest>>;
+  iconCachePaths?: string[];
 
   basePath?: string;
 }

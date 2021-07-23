@@ -46,6 +46,7 @@ const config: SiteConfig = {
 
   // Gatsby Configuration
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  iconList: [], // List of icon names to be used in the manifest.
 
   contentDir: "./content", // Directory for MDX posts
   assetDir: "./static", // Asset directory

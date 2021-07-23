@@ -31,7 +31,7 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
               embededVideoWidth
               basePath
               iconPath
-              iconCachePath
+              iconCachePaths
               iconList {
                 src
                 sizes

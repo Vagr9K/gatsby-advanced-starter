@@ -179,16 +179,14 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
           display: "minimal-ui",
           cache_busting_mode: "none",
           icon: config.iconPath,
-          icons: config.iconPath ? undefined : config.iconList || [],
+          icons: config.iconList,
         },
       },
       {
         resolve: "gatsby-plugin-offline",
         options: {
           workboxConfig: {
-            globPatterns: config.iconCachePath
-              ? [config.iconCachePath]
-              : undefined,
+            globPatterns: config.iconCachePaths,
           },
         },
       },

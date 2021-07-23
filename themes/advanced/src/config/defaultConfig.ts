@@ -54,8 +54,8 @@ const config: SiteConfig = {
   embededVideoWidth: 920, // MDX embeded video width in pixels
 
   iconPath: undefined, // Icon used for manifest icon creation.
-  iconList: undefined, // Icons used for the web manifest. Can be used to override iconPath for a more pixel perfect control.
-  iconCachePath: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
+  iconList: [], // Icons used for the web manifest. Can be used to override iconPath for a more pixel perfect control.
+  iconCachePaths: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
 
   basePath: undefined, // Base path for mounting pages. Allows for multiple themes to be used in a single website.
 };

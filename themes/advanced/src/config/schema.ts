@@ -60,10 +60,10 @@ export const schema = `#graphql
     embededVideoWidth: Int!
 
     iconPath: String
-    iconList: [IconManifest]
-    iconCachePath: String
+    iconList: [IconManifest]!
+    iconCachePaths: [String]
 
-    basePath: String!
+    basePath: String
   }
 
   type SiteSiteMetadata {
