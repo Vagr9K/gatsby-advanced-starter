@@ -41,12 +41,10 @@ const getRankedMatches = (targetPost: Post, listing: PostList): PostList => {
       });
     }
 
-    // Make sure it's not the same post
-    if (post.slug !== targetPost.slug)
-      rankList.push({
-        rank,
-        post,
-      });
+    rankList.push({
+      rank,
+      post,
+    });
   });
 
   // Sort posts by rank
@@ -62,15 +60,23 @@ const getRankedMatches = (targetPost: Post, listing: PostList): PostList => {
 };
 
 // Get 2 related posts to a target post
-const getRelatedPosts = (post: Post, listing: PostList): PostList => {
-  const relatedPosts = [];
+const getRelatedPosts = (targetPost: Post, listing: PostList): PostList => {
+  // Exclude the target post from the listing
+  const filteredListing = listing.filter(
+    (post) => post.slug !== targetPost.slug
+  );
 
-  if (post.category) {
+  const relatedPosts: PostList = [];
+
+  if (targetPost.category) {
     // Filter by category
-    const categoryPosts = getCategoryPosts(post.category, listing);
+    const categoryPosts = getCategoryPosts(
+      targetPost.category,
+      filteredListing
+    );
 
     // Rank the matches by tags
-    const rankedMatches = getRankedMatches(post, categoryPosts);
+    const rankedMatches = getRankedMatches(targetPost, categoryPosts);
 
     // Select top 2 posts
     relatedPosts.push(...rankedMatches.slice(0, 2));
@@ -81,17 +87,25 @@ const getRelatedPosts = (post: Post, listing: PostList): PostList => {
 
   // If we have only one category match, add one more tag match
   if (relatedPosts.length === 1) {
-    const firstRankedTagMatch = getRankedMatches(post, listing)[0];
+    // Get the ranked tag matches
+    const rankedTagMatches = getRankedMatches(targetPost, filteredListing);
+    // Filter out existing related post
+    const filteredTagMatches = rankedTagMatches.filter(
+      (tagMatch) => tagMatch.slug !== relatedPosts[0]?.slug
+    );
 
-    if (firstRankedTagMatch) {
-      relatedPosts.push(firstRankedTagMatch);
+    // And return the highest ranked match
+    const highestRankedMatch = filteredTagMatches[0];
+
+    if (highestRankedMatch) {
+      relatedPosts.push(highestRankedMatch);
       return relatedPosts;
     }
   }
 
   // If we don't have any category matches,
   // perform a tag ranking on the whole listing and return the top 2 posts
-  return getRankedMatches(post, listing).slice(0, 2);
+  return getRankedMatches(targetPost, filteredListing).slice(0, 2);
 };
 
 export default getRelatedPosts;
