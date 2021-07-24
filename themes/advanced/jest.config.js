@@ -5,6 +5,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     ...baseConfig.coveragePathIgnorePatterns,
     "src/components/SEO/tests",
+    "src/templates/post/query.ts",
     "src/icons",
   ],
 };

@@ -17,6 +17,7 @@ module.exports = {
     "\\.cache",
     "<rootDir>.*/public",
     "\\lib",
+    "<rootDir>/cypress/",
   ],
   transformIgnorePatterns: ["node_modules/(?!(gatsby|gatsby-plugin-mdx)/)"],
   globals: {
@@ -29,7 +30,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
-    ".gatsby/**/*.{js,jsx,ts,tsx}",
+    "gatsby/**/*.{js,jsx,ts,tsx}",
   ],
   coveragePathIgnorePatterns: ["src/netlifycms/index.js", "src/__generated__/"],
 };

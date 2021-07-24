@@ -1,6 +1,7 @@
 const React = require("react");
 
 const gatsby = jest.requireActual("gatsby");
+
 module.exports = {
   ...gatsby,
   graphql: jest.fn(),
@@ -16,11 +17,13 @@ module.exports = {
       replace,
       to,
       ...rest
-    }) =>
-      React.createElement("a", {
+    }) => {
+      console.log("MOCKED LINK");
+      return React.createElement("a", {
         ...rest,
         href: to,
-      })
+      });
+    }
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
