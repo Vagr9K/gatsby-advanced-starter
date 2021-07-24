@@ -1,6 +1,5 @@
 /* eslint "no-console": "off" */
 
-import path from "path";
 import { kebabCase } from "lodash";
 
 import { GatsbyNode } from "gatsby";
@@ -24,10 +23,7 @@ import {
 const POST_PAGE_COMPONENT = require.resolve("../src/templates/post/query.ts");
 
 // Generates a slug from provided frontmatter/file path
-const generateSlug = (
-  parsedFilePath: path.ParsedPath,
-  frontmatter?: BasicFrontmatter
-): string => {
+const generateSlug = (frontmatter?: BasicFrontmatter): string | undefined => {
   if (frontmatter) {
     const { slug, title } = frontmatter;
     if (slug) return `/${kebabCase(slug)}`;
@@ -35,33 +31,32 @@ const generateSlug = (
     if (title) return `/${kebabCase(title)}`;
   }
 
-  if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
-    return `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-  }
-  if (parsedFilePath.dir === "") {
-    return `/${parsedFilePath.name}/`;
-  }
-  return `/${parsedFilePath.dir}/`;
+  console.error("Missing post slug and title. Unable to generate a slug.");
+
+  return undefined;
 };
 
 // Gets invoked on GraphQl node creation
 export const onCreateNode: GatsbyNode["onCreateNode"] = (
-  { node, actions, getNode },
+  { node, actions },
   userConfig
 ) => {
   const config = withDefaults(userConfig as unknown as SiteConfig);
 
   // Filter by Mdx nodes
   if (node.internal.type === "Mdx" && node.parent) {
-    // Find parent filenode created by gatsby-source-filesystem
-    const fileNode = getNode(node.parent);
-
-    // Parse the path and the frontmatter
-    const parsedFilePath = path.parse(fileNode.relativePath as string);
+    // Parse the frontmatter
     const frontmatter = node.frontmatter as BasicFrontmatter;
 
     // Generate a slug
-    const slug = generateSlug(parsedFilePath, frontmatter);
+    const slug = generateSlug(frontmatter);
+
+    if (!slug) {
+      console.error(
+        "onCreateNode: Failed to generate a slug for an MDX post. Aborting."
+      );
+      return;
+    }
 
     // Route is the pathName without the pathPrefix, used for creating pages
     const route = withBasePath(config, slug);
