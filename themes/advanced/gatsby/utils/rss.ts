@@ -20,14 +20,12 @@ export const getSerialize =
     const edges = allMdx?.edges;
 
     if (!edges) {
-      console.warn(`No Mdx edges available for feed generation.`);
+      console.warn("No Mdx edges available for feed generation.");
       return undefined;
     }
 
     const res = edges.map((edge): GatsbyFeedItem | undefined => {
       const { node } = edge;
-
-      if (!node) return undefined;
 
       const slug = node.fields?.slug;
       const url = slug ? config.website.url + slug : config.website.url;
