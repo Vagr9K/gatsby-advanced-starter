@@ -1,7 +1,7 @@
 import memfs from "memfs";
-import { Actions } from "gatsby";
 
 import { mocked } from "ts-jest/utils";
+import { GatsbyActionsMock } from "./Utils";
 
 import {
   createFeed,
@@ -23,7 +23,7 @@ const listingFixture = [...listingFixtureBase, ...listingFixtureBase];
 const FEED_META_DIR = `public/feed_meta/`;
 
 // Redirect all fs API calls to a virtual FS for testing
-jest.mock("fs", () => memfs.fs);
+jest.mock("fs", () => ({ ...memfs.fs, rmSync: memfs.fs.rmdirSync }));
 
 describe("saveFeedPageMeta", () => {
   beforeEach(() => {
@@ -181,34 +181,9 @@ describe("createFeed", () => {
       [FEED_META_DIR]: null,
     });
 
-    const actionMock = {
-      createPage: jest.fn(),
-      deletePage: jest.fn(),
-      deleteNode: jest.fn(),
-      createNode: jest.fn(),
-      touchNode: jest.fn(),
-      createNodeField: jest.fn(),
-      createParentChildLink: jest.fn(),
-      setWebpackConfig: jest.fn(),
-      replaceWebpackConfig: jest.fn(),
-      setBabelOptions: jest.fn(),
-      setBabelPlugin: jest.fn(),
-      setBabelPreset: jest.fn(),
-      createJob: jest.fn(),
-      createJobV2: jest.fn(),
-      setJob: jest.fn(),
-      endJob: jest.fn(),
-      setPluginStatus: jest.fn(),
-      createRedirect: jest.fn(),
-      addThirdPartySchema: jest.fn(),
-      createTypes: jest.fn(),
-      createFieldExtension: jest.fn(),
-      printTypeDefinitions: jest.fn(),
-    } as Actions;
+    const MockedGatsbyActions = mocked(GatsbyActionsMock, true);
 
-    const mockedActions = mocked(actionMock, true);
-
-    await createFeed(configFixture, actionMock, listingFixture, "index");
+    await createFeed(configFixture, GatsbyActionsMock, listingFixture, "index");
 
     expect(
       memfs.fs.readFileSync(`${FEED_META_DIR}index-0.json`, {
@@ -235,9 +210,9 @@ describe("createFeed", () => {
     ).toMatchSnapshot();
 
     // eslint-disable-next-line @typescript-eslint/unbound-method
-    expect(mockedActions.createPage).toHaveBeenCalledTimes(1);
+    expect(MockedGatsbyActions.createPage).toHaveBeenCalledTimes(1);
     // eslint-disable-next-line @typescript-eslint/unbound-method
-    expect(mockedActions.createPage).toHaveBeenCalledWith(
+    expect(MockedGatsbyActions.createPage).toHaveBeenCalledWith(
       expect.objectContaining({
         path: "/",
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -251,6 +226,6 @@ describe("createFeed", () => {
         }),
       })
     );
-    expect(mockedActions.createPage.mock.calls[0]).toMatchSnapshot();
+    expect(MockedGatsbyActions.createPage.mock.calls[0]).toMatchSnapshot();
   });
 });
