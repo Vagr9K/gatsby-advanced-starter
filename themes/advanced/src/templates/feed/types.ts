@@ -4,6 +4,6 @@ export type PageContext = {
   pageCount: number;
   pageIndex: number;
   feedType: string;
-  feedId?: string;
+  feedId: string;
   feedPageMeta: FeedPageMetaFromJson;
 };
