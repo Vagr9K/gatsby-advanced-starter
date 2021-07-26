@@ -31,6 +31,7 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "jest/no-hooks": "off",
   },
   overrides: [
     {
@@ -85,6 +86,28 @@ module.exports = {
         "graphql",
         "prettier",
       ],
+    },
+    {
+      files: [
+        "**/test/**",
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.spec.js",
+        "*.spec.jsx",
+      ],
+      plugins: ["jest"],
+      rules: {
+        "@typescript-eslint/unbound-method": "off",
+        "jest/unbound-method": "error",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            devDependencies: true,
+            optionalDependencies: false,
+            peerDependencies: false,
+          },
+        ],
+      },
     },
   ],
 };

@@ -23,6 +23,7 @@ const listingFixture = [...listingFixtureBase, ...listingFixtureBase];
 const FEED_META_DIR = `public/feed_meta/`;
 
 // Redirect all fs API calls to a virtual FS for testing
+// eslint-disable-next-line jest/unbound-method
 jest.mock("fs", () => ({ ...memfs.fs, rmSync: memfs.fs.rmdirSync }));
 
 describe("saveFeedPageMeta", () => {

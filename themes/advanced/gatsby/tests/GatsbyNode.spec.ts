@@ -133,6 +133,7 @@ describe("onCreateNode", () => {
       node: testNode,
     } as unknown as NodeArgs;
 
+    // eslint-disable-next-line jest/no-if
     if (!onCreateNode) throw Error("onCreateNode is undefined.");
 
     await onCreateNode(nodeArgs, {} as PluginOptions, () => {});
@@ -164,6 +165,7 @@ describe("onCreateNode", () => {
       node: testNode,
     } as unknown as NodeArgs;
 
+    // eslint-disable-next-line jest/no-if
     if (!onCreateNode) throw Error("onCreateNode is undefined.");
 
     await onCreateNode(nodeArgs, {} as PluginOptions, () => {});
@@ -201,6 +203,7 @@ describe("onCreateNode", () => {
       node: testNode,
     } as unknown as NodeArgs;
 
+    // eslint-disable-next-line jest/no-if
     if (!onCreateNode) throw Error("onCreateNode is undefined.");
 
     mockedGatsbyActions.createNodeField.mockClear();
@@ -215,6 +218,7 @@ describe("createSchemaCustomization", () => {
   it("sets GraphQL schema types", async () => {
     expect.assertions(1);
 
+    // eslint-disable-next-line jest/no-if
     if (!createSchemaCustomization)
       throw Error("createSchemaCustomization is undefined.");
 
@@ -236,6 +240,7 @@ describe("createPages", () => {
   it("creates feed and post pages", async () => {
     expect.assertions(5);
 
+    // eslint-disable-next-line jest/no-if
     if (!createPages) throw Error("createPages is undefined.");
 
     await createPages(

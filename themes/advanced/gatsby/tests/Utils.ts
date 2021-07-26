@@ -1,5 +1,6 @@
 import { Actions } from "gatsby";
 
+// eslint-disable-next-line import/prefer-default-export
 export const GatsbyActionsMock = {
   createPage: jest.fn(),
   deletePage: jest.fn(),

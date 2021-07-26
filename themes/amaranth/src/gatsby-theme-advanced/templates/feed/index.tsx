@@ -22,19 +22,21 @@ const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
 
   // Override the title for non-index feeds
   const getTitleOverride = () => {
-    if (pageContext.feedType === "tag")
-      return (
-        <Helmet
-          title={`Posts tagged as "${pageContext.feedId}" | ${config.website.title}`}
-        />
-      );
+    if (pageContext.feedId) {
+      if (pageContext.feedType === "tag")
+        return (
+          <Helmet
+            title={`Posts tagged as "${pageContext.feedId}" | ${config.website.title}`}
+          />
+        );
 
-    if (pageContext.feedType === "category")
-      return (
-        <Helmet
-          title={`Posts in category "${pageContext.feedId}" | ${config.website.title}`}
-        />
-      );
+      if (pageContext.feedType === "category")
+        return (
+          <Helmet
+            title={`Posts in category "${pageContext.feedId}" | ${config.website.title}`}
+          />
+        );
+    }
 
     return null;
   };

@@ -17,13 +17,11 @@ module.exports = {
       replace,
       to,
       ...rest
-    }) => {
-      console.log("MOCKED LINK");
-      return React.createElement("a", {
+    }) =>
+      React.createElement("a", {
         ...rest,
         href: to,
-      });
-    }
+      })
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
