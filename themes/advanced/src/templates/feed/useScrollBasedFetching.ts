@@ -15,12 +15,6 @@ const useScrollBasedFetching = (
     }
   };
 
-  const loadPrev = async () => {
-    if (feedQuery.hasPreviousPage && !feedQuery.isFetchingPreviousPage) {
-      await feedQuery.fetchNextPage();
-    }
-  };
-
   const checkScrollState = async () => {
     if (feedElementRef.current) {
       // If we're on the bottom edge of the feed element, load next page
@@ -29,11 +23,6 @@ const useScrollBasedFetching = (
         window.innerHeight
       ) {
         await loadNext();
-      }
-
-      // If we're on the top edge of the feed element, load previous page
-      if (feedElementRef.current.getBoundingClientRect().top > 0) {
-        await loadPrev();
       }
     }
   };

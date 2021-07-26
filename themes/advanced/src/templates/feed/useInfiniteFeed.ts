@@ -25,7 +25,7 @@ const getFetchFunc =
   async ({ pageParam = 0 }): Promise<FeedPageMetaFromJson> => {
     const response = await fetch(`${baseUrl}-${pageParam}.json`);
     if (!response.ok) {
-      throw new Error("Network response was not ok.");
+      throw new Error("Network response for fetching feed page was not ok.");
     }
     return response.json() as Promise<FeedPageMetaFromJson>;
   };
@@ -56,11 +56,10 @@ const useInfiniteFeed = (
     getFetchFunc(baseUrl),
     {
       getNextPageParam: (lastPage) => lastPage.next,
-      getPreviousPageParam: (firstPage) => firstPage.prev,
       // Set the initial page data supplied by the page context
       initialData: {
         pages: [pageContext.feedPageMeta],
-        pageParams: [undefined],
+        pageParams: [pageContext.pageIndex],
       },
     }
   );
@@ -81,18 +80,11 @@ const useInfiniteFeed = (
       list.push(...createPostPlaceholders("next", lastPage?.nextCount));
     }
 
-    // When loading the previous page, show placeholder posts
-    if (feedQuery.isFetchingPreviousPage) {
-      const firstPage = feedQuery.data?.pages[0];
-      list.unshift(...createPostPlaceholders("prev", firstPage?.prevCount));
-    }
-
     return list;
   }, [
     feedQuery.data,
     pageContext.feedPageMeta.posts,
     feedQuery.isFetchingNextPage,
-    feedQuery.isFetchingPreviousPage,
   ]);
 
   return {
