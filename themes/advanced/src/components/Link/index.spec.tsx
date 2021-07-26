@@ -1,12 +1,13 @@
 import React from "react";
-import { render, screen, cleanup } from "@testing-library/react";
+import { screen, cleanup } from "@testing-library/react";
 import cloneDeep from "clone-deep";
 import { mocked } from "ts-jest/utils";
 
 import * as gatsby from "gatsby";
 
 import Link from "./index";
-import ConfigContext from "../../context/ConfigContext";
+
+import renderWithContext from "../../../test/render";
 import { defaultConfig, SiteConfig } from "../../config";
 
 const testConfig = cloneDeep<SiteConfig>(defaultConfig);
@@ -24,16 +25,6 @@ jest.mock("gatsby", () => {
 });
 
 const mockedGatsby = mocked(gatsby, true);
-
-const renderWithContext = (
-  linkElement: React.ReactNode,
-  context = testConfig
-) =>
-  render(
-    <ConfigContext.Provider value={context}>
-      {linkElement}
-    </ConfigContext.Provider>
-  );
 
 describe("component Link", () => {
   // eslint-disable-next-line jest/no-hooks
