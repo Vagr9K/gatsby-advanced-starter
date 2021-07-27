@@ -7,6 +7,34 @@ exports[`template Post renders properly 1`] = `
       {
   "title": "Big Test",
   "description": "Decsription",
+  "coverImg": {
+    "layout": "constrained",
+    "placeholder": {
+      "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+    },
+    "backgroundColor": "transparent",
+    "images": {
+      "fallback": {
+        "src": "/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg",
+        "srcSet": "/static/be66e1f465117be1f96d414f8870896a/74341/big_test.jpg 625w,\\n/static/be66e1f465117be1f96d414f8870896a/c98fe/big_test.jpg 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg 2500w",
+        "sizes": "(min-width: 2500px) 2500px, 100vw"
+      },
+      "sources": [
+        {
+          "srcSet": "/static/be66e1f465117be1f96d414f8870896a/44552/big_test.avif 625w,\\n/static/be66e1f465117be1f96d414f8870896a/fdd2c/big_test.avif 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/d8633/big_test.avif 2500w",
+          "type": "image/avif",
+          "sizes": "(min-width: 2500px) 2500px, 100vw"
+        },
+        {
+          "srcSet": "/static/be66e1f465117be1f96d414f8870896a/a07b5/big_test.webp 625w,\\n/static/be66e1f465117be1f96d414f8870896a/f1147/big_test.webp 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/0676d/big_test.webp 2500w",
+          "type": "image/webp",
+          "sizes": "(min-width: 2500px) 2500px, 100vw"
+        }
+      ]
+    },
+    "width": 2500,
+    "height": 1000
+  },
   "coverImageUrl": "/static/be66e1f465117be1f96d414f8870896a/cover_8.jpeg",
   "coverImageAlt": "Big test",
   "datePublished": "2018-03-01T00:00:00.000Z",
@@ -37,6 +65,34 @@ exports[`template Post renders properly 1`] = `
       "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
       "title": "Big Test",
       "description": "Decsription",
+      "coverImg": {
+        "layout": "constrained",
+        "placeholder": {
+          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+        },
+        "backgroundColor": "transparent",
+        "images": {
+          "fallback": {
+            "src": "/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg",
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/74341/big_test.jpg 625w,\\n/static/be66e1f465117be1f96d414f8870896a/c98fe/big_test.jpg 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg 2500w",
+            "sizes": "(min-width: 2500px) 2500px, 100vw"
+          },
+          "sources": [
+            {
+              "srcSet": "/static/be66e1f465117be1f96d414f8870896a/44552/big_test.avif 625w,\\n/static/be66e1f465117be1f96d414f8870896a/fdd2c/big_test.avif 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/d8633/big_test.avif 2500w",
+              "type": "image/avif",
+              "sizes": "(min-width: 2500px) 2500px, 100vw"
+            },
+            {
+              "srcSet": "/static/be66e1f465117be1f96d414f8870896a/a07b5/big_test.webp 625w,\\n/static/be66e1f465117be1f96d414f8870896a/f1147/big_test.webp 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/0676d/big_test.webp 2500w",
+              "type": "image/webp",
+              "sizes": "(min-width: 2500px) 2500px, 100vw"
+            }
+          ]
+        },
+        "width": 2500,
+        "height": 1000
+      },
       "coverImageUrl": "5.jpg",
       "coverImageAlt": "CoverImageAlt",
       "datePublished": "2018-03-01T00:00:00.000Z",
@@ -58,6 +114,34 @@ exports[`template Post renders properly 1`] = `
       "excerpt": "MDX Test Here's a color picker! NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated…",
       "title": "Big Test",
       "description": "Decsription",
+      "coverImg": {
+        "layout": "constrained",
+        "placeholder": {
+          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+        },
+        "backgroundColor": "transparent",
+        "images": {
+          "fallback": {
+            "src": "/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg",
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/74341/big_test.jpg 625w,\\n/static/be66e1f465117be1f96d414f8870896a/c98fe/big_test.jpg 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/ee7c2/big_test.jpg 2500w",
+            "sizes": "(min-width: 2500px) 2500px, 100vw"
+          },
+          "sources": [
+            {
+              "srcSet": "/static/be66e1f465117be1f96d414f8870896a/44552/big_test.avif 625w,\\n/static/be66e1f465117be1f96d414f8870896a/fdd2c/big_test.avif 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/d8633/big_test.avif 2500w",
+              "type": "image/avif",
+              "sizes": "(min-width: 2500px) 2500px, 100vw"
+            },
+            {
+              "srcSet": "/static/be66e1f465117be1f96d414f8870896a/a07b5/big_test.webp 625w,\\n/static/be66e1f465117be1f96d414f8870896a/f1147/big_test.webp 1250w,\\n/static/be66e1f465117be1f96d414f8870896a/0676d/big_test.webp 2500w",
+              "type": "image/webp",
+              "sizes": "(min-width: 2500px) 2500px, 100vw"
+            }
+          ]
+        },
+        "width": 2500,
+        "height": 1000
+      },
       "coverImageUrl": "5.jpg",
       "coverImageAlt": "CoverImageAlt",
       "datePublished": "2018-03-01T00:00:00.000Z",

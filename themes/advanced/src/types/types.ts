@@ -1,4 +1,4 @@
-import { IGatsbyImageData, ImageDataLike } from "gatsby-plugin-image";
+import { ImageDataLike } from "gatsby-plugin-image";
 
 export type BlogPostBySlugQuery = {
   mdx?: MdxNode;
@@ -27,7 +27,7 @@ export type MdxNode = {
     description?: string;
     cover?: {
       publicURL?: string;
-      childImageSharp?: IGatsbyImageData;
+      childImageSharp?: { gatsbyImageData: ImageDataLike };
     };
     coverAlt?: string;
 

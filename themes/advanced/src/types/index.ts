@@ -108,7 +108,7 @@ export function mdxNodeIntoPost(mdxNode: MdxNode): Post {
     title: frontmatter.title,
 
     description: frontmatter.description,
-    coverImg: frontmatter.cover.childImageSharp,
+    coverImg: frontmatter.cover.childImageSharp?.gatsbyImageData,
     coverImageUrl: frontmatter.cover.publicURL,
     coverImageAlt: frontmatter.coverAlt,
 
