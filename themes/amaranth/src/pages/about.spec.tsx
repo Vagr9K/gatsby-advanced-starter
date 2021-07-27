@@ -6,14 +6,6 @@ import "jest-styled-components";
 import AboutPage from "./about";
 
 describe("page component AboutPage", () => {
-  it("renders successfully", () => {
-    expect.assertions(1);
-
-    const { asFragment } = render(<AboutPage />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it("renders the layout component", async () => {
     expect.assertions(1);
 
