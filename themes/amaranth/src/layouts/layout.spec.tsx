@@ -5,7 +5,7 @@ import "jest-styled-components";
 
 import Layout from "./index";
 
-describe("page component AboutPage", () => {
+describe("website layout", () => {
   it("renders SEO tags", () => {
     expect.assertions(1);
 
