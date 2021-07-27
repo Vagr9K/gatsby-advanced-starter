@@ -26,7 +26,7 @@ const LayoutGrid = styled.div`
 `;
 
 type MainLayoutProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
