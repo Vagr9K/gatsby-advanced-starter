@@ -10,6 +10,8 @@ export type FeedTemplateProps = {
   pageContext: PageContext;
 };
 
+export type FeedTemplateContext = PageContext;
+
 const FeedTemplate = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
