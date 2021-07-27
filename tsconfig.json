@@ -11,6 +11,7 @@
     ".eslintrc.js",
     "**/gatsby/**/*",
     "**/src/**/*",
+    "**/__mocks__/**/*",
     "**/test/**/*",
     "**/index.ts"
   ],
