@@ -10,7 +10,7 @@ import { HeadingLink } from "../../Links";
 export const Paragraph = undefined; // Default works fine
 
 // Extract header hashlink from child components
-const getHeaderHashLink = (children: React.ReactChildren): string | null => {
+const getHeaderHashLink = (children: React.ReactNode): string | null => {
   if (Array.isArray(children)) {
     return _.kebabCase(
       children.filter((child) => typeof child === "string").join()
@@ -25,7 +25,7 @@ const getHeaderHashLink = (children: React.ReactChildren): string | null => {
 };
 
 type HeadingProps = {
-  children: React.ReactChildren;
+  children: React.ReactNode;
 };
 
 type HeadingComponent = (props: HeadingProps) => JSX.Element;
