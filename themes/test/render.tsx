@@ -3,7 +3,7 @@ import { render, RenderOptions, RenderResult } from "@testing-library/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import { config as configFixture } from "./fixtures";
-import ConfigContext from "../src/context/ConfigContext";
+import ConfigContext from "../advanced/src/context/ConfigContext";
 
 const queryClient = new QueryClient();
 const QueryClientWrapper = ({ children }: { children: React.ReactNode }) => (

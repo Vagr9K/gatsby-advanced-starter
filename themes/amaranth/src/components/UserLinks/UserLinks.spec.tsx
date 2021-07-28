@@ -6,7 +6,7 @@ import { ConfigContext } from "gatsby-theme-advanced";
 
 import UserLinks from "./index";
 
-import { config as configFixture } from "../../../../advanced/test/fixtures";
+import { config as configFixture } from "../../../../test/fixtures";
 
 describe("component UserLinks", () => {
   it("renders user links", async () => {

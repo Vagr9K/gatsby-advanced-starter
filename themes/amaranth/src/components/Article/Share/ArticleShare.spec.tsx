@@ -7,7 +7,7 @@ import "jest-styled-components";
 
 import ArticleShare from "./index";
 
-import { post as postFixture } from "../../../../../advanced/test/fixtures";
+import { post as postFixture } from "../../../../../test/fixtures";
 
 Object.assign(navigator, {
   clipboard: {

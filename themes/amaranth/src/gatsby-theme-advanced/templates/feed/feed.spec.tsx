@@ -9,9 +9,9 @@ import { Types, FeedTemplateContext } from "gatsby-theme-advanced";
 
 import PostTemplate from "./index";
 
-import Index0 from "../../../../../advanced/test/fixtures/feedMetadata/index-0.json";
+import Index0 from "../../../../../test/fixtures/feedMetadata/index-0.json";
 
-import renderWithContext from "../../../../../advanced/test/render";
+import renderWithContext from "../../../../../test/render";
 
 const indexFeedContext = {
   feedId: undefined,

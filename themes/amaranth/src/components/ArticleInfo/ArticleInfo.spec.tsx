@@ -4,7 +4,7 @@ import "jest-styled-components";
 
 import ArticleInfo from "./index";
 
-import { post as postFixture } from "../../../../advanced/test/fixtures";
+import { post as postFixture } from "../../../../test/fixtures";
 
 describe("component ArticleInfo", () => {
   it("generates correct tag/category URLs", async () => {

@@ -15,7 +15,7 @@ import {
 } from "../gatsby-node";
 
 import { GatsbyActionsMock } from "./Utils";
-import { config as configFixture } from "../../test/fixtures";
+import { config as configFixture } from "../../../test/fixtures";
 
 import * as feedUtils from "../utils/feeds";
 
@@ -36,8 +36,8 @@ const mockedFeedUtils = mocked(feedUtils, true);
 
 jest.mock("../utils/queries", () => {
   const postListingFixture = jest.requireActual<
-    typeof import("../../test/fixtures")
-  >("../../test/fixtures").postListing;
+    typeof import("../../../test/fixtures")
+  >("../../../test/fixtures").postListing;
 
   const testListing = [
     ...postListingFixture,

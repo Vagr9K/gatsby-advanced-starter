@@ -14,9 +14,9 @@ import {
   PostPlaceholder,
 } from "../../../types";
 
-import Index0 from "../../../../test/fixtures/feedMetadata/index-0.json";
-import Index1 from "../../../../test/fixtures/feedMetadata/index-1.json";
-import Index2 from "../../../../test/fixtures/feedMetadata/index-2.json";
+import Index0 from "../../../../../test/fixtures/feedMetadata/index-0.json";
+import Index1 from "../../../../../test/fixtures/feedMetadata/index-1.json";
+import Index2 from "../../../../../test/fixtures/feedMetadata/index-2.json";
 
 const pageMetadatas: FeedPageMetaFromJson[] = [
   Index0 as unknown as FeedPageMetaFromJson,

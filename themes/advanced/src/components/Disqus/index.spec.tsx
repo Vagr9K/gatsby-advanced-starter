@@ -6,7 +6,7 @@ import Disqus from "./index";
 import ConfigContext from "../../context/ConfigContext";
 import { defaultConfig } from "../../config";
 
-import { post } from "../../../test/fixtures";
+import { post } from "../../../../test/fixtures";
 
 describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is set", () => {

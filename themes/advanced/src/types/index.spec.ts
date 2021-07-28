@@ -13,7 +13,7 @@ import {
   postQuery,
   post as postFixture,
   config as configFixture,
-} from "../../test/fixtures";
+} from "../../../test/fixtures";
 import { MdxNode, PostFromJson } from "./types";
 
 const consoleWarnSpy = jest

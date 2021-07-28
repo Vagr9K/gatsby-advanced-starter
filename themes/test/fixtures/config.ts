@@ -1,4 +1,4 @@
-import { SiteConfig } from "../../src/config";
+import { SiteConfig } from "../../advanced/src/config";
 
 const config: SiteConfig = {
   // Website configuration

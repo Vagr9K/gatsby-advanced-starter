@@ -1,5 +1,5 @@
 import { mocked } from "ts-jest/utils";
-import { config as configFixture, listingQuery } from "../../test/fixtures";
+import { config as configFixture, listingQuery } from "../../../test/fixtures";
 import { GatsbyFeedQuery, GatsbyPluginFeedData } from "../types";
 import { getSerialize, setup } from "../utils/rss";
 

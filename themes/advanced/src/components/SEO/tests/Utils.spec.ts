@@ -2,7 +2,7 @@ import removeMd from "remove-markdown";
 import cloneDeep from "clone-deep";
 import { generatePostData, generateSeoData } from "../Utils";
 import { sampleSeoData } from "./TestUtils";
-import * as sampleData from "../../../../test/fixtures";
+import * as sampleData from "../../../../../test/fixtures";
 
 describe("seo utility generateSeoData", () => {
   it("correctly generates website SEO metadata", () => {

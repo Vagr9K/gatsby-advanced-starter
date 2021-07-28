@@ -1,4 +1,4 @@
-import { BlogPostBySlugQuery } from "../../src/types";
+import { BlogPostBySlugQuery } from "../../advanced/src/types";
 
 const postQuery: BlogPostBySlugQuery = {
   mdx: {

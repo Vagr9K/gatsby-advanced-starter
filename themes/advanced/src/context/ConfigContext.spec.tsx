@@ -3,7 +3,7 @@ import * as gatsby from "gatsby";
 
 import { ConfigProvider } from "./ConfigContext";
 
-import { config } from "../../test/fixtures";
+import { config } from "../../../test/fixtures";
 import { SiteConfig } from "../config";
 
 const siteConfigQueryResponse = {

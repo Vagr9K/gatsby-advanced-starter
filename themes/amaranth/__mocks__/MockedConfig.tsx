@@ -1,6 +1,6 @@
 import React from "react";
 
-import { config as configFixture } from "../../advanced/test/fixtures";
+import { config as configFixture } from "../../test/fixtures";
 
 const ConfigContext = React.createContext(configFixture);
 

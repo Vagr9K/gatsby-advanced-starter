@@ -9,10 +9,7 @@ import { Types } from "gatsby-theme-advanced";
 
 import PostTemplate from "./index";
 
-import {
-  post as postFixture,
-  postQuery,
-} from "../../../../../advanced/test/fixtures";
+import { post as postFixture, postQuery } from "../../../../../test/fixtures";
 
 const postFromJson = JSON.parse(
   JSON.stringify(postFixture)

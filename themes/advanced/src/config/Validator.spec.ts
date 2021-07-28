@@ -1,6 +1,6 @@
 import { cloneDeep } from "lodash";
 import validateSiteConfig from "./Validator";
-import { config as configFixture } from "../../test/fixtures";
+import { config as configFixture } from "../../../test/fixtures";
 
 // Setup a configuration for a test
 const testConfig = cloneDeep(configFixture);

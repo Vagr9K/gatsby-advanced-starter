@@ -4,7 +4,7 @@ import { mocked } from "ts-jest/utils";
 
 import SEO from "../../components/SEO";
 
-import { post as postFixture, postQuery } from "../../../test/fixtures";
+import { post as postFixture, postQuery } from "../../../../test/fixtures";
 
 import PostTemplate from "../post/index";
 import { PostFromJson } from "../../types";

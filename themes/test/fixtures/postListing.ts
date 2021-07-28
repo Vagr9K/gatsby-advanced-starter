@@ -1,4 +1,4 @@
-import { PostList } from "../../src/types";
+import { PostList } from "../../advanced/src/types";
 
 const postListing: PostList = [
   {

@@ -3,7 +3,7 @@ import { mocked } from "ts-jest/utils";
 import { GatsbyConfig } from "gatsby";
 import gatsbyConfig from "../gatsby-config";
 
-import * as fixtures from "../../test/fixtures";
+import * as fixtures from "../../../test/fixtures";
 import * as config from "../../src/config";
 
 jest.mock("../../src/config", () => ({

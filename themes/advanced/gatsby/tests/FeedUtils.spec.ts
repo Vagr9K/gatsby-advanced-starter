@@ -15,7 +15,7 @@ import {
   post as postFixture,
   config as configFixture,
   postListing as listingFixtureBase,
-} from "../../test/fixtures";
+} from "../../../test/fixtures";
 
 // Artificially increase the number of posts in the fixture
 const listingFixture = [...listingFixtureBase, ...listingFixtureBase];

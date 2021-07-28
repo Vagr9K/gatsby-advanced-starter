@@ -1,13 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import renderWithContext from "../../../../test/render";
+import renderWithContext from "../../../../../test/render";
 
 import PostTemplate from "../index";
 
 import { FeedPageMetaFromJson } from "../../../types";
 import { PageContext } from "../types";
-import Index0 from "../../../../test/fixtures/feedMetadata/index-0.json";
+import Index0 from "../../../../../test/fixtures/feedMetadata/index-0.json";
 
 const indexFeedContext: PageContext = {
   feedId: "test",

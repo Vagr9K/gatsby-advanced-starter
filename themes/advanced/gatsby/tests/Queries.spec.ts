@@ -10,7 +10,7 @@ import {
   tagListingQuery,
   indexListingQuery,
 } from "../../src/templates/feed/queries";
-import { listingQuery } from "../../test/fixtures";
+import { listingQuery } from "../../../test/fixtures";
 
 jest.spyOn(global.console, "warn").mockImplementation();
 jest.spyOn(global.console, "error").mockImplementation();
