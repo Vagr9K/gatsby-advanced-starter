@@ -3730,6 +3730,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/user-event@npm:^13.2.1":
+  version: 13.2.1
+  resolution: "@testing-library/user-event@npm:13.2.1"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+  peerDependencies:
+    "@testing-library/dom": ">=7.21.4"
+  checksum: fea514ffc89688632f3d29f9a4d93005ac9f2259010d064a1c9bd2bef5bb8a0a606086fe55b09cc45186e1de200dc3dc9ca86475f9ddc00b0a307288159798a9
+  languageName: node
+  linkType: hard
+
 "@tokenizer/token@npm:^0.1.1":
   version: 0.1.1
   resolution: "@tokenizer/token@npm:0.1.1"
@@ -12986,6 +12997,7 @@ fsevents@^1.2.7:
     "@styled-icons/styled-icon": ^10.6.3
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^12.0.0
+    "@testing-library/user-event": ^13.2.1
     "@types/babel__plugin-transform-runtime": ^7.9.2
     "@types/clone-deep": ^4.0.1
     "@types/jest": ^26.0.24

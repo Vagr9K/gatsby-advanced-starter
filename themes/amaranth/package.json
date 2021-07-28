@@ -70,6 +70,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/babel__plugin-transform-runtime": "^7.9.2",
     "@types/clone-deep": "^4.0.1",
     "@types/jest": "^26.0.24",
