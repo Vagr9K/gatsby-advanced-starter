@@ -32,5 +32,5 @@ module.exports = {
     "src/**/*.{js,jsx,ts,tsx}",
     "gatsby/**/*.{js,jsx,ts,tsx}",
   ],
-  coveragePathIgnorePatterns: ["src/netlifycms/index.js", "src/__generated__/"],
+  coveragePathIgnorePatterns: ["src/netlifycms/index.js"],
 };
