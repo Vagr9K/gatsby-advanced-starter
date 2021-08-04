@@ -11,7 +11,7 @@ module.exports = {
   plugins: ["@typescript-eslint", "testing-library", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: __dirname, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
     project: ["./tsconfig.json"],
   },
   env: {
