@@ -1881,6 +1881,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.14.6":
+  version: 7.14.8
+  resolution: "@babel/runtime@npm:7.14.8"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: d2dd0ce51ddab78ac93928b04042425145d0dc8cc2b70150d47934f8703f55702eb0b2894f9bd47f66794ad04d8bb03a6a847d0138fbb7aa0b970b5ccd5cc8b7
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.6.2":
   version: 7.14.6
   resolution: "@babel/runtime@npm:7.14.6"
@@ -8822,6 +8831,57 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "cypress@npm:8.1.0"
+  dependencies:
+    "@cypress/request": ^2.88.5
+    "@cypress/xvfb": ^1.2.4
+    "@types/node": ^14.14.31
+    "@types/sinonjs__fake-timers": ^6.0.2
+    "@types/sizzle": ^2.3.2
+    arch: ^2.2.0
+    blob-util: ^2.0.2
+    bluebird: ^3.7.2
+    cachedir: ^2.3.0
+    chalk: ^4.1.0
+    check-more-types: ^2.24.0
+    cli-cursor: ^3.1.0
+    cli-table3: ~0.6.0
+    commander: ^5.1.0
+    common-tags: ^1.8.0
+    dayjs: ^1.10.4
+    debug: ^4.3.2
+    enquirer: ^2.3.6
+    eventemitter2: ^6.4.3
+    execa: 4.1.0
+    executable: ^4.1.1
+    extract-zip: 2.0.1
+    figures: ^3.2.0
+    fs-extra: ^9.1.0
+    getos: ^3.2.1
+    is-ci: ^3.0.0
+    is-installed-globally: ~0.4.0
+    lazy-ass: ^1.6.0
+    listr2: ^3.8.3
+    lodash: ^4.17.21
+    log-symbols: ^4.0.0
+    minimist: ^1.2.5
+    ospath: ^1.2.2
+    pretty-bytes: ^5.6.0
+    ramda: ~0.27.1
+    request-progress: ^3.0.0
+    supports-color: ^8.1.1
+    tmp: ~0.2.1
+    untildify: ^4.0.0
+    url: ^0.11.0
+    yauzl: ^2.10.0
+  bin:
+    cypress: bin/cypress
+  checksum: 564093b5f33e2967437b6579b6911915dddacb323b23c436545f108c72f689de079ba220c4ca7ebaf98a91e5832f3b1940b2354276ddab7f87e4a166359c670f
+  languageName: node
+  linkType: hard
+
 "d@npm:1, d@npm:^1.0.1":
   version: 1.0.1
   resolution: "d@npm:1.0.1"
@@ -12015,6 +12075,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gatsby-cypress@npm:^1.11.0":
+  version: 1.11.0
+  resolution: "gatsby-cypress@npm:1.11.0"
+  dependencies:
+    "@babel/runtime": ^7.14.6
+  peerDependencies:
+    cypress: ^3.1.0
+    gatsby: ^3.0.0-next.0
+  checksum: 81318261379d8e1e4231714852adbeb4b122e8f192e03789e2713f79f19f8ab7478e18677018147f37e725a38bf715d564ca51fcceb5f9a12a631e4d3b6c4df8
+  languageName: node
+  linkType: hard
+
 "gatsby-cypress@npm:^1.9.0":
   version: 1.9.0
   resolution: "gatsby-cypress@npm:1.9.0"
@@ -12681,6 +12753,7 @@ fsevents@^1.2.7:
     "@typescript-eslint/eslint-plugin": ^4.28.3
     babel-jest: ^27.0.6
     babel-plugin-styled-components: ^1.13.2
+    cypress: ^8.1.0
     cypress-axe: ^0.12.2
     eslint: ^7.31.0
     eslint-config-airbnb: ^18.2.1
@@ -12695,6 +12768,7 @@ fsevents@^1.2.7:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^4.9.1
     gatsby: ^3.9.1
+    gatsby-cypress: ^1.11.0
     gatsby-plugin-styled-components: ^4.9.0
     gatsby-theme-amaranth: "workspace:*"
     gh-pages: ^3.2.3
@@ -12706,6 +12780,7 @@ fsevents@^1.2.7:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-query: ^3.19.1
+    start-server-and-test: ^1.13.1
     styled-components: ^5.3.0
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
@@ -24776,6 +24851,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.1.0":
+  version: 7.3.0
+  resolution: "rxjs@npm:7.3.0"
+  dependencies:
+    tslib: ~2.1.0
+  checksum: e63adb8808ea6c299a020d56d2af92bcf71efe641adf838499932e29b8f5fd5ff00873653ad48ba3ecf6c9fc11c3c595acf995e8d456f9d8cb85c7d37a1fd72e
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:*, safe-buffer@npm:5.1.2, safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
   version: 5.1.2
   resolution: "safe-buffer@npm:5.1.2"
@@ -25965,6 +26049,25 @@ resolve@^2.0.0-next.3:
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
   checksum: e4ca9d7d7d31ce4f640125f15d679933b25e1701c97d00c66a7c1d3ea4ebe1202f13ab636c03694d3ec44352baa9e9f39ed56307114e8191f869c1dada9616ed
+  languageName: node
+  linkType: hard
+
+"start-server-and-test@npm:^1.13.1":
+  version: 1.13.1
+  resolution: "start-server-and-test@npm:1.13.1"
+  dependencies:
+    bluebird: 3.7.2
+    check-more-types: 2.24.0
+    debug: 4.3.2
+    execa: 5.1.1
+    lazy-ass: 1.6.0
+    ps-tree: 1.2.0
+    wait-on: 6.0.0
+  bin:
+    server-test: src/bin/start.js
+    start-server-and-test: src/bin/start.js
+    start-test: src/bin/start.js
+  checksum: 9cd490c23f09781926f23f8730e3b3acf62a600b4969c1d6ba7936797819e0e4d97317a2e5c9445add0c6dd0bdf7ef7ea2b1b9f716e263f44f9fce67b795de35
   languageName: node
   linkType: hard
 
@@ -28596,6 +28699,21 @@ typescript@^4.3.5:
   bin:
     wait-on: bin/wait-on
   checksum: b7099104b7900ff6349f1196edff759076ab557a2053c017a587819f7a59f146ec9e35c99579acd31dcda371bfa72241ef28b8ccda902f0bf3fbf2d780a00ebf
+  languageName: node
+  linkType: hard
+
+"wait-on@npm:6.0.0":
+  version: 6.0.0
+  resolution: "wait-on@npm:6.0.0"
+  dependencies:
+    axios: ^0.21.1
+    joi: ^17.4.0
+    lodash: ^4.17.21
+    minimist: ^1.2.5
+    rxjs: ^7.1.0
+  bin:
+    wait-on: bin/wait-on
+  checksum: 6ae7bd2a933715c3b2f1c49f033d97c576b2c6a0257420d4c83964d2846c3967bfce33bc9af9a1a631ef38dfa6185be03cef57d2867c8c30c523278f964ac9e3
   languageName: node
   linkType: hard
 

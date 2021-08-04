@@ -75,3 +75,8 @@ lib/
 
 # TypeScript coverage
 coverage-ts/
+
+# Cypress output
+cypress/screenshots
+cypress/videos
+
