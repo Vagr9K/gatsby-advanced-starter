@@ -176,7 +176,7 @@ describe("createFeed", () => {
   });
 
   it("correctly generates a feed", async () => {
-    expect.assertions(7);
+    expect.assertions(6);
 
     memfs.vol.fromJSON({
       [FEED_META_DIR]: null,
@@ -227,6 +227,5 @@ describe("createFeed", () => {
         }),
       })
     );
-    expect(MockedGatsbyActions.createPage.mock.calls[0]).toMatchSnapshot();
   });
 });
