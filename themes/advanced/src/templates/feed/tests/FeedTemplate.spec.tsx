@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import renderWithContext from "../../../../../test/render";
+import renderWithContext from "../../../../test/render";
 
 import PostTemplate from "../index";
 
@@ -34,7 +34,7 @@ const tagFeedContext: PageContext = {
 };
 
 describe("component FeedTemplate", () => {
-  it("correctly render an index feed", () => {
+  it("correctly renders an index feed", () => {
     expect.assertions(1);
 
     const { asFragment } = renderWithContext(

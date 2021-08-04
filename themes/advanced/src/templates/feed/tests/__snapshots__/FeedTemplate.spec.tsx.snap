@@ -550,7 +550,7 @@ exports[`component FeedTemplate correctly render a tag feed 1`] = `
 </DocumentFragment>
 `;
 
-exports[`component FeedTemplate correctly render an index feed 1`] = `
+exports[`component FeedTemplate correctly renders an index feed 1`] = `
 <DocumentFragment>
   <div
     class="feed-wrapper"
