@@ -7,7 +7,7 @@ import * as gatsby from "gatsby";
 
 import Link from "./index";
 
-import renderWithContext from "../../../../test/render";
+import renderWithContext from "../../../test/render";
 import { defaultConfig, SiteConfig } from "../../config";
 
 const testConfig = cloneDeep<SiteConfig>(defaultConfig);
