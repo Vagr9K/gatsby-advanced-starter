@@ -41,9 +41,7 @@
     "test:e2e:dev": "CYPRESS_SUPPORT=y CYPRESS_BASE_URL=http://localhost:8000 CYPRESS_STAGE=dev start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e": "CYPRESS_SUPPORT=y npm run build && start-server-and-test serve http://localhost:9000 cy:open",
     "test:e2e:ci": "CYPRESS_SUPPORT=y npm run build && start-server-and-test serve http://localhost:9000 cy:run",
-    "write-good": "write-good $(glob 'content/**/*.md')",
-    "check": "yarn workspaces foreach -A -v -p run lint:all && yarn workspaces foreach -A -v -p run type-check",
-    "prepare": "husky install"
+    "write-good": "write-good $(glob 'content/**/*.md')"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
@@ -83,7 +81,6 @@
     "eslint-plugin-testing-library": "^4.9.1",
     "gatsby-cypress": "^1.11.0",
     "gh-pages": "^3.2.3",
-    "husky": "^7.0.1",
     "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
     "markdownlint-cli2": "^0.1.3",

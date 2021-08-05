@@ -102,7 +102,6 @@
     "fetch-mock": "^9.11.0",
     "gatsby": "^3.9.1",
     "gh-pages": "^3.2.3",
-    "husky": "^7.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "markdownlint-cli2": "^0.1.3",

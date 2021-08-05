@@ -12772,7 +12772,6 @@ fsevents@^1.2.7:
     gatsby-plugin-styled-components: ^4.9.0
     gatsby-theme-amaranth: "workspace:*"
     gh-pages: ^3.2.3
-    husky: ^7.0.1
     jest: ^27.0.6
     jest-styled-components: ^7.0.5
     markdownlint-cli2: ^0.1.3
@@ -12957,7 +12956,6 @@ fsevents@^1.2.7:
     gatsby-transformer-remark: ^4.6.0
     gatsby-transformer-sharp: ^3.9.0
     gh-pages: ^3.2.3
-    husky: ^7.0.1
     identity-obj-proxy: ^3.0.0
     is-absolute-url: ^3.0.3
     jest: ^27.0.6
@@ -13136,7 +13134,6 @@ fsevents@^1.2.7:
     gatsby-transformer-remark: ^4.6.0
     gatsby-transformer-sharp: ^3.9.0
     gh-pages: ^3.2.3
-    husky: ^7.0.1
     identity-obj-proxy: ^3.0.0
     is-absolute-url: ^3.0.3
     jest: ^27.0.6
@@ -15021,15 +15018,6 @@ fsevents@^1.2.7:
   version: 2.0.1
   resolution: "humps@npm:2.0.1"
   checksum: 7d5a674cfca2f34c04562f6fd0d129b4c43a5caf85fcc1c9eacf5d0729554c9375db362c4232519b37369c94dd2560d85f96ad4091a8fbf4af4e625ab5214a30
-  languageName: node
-  linkType: hard
-
-"husky@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "husky@npm:7.0.1"
-  bin:
-    husky: lib/bin.js
-  checksum: b2ea1460f1126ed7161779b1b89f7ec8ae66fb6723e0e9fd47c522f454f4a2ea7e31a21d6ce2eb5d32e9837d232fb0245783425c109df0adab53668f8c8d8fc8
   languageName: node
   linkType: hard
 
