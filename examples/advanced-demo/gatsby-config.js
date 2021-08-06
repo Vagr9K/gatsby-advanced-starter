@@ -134,6 +134,7 @@ module.exports = {
           googleAnalyticsId: "UA-47311644-5",
           copyright: "© Copyright 2021 | Ruben Harutyunyan",
           disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter",
+          logoUrl: "/logos/logo.png",
         },
 
         user: {
@@ -152,7 +153,7 @@ module.exports = {
         organization: {
           name: "Organization Name",
           description: "Organization description",
-          logoUrl: "/logos/logo-512.png",
+          logoUrl: "/logos/logo.png",
           url: "https://gatsby-advanced-starter-demo.netlify.com",
         },
       },
