@@ -2,7 +2,14 @@
   "name": "gatsby-theme-advanced",
   "description": "GatsbyJS theme equipped with advanced features.",
   "version": "3.0.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Ruben Harutyunyan <vagr9k@gmail.com> (https://harutyunyan.dev/)",
+  "homepage": "https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/advanced",
+  "bugs": "https://github.com/Vagr9K/gatsby-advanced-starter/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vagr9K/gatsby-advanced-starter.git",
+    "directory": "themes/advanced"
+  },
   "license": "MIT",
   "main": "index.ts",
   "dependencies": {
