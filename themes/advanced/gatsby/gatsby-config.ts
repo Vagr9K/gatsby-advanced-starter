@@ -1,3 +1,5 @@
+import path from "path";
+import fs from "fs";
 import urljoin from "url-join";
 
 import { GatsbyConfig } from "gatsby";
@@ -8,7 +10,6 @@ import remarkExternalLinks from "remark-external-links";
 import unwrapImages from "remark-unwrap-images";
 
 // Config
-import path from "path";
 import { SiteConfig, withBasePath, withDefaults } from "../src/config";
 
 // RSS Utils
@@ -22,6 +23,8 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
 
   const validatedPathPrefix =
     config.pathPrefix === "" ? "/" : config.pathPrefix;
+
+  const netlifyConfigPath = "../src/netlifycms/index.js";
 
   return {
     pathPrefix: validatedPathPrefix,
@@ -187,7 +190,9 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
       {
         resolve: "gatsby-plugin-netlify-cms",
         options: {
-          modulePath: require.resolve("../src/netlifycms/index.js"),
+          modulePath: fs.existsSync(netlifyConfigPath)
+            ? netlifyConfigPath
+            : undefined,
           enableIdentityWidget: true,
           publicPath: "admin",
           htmlTitle: "Content Manager",
