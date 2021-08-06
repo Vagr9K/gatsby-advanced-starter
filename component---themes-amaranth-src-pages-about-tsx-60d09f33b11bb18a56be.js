@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_theme_amaranth_demo=self.webpackChunkgatsby_theme_amaranth_demo||[]).push([[467],{8324:function(e,t,a){"use strict";a.r(t);var n=a(2784),r=a(9299),u=a(4718),l=a(3774);t.default=function(){var e=n.useContext(u.E_);return n.createElement(l.Z,null,n.createElement("div",{className:"about-container"},n.createElement(r.q,{title:"About | "+e.website.title})))}}}]);
-//# sourceMappingURL=component---themes-amaranth-src-pages-about-tsx-60d09f33b11bb18a56be.js.map
