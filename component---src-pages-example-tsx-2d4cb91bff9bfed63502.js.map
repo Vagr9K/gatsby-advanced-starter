@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://gatsby-starter-advanced/./src/pages/example.tsx"],"names":[],"mappings":"4JAIA,UAFoB,kBAAmB","file":"component---src-pages-example-tsx-2d4cb91bff9bfed63502.js","sourcesContent":["import React from \"react\";\n\nconst ExamplePage = (): JSX.Element => <h1>Sample content</h1>;\n\nexport default ExamplePage;\n"],"sourceRoot":""}
