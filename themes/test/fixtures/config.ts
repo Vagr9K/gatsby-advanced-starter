@@ -51,8 +51,8 @@ const config: SiteConfig = {
   contentDir: "./content", // Directory for MDX posts
   assetDir: "./static", // Asset directory
 
-  embededImageWidth: 768, // MDX embeded image width. Used by gatsby-plugin-image for optimization
-  embededVideoWidth: 920, // MDX embeded video width in pixels
+  embeddedImageWidth: 768, // MDX embedded image width. Used by gatsby-plugin-image for optimization
+  embeddedVideoWidth: 920, // MDX embedded video width in pixels
 
   basePath: "",
 };

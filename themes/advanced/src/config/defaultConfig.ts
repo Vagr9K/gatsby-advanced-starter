@@ -29,8 +29,8 @@ const config: SiteConfig = {
   contentDir: undefined, // Directory for MDX posts
   assetDir: undefined, // Asset directory
 
-  embededImageWidth: 768, // MDX embeded image width. Used by gatsby-plugin-image for optimization
-  embededVideoWidth: 920, // MDX embeded video width in pixels
+  embeddedImageWidth: 768, // MDX embedded image width. Used by gatsby-plugin-image for optimization
+  embeddedVideoWidth: 920, // MDX embedded video width in pixels
 
   iconPath: undefined, // Icon used for manifest icon creation.
   iconList: [], // Icons used for the web manifest. Can be used to override iconPath for a more pixel perfect control.

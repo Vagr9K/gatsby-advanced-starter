@@ -54,8 +54,8 @@ export interface SiteConfig {
   contentDir?: string;
   assetDir?: string;
 
-  embededImageWidth: number;
-  embededVideoWidth: number;
+  embeddedImageWidth: number;
+  embeddedVideoWidth: number;
 
   iconPath?: string;
   iconList: Readonly<Array<IconManifest>>;

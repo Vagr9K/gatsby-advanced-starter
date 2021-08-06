@@ -27,8 +27,8 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
             config {
               contentDir
               assetDir
-              embededImageWidth
-              embededVideoWidth
+              embeddedImageWidth
+              embeddedVideoWidth
               basePath
               iconPath
               iconCachePaths

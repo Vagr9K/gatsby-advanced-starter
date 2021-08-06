@@ -56,8 +56,8 @@ export const schema = `#graphql
     contentDir: String
     assetDir: String
 
-    embededImageWidth: Int!
-    embededVideoWidth: Int!
+    embeddedImageWidth: Int!
+    embeddedVideoWidth: Int!
 
     iconPath: String
     iconList: [IconManifest]!

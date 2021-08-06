@@ -99,7 +99,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
             {
               resolve: "gatsby-remark-embed-video",
               options: {
-                width: config.embededVideoWidth,
+                width: config.embeddedVideoWidth,
               },
             },
             {
@@ -111,7 +111,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
             {
               resolve: "gatsby-remark-images",
               options: {
-                maxWidth: config.embededImageWidth,
+                maxWidth: config.embeddedImageWidth,
                 showCaptions: ["title", "alt"],
               },
             },
