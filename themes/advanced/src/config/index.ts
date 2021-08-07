@@ -5,8 +5,6 @@ import validateSiteConfig from "./Validator";
 import baseConfig from "./defaultConfig";
 import { SiteConfig } from "./types";
 
-const validatedBaseConfig = validateSiteConfig(baseConfig);
-
 export type {
   SiteConfig,
   OrganizationData,
@@ -18,7 +16,7 @@ export { default as schema } from "./schema";
 export { default as constants } from "./constants";
 
 export const withDefaults = (userConfig: SiteConfig): Readonly<SiteConfig> =>
-  merge(validatedBaseConfig, userConfig);
+  validateSiteConfig(merge(baseConfig, userConfig));
 
 export const withBasePath = (config: SiteConfig, url: string): string =>
   config.basePath ? urlJoin(config.basePath, url) : url;

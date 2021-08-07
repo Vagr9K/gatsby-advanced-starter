@@ -33,7 +33,7 @@ describe("gatsbyConfig", () => {
       pathPrefix: "/vagr9k/",
     } as config.SiteConfig);
 
-    expect(gatsbyConfigRes2?.pathPrefix).toBe("/vagr9k/");
+    expect(gatsbyConfigRes2?.pathPrefix).toBe("/vagr9k");
   });
 
   it("sets correct content and post directories", () => {

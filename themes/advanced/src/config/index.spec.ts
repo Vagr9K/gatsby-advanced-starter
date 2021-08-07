@@ -8,6 +8,7 @@ import defaultConfig from "./defaultConfig";
 
 const expectedMergedConfig = cloneDeep(defaultConfig);
 expectedMergedConfig.website.title = "TestTitle";
+expectedMergedConfig.pathPrefix = "";
 
 describe("configuration function withDefaults", () => {
   it("properly merges user configuration with the default one", () => {
