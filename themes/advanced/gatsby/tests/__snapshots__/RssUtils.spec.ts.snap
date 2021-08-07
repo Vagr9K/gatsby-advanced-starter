@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getSerialize correctly maps graphql data to a feed 1`] = `
+Array [
+  Object {
+    "categories": Array [
+      "programming",
+      "stuff",
+      "other",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-01-01",
+    "description": "Sedisti civiliter Lorem  markdownum  Ixione palus  semper peritura barbaque  in aureus
+obliquum erigitur gemmae utque cur natus, aera…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/bold-mage",
+    "title": "Bold Mage",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/bold-mage",
+  },
+  Object {
+    "categories": Array [
+      "test",
+      "something",
+      "tagging",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-02-01",
+    "description": "Hoc domum solitos veteremque nostrum Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus
+quales dant, puppim…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/the-fallen-time",
+    "title": "The Fallen Time",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/the-fallen-time",
+  },
+  Object {
+    "categories": Array [
+      "cheese",
+      "other",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-03-01",
+    "description": "Mane oscula anxia Lorem markdownum alius,  non voluntas supremaque : canes ager cingere quis;
+rerum? Nunc nec ferunt verbis vultumque…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/angels-of-mist",
+    "title": "Angels of Mist",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/angels-of-mist",
+  },
+  Object {
+    "categories": Array [
+      "programming",
+      "more tags",
+      "testing",
+      "another one",
+      "stuff",
+      "other",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-03-17",
+    "description": "Cognoscenti audeat ulterius sublimia terga potiorque saxo Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili
+sermone…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/the-butterfly-of-the-edge",
+    "title": "The Butterfly of the Edge",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/the-butterfly-of-the-edge",
+  },
+  Object {
+    "categories": Array [
+      "say hi",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-03-02",
+    "description": "Mendaci pinu ipsi nunc Lorem markdownum supplex. Care ferre nos praemia detestatur oderit vitatumque,
+tardius pello ostentare; dixit.  Agit…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/random-project-4-with-super-long-title-phase-one",
+    "title": "Random project 4 With Super Long Title Phase One",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/random-project-4-with-super-long-title-phase-one",
+  },
+  Object {
+    "categories": Array [
+      "tag",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-03-01",
+    "description": "Accipit alto fecerat mutato centauri haerent dominoque Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit
+huic, non…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/birch-in-the-roses",
+    "title": "Birch in the Roses",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/birch-in-the-roses",
+  },
+  Object {
+    "categories": Array [
+      "test",
+      "huge",
+    ],
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2018-03-01",
+    "description": "NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/big-sample-test",
+    "title": "Big Test",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/big-sample-test",
+  },
+  Object {
+    "categories": undefined,
+    "custom_elements": Array [
+      Object {
+        "content:encoded": undefined,
+      },
+      Object {
+        "author": "AdvancedUser@example.com",
+      },
+    ],
+    "date": "2017-04-02",
+    "description": "Ait oculos Lorem markdownum. Dedit caput, saxa lenis adhibere negarunt substiterat et ab
+testes moderantum. Somno curas obscurum, et  regna…",
+    "guid": "https://gatsby-advanced-starter-demo.netlify.com/the-fairys-witches",
+    "title": "The Fairy's Witches",
+    "url": "https://gatsby-advanced-starter-demo.netlify.com/the-fairys-witches",
+  },
+]
+`;

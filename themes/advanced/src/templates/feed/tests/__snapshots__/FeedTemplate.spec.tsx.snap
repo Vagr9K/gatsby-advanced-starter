@@ -1,0 +1,826 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component FeedTemplate correctly render a category feed 1`] = `
+<DocumentFragment>
+  <div
+    class="feed-wrapper"
+  >
+    <pre>
+      <code>
+        {
+  "title": "Big Test",
+  "description": "A big test intended for checking the MDX rendering.",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg",
+          "srcSet": "/static/be66e1f465117be1f96d414f8870896a/2ab11/big_test.jpg 230w,\\n/static/be66e1f465117be1f96d414f8870896a/16c5c/big_test.jpg 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg 920w,\\n/static/be66e1f465117be1f96d414f8870896a/3f865/big_test.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/ee20b/big_test.avif 230w,\\n/static/be66e1f465117be1f96d414f8870896a/5c720/big_test.avif 460w,\\n/static/be66e1f465117be1f96d414f8870896a/991c3/big_test.avif 920w,\\n/static/be66e1f465117be1f96d414f8870896a/b7eae/big_test.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/1d6f2/big_test.webp 230w,\\n/static/be66e1f465117be1f96d414f8870896a/f0b6f/big_test.webp 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d54e9/big_test.webp 920w,\\n/static/be66e1f465117be1f96d414f8870896a/382d3/big_test.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water for the big test.",
+  "datePublished": "2021-08-01T00:00:00.000Z",
+  "dateModified": "2021-08-01T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "test",
+    "markdown",
+    "big"
+  ],
+  "excerpt": "NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…",
+  "timeToRead": 3,
+  "slug": "/big-sample-test",
+  "route": "/big-sample-test",
+  "pathName": "big-sample-test",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/big-sample-test"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Storms of Doors",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHRUzTCf//EABgQAAMBAQAAAAAAAAAAAAAAAAACEwER/9oACAEBAAEFAqaVblHP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAQUAAAAAAAAAAAAAAAAAAAECECEx/9oACAEBAAY/Aqcakf/EABkQAAMAAwAAAAAAAAAAAAAAAAABMRFhkf/aAAgBAQABPyGD7ohyseo//9oADAMBAAIAAwAAABCLz//EABURAQEAAAAAAAAAAAAAAAAAAACB/9oACAEDAQE/EFf/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARFR/9oACAECAQE/EFxj/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERIVFx/9oACAEBAAE/EHChwwK9Nw1Cs//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg",
+          "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/2ab11/cover_7.jpg 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/16c5c/cover_7.jpg 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/3f865/cover_7.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/ee20b/cover_7.avif 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/5c720/cover_7.avif 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/991c3/cover_7.avif 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/b7eae/cover_7.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/1d6f2/cover_7.webp 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/f0b6f/cover_7.webp 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d54e9/cover_7.webp 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/382d3/cover_7.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-07T00:00:00.000Z",
+  "dateModified": "2021-07-07T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/storms-of-doors",
+  "route": "/storms-of-doors",
+  "pathName": "storms-of-doors",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/storms-of-doors"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "The Darkest Something",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGkhnAX/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEDERMU/9oACAEBAAEFAnM2bUdDP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAABITH/2gAIAQEABj8CjRWYf//EABoQAAICAwAAAAAAAAAAAAAAAAABIVExYbH/2gAIAQEAAT8hzaQ7XSkq4P/aAAwDAQACAAMAAAAQDC//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEUH/2gAIAQMBAT8Q2I//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQIBAT8QGl1d/8QAHBABAAICAwEAAAAAAAAAAAAAAQAhEZExUWGx/9oACAEBAAE/EDEe0jSbichdpTUAoMemXyf/2Q=="
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg",
+          "srcSet": "/static/b57872d67fc00d945468ce891f38f187/2ab11/cover_6.jpg 230w,\\n/static/b57872d67fc00d945468ce891f38f187/16c5c/cover_6.jpg 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg 920w,\\n/static/b57872d67fc00d945468ce891f38f187/3f865/cover_6.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/ee20b/cover_6.avif 230w,\\n/static/b57872d67fc00d945468ce891f38f187/5c720/cover_6.avif 460w,\\n/static/b57872d67fc00d945468ce891f38f187/991c3/cover_6.avif 920w,\\n/static/b57872d67fc00d945468ce891f38f187/b7eae/cover_6.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/1d6f2/cover_6.webp 230w,\\n/static/b57872d67fc00d945468ce891f38f187/f0b6f/cover_6.webp 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d54e9/cover_6.webp 920w,\\n/static/b57872d67fc00d945468ce891f38f187/382d3/cover_6.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-06T00:00:00.000Z",
+  "dateModified": "2021-07-06T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/the-darkest-something",
+  "route": "/the-darkest-something",
+  "pathName": "the-darkest-something",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/the-darkest-something"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Valley in the Storms",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAAB2aAzkFf/xAAYEAACAwAAAAAAAAAAAAAAAAAAAQISMf/aAAgBAQABBQJE7IWf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAD/9oACAEDAQE/AdyC/8QAFREBAQAAAAAAAAAAAAAAAAAAAhD/2gAIAQIBAT8BE//EABkQAAEFAAAAAAAAAAAAAAAAAAEAAhAhYf/aAAgBAQAGPwKLYTq//8QAFxABAQEBAAAAAAAAAAAAAAAAEQABIf/aAAgBAQABPyGdaCct6b3/2gAMAwEAAgADAAAAEPQv/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITGx/9oACAEDAQE/EKJTwkSvh//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCmv//EABoQAQACAwEAAAAAAAAAAAAAAAEAESFBYVH/2gAIAQEAAT8QSiQo09D7E2DWBhTvZ//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg",
+          "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/2ab11/cover_5.jpg 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/16c5c/cover_5.jpg 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/3f865/cover_5.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/ee20b/cover_5.avif 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/5c720/cover_5.avif 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/991c3/cover_5.avif 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/b7eae/cover_5.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/1d6f2/cover_5.webp 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/f0b6f/cover_5.webp 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d54e9/cover_5.webp 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/382d3/cover_5.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-05T00:00:00.000Z",
+  "dateModified": "2021-07-05T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Illi cornibus innata Lorem markdownum nervo aequore iaceret fames. Ore spatium luctus ventre inquit\\nprohibebant munere eripui, possem foret…",
+  "timeToRead": 1,
+  "slug": "/valley-in-the-storms",
+  "route": "/valley-in-the-storms",
+  "pathName": "valley-in-the-storms",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/valley-in-the-storms"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Flames in the Time",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAD/9oADAMBAAIQAxAAAAGbWM1pEv/EABgQAAMBAQAAAAAAAAAAAAAAAAABAgMS/9oACAEBAAEFAlZhaLtdf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAECAQE/Aaf/xAAYEAACAwAAAAAAAAAAAAAAAAAAECFhcf/aAAgBAQAGPwKC9X//xAAYEAADAQEAAAAAAAAAAAAAAAAAARExYf/aAAgBAQABPyGcSZ0xOpNFSM//2gAMAwEAAgADAAAAEH/P/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEDAQE/EJiP/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oACAECAQE/EMhH/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIVExYXH/2gAIAQEAAT8QO2KKWxbvqNxJAFImyG4j2f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg",
+          "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/2ab11/cover_4.jpg 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/16c5c/cover_4.jpg 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/3f865/cover_4.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/ee20b/cover_4.avif 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/5c720/cover_4.avif 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/991c3/cover_4.avif 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/b7eae/cover_4.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/1d6f2/cover_4.webp 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/f0b6f/cover_4.webp 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d54e9/cover_4.webp 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/382d3/cover_4.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-04T00:00:00.000Z",
+  "dateModified": "2021-07-04T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Nec Stygios movit sceleri resupino amplectimur Lorem markdownum Pythona nobis calidusque aspicit  haerenti Procrin  Anius\\nvenerande!  Pascua…",
+  "timeToRead": 1,
+  "slug": "/flames-in-the-time",
+  "route": "/flames-in-the-time",
+  "pathName": "flames-in-the-time",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/flames-in-the-time"
+}
+      </code>
+    </pre>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component FeedTemplate correctly render a tag feed 1`] = `
+<DocumentFragment>
+  <div
+    class="feed-wrapper"
+  >
+    <pre>
+      <code>
+        {
+  "title": "Big Test",
+  "description": "A big test intended for checking the MDX rendering.",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg",
+          "srcSet": "/static/be66e1f465117be1f96d414f8870896a/2ab11/big_test.jpg 230w,\\n/static/be66e1f465117be1f96d414f8870896a/16c5c/big_test.jpg 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg 920w,\\n/static/be66e1f465117be1f96d414f8870896a/3f865/big_test.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/ee20b/big_test.avif 230w,\\n/static/be66e1f465117be1f96d414f8870896a/5c720/big_test.avif 460w,\\n/static/be66e1f465117be1f96d414f8870896a/991c3/big_test.avif 920w,\\n/static/be66e1f465117be1f96d414f8870896a/b7eae/big_test.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/1d6f2/big_test.webp 230w,\\n/static/be66e1f465117be1f96d414f8870896a/f0b6f/big_test.webp 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d54e9/big_test.webp 920w,\\n/static/be66e1f465117be1f96d414f8870896a/382d3/big_test.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water for the big test.",
+  "datePublished": "2021-08-01T00:00:00.000Z",
+  "dateModified": "2021-08-01T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "test",
+    "markdown",
+    "big"
+  ],
+  "excerpt": "NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…",
+  "timeToRead": 3,
+  "slug": "/big-sample-test",
+  "route": "/big-sample-test",
+  "pathName": "big-sample-test",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/big-sample-test"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Storms of Doors",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHRUzTCf//EABgQAAMBAQAAAAAAAAAAAAAAAAACEwER/9oACAEBAAEFAqaVblHP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAQUAAAAAAAAAAAAAAAAAAAECECEx/9oACAEBAAY/Aqcakf/EABkQAAMAAwAAAAAAAAAAAAAAAAABMRFhkf/aAAgBAQABPyGD7ohyseo//9oADAMBAAIAAwAAABCLz//EABURAQEAAAAAAAAAAAAAAAAAAACB/9oACAEDAQE/EFf/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARFR/9oACAECAQE/EFxj/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERIVFx/9oACAEBAAE/EHChwwK9Nw1Cs//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg",
+          "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/2ab11/cover_7.jpg 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/16c5c/cover_7.jpg 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/3f865/cover_7.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/ee20b/cover_7.avif 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/5c720/cover_7.avif 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/991c3/cover_7.avif 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/b7eae/cover_7.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/1d6f2/cover_7.webp 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/f0b6f/cover_7.webp 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d54e9/cover_7.webp 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/382d3/cover_7.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-07T00:00:00.000Z",
+  "dateModified": "2021-07-07T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/storms-of-doors",
+  "route": "/storms-of-doors",
+  "pathName": "storms-of-doors",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/storms-of-doors"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "The Darkest Something",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGkhnAX/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEDERMU/9oACAEBAAEFAnM2bUdDP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAABITH/2gAIAQEABj8CjRWYf//EABoQAAICAwAAAAAAAAAAAAAAAAABIVExYbH/2gAIAQEAAT8hzaQ7XSkq4P/aAAwDAQACAAMAAAAQDC//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEUH/2gAIAQMBAT8Q2I//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQIBAT8QGl1d/8QAHBABAAICAwEAAAAAAAAAAAAAAQAhEZExUWGx/9oACAEBAAE/EDEe0jSbichdpTUAoMemXyf/2Q=="
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg",
+          "srcSet": "/static/b57872d67fc00d945468ce891f38f187/2ab11/cover_6.jpg 230w,\\n/static/b57872d67fc00d945468ce891f38f187/16c5c/cover_6.jpg 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg 920w,\\n/static/b57872d67fc00d945468ce891f38f187/3f865/cover_6.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/ee20b/cover_6.avif 230w,\\n/static/b57872d67fc00d945468ce891f38f187/5c720/cover_6.avif 460w,\\n/static/b57872d67fc00d945468ce891f38f187/991c3/cover_6.avif 920w,\\n/static/b57872d67fc00d945468ce891f38f187/b7eae/cover_6.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/1d6f2/cover_6.webp 230w,\\n/static/b57872d67fc00d945468ce891f38f187/f0b6f/cover_6.webp 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d54e9/cover_6.webp 920w,\\n/static/b57872d67fc00d945468ce891f38f187/382d3/cover_6.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-06T00:00:00.000Z",
+  "dateModified": "2021-07-06T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/the-darkest-something",
+  "route": "/the-darkest-something",
+  "pathName": "the-darkest-something",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/the-darkest-something"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Valley in the Storms",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAAB2aAzkFf/xAAYEAACAwAAAAAAAAAAAAAAAAAAAQISMf/aAAgBAQABBQJE7IWf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAD/9oACAEDAQE/AdyC/8QAFREBAQAAAAAAAAAAAAAAAAAAAhD/2gAIAQIBAT8BE//EABkQAAEFAAAAAAAAAAAAAAAAAAEAAhAhYf/aAAgBAQAGPwKLYTq//8QAFxABAQEBAAAAAAAAAAAAAAAAEQABIf/aAAgBAQABPyGdaCct6b3/2gAMAwEAAgADAAAAEPQv/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITGx/9oACAEDAQE/EKJTwkSvh//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCmv//EABoQAQACAwEAAAAAAAAAAAAAAAEAESFBYVH/2gAIAQEAAT8QSiQo09D7E2DWBhTvZ//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg",
+          "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/2ab11/cover_5.jpg 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/16c5c/cover_5.jpg 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/3f865/cover_5.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/ee20b/cover_5.avif 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/5c720/cover_5.avif 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/991c3/cover_5.avif 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/b7eae/cover_5.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/1d6f2/cover_5.webp 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/f0b6f/cover_5.webp 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d54e9/cover_5.webp 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/382d3/cover_5.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-05T00:00:00.000Z",
+  "dateModified": "2021-07-05T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Illi cornibus innata Lorem markdownum nervo aequore iaceret fames. Ore spatium luctus ventre inquit\\nprohibebant munere eripui, possem foret…",
+  "timeToRead": 1,
+  "slug": "/valley-in-the-storms",
+  "route": "/valley-in-the-storms",
+  "pathName": "valley-in-the-storms",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/valley-in-the-storms"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Flames in the Time",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAD/9oADAMBAAIQAxAAAAGbWM1pEv/EABgQAAMBAQAAAAAAAAAAAAAAAAABAgMS/9oACAEBAAEFAlZhaLtdf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAECAQE/Aaf/xAAYEAACAwAAAAAAAAAAAAAAAAAAECFhcf/aAAgBAQAGPwKC9X//xAAYEAADAQEAAAAAAAAAAAAAAAAAARExYf/aAAgBAQABPyGcSZ0xOpNFSM//2gAMAwEAAgADAAAAEH/P/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEDAQE/EJiP/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oACAECAQE/EMhH/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIVExYXH/2gAIAQEAAT8QO2KKWxbvqNxJAFImyG4j2f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg",
+          "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/2ab11/cover_4.jpg 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/16c5c/cover_4.jpg 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/3f865/cover_4.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/ee20b/cover_4.avif 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/5c720/cover_4.avif 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/991c3/cover_4.avif 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/b7eae/cover_4.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/1d6f2/cover_4.webp 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/f0b6f/cover_4.webp 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d54e9/cover_4.webp 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/382d3/cover_4.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-04T00:00:00.000Z",
+  "dateModified": "2021-07-04T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Nec Stygios movit sceleri resupino amplectimur Lorem markdownum Pythona nobis calidusque aspicit  haerenti Procrin  Anius\\nvenerande!  Pascua…",
+  "timeToRead": 1,
+  "slug": "/flames-in-the-time",
+  "route": "/flames-in-the-time",
+  "pathName": "flames-in-the-time",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/flames-in-the-time"
+}
+      </code>
+    </pre>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component FeedTemplate correctly renders an index feed 1`] = `
+<DocumentFragment>
+  <div
+    class="feed-wrapper"
+  >
+    <pre>
+      <code>
+        {
+  "title": "Big Test",
+  "description": "A big test intended for checking the MDX rendering.",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAbMibiCf/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDEhH/2gAIAQEAAQUCFX4NZaVSf//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AaU//8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/AZxL/8QAGBAAAgMAAAAAAAAAAAAAAAAAABEBITH/2gAIAQEABj8CtCg0/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAITFhgf/aAAgBAQABPyHFiGhEkwW6qPyjs//aAAwDAQACAAMAAAAQ+9//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EKSwo//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAgEBPxCmof/EABgQAQEBAQEAAAAAAAAAAAAAAAERACHB/9oACAEBAAE/EEoQEKl5pOugKC4CkQGL3f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg",
+          "srcSet": "/static/be66e1f465117be1f96d414f8870896a/2ab11/big_test.jpg 230w,\\n/static/be66e1f465117be1f96d414f8870896a/16c5c/big_test.jpg 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d43de/big_test.jpg 920w,\\n/static/be66e1f465117be1f96d414f8870896a/3f865/big_test.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/ee20b/big_test.avif 230w,\\n/static/be66e1f465117be1f96d414f8870896a/5c720/big_test.avif 460w,\\n/static/be66e1f465117be1f96d414f8870896a/991c3/big_test.avif 920w,\\n/static/be66e1f465117be1f96d414f8870896a/b7eae/big_test.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/be66e1f465117be1f96d414f8870896a/1d6f2/big_test.webp 230w,\\n/static/be66e1f465117be1f96d414f8870896a/f0b6f/big_test.webp 460w,\\n/static/be66e1f465117be1f96d414f8870896a/d54e9/big_test.webp 920w,\\n/static/be66e1f465117be1f96d414f8870896a/382d3/big_test.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water for the big test.",
+  "datePublished": "2021-08-01T00:00:00.000Z",
+  "dateModified": "2021-08-01T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "test",
+    "markdown",
+    "big"
+  ],
+  "excerpt": "NOTE: This \\"post\\" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…",
+  "timeToRead": 3,
+  "slug": "/big-sample-test",
+  "route": "/big-sample-test",
+  "pathName": "big-sample-test",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/big-sample-test"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Storms of Doors",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHRUzTCf//EABgQAAMBAQAAAAAAAAAAAAAAAAACEwER/9oACAEBAAEFAqaVblHP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAQUAAAAAAAAAAAAAAAAAAAECECEx/9oACAEBAAY/Aqcakf/EABkQAAMAAwAAAAAAAAAAAAAAAAABMRFhkf/aAAgBAQABPyGD7ohyseo//9oADAMBAAIAAwAAABCLz//EABURAQEAAAAAAAAAAAAAAAAAAACB/9oACAEDAQE/EFf/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARFR/9oACAECAQE/EFxj/8QAGRAAAwADAAAAAAAAAAAAAAAAAAERIVFx/9oACAEBAAE/EHChwwK9Nw1Cs//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg",
+          "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/2ab11/cover_7.jpg 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/16c5c/cover_7.jpg 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d43de/cover_7.jpg 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/3f865/cover_7.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/ee20b/cover_7.avif 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/5c720/cover_7.avif 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/991c3/cover_7.avif 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/b7eae/cover_7.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/9a28d51b747467a7e71bd34857a053d3/1d6f2/cover_7.webp 230w,\\n/static/9a28d51b747467a7e71bd34857a053d3/f0b6f/cover_7.webp 460w,\\n/static/9a28d51b747467a7e71bd34857a053d3/d54e9/cover_7.webp 920w,\\n/static/9a28d51b747467a7e71bd34857a053d3/382d3/cover_7.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-07T00:00:00.000Z",
+  "dateModified": "2021-07-07T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/storms-of-doors",
+  "route": "/storms-of-doors",
+  "pathName": "storms-of-doors",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/storms-of-doors"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "The Darkest Something",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGkhnAX/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEDERMU/9oACAEBAAEFAnM2bUdDP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAABITH/2gAIAQEABj8CjRWYf//EABoQAAICAwAAAAAAAAAAAAAAAAABIVExYbH/2gAIAQEAAT8hzaQ7XSkq4P/aAAwDAQACAAMAAAAQDC//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEUH/2gAIAQMBAT8Q2I//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQIBAT8QGl1d/8QAHBABAAICAwEAAAAAAAAAAAAAAQAhEZExUWGx/9oACAEBAAE/EDEe0jSbichdpTUAoMemXyf/2Q=="
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg",
+          "srcSet": "/static/b57872d67fc00d945468ce891f38f187/2ab11/cover_6.jpg 230w,\\n/static/b57872d67fc00d945468ce891f38f187/16c5c/cover_6.jpg 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d43de/cover_6.jpg 920w,\\n/static/b57872d67fc00d945468ce891f38f187/3f865/cover_6.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/ee20b/cover_6.avif 230w,\\n/static/b57872d67fc00d945468ce891f38f187/5c720/cover_6.avif 460w,\\n/static/b57872d67fc00d945468ce891f38f187/991c3/cover_6.avif 920w,\\n/static/b57872d67fc00d945468ce891f38f187/b7eae/cover_6.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/b57872d67fc00d945468ce891f38f187/1d6f2/cover_6.webp 230w,\\n/static/b57872d67fc00d945468ce891f38f187/f0b6f/cover_6.webp 460w,\\n/static/b57872d67fc00d945468ce891f38f187/d54e9/cover_6.webp 920w,\\n/static/b57872d67fc00d945468ce891f38f187/382d3/cover_6.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-06T00:00:00.000Z",
+  "dateModified": "2021-07-06T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Mole solis Lorem markdownum inquire clades nitentem herbas gramen ultroque, umeroque\\ngemellam, de natura me, fuit. Aut ideoque piget, de…",
+  "timeToRead": 1,
+  "slug": "/the-darkest-something",
+  "route": "/the-darkest-something",
+  "pathName": "the-darkest-something",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/the-darkest-something"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Valley in the Storms",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAAB2aAzkFf/xAAYEAACAwAAAAAAAAAAAAAAAAAAAQISMf/aAAgBAQABBQJE7IWf/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAD/9oACAEDAQE/AdyC/8QAFREBAQAAAAAAAAAAAAAAAAAAAhD/2gAIAQIBAT8BE//EABkQAAEFAAAAAAAAAAAAAAAAAAEAAhAhYf/aAAgBAQAGPwKLYTq//8QAFxABAQEBAAAAAAAAAAAAAAAAEQABIf/aAAgBAQABPyGdaCct6b3/2gAMAwEAAgADAAAAEPQv/8QAGREAAgMBAAAAAAAAAAAAAAAAAAERITGx/9oACAEDAQE/EKJTwkSvh//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCmv//EABoQAQACAwEAAAAAAAAAAAAAAAEAESFBYVH/2gAIAQEAAT8QSiQo09D7E2DWBhTvZ//Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg",
+          "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/2ab11/cover_5.jpg 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/16c5c/cover_5.jpg 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d43de/cover_5.jpg 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/3f865/cover_5.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/ee20b/cover_5.avif 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/5c720/cover_5.avif 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/991c3/cover_5.avif 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/b7eae/cover_5.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/23f3810b769821db9ccc2f180c4a95bb/1d6f2/cover_5.webp 230w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/f0b6f/cover_5.webp 460w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/d54e9/cover_5.webp 920w,\\n/static/23f3810b769821db9ccc2f180c4a95bb/382d3/cover_5.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-05T00:00:00.000Z",
+  "dateModified": "2021-07-05T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Illi cornibus innata Lorem markdownum nervo aequore iaceret fames. Ore spatium luctus ventre inquit\\nprohibebant munere eripui, possem foret…",
+  "timeToRead": 1,
+  "slug": "/valley-in-the-storms",
+  "route": "/valley-in-the-storms",
+  "pathName": "valley-in-the-storms",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/valley-in-the-storms"
+}
+      </code>
+    </pre>
+    <pre>
+      <code>
+        {
+  "title": "Flames in the Time",
+  "description": "Description",
+  "coverImg": {
+    "gatsbyImageData": {
+      "layout": "constrained",
+      "placeholder": {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAD/9oADAMBAAIQAxAAAAGbWM1pEv/EABgQAAMBAQAAAAAAAAAAAAAAAAABAgMS/9oACAEBAAEFAlZhaLtdf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAECAQE/Aaf/xAAYEAACAwAAAAAAAAAAAAAAAAAAECFhcf/aAAgBAQAGPwKC9X//xAAYEAADAQEAAAAAAAAAAAAAAAAAARExYf/aAAgBAQABPyGcSZ0xOpNFSM//2gAMAwEAAgADAAAAEH/P/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEDAQE/EJiP/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oACAECAQE/EMhH/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIVExYXH/2gAIAQEAAT8QO2KKWxbvqNxJAFImyG4j2f/Z"
+      },
+      "backgroundColor": "transparent",
+      "images": {
+        "fallback": {
+          "src": "/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg",
+          "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/2ab11/cover_4.jpg 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/16c5c/cover_4.jpg 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d43de/cover_4.jpg 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/3f865/cover_4.jpg 1840w",
+          "sizes": "(min-width: 920px) 920px, 100vw"
+        },
+        "sources": [
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/ee20b/cover_4.avif 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/5c720/cover_4.avif 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/991c3/cover_4.avif 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/b7eae/cover_4.avif 1840w",
+            "type": "image/avif",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          },
+          {
+            "srcSet": "/static/54c2da39786649da7ab962cb42ae6558/1d6f2/cover_4.webp 230w,\\n/static/54c2da39786649da7ab962cb42ae6558/f0b6f/cover_4.webp 460w,\\n/static/54c2da39786649da7ab962cb42ae6558/d54e9/cover_4.webp 920w,\\n/static/54c2da39786649da7ab962cb42ae6558/382d3/cover_4.webp 1840w",
+            "type": "image/webp",
+            "sizes": "(min-width: 920px) 920px, 100vw"
+          }
+        ]
+      },
+      "width": 920,
+      "height": 368
+    }
+  },
+  "coverImageAlt": "An image tagged as nature and water.",
+  "datePublished": "2021-07-04T00:00:00.000Z",
+  "dateModified": "2021-07-04T00:00:00.000Z",
+  "category": "tech",
+  "tags": [
+    "programming",
+    "stuff",
+    "other"
+  ],
+  "excerpt": "Nec Stygios movit sceleri resupino amplectimur Lorem markdownum Pythona nobis calidusque aspicit  haerenti Procrin  Anius\\nvenerande!  Pascua…",
+  "timeToRead": 1,
+  "slug": "/flames-in-the-time",
+  "route": "/flames-in-the-time",
+  "pathName": "flames-in-the-time",
+  "url": "https://gatsby-advanced-starter-demo.netlify.com/flames-in-the-time"
+}
+      </code>
+    </pre>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://localhost:9000",
+  "integrationFolder": "cypress/e2e",
+  "fixturesFolder": false
+}

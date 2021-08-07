@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Disqus renders correctly when config.disqusShortname is not set 1`] = `<DocumentFragment />`;
+
+exports[`component Disqus renders correctly when config.disqusShortname is set 1`] = `
+<DocumentFragment>
+  <div
+    id="disqus_thread"
+  />
+</DocumentFragment>
+`;

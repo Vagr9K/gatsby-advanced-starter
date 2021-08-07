@@ -1,0 +1,19 @@
+.social-links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.social-links > div {
+  margin: 5px 15px;
+  cursor: pointer;
+}
+
+.share-count {
+  text-align: center;
+}

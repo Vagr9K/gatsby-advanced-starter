@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component SEO renders correctly on article pages 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en",
+    }
+  }
+>
+  <title>
+    Big Test
+  </title>
+  <link
+    href="/logos/logo-1024.png"
+    rel="shortcut icon"
+  />
+  <meta
+    content="Decsription"
+    name="description"
+  />
+  <meta
+    content="5.jpg"
+    name="image"
+  />
+  <meta
+    content="Big Test"
+    property="og:title"
+  />
+  <meta
+    content="article"
+    property="og:type"
+  />
+  <meta
+    content="https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test"
+    property="og:url"
+  />
+  <meta
+    content="5.jpg"
+    property="og:image"
+  />
+  <meta
+    content="CoverImageAlt"
+    property="og:image:alt"
+  />
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />
+  <meta
+    content="Decsription"
+    property="og:description"
+  />
+  <meta
+    content="1111111111111111"
+    property="fb:app_id"
+  />
+  <meta
+    content="2018-03-01T00:00:00.000Z"
+    property="article:published_time"
+  />
+  <meta
+    content="2018-03-01T00:00:00.000Z"
+    property="article:modified_time"
+  />
+  <meta
+    content="http://examples.opengraphprotocol.us/profile.html"
+    property="article:author"
+  />
+  <meta
+    content="First"
+    property="profile:first_name"
+  />
+  <meta
+    content="Last"
+    property="profile:last_name"
+  />
+  <meta
+    content="AdvancedUser"
+    property="profile:username"
+  />
+  <meta
+    content="moar"
+    property="article:section"
+  />
+  <meta
+    content="test"
+    property="article:tag"
+  />
+  <meta
+    content="huge"
+    property="article:tag"
+  />
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"BlogPosting","image":"5.jpg","url":"https://gatsby-advanced-starter-demo.netlify.com/blog/big-sample-test","headline":"Big Test","name":"Big Test","description":"Decsription","dateCreated":"2018-03-01T00:00:00.000Z","datePublished":"2018-03-01T00:00:00.000Z","dateModified":"2018-03-01T00:00:00.000Z","author":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"User Location"},"creator":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"User Location"},"publisher":{"@context":"https://schema.org","@type":"Organization","url":"https://gatsby-advanced-starter-demo.netlify.com","name":"Organization Name","description":"Organization description","logo":"/logos/logo-512.png"},"mainEntityOfPage":"True","keywords":["test","huge"],"articleSection":"moar","articleBody":"\\ntitle: \\"Big Test\\"\\ncover: \\"5.jpg\\"\\ndescription: \\"Decsription\\"\\ncategory: \\"moar\\"\\ndatePublished: \\"2018-03-01\\"\\ndateModified: \\"2018-03-01\\"\\nslug: \\"Big-Sample_Test\\"\\ntags:\\n  test\\n  huge\\n\\nMDX Test\\n\\n;\\n\\nHere's a color picker!\\n\\nNOTE: This \\"post\\" is based on Markdown Cheatsheet and is meant to test styling of Markdown generated documents.\\n\\nThis is intended as a quick reference and showcase. For more complete info, see John Gruber's original spec and the Github-flavored Markdown info page.\\n\\nThis cheatsheet is specifically Markdown Here's version of Github-flavored Markdown. This differs slightly in styling and syntax from what Github uses, so what you see below might vary a little from what you get in a Markdown Here email, but it should be pretty close.\\n\\nYou can play around with Markdown on our live demo page.\\n\\n(If you're not a Markdown Here user, check out the Markdown Cheatsheet that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)\\n\\nTable of Contents\\n\\nHeaders\\nEmphasis\\nLists\\nLinks\\nImages\\nCode and Syntax Highlighting\\nTables\\nBlockquotes\\nInline HTML\\nHorizontal Rule\\nLine Breaks\\nYouTube Videos\\n\\nHeaders\\n\\nH1\\nH2\\nH3\\nH4\\nH5\\nH6\\n\\nAlternatively, for H1 and H2, an underline-ish style:\\n\\nAlt-H1\\n\\nAlt-H2\\n\\nH1\\n\\nH2\\n\\nH3\\n\\nH4\\n\\nH5\\n\\nH6\\n\\nAlternatively, for H1 and H2, an underline-ish style:\\n\\nAlt-H1\\n\\nAlt-H2\\n\\nEmphasis\\n\\nEmphasis, aka italics, with asterisks or underscores.\\n\\nStrong emphasis, aka bold, with asterisks or underscores.\\n\\nCombined emphasis with asterisks and underscores.\\n\\nStrikethrough uses two tildes. Scratch this.\\n\\nEmphasis, aka italics, with asterisks or underscores.\\n\\nStrong emphasis, aka bold, with asterisks or underscores.\\n\\nCombined emphasis with asterisks and underscores.\\n\\nStrikethrough uses two tildes. Scratch this.\\n\\nLists\\n\\nFirst ordered list item\\nAnother item\\n  Unordered sub-list.\\nActual numbers don't matter, just that it's a number\\n  Ordered sub-list\\nAnd another item.\\n\\n   Some text that should be aligned with the above item.\\n\\nUnordered list can use asterisks\\nOr minuses\\nOr pluses\\n\\nFirst ordered list item\\nAnother item\\n\\n   Unordered sub-list.\\n\\nActual numbers don't matter, just that it's a number\\n\\n   Ordered sub-list\\n\\nAnd another item.\\n\\n   Some text that should be aligned with the above item.\\n\\nUnordered list can use asterisks\\n\\nOr minuses\\n\\nOr pluses\\n\\nLinks\\n\\nThere are two ways to create links.\\n\\nI'm an inline-style link\\n\\nI'm a reference-style link\\n\\nYou can use numbers for reference-style link definitions\\n\\nOr leave it empty and use the [link text itself]\\n\\nURLs and URLs in angle brackets will automatically get turned into links.\\nhttp://www.example.com or  and sometimes\\nexample.com (but not on Github, for example).\\n\\nSome text to show that the reference links can follow later.\\n\\n[arbitrary case-insensitive reference text]: https://www.mozilla.org\\n[1]: http://slashdot.org\\n[link text itself]: http://www.reddit.com\\n\\nI'm an inline-style link\\n\\nI'm a reference-style link\\n\\nYou can use numbers for reference-style link definitions\\n\\nOr leave it empty and use the [link text itself]\\n\\nURLs and URLs in angle brackets will automatically get turned into links.\\nhttp://www.example.com or  and sometimes\\nexample.com (but not on Github, for example).\\n\\nSome text to show that the reference links can follow later.\\n\\n[arbitrary case-insensitive reference text]: https://www.mozilla.org\\n[1]: http://slashdot.org\\n[link text itself]: http://www.reddit.com\\n\\nImages\\n\\nHere's our logo (hover to see the title text):\\n\\nInline-style:\\nalt text\\n\\nReference-style:\\nalt text\\n\\n[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \\"Logo Title Text 2\\"\\n\\nHere's our logo (hover to see the title text):\\n\\nInline-style:\\nalt text\\n\\nReference-style:\\nalt text\\n\\n[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \\"Logo Title Text 2\\"\\n\\nCode and Syntax Highlighting\\n\\nCode blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and Markdown Here -- support syntax highlighting. Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the highlight.js demo page.\\n\\nInline code has back-ticks around it.\\n\\nInline code has back-ticks around it.\\n\\nBlocks of code are either fenced by lines with three back-ticks\\n\\n            indicated, so no syntax highlighting. But let's throw in a\\n    &lt;b&gt;tag&lt;/b&gt;.\\n\\nvar s = \\"JavaScript syntax highlighting\\";\\nalert(s);\\n\\ns = \\"Python syntax highlighting\\"\\nprint s\\n\\nNo language indicated, so no syntax highlighting in Markdown Here (varies on Github).\\nBut let's throw in a tag.\\n\\nAgain, to see what languages are available for highlighting, and how to write those language names, see the highlight.js demo page.\\n\\nTables\\n\\nTables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.\\n\\nColons can be used to align columns.\\n\\n| Tables        | Are           | Cool  |\\n| ------------- | :-----------: | ----: |\\n| col 3 is      | right-aligned | $1600 |\\n| col 2 is      | centered      | $12   |\\n| zebra stripes | are neat      | $1    |\\n\\nThe outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.\\n\\n| | Markdown | Less           | Pretty     |     |\\n| | ------------- | --------------- | ---------- |------- |\\n| | Still   | renders | nicely | |\\n| | 1               | 2                 | 3          |          |\\n\\nColons can be used to align columns.\\n\\n| Tables        |      Are      |  Cool |\\n| ------------- | :-----------: | ----: |\\n| col 3 is      | right-aligned | $1600 |\\n| col 2 is      |   centered    |   $12 |\\n| zebra stripes |   are neat    |    $1 |\\n\\nThe outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.\\n\\n| Markdown | Less      | Pretty     |\\n| -------- | --------- | ---------- |\\n| Still  | renders | nicely |\\n| 1        | 2         | 3          |\\n\\nBlockquotes\\n\\n&gt; Blockquotes are very handy in email to emulate reply text.\\n&gt; This line is part of the same quote.\\n\\nQuote break.\\n\\n&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can put Markdown into a blockquote.\\n\\n&gt; Blockquotes are very handy in email to emulate reply text.\\n&gt; This line is part of the same quote.\\n\\nQuote break.\\n\\n&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can put Markdown into a blockquote.\\n\\nInline HTML\\n\\nYou can also use raw HTML in your Markdown, and it'll mostly work pretty well.\\n\\n  Definition list\\n  Is something people use sometimes.\\n\\n  Markdown in HTML\\n  Does not work very well. Use HTML tags.\\n\\n  Definition list\\n  Is something people use sometimes.\\n\\n  Markdown in HTML\\n  Does not work very well. Use HTML tags.\\n\\nHorizontal Rule\\n\\nThree or more...\\n\\nHyphens\\n\\nAsterisks\\n\\nUnderscores\\n\\nThree or more...\\n\\nHyphens\\n\\nAsterisks\\n\\nUnderscores\\n\\nLine Breaks\\n\\nMy basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. \\"Markdown Toggle\\" is your friend.\\n\\nHere are some things to try out:\\n\\nHere's a line for us to start with.\\n\\nThis line is separated from the one above by two newlines, so it will be a separate paragraph.\\n\\nThis line is also a separate paragraph, but...\\nThis line is only separated by a single newline, so it's a separate line in the same paragraph.\\n\\nHere's a line for us to start with.\\n\\nThis line is separated from the one above by two newlines, so it will be a separate paragraph.\\n\\nThis line is also begins a separate paragraph, but...\\nThis line is only separated by a single newline, so it's a separate line in the same paragraph.\\n\\n(Technical note: Markdown Here uses GFM line breaks, so there's no need to use MD's two-space line breaks.)\\n\\nYouTube Videos\\n\\nThey can't be added directly but you can add an image with a link to the video like this:\\n\\nOr, in pure Markdown, but losing the image sizing and border:\\n\\nIMAGE ALT TEXT HERE\\n"}
+  </script>
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="Big Test"
+    name="twitter:title"
+  />
+  <meta
+    content="Decsription"
+    name="twitter:description"
+  />
+  <meta
+    content="5.jpg"
+    name="twitter:image"
+  />
+  <meta
+    content="CoverImageAlt"
+    name="twitter:image:alt"
+  />
+  <meta
+    content="Vagr9K"
+    name="twitter:creator"
+  />
+  <meta
+    content="Vagr9K"
+    name="twitter:site"
+  />
+</HelmetWrapper>
+`;
+
+exports[`component SEO renders correctly on website pages 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  htmlAttributes={
+    Object {
+      "lang": "en",
+    }
+  }
+>
+  <title>
+    Gatsby Advanced Starter
+  </title>
+  <link
+    href="/logos/logo-1024.png"
+    rel="shortcut icon"
+  />
+  <meta
+    content="A GatsbyJS starter equipped with advanced features."
+    name="description"
+  />
+  <meta
+    content="/logos/logo-1024.png"
+    name="image"
+  />
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:title"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+  <meta
+    content="https://gatsby-advanced-starter-demo.netlify.com"
+    property="og:url"
+  />
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />
+  <meta
+    content="A GatsbyJS starter equipped with advanced features."
+    property="og:image:alt"
+  />
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />
+  <meta
+    content="A GatsbyJS starter equipped with advanced features."
+    property="og:description"
+  />
+  <meta
+    content="1111111111111111"
+    property="fb:app_id"
+  />
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"https://schema.org","@type":"Organization","url":"https://gatsby-advanced-starter-demo.netlify.com","name":"Organization Name","description":"Organization description","logo":"/logos/logo-512.png"}
+  </script>
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+  <meta
+    content="Gatsby Advanced Starter"
+    name="twitter:title"
+  />
+  <meta
+    content="A GatsbyJS starter equipped with advanced features."
+    name="twitter:description"
+  />
+  <meta
+    content="/logos/logo-1024.png"
+    name="twitter:image"
+  />
+  <meta
+    content="A GatsbyJS starter equipped with advanced features."
+    name="twitter:image:alt"
+  />
+  <meta
+    content="Vagr9K"
+    name="twitter:creator"
+  />
+  <meta
+    content="Vagr9K"
+    name="twitter:site"
+  />
+</HelmetWrapper>
+`;

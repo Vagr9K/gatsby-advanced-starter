@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`seo module OpenGraphTags generates correct tags on article pages 1`] = `
+Array [
+  <meta
+    content="Post title"
+    property="og:title"
+  />,
+  <meta
+    content="article"
+    property="og:type"
+  />,
+  <meta
+    content="/posts/url"
+    property="og:url"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />,
+  <meta
+    content="Post cover image alt text."
+    property="og:image:alt"
+  />,
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />,
+  <meta
+    content="Post description."
+    property="og:description"
+  />,
+  <meta
+    content="1825356251115265"
+    property="fb:app_id"
+  />,
+  <meta
+    content="2021-12-17T00:00:00.000Z"
+    property="article:published_time"
+  />,
+  <meta
+    content="2021-12-20T00:00:00.000Z"
+    property="article:modified_time"
+  />,
+  <meta
+    content="http://examples.opengraphprotocol.us/profile.html"
+    property="article:author"
+  />,
+  <meta
+    content="First"
+    property="profile:first_name"
+  />,
+  <meta
+    content="Last"
+    property="profile:last_name"
+  />,
+  <meta
+    content="AdvancedUser"
+    property="profile:username"
+  />,
+  <meta
+    content="Tech"
+    property="article:section"
+  />,
+  <meta
+    content="Tag1"
+    property="article:tag"
+  />,
+  <meta
+    content="Tag2"
+    property="article:tag"
+  />,
+]
+`;
+
+exports[`seo module OpenGraphTags generates correct tags on website pages 1`] = `
+Array [
+  <meta
+    content="Website title"
+    property="og:title"
+  />,
+  <meta
+    content="website"
+    property="og:type"
+  />,
+  <meta
+    content="/url"
+    property="og:url"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />,
+  <meta
+    content="Website image alt description."
+    property="og:image:alt"
+  />,
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />,
+  <meta
+    content="Website description."
+    property="og:description"
+  />,
+  <meta
+    content="1825356251115265"
+    property="fb:app_id"
+  />,
+]
+`;
+
+exports[`seo module OpenGraphTags generates correct tags when missing UserData 1`] = `
+Array [
+  <meta
+    content="Post title"
+    property="og:title"
+  />,
+  <meta
+    content="article"
+    property="og:type"
+  />,
+  <meta
+    content="/posts/url"
+    property="og:url"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />,
+  <meta
+    content="Post cover image alt text."
+    property="og:image:alt"
+  />,
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />,
+  <meta
+    content="Post description."
+    property="og:description"
+  />,
+  <meta
+    content="1825356251115265"
+    property="fb:app_id"
+  />,
+  <meta
+    content="2021-12-17T00:00:00.000Z"
+    property="article:published_time"
+  />,
+  <meta
+    content="2021-12-20T00:00:00.000Z"
+    property="article:modified_time"
+  />,
+  <meta
+    content="http://examples.opengraphprotocol.us/profile.html"
+    property="article:author"
+  />,
+  <meta
+    content="Tech"
+    property="article:section"
+  />,
+  <meta
+    content="Tag1"
+    property="article:tag"
+  />,
+  <meta
+    content="Tag2"
+    property="article:tag"
+  />,
+]
+`;
+
+exports[`seo module OpenGraphTags generates correct tags when missing description 1`] = `
+Array [
+  <meta
+    content="Post title"
+    property="og:title"
+  />,
+  <meta
+    content="article"
+    property="og:type"
+  />,
+  <meta
+    content="/posts/url"
+    property="og:url"
+  />,
+  <meta
+    content="/logos/logo-1024.png"
+    property="og:image"
+  />,
+  <meta
+    content="Post cover image alt text."
+    property="og:image:alt"
+  />,
+  <meta
+    content="Gatsby Advanced Starter"
+    property="og:site_name"
+  />,
+  <meta
+    content="1825356251115265"
+    property="fb:app_id"
+  />,
+  <meta
+    content="2021-12-17T00:00:00.000Z"
+    property="article:published_time"
+  />,
+  <meta
+    content="2021-12-20T00:00:00.000Z"
+    property="article:modified_time"
+  />,
+  <meta
+    content="http://examples.opengraphprotocol.us/profile.html"
+    property="article:author"
+  />,
+  <meta
+    content="First"
+    property="profile:first_name"
+  />,
+  <meta
+    content="Last"
+    property="profile:last_name"
+  />,
+  <meta
+    content="AdvancedUser"
+    property="profile:username"
+  />,
+  <meta
+    content="Tech"
+    property="article:section"
+  />,
+  <meta
+    content="Tag1"
+    property="article:tag"
+  />,
+  <meta
+    content="Tag2"
+    property="article:tag"
+  />,
+]
+`;

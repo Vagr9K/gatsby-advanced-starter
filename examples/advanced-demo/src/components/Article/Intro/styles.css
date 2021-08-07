@@ -1,0 +1,22 @@
+.article-intro {
+  display: grid;
+  justify-items: center;
+}
+
+.article-tag-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 12px;
+  justify-items: center;
+  align-items: center;
+}
+
+.category-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 12px;
+}
+
+.post-title {
+  font-size: 40px;
+}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`seo module RichSearchTags generates correct tags on article pages 1`] = `
+Array [
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"BlogPosting","image":"/logos/logo-1024.png","url":"/posts/url","headline":"Post title","name":"Post title","description":"Post description.","dateCreated":"2021-12-17T00:00:00.000Z","datePublished":"2021-12-17T00:00:00.000Z","dateModified":"2021-12-20T00:00:00.000Z","author":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"A full-stack web developer looking for a challenge!"},"creator":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"A full-stack web developer looking for a challenge!"},"publisher":{"@context":"https://schema.org","@type":"Organization","url":"https://gatsby-advanced-starter-demo.netlify.com","name":"Organization Name","description":"Organization description","logo":"/logos/logo-512.png"},"mainEntityOfPage":"True","keywords":["Tag1","Tag2"],"articleSection":"Tech","articleBody":"Post body"}
+  </script>,
+]
+`;
+
+exports[`seo module RichSearchTags generates correct tags on website pages 1`] = `
+Array [
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"https://schema.org","@type":"Organization","url":"https://gatsby-advanced-starter-demo.netlify.com","name":"Organization Name","description":"Organization description","logo":"/logos/logo-512.png"}
+  </script>,
+]
+`;
+
+exports[`seo module RichSearchTags generates correct tags when missing OrgData 1`] = `
+Array [
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"BlogPosting","image":"/logos/logo-1024.png","url":"/posts/url","headline":"Post title","name":"Post title","description":"Post description.","dateCreated":"2021-12-17T00:00:00.000Z","datePublished":"2021-12-17T00:00:00.000Z","dateModified":"2021-12-20T00:00:00.000Z","author":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"A full-stack web developer looking for a challenge!"},"creator":{"@type":"Person","givenName":"First","familyName":"Last","email":"AdvancedUser@example.com","address":"A full-stack web developer looking for a challenge!"},"mainEntityOfPage":"True","keywords":["Tag1","Tag2"],"articleSection":"Tech","articleBody":"Post body"}
+  </script>,
+]
+`;
+
+exports[`seo module RichSearchTags generates correct tags when missing UserData 1`] = `
+Array [
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"http://schema.org","@type":"BlogPosting","image":"/logos/logo-1024.png","url":"/posts/url","headline":"Post title","name":"Post title","description":"Post description.","dateCreated":"2021-12-17T00:00:00.000Z","datePublished":"2021-12-17T00:00:00.000Z","dateModified":"2021-12-20T00:00:00.000Z","publisher":{"@context":"https://schema.org","@type":"Organization","url":"https://gatsby-advanced-starter-demo.netlify.com","name":"Organization Name","description":"Organization description","logo":"/logos/logo-512.png"},"mainEntityOfPage":"True","keywords":["Tag1","Tag2"],"articleSection":"Tech","articleBody":"Post body"}
+  </script>,
+]
+`;
