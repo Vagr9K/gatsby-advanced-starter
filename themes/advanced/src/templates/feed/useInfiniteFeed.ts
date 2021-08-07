@@ -11,11 +11,11 @@ import {
   PostPlaceholder,
 } from "../../types";
 import { PageContext } from "./types";
-import { constants } from "../../config";
+import { constants, SiteConfig, useConfig } from "../../config";
 
 // Calculate the base URL for the feed
-const getBaseUrl = (pageContext: PageContext): string =>
-  `/${constants.feedMetaDirectory}${pageContext.feedType}${
+const getBaseUrl = (pageContext: PageContext, config: SiteConfig): string =>
+  `${config.pathPrefix}/${constants.feedMetaDirectory}${pageContext.feedType}${
     pageContext.feedId ? `-${pageContext.feedId}` : ""
   }`;
 
@@ -48,7 +48,9 @@ const useInfiniteFeed = (
   feedElementRef: React.RefObject<HTMLDivElement>;
   feedListing: FeedList;
 } => {
-  const baseUrl = getBaseUrl(pageContext);
+  const config = useConfig();
+
+  const baseUrl = getBaseUrl(pageContext, config);
 
   // Setup an infinite feed query
   const feedQuery = useInfiniteQuery(

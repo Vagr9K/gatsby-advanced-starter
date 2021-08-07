@@ -41,6 +41,8 @@ jest.mock("react", () => {
   };
 });
 
+jest.mock("../../../config/useConfig");
+
 const mockedReact = mocked(React, true);
 
 const queryClient = new QueryClient();
