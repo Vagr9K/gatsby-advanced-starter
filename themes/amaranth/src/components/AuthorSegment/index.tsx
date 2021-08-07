@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { ConfigContext } from "gatsby-theme-advanced";
+import { useConfig } from "gatsby-theme-advanced";
 
 import { Body } from "../../theme";
 
 import * as S from "./styles";
 
 const AuthorSegment = (): JSX.Element | null => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   if (!config.user) return null;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, cleanup } from "@testing-library/react";
+import { screen, cleanup, render } from "@testing-library/react";
 import cloneDeep from "clone-deep";
 import { mocked } from "ts-jest/utils";
 
@@ -7,10 +7,15 @@ import * as gatsby from "gatsby";
 
 import Link from "./index";
 
-import renderWithContext from "../../../test/render";
-import { defaultConfig, SiteConfig } from "../../config";
+import { SiteConfig, useConfig } from "../../config";
 
-const testConfig = cloneDeep<SiteConfig>(defaultConfig);
+import { config as configFixture } from "../../../../test/fixtures";
+
+jest.mock("../../config/useConfig");
+
+const mockedUseConfig = mocked(useConfig);
+
+const testConfig = cloneDeep<SiteConfig>(configFixture);
 testConfig.basePath = "/";
 
 jest.mock("gatsby", () => {
@@ -35,7 +40,7 @@ describe("component Link", () => {
   it("renders local links via GatsbyLink", () => {
     expect.assertions(2);
 
-    renderWithContext(<Link to="/local/path">Test</Link>);
+    render(<Link to="/local/path">Test</Link>);
 
     expect(mockedGatsby.Link).toHaveBeenCalledTimes(1);
 
@@ -48,7 +53,7 @@ describe("component Link", () => {
   it("renders external links via an HTML element", () => {
     expect.assertions(2);
 
-    renderWithContext(<Link to="https://example.com/local/path">Test</Link>);
+    render(<Link to="https://example.com/local/path">Test</Link>);
 
     expect(mockedGatsby.Link).toHaveBeenCalledTimes(0);
 
@@ -64,14 +69,14 @@ describe("component Link", () => {
     // If there is no link with "Test" in the name, then the "children" prop has not been rendered
 
     // For external URLs
-    renderWithContext(<Link to="https://example.com/local/path">Test</Link>);
+    render(<Link to="https://example.com/local/path">Test</Link>);
 
     expect(screen.getByRole("link", { name: "Test" })).toBeInTheDocument();
 
     cleanup();
 
     // For internal URLs
-    renderWithContext(<Link to="/local/path">Test</Link>);
+    render(<Link to="/local/path">Test</Link>);
 
     expect(screen.getByRole("link", { name: "Test" })).toBeInTheDocument();
   });
@@ -83,7 +88,9 @@ describe("component Link", () => {
     const configWithBasePath = cloneDeep(testConfig);
     configWithBasePath.basePath = "/base/path";
 
-    renderWithContext(<Link to="/local/path">Test</Link>, configWithBasePath);
+    mockedUseConfig.mockReturnValue(configWithBasePath);
+
+    render(<Link to="/local/path">Test</Link>);
 
     expect(screen.getByRole("link", { name: "Test" })).toHaveAttribute(
       "href",
@@ -95,11 +102,12 @@ describe("component Link", () => {
     // basePath should not be added to local urls that have 'noBasePath' set
     configWithBasePath.basePath = "/base/path";
 
-    renderWithContext(
+    mockedUseConfig.mockReturnValue(configWithBasePath);
+
+    render(
       <Link to="/local/path" noBasePath>
         Test
-      </Link>,
-      configWithBasePath
+      </Link>
     );
 
     expect(screen.getByRole("link", { name: "Test" })).toHaveAttribute(
@@ -110,10 +118,7 @@ describe("component Link", () => {
     cleanup();
 
     // No basePath should be added to external urls
-    renderWithContext(
-      <Link to="https://example.com/local/path">Test</Link>,
-      configWithBasePath
-    );
+    render(<Link to="https://example.com/local/path">Test</Link>);
 
     expect(screen.getByRole("link", { name: "Test" })).toHaveAttribute(
       "href",
@@ -124,7 +129,9 @@ describe("component Link", () => {
   it("prioritizes 'href' url over 'to' url", () => {
     expect.assertions(1);
 
-    renderWithContext(
+    mockedUseConfig.mockReturnValue(testConfig);
+
+    render(
       <Link href="/correct/local/path" to="/incorrect/local/path">
         Test
       </Link>
@@ -139,7 +146,7 @@ describe("component Link", () => {
   it("passes down 'activeClassName' to GatsbyLink", () => {
     expect.assertions(2);
 
-    renderWithContext(
+    render(
       <Link activeClassName="test-active-class" to="/local/path">
         Test
       </Link>
@@ -160,7 +167,7 @@ describe("component Link", () => {
     expect.assertions(4);
 
     // For local URLs
-    renderWithContext(
+    render(
       <Link
         activeClassName="test-active-class"
         ariaLabel="test-label"
@@ -189,7 +196,7 @@ describe("component Link", () => {
     cleanup();
 
     // For external URLs
-    renderWithContext(
+    render(
       <Link
         activeClassName="test-active-class"
         ariaLabel="test-label"

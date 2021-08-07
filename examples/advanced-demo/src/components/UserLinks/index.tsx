@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { ConfigContext, Link, Types } from "gatsby-theme-advanced";
+import { useConfig, Link, Types } from "gatsby-theme-advanced";
 
 import "./styles.css";
 
@@ -59,7 +59,7 @@ const defaultProps: IconLinksProps = {
 };
 
 const UserLinks = ({ includeRss }: IconLinksProps): JSX.Element | null => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   if (!config.user) return null;
 

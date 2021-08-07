@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { ConfigProvider, SEO } from "gatsby-theme-advanced";
+import { SEO } from "gatsby-theme-advanced";
 
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
@@ -31,16 +31,14 @@ type MainLayoutProps = {
 
 const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
   <ThemeProvider>
-    <ConfigProvider>
-      <SEO />
-      <LayoutGrid>
-        <LayoutWidthContainer>
-          <Navigation />
-        </LayoutWidthContainer>
-        {children}
-        <Footer />
-      </LayoutGrid>
-    </ConfigProvider>
+    <SEO />
+    <LayoutGrid>
+      <LayoutWidthContainer>
+        <Navigation />
+      </LayoutWidthContainer>
+      {children}
+      <Footer />
+    </LayoutGrid>
   </ThemeProvider>
 );
 

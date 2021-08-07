@@ -1,8 +1,7 @@
 const GatsbyThemeAdvanced = jest.requireActual("gatsby-theme-advanced");
-const MockedConfig = jest.requireActual("./MockedConfig");
+
+jest.mock("../../advanced/src/config/useConfig");
 
 module.exports = {
   ...GatsbyThemeAdvanced,
-  ConfigProvider: MockedConfig.ConfigProvider,
-  ConfigContext: MockedConfig.ConfigContext,
 };

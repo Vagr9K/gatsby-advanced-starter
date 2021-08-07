@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import {
   FacebookShareButton,
@@ -15,7 +15,7 @@ import {
   RedditIcon,
 } from "react-share";
 
-import { Types, ConfigContext } from "gatsby-theme-advanced";
+import { Types, useConfig } from "gatsby-theme-advanced";
 
 import "./styles.css";
 
@@ -41,7 +41,7 @@ type SocialLinksProps = {
 };
 
 const ShareLinks = ({ post }: SocialLinksProps): JSX.Element => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   const { excerpt, title, url } = post;
 

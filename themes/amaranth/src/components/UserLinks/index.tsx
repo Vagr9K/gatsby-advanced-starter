@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { MailSend, Rss } from "@styled-icons/boxicons-regular";
 import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
 import { StyledIcon } from "@styled-icons/styled-icon";
 
-import { Types, ConfigContext } from "gatsby-theme-advanced";
+import { Types, useConfig } from "gatsby-theme-advanced";
 
 import { IconLink } from "../Links";
 
@@ -80,7 +80,7 @@ const UserLinks = ({
   includeRss,
   className,
 }: IconLinksProps): JSX.Element | null => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   if (!config.user) return null;
 

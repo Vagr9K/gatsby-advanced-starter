@@ -3,19 +3,19 @@ import { Helmet } from "react-helmet";
 
 import { Post } from "../../types";
 
-import ConfigContext from "../../context/ConfigContext";
 import GeneralTags from "./General";
 import OpenGraphTags from "./OpenGraph";
 import RichSearchTags from "./RichSearch";
 import TwitterTags from "./Twitter";
 import { generatePostData, generateSeoData } from "./Utils";
+import { useConfig } from "../../config";
 
 type SeoProps = {
   post?: Post;
 };
 
 const SEO = ({ post }: SeoProps): JSX.Element => {
-  const config = React.useContext(ConfigContext);
+  const config = useConfig();
 
   const postData = post ? generatePostData(post) : undefined;
   const seoData = generateSeoData(config.website, postData);

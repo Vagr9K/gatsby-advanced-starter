@@ -1,12 +1,15 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "jest-styled-components";
+import { mocked } from "ts-jest/utils";
 
-import { ConfigContext } from "gatsby-theme-advanced";
+import { useConfig } from "gatsby-theme-advanced";
 
 import UserLinks from "./index";
 
 import { config as configFixture } from "../../../../test/fixtures";
+
+const mockedUseConfig = mocked(useConfig);
 
 describe("component UserLinks", () => {
   it("renders user links", async () => {
@@ -60,11 +63,12 @@ describe("component UserLinks", () => {
   it("returns null when user information is missing", () => {
     expect.assertions(1);
 
-    const { container } = render(
-      <ConfigContext.Provider value={{ ...configFixture, user: undefined }}>
-        <UserLinks includeRss />
-      </ConfigContext.Provider>
-    );
+    mockedUseConfig.mockReturnValue({
+      ...configFixture,
+      user: undefined,
+    });
+
+    const { container } = render(<UserLinks includeRss />);
 
     expect(container).toBeEmptyDOMElement();
   });

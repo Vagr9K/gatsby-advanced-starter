@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { ConfigContext } from "gatsby-theme-advanced";
+import { useConfig } from "gatsby-theme-advanced";
 
 import { AdvancedLogo } from "../../icons";
 
 import * as S from "./style";
 
 const Navigation = (): JSX.Element => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   return (
     <S.Wrapper>

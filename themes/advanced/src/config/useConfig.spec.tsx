@@ -1,10 +1,10 @@
 import { mocked } from "ts-jest/utils";
+import { renderHook } from "@testing-library/react-hooks";
 import * as gatsby from "gatsby";
 
-import { ConfigProvider } from "./ConfigContext";
+import useConfig from "./useConfig";
 
 import { config } from "../../../test/fixtures";
-import { SiteConfig } from "../config";
 
 const siteConfigQueryResponse = {
   site: {
@@ -26,8 +26,7 @@ jest.mock("gatsby", () => {
 
 const mockedGatsby = mocked(gatsby, true);
 
-describe("context ConfigContext", () => {
-  // eslint-disable-next-line jest/no-hooks
+describe("hook useConfig", () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -39,14 +38,12 @@ describe("context ConfigContext", () => {
       () => siteConfigQueryResponse
     );
 
-    const ret: { props: { value?: SiteConfig } } = ConfigProvider({
-      children: null,
-    });
+    const { result } = renderHook(() => useConfig());
 
     expect(mockedGatsby.graphql).toHaveBeenCalledTimes(1);
     expect(mockedGatsby.useStaticQuery).toHaveBeenCalledTimes(1);
 
-    expect(ret.props.value).toBe(config);
+    expect(result.current).toBe(config);
   });
 
   it("throws an error if configuration is not set", () => {
@@ -54,9 +51,9 @@ describe("context ConfigContext", () => {
 
     mockedGatsby.useStaticQuery.mockImplementation(() => ({ site: undefined }));
 
-    const throwFunc = () => ConfigProvider({ children: null });
+    const { result } = renderHook(() => useConfig());
 
-    expect(throwFunc).toThrow("ConfigProvider: Failed to query SiteConfig.");
+    expect(result.error).toBeDefined();
 
     expect(mockedGatsby.graphql).toHaveBeenCalledTimes(1);
     expect(mockedGatsby.useStaticQuery).toHaveBeenCalledTimes(1);

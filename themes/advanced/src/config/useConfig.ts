@@ -1,9 +1,5 @@
-import * as React from "react";
-
 import { useStaticQuery, graphql } from "gatsby";
-import { defaultConfig, SiteConfig } from "../config";
-
-const ConfigContext = React.createContext<SiteConfig>(defaultConfig);
+import { SiteConfig } from "./types";
 
 type UserConfigQueryType = {
   site?: {
@@ -13,12 +9,7 @@ type UserConfigQueryType = {
   };
 };
 
-type ConfigProviderProps = {
-  children: React.ReactNode;
-};
-
-const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
-  // Query and provide SiteConfig
+const useConfig = (): SiteConfig => {
   const resp = useStaticQuery<UserConfigQueryType>(
     graphql`
       query UserConfig {
@@ -84,11 +75,9 @@ const ConfigProvider = ({ children }: ConfigProviderProps): JSX.Element => {
 
   const config = resp.site?.siteMetadata?.config;
 
-  if (!config) throw Error("ConfigProvider: Failed to query SiteConfig.");
+  if (!config) throw Error("useConfig: Failed to query SiteConfig.");
 
-  return (
-    <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>
-  );
+  return config;
 };
-export default ConfigContext;
-export { ConfigProvider };
+
+export default useConfig;

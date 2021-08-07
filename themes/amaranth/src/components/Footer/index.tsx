@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { ConfigContext } from "gatsby-theme-advanced";
+import { useConfig } from "gatsby-theme-advanced";
 
 import UserLinks from "../UserLinks";
 import { Caption, H3 } from "../../theme";
@@ -9,7 +9,7 @@ import { AnimatedLink } from "../Links";
 import * as S from "./styles";
 
 const Footer = (): JSX.Element => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   return (
     <S.Wrapper>

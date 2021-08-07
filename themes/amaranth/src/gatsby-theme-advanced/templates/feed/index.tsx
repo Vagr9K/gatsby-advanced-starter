@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import {
-  ConfigContext,
+  useConfig,
   useInfiniteFeed,
   FeedTemplateProps,
 } from "gatsby-theme-advanced";
@@ -15,7 +15,7 @@ import { ScreenReaderH1 } from "../../../components/shared/ScreenReader";
 const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   // Don't show hero images on non-index feeds
   const noHero = pageContext.feedType !== "index";

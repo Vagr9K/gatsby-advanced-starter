@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { Link as GatsbyLink } from "gatsby";
 
-import ConfigContext from "../../context/ConfigContext";
-import { withBasePath } from "../../config";
+import { useConfig, withBasePath } from "../../config";
 
 export type LinkProps = {
   className?: string;
@@ -24,7 +23,7 @@ const Link = ({
   noBasePath,
   ariaLabel,
 }: LinkProps): JSX.Element => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   const url = href || to;
 

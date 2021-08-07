@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Disqus as DisqusPlugin } from "gatsby-plugin-disqus";
 
-import ConfigContext from "../../context/ConfigContext";
-
+import { useConfig } from "../../config";
 import { Post } from "../../types";
 
 type DisqusProps = {
@@ -10,7 +9,7 @@ type DisqusProps = {
 };
 
 const Disqus = ({ post }: DisqusProps): JSX.Element | null => {
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   // Do not render if no shortname was provided
   if (!config.website.disqusShortname) {

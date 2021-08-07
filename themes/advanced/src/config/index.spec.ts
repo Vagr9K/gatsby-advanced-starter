@@ -1,8 +1,10 @@
 import { cloneDeep } from "lodash";
 
-import { withDefaults, withBasePath, defaultConfig } from "./index";
+import { withDefaults, withBasePath } from "./index";
 
 import { SiteConfig } from "./types";
+
+import defaultConfig from "./defaultConfig";
 
 const expectedMergedConfig = cloneDeep(defaultConfig);
 expectedMergedConfig.website.title = "TestTitle";

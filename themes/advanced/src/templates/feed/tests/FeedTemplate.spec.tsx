@@ -1,13 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import renderWithContext from "../../../../test/render";
-
 import PostTemplate from "../index";
 
 import { FeedPageMetaFromJson } from "../../../types";
 import { PageContext } from "../types";
 import Index0 from "../../../../../test/fixtures/feedMetadata/index-0.json";
+import renderWithQueryClient from "../../../../test/render";
+
+jest.mock("../../../config/useConfig");
 
 const indexFeedContext: PageContext = {
   feedId: "test",
@@ -37,7 +38,7 @@ describe("component FeedTemplate", () => {
   it("correctly renders an index feed", () => {
     expect.assertions(1);
 
-    const { asFragment } = renderWithContext(
+    const { asFragment } = renderWithQueryClient(
       <PostTemplate pageContext={indexFeedContext} />
     );
 
@@ -47,7 +48,7 @@ describe("component FeedTemplate", () => {
   it("correctly render a tag feed", () => {
     expect.assertions(2);
 
-    const { asFragment } = renderWithContext(
+    const { asFragment } = renderWithQueryClient(
       <PostTemplate pageContext={tagFeedContext} />
     );
 
@@ -63,7 +64,7 @@ describe("component FeedTemplate", () => {
   it("correctly render a category feed", () => {
     expect.assertions(2);
 
-    const { asFragment } = renderWithContext(
+    const { asFragment } = renderWithQueryClient(
       <PostTemplate pageContext={categoryFeedContext} />
     );
 

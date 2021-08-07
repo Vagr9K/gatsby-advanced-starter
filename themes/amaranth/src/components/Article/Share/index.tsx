@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import {
   Twitter as TwitterIcon,
@@ -13,7 +13,7 @@ import {
   RedditShareButton,
 } from "react-share";
 
-import { Types, ConfigContext } from "gatsby-theme-advanced";
+import { Types, useConfig } from "gatsby-theme-advanced";
 
 import LinkCopyNotification from "./LinkCopyNotification";
 import Separator from "../../shared/Separator";
@@ -41,7 +41,7 @@ const ArticleShare = ({ post }: ArticleShareProps): JSX.Element => {
 
   const [showLinkNotification, setShowlinkNotification] = useState(false);
 
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   const relatedTwitterNames = generateRelatedTwitterNames(config);
 

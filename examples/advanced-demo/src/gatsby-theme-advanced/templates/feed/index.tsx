@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import {
-  ConfigContext,
+  useConfig,
   FeedTemplateProps,
   useInfiniteFeed,
 } from "gatsby-theme-advanced";
@@ -15,7 +15,7 @@ import "./styles.css";
 const Feed = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   // Override the title for non-index feeds
   const getTitleOverride = () => {

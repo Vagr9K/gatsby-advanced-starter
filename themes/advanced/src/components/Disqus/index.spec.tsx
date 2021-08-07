@@ -1,26 +1,28 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import cloneDeep from "clone-deep";
+import { mocked } from "ts-jest/utils";
 
 import Disqus from "./index";
-import ConfigContext from "../../context/ConfigContext";
-import { defaultConfig } from "../../config";
+import { useConfig } from "../../config";
 
-import { post } from "../../../../test/fixtures";
+import { post, config as configFixture } from "../../../../test/fixtures";
+
+jest.mock("../../config/useConfig");
+
+const mockedUseConfig = mocked(useConfig);
 
 describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is set", () => {
     expect.assertions(1);
 
-    const newConfig = cloneDeep(defaultConfig);
+    const newConfig = cloneDeep(configFixture);
     newConfig.website.disqusShortname =
       "https-vagr9k-github-io-gatsby-advanced-starter";
 
-    const { asFragment } = render(
-      <ConfigContext.Provider value={newConfig}>
-        <Disqus post={post} />
-      </ConfigContext.Provider>
-    );
+    mockedUseConfig.mockReturnValue(newConfig);
+
+    const { asFragment } = render(<Disqus post={post} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -28,14 +30,12 @@ describe("component Disqus", () => {
   it("renders correctly when config.disqusShortname is not set", () => {
     expect.assertions(1);
 
-    const newConfig = cloneDeep(defaultConfig);
+    const newConfig = cloneDeep(configFixture);
     newConfig.website.disqusShortname = undefined;
 
-    const { asFragment } = render(
-      <ConfigContext.Provider value={newConfig}>
-        <Disqus post={post} />
-      </ConfigContext.Provider>
-    );
+    mockedUseConfig.mockReturnValue(newConfig);
+
+    const { asFragment } = render(<Disqus post={post} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

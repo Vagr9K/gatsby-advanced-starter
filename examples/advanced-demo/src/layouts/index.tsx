@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ConfigProvider, SEO } from "gatsby-theme-advanced";
+import { SEO } from "gatsby-theme-advanced";
 
 import Footer from "../components/Footer";
 
@@ -11,13 +11,13 @@ type MainLayoutProps = {
 };
 
 const MainLayout = ({ children }: MainLayoutProps): JSX.Element => (
-  <ConfigProvider>
+  <>
     <SEO />
     <div className="layout-grid">
       {children}
       <Footer />
     </div>
-  </ConfigProvider>
+  </>
 );
 
 export default MainLayout;

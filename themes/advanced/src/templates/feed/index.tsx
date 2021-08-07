@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
-import ConfigContext from "../../context/ConfigContext";
 import useInfiniteFeed from "./useInfiniteFeed";
 
 import { PageContext } from "./types";
+import { useConfig } from "../../config";
 
 export type FeedTemplateProps = {
   pageContext: PageContext;
@@ -15,7 +15,7 @@ export type FeedTemplateContext = PageContext;
 const FeedTemplate = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   const { feedListing, feedElementRef } = useInfiniteFeed(pageContext);
 
-  const config = useContext(ConfigContext);
+  const config = useConfig();
 
   // Override the title for non-index feeds
   const getTitleOverride = () => {

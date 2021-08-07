@@ -11,7 +11,7 @@ import PostTemplate from "./index";
 
 import Index0 from "../../../../../test/fixtures/feedMetadata/index-0.json";
 
-import renderWithContext from "../../../../../advanced/test/render";
+import renderWithQueryClient from "../../../../../advanced/test/render";
 
 const indexFeedContext = {
   feedId: undefined,
@@ -42,7 +42,7 @@ describe("page template FeedTemplate", () => {
     expect.assertions(3);
 
     const testTitle = (context: FeedTemplateContext, expectedTitle: string) => {
-      renderWithContext(<PostTemplate pageContext={context} />);
+      renderWithQueryClient(<PostTemplate pageContext={context} />);
 
       const helmet = Helmet.peek();
 
@@ -65,7 +65,7 @@ describe("page template FeedTemplate", () => {
   it("renders feed posts", async () => {
     expect.assertions(5);
 
-    renderWithContext(<PostTemplate pageContext={indexFeedContext} />);
+    renderWithQueryClient(<PostTemplate pageContext={indexFeedContext} />);
 
     const article1 = await screen.findByText("Big Test");
     expect(article1).toBeInTheDocument();

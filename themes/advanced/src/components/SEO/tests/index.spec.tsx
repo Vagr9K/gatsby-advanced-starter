@@ -1,11 +1,7 @@
-import * as React from "react";
 import SEO from "../index";
-import { post, config } from "../../../../../test/fixtures";
+import { post } from "../../../../../test/fixtures";
 
-jest.mock("react", () => ({
-  ...jest.requireActual<typeof React>("react"),
-  useContext: () => config,
-}));
+jest.mock("../../../config/useConfig");
 
 describe("component SEO", () => {
   it("renders correctly on article pages", () => {
