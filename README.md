@@ -149,9 +149,9 @@ To switch to the remote versions, open `package.json` and edit the dependency se
 into
 
 ```js
- "gatsby-theme-amaranth": "3.0.0", // Or the version you want
+ "gatsby-theme-amaranth": "3.1.1", // Or the version you want
  // or
-  "gatsby-theme-advanced": "3.0.0", // Or the version you want
+  "gatsby-theme-advanced": "3.1.1", // Or the version you want
 ```
 
 ## Configuration
