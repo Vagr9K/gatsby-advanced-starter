@@ -93,6 +93,8 @@ You are free to use any UI framework/styling options or you can use the [`gatsby
 - RSS feeds
 - Development tools
   - Yarn 3
+  - [Jest](https://jestjs.io/) for unit/integration testing
+  - [Cypress](https://www.cypress.io/) for E2E testing
   - CI via GitHub Actions
   - CD via GitHub Actions
   - [ESLint](https://eslint.org/) for linting
