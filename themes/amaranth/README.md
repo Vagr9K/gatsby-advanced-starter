@@ -27,7 +27,7 @@
 
 # Gatsby Theme Amaranth
 
-The [`gatsby-theme-amaranth`](https://www.npmjs.com/package/gatsby-theme-amaranth) is a mobile optimized stylish blog theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) equipped with advanced features such as SEO, image optimization, PWA manifest and capabilities, infinite scrolling feeds.
+[`gatsby-theme-amaranth`](https://www.npmjs.com/package/gatsby-theme-amaranth) is a mobile optimized stylish blog theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) equipped with advanced features such as SEO, image optimization, PWA capabilities and infinite scrolling feeds.
 
 The theme uses [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced) under the hood.
 

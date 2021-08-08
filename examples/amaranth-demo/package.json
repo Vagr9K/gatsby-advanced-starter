@@ -2,7 +2,7 @@
   "private": true,
   "name": "gatsby-theme-amaranth-demo",
   "description": "GatsbyJS theme demo built on top of gatsby-theme-amaranth.",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "keywords": [
     "gatsby",
