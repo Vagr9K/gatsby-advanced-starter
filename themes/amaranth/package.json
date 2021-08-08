@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-amaranth",
   "description": "A stylish GatsbyJS theme built on top of gatsby-theme-advanced.",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com> (https://harutyunyan.dev/)",
   "homepage": "https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/amaranth",
   "bugs": "https://github.com/Vagr9K/gatsby-advanced-starter/issues",
