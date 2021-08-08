@@ -13,10 +13,10 @@ jobs:
       matrix:
         include:
           - workdir: "./examples/advanced-demo"
-            siteId: ${{ secrets.ADVANCED_DEMO_SITE_ID }}
+            siteId: ADVANCED_DEMO_SITE_ID
             projectName: Advanced Demo
           - workdir: "./examples/amaranth-demo"
-            siteId: ${{ secrets.AMARANTH_DEMO_SITE_ID }}
+            siteId: AMARANTH_DEMO_SITE_ID
             projectName: Amaranth Demo
 
     steps:
@@ -34,10 +34,10 @@ jobs:
           deploy-message: Automated CD deploy
           publish-dir: ${{ matrix.workdir }}/public
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          github-deployment-environment: ${{ projectName }} Netlify Deploy
+          github-deployment-environment: ${{ matrix.projectName }} Netlify Deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ matrix.siteId }}
+          NETLIFY_SITE_ID: ${{ secrets[matrix.siteId] }}
         timeout-minutes: 1
 
   upload-amaranth-coverage:
