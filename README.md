@@ -14,7 +14,7 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="docs/logos/logo.png" alt="Logo" width='200px' height='200px'/>
+    <img src="docs/logos/logo.png" alt="Logo" width='400px' height='400px'/>
 </div>
 
 <div align="center"  style="margin-bottom:30px">
@@ -93,6 +93,8 @@ You are free to use any UI framework/styling options or you can use the [`gatsby
 - RSS feeds
 - Development tools
   - Yarn 3
+  - [Jest](https://jestjs.io/) for unit/integration testing
+  - [Cypress](https://www.cypress.io/) for E2E testing
   - CI via GitHub Actions
   - CD via GitHub Actions
   - [ESLint](https://eslint.org/) for linting
@@ -149,9 +151,9 @@ To switch to the remote versions, open `package.json` and edit the dependency se
 into
 
 ```js
- "gatsby-theme-amaranth": "3.1.2", // Or the version you want
+ "gatsby-theme-amaranth": "3.2", // Or the version you want
  // or
-  "gatsby-theme-advanced": "3.1.2", // Or the version you want
+  "gatsby-theme-advanced": "3.2", // Or the version you want
 ```
 
 ## Configuration

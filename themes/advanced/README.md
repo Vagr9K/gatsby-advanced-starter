@@ -14,7 +14,7 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
+    <img src="docs/logo.png" alt="Logo" width='400px' height='400px'/>
 </div>
 
 <div align="center"  style="margin-bottom:30px">
@@ -25,9 +25,9 @@
 
 # Gatsby Theme Advanced
 
-The [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced) is a theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) which provides a minimal base for building advanced GatsbyJS powered websites by using the latest technologies.
+[`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced) is a theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) which provides a minimal base for building advanced GatsbyJS powered websites by using the latest technologies.
 
-It doesn't define any UI limitations in any way and only gives you the basic components for SEO/Links/Infinite Scrolling while creating a comfortable development environment to get started.
+It doesn't define any UI limitations in any way and only gives you the basic components for SEO, Links, infinite scrolling while creating a comfortable development environment to get started.
 
 You are free to use any UI framework/styling options or you can use the [`gatsby-theme-amaranth`](https://www.npmjs.com/package/gatsby-theme-amaranth) as a starting point, which provides a blog design styled with [Styled Components](https://styled-components.com/)
 
