@@ -25,15 +25,16 @@
 <img href="https://amaranth-demo.netlify.app/"><img src="https://api.netlify.com/api/v1/badges/f9d33573-f168-4ff2-a6e6-e1a7570dd5a0/deploy-status" alt="Amaranth Demo"/></a>
 </div>
 
-
 # Gatsby Theme Amaranth
 
-The [`gatsby-theme-amaranth`](https://www.npmjs.com/package/gatsby-theme-amaranth) is a stylish blog theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) equipped with advanced features such as SEO/image optimization/PWA feature set/infinite scrolling feeds.
+The [`gatsby-theme-amaranth`](https://www.npmjs.com/package/gatsby-theme-amaranth) is a mobile optimized stylish blog theme for [GatsbyJS](https://github.com/gatsbyjs/gatsby/) equipped with advanced features such as SEO, image optimization, PWA manifest and capabilities, infinite scrolling feeds.
 
 The theme uses [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced) under the hood.
 
-
 ## Previews
+
+![Amaranth Preview](./docs/amaranth-demo.png)
+
 [Amaranth Demo](https://amaranth-demo.netlify.app/).
 
 Visit [`gatsby-theme-amaranth`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/amaranth) for details regarding on how it was built using [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced).
