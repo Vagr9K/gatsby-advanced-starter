@@ -3,4 +3,4 @@
   command = "yarn build"
 [build.environment]
   NODE_VERSION = "16.6.1"
-  YARN_VERSION = "3.0.0"
+  YARN_VERSION = "1.22.11"
