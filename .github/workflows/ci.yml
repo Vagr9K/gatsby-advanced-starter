@@ -24,7 +24,6 @@ jobs:
       - run: yarn type-check
 
   jest-tests:
-    needs: type-check
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -41,7 +40,6 @@ jobs:
         run: yarn test
 
   e2e-tests:
-    needs: [jest-tests, type-check]
     runs-on: ubuntu-latest
     strategy:
       matrix:
