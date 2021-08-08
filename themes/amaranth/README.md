@@ -14,7 +14,7 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
+    <img src="docs/logo-notext.png" alt="Logo" width='400px' height='400px'/>
 </div>
 
 <div align="center"  style="margin-bottom:30px">
@@ -34,7 +34,7 @@ The theme uses [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-th
 
 
 ## Previews
-[Amaranth Demo](TODO_NETLIFY_URL).
+[Amaranth Demo](https://amaranth-demo.netlify.app/).
 
 Visit [`gatsby-theme-amaranth`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/amaranth) for details regarding on how it was built using [`gatsby-theme-advanced`](https://www.npmjs.com/package/gatsby-theme-advanced).
 

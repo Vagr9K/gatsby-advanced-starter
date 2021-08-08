@@ -14,7 +14,7 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
+    <img src="docs/logo.png" alt="Logo" width='400px' height='400px'/>
 </div>
 
 <div align="center"  style="margin-bottom:30px">
