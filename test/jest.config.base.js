@@ -19,7 +19,9 @@ module.exports = {
     "\\lib",
     "<rootDir>/cypress/",
   ],
-  transformIgnorePatterns: ["node_modules/(?!(gatsby|gatsby-plugin-mdx)/)"],
+  transformIgnorePatterns: [
+    "node_modules/(?!(gatsby|gatsby-plugin-mdx|gatsby-theme-advanced|gatsby-theme-amaranth)/)",
+  ],
   globals: {
     __PATH_PREFIX__: "",
   },
