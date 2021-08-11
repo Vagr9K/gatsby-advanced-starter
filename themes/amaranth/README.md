@@ -22,6 +22,9 @@
 <a href="https://www.styled-components.com/"><img src="https://badgen.net/badge/Built%20With/styled%20components/db7093" alt="Built with Styled Components" />
 </a>
 <img src="https://badgen.net/badge/Built With/TypeScript/blue" alt="Powered by TypeScript" />
+<a href="https://codecov.io/gh/Vagr9K/gatsby-advanced-starter">
+  <img src="https://codecov.io/gh/Vagr9K/gatsby-advanced-starter/branch/master/graph/badge.svg?token=UsUNVAmMLr"/>
+</a>
 <img href="https://amaranth-demo.netlify.app/"><img src="https://api.netlify.com/api/v1/badges/f9d33573-f168-4ff2-a6e6-e1a7570dd5a0/deploy-status" alt="Amaranth Demo"/></a>
 </div>
 

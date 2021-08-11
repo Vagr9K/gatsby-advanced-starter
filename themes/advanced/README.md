@@ -20,6 +20,7 @@
 <div align="center"  style="margin-bottom:30px">
 <a href="https://www.npmjs.com/package/gatsby-theme-advanced"><img src="https://badgen.net/npm/v/gatsby-theme-advanced" alt="npm" /></a>
 <img src="https://badgen.net/badge/Built With/TypeScript/blue" alt="Powered by TypeScript" />
+<a href='https://coveralls.io/github/Vagr9K/gatsby-advanced-starter?branch=master'><img src='https://coveralls.io/repos/github/Vagr9K/gatsby-advanced-starter/badge.svg?branch=master' alt='Coverage Status' /></a>
 <img href="https://advanced-demo.netlify.app/"><img src="https://api.netlify.com/api/v1/badges/69abdfee-1df9-4e69-abe9-e8f5d8c9c630/deploy-status" alt="Advanced Demo"/></a>
 </div>
 

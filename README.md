@@ -19,7 +19,11 @@
 
 <div align="center"  style="margin-bottom:30px">
 <a href="https://www.npmjs.com/package/gatsby-theme-advanced"><img src="https://badgen.net/npm/v/gatsby-theme-advanced" alt="npm" /></a>
+<a href='https://coveralls.io/github/Vagr9K/gatsby-advanced-starter?branch=master'><img src='https://coveralls.io/repos/github/Vagr9K/gatsby-advanced-starter/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href="https://www.npmjs.com/package/gatsby-theme-amaranth"><img src="https://badgen.net/npm/v/gatsby-theme-amaranth" alt="npm" /></a>
+<a href="https://codecov.io/gh/Vagr9K/gatsby-advanced-starter">
+  <img src="https://codecov.io/gh/Vagr9K/gatsby-advanced-starter/branch/master/graph/badge.svg?token=UsUNVAmMLr"/>
+</a>
 <a href="https://www.styled-components.com/"><img src="https://badgen.net/badge/Built%20With/styled%20components/db7093" alt="Built with Styled Components" />
 </a>
 <img src="https://badgen.net/badge/Built With/TypeScript/blue" alt="Powered by TypeScript" />
