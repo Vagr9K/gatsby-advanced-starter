@@ -139,10 +139,11 @@ You have multiple options when it comes to receiving upstream updates:
 
 - Pull and merge upstream changes into your repo
 - Change the versions of `gatsby-theme-advanced` and `gatsby-theme-amaranth` from local to remote.
+- Install a different theme, such as the [`gatsby-theme-material`](https://www.npmjs.com/package/gatsby-theme-material).
 
 First option allows you to make your own changes to the themes without having to fork and publish them. This is the default approach when you clone/fork the starter repository.
 
-Second option simplifies your CI/CD setup and allows you to receive updates by simply bumping the package version.
+Second option simplifies your CI/CD setup and allows you to receive updates by simply bumping the package version. This also applies if you decide to use a different theme with the starter.
 
 To switch to the remote versions, open `package.json` and edit the dependency section:
 
@@ -158,6 +159,27 @@ into
  "gatsby-theme-amaranth": "3.2", // Or the version you want
  // or
   "gatsby-theme-advanced": "3.2", // Or the version you want
+```
+
+If you want to install a different theme outside of the repo, such as the [`gatsby-theme-material`](https://www.npmjs.com/package/gatsby-theme-material), run:
+
+```sh
+yarn add gatsby-theme-material # Or any other Gatsby theme
+```
+
+Then configure the theme in `gatsby-config.js`:
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-material`, // Or any other theme that you have installed
+      options: {
+        basePath: `/blog`, // Consult the documentation of the respective theme to figure out the applicable settings
+      },
+    },
+  ],
+};
 ```
 
 ## Configuration
@@ -179,7 +201,7 @@ module.exports = {
 };
 ```
 
-Here you can switch between `gatsby-theme-advanced` and `gatsby-theme-amaranth`.
+Here you can switch between `gatsby-theme-advanced` and `gatsby-theme-amaranth` or any other Gatsby theme that you intend to use with the starter.
 
 For configuring the themes, consult their respective documentation pages:
 
