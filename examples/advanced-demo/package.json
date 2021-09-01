@@ -82,7 +82,7 @@
     "gatsby-cypress": "^1.11.0",
     "gh-pages": "^3.2.3",
     "jest": "^27.0.6",
-    "markdownlint-cli2": "^0.2.0",
+    "markdownlint-cli2": "^0.3.0",
     "prettier": "^2.3.2",
     "start-server-and-test": "^1.13.1",
     "stylelint": "^13.13.1",
