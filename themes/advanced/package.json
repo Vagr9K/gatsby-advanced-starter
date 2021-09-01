@@ -23,7 +23,7 @@
     "gatsby-plugin-catch-links": "^3.11.0",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-disqus": "^1.2.2",
-    "gatsby-plugin-feed": "^3.11.0",
+    "gatsby-plugin-feed": "^3.13.0",
     "gatsby-plugin-google-gtag": "^3.11.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-lodash": "^4.11.0",
