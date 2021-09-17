@@ -43,7 +43,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.0",
     "gatsby-plugin-styled-components": "^4.11.0",
-    "gatsby-theme-amaranth": "workspace:*",
+    "gatsby-theme-amaranth": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.0"

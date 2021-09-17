@@ -1,8 +1,10 @@
 {
   "private": true,
   "workspaces": [
-    "themes/*",
-    "examples/*"
+    "themes/amaranth",
+    "themes/advanced",
+    "examples/amaranth-demo",
+    "examples/advanced-demo"
   ],
   "name": "gatsby-starter-advanced",
   "description": "GatsbyJS starter that includes examples for advanced use cases.",
@@ -47,7 +49,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.0",
     "gatsby-plugin-styled-components": "^4.11.0",
-    "gatsby-theme-amaranth": "workspace:*",
+    "gatsby-theme-amaranth": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.19.2",
