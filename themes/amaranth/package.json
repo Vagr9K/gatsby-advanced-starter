@@ -47,7 +47,7 @@
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-remark-responsive-iframe": "^4.8.0",
     "gatsby-source-filesystem": "^3.11.0",
-    "gatsby-theme-advanced": "workspace:*",
+    "gatsby-theme-advanced": "*",
     "gatsby-transformer-remark": "^4.8.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "is-absolute-url": "^3.0.3",

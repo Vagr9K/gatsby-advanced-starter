@@ -148,9 +148,9 @@ Second option simplifies your CI/CD setup and allows you to receive updates by s
 To switch to the remote versions, open `package.json` and edit the dependency section:
 
 ```js
- "gatsby-theme-amaranth": "workspace:*",
+ "gatsby-theme-amaranth": "*",
  // or
-  "gatsby-theme-advanced": "workspace:*",
+  "gatsby-theme-advanced": "*",
 ```
 
 into

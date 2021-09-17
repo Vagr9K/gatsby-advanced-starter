@@ -60,6 +60,7 @@ module.exports = {
       ],
       rules: {
         "react/require-default-props": "off",
+        "react/prop-types": "off",
       },
 
       parser: "@typescript-eslint/parser",

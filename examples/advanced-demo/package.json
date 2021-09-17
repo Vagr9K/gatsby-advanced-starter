@@ -42,7 +42,7 @@
     "gatsby": "^3.11.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-mdx": "^2.11.0",
-    "gatsby-theme-advanced": "workspace:*",
+    "gatsby-theme-advanced": "*",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
