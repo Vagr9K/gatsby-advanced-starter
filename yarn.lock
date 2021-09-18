@@ -14,11 +14,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.14.8":
-  version: 7.15.4
-  resolution: "@babel/cli@npm:7.15.4"
+"@babel/cli@npm:^7.15.7":
+  version: 7.15.7
+  resolution: "@babel/cli@npm:7.15.7"
   dependencies:
-    "@nicolo-ribaudo/chokidar-2": 2.1.8-no-fsevents.2
+    "@nicolo-ribaudo/chokidar-2": 2.1.8-no-fsevents.3
     chokidar: ^3.4.0
     commander: ^4.0.1
     convert-source-map: ^1.1.0
@@ -37,7 +37,7 @@ __metadata:
   bin:
     babel: ./bin/babel.js
     babel-external-helpers: ./bin/babel-external-helpers.js
-  checksum: 99c529a7b8d367f3c88b472bf25235a0f666951d43482327f34eefc51d302b19e9d889c77635e39cc8bac6f6131b31b97c321bc6d72876f2520a1042b28ed760
+  checksum: 128c8251c1f8c3d719fe8a0c6ce45db0ac086c7f877bc9dd34a3cf0a3e8caa4664ca17c24ca4c644b4d277b6e3ce4a73cb950f69003fb278a90bbf7d4645f903
   languageName: node
   linkType: hard
 
@@ -123,7 +123,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.15.5, @babel/core@npm:>=7.9.0, @babel/core@npm:^7.0.0, @babel/core@npm:^7.1.0, @babel/core@npm:^7.15.0, @babel/core@npm:^7.15.5, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
+"@babel/core@npm:7.15.5, @babel/core@npm:>=7.9.0, @babel/core@npm:^7.0.0, @babel/core@npm:^7.1.0, @babel/core@npm:^7.15.5, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
   version: 7.15.5
   resolution: "@babel/core@npm:7.15.5"
   dependencies:
@@ -1353,7 +1353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.15.0, @babel/preset-env@npm:^7.15.4":
+"@babel/preset-env@npm:^7.15.4, @babel/preset-env@npm:^7.15.6":
   version: 7.15.6
   resolution: "@babel/preset-env@npm:7.15.6"
   dependencies:
@@ -2938,22 +2938,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.2":
-  version: 2.1.8-no-fsevents.2
-  resolution: "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.2"
-  dependencies:
-    anymatch: ^2.0.0
-    async-each: ^1.0.1
-    braces: ^2.3.2
-    glob-parent: ^5.1.2
-    inherits: ^2.0.3
-    is-binary-path: ^1.0.0
-    is-glob: ^4.0.0
-    normalize-path: ^3.0.0
-    path-is-absolute: ^1.0.0
-    readdirp: ^2.2.1
-    upath: ^1.1.1
-  checksum: 76003fce915aa6891b759498d3f79bc7b4db48395dc465e28f982e95fd04ebb63a7755ebbaa7e1fe6ff65edf182ba82ad51d97ebcf7ad1c6feaf8f53d43415bb
+"@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3":
+  version: 2.1.8-no-fsevents.3
+  resolution: "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3"
+  checksum: ee55cc9241aeea7eb94b8a8551bfa4246c56c53bc71ecda0a2104018fcc328ba5723b33686bdf9cc65d4df4ae65e8016b89e0bbdeb94e0309fe91bb9ced42344
   languageName: node
   linkType: hard
 
@@ -3150,7 +3138,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@styled-icons/boxicons-logos@npm:^10.37.0":
+"@styled-icons/boxicons-logos@npm:^10.38.0":
   version: 10.38.0
   resolution: "@styled-icons/boxicons-logos@npm:10.38.0"
   dependencies:
@@ -3163,7 +3151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@styled-icons/boxicons-regular@npm:^10.37.0":
+"@styled-icons/boxicons-regular@npm:^10.38.0":
   version: 10.38.0
   resolution: "@styled-icons/boxicons-regular@npm:10.38.0"
   dependencies:
@@ -3232,7 +3220,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/cypress@npm:^8.0.0":
+"@testing-library/cypress@npm:^8.0.1":
   version: 8.0.1
   resolution: "@testing-library/cypress@npm:8.0.1"
   dependencies:
@@ -3260,7 +3248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^8.0.0, @testing-library/dom@npm:^8.1.0":
+"@testing-library/dom@npm:^8.0.0, @testing-library/dom@npm:^8.1.0, @testing-library/dom@npm:^8.5.0":
   version: 8.5.0
   resolution: "@testing-library/dom@npm:8.5.0"
   dependencies:
@@ -3293,7 +3281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react-hooks@npm:^7.0.1":
+"@testing-library/react-hooks@npm:^7.0.2":
   version: 7.0.2
   resolution: "@testing-library/react-hooks@npm:7.0.2"
   dependencies:
@@ -3315,7 +3303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^12.0.0":
+"@testing-library/react@npm:^12.1.0":
   version: 12.1.0
   resolution: "@testing-library/react@npm:12.1.0"
   dependencies:
@@ -3724,7 +3712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.172, @types/lodash@npm:^4.14.92":
+"@types/lodash@npm:^4.14.173, @types/lodash@npm:^4.14.92":
   version: 4.14.173
   resolution: "@types/lodash@npm:4.14.173"
   checksum: 9e97ef5816299e5470db1cb32a93e981af60f74f18a35d045ed4caf224a065df96bfae6e444ec96aa392fc01258592b965d840ae042eef77ef719a578c7daef8
@@ -3782,7 +3770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^16.4.13":
+"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^16.9.2":
   version: 16.9.2
   resolution: "@types/node@npm:16.9.2"
   checksum: 204aa883bc93a267f43804af8872e538935369ab905d5ca702d2c17a213339f8df974bb95d21e2e714e8f83f669b185d8526f7c4b5d16adbdb5d96d4f2e75fa9
@@ -3900,7 +3888,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16.9.0, @types/react@npm:^17.0.16":
+"@types/react@npm:*, @types/react@npm:>=16.9.0, @types/react@npm:^17.0.21":
   version: 17.0.21
   resolution: "@types/react@npm:17.0.21"
   dependencies:
@@ -3983,7 +3971,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-components@npm:^5.1.12":
+"@types/styled-components@npm:^5.1.14":
   version: 5.1.14
   resolution: "@types/styled-components@npm:5.1.14"
   dependencies:
@@ -4111,7 +4099,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.29.0, @typescript-eslint/eslint-plugin@npm:^4.29.3":
+"@typescript-eslint/eslint-plugin@npm:^4.29.3, @typescript-eslint/eslint-plugin@npm:^4.31.1":
   version: 4.31.1
   resolution: "@typescript-eslint/eslint-plugin@npm:4.31.1"
   dependencies:
@@ -4745,16 +4733,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"anymatch@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "anymatch@npm:2.0.0"
-  dependencies:
-    micromatch: ^3.1.4
-    normalize-path: ^2.1.1
-  checksum: f7bb1929842b4585cdc28edbb385767d499ce7d673f96a8f11348d2b2904592ffffc594fe9229b9a1e9e4dccb9329b7692f9f45e6a11dcefbb76ecdc9ab740f6
-  languageName: node
-  linkType: hard
-
 "anymatch@npm:^3.0.3, anymatch@npm:~3.1.2":
   version: 3.1.2
   resolution: "anymatch@npm:3.1.2"
@@ -5134,13 +5112,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async-each@npm:^1.0.1":
-  version: 1.0.3
-  resolution: "async-each@npm:1.0.3"
-  checksum: 868651cfeb209970b367fbb96df1e1c8dc0b22c681cda7238417005ab2a5fbd944ee524b43f2692977259a57b7cc2547e03ff68f2b5113dbdf953d48cc078dc3
-  languageName: node
-  linkType: hard
-
 "async-retry-ng@npm:^2.0.1":
   version: 2.0.1
   resolution: "async-retry-ng@npm:2.0.1"
@@ -5243,7 +5214,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.0.2, axe-core@npm:^4.3.2":
+"axe-core@npm:^4.0.2, axe-core@npm:^4.3.3":
   version: 4.3.3
   resolution: "axe-core@npm:4.3.3"
   checksum: ac349d0b5341ad0859052d843717a1f596adf2efaa85ed9796581aa2f8fea74fda0f68b300363da8a0fb50f4b41b381c4f0b53dd14052205b9a082be0ca388b7
@@ -5285,7 +5256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:^27.0.6, babel-jest@npm:^27.2.0":
+"babel-jest@npm:^27.2.0":
   version: 27.2.0
   resolution: "babel-jest@npm:27.2.0"
   dependencies:
@@ -5545,7 +5516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-gatsby@npm:^1.11.0, babel-preset-gatsby@npm:^1.14.0":
+"babel-preset-gatsby@npm:^1.14.0":
   version: 1.14.0
   resolution: "babel-preset-gatsby@npm:1.14.0"
   dependencies:
@@ -5723,13 +5694,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"binary-extensions@npm:^1.0.0":
-  version: 1.13.1
-  resolution: "binary-extensions@npm:1.13.1"
-  checksum: ad7747f33c07e94ba443055de130b50c8b8b130a358bca064c580d91769ca6a69c7ac65ca008ff044ed4541d2c6ad45496e1fadbef5218a68770996b6a2194d7
-  languageName: node
-  linkType: hard
-
 "binary-extensions@npm:^2.0.0":
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0"
@@ -5868,7 +5832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"braces@npm:^2.3.1, braces@npm:^2.3.2":
+"braces@npm:^2.3.1":
   version: 2.3.2
   resolution: "braces@npm:2.3.2"
   dependencies:
@@ -7797,19 +7761,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-axe@npm:^0.12.2":
-  version: 0.12.2
-  resolution: "cypress-axe@npm:0.12.2"
+"cypress-axe@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "cypress-axe@npm:0.13.0"
   peerDependencies:
     axe-core: ^3 || ^4
-    cypress: ^3 || ^4 || ^5 || ^6
-  checksum: 92be2bceaa431b5ac13d1f4d1f7575042ff8e3a6a941d0eadbfba0e885b5764b0dd23c17978f5f232e07dacc35320598437f7f7cd31844b9d2edfc6956d7d64d
+    cypress: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+  checksum: 52879b6b7af46c101f20b1969e98d03e3ddc64a7c3c1dc6a536837550a4d7d4211e493817ff4b253d0d4ce6acf62ff4d5d33389709b924c9e0a9cf602b0a81d7
   languageName: node
   linkType: hard
 
-"cypress@npm:^8.2.0":
-  version: 8.4.0
-  resolution: "cypress@npm:8.4.0"
+"cypress@npm:^8.4.1":
+  version: 8.4.1
+  resolution: "cypress@npm:8.4.1"
   dependencies:
     "@cypress/request": ^2.88.6
     "@cypress/xvfb": ^1.2.4
@@ -7854,7 +7818,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 744913389efde81d5c336952069acadf215b48eb628d380bdd9d3bc1c2a1c1804e3fc710e094911d4ba6f700dde0469b5d4ccbd0fe13bd525f4a1507836d4a48
+  checksum: d06e91df458d8052971a6992c0d0e74451bf916ceba0599e9bf0287022b60e831a2ef0b9be64af03894101d06c3fc21b98fed9a3e9f6a0818ee75f0b7358d033
   languageName: node
   linkType: hard
 
@@ -7919,7 +7883,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.14.0, date-fns@npm:^2.23.0":
+"date-fns@npm:^2.14.0, date-fns@npm:^2.24.0":
   version: 2.24.0
   resolution: "date-fns@npm:2.24.0"
   checksum: f930419e356cf6a6a02c7ed6c6e438df61b4011861002a3dc94a4efc83bc96a7f30ea3cc2e7231c421604c3d5131f9ffb097bf8e7f81a59d68f556864490664f
@@ -9113,7 +9077,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^2.11.3":
+"eslint-plugin-cypress@npm:^2.12.1":
   version: 2.12.1
   resolution: "eslint-plugin-cypress@npm:2.12.1"
   dependencies:
@@ -9150,7 +9114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.23.4, eslint-plugin-import@npm:^2.24.2":
+"eslint-plugin-import@npm:^2.24.2":
   version: 2.24.2
   resolution: "eslint-plugin-import@npm:2.24.2"
   dependencies:
@@ -9175,7 +9139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest-dom@npm:^3.9.0":
+"eslint-plugin-jest-dom@npm:^3.9.2":
   version: 3.9.2
   resolution: "eslint-plugin-jest-dom@npm:3.9.2"
   dependencies:
@@ -9188,7 +9152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^24.4.0":
+"eslint-plugin-jest@npm:^24.4.2":
   version: 24.4.2
   resolution: "eslint-plugin-jest@npm:24.4.2"
   dependencies:
@@ -9224,7 +9188,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.4.0":
+"eslint-plugin-prettier@npm:^3.4.1":
   version: 3.4.1
   resolution: "eslint-plugin-prettier@npm:3.4.1"
   dependencies:
@@ -9248,7 +9212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.24.0, eslint-plugin-react@npm:^7.25.1":
+"eslint-plugin-react@npm:^7.25.1, eslint-plugin-react@npm:^7.25.2":
   version: 7.25.2
   resolution: "eslint-plugin-react@npm:7.25.2"
   dependencies:
@@ -9271,7 +9235,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^4.10.1":
+"eslint-plugin-testing-library@npm:^4.12.2":
   version: 4.12.2
   resolution: "eslint-plugin-testing-library@npm:4.12.2"
   dependencies:
@@ -10555,7 +10519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-cypress@npm:^1.11.0":
+"gatsby-cypress@npm:^1.14.0":
   version: 1.14.0
   resolution: "gatsby-cypress@npm:1.14.0"
   dependencies:
@@ -10628,7 +10592,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^3.11.0":
+"gatsby-plugin-catch-links@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-catch-links@npm:3.14.0"
   dependencies:
@@ -10640,7 +10604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-compile-es6-packages@npm:^2.1.0":
+"gatsby-plugin-compile-es6-packages@npm:^2.1.1":
   version: 2.1.1
   resolution: "gatsby-plugin-compile-es6-packages@npm:2.1.1"
   dependencies:
@@ -10652,7 +10616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-disqus@npm:^1.2.2":
+"gatsby-plugin-disqus@npm:^1.2.3":
   version: 1.2.3
   resolution: "gatsby-plugin-disqus@npm:1.2.3"
   peerDependencies:
@@ -10661,7 +10625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-feed@npm:^3.11.0":
+"gatsby-plugin-feed@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-feed@npm:3.14.0"
   dependencies:
@@ -10680,7 +10644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-gtag@npm:^3.11.0":
+"gatsby-plugin-google-gtag@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-google-gtag@npm:3.14.0"
   dependencies:
@@ -10694,7 +10658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-image@npm:^1.11.0":
+"gatsby-plugin-image@npm:^1.14.0":
   version: 1.14.0
   resolution: "gatsby-plugin-image@npm:1.14.0"
   dependencies:
@@ -10722,7 +10686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-lodash@npm:^4.11.0":
+"gatsby-plugin-lodash@npm:^4.14.0":
   version: 4.14.0
   resolution: "gatsby-plugin-lodash@npm:4.14.0"
   dependencies:
@@ -10735,7 +10699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^3.11.0":
+"gatsby-plugin-manifest@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-manifest@npm:3.14.0"
   dependencies:
@@ -10750,7 +10714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:^2.11.0":
+"gatsby-plugin-mdx@npm:^2.14.0":
   version: 2.14.0
   resolution: "gatsby-plugin-mdx@npm:2.14.0"
   dependencies:
@@ -10800,7 +10764,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-netlify-cms@npm:^5.11.0":
+"gatsby-plugin-netlify-cms@npm:^5.14.0":
   version: 5.14.0
   resolution: "gatsby-plugin-netlify-cms@npm:5.14.0"
   dependencies:
@@ -10823,7 +10787,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-nprogress@npm:^3.11.0":
+"gatsby-plugin-nprogress@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-nprogress@npm:3.14.0"
   dependencies:
@@ -10835,7 +10799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-offline@npm:^4.11.0":
+"gatsby-plugin-offline@npm:^4.14.0":
   version: 4.14.0
   resolution: "gatsby-plugin-offline@npm:4.14.0"
   dependencies:
@@ -10854,7 +10818,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-page-creator@npm:^3.11.0, gatsby-plugin-page-creator@npm:^3.14.0":
+"gatsby-plugin-page-creator@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-page-creator@npm:3.14.0"
   dependencies:
@@ -10875,7 +10839,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet@npm:^4.11.0":
+"gatsby-plugin-react-helmet@npm:^4.14.0":
   version: 4.14.0
   resolution: "gatsby-plugin-react-helmet@npm:4.14.0"
   dependencies:
@@ -10898,7 +10862,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^3.11.0":
+"gatsby-plugin-sharp@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-sharp@npm:3.14.0"
   dependencies:
@@ -10926,7 +10890,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sitemap@npm:^4.7.0":
+"gatsby-plugin-sitemap@npm:^4.10.0":
   version: 4.10.0
   resolution: "gatsby-plugin-sitemap@npm:4.10.0"
   dependencies:
@@ -10942,7 +10906,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-styled-components@npm:^4.11.0":
+"gatsby-plugin-styled-components@npm:^4.14.0":
   version: 4.14.0
   resolution: "gatsby-plugin-styled-components@npm:4.14.0"
   dependencies:
@@ -10957,7 +10921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-twitter@npm:^3.11.0":
+"gatsby-plugin-twitter@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-plugin-twitter@npm:3.14.0"
   dependencies:
@@ -11077,7 +11041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-autolink-headers@npm:^4.8.0":
+"gatsby-remark-autolink-headers@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-remark-autolink-headers@npm:4.11.0"
   dependencies:
@@ -11094,7 +11058,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^4.8.0":
+"gatsby-remark-copy-linked-files@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-remark-copy-linked-files@npm:4.11.0"
   dependencies:
@@ -11123,7 +11087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^5.8.0":
+"gatsby-remark-images@npm:^5.11.0":
   version: 5.11.0
   resolution: "gatsby-remark-images@npm:5.11.0"
   dependencies:
@@ -11145,7 +11109,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-prismjs@npm:^5.8.0":
+"gatsby-remark-prismjs@npm:^5.11.0":
   version: 5.11.0
   resolution: "gatsby-remark-prismjs@npm:5.11.0"
   dependencies:
@@ -11172,7 +11136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-responsive-iframe@npm:^4.8.0":
+"gatsby-remark-responsive-iframe@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-remark-responsive-iframe@npm:4.11.0"
   dependencies:
@@ -11187,7 +11151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^3.11.0":
+"gatsby-source-filesystem@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-source-filesystem@npm:3.14.0"
   dependencies:
@@ -11214,54 +11178,54 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-starter-advanced@workspace:."
   dependencies:
-    "@testing-library/cypress": ^8.0.0
+    "@testing-library/cypress": ^8.0.1
     "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^12.0.0
+    "@testing-library/react": ^12.1.0
     "@types/jest": ^26.0.24
-    "@types/node": ^16.4.13
-    "@types/react": ^17.0.16
+    "@types/node": ^16.9.2
+    "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
     "@types/react-helmet": ^6.1.2
-    "@types/styled-components": ^5.1.12
-    "@typescript-eslint/eslint-plugin": ^4.29.0
-    babel-jest: ^27.0.6
+    "@types/styled-components": ^5.1.14
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    babel-jest: ^27.2.0
     babel-plugin-styled-components: ^1.13.2
-    cypress: ^8.2.0
-    cypress-axe: ^0.12.2
+    cypress: ^8.4.1
+    cypress-axe: ^0.13.0
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.4.0
-    eslint-plugin-jest-dom: ^3.9.0
+    eslint-plugin-import: ^2.24.2
+    eslint-plugin-jest: ^24.4.2
+    eslint-plugin-jest-dom: ^3.9.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.25.2
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.10.1
-    gatsby: ^3.11.0
-    gatsby-cypress: ^1.11.0
-    gatsby-plugin-styled-components: ^4.11.0
+    eslint-plugin-testing-library: ^4.12.2
+    gatsby: ^3.14.0
+    gatsby-cypress: ^1.14.0
+    gatsby-plugin-styled-components: ^4.14.0
     gatsby-theme-amaranth: "*"
     gh-pages: ^3.2.3
-    jest: ^27.0.6
+    jest: ^27.2.0
     jest-styled-components: ^7.0.5
-    markdownlint-cli2: ^0.2.0
-    prettier: ^2.3.2
+    markdownlint-cli2: ^0.3.1
+    prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-query: ^3.19.2
-    start-server-and-test: ^1.13.1
-    styled-components: ^5.3.0
+    react-query: ^3.23.2
+    start-server-and-test: ^1.14.0
+    styled-components: ^5.3.1
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
     stylelint-prettier: ^1.2.0
-    ts-jest: ^27.0.4
-    ts-node: ^10.1.0
-    ts-prune: ^0.9.2
-    typescript: ^4.3.5
+    ts-jest: ^27.0.5
+    ts-node: ^10.2.1
+    ts-prune: ^0.9.3
+    typescript: ^4.4.3
     write-good: ^1.0.8
   languageName: unknown
   linkType: soft
@@ -11292,58 +11256,58 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-advanced-demo@workspace:examples/advanced-demo"
   dependencies:
-    "@testing-library/cypress": ^8.0.0
+    "@testing-library/cypress": ^8.0.1
     "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^12.0.0
+    "@testing-library/react": ^12.1.0
     "@types/jest": ^26.0.24
-    "@types/lodash": ^4.14.172
-    "@types/node": ^16.4.13
-    "@types/react": ^17.0.16
+    "@types/lodash": ^4.14.173
+    "@types/node": ^16.9.2
+    "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
     "@types/react-helmet": ^6.1.2
     "@types/xml2js": ^0.4.9
-    "@typescript-eslint/eslint-plugin": ^4.29.0
-    axe-core: ^4.3.2
-    babel-jest: ^27.0.6
-    babel-preset-gatsby: ^1.11.0
-    cypress: ^8.2.0
-    cypress-axe: ^0.12.2
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    axe-core: ^4.3.3
+    babel-jest: ^27.2.0
+    babel-preset-gatsby: ^1.14.0
+    cypress: ^8.4.1
+    cypress-axe: ^0.13.0
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0
-    eslint-plugin-cypress: ^2.11.3
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.4.0
-    eslint-plugin-jest-dom: ^3.9.0
+    eslint-plugin-cypress: ^2.12.1
+    eslint-plugin-import: ^2.24.2
+    eslint-plugin-jest: ^24.4.2
+    eslint-plugin-jest-dom: ^3.9.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.25.2
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.10.1
-    gatsby: ^3.11.0
-    gatsby-cypress: ^1.11.0
-    gatsby-plugin-image: ^1.11.0
-    gatsby-plugin-mdx: ^2.11.0
+    eslint-plugin-testing-library: ^4.12.2
+    gatsby: ^3.14.0
+    gatsby-cypress: ^1.14.0
+    gatsby-plugin-image: ^1.14.0
+    gatsby-plugin-mdx: ^2.14.0
     gatsby-theme-advanced: "*"
     gh-pages: ^3.2.3
-    jest: ^27.0.6
+    jest: ^27.2.0
     lodash: ^4.17.21
-    markdownlint-cli2: ^0.2.0
-    prettier: ^2.3.2
+    markdownlint-cli2: ^0.3.1
+    prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
     react-share: ^4.4.0
-    start-server-and-test: ^1.13.1
+    start-server-and-test: ^1.14.0
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
     stylelint-prettier: ^1.2.0
-    ts-jest: ^27.0.4
-    ts-node: ^10.1.0
-    ts-prune: ^0.9.2
-    typescript: ^4.3.5
+    ts-jest: ^27.0.5
+    ts-node: ^10.2.1
+    ts-prune: ^0.9.3
+    typescript: ^4.4.3
     write-good: ^1.0.8
     xml2js: ^0.4.23
   languageName: unknown
@@ -11353,98 +11317,98 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-advanced@workspace:themes/advanced"
   dependencies:
-    "@babel/cli": ^7.14.8
-    "@babel/core": ^7.15.0
+    "@babel/cli": ^7.15.7
+    "@babel/core": ^7.15.5
     "@babel/plugin-transform-runtime": ^7.15.0
-    "@babel/preset-env": ^7.15.0
+    "@babel/preset-env": ^7.15.6
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
     "@fec/remark-a11y-emoji": ^3.1.0
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
-    "@testing-library/dom": ^8.1.0
+    "@testing-library/dom": ^8.5.0
     "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^12.0.0
-    "@testing-library/react-hooks": ^7.0.1
+    "@testing-library/react": ^12.1.0
+    "@testing-library/react-hooks": ^7.0.2
     "@types/babel__plugin-transform-runtime": ^7.9.2
     "@types/clone-deep": ^4.0.1
     "@types/jest": ^26.0.24
     "@types/mdx-js__react": ^1.5.4
-    "@types/node": ^16.4.13
-    "@types/react": ^17.0.16
+    "@types/node": ^16.9.2
+    "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
     "@types/react-helmet": ^6.1.2
     "@types/react-test-renderer": ^17.0.1
     "@types/remove-markdown": ^0.3.1
     "@types/source-map-support": ^0.5.4
     "@types/url-join": ^4.0.1
-    "@typescript-eslint/eslint-plugin": ^4.29.0
-    babel-jest: ^27.0.6
-    babel-preset-gatsby: ^1.11.0
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    babel-jest: ^27.2.0
+    babel-preset-gatsby: ^1.14.0
     cli-glob: ^0.1.0
     clone-deep: ^4.0.1
-    date-fns: ^2.23.0
+    date-fns: ^2.24.0
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0
     eslint-plugin-graphql: ^4.0.0
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.4.0
-    eslint-plugin-jest-dom: ^3.9.0
+    eslint-plugin-import: ^2.24.2
+    eslint-plugin-jest: ^24.4.2
+    eslint-plugin-jest-dom: ^3.9.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.25.2
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.10.1
+    eslint-plugin-testing-library: ^4.12.2
     fetch-mock: ^9.11.0
-    gatsby: ^3.11.0
+    gatsby: ^3.14.0
     gatsby-image: ^3.11.0
-    gatsby-plugin-catch-links: ^3.11.0
-    gatsby-plugin-compile-es6-packages: ^2.1.0
-    gatsby-plugin-disqus: ^1.2.2
-    gatsby-plugin-feed: ^3.11.0
-    gatsby-plugin-google-gtag: ^3.11.0
-    gatsby-plugin-image: ^1.11.0
-    gatsby-plugin-lodash: ^4.11.0
-    gatsby-plugin-manifest: ^3.11.0
-    gatsby-plugin-mdx: ^2.11.0
-    gatsby-plugin-netlify-cms: ^5.11.0
-    gatsby-plugin-nprogress: ^3.11.0
-    gatsby-plugin-offline: ^4.11.0
-    gatsby-plugin-page-creator: ^3.11.0
-    gatsby-plugin-react-helmet: ^4.11.0
+    gatsby-plugin-catch-links: ^3.14.0
+    gatsby-plugin-compile-es6-packages: ^2.1.1
+    gatsby-plugin-disqus: ^1.2.3
+    gatsby-plugin-feed: ^3.14.0
+    gatsby-plugin-google-gtag: ^3.14.0
+    gatsby-plugin-image: ^1.14.0
+    gatsby-plugin-lodash: ^4.14.0
+    gatsby-plugin-manifest: ^3.14.0
+    gatsby-plugin-mdx: ^2.14.0
+    gatsby-plugin-netlify-cms: ^5.14.0
+    gatsby-plugin-nprogress: ^3.14.0
+    gatsby-plugin-offline: ^4.14.0
+    gatsby-plugin-page-creator: ^3.14.0
+    gatsby-plugin-react-helmet: ^4.14.0
     gatsby-plugin-react-svg: ^3.0.1
-    gatsby-plugin-sharp: ^3.11.0
-    gatsby-plugin-sitemap: ^4.7.0
-    gatsby-plugin-twitter: ^3.11.0
-    gatsby-remark-autolink-headers: ^4.8.0
-    gatsby-remark-copy-linked-files: ^4.8.0
+    gatsby-plugin-sharp: ^3.14.0
+    gatsby-plugin-sitemap: ^4.10.0
+    gatsby-plugin-twitter: ^3.14.0
+    gatsby-remark-autolink-headers: ^4.11.0
+    gatsby-remark-copy-linked-files: ^4.11.0
     gatsby-remark-embed-video: ^3.1.1
-    gatsby-remark-images: ^5.8.0
-    gatsby-remark-prismjs: ^5.8.0
+    gatsby-remark-images: ^5.11.0
+    gatsby-remark-prismjs: ^5.11.0
     gatsby-remark-relative-images: ^2.0.2
-    gatsby-remark-responsive-iframe: ^4.8.0
-    gatsby-source-filesystem: ^3.11.0
-    gatsby-transformer-remark: ^4.8.0
-    gatsby-transformer-sharp: ^3.11.0
+    gatsby-remark-responsive-iframe: ^4.11.0
+    gatsby-source-filesystem: ^3.14.0
+    gatsby-transformer-remark: ^4.11.0
+    gatsby-transformer-sharp: ^3.14.0
     gh-pages: ^3.2.3
     identity-obj-proxy: ^3.0.0
     is-absolute-url: ^3.0.3
-    jest: ^27.0.6
+    jest: ^27.2.0
     lodash: ^4.17.21
-    markdownlint-cli2: ^0.2.0
-    memfs: ^3.2.2
+    markdownlint-cli2: ^0.3.1
+    memfs: ^3.2.4
     moment: ^2.29.1
-    netlify-cms-app: ^2.15.33
-    prettier: ^2.3.2
-    prism-themes: ^1.8.0
-    prismjs: ^1.24.1
+    netlify-cms-app: ^2.15.44
+    prettier: ^2.4.1
+    prism-themes: ^1.9.0
+    prismjs: ^1.25.0
     react: ^17.0.2
     react-color: ^2.19.3
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
-    react-query: ^3.19.2
+    react-query: ^3.23.2
     react-share: ^4.4.0
     react-test-renderer: ^17.0.2
     react-twitter-widgets: ^1.10.0
@@ -11452,15 +11416,15 @@ __metadata:
     remark-external-links: ^8.0.0
     remark-unwrap-images: ^2.1.0
     remove-markdown: ^0.3.0
-    source-map-support: ^0.5.19
+    source-map-support: ^0.5.20
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
     stylelint-prettier: ^1.2.0
-    ts-jest: ^27.0.4
-    ts-node: ^10.1.0
-    ts-prune: ^0.9.2
-    typescript: ^4.3.5
+    ts-jest: ^27.0.5
+    ts-node: ^10.2.1
+    ts-prune: ^0.9.3
+    typescript: ^4.4.3
     url-join: ^4.0.1
     write-good: ^1.0.8
   peerDependencies:
@@ -11474,53 +11438,53 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-amaranth-demo@workspace:examples/amaranth-demo"
   dependencies:
-    "@testing-library/cypress": ^8.0.0
+    "@testing-library/cypress": ^8.0.1
     "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^12.0.0
+    "@testing-library/react": ^12.1.0
     "@types/jest": ^26.0.24
-    "@types/node": ^16.4.13
-    "@types/react": ^17.0.16
+    "@types/node": ^16.9.2
+    "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
-    "@types/styled-components": ^5.1.12
+    "@types/styled-components": ^5.1.14
     "@types/xml2js": ^0.4.9
-    "@typescript-eslint/eslint-plugin": ^4.29.0
-    axe-core: ^4.3.2
-    babel-jest: ^27.0.6
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    axe-core: ^4.3.3
+    babel-jest: ^27.2.0
     babel-plugin-styled-components: ^1.13.2
-    cypress: ^8.2.0
-    cypress-axe: ^0.12.2
+    cypress: ^8.4.1
+    cypress-axe: ^0.13.0
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.4.0
-    eslint-plugin-jest-dom: ^3.9.0
+    eslint-plugin-import: ^2.24.2
+    eslint-plugin-jest: ^24.4.2
+    eslint-plugin-jest-dom: ^3.9.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.25.2
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.10.1
-    gatsby: ^3.11.0
-    gatsby-cypress: ^1.11.0
-    gatsby-plugin-styled-components: ^4.11.0
+    eslint-plugin-testing-library: ^4.12.2
+    gatsby: ^3.14.0
+    gatsby-cypress: ^1.14.0
+    gatsby-plugin-styled-components: ^4.14.0
     gatsby-theme-amaranth: "*"
     gh-pages: ^3.2.3
-    jest: ^27.0.6
-    markdownlint-cli2: ^0.2.0
-    prettier: ^2.3.2
+    jest: ^27.2.0
+    markdownlint-cli2: ^0.3.1
+    prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    start-server-and-test: ^1.13.1
-    styled-components: ^5.3.0
+    start-server-and-test: ^1.14.0
+    styled-components: ^5.3.1
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
     stylelint-prettier: ^1.2.0
-    ts-jest: ^27.0.4
-    ts-node: ^10.1.0
-    ts-prune: ^0.9.2
-    typescript: ^4.3.5
+    ts-jest: ^27.0.5
+    ts-node: ^10.2.1
+    ts-prune: ^0.9.3
+    typescript: ^4.4.3
     write-good: ^1.0.8
     xml2js: ^0.4.23
   languageName: unknown
@@ -11530,114 +11494,114 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-amaranth@workspace:themes/amaranth"
   dependencies:
-    "@babel/cli": ^7.14.8
-    "@babel/core": ^7.15.0
+    "@babel/cli": ^7.15.7
+    "@babel/core": ^7.15.5
     "@babel/plugin-transform-runtime": ^7.15.0
-    "@babel/preset-env": ^7.15.0
+    "@babel/preset-env": ^7.15.6
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
     "@fec/remark-a11y-emoji": ^3.1.0
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
-    "@styled-icons/boxicons-logos": ^10.37.0
-    "@styled-icons/boxicons-regular": ^10.37.0
+    "@styled-icons/boxicons-logos": ^10.38.0
+    "@styled-icons/boxicons-regular": ^10.38.0
     "@styled-icons/styled-icon": ^10.6.3
     "@testing-library/jest-dom": ^5.14.1
-    "@testing-library/react": ^12.0.0
+    "@testing-library/react": ^12.1.0
     "@testing-library/user-event": ^13.2.1
     "@types/babel__plugin-transform-runtime": ^7.9.2
     "@types/clone-deep": ^4.0.1
     "@types/jest": ^26.0.24
     "@types/mdx-js__react": ^1.5.4
-    "@types/node": ^16.4.13
-    "@types/react": ^17.0.16
+    "@types/node": ^16.9.2
+    "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
     "@types/react-helmet": ^6.1.2
     "@types/remove-markdown": ^0.3.1
-    "@types/styled-components": ^5.1.12
+    "@types/styled-components": ^5.1.14
     "@types/url-join": ^4.0.1
-    "@typescript-eslint/eslint-plugin": ^4.29.0
-    babel-jest: ^27.0.6
+    "@typescript-eslint/eslint-plugin": ^4.31.1
+    babel-jest: ^27.2.0
     babel-plugin-styled-components: ^1.13.2
-    babel-preset-gatsby: ^1.11.0
+    babel-preset-gatsby: ^1.14.0
     cli-glob: ^0.1.0
     clone-deep: ^4.0.1
-    date-fns: ^2.23.0
+    date-fns: ^2.24.0
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0
     eslint-plugin-graphql: ^4.0.0
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.4.0
-    eslint-plugin-jest-dom: ^3.9.0
+    eslint-plugin-import: ^2.24.2
+    eslint-plugin-jest: ^24.4.2
+    eslint-plugin-jest-dom: ^3.9.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: ^7.25.2
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.10.1
-    gatsby: ^3.11.0
+    eslint-plugin-testing-library: ^4.12.2
+    gatsby: ^3.14.0
     gatsby-image: ^3.11.0
-    gatsby-plugin-catch-links: ^3.11.0
-    gatsby-plugin-feed: ^3.11.0
-    gatsby-plugin-google-gtag: ^3.11.0
-    gatsby-plugin-image: ^1.11.0
-    gatsby-plugin-lodash: ^4.11.0
-    gatsby-plugin-manifest: ^3.11.0
-    gatsby-plugin-mdx: ^2.11.0
-    gatsby-plugin-netlify-cms: ^5.11.0
-    gatsby-plugin-nprogress: ^3.11.0
-    gatsby-plugin-offline: ^4.11.0
-    gatsby-plugin-page-creator: ^3.11.0
-    gatsby-plugin-react-helmet: ^4.11.0
+    gatsby-plugin-catch-links: ^3.14.0
+    gatsby-plugin-feed: ^3.14.0
+    gatsby-plugin-google-gtag: ^3.14.0
+    gatsby-plugin-image: ^1.14.0
+    gatsby-plugin-lodash: ^4.14.0
+    gatsby-plugin-manifest: ^3.14.0
+    gatsby-plugin-mdx: ^2.14.0
+    gatsby-plugin-netlify-cms: ^5.14.0
+    gatsby-plugin-nprogress: ^3.14.0
+    gatsby-plugin-offline: ^4.14.0
+    gatsby-plugin-page-creator: ^3.14.0
+    gatsby-plugin-react-helmet: ^4.14.0
     gatsby-plugin-react-svg: ^3.0.1
-    gatsby-plugin-sharp: ^3.11.0
-    gatsby-plugin-sitemap: ^4.7.0
-    gatsby-plugin-styled-components: ^4.11.0
-    gatsby-plugin-twitter: ^3.11.0
-    gatsby-remark-autolink-headers: ^4.8.0
-    gatsby-remark-copy-linked-files: ^4.8.0
+    gatsby-plugin-sharp: ^3.14.0
+    gatsby-plugin-sitemap: ^4.10.0
+    gatsby-plugin-styled-components: ^4.14.0
+    gatsby-plugin-twitter: ^3.14.0
+    gatsby-remark-autolink-headers: ^4.11.0
+    gatsby-remark-copy-linked-files: ^4.11.0
     gatsby-remark-embed-video: ^3.1.1
-    gatsby-remark-images: ^5.8.0
-    gatsby-remark-prismjs: ^5.8.0
+    gatsby-remark-images: ^5.11.0
+    gatsby-remark-prismjs: ^5.11.0
     gatsby-remark-relative-images: ^2.0.2
-    gatsby-remark-responsive-iframe: ^4.8.0
-    gatsby-source-filesystem: ^3.11.0
+    gatsby-remark-responsive-iframe: ^4.11.0
+    gatsby-source-filesystem: ^3.14.0
     gatsby-theme-advanced: "*"
-    gatsby-transformer-remark: ^4.8.0
-    gatsby-transformer-sharp: ^3.11.0
+    gatsby-transformer-remark: ^4.11.0
+    gatsby-transformer-sharp: ^3.14.0
     gh-pages: ^3.2.3
     identity-obj-proxy: ^3.0.0
     is-absolute-url: ^3.0.3
-    jest: ^27.0.6
+    jest: ^27.2.0
     jest-styled-components: ^7.0.5
     lodash: ^4.17.21
-    markdownlint-cli2: ^0.2.0
+    markdownlint-cli2: ^0.3.1
     moment: ^2.29.1
-    netlify-cms-app: ^2.15.33
-    prettier: ^2.3.2
-    prism-themes: ^1.8.0
-    prismjs: ^1.24.1
+    netlify-cms-app: ^2.15.44
+    prettier: ^2.4.1
+    prism-themes: ^1.9.0
+    prismjs: ^1.25.0
     react: ^17.0.2
     react-color: ^2.19.3
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
-    react-query: ^3.19.2
+    react-query: ^3.23.2
     react-share: ^4.4.0
     react-twitter-widgets: ^1.10.0
     remark-codesandbox: ^0.10.0
     remark-external-links: ^8.0.0
     remark-unwrap-images: ^2.1.0
     remove-markdown: ^0.3.0
-    styled-components: ^5.3.0
+    styled-components: ^5.3.1
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     stylelint-config-recommended: ^5.0.0
     stylelint-prettier: ^1.2.0
-    ts-jest: ^27.0.4
-    ts-node: ^10.1.0
-    ts-prune: ^0.9.2
-    typescript: ^4.3.5
+    ts-jest: ^27.0.5
+    ts-node: ^10.2.1
+    ts-prune: ^0.9.3
+    typescript: ^4.4.3
     url-join: ^4.0.1
     write-good: ^1.0.8
   peerDependencies:
@@ -11647,7 +11611,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-transformer-remark@npm:^4.8.0":
+"gatsby-transformer-remark@npm:^4.11.0":
   version: 4.11.0
   resolution: "gatsby-transformer-remark@npm:4.11.0"
   dependencies:
@@ -11679,7 +11643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-sharp@npm:^3.11.0":
+"gatsby-transformer-sharp@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby-transformer-sharp@npm:3.14.0"
   dependencies:
@@ -11708,7 +11672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^3.11.0":
+"gatsby@npm:^3.14.0":
   version: 3.14.0
   resolution: "gatsby@npm:3.14.0"
   dependencies:
@@ -13670,15 +13634,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-binary-path@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "is-binary-path@npm:1.0.1"
-  dependencies:
-    binary-extensions: ^1.0.0
-  checksum: a803c99e9d898170c3b44a86fbdc0736d3d7fcbe737345433fb78e810b9fe30c982657782ad0e676644ba4693ddf05601a7423b5611423218663d6b533341ac9
-  languageName: node
-  linkType: hard
-
 "is-binary-path@npm:^2.1.0, is-binary-path@npm:~2.1.0":
   version: 2.1.0
   resolution: "is-binary-path@npm:2.1.0"
@@ -15018,7 +14973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.0.6":
+"jest@npm:^27.2.0":
   version: 27.2.0
   resolution: "jest@npm:27.2.0"
   dependencies:
@@ -16186,9 +16141,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:12.0.4":
-  version: 12.0.4
-  resolution: "markdown-it@npm:12.0.4"
+"markdown-it@npm:12.2.0":
+  version: 12.2.0
+  resolution: "markdown-it@npm:12.2.0"
   dependencies:
     argparse: ^2.0.1
     entities: ~2.1.0
@@ -16197,7 +16152,7 @@ __metadata:
     uc.micro: ^1.0.5
   bin:
     markdown-it: bin/markdown-it.js
-  checksum: 001451527c165b8cda6636c19228dd8a96ce593c2dd08c3d1380fd5294bd8368a7f167a3107da05327abe98b553d4f0cadec9e19eb3b7d4249369a73ae4399e1
+  checksum: 8e3d6646edf8e7ef19ed707c59d16741bd40804f1e7567407efd2f346ae0f7ddcdeada83e7affebd21b9d7d947b27fc60fd795a970461785030a4e52e750122b
   languageName: node
   linkType: hard
 
@@ -16226,37 +16181,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdownlint-cli2@npm:0.2.0, markdownlint-cli2@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "markdownlint-cli2@npm:0.2.0"
+"markdownlint-cli2@npm:0.3.1, markdownlint-cli2@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "markdownlint-cli2@npm:0.3.1"
   dependencies:
     globby: ~11.0.4
-    markdownlint: ~0.23.1
+    markdownlint: ~0.24.0
     markdownlint-cli2-formatter-default: ^0.0.2
-    markdownlint-rule-helpers: ~0.14.0
+    markdownlint-rule-helpers: ~0.15.0
     micromatch: ~4.0.4
     strip-json-comments: ~3.1.1
     yaml: ~1.10.2
   bin:
     markdownlint-cli2: markdownlint-cli2.js
     markdownlint-cli2-fix: markdownlint-cli2-fix.js
-  checksum: f5d694f4e133c0d776f48f52e337d4978360d4655500aa97d7ef201fd93bcc967df72f21971587c686b67ce6742c6819503f95dc4e09929701de9e27c41177cf
+  checksum: b43650e86d89053f17979529166f892cb7ef7951491d80c6fcf780ca6dfced37aa9b358c585bdf75f2706a64cbe7a10f88a0972bbf0d2e5bcbc691e162146a1a
   languageName: node
   linkType: hard
 
-"markdownlint-rule-helpers@npm:~0.14.0":
-  version: 0.14.0
-  resolution: "markdownlint-rule-helpers@npm:0.14.0"
-  checksum: c428810bd03267b614c021392d65aa78b114110af0f10f14e54c4c0b2734bd496f2a409416fcbdf73fc5378884d913132e4567ab07bd40047c3cd5959383e178
+"markdownlint-rule-helpers@npm:~0.15.0":
+  version: 0.15.0
+  resolution: "markdownlint-rule-helpers@npm:0.15.0"
+  checksum: c8cc35fdadf1908e89d08cffa6ab917c56656cd1f4a4bc04f0640a6835658a26d5917251d6d76aea23c242488e51ea86211115f3af102f1925f339e4d3a2b271
   languageName: node
   linkType: hard
 
-"markdownlint@npm:~0.23.1":
-  version: 0.23.1
-  resolution: "markdownlint@npm:0.23.1"
+"markdownlint@npm:~0.24.0":
+  version: 0.24.0
+  resolution: "markdownlint@npm:0.24.0"
   dependencies:
-    markdown-it: 12.0.4
-  checksum: e80a903c8c92deb69c24f09c64917aa5e1812cceaadd7411316065722c28de4995a53ac2b29451ff701247556d0e31725ae4a215d3f5e13b8ff2c2b25deadedc
+    markdown-it: 12.2.0
+  checksum: 5308070947796d706e752e7dfe6c741fe613d007be152e710a1fb7bbe2f0481beb2be4c0ed053065aea631daeac3f86d66e5e8cb9a753febf35158930771f34f
   languageName: node
   linkType: hard
 
@@ -16650,7 +16605,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memfs@npm:^3.2.2":
+"memfs@npm:^3.2.2, memfs@npm:^3.2.4":
   version: 3.2.4
   resolution: "memfs@npm:3.2.4"
   dependencies:
@@ -16906,7 +16861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^3.1.10, micromatch@npm:^3.1.4":
+"micromatch@npm:^3.1.10":
   version: 3.1.10
   resolution: "micromatch@npm:3.1.10"
   dependencies:
@@ -17453,7 +17408,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-app@npm:^2.15.33":
+"netlify-cms-app@npm:^2.15.44":
   version: 2.15.44
   resolution: "netlify-cms-app@npm:2.15.44"
   dependencies:
@@ -20093,7 +20048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.2":
+"prettier@npm:^2.3.2, prettier@npm:^2.4.1":
   version: 2.4.1
   resolution: "prettier@npm:2.4.1"
   bin:
@@ -20165,14 +20120,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-themes@npm:^1.8.0":
+"prism-themes@npm:^1.9.0":
   version: 1.9.0
   resolution: "prism-themes@npm:1.9.0"
   checksum: ddbadb8d83fc23e428409d7dd1d62dde6033a3afabd721d292e2d251f5693e3eccb7f9641704374f3df3dde59c0e2c8a3c069a7aa72990c4a00acb57f2af81f8
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.24.1":
+"prismjs@npm:^1.25.0":
   version: 1.25.0
   resolution: "prismjs@npm:1.25.0"
   checksum: 04d8eae9d1b26b76c350bc65621584c8f8cab80ace7da3953f8aef2f9a8dd4b4f71c1d15bc5c67f126ddc90cd5af613919dc1340589a6c57355bed86fa3ac010
@@ -20906,7 +20861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-query@npm:^3.19.2":
+"react-query@npm:^3.23.2":
   version: 3.23.2
   resolution: "react-query@npm:3.23.2"
   dependencies:
@@ -21317,7 +21272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:1 || 2, readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.2, readable-stream@npm:^2.0.6, readable-stream@npm:^2.1.5, readable-stream@npm:^2.2.2, readable-stream@npm:^2.3.0, readable-stream@npm:^2.3.5, readable-stream@npm:^2.3.6, readable-stream@npm:~2.3.6":
+"readable-stream@npm:1 || 2, readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.6, readable-stream@npm:^2.1.5, readable-stream@npm:^2.2.2, readable-stream@npm:^2.3.0, readable-stream@npm:^2.3.5, readable-stream@npm:^2.3.6, readable-stream@npm:~2.3.6":
   version: 2.3.7
   resolution: "readable-stream@npm:2.3.7"
   dependencies:
@@ -21361,17 +21316,6 @@ __metadata:
   dependencies:
     readable-stream: ^3.6.0
   checksum: 8c56cc62c68513425ddfa721954875b382768f83fa20e6b31e365ee00cbe7a3d6296f66f7f1107b16cd3416d33aa9f1680475376400d62a081a88f81f0ea7f9c
-  languageName: node
-  linkType: hard
-
-"readdirp@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "readdirp@npm:2.2.1"
-  dependencies:
-    graceful-fs: ^4.1.11
-    micromatch: ^3.1.10
-    readable-stream: ^2.0.2
-  checksum: 3879b20f1a871e0e004a14fbf1776e65ee0b746a62f5a416010808b37c272ac49b023c47042c7b1e281cba75a449696635bc64c397ed221ea81d853a8f2ed79a
   languageName: node
   linkType: hard
 
@@ -23120,7 +23064,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.19, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.20":
+"source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.19, source-map-support@npm:^0.5.20, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.20":
   version: 0.5.20
   resolution: "source-map-support@npm:0.5.20"
   dependencies:
@@ -23344,7 +23288,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"start-server-and-test@npm:^1.13.1":
+"start-server-and-test@npm:^1.14.0":
   version: 1.14.0
   resolution: "start-server-and-test@npm:1.14.0"
   dependencies:
@@ -23786,7 +23730,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^5.3.0":
+"styled-components@npm:^5.3.1":
   version: 5.3.1
   resolution: "styled-components@npm:5.3.1"
   dependencies:
@@ -24654,7 +24598,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.0.4":
+"ts-jest@npm:^27.0.5":
   version: 27.0.5
   resolution: "ts-jest@npm:27.0.5"
   dependencies:
@@ -24695,7 +24639,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.1.0":
+"ts-node@npm:^10.2.1":
   version: 10.2.1
   resolution: "ts-node@npm:10.2.1"
   dependencies:
@@ -24752,7 +24696,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-prune@npm:^0.9.2":
+"ts-prune@npm:^0.9.3":
   version: 0.9.3
   resolution: "ts-prune@npm:0.9.3"
   dependencies:
@@ -24949,7 +24893,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-typescript@^4.3.5:
+typescript@^4.4.3:
   version: 4.4.3
   resolution: "typescript@npm:4.4.3"
   bin:
@@ -24959,7 +24903,7 @@ typescript@^4.3.5:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.4.3
   resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=d8b4e7"
   bin:
@@ -25446,13 +25390,6 @@ typescript@^4.3.5:
   version: 2.0.1
   resolution: "unzip-response@npm:2.0.1"
   checksum: 433aa4869a82c0e2bf2896dce8072b723511023515ba97155759efeea7c0e4db8ecfee2fcc0babf168545c2be613aed205d5237423c249d77d0f5327a842c20d
-  languageName: node
-  linkType: hard
-
-"upath@npm:^1.1.1":
-  version: 1.2.0
-  resolution: "upath@npm:1.2.0"
-  checksum: 4c05c094797cb733193a0784774dbea5b1889d502fc9f0572164177e185e4a59ba7099bf0b0adf945b232e2ac60363f9bf18aac9b2206fb99cbef971a8455445
   languageName: node
   linkType: hard
 
