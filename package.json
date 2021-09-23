@@ -48,6 +48,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.14.0",
+    "gatsby-plugin-google-tagmanager": "^3.14.0",
     "gatsby-plugin-styled-components": "^4.14.0",
     "gatsby-theme-amaranth": "*",
     "react": "^17.0.2",

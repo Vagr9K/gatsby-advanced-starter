@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: master
+
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: "content/images"     #absolute project path. Probably ContentDir/images
+public_folder: "images"     #path that will be parsed to .md file (following the .mdx default post structure)
+# publish_mode: editorial_workflow   #enable the flow: draft -> in review -> ready (published) You can remove this line if you think it's slowdown your workflow
+
+collections: #option in the CMS panel
+  - name: "post"
+    label: "Blog Post"
+    folder: "content" # posts output folder (.md filetype)
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # filename format
+    fields:
+      - {label: "Title", name: "title", widget: "string"}               
+      - {label: "Cover", name: "cover", widget: image}
+      - {label: "coverAlt", name: coverAlt, widget: "string"} 
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: 'Category', name: 'category' ,widget: 'string'}
+      - {label: 'tags', name: 'tags', widget: 'list' }
+      - {label: "Publish Date", name: "datePublished", widget: "datetime" }
+      - {label: "Date Modified", name: "dateModified", widget: "datetime"}
