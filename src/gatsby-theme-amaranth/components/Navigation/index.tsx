@@ -16,7 +16,7 @@ const Navigation = (): JSX.Element => {
         <S.SiteTitle>{config.website.titleShort}</S.SiteTitle>
       </S.HomeButton>
       <S.NavGrid>
-        <S.NavButton to="/">Sobre</S.NavButton>
+        <S.NavButton to="/">Posts</S.NavButton>
         <S.NavButton noBasePath to="/sobre">
           Sobre
         </S.NavButton>

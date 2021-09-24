@@ -44,7 +44,7 @@ module.exports = {
           name: "Blog do Combatente Rico", // Website name used for homescreen (PWA) and SEO
           description: "Atalhos e estratégias.", // Website description used for RSS feeds/meta description tag
           language: "pt", // Sets the global HTML lang attribute
-          logoUrl: "/logos/logo-1024.png", // Logo used for SEO
+          logoUrl: "docs/logos/logo.png", // Logo used for SEO
           fbAppId: "5", // FB Application ID for using app insights
           twitterName: "5", // Twitter handle of the website
           url: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without the pathPrefix
@@ -56,19 +56,21 @@ module.exports = {
 
           organization: {
             name: "Combatente Rico",
-            description: "oo description",
-            logoUrl: "/logos/logo.png",
+            description: "Educação Financeira para Militares",
+            logoUrl: "docs/logos/logo.png",
             url: "https://www.combatenterico.com.br",
           },
           user: {
             id: "DiegoAyres",
             firstName: "Diego",
             lastName: "Ayres",
-            twitterName: "Vagr9K",
+            instagram: "diegoayres.oficia",
+            facebook: "diegoayres.oficial",
+            youtube: "UCFX9cA98AWbtqABnOFuGQMA",
             email: "suporte@combatenterico.com.br",
             location: "Brasil",
             about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
-            avatar: "https://i.pravatar.cc/300",
+            avatar: "/docs/diego-ayres.jpg",
 
           },
           iconList: [{

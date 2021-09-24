@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 import { Types } from "gatsby-theme-advanced";
 
@@ -14,7 +15,7 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
 
   const publicationDate = `${categoryUrl ? "\u00A0⋅ " : ""}${format(
     post.datePublished,
-    "d LLL, y"
+    "d LLL, y", { locale: ptBR }
   )}`;
 
   const timeToRead = ` ⋅ ${post.timeToRead} min`;

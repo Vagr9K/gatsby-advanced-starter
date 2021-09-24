@@ -2,15 +2,15 @@ import { createGlobalStyle, css } from "styled-components";
 
 const Colors = css`
   :root {
-    --color-primary-100: #85e2b4;
-    --color-primary-200: #72e0a9;
-    --color-primary-300: #5edb9c;
-    --color-primary-400: #4bd892;
-    --color-primary: #37d385;
-    --color-primary-600: #31bf78;
-    --color-primary-700: #2fa86b;
-    --color-primary-800: #26935d;
-    --color-primary-900: #217c4f;
+    --color-primary-100: #457A60;
+    --color-primary-200: #3C7B5C;
+    --color-primary-300: #327D57;
+    --color-primary-400: #237049;
+    --color-primary: #15663E;
+    --color-primary-600: #125C37;
+    --color-primary-700: #135433;
+    --color-primary-800: #0F4C2E;
+    --color-primary-900: #0C3F26;
 
     --color-grey-100: #f7f7f7;
     --color-grey-200: #dbdbdb;
