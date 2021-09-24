@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MailSend, Rss } from "@styled-icons/boxicons-regular";
-import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
+import { Facebook, Instagram, Youtube } from "@styled-icons/boxicons-logos";
 import { StyledIcon } from "@styled-icons/styled-icon";
 
 import { Types, useConfig } from "gatsby-theme-advanced";
@@ -27,37 +27,6 @@ const renderLink = (
     <Icon size={48} />
   </IconLink>
 );
-
-const renderTwitterLink = (
-  config: Readonly<SiteConfig>
-): JSX.Element | null => {
-  const userName = config.user?.twitterName;
-
-  if (!userName) return null;
-
-  const url = `https://twitter.com/${userName}`;
-  return renderLink(url, "Twitter Profile", Twitter);
-};
-
-const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
-  const userName = config.user?.github;
-
-  if (!userName) return null;
-
-  const url = `https://github.com/${userName}`;
-  return renderLink(url, "GitHub Profile", Github);
-};
-
-const renderLinkedInLink = (
-  config: Readonly<SiteConfig>
-): JSX.Element | null => {
-  const userName = config.user?.linkedIn;
-
-  if (!userName) return null;
-
-  const url = `https://www.linkedin.com/in/${userName}`;
-  return renderLink(url, "LinkedIn Profile", LinkedinSquare);
-};
 
 const renderEmailLink = (config: Readonly<SiteConfig>): JSX.Element => {
   const url = `mailto:${config.user?.email || ""}`;
@@ -123,10 +92,8 @@ const UserLinks = ({
 
   return (
     <LinkGrid className={className}>
-      {renderTwitterLink(config)} {renderGitHubLink(config)}
-      {renderLinkedInLink(config)} {renderEmailLink(config)}
-      {renderInstagramLink(config)} {renderFacebookLink(config)}
-      {renderYoutubeLink(config)}
+      {renderEmailLink(config)} {renderInstagramLink(config)}
+       {renderFacebookLink(config)} {renderYoutubeLink(config)}
       {includeRss && renderRssLink(config)}
     </LinkGrid>
   );
