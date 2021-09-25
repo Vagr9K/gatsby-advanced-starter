@@ -1,0 +1,13 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: title
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
