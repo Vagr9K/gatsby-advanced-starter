@@ -32,26 +32,6 @@ const RelatedPosts = ({ list }: RelatedPostsProps): JSX.Element => (
 export default RelatedPosts;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //import { RelatedPostsProps } from "../../../../themes/amaranth/src/components/RelatedPosts";
 
 
@@ -60,6 +40,7 @@ export default RelatedPosts;
 
 // export default RelatedPosts;
 //teste
+
 // suggestion
 //  export default function Button(props) {
 //   return (

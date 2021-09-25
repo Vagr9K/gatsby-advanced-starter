@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MailSend, Rss } from "@styled-icons/boxicons-regular";
-import { Twitter, LinkedinSquare, Github } from "@styled-icons/boxicons-logos";
+import { Instagram, Facebook, Youtube } from "@styled-icons/boxicons-logos";
 import { StyledIcon } from "@styled-icons/styled-icon";
 
 import { Types, useConfig } from "gatsby-theme-advanced";
@@ -35,8 +35,8 @@ const renderTwitterLink = (
 
   if (!userName) return null;
 
-  const url = `https://twitter.com/${userName}`;
-  return renderLink(url, "Twitter Profile", Twitter);
+  const url = `https://instagram.com/${userName}`;
+  return renderLink(url, "Twitter Profile", Instagram);
 };
 
 const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
@@ -44,8 +44,8 @@ const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
 
   if (!userName) return null;
 
-  const url = `https://github.com/${userName}`;
-  return renderLink(url, "GitHub Profile", Github);
+  const url = `https://facebook.com/${userName}`;
+  return renderLink(url, "GitHub Profile", Facebook);
 };
 
 const renderLinkedInLink = (
@@ -55,8 +55,8 @@ const renderLinkedInLink = (
 
   if (!userName) return null;
 
-  const url = `https://www.linkedin.com/in/${userName}`;
-  return renderLink(url, "LinkedIn Profile", LinkedinSquare);
+  const url = `https://www.youtube.com/channel/${userName}`;
+  return renderLink(url, "LinkedIn Profile", Youtube);
 };
 
 const renderEmailLink = (config: Readonly<SiteConfig>): JSX.Element => {

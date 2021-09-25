@@ -2,7 +2,7 @@ import React from "react";
 
 import { useConfig } from "gatsby-theme-advanced";
 
-import UserLinks from "../UserLinks";
+import UserLinks from "../../../../themes/amaranth/src/components/UserLinks";
 import { Caption, H3 } from "../../theme";
 import { AnimatedLink } from "../../../../themes/amaranth/src/components/Links";
 
