@@ -3,11 +3,19 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
-upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ''
-use_front_matter_path: false
+sections:
+- type: directory
+  path: content
+  label: Blog post
+  create: all
+  match: "**/*"
+  new_doc_ext: mdx
+  templates:
+  - blog-post
+upload_dir: content/images
+public_path: "/images"
+front_matter_path: "../images"
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: public
