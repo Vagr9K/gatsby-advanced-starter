@@ -10,20 +10,20 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: "content/images"     #absolute project path. Probably ContentDir/images
-public_folder: "images"     #path that will be parsed to .md file (following the .mdx default post structure)
+public_folder: "../images"     #path that will be parsed to .md file (following the .mdx default post structure)
 # publish_mode: editorial_workflow   #enable the flow: draft -> in review -> ready (published) You can remove this line if you think it's slowdown your workflow
 
 collections: #option in the CMS panel
   - name: "post"
     label: "Blog Post"
-    folder: "content" # posts output folder (.md filetype)
+    folder: "content/posts" # posts output folder (.md filetype)
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # filename format
     fields:
       - {label: "Title", name: "title", widget: "string"}               
       - {label: "Cover", name: "cover", widget: image}
-      - {label: "coverAlt", name: coverAlt, widget: "string"} 
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "coverAlt", name: coverAlt, widget: "string", hint: "descrição visual da imagem"} 
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: 'Category', name: 'category' ,widget: 'string'}
       - {label: 'tags', name: 'tags', widget: 'list' }

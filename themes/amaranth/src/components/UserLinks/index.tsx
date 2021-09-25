@@ -28,33 +28,23 @@ const renderLink = (
   </IconLink>
 );
 
-const renderTwitterLink = (
-  config: Readonly<SiteConfig>
-): JSX.Element | null => {
+const renderTwitterLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
   const userName = config.user?.twitterName;
-
   if (!userName) return null;
-
   const url = `https://instagram.com/${userName}`;
   return renderLink(url, "Twitter Profile", Instagram);
 };
 
 const renderGitHubLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
   const userName = config.user?.github;
-
   if (!userName) return null;
-
   const url = `https://facebook.com/${userName}`;
   return renderLink(url, "GitHub Profile", Facebook);
 };
 
-const renderLinkedInLink = (
-  config: Readonly<SiteConfig>
-): JSX.Element | null => {
+const renderLinkedInLink = (config: Readonly<SiteConfig>): JSX.Element | null => {
   const userName = config.user?.linkedIn;
-
   if (!userName) return null;
-
   const url = `https://www.youtube.com/channel/${userName}`;
   return renderLink(url, "LinkedIn Profile", Youtube);
 };

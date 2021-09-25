@@ -64,12 +64,12 @@ module.exports = {
             id: "DiegoAyres",
             firstName: "Diego",
             lastName: "Ayres",
-            twitterName: "diegoayres.oficial",  //twitter = IG
-            github: "diegoayres.oficial",  //github = FB
-            linkedIn: "UCFX9cA98AWbtqABnOFuGQMA", //linkedIn = YouTube
-         //instagramP: "diegoayres.oficial",
-         //facebookP: "diegoayres.oficial",
-         //youtubeC: "UCFX9cA98AWbtqABnOFuGQMA",
+            twitterName: "diegoayres.oficial",  // twitter = IG
+            github: "diegoayres.oficial",  // github = FB
+            linkedIn: "UCFX9cA98AWbtqABnOFuGQMA", //  linkedIn = YouTube
+         // instagramP: "diegoayres.oficial",
+         // facebookP: "diegoayres.oficial",
+         // youtubeC: "UCFX9cA98AWbtqABnOFuGQMA",
             email: "suporte@combatenterico.com.br",
             location: "Brasil",
             about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
