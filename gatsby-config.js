@@ -70,7 +70,7 @@ module.exports = {
          //instagramP: "diegoayres.oficial",
          //facebookP: "diegoayres.oficial",
          //youtubeC: "UCFX9cA98AWbtqABnOFuGQMA",
-         //email: "suporte@combatenterico.com.br",
+            email: "suporte@combatenterico.com.br",
             location: "Brasil",
             about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
             avatar: "/docs/diego-ayres.jpg",
