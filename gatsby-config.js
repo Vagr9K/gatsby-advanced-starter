@@ -44,7 +44,7 @@ module.exports = {
           name: "Blog do Combatente Rico", // Website name used for homescreen (PWA) and SEO
           description: "Atalhos e estratégias.", // Website description used for RSS feeds/meta description tag
           language: "pt", // Sets the global HTML lang attribute
-          logoUrl: "logos/logo.png", // Logo used for SEO
+          logoUrl: "static/logos/logo.png", // Logo used for SEO
           fbAppId: "5", // FB Application ID for using app insights
           twitterName: "5", // Twitter handle of the website
           url: "https://blog.combatenterico.com.br", // Domain of your website without the pathPrefix
@@ -57,7 +57,7 @@ module.exports = {
           organization: {
             name: "Combatente Rico",
             description: "Educação Financeira para Militares",
-            logoUrl: "logos/logo.png",
+            logoUrl: "static/logos/logo.png",
             url: "https://www.combatenterico.com.br",
           },
           user: {
@@ -73,125 +73,125 @@ module.exports = {
             email: "suporte@combatenterico.com.br",
             location: "Brasil",
             about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
-            avatar: "logos/diego-ayres.jpg",
+            avatar: "static/logos/diego-ayres.jpg",
           },
           iconList: [{
-              src: "logos/logo-72x72.png",
+              src: "static/logos/logo-72x72.png",
               sizes: "72x72",
               type: "image/png",
             },
             {
-              src: "logos/logo-96x96.png",
+              src: "static/logos/logo-96x96.png",
               sizes: "96x96",
               type: "image/png",
             },
             {
-              src: "logos/logo-120x120.png",
+              src: "static/logos/logo-120x120.png",
               sizes: "120x120",
               type: "image/png",
             },
             {
-              src: "logos/logo-128x128.png",
+              src: "static/logos/logo-128x128.png",
               sizes: "128x128",
               type: "image/png",
             },
             {
-              src: "logos/logo-144x144.png",
+              src: "static/logos/logo-144x144.png",
               sizes: "144x144",
               type: "image/png",
             },
             {
-              src: "logos/logo-152x152.png",
+              src: "static/logos/logo-152x152.png",
               sizes: "152x152",
               type: "image/png",
             },
             {
-              src: "logos/logo-180x180.png",
+              src: "static/logos/logo-180x180.png",
               sizes: "180x180",
               type: "image/png",
             },
             {
-              src: "logos/logo-192x192.png",
+              src: "static/logos/logo-192x192.png",
               sizes: "192x192",
               type: "image/png",
             },
             {
-              src: "logos/logo-384x384.png",
+              src: "static/logos/logo-384x384.png",
               sizes: "384x384",
               type: "image/png",
             },
             {
-              src: "logos/logo-512x512.png",
+              src: "static/logos/logo-512x512.png",
               sizes: "512x512",
               type: "image/png",
             },
             {
-              src: "logos/logo.png",
+              src: "static/logos/logo.png",
               sizes: "1024x1024",
               type: "image/png",
             },
             {
-              src: "logos/logo-maskable-72x72.png",
+              src: "static/logos/logo-maskable-72x72.png",
               sizes: "72x72",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-96x96.png",
+              src: "static/logos/logo-maskable-96x96.png",
               sizes: "96x96",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-120x120.png",
+              src: "static/logos/logo-maskable-120x120.png",
               sizes: "120x120",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-128x128.png",
+              src: "static/logos/logo-maskable-128x128.png",
               sizes: "128x128",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-144x144.png",
+              src: "static/logos/logo-maskable-144x144.png",
               sizes: "144x144",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-152x152.png",
+              src: "static/logos/logo-maskable-152x152.png",
               sizes: "152x152",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-180x180.png",
+              src: "static/logos/logo-maskable-180x180.png",
               sizes: "180x180",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-192x192.png",
+              src: "static/logos/logo-maskable-192x192.png",
               sizes: "192x192",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-384x384.png",
+              src: "static/logos/logo-maskable-384x384.png",
               sizes: "384x384",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo-maskable-512x512.png",
+              src: "static/logos/logo-maskable-512x512.png",
               sizes: "512x512",
               type: "image/png",
               purpose: "any maskable",
             },
             {
-              src: "logos/logo.png",
+              src: "static/logos/logo.png",
               sizes: "1024x1024",
               type: "image/png",
               purpose: "any maskable",
