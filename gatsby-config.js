@@ -141,7 +141,7 @@ module.exports = {
             purpose: "any maskable",
           },
         ],
-        iconCachePaths: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
+        iconCachePaths: ['**/static/logos*'], // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
           website: {
             title: "Blog do Combatente Rico", // Homepage title
             titleShort: "Blog do CR", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
@@ -174,7 +174,7 @@ module.exports = {
               email: "suporte@combatenterico.com.br",
               location: "Brasil",
               about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
-              avatar: "content/diego-ayres.jpg",
+              avatar: "./content/diego-ayres.jpg",
             },
           // Gatsby Configuration
 
