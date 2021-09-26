@@ -12,7 +12,7 @@ const Navigation = (): JSX.Element => {
   return (
     <S.Wrapper>
       <S.HomeButton to="/">
-        <AdvancedLogo width={36} height={36} />
+        <AdvancedLogo width={66} height={36} />
         <S.SiteTitle>{config.website.titleShort}</S.SiteTitle>
       </S.HomeButton>
       <S.NavGrid>
