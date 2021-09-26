@@ -1,10 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
 import { Types } from "gatsby-theme-advanced";
 
-import * as S from "../../../../themes/amaranth/src/components/ArticleInfo/styles";
+import * as S from "./styles";
 
 type ArticleInfoProps = {
   post: Types.Post;
@@ -30,6 +31,7 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
   ));
 
   return (
+    <div>
     <S.Wrapper>
       <S.InfoGrid>
         {categoryUrl && (
@@ -37,8 +39,11 @@ const ArticleInfo = ({ post }: ArticleInfoProps): JSX.Element => {
         )}
         <S.Caption>{infoCaption}</S.Caption>
       </S.InfoGrid>
+    </S.Wrapper>
+    <S.Wrapper>
       <S.TagGrid>{tagLinks}</S.TagGrid>
     </S.Wrapper>
+    </div>
   );
 };
 
