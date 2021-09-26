@@ -9,6 +9,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+logo_url: "./logo-cima.webp"
 media_folder: "content/images"     #absolute project path. Probably ContentDir/images
 public_folder: "../images"     #path that will be parsed to .md file (following the .mdx default post structure)
 # publish_mode: editorial_workflow   #enable the flow: draft -> in review -> ready (published) You can remove this line if you think it's slowdown your workflow
@@ -18,6 +19,7 @@ collections: #option in the CMS panel
     label: "Blog Post"
     folder: "content/posts" # posts output folder (.md filetype)
     create: true
+    delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # filename format
     fields:
       - {label: "Title", name: "title", widget: "string"}               

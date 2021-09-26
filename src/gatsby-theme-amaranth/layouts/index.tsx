@@ -12,6 +12,8 @@ import LayoutWidthContainer from "../components/shared/LayoutWidthContainer";
 const LayoutGrid = styled.div`
   min-height: 100vh;
   min-width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
   padding-top: 16px;
 
   display: grid;

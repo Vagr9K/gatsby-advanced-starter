@@ -10,7 +10,7 @@ import Share from "../../../../themes/amaranth/src/components/Article/Share";
 const Wrapper = styled.main`
   width: 100%;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
   display: grid;
   grid-gap: 24px;
   justify-items: center;

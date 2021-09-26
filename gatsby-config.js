@@ -1,6 +1,15 @@
 module.exports = {
   plugins: [{
-      resolve: `gatsby-theme-amaranth`,
+    
+    resolve: "gatsby-plugin-google-tagmanager",
+    options: {
+      id: "GTM-PCLLN9S",
+      includeInDevelopment: false,
+      defaultDataLayer: {
+        platform: "gatsby"
+      },  
+    }, 
+    resolve: `gatsby-theme-amaranth`,
       options: {
         basePath: "/",
         pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
@@ -9,6 +18,129 @@ module.exports = {
         embeddedImageWidth: 768, // MDX embedded image width. Used by gatsby-plugin-image for optimization
         embeddedVideoWidth: 920, // MDX embedded video width in pixels
         iconPath: undefined, // Icon used for manifest icon creation.
+        iconList: [
+          {
+            src: "static/logos/logo-72x72.png",
+            sizes: "72x72",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-96x96.png",
+            sizes: "96x96",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-120x120.png",
+            sizes: "120x120",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-128x128.png",
+            sizes: "128x128",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-144x144.png",
+            sizes: "144x144",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-152x152.png",
+            sizes: "152x152",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-180x180.png",
+            sizes: "180x180",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-384x384.png",
+            sizes: "384x384",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo.png",
+            sizes: "1024x1024",
+            type: "image/png",
+          },
+          {
+            src: "static/logos/logo-maskable-72x72.png",
+            sizes: "72x72",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-96x96.png",
+            sizes: "96x96",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-120x120.png",
+            sizes: "120x120",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-128x128.png",
+            sizes: "128x128",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-144x144.png",
+            sizes: "144x144",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-152x152.png",
+            sizes: "152x152",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-180x180.png",
+            sizes: "180x180",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-384x384.png",
+            sizes: "384x384",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo-maskable-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "static/logos/logo.png",
+            sizes: "1024x1024",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
         iconCachePaths: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
           website: {
             title: "Blog do Combatente Rico", // Homepage title
@@ -29,7 +161,7 @@ module.exports = {
           organization: {
               name: "Combatente Rico",
               description: "Educação Financeira para Militares",
-              logoUrl: "/logos/logo.png",
+              logoUrl: "static/logos/logo.png",
               url: "https://www.combatenterico.com.br",
              },
             user: {
