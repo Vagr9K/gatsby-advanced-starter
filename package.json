@@ -46,6 +46,7 @@
     "write-good": "write-good $(glob 'content/**/*.md')"
   },
   "dependencies": {
+    "@openlab/vercel-netlify-cms-github": "^1.1.1",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.14.0",
     "gatsby-plugin-google-tagmanager": "^3.14.0",
