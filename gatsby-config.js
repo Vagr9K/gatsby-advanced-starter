@@ -176,7 +176,7 @@ module.exports = {
               email: "suporte@combatenterico.com.br",
               location: "Brasil",
               about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
-              avatar: "./static/diego-ayres.jpg",
+              avatar: "https://res.cloudinary.com/dgabedu0m/image/upload/v1632716191/diego_ayres_xdf6kq.jpg",
             },
           // Gatsby Configuration
 
