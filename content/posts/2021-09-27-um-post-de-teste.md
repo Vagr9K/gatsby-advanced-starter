@@ -1,5 +1,5 @@
 ---
-title: Um post de teste
+title: Um post de teste 2
 cover: ../images/ss-em-arvore.png
 coverAlt: alt text
 description: aqui vai a descricao
