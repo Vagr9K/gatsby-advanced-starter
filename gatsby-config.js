@@ -1,5 +1,7 @@
 module.exports = {
-  plugins: [{
+  plugins: [
+    "gatsby-plugin-styled-components",
+    {
     
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
@@ -174,7 +176,7 @@ module.exports = {
               email: "suporte@combatenterico.com.br",
               location: "Brasil",
               about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
-              avatar: "./content/diego-ayres.jpg",
+              avatar: "./static/diego-ayres.jpg",
             },
           // Gatsby Configuration
 
@@ -182,7 +184,7 @@ module.exports = {
           },
           },
   ],
-}
+};
 
 
 
