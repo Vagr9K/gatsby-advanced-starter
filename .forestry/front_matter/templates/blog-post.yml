@@ -42,7 +42,7 @@ fields:
   config:
     required: true
     date_format: DD/MM/YYYY
-    time_format: DD/MM/YYYY
+    time_format: ''
     display_utc: false
     export_format: '"DD/MM/YYYY"'
   hidden: true
@@ -54,8 +54,9 @@ fields:
   config:
     required: true
     date_format: DD/MM/YYYY
-    time_format: DD/MM/YYYY
+    time_format: ''
     display_utc: false
     export_format: '"DD/MM/YYYY"'
+  default: now
 pages:
 - content/posts/teste-no-forestry.mdx
