@@ -55,3 +55,5 @@ fields:
     date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
+pages:
+- content/posts/teste-no-forestry.mdx
