@@ -23,4 +23,4 @@ build:
   preview_docker_image: https://github.com/nodejs/docker-node/blob/e886c2c1d3a109ccfe169419f3b30f9794bacf61/16/alpine3.11/Dockerfile
   mount_path: "/"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: gatsby develop
