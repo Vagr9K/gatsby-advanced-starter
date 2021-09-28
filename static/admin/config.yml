@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: vasfvitor/gatsby-advanced-starter
-  base_url: https://gatsby-advanced-starter-sand.vercel.app/
+  base_url: https://combablog.gatsbyjs.io/
   auth_endpoint: api/auth
 
   commit_messages:
