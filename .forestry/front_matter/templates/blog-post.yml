@@ -47,7 +47,7 @@ fields:
     export_format: '"DD/MM/YYYY"'
   hidden: true
   default: now
-- name: datepublished
+- name: datePublished
   type: datetime
   label: datePublished
   description: ''
