@@ -59,4 +59,5 @@ fields:
     export_format: YYYY-MM-DD h:mm A
   default: now
 pages:
+- content/o-bizu-para-juntar-dinheiro-mais-facil.mdx
 - content/posts/teste-no-forestry.mdx
