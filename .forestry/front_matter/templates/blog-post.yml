@@ -55,12 +55,3 @@ fields:
     date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
-- name: "---"
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: conteudo
