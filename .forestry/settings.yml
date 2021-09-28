@@ -20,7 +20,7 @@ file_template: ":day:month:year:filename:"
 build:
   preview_output_directory: public
   install_dependencies_command: npm install
-  preview_docker_image: forestryio/node:12
+  preview_docker_image: forestryio/node:16
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: npm run forestry:preview
