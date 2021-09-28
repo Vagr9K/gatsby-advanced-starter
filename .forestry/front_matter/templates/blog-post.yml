@@ -41,9 +41,10 @@ fields:
   description: ''
   config:
     required: true
-    date_format: 
-    time_format: 
+    date_format: DD/MM/YYYY
+    time_format: DD/MM/YYYY
     display_utc: false
+    export_format: DD/MM/YYYY
   hidden: true
   default: now
 - name: datepublished
@@ -53,7 +54,8 @@ fields:
   config:
     required: true
     date_format: DD/MM/YYYY
-    time_format: 
+    time_format: DD/MM/YYYY
     display_utc: false
+    export_format: DD/MM/YYYY
 pages:
 - content/posts/teste-no-forestry.mdx
