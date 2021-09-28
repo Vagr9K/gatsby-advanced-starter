@@ -16,7 +16,7 @@ upload_dir: content/images
 public_path: content/images
 front_matter_path: "../images"
 use_front_matter_path: true
-file_template: ":filename:"
+file_template: ":day:month:year:filename:"
 build:
   preview_output_directory: public
   install_dependencies_command: npm install
