@@ -7,16 +7,6 @@ fields:
   config:
     required: true
   label: Título
-- name: category
-  type: text
-  config:
-    required: true
-  label: Categoria
-- name: tags
-  type: tag_list
-  default: []
-  label: Tags
-  description: pelo menos duas tags
 - name: cover
   type: file
   config:
@@ -35,6 +25,16 @@ fields:
   label: Descrição
   description: não sei, assim que eu descobrir o que é eu atualizo, por enquanto coloca
     o mesmo que o alt text
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: pelo menos duas tags
+- name: category
+  type: text
+  config:
+    required: true
+  label: Categoria
 - name: dateModified
   type: datetime
   label: dateModified
@@ -56,7 +56,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: ''
     display_utc: false
-    export_format: DD/MM/YYYY
+    export_format: "'DD-MM-YYYY'"
   default: now
 pages:
 - content/posts/teste-2.mdx
