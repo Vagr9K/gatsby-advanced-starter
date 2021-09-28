@@ -44,7 +44,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: ''
     display_utc: false
-    export_format: '"DD/MM/YYYY"'
+    export_format: DD/MM/YYYY
   hidden: true
   default: now
 - name: datePublished
@@ -56,7 +56,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: ''
     display_utc: false
-    export_format: '"DD/MM/YYYY"'
+    export_format: DD/MM/YYYY
   default: now
 pages:
 - content/posts/teste-2.mdx
