@@ -6,7 +6,7 @@ webhook_url: https://webhook.gatsbyjs.com/hooks/data_source/publish/7023193a-dbe
 sections:
 - type: directory
   path: content
-  label: Blog post
+  label: Blog posts
   create: all
   match: "**/*"
   new_doc_ext: mdx
