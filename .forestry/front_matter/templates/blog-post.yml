@@ -6,8 +6,61 @@ fields:
   type: text
   config:
     required: true
-  label: title
+  label: Título
+- name: category
+  type: text
+  config:
+    required: true
+  label: Categoria
 - name: tags
   type: tag_list
   default: []
-  label: tags
+  label: Tags
+  description: pelo menos duas tags
+- name: cover
+  type: file
+  config:
+    maxSize: 4
+  label: Capa
+- name: coverAlt
+  type: text
+  config:
+    required: true
+  label: Alt text (descrição da imagem)
+  description: Descrição visual e literal da imagem, serve para acessibilidade.
+- name: description
+  type: text
+  config:
+    required: true
+  label: Descrição
+  description: não sei, assim que eu descobrir o que é eu atualizo, por enquanto coloca
+    o mesmo que o alt text
+- name: dateModified
+  type: datetime
+  label: dateModified
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  hidden: true
+  default: now
+- name: datepublished
+  type: datetime
+  label: datePublished
+  description: ''
+  config:
+    required: true
+    date_format: DD/MM/YYYY
+    time_format: 
+    display_utc: false
+- name: "---"
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: conteudo
