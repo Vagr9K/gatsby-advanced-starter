@@ -1,8 +1,8 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path: ''
+webhook_url: https://webhook.gatsbyjs.com/hooks/data_source/publish/7023193a-dbe0-4ecf-9c8d-e3e57c361589
 sections:
 - type: directory
   path: content
