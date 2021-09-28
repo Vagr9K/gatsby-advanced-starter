@@ -59,5 +59,4 @@ fields:
     export_format: "'YYYY-MM-DD'"
   default: now
 pages:
-- content/posts/teste-2.mdx
 - content/posts/teste-no-forestry.mdx
