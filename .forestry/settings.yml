@@ -5,13 +5,8 @@ admin_path: ''
 webhook_url: https://webhook.gatsbyjs.com/hooks/data_source/publish/7023193a-dbe0-4ecf-9c8d-e3e57c361589
 sections:
 - type: directory
-  path: content/images
-  label: Media
-  create: all
-  match: "**/*"
-- type: directory
-  path: content
-  label: Blog post
+  path: content/posts
+  label: Blog posts
   create: all
   match: "**/*"
   new_doc_ext: mdx
