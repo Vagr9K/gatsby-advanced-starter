@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-styled-components",
     {
     
@@ -158,7 +159,7 @@ module.exports = {
             rssTitle: "RSS Feed | Blog do CR", // Title of the RSS feed
             copyright: "Combatente Rico®", // Copyright string for the footer of the website and RSS feed.
             themeColor: "#225c3b", // Used for setting manifest and progress theme colors.
-            backgroundColor: "#efffed", // Used for setting manifest background color.
+            backgroundColor: "#fbfbfb", // Used for setting manifest background color.
           },
           organization: {
               name: "Combatente Rico",
