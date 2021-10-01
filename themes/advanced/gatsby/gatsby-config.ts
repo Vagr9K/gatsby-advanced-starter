@@ -1,5 +1,5 @@
 import path from "path";
-import fs from "fs";
+// import fs from "fs";
 import urljoin from "url-join";
 
 import { GatsbyConfig } from "gatsby";
@@ -24,7 +24,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
   const validatedPathPrefix =
     config.pathPrefix === "" ? "/" : config.pathPrefix;
 
-  const netlifyConfigPath = "../src/netlifycms/index.js";
+//  const netlifyConfigPath = "../src/netlifycms/index.js";
 
   return {
     pathPrefix: validatedPathPrefix,
@@ -177,6 +177,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
           cache_busting_mode: "none",
           icon: config.iconPath,
           icons: config.iconList,
+          orientation: "any"
         },
       },
       {
@@ -187,18 +188,18 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
           },
         },
       },
-      {
-        resolve: "gatsby-plugin-netlify-cms",
-        options: {
-          modulePath: fs.existsSync(netlifyConfigPath)
-            ? netlifyConfigPath
-            : undefined,
-          enableIdentityWidget: true,
-          publicPath: "admin",
-          htmlTitle: "Content Manager",
-          includeRobots: false,
-        },
-      },
+   //   {
+      //  resolve: "gatsby-plugin-netlify-cms",
+      //  options: {
+      //    modulePath: fs.existsSync(netlifyConfigPath)
+      //      ? netlifyConfigPath
+      //      : undefined,
+      //    enableIdentityWidget: true,
+      //    publicPath: "admin",
+      //    htmlTitle: "Content Manager",
+      //    includeRobots: false,
+     //   },
+   //   },
       {
         resolve: "gatsby-plugin-feed",
         options: {
