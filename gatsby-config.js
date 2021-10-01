@@ -148,7 +148,7 @@ module.exports = {
             title: "Blog do Combatente Rico", // Homepage title
             titleShort: "Blog do CR", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation
             name: "Blog do Combatente Rico", // Website name used for homescreen (PWA) and SEO
-            description: "Atalhos e estratégias.", // Website description used for RSS feeds/meta description tag
+            description: "Atalhos e estratégias para fazer sobrar dinheiro.", // Website description used for RSS feeds/meta description tag
             language: "pt-BR", // Sets the global HTML lang attribute
             logoUrl: "static/logos/logo.png", // Logo used for SEO
            // fbAppId: "5", // FB Application ID for using app insights
@@ -175,7 +175,7 @@ module.exports = {
               linkedIn: "UCFX9cA98AWbtqABnOFuGQMA", //  linkedIn = YouTube
               email: "suporte@combatenterico.com.br",
               location: "Brasil",
-              about: "Ex-militar da aeronáutica, deixou as forças armadas para seguir a carreira de hipnoterapeuta",
+              about: "Ajudo militares a fazer sobrar dinheiro para viajar ou investir. Me acompanhe aqui e nas redes sociais.",
               avatar: "https://res.cloudinary.com/dgabedu0m/image/upload/v1632716191/diego_ayres_xdf6kq.jpg",
             },
           // Gatsby Configuration

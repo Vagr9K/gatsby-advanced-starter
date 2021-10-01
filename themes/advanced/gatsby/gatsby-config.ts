@@ -112,7 +112,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
               resolve: "gatsby-remark-images",
               options: {
                 maxWidth: config.embeddedImageWidth,
-                showCaptions: ["title", "alt"],
+                showCaptions: ["title"],
               },
             },
             {

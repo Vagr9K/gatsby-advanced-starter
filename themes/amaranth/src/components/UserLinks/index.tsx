@@ -76,7 +76,7 @@ const UserLinks = ({
 
   return (
     <LinkGrid className={className}>
-      {renderTwitterLink(config)} {renderGitHubLink(config)}
+      {renderGitHubLink(config)} {renderTwitterLink(config)} 
       {renderLinkedInLink(config)} {renderEmailLink(config)}
       {includeRss && renderRssLink(config)}
     </LinkGrid>

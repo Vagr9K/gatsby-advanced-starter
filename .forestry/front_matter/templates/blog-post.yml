@@ -11,25 +11,25 @@ fields:
   type: file
   config:
     maxSize: 4
-  label: Capa
+  label: Capa (25:10, JPG ou JPEG)
+  description: Tam. máximo 2500x1000. De preferência que o nome do arquivo facilite identificar a imagem
 - name: coverAlt
   type: text
   config:
     required: true
   label: Alt text (descrição da imagem)
-  description: Descrição visual e literal da imagem, serve para acessibilidade.
+  description: Descrição visual e literal da imagem, serve para acessibilidade. Imagina que tu vai descrever para um cego ou alguém com problema de visão
 - name: description
   type: text
   config:
     required: true
   label: Descrição
-  description: não sei, assim que eu descobrir o que é eu atualizo, por enquanto coloca
-    o mesmo que o alt text
+  description: Resumo do post ou somente uma frase pra resumir ou pra chamar atenção (ainda não sei onde ela aparece)
 - name: tags
   type: tag_list
   default: []
   label: Tags
-  description: pelo menos duas tags
+  description: pelo menos duas tags, pode ser mais
 - name: category
   type: text
   config:
@@ -44,7 +44,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: ''
     display_utc: false
-    export_format: YYYY-MM-DD h:mm A
+    export_format: YYYY-MM-DD
   hidden: false
   default: now
 - name: datePublished
@@ -56,7 +56,7 @@ fields:
     date_format: DD/MM/YYYY
     time_format: ''
     display_utc: false
-    export_format: YYYY-MM-DD h:mm A
+    export_format: YYYY-MM-DD
   default: now
 pages:
 - content/o-bizu-para-juntar-dinheiro-mais-facil.mdx
