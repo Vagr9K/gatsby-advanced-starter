@@ -54,7 +54,7 @@
     "@testing-library/react": "^12.1.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.9.2",
-    "@types/react": "^17.0.21",
+    "@types/react": "^17.0.26",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.14",
     "@types/xml2js": "^0.4.9",
