@@ -175,7 +175,7 @@ module.exports = {
               linkedIn: "UCFX9cA98AWbtqABnOFuGQMA", //  linkedIn = YouTube
               email: "suporte@combatenterico.com.br",
               location: "Brasil",
-              about: "Ajudo militares a fazer sobrar dinheiro para viajar ou investir. Me acompanhe aqui e nas redes sociais.",
+              about: "Ajudo militares a fazer sobrar dinheiro para viajar ou investir. Visite as redes sociais.",
               avatar: "https://res.cloudinary.com/dgabedu0m/image/upload/v1632716191/diego_ayres_xdf6kq.jpg",
             },
           // Gatsby Configuration

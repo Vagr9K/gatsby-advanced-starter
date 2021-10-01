@@ -21,7 +21,8 @@ const AboutPage = (): JSX.Element => {
       <div className="about-container">
         <Helmet title={`About | ${config.website.title}`} />
         <Wrapper>
-        Opa, estamos em construção
+        <h1>Opa, estamos em construção</h1>
+       Enquanto isso confira as redes sociais para saber mais sobre o Combatente Rico
         </Wrapper>
       </div>
     </Layout>
