@@ -8,9 +8,14 @@ module.exports = {
     options: {
       id: "GTM-PCLLN9S",
       includeInDevelopment: false,
-      defaultDataLayer: {
-        platform: "gatsby"
-      },  
+      defaultDataLayer: { platform: "gatsby" },
+
+      // Name of the event that is triggered
+      // on every Gatsby route change.
+      //
+      // Defaults to gatsby-route-change
+      routeChangeEventName: "grchange",
+      // Defaults to https://www.googletagmanager.com
     }, 
     resolve: `gatsby-theme-amaranth`,
       options: {
