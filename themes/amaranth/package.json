@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-amaranth",
   "description": "A stylish GatsbyJS theme built on top of gatsby-theme-advanced.",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com> (https://harutyunyan.dev/)",
   "homepage": "https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/amaranth",
   "bugs": "https://github.com/Vagr9K/gatsby-advanced-starter/issues",
@@ -77,7 +77,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.3.0",
+    "@testing-library/user-event": "^13.4.0",
     "@types/babel__plugin-transform-runtime": "^7.9.2",
     "@types/clone-deep": "^4.0.1",
     "@types/jest": "^27.0.2",

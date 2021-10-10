@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-advanced",
   "description": "GatsbyJS theme equipped with advanced features.",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com> (https://harutyunyan.dev/)",
   "homepage": "https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/advanced",
   "bugs": "https://github.com/Vagr9K/gatsby-advanced-starter/issues",
@@ -112,7 +112,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.5",
     "markdownlint-cli2": "^0.3.2",
-    "memfs": "^3.3.0",
+    "memfs": "^3.4.0",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
