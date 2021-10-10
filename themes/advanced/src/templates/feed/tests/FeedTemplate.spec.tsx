@@ -54,7 +54,7 @@ describe("component FeedTemplate", () => {
 
     const helmet = Helmet.peek();
 
-    expect(helmet.title).toStrictEqual(
+    expect(helmet.title).toBe(
       'Posts tagged as "test" | Gatsby Advanced Starter'
     );
 
@@ -70,7 +70,7 @@ describe("component FeedTemplate", () => {
 
     const helmet = Helmet.peek();
 
-    expect(helmet.title).toStrictEqual(
+    expect(helmet.title).toBe(
       'Posts in category "test" | Gatsby Advanced Starter'
     );
 

@@ -6,13 +6,14 @@ module.exports = {
     "**/content/**",
   ],
   extends: [
-    "plugin:jest/all",
-    "plugin:jest-dom/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:testing-library/react",
     "plugin:react-hooks/recommended",
     "airbnb/hooks",
     "airbnb",
   ],
+  plugins: ["import"],
   settings: {
     "import/resolver": {
       node: {
@@ -31,7 +32,6 @@ module.exports = {
         tsx: "never",
       },
     ],
-    "jest/no-hooks": "off",
   },
   overrides: [
     {
@@ -39,7 +39,6 @@ module.exports = {
       env: {
         browser: true,
         es6: true,
-        "jest/globals": true,
       },
       extends: [
         "plugin:@typescript-eslint/eslint-recommended",
@@ -52,8 +51,7 @@ module.exports = {
         "@typescript-eslint",
         "react",
         "react-hooks",
-        "jest",
-        "jest-dom",
+
         "testing-library",
         "graphql",
         "prettier",
@@ -74,13 +72,10 @@ module.exports = {
       env: {
         browser: true,
         es6: true,
-        "jest/globals": true,
       },
       extends: ["prettier"],
       rules: {},
       plugins: [
-        "jest",
-        "jest-dom",
         "testing-library",
         "react",
         "react-hooks",
@@ -91,13 +86,21 @@ module.exports = {
     {
       files: [
         "**/test/**",
+        "**/__mocks__/**",
         "*.spec.ts",
         "*.spec.tsx",
         "*.spec.js",
         "*.spec.jsx",
       ],
-      plugins: ["jest"],
+      extends: ["plugin:jest/all", "plugin:jest-dom/recommended"],
+      plugins: ["jest", "jest-dom"],
+      env: {
+        browser: true,
+        es6: true,
+        "jest/globals": true,
+      },
       rules: {
+        "jest/no-hooks": "off",
         "@typescript-eslint/unbound-method": "off",
         "jest/unbound-method": "error",
         "import/no-extraneous-dependencies": [
