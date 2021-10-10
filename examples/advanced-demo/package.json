@@ -39,8 +39,8 @@
     "test:e2e:ci": "CYPRESS_SUPPORT=y npm run build && start-server-and-test serve http://localhost:9000 cy:run"
   },
   "dependencies": {
-    "gatsby": "^3.14.2",
-    "gatsby-plugin-image": "^1.14.1",
+    "gatsby": "next",
+    "gatsby-plugin-image": "next",
     "gatsby-plugin-mdx": "^2.14.0",
     "gatsby-theme-advanced": "*",
     "lodash": "^4.17.21",
@@ -63,7 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "axe-core": "^4.3.3",
     "babel-jest": "^27.2.5",
-    "babel-preset-gatsby": "^1.14.0",
+    "babel-preset-gatsby": "next",
     "cypress": "^8.5.0",
     "cypress-axe": "^0.13.0",
     "eslint": "^7.32.0",
@@ -79,7 +79,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^4.12.4",
-    "gatsby-cypress": "^1.14.0",
+    "gatsby-cypress": "next",
     "gh-pages": "^3.2.3",
     "jest": "^27.2.5",
     "markdownlint-cli2": "^0.3.2",
