@@ -8,7 +8,13 @@ module.exports = {
     "airbnb-typescript",
     "prettier",
   ],
-  plugins: ["@typescript-eslint", "testing-library", "prettier"],
+  plugins: [
+    "react",
+    "import",
+    "@typescript-eslint",
+    "testing-library",
+    "prettier",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     tsconfigRootDir: __dirname, // eslint-disable-line @typescript-eslint/no-unsafe-assignment

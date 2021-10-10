@@ -9,15 +9,20 @@ import ArticleShare from "./index";
 
 import { post as postFixture } from "../../../../../test/fixtures";
 
-Object.assign(navigator, {
-  clipboard: {
-    writeText: () => {},
-  },
-});
-
-jest.spyOn(navigator.clipboard, "writeText");
+const mockNavigator = () => {
+  Object.assign(navigator, {
+    clipboard: {
+      writeText: () => {},
+    },
+  });
+  jest.spyOn(navigator.clipboard, "writeText");
+};
 
 describe("component ArticleShare", () => {
+  beforeAll(() => {
+    mockNavigator();
+  });
+
   it("renders social links", () => {
     expect.assertions(5);
 
