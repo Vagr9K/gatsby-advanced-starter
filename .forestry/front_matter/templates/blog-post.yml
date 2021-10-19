@@ -61,5 +61,3 @@ fields:
     display_utc: false
     export_format: YYYY-MM-DD
   default: now
-pages:
-- content/test-3.mdx
