@@ -55,7 +55,7 @@ You are free to use any UI framework/styling options or you can use the [`gatsby
 
 ## Features
 
-- Gatsby v3 support
+- Gatsby v4 support
 - First class [TypeScript](https://www.typescriptlang.org/) support (for query data and components exposed by the theme)
 - Styled Components used for styling
 - Posts in MDX

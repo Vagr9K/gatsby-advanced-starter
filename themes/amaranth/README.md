@@ -44,7 +44,7 @@ Visit [`gatsby-theme-amaranth`](https://github.com/Vagr9K/gatsby-advanced-starte
 
 ## Features
 
-- Gatsby v3 support
+- Gatsby v4 support
 - First class TypeScript support (for query data and components exposed by the theme)
 - Styled Components used for styling
 - Posts in MDX
