@@ -13,12 +13,12 @@ type GraphqlType = <TData, TVariables = any>(
   query: string,
   variables?: TVariables
 ) => Promise<{
-  errors?: any;
+  errors?: string;
   data?: TData;
 }>;
 
 type QueryResult = {
-  errors?: any;
+  errors?: string;
   data?: MdxListingQuery | undefined;
 };
 
