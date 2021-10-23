@@ -237,6 +237,12 @@ CMS.init({
 
 For NetlifyCMS specific issues visit the [official documentation](https://www.netlifycms.org/docs/intro/).
 
+### Contributing
+
+If you have any issues, questions or suggestions related to the starter then feel free to bring them up!
+
+If you'd like to contribute to the repository and need some pointers, take a look at the [Contribution Guide](./.github/CONTRIBUTING.md).
+
 # Author
 
 Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
