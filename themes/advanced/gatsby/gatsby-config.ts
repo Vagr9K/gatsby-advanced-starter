@@ -106,9 +106,6 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
               resolve: "gatsby-remark-responsive-iframe",
             },
             {
-              resolve: `gatsby-remark-relative-images`,
-            },
-            {
               resolve: "gatsby-remark-images",
               options: {
                 maxWidth: config.embeddedImageWidth,

@@ -50,17 +50,20 @@ const wrapper = ({ children }: { children: React.ReactChildren }) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 );
 
-fetchMock.mock(/\/feed_meta\/index-(.+).json/, (url) => {
-  const regexMatch = /index-(.+).json/.exec(url);
-  const pageId = regexMatch ? regexMatch[1] : undefined;
+const setupFetchMock = () => {
+  fetchMock.mock(/\/feed_meta\/index-(.+).json/, (url) => {
+    const regexMatch = /index-(.+).json/.exec(url);
+    const pageId = regexMatch ? regexMatch[1] : undefined;
 
-  if (!pageId) throw Error(`Feed page request missing index.`);
+    if (!pageId) throw Error(`Feed page request missing index.`);
 
-  const pageData = pageMetadatas[parseInt(pageId, 10)];
-  if (!pageData) throw Error(`Tried to request non-existent page: ${pageId}.`);
+    const pageData = pageMetadatas[parseInt(pageId, 10)];
+    if (!pageData)
+      throw Error(`Tried to request non-existent page: ${pageId}.`);
 
-  return { body: pageData, status: 200 };
-});
+    return { body: pageData, status: 200 };
+  });
+};
 
 const startPageContext: PageContext = {
   feedId: undefined,
@@ -81,6 +84,9 @@ const filterFullPosts = (feedPosts: FeedList) =>
   feedPosts.filter((post) => !isPostPlaceholder(post));
 
 describe("useInfiniteFeed", () => {
+  beforeAll(() => {
+    setupFetchMock();
+  });
   it("loads next feed pages on scroll", async () => {
     expect.assertions(6);
 

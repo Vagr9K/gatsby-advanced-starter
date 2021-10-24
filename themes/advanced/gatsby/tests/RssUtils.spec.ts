@@ -58,7 +58,7 @@ describe("setup", () => {
 
     const serializedData = setup(testFeedData);
 
-    expect(serializedData.generator).toStrictEqual("GatsbyJS Advanced Starter");
+    expect(serializedData.generator).toBe("GatsbyJS Advanced Starter");
   });
 
   it("throws when missing rssMetadata", () => {

@@ -55,7 +55,7 @@ You are free to use any UI framework/styling options or you can use the [`gatsby
 
 ## Features
 
-- Gatsby v3 support
+- Gatsby v4 support
 - First class [TypeScript](https://www.typescriptlang.org/) support (for query data and components exposed by the theme)
 - Styled Components used for styling
 - Posts in MDX
@@ -236,6 +236,12 @@ CMS.init({
 ```
 
 For NetlifyCMS specific issues visit the [official documentation](https://www.netlifycms.org/docs/intro/).
+
+### Contributing
+
+If you have any issues, questions or suggestions related to the starter then feel free to bring them up!
+
+If you'd like to contribute to the repository and need some pointers, take a look at the [Contribution Guide](./.github/CONTRIBUTING.md).
 
 # Author
 
