@@ -52,7 +52,7 @@
     "is-absolute-url": "^3.0.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
-    "netlify-cms-app": "^2.15.54",
+    "netlify-cms-app": "^2.15.57",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.25.0",
     "react-color": "^2.19.3",
