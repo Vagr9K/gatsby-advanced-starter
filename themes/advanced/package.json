@@ -59,7 +59,7 @@
     "react-share": "^4.4.0",
     "react-twitter-widgets": "^1.10.0",
     "remark-codesandbox": "^0.10.0",
-    "remark-external-links": "^8.0.0",
+    "remark-external-links": "^9.0.1",
     "remark-unwrap-images": "^2.1.0",
     "remove-markdown": "^0.3.0",
     "source-map-support": "^0.5.20",
