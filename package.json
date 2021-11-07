@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
-  "version": "2.20.11",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "name": "xo9-home",
+  "description": "Homepage for XO9.",
+  "version": "0.0.1",
+  "author": "Mike Torres <6453torres@gmail.com>",
   "dependencies": {
     "gatsby": "^3.8.1",
     "gatsby-plugin-disqus": "^1.2.2",
@@ -59,7 +59,12 @@
     "write-good": "^1.0.8"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "xo9",
+    "photography",
+    "studio",
+    "homepage",
+    "web"
   ],
   "license": "MIT",
   "main": "n/a",
