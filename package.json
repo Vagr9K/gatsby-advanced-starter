@@ -43,7 +43,7 @@
     "test:e2e:dev": "CYPRESS_SUPPORT=y CYPRESS_BASE_URL=http://localhost:8000 CYPRESS_STAGE=dev start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e": "CYPRESS_SUPPORT=y npm run build && start-server-and-test serve http://localhost:9000 cy:open",
     "test:e2e:ci": "CYPRESS_SUPPORT=y npm run build && start-server-and-test serve http://localhost:9000 cy:run",
-    "write-good": "write-good $(glob 'content/**/*.md')"
+    "write-good": "write-good **/content/*.{md,mdx}"
   },
   "dependencies": {
     "@stylelint/postcss-css-in-js": "^0.37.2",
