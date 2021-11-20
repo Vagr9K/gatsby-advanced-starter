@@ -24,7 +24,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
   const validatedPathPrefix =
     config.pathPrefix === "" ? "/" : config.pathPrefix;
 
-  const netlifyConfigPath = "../src/netlifycms/index.js";
+  const netlifyConfigPath = "./src/netlifycms/index.js";
 
   return {
     pathPrefix: validatedPathPrefix,
