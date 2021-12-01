@@ -53,7 +53,7 @@
     "gatsby-theme-amaranth": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-query": "^3.28.0",
+    "react-query": "^3.34.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
