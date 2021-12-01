@@ -116,7 +116,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
-    "stylelint-prettier": "^1.2.0",
+    "stylelint-prettier": "^2.0.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
     "ts-prune": "^0.10.1",
