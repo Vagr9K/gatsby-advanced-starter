@@ -18,7 +18,7 @@
     "@styled-icons/boxicons-regular": "^10.38.0",
     "@styled-icons/styled-icon": "^10.6.3",
     "@types/mdx-js__react": "^1.5.4",
-    "babel-plugin-styled-components": "^1.13.3",
+    "babel-plugin-styled-components": "^2.0.2",
     "date-fns": "^2.25.0",
     "eslint-plugin-graphql": "^4.0.0",
     "gatsby-image": "^3.11.0",
