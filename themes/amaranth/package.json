@@ -89,7 +89,7 @@
     "@types/url-join": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "babel-jest": "^27.3.1",
-    "babel-preset-gatsby": "^2.0.0",
+    "babel-preset-gatsby": "^2.4.0",
     "cli-glob": "^0.1.0",
     "clone-deep": "^4.0.1",
     "eslint": "^7.32.0",
