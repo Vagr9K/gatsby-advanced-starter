@@ -64,7 +64,7 @@
     "axe-core": "^4.3.3",
     "babel-jest": "^27.3.1",
     "babel-preset-gatsby": "^2.0.0",
-    "cypress": "^8.6.0",
+    "cypress": "^9.4.1",
     "cypress-axe": "^0.13.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
