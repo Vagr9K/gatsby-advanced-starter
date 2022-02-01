@@ -52,7 +52,7 @@
     "moment": "^2.29.1",
     "netlify-cms-app": "^2.15.54",
     "prism-themes": "^1.9.0",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.26.0",
     "react-color": "^2.19.3",
     "react-helmet": "^6.1.0",
     "react-query": "^3.28.0",
