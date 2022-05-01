@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "gatsby": "^4.0.0",
-    "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-mdx": "^3.0.0",
     "gatsby-theme-advanced": "*",
     "lodash": "^4.17.21",
