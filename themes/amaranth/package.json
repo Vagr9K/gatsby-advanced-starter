@@ -64,7 +64,7 @@
     "remark-external-links": "^8.0.0",
     "remark-unwrap-images": "^2.1.0",
     "remove-markdown": "^0.3.0",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "url-join": "^4.0.1"
   },
   "devDependencies": {
