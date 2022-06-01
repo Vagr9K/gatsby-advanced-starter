@@ -43,7 +43,7 @@
     "gatsby-remark-copy-linked-files": "^5.0.0",
     "gatsby-remark-embed-video": "^3.1.1",
     "gatsby-remark-images": "^6.0.0",
-    "gatsby-remark-prismjs": "^6.0.0",
+    "gatsby-remark-prismjs": "^6.15.0",
     "gatsby-remark-responsive-iframe": "^5.0.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-theme-advanced": "*",
