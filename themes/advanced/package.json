@@ -110,7 +110,7 @@
     "gh-pages": "^3.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
-    "markdownlint-cli2": "^0.3.2",
+    "markdownlint-cli2": "^0.4.0",
     "memfs": "^3.3.0",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
