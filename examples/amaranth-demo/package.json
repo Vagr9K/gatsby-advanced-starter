@@ -81,7 +81,7 @@
     "markdownlint-cli2": "^0.3.2",
     "prettier": "^2.4.1",
     "start-server-and-test": "^1.14.0",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.8.5",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-prettier": "^1.2.0",
