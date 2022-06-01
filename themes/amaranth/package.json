@@ -103,7 +103,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-testing-library": "^4.12.4",
+    "eslint-plugin-testing-library": "^5.5.1",
     "gatsby": "^4.0.0",
     "gh-pages": "^3.2.3",
     "identity-obj-proxy": "^3.0.0",
