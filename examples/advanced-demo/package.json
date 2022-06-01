@@ -62,7 +62,7 @@
     "@types/xml2js": "^0.4.9",
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "axe-core": "^4.3.3",
-    "babel-jest": "^27.3.1",
+    "babel-jest": "^28.1.0",
     "babel-preset-gatsby": "^2.0.0",
     "cypress": "^8.6.0",
     "cypress-axe": "^0.13.0",
