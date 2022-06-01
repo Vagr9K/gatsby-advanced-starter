@@ -84,7 +84,7 @@
     "@types/react": "^17.0.31",
     "@types/react-dom": "^17.0.10",
     "@types/react-helmet": "^6.1.4",
-    "@types/react-test-renderer": "^17.0.1",
+    "@types/react-test-renderer": "^18.0.0",
     "@types/remove-markdown": "^0.3.1",
     "@types/source-map-support": "^0.5.4",
     "@types/url-join": "^4.0.1",
