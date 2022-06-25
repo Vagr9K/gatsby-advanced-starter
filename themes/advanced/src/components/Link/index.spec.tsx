@@ -1,7 +1,6 @@
 import React from "react";
 import { screen, cleanup, render } from "@testing-library/react";
 import cloneDeep from "clone-deep";
-import { mocked } from "ts-jest/utils";
 
 import * as gatsby from "gatsby";
 
@@ -13,7 +12,7 @@ import { config as configFixture } from "../../../../test/fixtures";
 
 jest.mock("../../config/useConfig");
 
-const mockedUseConfig = mocked(useConfig);
+const mockedUseConfig = jest.mocked(useConfig);
 
 const testConfig = cloneDeep<SiteConfig>(configFixture);
 testConfig.basePath = "/";
@@ -29,7 +28,7 @@ jest.mock("gatsby", () => {
   };
 });
 
-const mockedGatsby = mocked(gatsby, true);
+const mockedGatsby = jest.mocked(gatsby, true);
 
 describe("component Link", () => {
   // eslint-disable-next-line jest/no-hooks

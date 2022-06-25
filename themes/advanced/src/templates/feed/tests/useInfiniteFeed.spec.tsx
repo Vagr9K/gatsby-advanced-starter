@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { renderHook, act } from "@testing-library/react-hooks";
 import { fireEvent } from "@testing-library/dom";
 import fetchMock from "fetch-mock";
-import { mocked } from "ts-jest/utils";
 
 import useInfiniteFeed from "../useInfiniteFeed";
 import { PageContext } from "../types";
@@ -43,7 +42,7 @@ jest.mock("react", () => {
 
 jest.mock("../../../config/useConfig");
 
-const mockedReact = mocked(React, true);
+const mockedReact = jest.mocked(React, true);
 
 const queryClient = new QueryClient();
 const wrapper = ({ children }: { children: React.ReactChildren }) => (

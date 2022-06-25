@@ -1,12 +1,10 @@
-import { mocked } from "ts-jest/utils";
-
 import { GatsbyConfig } from "gatsby";
 import gatsbyConfig from "../gatsby-config";
 
 import * as fixtures from "../../../test/fixtures";
 import * as config from "../../src/config";
 
-jest.mock("../../src/config", () => ({
+jest.mock<typeof import("../../src/config")>("../../src/config", () => ({
   ...jest.requireActual("../../src/config"),
   withDefaults: jest
     .fn()
@@ -17,7 +15,7 @@ jest.mock("../../src/config", () => ({
     ),
 }));
 
-const mockedConfig = mocked(config, true);
+const mockedConfig = jest.mocked(config, true);
 
 describe("gatsbyConfig", () => {
   it("sets a validated pathPrefix", () => {

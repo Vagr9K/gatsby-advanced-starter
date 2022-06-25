@@ -1,6 +1,5 @@
 import memfs from "memfs";
 
-import { mocked } from "ts-jest/utils";
 import { GatsbyActionsMock } from "./Utils";
 
 import {
@@ -182,7 +181,7 @@ describe("createFeed", () => {
       [FEED_META_DIR]: null,
     });
 
-    const MockedGatsbyActions = mocked(GatsbyActionsMock, true);
+    const MockedGatsbyActions = jest.mocked(GatsbyActionsMock, true);
 
     await createFeed(configFixture, GatsbyActionsMock, listingFixture, "index");
 

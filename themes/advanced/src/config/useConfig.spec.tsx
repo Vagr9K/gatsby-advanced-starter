@@ -1,4 +1,3 @@
-import { mocked } from "ts-jest/utils";
 import { renderHook } from "@testing-library/react-hooks";
 import * as gatsby from "gatsby";
 
@@ -24,7 +23,7 @@ jest.mock("gatsby", () => {
   };
 });
 
-const mockedGatsby = mocked(gatsby, true);
+const mockedGatsby = jest.mocked(gatsby, true);
 
 describe("hook useConfig", () => {
   afterEach(() => {
