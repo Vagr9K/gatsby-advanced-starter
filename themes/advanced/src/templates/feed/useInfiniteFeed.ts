@@ -78,7 +78,11 @@ const useInfiniteFeed = (
 
     // When loading the next page, show placeholder posts
     if (feedQuery.isFetchingNextPage) {
-      const lastPage = feedQuery.data?.pages[feedQuery.data?.pages.length - 1];
+      const pageCount = feedQuery.data?.pages.length;
+
+      if (!pageCount) return list;
+
+      const lastPage = feedQuery.data?.pages[pageCount - 1];
       list.push(...createPostPlaceholders("next", lastPage?.nextCount));
     }
 

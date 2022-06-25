@@ -38,21 +38,19 @@ const FeedTemplate = ({ pageContext }: FeedTemplateProps): JSX.Element => {
   };
 
   return (
-    <>
-      <div className="feed-wrapper" ref={feedElementRef}>
-        {getTitleOverride()}
-        {feedListing.map((post) => {
-          // Check if we're rendering a placeholder and determine a key
-          const key = "isPlaceholder" in post ? post.key : post.slug;
+    <div className="feed-wrapper" ref={feedElementRef}>
+      {getTitleOverride()}
+      {feedListing.map((post) => {
+        // Check if we're rendering a placeholder and determine a key
+        const key = "isPlaceholder" in post ? post.key : post.slug;
 
-          return (
-            <pre key={key}>
-              <code>{JSON.stringify(post, null, 2)}</code>
-            </pre>
-          );
-        })}
-      </div>
-    </>
+        return (
+          <pre key={key}>
+            <code>{JSON.stringify(post, null, 2)}</code>
+          </pre>
+        );
+      })}
+    </div>
   );
 };
 

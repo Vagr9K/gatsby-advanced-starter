@@ -32,6 +32,13 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
   },
   overrides: [
     {
@@ -111,6 +118,9 @@ module.exports = {
             peerDependencies: false,
           },
         ],
+        "import/no-relative-packages": "off",
+        "jest/no-conditional-in-test": "off",
+        "jest/prefer-snapshot-hint": "off",
       },
     },
   ],

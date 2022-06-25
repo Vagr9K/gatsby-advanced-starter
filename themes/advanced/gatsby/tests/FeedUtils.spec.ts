@@ -209,9 +209,8 @@ describe("createFeed", () => {
       })
     ).toMatchSnapshot();
 
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(MockedGatsbyActions.createPage).toHaveBeenCalledTimes(1);
-    // eslint-disable-next-line @typescript-eslint/unbound-method
+
     expect(MockedGatsbyActions.createPage).toHaveBeenCalledWith(
       expect.objectContaining({
         path: "/",
