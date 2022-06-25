@@ -4463,6 +4463,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mapbox/jsonlint-lines-primitives@npm:~2.0.2":
+  version: 2.0.2
+  resolution: "@mapbox/jsonlint-lines-primitives@npm:2.0.2"
+  checksum: 4eb31edd3ccff530f7b687ddc6d813d6e24fc66e9a563460882e7861b49f9331c5ded6fd7e927b37affbbd98f83bff1f7b916119044f1931df03c6ffedba2cfb
+  languageName: node
+  linkType: hard
+
+"@mapbox/mapbox-gl-style-spec@npm:^13.20.1":
+  version: 13.25.0
+  resolution: "@mapbox/mapbox-gl-style-spec@npm:13.25.0"
+  dependencies:
+    "@mapbox/jsonlint-lines-primitives": ~2.0.2
+    "@mapbox/point-geometry": ^0.1.0
+    "@mapbox/unitbezier": ^0.0.0
+    csscolorparser: ~1.0.2
+    json-stringify-pretty-compact: ^2.0.0
+    minimist: ^1.2.5
+    rw: ^1.3.3
+    sort-object: ^0.3.2
+  bin:
+    gl-style-composite: bin/gl-style-composite.js
+    gl-style-format: bin/gl-style-format.js
+    gl-style-migrate: bin/gl-style-migrate.js
+    gl-style-validate: bin/gl-style-validate.js
+  checksum: a1639069bba39e82755c67ff7218075154459614f0d6f13b7ef478bbcbea4b81e47f23ce5e2ec76ca1f083f3f1e9acd93e8110d1a7bbc3cd443f1a250c971c92
+  languageName: node
+  linkType: hard
+
+"@mapbox/point-geometry@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@mapbox/point-geometry@npm:0.1.0"
+  checksum: ed41c1ce0140de81039424415d9a199abba72cdb2287314e1b8c3e295da3224f7e8c1b0ae99a9b097703e7abe63e1978a518e29896989cc8bba3d482360bc22f
+  languageName: node
+  linkType: hard
+
+"@mapbox/unitbezier@npm:^0.0.0":
+  version: 0.0.0
+  resolution: "@mapbox/unitbezier@npm:0.0.0"
+  checksum: 22ae6d56f743570fb222a5b0d323398e342007f689ae6445b6238d60a2faaa312b41c1de1fb2553bca4ccdb2d3f7006af04d94457c54b44a6454ce0198eebf9e
+  languageName: node
+  linkType: hard
+
 "@mdx-js/mdx@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
@@ -5041,6 +5083,13 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.6.0
   checksum: d064fabdff53ce14f69f5000c479d8e77795d4251c80ca373342e0ab73141878a7afc65d3d27c36c9c661c18fac77dc1e10799c1a532f456691157ea5a213f89
+  languageName: node
+  linkType: hard
+
+"@petamoriken/float16@npm:^3.4.7":
+  version: 3.6.3
+  resolution: "@petamoriken/float16@npm:3.6.3"
+  checksum: e15c263acb892a5d05ed7a47ca7d98871d1a03583eb5e398769224eec01144775eca4a1edcb4034dbd856ec016a96d99b9f3bf898d670889a4d9cd6561957b01
   languageName: node
   linkType: hard
 
@@ -8920,6 +8969,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-stack@npm:^4.1.0":
+  version: 4.2.0
+  resolution: "clean-stack@npm:4.2.0"
+  dependencies:
+    escape-string-regexp: 5.0.0
+  checksum: 373f656a31face5c615c0839213b9b542a0a48057abfb1df66900eab4dc2a5c6097628e4a0b5aa559cdfc4e66f8a14ea47be9681773165a44470ef5fb8ccc172
+  languageName: node
+  linkType: hard
+
 "cli-boxes@npm:^1.0.0":
   version: 1.0.0
   resolution: "cli-boxes@npm:1.0.0"
@@ -10006,6 +10064,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csscolorparser@npm:~1.0.2":
+  version: 1.0.3
+  resolution: "csscolorparser@npm:1.0.3"
+  checksum: e40f3045ea15c7e7eaa78e110412fe8b820d47b698c1eb1d1e7ecb42703bf447406a24304b891ae9df61e85d947f33fc67bd0120c7f9e3a5183e6e0b9afff92c
+  languageName: node
+  linkType: hard
+
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -10273,6 +10338,13 @@ __metadata:
   version: 2.25.0
   resolution: "date-fns@npm:2.25.0"
   checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.28.0":
+  version: 2.28.0
+  resolution: "date-fns@npm:2.28.0"
+  checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
   languageName: node
   linkType: hard
 
@@ -11398,6 +11470,13 @@ __metadata:
   version: 1.0.3
   resolution: "escape-html@npm:1.0.3"
   checksum: 6213ca9ae00d0ab8bccb6d8d4e0a98e76237b2410302cf7df70aaa6591d509a2a37ce8998008cbecae8fc8ffaadf3fb0229535e6a145f3ce0b211d060decbb24
+  languageName: node
+  linkType: hard
+
+"escape-string-regexp@npm:5.0.0":
+  version: 5.0.0
+  resolution: "escape-string-regexp@npm:5.0.0"
+  checksum: 20daabe197f3cb198ec28546deebcf24b3dbb1a5a269184381b3116d12f0532e06007f4bc8da25669d6a7f8efb68db0758df4cd981f57bc5b57f521a3e12c59e
   languageName: node
   linkType: hard
 
@@ -13897,7 +13976,7 @@ __metadata:
     babel-preset-gatsby: ^2.17.0
     cli-glob: ^0.1.0
     clone-deep: ^4.0.1
-    date-fns: ^2.25.0
+    date-fns: ^2.28.0
     eslint: ^8.18.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
@@ -13948,13 +14027,13 @@ __metadata:
     jest-environment-jsdom: ^28.1.1
     lodash: ^4.17.21
     markdownlint-cli2: ^0.4.0
-    memfs: ^3.3.0
-    moment: ^2.29.1
-    netlify-cms-app: ^2.15.54
+    memfs: ^3.4.7
+    moment: ^2.29.3
+    netlify-cms-app: ^2.15.72
     postcss-syntax: ^0.36.2
     prettier: ^2.7.1
     prism-themes: ^1.9.0
-    prismjs: ^1.25.0
+    prismjs: ^1.28.0
     react: ^18.2.0
     react-color: ^2.19.3
     react-dom: ^18.2.0
@@ -13963,10 +14042,10 @@ __metadata:
     react-share: ^4.4.0
     react-test-renderer: ^18.2.0
     react-twitter-widgets: ^1.10.0
-    remark-codesandbox: ^0.10.0
+    remark-codesandbox: ^0.10.1
     remark-external-links: ^8.0.0
     remark-unwrap-images: ^2.1.0
-    remove-markdown: ^0.3.0
+    remove-markdown: ^0.5.0
     source-map-support: ^0.5.21
     stylelint: ^14.9.1
     stylelint-config-prettier: ^9.0.3
@@ -14084,7 +14163,7 @@ __metadata:
     babel-preset-gatsby: ^2.17.0
     cli-glob: ^0.1.0
     clone-deep: ^4.0.1
-    date-fns: ^2.25.0
+    date-fns: ^2.28.0
     eslint: ^8.18.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
@@ -14135,12 +14214,12 @@ __metadata:
     jest-styled-components: ^7.0.8
     lodash: ^4.17.21
     markdownlint-cli2: ^0.4.0
-    moment: ^2.29.1
-    netlify-cms-app: ^2.15.54
+    moment: ^2.29.3
+    netlify-cms-app: ^2.15.72
     postcss-syntax: ^0.36.2
     prettier: ^2.7.1
     prism-themes: ^1.9.0
-    prismjs: ^1.25.0
+    prismjs: ^1.28.0
     react: ^18.2.0
     react-color: ^2.19.3
     react-dom: ^18.2.0
@@ -14148,10 +14227,10 @@ __metadata:
     react-query: ^3.39.1
     react-share: ^4.4.0
     react-twitter-widgets: ^1.10.0
-    remark-codesandbox: ^0.10.0
+    remark-codesandbox: ^0.10.1
     remark-external-links: ^8.0.0
     remark-unwrap-images: ^2.1.0
-    remove-markdown: ^0.3.0
+    remove-markdown: ^0.5.0
     styled-components: ^5.3.5
     stylelint: ^14.9.1
     stylelint-config-prettier: ^9.0.3
@@ -14446,6 +14525,21 @@ __metadata:
   version: 1.0.0-beta.2
   resolution: "gensync@npm:1.0.0-beta.2"
   checksum: a7437e58c6be12aa6c90f7730eac7fa9833dc78872b4ad2963d2031b00a3367a93f98aec75f9aaac7220848e4026d67a8655e870b24f20a543d103c0d65952ec
+  languageName: node
+  linkType: hard
+
+"geotiff@npm:^2.0.2":
+  version: 2.0.5
+  resolution: "geotiff@npm:2.0.5"
+  dependencies:
+    "@petamoriken/float16": ^3.4.7
+    lerc: ^3.0.0
+    pako: ^2.0.4
+    parse-headers: ^2.0.2
+    quick-lru: ^6.1.0
+    web-worker: ^1.2.0
+    xml-utils: ^1.0.2
+  checksum: d27c70038e9d68d116bc7f4fd51176d531b5d238f5bf4e97cbd48cf1a4e790a2d6c3f4c370af24009fc3e7dc7521b2f0d4fd5ace2df85191da243d2d2a07e1c4
   languageName: node
   linkType: hard
 
@@ -15915,7 +16009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.13, ieee754@npm:^1.1.6, ieee754@npm:^1.2.1":
+"ieee754@npm:^1.1.12, ieee754@npm:^1.1.13, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 5144c0c9815e54ada181d80a0b810221a253562422e7c6c3a60b1901154184f49326ec239d618c416c1c5945a2e197107aee8d986a3dd836b53dffefd99b5e7e
@@ -17790,6 +17884,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-stringify-pretty-compact@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "json-stringify-pretty-compact@npm:2.0.0"
+  checksum: b476aa4ce2728cc7d89bffc4e99433015efc7065313cb90b7a6450cfd934aa3a61846ee9040c79ce00c44ca046cdd6ec0113157c9b895c85b7529c3056d6a1ea
+  languageName: node
+  linkType: hard
+
 "json-stringify-safe@npm:~5.0.1":
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
@@ -18013,6 +18114,13 @@ __metadata:
   version: 1.0.4
   resolution: "lazy-cache@npm:1.0.4"
   checksum: e6650c22e5de1cc3f4a0c25d2b35fe9cd400473c1b3562be9fceadf8f368d708b54d24f5aa51b321b090da65b36426823a8f706b8dbdd68270db0daba812c5d3
+  languageName: node
+  linkType: hard
+
+"lerc@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lerc@npm:3.0.0"
+  checksum: 637699a1359cd80e581bac4bd66dd7ac09e6681fe97346c97939abdbc0170deac1b79ea00a17e334ef5d9d510973ca382abb43c39c8294788dd8391daeb75c32
   languageName: node
   linkType: hard
 
@@ -18825,6 +18933,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mapbox-to-css-font@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "mapbox-to-css-font@npm:2.4.1"
+  checksum: db9e9003d8514286f58793a746bb2477d4f29547ccce17a7bdef34d3ed73f1d670cbb2956cb899e5bcda90564b508de485f7bcbbded908a22ab70482dfe49ed0
+  languageName: node
+  linkType: hard
+
 "markdown-escapes@npm:^1.0.0":
   version: 1.0.4
   resolution: "markdown-escapes@npm:1.0.4"
@@ -19246,7 +19361,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memfs@npm:^3.1.2":
+"memfs@npm:^3.1.2, memfs@npm:^3.4.7":
   version: 3.4.7
   resolution: "memfs@npm:3.4.7"
   dependencies:
@@ -19261,15 +19376,6 @@ __metadata:
   dependencies:
     fs-monkey: 1.0.3
   checksum: 676c7463069f80ff92360f20f1b7071da5df43365edff4f013f1b19d8f11f537368a19e6e9ba4ba806b23147b52493033abb71cb83e3ca01386a713dc1bb0082
-  languageName: node
-  linkType: hard
-
-"memfs@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "memfs@npm:3.3.0"
-  dependencies:
-    fs-monkey: 1.0.3
-  checksum: 9e9eb71cfc077fd5e14ad2f497f5a8791689b64f307cf379ed6737c5781652a7af0509395c0dfba43c4e413dbc7cd7010e9ca002168ec329e6df178414b96268
   languageName: node
   linkType: hard
 
@@ -19824,6 +19930,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"moment@npm:^2.29.3":
+  version: 2.29.3
+  resolution: "moment@npm:2.29.3"
+  checksum: 2e780e36d9a1823c08a1b6313cbb08bd01ecbb2a9062095820a34f42c878991ccba53abaa6abb103fd5c01e763724f295162a8c50b7e95b4f1c992ef0772d3f0
+  languageName: node
+  linkType: hard
+
 "move-concurrently@npm:^1.0.1":
   version: 1.0.1
   resolution: "move-concurrently@npm:1.0.1"
@@ -20014,9 +20127,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-app@npm:^2.15.54":
-  version: 2.15.54
-  resolution: "netlify-cms-app@npm:2.15.54"
+"netlify-cms-app@npm:^2.15.72":
+  version: 2.15.72
+  resolution: "netlify-cms-app@npm:2.15.72"
   dependencies:
     "@emotion/core": ^10.0.35
     "@emotion/styled": ^10.0.27
@@ -20024,33 +20137,33 @@ __metadata:
     immutable: ^3.7.6
     lodash: ^4.17.11
     moment: ^2.24.0
-    netlify-cms-backend-azure: ^1.3.0
+    netlify-cms-backend-azure: ^1.3.1
     netlify-cms-backend-bitbucket: ^2.14.0
-    netlify-cms-backend-git-gateway: ^2.12.2
-    netlify-cms-backend-github: ^2.14.0
-    netlify-cms-backend-gitlab: ^2.12.0
+    netlify-cms-backend-git-gateway: ^2.13.1
+    netlify-cms-backend-github: ^2.14.1
+    netlify-cms-backend-gitlab: ^2.13.0
     netlify-cms-backend-proxy: ^1.2.3
     netlify-cms-backend-test: ^2.11.3
-    netlify-cms-core: ^2.53.0
+    netlify-cms-core: ^2.55.2
     netlify-cms-editor-component-image: ^2.7.0
     netlify-cms-lib-auth: ^2.4.2
-    netlify-cms-lib-util: ^2.14.0
-    netlify-cms-lib-widgets: ^1.7.0
-    netlify-cms-locales: ^1.36.2
-    netlify-cms-ui-default: ^2.15.3
+    netlify-cms-lib-util: ^2.15.1
+    netlify-cms-lib-widgets: ^1.8.1
+    netlify-cms-locales: ^1.39.0
+    netlify-cms-ui-default: ^2.15.5
     netlify-cms-widget-boolean: ^2.4.1
-    netlify-cms-widget-code: ^1.3.3
-    netlify-cms-widget-colorstring: ^1.1.1
+    netlify-cms-widget-code: ^1.3.4
+    netlify-cms-widget-colorstring: ^1.1.2
     netlify-cms-widget-date: ^2.6.3
     netlify-cms-widget-datetime: ^2.7.4
-    netlify-cms-widget-file: ^2.11.1
+    netlify-cms-widget-file: ^2.12.1
     netlify-cms-widget-image: ^2.8.1
     netlify-cms-widget-list: ^2.10.1
-    netlify-cms-widget-map: ^1.5.0
-    netlify-cms-widget-markdown: ^2.14.2
+    netlify-cms-widget-map: ^1.5.1
+    netlify-cms-widget-markdown: ^2.15.1
     netlify-cms-widget-number: ^2.5.0
-    netlify-cms-widget-object: ^2.7.1
-    netlify-cms-widget-relation: ^2.11.0
+    netlify-cms-widget-object: ^2.7.2
+    netlify-cms-widget-relation: ^2.11.1
     netlify-cms-widget-select: ^2.8.2
     netlify-cms-widget-string: ^2.3.0
     netlify-cms-widget-text: ^2.4.1
@@ -20060,13 +20173,13 @@ __metadata:
   peerDependencies:
     react: ^16.8.4 || ^17.0.0
     react-dom: ^16.8.4 || ^17.0.0
-  checksum: 6ef6341f25e1b7d3bfbed18d0287945951cb62fe421b77b2848e1561fb704c0eca9a67853b37ba2db9c6e68ae17eb26b4c9708e8120dec5119425a5ae566b907
+  checksum: 0cdf8a9e81cb65ed36719438426e37bc7c28af3efb4c7d904b362711d2eab6777a043d98dabc1ebdb6e25ac7e8e3c49dd4dd988ee6bae56ea32fd077235131b4
   languageName: node
   linkType: hard
 
-"netlify-cms-backend-azure@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "netlify-cms-backend-azure@npm:1.3.0"
+"netlify-cms-backend-azure@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "netlify-cms-backend-azure@npm:1.3.1"
   dependencies:
     js-base64: ^3.0.0
     semaphore: ^1.1.0
@@ -20080,7 +20193,7 @@ __metadata:
     netlify-cms-ui-default: ^2.12.1
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: 280ce513997c7111ffa263c43290b410c27721d5501d160ecc018fcb597bdf9ccad0d005ec25d3579c226adb4e9ff51fb99ff8d4ea92069d88800981bd1460fe
+  checksum: 235bbc464fd4d100f9d437b285c23aca34197394e3824463c8e523a209035d4d5d260aed7b82d5a40f32fc447b4226f6dc61cf8ab7396daed4d794d7a0ae4896
   languageName: node
   linkType: hard
 
@@ -20106,9 +20219,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-backend-git-gateway@npm:^2.12.2":
-  version: 2.12.2
-  resolution: "netlify-cms-backend-git-gateway@npm:2.12.2"
+"netlify-cms-backend-git-gateway@npm:^2.13.1":
+  version: 2.13.1
+  resolution: "netlify-cms-backend-git-gateway@npm:2.13.1"
   dependencies:
     gotrue-js: ^0.9.24
     ini: ^2.0.0
@@ -20126,13 +20239,13 @@ __metadata:
     netlify-cms-ui-default: ^2.12.1
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: d3b00461c592678dcb06b5366853eaa6db2040b86e17723b37578d7228dd89cb02e32b28b68d0806946f0134877383558d462b281174646d94d2c2599f1b80be
+  checksum: fc6ab28d7ba8daec0d46dbe2a873f2078800e30f0b9cdee2a8cb278ed0c7aa704922d257b22ed2307eddb1997dcd59c705f3b4ecf1a4c52b4b72ae74584e5b2d
   languageName: node
   linkType: hard
 
-"netlify-cms-backend-github@npm:^2.14.0":
-  version: 2.14.0
-  resolution: "netlify-cms-backend-github@npm:2.14.0"
+"netlify-cms-backend-github@npm:^2.14.1":
+  version: 2.14.1
+  resolution: "netlify-cms-backend-github@npm:2.14.1"
   dependencies:
     apollo-cache-inmemory: ^1.6.2
     apollo-client: ^2.6.3
@@ -20152,14 +20265,18 @@ __metadata:
     netlify-cms-ui-default: ^2.12.1
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: ec8ec1dae24776e2dc22ae8cb53e28f8ad420a9baa5df48af7d5d6fd71c71c3b1a9be51686e19ee27ab13485eec109fe3ec4e6d36c463f26b2d45eac49091bde
+  checksum: 73c6ce9102382a4818445f7668a1df13bbaaea98a2f9532540e53369a4402e9a95a9334cae2f69f81857712a8af7c82892aa5fbc1a3f2eea6b44bb8aa8aa93a8
   languageName: node
   linkType: hard
 
-"netlify-cms-backend-gitlab@npm:^2.12.0":
-  version: 2.12.0
-  resolution: "netlify-cms-backend-gitlab@npm:2.12.0"
+"netlify-cms-backend-gitlab@npm:^2.13.0":
+  version: 2.13.0
+  resolution: "netlify-cms-backend-gitlab@npm:2.13.0"
   dependencies:
+    apollo-cache-inmemory: ^1.6.2
+    apollo-client: ^2.6.3
+    apollo-link-context: ^1.0.18
+    apollo-link-http: ^1.5.15
     js-base64: ^3.0.0
     semaphore: ^1.1.0
   peerDependencies:
@@ -20172,7 +20289,7 @@ __metadata:
     netlify-cms-ui-default: ^2.12.1
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: c380fc5085b3c77bb24e16e7b7d0448d9ce5b2d1df5063221c9d6ad44933c3be63725ad7f6a32ba9635747bc74e589898e0529e842faef552dccb25b766a131d
+  checksum: 8d4b62b121554053e39f6dc799b078d294a90f96b431deabd4d197607da8986db3b8629cb559490d6757be9f188a22b3dcadd6ff82f082aaace1712a21c6ec9d
   languageName: node
   linkType: hard
 
@@ -20206,14 +20323,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-core@npm:^2.53.0":
-  version: 2.53.0
-  resolution: "netlify-cms-core@npm:2.53.0"
+"netlify-cms-core@npm:^2.55.2":
+  version: 2.55.2
+  resolution: "netlify-cms-core@npm:2.55.2"
   dependencies:
     "@iarna/toml": 2.2.5
     ajv: 8.1.0
     ajv-errors: ^3.0.0
     ajv-keywords: ^5.0.0
+    clean-stack: ^4.1.0
     copy-text-to-clipboard: ^3.0.0
     deepmerge: ^4.2.2
     diacritics: ^1.3.0
@@ -20230,7 +20348,7 @@ __metadata:
     react-dnd: ^14.0.0
     react-dnd-html5-backend: ^14.0.0
     react-dom: ^16.8.4
-    react-frame-component: ^5.0.0
+    react-frame-component: ^5.2.1
     react-hot-loader: ^4.8.0
     react-immutable-proptypes: ^2.1.0
     react-is: 16.13.1
@@ -20273,7 +20391,7 @@ __metadata:
     react: ^16.8.4 || ^17.0.0
     react-dom: ^16.8.4 || ^17.0.0
     react-immutable-proptypes: ^2.1.0
-  checksum: bce836555b012f3d78b1a811ffd100ed60e5a2bafd30050da611b556c6f69e49137c97078aa8532083f5068ab088a62803be7fb5e499fbf39cbcc65ebb46505d
+  checksum: d7b95d4d86991ef310bd8a703a7e25a7b3daace0d13b29d74e2aed1a73699dc23cfcde16aa46850f50795c647acd9e604ca5173f7e2aa6a0c2422be2c1c6bb16
   languageName: node
   linkType: hard
 
@@ -20297,9 +20415,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-lib-util@npm:^2.14.0":
-  version: 2.14.0
-  resolution: "netlify-cms-lib-util@npm:2.14.0"
+"netlify-cms-lib-util@npm:^2.15.1":
+  version: 2.15.1
+  resolution: "netlify-cms-lib-util@npm:2.15.1"
   dependencies:
     js-sha256: ^0.9.0
     localforage: ^1.7.3
@@ -20307,31 +20425,31 @@ __metadata:
   peerDependencies:
     immutable: ^3.7.6
     lodash: ^4.17.11
-  checksum: 5ae0f57bfbec61dddac6bd5653c7c19bcc99ca80f10c028022f8abf50f6993d0988491d157c7e8ef3090a889191da0567fe28c4fec188690c9cbd9cf35ef001d
+  checksum: 43f772e93f6e59ad919bcb7991ba20496863201a646195a3d5ac8116f59115b03adfda2ff0b533d76fd15c0c101be41bb94c3b138bb6693064980f2c9753d21d
   languageName: node
   linkType: hard
 
-"netlify-cms-lib-widgets@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "netlify-cms-lib-widgets@npm:1.7.0"
+"netlify-cms-lib-widgets@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "netlify-cms-lib-widgets@npm:1.8.1"
   peerDependencies:
     immutable: ^3.7.6
     lodash: ^4.17.11
     moment: ^2.24.0
-  checksum: 87df9d17da271f27bd894c9ff8c855728194a4f92fb4cdffea67cb861538c23aac8f1f71a59c2d49512750cc614974cd37afe268e6cdc5aa19519beca01f2a74
+  checksum: e402295e8785c20b226c6fa9f04e8db18231024549cd2969b215bd4f01303642f5be9952b10b1aab627774be15ea1e36e6e4349b096d8b541ae88f2b501c0606
   languageName: node
   linkType: hard
 
-"netlify-cms-locales@npm:^1.36.2":
-  version: 1.36.2
-  resolution: "netlify-cms-locales@npm:1.36.2"
-  checksum: 677689f9733a4b9511c22b0b44de68c5af3727dae2343e1ba02f05ca8c681ddcaabd2fb312ced0d4daf04a3ad646693707ed4646575e55cc9dc43e970365f549
+"netlify-cms-locales@npm:^1.39.0":
+  version: 1.39.0
+  resolution: "netlify-cms-locales@npm:1.39.0"
+  checksum: a65a74bebaf9a78481bbd2cb10a6452593aca02be9d46cc108fc894b9f7c35bef78b52c6aea8fc75e5fb049e0c786d1a4c307f76da896b6962531c945a8c4c74
   languageName: node
   linkType: hard
 
-"netlify-cms-ui-default@npm:^2.15.3":
-  version: 2.15.3
-  resolution: "netlify-cms-ui-default@npm:2.15.3"
+"netlify-cms-ui-default@npm:^2.15.5":
+  version: 2.15.5
+  resolution: "netlify-cms-ui-default@npm:2.15.5"
   dependencies:
     react-aria-menubutton: ^7.0.0
     react-toggled: ^1.1.2
@@ -20342,7 +20460,7 @@ __metadata:
     lodash: ^4.17.11
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: 142daf5f38842ef8c954f2c556e846e811d5426fecb82e4efca70c535d01e91ff2df2c6211b06d532560f74b55ea3909ae759e4059cd208f20e4b0524504ebbd
+  checksum: ee14606496de7ff7256f91daa2159b5f914ef1023c3b8ead1ac45a4fef46788c2c4ee3099b27feccbfa2bc30c24992a30dea1f9f2e788ea1ec47c70a4bf78c45
   languageName: node
   linkType: hard
 
@@ -20360,9 +20478,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-code@npm:^1.3.3":
-  version: 1.3.3
-  resolution: "netlify-cms-widget-code@npm:1.3.3"
+"netlify-cms-widget-code@npm:^1.3.4":
+  version: 1.3.4
+  resolution: "netlify-cms-widget-code@npm:1.3.4"
   dependencies:
     react-codemirror2: ^7.0.0
     react-select: ^4.0.0
@@ -20372,13 +20490,13 @@ __metadata:
     lodash: ^4.17.11
     netlify-cms-ui-default: ^2.12.1
     react: ^16.8.4 || ^17.0.0
-  checksum: e729e1aa349d8d47342034b1ff7ca8fcac0cc2a8dcf29c5578c3f49e71a8c0971f5657fb5a2baf32029ed0653489e959f2c7ad0f2057c1469df256712b78f615
+  checksum: 6d26e44ade772b47510aac8aaf20874aa1d32a33ec996eefe881e340e6c1862164b18b237d31d1b229519da16c4111f7915213bdbebf8c6d0bea6bab5956c241
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-colorstring@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "netlify-cms-widget-colorstring@npm:1.1.1"
+"netlify-cms-widget-colorstring@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "netlify-cms-widget-colorstring@npm:1.1.2"
   dependencies:
     react-color: ^2.18.1
     validate-color: ^2.1.0
@@ -20388,7 +20506,7 @@ __metadata:
     netlify-cms-ui-default: ^2.12.1
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
-  checksum: e3b6d253e3be4d79d7cbc740d59210f63aa0cc57eee80daa6eb35618daa5dff4d8969da8a90bcc27b5cc1fc2543eefc92858e2563cdee51d08ac62ea16063589
+  checksum: c53a6ad874fed139775bbb407a1c971e5150d39456f343b35067cb6f8828307652522cec3c51deb22dddb1619e01c7b6f2e38874ddf6f2956ded15b71c6a4831
   languageName: node
   linkType: hard
 
@@ -20422,9 +20540,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-file@npm:^2.11.1":
-  version: 2.11.1
-  resolution: "netlify-cms-widget-file@npm:2.11.1"
+"netlify-cms-widget-file@npm:^2.12.1":
+  version: 2.12.1
+  resolution: "netlify-cms-widget-file@npm:2.12.1"
   dependencies:
     array-move: 4.0.0
     common-tags: ^1.8.0
@@ -20438,7 +20556,7 @@ __metadata:
     react: ^16.8.4 || ^17.0.0
     react-immutable-proptypes: ^2.1.0
     uuid: ^3.3.2
-  checksum: 51d9c2249458f4ee4afee73db4dd918ba63ddaec2fd0b3c1989eaccfd89c3e3df29addad9f14eb322c3d26e29fedd79119183d7ad45e278f61bc164073b393a5
+  checksum: c3ff3b44133a07281591bd4278d6f256ef833a39f6572445705c2de5031adf3f0443ee9698a517a1641614fc8d73deefdaef14fe224e14a8b51ba4793ad26ac0
   languageName: node
   linkType: hard
 
@@ -20477,11 +20595,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-map@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "netlify-cms-widget-map@npm:1.5.0"
+"netlify-cms-widget-map@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "netlify-cms-widget-map@npm:1.5.1"
   dependencies:
-    ol: ^5.3.1
+    ol: ^6.9.0
   peerDependencies:
     "@emotion/core": ^10.0.35
     lodash: ^4.17.11
@@ -20489,13 +20607,13 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
     react-immutable-proptypes: ^2.1.0
-  checksum: dcc9649fe187eeed90e382c7664e3e6403063f1b9dce1b313c4ea39dbefa779ca817fc4a14fd454a82a29b6431c209d84529a9db39fb75f4d7b24ad859a9b37a
+  checksum: ed84fc67235e02852590e749b827c454ae2ef90b092585c54b7c789d8f413562ac89e57ac7a1ef6e0566a1681242c19835d7bba1697bd07644f33239f2afb7ea
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-markdown@npm:^2.14.2":
-  version: 2.14.2
-  resolution: "netlify-cms-widget-markdown@npm:2.14.2"
+"netlify-cms-widget-markdown@npm:^2.15.1":
+  version: 2.15.1
+  resolution: "netlify-cms-widget-markdown@npm:2.15.1"
   dependencies:
     dompurify: ^2.2.6
     is-hotkey: ^0.2.0
@@ -20525,7 +20643,7 @@ __metadata:
     react: ^16.8.4 || ^17.0.0
     react-dom: ^16.8.4 || ^17.0.0
     react-immutable-proptypes: ^2.1.0
-  checksum: be7d78c449ad52dc7cfadce9628dbf8b8a76821e047d153a6a74779ae3f7224e188a35de165db66f192a4f306bfdba41614fe2fbbedc4b5a341170e3b0d50f21
+  checksum: ff74552e2ec2f08e02a4dce8824421667bdaacd70a3ee61b1d8d33e35e5613325c0cafffd5fe201c3ce39169fae58d8eb65b74d70be140596f72334424a1e714
   languageName: node
   linkType: hard
 
@@ -20540,9 +20658,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-object@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "netlify-cms-widget-object@npm:2.7.1"
+"netlify-cms-widget-object@npm:^2.7.2":
+  version: 2.7.2
+  resolution: "netlify-cms-widget-object@npm:2.7.2"
   peerDependencies:
     "@emotion/core": ^10.0.35
     "@emotion/styled": ^10.0.27
@@ -20552,13 +20670,13 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
     react-immutable-proptypes: ^2.1.0
-  checksum: bab869459ef54974d5de13d96483d23f9434e809512711d4ae5c4664c00f28267bafec7f4250b40e4862835a4341df7d4e59bc60f154147b5b946e61f38e9970
+  checksum: 4214c7cde29b5a1094219741d8ee9d758ee54b5725a7109f663bdffae760fe2d0bcd93299fd2cca3e931d010e69346d7a0baf8dca668c263ebe99397372c3702
   languageName: node
   linkType: hard
 
-"netlify-cms-widget-relation@npm:^2.11.0":
-  version: 2.11.0
-  resolution: "netlify-cms-widget-relation@npm:2.11.0"
+"netlify-cms-widget-relation@npm:^2.11.1":
+  version: 2.11.1
+  resolution: "netlify-cms-widget-relation@npm:2.11.1"
   dependencies:
     react-select: ^4.0.0
     react-sortable-hoc: ^2.0.0
@@ -20573,7 +20691,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.4 || ^17.0.0
     uuid: ^3.3.2
-  checksum: aa6a1bf85561d787ca06a48fd8a6793493faf28a0b44007b1cae16b05e7d628436ae55092cf20679f34deb693e9f0ac91ec7cd7bcdc3c8837a31fe32efb48e66
+  checksum: b33685635927e00ef09874894cfcbdb51e0538ed391a731ccf7309e2d4a171666acd2c06db80b967d8ad2053be32aa63c9c8d3062c931eae4ade646272d11ea5
   languageName: node
   linkType: hard
 
@@ -21192,14 +21310,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ol@npm:^5.3.1":
-  version: 5.3.3
-  resolution: "ol@npm:5.3.3"
+"ol-mapbox-style@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "ol-mapbox-style@npm:7.1.1"
   dependencies:
-    pbf: 3.1.0
-    pixelworks: 1.1.0
-    rbush: 2.0.2
-  checksum: 96689434e6c9d5d93d1f0102789d1d2df702d308fe556c109c0965c1962bdf90ae40161b875c022e65d7b3c12e2d35828af1549cdf25fd6c9c9a6d53dba5863b
+    "@mapbox/mapbox-gl-style-spec": ^13.20.1
+    mapbox-to-css-font: ^2.4.1
+    webfont-matcher: ^1.1.0
+  checksum: 3f5f9c528163a0f74a582c0cbec58b833cc76b212d334a497a085e0b562164a05054ab2a5a78cde92e9ea560433bbae9511344e894d5440700515af07365426c
+  languageName: node
+  linkType: hard
+
+"ol@npm:^6.9.0":
+  version: 6.14.1
+  resolution: "ol@npm:6.14.1"
+  dependencies:
+    geotiff: ^2.0.2
+    ol-mapbox-style: ^7.1.1
+    pbf: 3.2.1
+    rbush: ^3.0.1
+  checksum: 118ae5b40fb3f98efb7c2cbf230edc3788567fac872f80e09b9dbcc3845c0179de95c2ef771be2307e6f8b4162e9dbc68818757c874d7d4fdd855e56dd43ea12
   languageName: node
   linkType: hard
 
@@ -21577,6 +21707,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pako@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "pako@npm:2.0.4"
+  checksum: 82b9b0b99dd830c9103856a6dbd10f0cb2c8c32b9768184727ea381a99666de9a47a069d2e6efe6acf09336f363956b50835c196ef9311b34b7274d420eb0d88
+  languageName: node
+  linkType: hard
+
 "parallel-transform@npm:^1.1.0":
   version: 1.2.0
   resolution: "parallel-transform@npm:1.2.0"
@@ -21716,6 +21853,13 @@ __metadata:
   version: 2.0.4
   resolution: "parse-headers@npm:2.0.4"
   checksum: 29519ac013e100c11a67d0fc64eb33ae86523abf547f71dba36d484dcd16a2835dd11f31303f4ded27c40133dca5a5fe4d15b77f49091e470a6f74a023c59c4a
+  languageName: node
+  linkType: hard
+
+"parse-headers@npm:^2.0.2":
+  version: 2.0.5
+  resolution: "parse-headers@npm:2.0.5"
+  checksum: 3e97f01e4c7f960bfbfd0ee489f0bd8d3c72b6c814f1f79b66abec2cca8eaf8e4ecd89deba0b6e61266469aed87350bc932001181c01ff8c29a59e696abe251f
   languageName: node
   linkType: hard
 
@@ -21998,15 +22142,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pbf@npm:3.1.0":
-  version: 3.1.0
-  resolution: "pbf@npm:3.1.0"
+"pbf@npm:3.2.1":
+  version: 3.2.1
+  resolution: "pbf@npm:3.2.1"
   dependencies:
-    ieee754: ^1.1.6
-    resolve-protobuf-schema: ^2.0.0
+    ieee754: ^1.1.12
+    resolve-protobuf-schema: ^2.1.0
   bin:
     pbf: bin/pbf
-  checksum: 40688df2396ea3fb608468822c3f8ecc6e7860d829436660f5daee38cfb0ea45710e0f8d4d3ac3af83df6322b5b71f0965ddf4f40d556bb97aa56e973bfa45e0
+  checksum: 8033f5e21fffdc485e85d50bbff07ab3313c6841c3630a4ba9bc9e82d2e9005ab92000a1a90cb911223caa44316293e367bab607dd8110d5c771e6c8aaad63e1
   languageName: node
   linkType: hard
 
@@ -22118,13 +22262,6 @@ __metadata:
   bin:
     pixelmatch: bin/pixelmatch
   checksum: 9c5c1329001938cae6d01e2bb84a909ba767f8256bcafc075422cea2a4dbaa8bebd44fceaa4b4ce7cdc36d11f20d4f1ba0cf669851d5649b32d8d1d27e4f5a36
-  languageName: node
-  linkType: hard
-
-"pixelworks@npm:1.1.0":
-  version: 1.1.0
-  resolution: "pixelworks@npm:1.1.0"
-  checksum: 7d10fd7d3e5ac4e088f6eeaab2802a116f4ac1945fd900af8b97682506ecff2a9e7b3f6edd45e4dfb388bf90dc6caea86380d518e51d5ed52aeb261a5d3ae9e6
   languageName: node
   linkType: hard
 
@@ -22758,10 +22895,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.25.0":
-  version: 1.25.0
-  resolution: "prismjs@npm:1.25.0"
-  checksum: 04d8eae9d1b26b76c350bc65621584c8f8cab80ace7da3953f8aef2f9a8dd4b4f71c1d15bc5c67f126ddc90cd5af613919dc1340589a6c57355bed86fa3ac010
+"prismjs@npm:^1.28.0":
+  version: 1.28.0
+  resolution: "prismjs@npm:1.28.0"
+  checksum: bde93fb2beb45b7243219fc53855f59ee54b3fa179f315e8f9d66244d756ef984462e10561bbdc6713d3d7e051852472d7c284f5794a8791eeaefea2fb910b16
   languageName: node
   linkType: hard
 
@@ -23110,10 +23247,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"quickselect@npm:^1.0.1":
-  version: 1.1.1
-  resolution: "quickselect@npm:1.1.1"
-  checksum: 419c88a1fbd57d66365be9498e694c6fbd10bfabe8910fedfa3f75c008c08f9b05d10e4b79f462e7875dd6053431638d7fd66b6a7226ff752d657c82633981e1
+"quick-lru@npm:^6.1.0":
+  version: 6.1.1
+  resolution: "quick-lru@npm:6.1.1"
+  checksum: a9c75bf1d208c1d207590e10403a75d037f9faf7857f2e0d38c294d92b40d8b400776bcb5d4dd516baa84e6f5e3baf2a16cf405e6fedc18107922f46aeae83ee
+  languageName: node
+  linkType: hard
+
+"quickselect@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "quickselect@npm:2.0.0"
+  checksum: ed2e78431050d223fb75da20ee98011aef1a03f7cb04e1a32ee893402e640be3cfb76d72e9dbe01edf3bb457ff6a62e5c2d85748424d1aa531f6ba50daef098c
   languageName: node
   linkType: hard
 
@@ -23195,12 +23339,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rbush@npm:2.0.2":
-  version: 2.0.2
-  resolution: "rbush@npm:2.0.2"
+"rbush@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "rbush@npm:3.0.1"
   dependencies:
-    quickselect: ^1.0.1
-  checksum: 43fd4a47e095ef68ab3e658872e821f7ef1376e98c70ba3f83fa1d3c3ecaf5192756073c18f5c6b46d171f1d2a737d88ef2200fcf56b0f77e5431357efa0c1db
+    quickselect: ^2.0.0
+  checksum: b7def5ba762ca01b6c7c032098ef61b86bd4fef4afb82e4a1d70a07a929b39e779290446c2d4730f577e8a1c8fd0dfd349605b5ea0229258d5f013debdffa65a
   languageName: node
   linkType: hard
 
@@ -23394,14 +23538,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-frame-component@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "react-frame-component@npm:5.1.0"
+"react-frame-component@npm:^5.2.1":
+  version: 5.2.3
+  resolution: "react-frame-component@npm:5.2.3"
   peerDependencies:
     prop-types: ^15.5.9
     react: ">= 16.3"
     react-dom: ">= 16.3"
-  checksum: b6d80dfcef6bc3f66db1853a33a5ded5d04372fb078c2b6b0756c89f6271e6c3c41bbe04b9743acb761247da2667794c4d29f5e5b2a605f19b168d80adec4ed5
+  checksum: 1843c48dce41a0af03590dd7351baaf8a68ecac4e850d9819d093517a34d1097668c2b2cd809a8f5cd70791c011c6f2dcaf90d43b6e773b33c212f1f4cf17f55
   languageName: node
   linkType: hard
 
@@ -24318,9 +24462,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-codesandbox@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "remark-codesandbox@npm:0.10.0"
+"remark-codesandbox@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "remark-codesandbox@npm:0.10.1"
   dependencies:
     codesandbox: ^2.1.11
     codesandbox-import-utils: 2.1.11
@@ -24331,7 +24475,7 @@ __metadata:
     unist-builder: ^2.0.2
     unist-util-is: ^4.0.1
     unist-util-visit: ^2.0.1
-  checksum: ebfe9e1da7b88828cb3afd60873f3224bbb2a6364c90fe450307fde9d4ca086a37cba2cee0b25c0883e6a0df66d11022b5fbec16f8d735299194ac7eb304dd92
+  checksum: ca660f686e84a58fbba5f09a4008bc9c615e231d5faf68bf3b40b964b59bad17699074b72b953b06e3b0d107c2bb243a39d8fcd61b73dd6c6e9d2999492f992d
   languageName: node
   linkType: hard
 
@@ -24580,10 +24724,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remove-markdown@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "remove-markdown@npm:0.3.0"
-  checksum: c3e40122e5057096c04881b8a0bccf41f913e352d106f4debded28bd824daab1d1cda64a67ed6a76064bc0a78d9b6c0feba3f933b44c6ffc50608249524ad2dd
+"remove-markdown@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "remove-markdown@npm:0.5.0"
+  checksum: c3c9051e7e7d7c5560e7d70a5093704d868fa57d244eb89533fe7bf960bce68e7901197616c6b296cb22f47af6c15a6bce693467f35709fe399379ea1125e536
   languageName: node
   linkType: hard
 
@@ -24726,7 +24870,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve-protobuf-schema@npm:^2.0.0":
+"resolve-protobuf-schema@npm:^2.1.0":
   version: 2.1.0
   resolution: "resolve-protobuf-schema@npm:2.1.0"
   dependencies:
@@ -24938,6 +25082,13 @@ resolve@^2.0.0-next.3:
   dependencies:
     aproba: ^1.1.1
   checksum: c4541e18b5e056af60f398f2f1b3d89aae5c093d1524bf817c5ee68bcfa4851ad9976f457a9aea135b1d0d72ee9a91c386e3d136bcd95b699c367cd09c70be53
+  languageName: node
+  linkType: hard
+
+"rw@npm:^1.3.3":
+  version: 1.3.3
+  resolution: "rw@npm:1.3.3"
+  checksum: c20d82421f5a71c86a13f76121b751553a99cd4a70ea27db86f9b23f33db941f3f06019c30f60d50c356d0bd674c8e74764ac146ea55e217c091bde6fba82aa3
   languageName: node
   linkType: hard
 
@@ -25738,6 +25889,30 @@ resolve@^2.0.0-next.3:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
   checksum: 2ca9d616e424f645838ebaabb04f85d94ea999e0f8393dc07f86c435af22ed88cb83958feeabd1bb7bc537c635ed47454255635502c6808a6df61af1f41af750
+  languageName: node
+  linkType: hard
+
+"sort-asc@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "sort-asc@npm:0.1.0"
+  checksum: c130223336a9431edd4c12cf0a4893eb9327591f8c9d9ccd1b27a42f7657b4bb84807d7150d79fc52ab7d1e9691684897de7ef2a6a3516d32349af68d2705d57
+  languageName: node
+  linkType: hard
+
+"sort-desc@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "sort-desc@npm:0.1.1"
+  checksum: f2a2568f4eaf9a7315700ae9e46e74ae7b395f24323bf807f07b20269a7c162b549b0bac6d5bb8e26f7ee15af72a74fdaf09d47257227dbe31c4ac8f13b19e1d
+  languageName: node
+  linkType: hard
+
+"sort-object@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "sort-object@npm:0.3.2"
+  dependencies:
+    sort-asc: ^0.1.0
+    sort-desc: ^0.1.1
+  checksum: 701fac8b49e9c720f4e5f4b70e995a795771dbecab2368b2e362c5c02cc269418a061f3303c47137d22fc3fe1ded03b4fd4215edec0960c4721274d320dae2b4
   languageName: node
   linkType: hard
 
@@ -28728,6 +28903,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"web-worker@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "web-worker@npm:1.2.0"
+  checksum: 1bb28348ddcf9b2e7c62c5fd02e49a84098795856cd905456de957271bba288e9618941cf69d8960f0a7ae81f5dfb74b427c0634be47ec69e3e955c4ec5213be
+  languageName: node
+  linkType: hard
+
+"webfont-matcher@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "webfont-matcher@npm:1.1.0"
+  checksum: 788b7155157bd33607fd46927b27007a1815a1226db286350961f7f684e7a91d8f1c36ce4032897fe203c4964355111814d5826f0139266d9b4715e91bb06665
+  languageName: node
+  linkType: hard
+
 "webidl-conversions@npm:^3.0.0":
   version: 3.0.1
   resolution: "webidl-conversions@npm:3.0.1"
@@ -29356,6 +29545,13 @@ resolve@^2.0.0-next.3:
   version: 1.0.1
   resolution: "xml-parse-from-string@npm:1.0.1"
   checksum: 5155cb98e428409829f4060ce542c55438b2f7646d11fd306d850eaf12d35c06ffd9e86d76aa5230121a533b958fd1a319d6f90a5c113391853d0ff01f4da7bb
+  languageName: node
+  linkType: hard
+
+"xml-utils@npm:^1.0.2":
+  version: 1.0.3
+  resolution: "xml-utils@npm:1.0.3"
+  checksum: ad0be0bb5219ef7364649944b38b0b3a4090fe01b71b8992ac3ebe8fcc40f96e4878e2c77c9c167914d5f3a09f2f6b127f905bb077bf354bb08ec981f086e39d
   languageName: node
   linkType: hard
 
