@@ -101,5 +101,6 @@
   },
   "resolutions": {
     "postcss": "8.3.5"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
