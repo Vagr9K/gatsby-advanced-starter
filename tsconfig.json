@@ -4,7 +4,8 @@
     "**/node_modules",
     "**/.cache/*",
     "**/public",
-    "**/cypress"
+    "**/cypress",
+    "**/cypress.config.ts"
   ],
   "include": [
     "./src/",

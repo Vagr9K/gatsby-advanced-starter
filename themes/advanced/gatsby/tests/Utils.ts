@@ -24,4 +24,7 @@ export const GatsbyActionsMock = {
   createTypes: jest.fn(),
   createFieldExtension: jest.fn(),
   printTypeDefinitions: jest.fn(),
+  unstable_createNodeManifest: jest.fn(),
+  setRequestHeaders: jest.fn(),
+  addGatsbyImageSourceUrl: jest.fn(),
 } as Actions;

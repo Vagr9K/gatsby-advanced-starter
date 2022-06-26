@@ -5,7 +5,6 @@ import {
   CreateSchemaCustomizationArgs,
   CreatePagesArgs,
 } from "gatsby";
-import { mocked } from "ts-jest/utils";
 import cloneDeep from "clone-deep";
 
 import {
@@ -19,20 +18,20 @@ import { config as configFixture } from "../../../test/fixtures";
 
 import * as feedUtils from "../utils/feeds";
 
-const mockedGatsbyActions = mocked(GatsbyActionsMock, true);
+const mockedGatsbyActions = jest.mocked(GatsbyActionsMock, true);
 
 type NodeArgs = CreateNodeArgs<Record<string, unknown>>;
 
 jest.spyOn(global.console, "error").mockImplementation();
 
-const mockedConsole = mocked(global.console, true);
+const mockedConsole = jest.mocked(global.console, true);
 
 jest.mock("../utils/feeds", () => ({
   createFeed: jest.fn(),
   initFeedMeta: jest.fn(),
 }));
 
-const mockedFeedUtils = mocked(feedUtils, true);
+const mockedFeedUtils = jest.mocked(feedUtils, true);
 
 jest.mock("../utils/queries", () => {
   const postListingFixture = jest.requireActual<

@@ -20,13 +20,15 @@ module.exports = {
     "<rootDir>/cypress/",
   ],
   transformIgnorePatterns: [
-    "node_modules/(?!(gatsby|gatsby-plugin-mdx|gatsby-theme-advanced|gatsby-theme-amaranth)/)",
+    "node_modules/(?!(gatsby|gatsby-plugin-mdx|gatsby-script|gatsby-theme-advanced|gatsby-theme-amaranth)/)",
   ],
   globals: {
     __PATH_PREFIX__: "",
   },
 
-  testURL: "http://localhost",
+  testEnvironmentOptions: {
+    url: "http://localhost",
+  },
   setupFiles: [path.join(__dirname, "./loadershim.js")],
   setupFilesAfterEnv: [path.join(__dirname, "./setup-test-env.js")],
   collectCoverage: true,

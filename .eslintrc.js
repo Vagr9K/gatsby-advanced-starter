@@ -32,6 +32,13 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
   },
   overrides: [
     {
@@ -59,6 +66,7 @@ module.exports = {
       rules: {
         "react/require-default-props": "off",
         "react/prop-types": "off",
+        "no-restricted-exports": "off",
       },
 
       parser: "@typescript-eslint/parser",
@@ -111,6 +119,9 @@ module.exports = {
             peerDependencies: false,
           },
         ],
+        "import/no-relative-packages": "off",
+        "jest/no-conditional-in-test": "off",
+        "jest/prefer-snapshot-hint": "off",
       },
     },
   ],

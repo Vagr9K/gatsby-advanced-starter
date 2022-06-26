@@ -1,6 +1,5 @@
 import memfs from "memfs";
 
-import { mocked } from "ts-jest/utils";
 import { GatsbyActionsMock } from "./Utils";
 
 import {
@@ -182,7 +181,7 @@ describe("createFeed", () => {
       [FEED_META_DIR]: null,
     });
 
-    const MockedGatsbyActions = mocked(GatsbyActionsMock, true);
+    const MockedGatsbyActions = jest.mocked(GatsbyActionsMock, true);
 
     await createFeed(configFixture, GatsbyActionsMock, listingFixture, "index");
 
@@ -210,9 +209,8 @@ describe("createFeed", () => {
       })
     ).toMatchSnapshot();
 
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(MockedGatsbyActions.createPage).toHaveBeenCalledTimes(1);
-    // eslint-disable-next-line @typescript-eslint/unbound-method
+
     expect(MockedGatsbyActions.createPage).toHaveBeenCalledWith(
       expect.objectContaining({
         path: "/",

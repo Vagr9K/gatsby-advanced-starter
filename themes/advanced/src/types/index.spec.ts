@@ -1,4 +1,3 @@
-import { mocked } from "ts-jest/utils";
 import cloneDeep from "clone-deep";
 
 import {
@@ -22,7 +21,7 @@ const consoleWarnSpy = jest
 
 // Test data setup
 jest.mock("../config");
-const mockedConfig = mocked(configFixture, true);
+const mockedConfig = jest.mocked(configFixture, true);
 mockedConfig.website.url = "http://test.com";
 mockedConfig.pathPrefix = "/test";
 

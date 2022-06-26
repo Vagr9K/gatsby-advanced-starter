@@ -2,6 +2,7 @@ name: Continuous Integration
 on: [push]
 jobs:
   static-check:
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,6 +14,7 @@ jobs:
       - run: yarn lint:all
 
   type-check:
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +26,7 @@ jobs:
       - run: yarn type-check
 
   jest-tests:
+    if: always()
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -40,6 +43,7 @@ jobs:
         run: yarn test
 
   e2e-tests:
+    if: always()
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -52,7 +56,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - name: Run E2E tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4.1.0
         with:
           working-directory: ${{ matrix.project }}
           build: yarn build

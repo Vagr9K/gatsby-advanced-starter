@@ -58,7 +58,7 @@ describe("component ArticleShare", () => {
     const linkButton = container.querySelector("div > svg");
     expect(linkButton).toBeInTheDocument();
 
-    userEvent.click(linkButton as SVGSVGElement);
+    await userEvent.click(linkButton as SVGSVGElement);
 
     const popUpNotification = await screen.findByText(
       "Link copied to clipboard"

@@ -1,11 +1,10 @@
-import { mocked } from "ts-jest/utils";
 import { config as configFixture, listingQuery } from "../../../test/fixtures";
 import { GatsbyFeedQuery, GatsbyPluginFeedData } from "../types";
 import { getSerialize, setup } from "../utils/rss";
 
 jest.spyOn(global.console, "warn").mockImplementation();
 
-const mockedConsole = mocked(global.console, true);
+const mockedConsole = jest.mocked(global.console, true);
 
 const testQuery = {
   ...listingQuery,

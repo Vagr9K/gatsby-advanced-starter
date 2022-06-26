@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "jest-styled-components";
-import { mocked } from "ts-jest/utils";
 
 import { useConfig } from "gatsby-theme-advanced";
 
@@ -9,7 +8,7 @@ import UserLinks from "./index";
 
 import { config as configFixture } from "../../../../test/fixtures";
 
-const mockedUseConfig = mocked(useConfig);
+const mockedUseConfig = jest.mocked(useConfig);
 
 describe("component UserLinks", () => {
   it("renders user links", async () => {
