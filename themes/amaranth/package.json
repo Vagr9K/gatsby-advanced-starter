@@ -115,7 +115,7 @@
     "markdownlint-cli2": "^0.4.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "react-dom": "^17.0.2",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
@@ -130,7 +130,7 @@
   },
   "peerDependencies": {
     "gatsby": "*",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "react-dom": "^17.0.2"
   },
   "keywords": [
