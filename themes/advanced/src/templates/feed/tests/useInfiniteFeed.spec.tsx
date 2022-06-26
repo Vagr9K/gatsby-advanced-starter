@@ -89,6 +89,7 @@ describe("useInfiniteFeed", () => {
   it("loads next feed pages on scroll", async () => {
     expect.assertions(6);
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       const { result, waitFor } = renderHook(
         () => useInfiniteFeed(startPageContext),
@@ -154,6 +155,7 @@ describe("useInfiniteFeed", () => {
       },
     }));
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       const { result, waitFor } = renderHook(
         () => useInfiniteFeed(startPageContext),
