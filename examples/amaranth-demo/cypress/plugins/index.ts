@@ -14,7 +14,7 @@ type SiteMapData = {
 
 type ParseSitemapArgs = { siteUrl: string; sitemapString: string };
 
-const pluginConfig: Cypress.PluginConfig = (on) => {
+const pluginConfig = (on: Cypress.PluginEvents): void => {
   on("task", {
     // Parse the RSS feed and return a list of links to posts
     parseRss(rssString: string) {

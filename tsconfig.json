@@ -13,7 +13,8 @@
     "**/src/**/*",
     "**/__mocks__/**/*",
     "**/test/**/*",
-    "**/index.ts"
+    "**/index.ts",
+    "**/cypress.config.ts"
   ],
   "compilerOptions": {
     "jsx": "react",
