@@ -56,7 +56,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - name: Run E2E tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4.1.0
         with:
           working-directory: ${{ matrix.project }}
           build: yarn build
