@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-advanced",
   "description": "GatsbyJS theme equipped with advanced features.",
-  "version": "4.17.0",
+  "version": "4.17.1",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com> (https://harutyunyan.dev/)",
   "homepage": "https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/themes/advanced",
   "bugs": "https://github.com/Vagr9K/gatsby-advanced-starter/issues",
@@ -154,6 +154,15 @@
     "test": "jest",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "write-good": "write-good $(glob 'content/**/*.md')"
+    "write-good": "write-good $(glob 'content/**/*.md')",
+    "publish-prebuilt": "npm run prebuild && npm run prebuild:publish",
+    "pack-prebuilt": "npm run prebuild && npm run prebuild:pack",
+    "clean-prebuilt": "rm -rf pkgroot lib",
+    "prebuild": "npm run prebuild:build && npm run prebuild:create-root && npm run prebuild:replace-ts-paths",
+    "prebuild:build": "tsc -p tsconfig.prebuild.json",
+    "prebuild:create-root": "mkdir -p pkgroot && cp -R package.json README.md docs LICENSE static content lib/advanced/* pkgroot",
+    "prebuild:replace-ts-paths": "find ./pkgroot/ -type f -exec sed -i 's/\\.ts\"/.js\"/g' {} \\; && find ./pkgroot/ -type f -exec sed -i 's/\\.tsx\"/.jsx\"/g' {} \\;",
+    "prebuild:publish": "cd pkgroot && npm publish",
+    "prebuild:pack": "cd pkgroot && npm pack"
   }
 }
