@@ -72,6 +72,10 @@ bundle-stats.json
 
 # TypeScript output
 lib/
+dist/
+
+# Prebuilt packages
+pkgroot/
 
 # TypeScript coverage
 coverage-ts/
