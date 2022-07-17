@@ -129,8 +129,8 @@ Alternatively you can fork the project, make your changes and merge new upstream
   ```sh
   git clone https://github.com/${YourUsername}/${YourForkName} YourForkName # Clone your fork
   cd YourForkName
-  yarn install # or yarn install
-  yarn develop # or yarn develop
+  yarn install # or npm install
+  yarn develop # or gatsby develop
   ```
 
 ## Receiving upstream updates
