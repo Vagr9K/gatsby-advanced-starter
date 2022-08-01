@@ -28,7 +28,7 @@
     "gatsby-plugin-image": "^2.17.0",
     "gatsby-plugin-lodash": "^5.17.0",
     "gatsby-plugin-manifest": "^4.17.0",
-    "gatsby-plugin-mdx": "^3.17.0",
+    "gatsby-plugin-mdx": "^3.19.0",
     "gatsby-plugin-netlify-cms": "^6.17.0",
     "gatsby-plugin-nprogress": "^4.17.0",
     "gatsby-plugin-offline": "^5.17.0",
